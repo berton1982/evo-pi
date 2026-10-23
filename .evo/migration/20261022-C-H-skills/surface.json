@@ -1,0 +1,565 @@
+{
+  "generatedAt": "2026-10-22T03:09:36.485Z",
+  "sources": [
+    {
+      "dir": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "files": 1,
+      "points": 75
+    }
+  ],
+  "totals": {
+    "points": 75,
+    "byKind": {
+      "handler:onChange": 4,
+      "handler:onClick": 9,
+      "handler:onKeyDown": 1,
+      "i18n": 50,
+      "hotkey": 1,
+      "api": 8,
+      "role": 2
+    }
+  },
+  "entries": [
+    {
+      "id": "SF-SC-h1ec727",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 226
+    },
+    {
+      "id": "SF-SC-h1ec727-2",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 469
+    },
+    {
+      "id": "SF-SC-h1ec727-3",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 479
+    },
+    {
+      "id": "SF-SC-h1ec727-4",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 984
+    },
+    {
+      "id": "SF-SC-h93710f",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 269
+    },
+    {
+      "id": "SF-SC-h93710f-2",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 304
+    },
+    {
+      "id": "SF-SC-h93710f-3",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 333
+    },
+    {
+      "id": "SF-SC-h93710f-4",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 497
+    },
+    {
+      "id": "SF-SC-h93710f-5",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 597
+    },
+    {
+      "id": "SF-SC-h93710f-6",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 948
+    },
+    {
+      "id": "SF-SC-h93710f-7",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1001
+    },
+    {
+      "id": "SF-SC-h93710f-8",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1080
+    },
+    {
+      "id": "SF-SC-h93710f-9",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1082
+    },
+    {
+      "id": "SF-SC-hba5522",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 480
+    },
+    {
+      "id": "SF-SC-i007417",
+      "kind": "i18n",
+      "text": "i18n.hiddenButInvocable",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 233
+    },
+    {
+      "id": "SF-SC-i0f4542",
+      "kind": "i18n",
+      "text": "i18n.unknown",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 264
+    },
+    {
+      "id": "SF-SC-i0f4542-2",
+      "kind": "i18n",
+      "text": "i18n.unknown",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 277
+    },
+    {
+      "id": "SF-SC-i200e95",
+      "kind": "i18n",
+      "text": "i18n.loading",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 343
+    },
+    {
+      "id": "SF-SC-i200e95-2",
+      "kind": "i18n",
+      "text": "i18n.loading",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 887
+    },
+    {
+      "id": "SF-SC-i21a425",
+      "kind": "i18n",
+      "text": "i18n.addSkill",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 457
+    },
+    {
+      "id": "SF-SC-i21a425-2",
+      "kind": "i18n",
+      "text": "i18n.addSkill",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1004
+    },
+    {
+      "id": "SF-SC-i258f00",
+      "kind": "i18n",
+      "text": "common.skills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 876
+    },
+    {
+      "id": "SF-SC-i2c5339",
+      "kind": "i18n",
+      "text": "skills.scope.global",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 64
+    },
+    {
+      "id": "SF-SC-i2c5339-2",
+      "kind": "i18n",
+      "text": "skills.scope.global",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 902
+    },
+    {
+      "id": "SF-SC-i37f5a4",
+      "kind": "i18n",
+      "text": "i18n.installing",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 614
+    },
+    {
+      "id": "SF-SC-i3bcb6f",
+      "kind": "i18n",
+      "text": "i18n.automaticChecksUnavailable",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 296
+    },
+    {
+      "id": "SF-SC-i3c7d3f",
+      "kind": "i18n",
+      "text": "i18n.check",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 272
+    },
+    {
+      "id": "SF-SC-i44a9ec",
+      "kind": "i18n",
+      "text": "i18n.noSkills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 404
+    },
+    {
+      "id": "SF-SC-i44a9ec-2",
+      "kind": "i18n",
+      "text": "i18n.noSkills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 895
+    },
+    {
+      "id": "SF-SC-i4e1965",
+      "kind": "i18n",
+      "text": "i18n.searching",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 500
+    },
+    {
+      "id": "SF-SC-i50e66c",
+      "kind": "i18n",
+      "text": "i18n.search",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 500
+    },
+    {
+      "id": "SF-SC-i58adf3",
+      "kind": "i18n",
+      "text": "trust.skillsNotLoaded",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 878
+    },
+    {
+      "id": "SF-SC-i59f8ec",
+      "kind": "i18n",
+      "text": "i18n.upToDate",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 294
+    },
+    {
+      "id": "SF-SC-i638a7d",
+      "kind": "i18n",
+      "text": "i18n.updates",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1076
+    },
+    {
+      "id": "SF-SC-i63ee43",
+      "kind": "i18n",
+      "text": "config.saveTo",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 462
+    },
+    {
+      "id": "SF-SC-i6ee4eb",
+      "kind": "i18n",
+      "text": "i18n.skillSearchPlaceholder",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 483
+    },
+    {
+      "id": "SF-SC-i75bec1",
+      "kind": "i18n",
+      "text": "config.source",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 245
+    },
+    {
+      "id": "SF-SC-i7d1817",
+      "kind": "i18n",
+      "text": "skills.scope.project",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 63
+    },
+    {
+      "id": "SF-SC-i7d1817-2",
+      "kind": "i18n",
+      "text": "skills.scope.project",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 901
+    },
+    {
+      "id": "SF-SC-i7e64c8",
+      "kind": "i18n",
+      "text": "i18n.update",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 307
+    },
+    {
+      "id": "SF-SC-i7e64c8-2",
+      "kind": "i18n",
+      "text": "i18n.update",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1075
+    },
+    {
+      "id": "SF-SC-i868e59",
+      "kind": "i18n",
+      "text": "skills.instructions",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 329
+    },
+    {
+      "id": "SF-SC-i94146c",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 876
+    },
+    {
+      "id": "SF-SC-i94146c-2",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1080
+    },
+    {
+      "id": "SF-SC-i9ef620",
+      "kind": "i18n",
+      "text": "i18n.checkUpdates",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1083
+    },
+    {
+      "id": "SF-SC-ia0a528",
+      "kind": "i18n",
+      "text": "i18n.updateAvailable",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 962
+    },
+    {
+      "id": "SF-SC-ia4832d",
+      "kind": "i18n",
+      "text": "i18n.install",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 615
+    },
+    {
+      "id": "SF-SC-iab3947",
+      "kind": "i18n",
+      "text": "i18n.version",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 261
+    },
+    {
+      "id": "SF-SC-iad90ad",
+      "kind": "i18n",
+      "text": "i18n.selectSkill",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1055
+    },
+    {
+      "id": "SF-SC-ib4d36f",
+      "kind": "i18n",
+      "text": "i18n.visibleInPrompt",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 225
+    },
+    {
+      "id": "SF-SC-ic158c1",
+      "kind": "i18n",
+      "text": "i18n.checkFailed",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 297
+    },
+    {
+      "id": "SF-SC-ic4eeba",
+      "kind": "i18n",
+      "text": "skills.bulkFailed",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 855
+    },
+    {
+      "id": "SF-SC-ic63a09",
+      "kind": "i18n",
+      "text": "skills.scope.path",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 65
+    },
+    {
+      "id": "SF-SC-ic63a09-2",
+      "kind": "i18n",
+      "text": "skills.scope.path",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 903
+    },
+    {
+      "id": "SF-SC-icaeaac",
+      "kind": "i18n",
+      "text": "i18n.checking",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 292
+    },
+    {
+      "id": "SF-SC-icaeaac-2",
+      "kind": "i18n",
+      "text": "i18n.checking",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 1083
+    },
+    {
+      "id": "SF-SC-id0a5ca",
+      "kind": "i18n",
+      "text": "i18n.description",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 323
+    },
+    {
+      "id": "SF-SC-id58ba7",
+      "kind": "i18n",
+      "text": "trust.projectScopeUnavailable",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 468
+    },
+    {
+      "id": "SF-SC-id83dd6",
+      "kind": "i18n",
+      "text": "skills.noInstructions",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 349
+    },
+    {
+      "id": "SF-SC-ie0cb95",
+      "kind": "i18n",
+      "text": "i18n.updating",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 307
+    },
+    {
+      "id": "SF-SC-if182ba",
+      "kind": "i18n",
+      "text": "i18n.hiddenFromPrompt",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 225
+    },
+    {
+      "id": "SF-SC-if6e600",
+      "kind": "i18n",
+      "text": "config.name",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 317
+    },
+    {
+      "id": "SF-SC-if7045c",
+      "kind": "i18n",
+      "text": "i18n.installed",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 612
+    },
+    {
+      "id": "SF-SC-if98cbf",
+      "kind": "i18n",
+      "text": "skills.documentBack",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 334
+    },
+    {
+      "id": "SF-SC-ka8462c",
+      "kind": "hotkey",
+      "text": "Enter",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 481
+    },
+    {
+      "id": "SF-SC-p080c38",
+      "kind": "api",
+      "text": "POST /api/skills/update",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 754,
+      "method": "POST",
+      "path": "/api/skills/update"
+    },
+    {
+      "id": "SF-SC-p226891",
+      "kind": "api",
+      "text": "PATCH /api/skills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 796,
+      "method": "PATCH",
+      "path": "/api/skills"
+    },
+    {
+      "id": "SF-SC-p226891-2",
+      "kind": "api",
+      "text": "PATCH /api/skills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 840,
+      "method": "PATCH",
+      "path": "/api/skills"
+    },
+    {
+      "id": "SF-SC-p9fb298",
+      "kind": "api",
+      "text": "GET /api/skills/content",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 194,
+      "method": "GET",
+      "path": "/api/skills/content"
+    },
+    {
+      "id": "SF-SC-pce3753",
+      "kind": "api",
+      "text": "POST /api/skills/install",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 417,
+      "method": "POST",
+      "path": "/api/skills/install"
+    },
+    {
+      "id": "SF-SC-pdbe17a",
+      "kind": "api",
+      "text": "POST /api/skills/search",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 390,
+      "method": "POST",
+      "path": "/api/skills/search"
+    },
+    {
+      "id": "SF-SC-pec89d4",
+      "kind": "api",
+      "text": "GET /api/skills",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 660,
+      "method": "GET",
+      "path": "/api/skills"
+    },
+    {
+      "id": "SF-SC-pfce405",
+      "kind": "api",
+      "text": "POST /api/skills/check",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 715,
+      "method": "POST",
+      "path": "/api/skills/check"
+    },
+    {
+      "id": "SF-SC-r4b9dc6",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 341
+    },
+    {
+      "id": "SF-SC-rab8c82",
+      "kind": "role",
+      "text": "status",
+      "file": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "line": 343
+    }
+  ]
+}

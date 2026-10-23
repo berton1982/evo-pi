@@ -1,0 +1,7 @@
+# OpenWiki: exclude paths the agent must not document.
+#
+# Gitignore-style rules: last-match-wins, `!` re-includes.
+# See https://git-scm.com/docs/gitignore for pattern syntax.
+
+# Reference projects vendored for comparison/research only — not part of this repo.
+ref_projects/

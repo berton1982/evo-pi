@@ -1,0 +1,13 @@
+{
+  "id": "C5",
+  "generatedAt": "2026-10-22T08:14:57.073Z",
+  "runs": [
+    {
+      "cmd": "npx --no-install vitest run packages/core/src/mcp packages/web/src/components/mcp packages/web/src/mcp packages/web/src/hooks/use-mcp-actions.test.ts packages/web/src/lib/stores/mcp-overview-store.test.ts",
+      "exit": 0,
+      "durationMs": 2400,
+      "at": "2026-10-22T08:14:57.073Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\n\n Test Files  13 passed (13)\n      Tests  50 passed (50)\n   Start at  16:14:55\n   Duration  1.72s (environment 46%, setup 28%, transform 12%, tests 6%, import 6%, worker 2%)\n\n    Isolate  13 workers spawned · ~359ms startup each (spawn + environment, per file)\n             at least ~574ms faster with isolate: false — reuses workers across files instead of one per file"
+    }
+  ]
+}

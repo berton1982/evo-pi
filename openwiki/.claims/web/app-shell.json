@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:e592986676e2625c6273d0fc8f50a43bf9516633d2ed11ab2d5135b8967a15ad",
+  "claims": [
+    {
+      "id": "claim_81cdea704b9b415c83a28ec3414fbc6f",
+      "statement": "AppProviders 的 Provider 嵌套顺序为 ThemeProvider(next-themes) → I18nProvider → QueryClientProvider，理由是 Theme 需要在 layout 阶段作用于 html class、locale 切换影响所有子树、QueryClient 只服务业务逻辑。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L29-L53",
+          "version": "repo-lines-v1:sha256:e3c69c434b5de6615a1dfc80cdcb80dc903e191e23daf44eefa319342d79297e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNDMzYzY1MjI1ODcxYWIxNTg5ZTBiMTIxYWI5OWVjMDYwNzYxMjY2OWZlODE0ODdkOTA4OTMxMjliNGMxMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2MjY3OTM1ZmM2MzM0NjVkODQ4YjQwYTRlZDY5NjdlN2I3YTMyM2Y4MWNkNTNjMTEwYWUyMTAyOTY4N2FhMTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzOTYxYzk4MjYwZWE0NDllNjFlNzdmZWQ5OGZkZTEzNGQyYzQ4ZDI3ZjdmZjViMmQ4MjI3OWZlMWViMTYzOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_336cc43435094673bda6a8505ec515f5",
+      "statement": "QueryClient 用 useMemo 绑定在 Provider 实例上以避免 SSR 共享 client 的请求串扰，默认配置为 staleTime 5 分钟且 refetchOnWindowFocus 为 false。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L34-L44",
+          "version": "repo-lines-v1:sha256:f51c9b593847608a21197bc8c234a7c1d155b21450b58b9ca87caacc71c30cfd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwZmI5N2RiN2ZjMzdiODdiZjQ3NGRlMDlkNWUyN2QxYzdjOTdjN2IyNDhkN2IzYzExZTVhZjZhMWM4ODFhNmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZWE3YWY3ZjJlMTgzYjJkNTg5MjJjMGVkY2JkZmZkMjc0MDgxNGNkYmUzY2ZiZWY3ZWJjYzAzODA0ZTc2NmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNTNkMzBhZTU2Mzg4OGZhMTE0MzlhNGJiMWM4OGYxZTY5YTA2MDFjMTk4MmRlODAyYTg1MzE5MWUxMjk2NjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBkOWIxMWMxMDk1ZTA2MGNmNjY1ZGYwNzgyNGNiNTRkZTc4MDFiOTJlZjMxYTA3YWNkNmI5M2VkOWI5Mjg2YWIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L46-L52",
+          "version": "repo-lines-v1:sha256:8ff6c77075ba562c8a694e35b80d6d1a7253dd071004611f6b23d06a1ab67470:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDI4YjRhNWZlYWUwMjhlMDQ2NmI0OTI3MTM1NDIzZTAzNjUyMjAwODNhMGY1ZjNiOWI2MGM4OTIzZmQ2MTU2OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMyYjgwMWFkYTA0OWQ3ZTI4MTc2MDBmZDcyZThjMmU1OTY5MmI4MGQ5NjA2OWE0MDg2NzljNDMyNzc4YWQ4YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjljNGRkZTRlZDViZGVkZTE3YzU0MzhmOTAwMzM1YzAwZTk2NDUxMDMxMTM0YjI3ODYxNDg0MTRkZDk3NWNhOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2YxMzE1MGQyMWM2YzY2NTRiNzk1YWQ2MjBmZjdmZGJkNDVhNDU5NWMyMjg3MzJhZjRiNzdjZjAwNTU2NDYwYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d7c41c2505c42be871e81908477f5a0",
+      "statement": "providers.tsx 的注释明确禁止把 useState、URL sync 或 event bus 塞进 AppProviders，要求所有状态走 zustand，AppShell 保持 presentational。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L19-L27",
+          "version": "repo-lines-v1:sha256:8bdb1bc74e18fb43f948d8b20deb47c3063c05af9fac7010abf30e2521347b60:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIzY2I0YzEzZDY3NzU5ZDU0Zjc2NzFkNDQwMzQ5NzJkMDkwM2EzOWQwOGFmYWU3M2JiOTgxZWI5YWIwZGNmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGYyYzMyZTQwNzY3MDU1NDIwZTFlYThlNThlOTFlYzE5OTc2MjRmOTY2Yjk2ZjBjODIwMTljZjExMTU3Y2U3ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmNkZWQ3ZTA2MDNlMzY5NDRmNTU3Mjc3NjFmNTE2Njg2ZGQ4MTEwODc4MWI5NDZhZmFiODI3OGQ3NTQ2ZWE0YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_26e1bc394fca4007a0048b0fe23aad7c",
+      "statement": "三区面板尺寸约束为：left default 20% / min 10% / max 35% / collapsed 0%，center default 60% / min 40% 且不可折叠，right default 20% / min 20% / max 50% / collapsed 0%。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L109-L124",
+          "version": "repo-lines-v1:sha256:827b5da3f63ab41cfa8c41db8ab332dee9041646f1ec6bbe39bd7bcf6b83cc76:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyODk2OGYyODVlZmY0NjM3YTQwMGYzNzBkNmMyMmEwMzE5ODY1NjY0ZWY3YmZhN2ExZmZjZDIyNmFlMDc0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MjczNTNlNDRhMDVhN2Q5YmM2ZDJiODI0YTQwM2U5YWIzN2MxNjI0NzMyODNiZTJmMTEzMTQwNGVmZDgwNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFiYjM5NTRhMDk5MWU5YTFjMGRkMDVjMTc5MmQ3ZTU3NTk3OTBjOGQyOWZjZTRmMDlkMGNlOWEzMWE5ZGZhNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1YWU1NmE2Mzc4MWI3ZDdiMjkyZWM4NzFmZTAyMzI3N2Q0YjEwYmY4YzRiNDJkNjllYWI3OTIzZGM2MzBlMTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L77-L92",
+          "version": "repo-lines-v1:sha256:38e5d5f430e900ffd7c495e1fdbe662622f720d9cfb12d243f6c092f54abfbe8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyODk2OGYyODVlZmY0NjM3YTQwMGYzNzBkNmMyMmEwMzE5ODY1NjY0ZWY3YmZhN2ExZmZjZDIyNmFlMDc0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MjczNTNlNDRhMDVhN2Q5YmM2ZDJiODI0YTQwM2U5YWIzN2MxNjI0NzMyODNiZTJmMTEzMTQwNGVmZDgwNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2MDNlNzFlY2E1MDA4NzA2ODM1NGE3YTE0Mjc4MDA4YjNjMjU5ZjYwMTM1M2UwYTlmNThmODM3ZmIwM2E4YzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxNGYzNjJhMjA4YTc3YWYzNDUyYzYxMjhmNGY4NDRjYjQyMDU0ZTc1Mjk4ODU4MzQ5ZmRiM2NhYzIzYmM1MDkifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L97-L104",
+          "version": "repo-lines-v1:sha256:cba595b46c005ad5e9e34f5d0e2ffd296bfcf8450835dfc3fbd4b5adb25624c2:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODg2YWI5MDBmZTZmNTZkYjYxMWEyN2YzMjc0MTI3N2YzZjQzOWNlMTA3YTQyMWE5OWNkNzYyMmI3OTMwZTExYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjcyNzM1M2U0NGEwNWE3ZDliYzZkMmI4MjRhNDAzZTlhYjM3YzE2MjQ3MzI4M2JlMmYxMTMxNDA0ZWZkODA1ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzgzZTQ1NGNmYTQ5NjhhZTQ3NTJlMGJhZmM5MzFkZmY5Zjk0NjBiNTRiZmUyZmRjYjBiNjc3NzQ0NTEwZThhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjE0ZjM2MmEyMDhhNzdhZjM0NTJjNjEyOGY0Zjg0NGNiNDIwNTRlNzUyOTg4NTgzNDlmZGIzY2FjMjNiYzUwOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b930ed017b6147399042fa67c32afd1f",
+      "statement": "由于 react-resizable-panels v4 移除了 onCollapse/onExpand 属性，Layout 通过 useEffect 把 useSidebarStore 的 sidebarOpen / rightPanelOpen 同步为 PanelImperativeHandle 的 collapse() / expand() 命令。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L24-L36",
+          "version": "repo-lines-v1:sha256:a378b51b9b8ff91eda4dfb1771a5a6c9d7286cf5350a18b10557d7602f703334:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjMmU5ZGY0MGE5NjE2MmJhNzljNGU1NWJkNjZiYTZiMGQzMTVhNmVlNjVjMWU3NGJmODdiOWE3OGQyNGQ0N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwMDZlZGE2ZThlZjdkNzkwZGZhYjUyMjAzNmYwNTNhZTg1M2RkMTJiOGIyMjlhOTNhOWRkM2Y4YmI4NTE2NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5N2IwZmYxMGJjMWZhMjMzZGQzYjIxNzRhNzRlODk5ZWM5ZDY0NzgzZWViNzA4NTAxZjc3MDRkNGQyNmQwNmUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L48-L63",
+          "version": "repo-lines-v1:sha256:f1187da3a01f9db21839d7ba85ba2f8954d2dae379619a549b4373b7fb60159b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxOTE1ODljMjIwZTcyNjQzNmQ4OWVlNGYwZGMwOWFmODRmMTJlNzUwNDc4MGFlYmMwOTJhZWI3YWM3OGRjMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5ODRmYTA4MGE4OWEyOGNlMTU0YzU2YzI2NDQwYmQ4ZDJiNDU3MjZjYThhMTkwYjFjZDI2MWE3MTAyMDE1N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMTI5NzUyNDU4NWZhM2NhMDg2MzdhNDBkZDIyN2RkN2YwYWE3NDM3ZjZiZGEyNTU1OGY5NzAyYTZkMjc5MjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzZDlmNTk3MTViYjhhNWU0NzI1Y2Q2OTY3NTg0NWUwYTE3NTEyZDk1YWYzZWZlMjI2MDE2ZjQ3ZDBiNzRlM2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c301a99afe342d58e46a6512629264b",
+      "statement": "Layout 自身不持有业务状态，折叠开关只从 useSidebarStore 读；onLayoutChange 把百分比乘 window.innerWidth 反算像素回传给上层，store 侧再夹在 200..480 区间。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L44-L47",
+          "version": "repo-lines-v1:sha256:fa2ce64142970f5fb9d5c40db8b39d642a5c3af849342a50ef44ee86a9464d4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJhMzQ3OGUwNzNiMTIzMDYzMmUxODM2ZDY2YTI5MzZhMzNlMDQyZGExZDJiYzJiOTk5MjAxYTI2NmEyMWFkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjI1NDJlM2E3ZjJkNmEzODkzYjc3ZjZhZGQ0NmU1OWViYWRiZWJhYWE2YTIxMWViYzk3NjUxOTA2NzcyY2MyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjI2YjgwNDgzN2Y5MDQzYWYzNzk1YThhMjQ1MjMyMGMzZDYwZjQ1YmJkZmFhNTc2ZTdmZDZlZTE4NjE2NDQ0NiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/app-shell/Layout.tsx#L66-L75",
+          "version": "repo-lines-v1:sha256:958fc079c7d719de1652091565d9a614dfc4ed09447b4e27571dbc852ea619b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NDg0NjRkMDIxYzRlOGFlMzQ1YzhlYTE5ZjQ2OTUwMmQyM2MxNjAxNzFiYWNiYTQ0ZmQzMDMwNWI3N2NmNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2YWQ1MGViNWFhZTgzZTk0MmY1Mjk5NmI5OWI1MTlkMzI5MGMyNjZlNjE1NzlkODg4MWIxOWRiMjFjZWY2YjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIwOTkxMTE1Yzk5MTc4MGEwYmQ1NjNhM2RjZThjODg2M2FhYTdmMDQyZDNjYjc4OTRmZjBiNGY3OTNjN2M4ZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4MDczYzNlYzU0ZmYzNTBjYTk5NmFkM2FjMjM1ZDA2MTMyNzc3NmQyMmU0ZDk3M2Y5MDVmNTU2YjU3MDA1MTIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-sidebar-store.ts#L20-L36",
+          "version": "repo-lines-v1:sha256:fdb54056433cc9edfe5df49fb54e7451ca79e97ad01b0df4ebcc61cb7a258f5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5ZGVlYTk0NWFkYjc3MWRhMzhjNTg2YTcwYjY3NGY4MTk4Njc4YWIwYWE1ZTY0MzVmYzgzN2RiNjJjOTIxYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODgyZjU5ZGYzMDVkZjA5ZmI3ZWRhOGJlYTNlOWJlMjI1OTM0Yjg2NzZhZmVkYmYxM2Y0NTk3ODQ2NzM4NTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjNmMDA3NTE4NmMyN2JmODM1MTAxZWQ1MDBhMWU0NjAyNDA4N2FiNDhlM2U4MTNjNWQxNTY0MDkyZTIzM2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5113cf34fa4c426fa3853df53c21bb8e",
+      "statement": "Sidebar 宽度常量在 lib/layout-constants.ts（MIN 200 / DEFAULT 260 / MAX 480）与 use-sidebar-store.ts 内部被重复定义了两份，store 并未 import 前者。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/layout-constants.ts#L1-L17",
+          "version": "repo-lines-v1:sha256:64946c7f3a3af40b376d0215163db90b27d6bece228f846cc0181d9e050d6cb5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4OWMxYmI1Mjk3YzNkZTJiN2MyMmE0YmZiYzA0OGFlN2NhMWUyNGM3NTYwNDFkZDQ4N2ZiYWJkNDIzYjY0YzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-sidebar-store.ts#L20-L23",
+          "version": "repo-lines-v1:sha256:8921db81a2713bdcc63be57e124c429cf07e5ce10295ba112cd0de21ccfae6e0:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjlkZWVhOTQ1YWRiNzcxZGEzOGM1ODZhNzBiNjc0ZjgxOTg2NzhhYjBhYTVlNjQzNWZjODM3ZGI2MmM5MjFhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNjYjQ4NTM0YzhmNTE2MDliZTJhMGM4ZTljNWFjNzUzOWFiODRkMWYyMzQ0YTA3YWVkZDY4MGJhZTFjOTI0OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzU4ODJmNTlkZjMwNWRmMDlmYjdlZGE4YmVhM2U5YmUyMjU5MzRiODY3NmFmZWRiZjEzZjQ1OTc4NDY3Mzg1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWNiM2YwZDUxZDk3OTA0ZWI0Nzk5ODhhZDVlNjI0ODA0NDMyZWU3ZWViMjhlMzZjMDJhMGJlZWM3NDFhODc2NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a693ecf3bfc04c3797e84da91efe008f",
+      "statement": "根路由 / 是一个只执行 redirect('/sessions') 的 server component。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/page.tsx#L1-L11",
+          "version": "repo-lines-v1:sha256:b038b4fb44cd60100d98e96a92d5270f612ae5672ea612447e347bf72f799892:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyYWQwYjBhMjU1ODEyZmY1MTc0MDVlNzIwNWViYjA4Njc3YWQ4OTk0ODY0NTZmNGM3YWE2ZTg0MThlZjM5M2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_808ecad4834e49a083240bdb478850f0",
+      "statement": "SessionsPage 被 Suspense 包裹，原因是内部使用 useSearchParams 触发 Next.js 的 CSR bailout，不包会直接构建失败。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L24-L31",
+          "version": "repo-lines-v1:sha256:9a6bec5026407938fbae3261a4c61cacf6cb087b8b1d524d7c0b437fc8385292:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjMGQ3ODU3NGZiYzc1OGZiZTI4ZDkwYTkyZGI5NTVhZGQ5NzdmMGU5Zjg0M2VhZjNiNDYwMWVjMDViYTljZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIzY2I0YzEzZDY3NzU5ZDU0Zjc2NzFkNDQwMzQ5NzJkMDkwM2EzOWQwOGFmYWU3M2JiOTgxZWI5YWIwZGNmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjQwNjU0YWE3MTczZWRjMjFjMDNhODVhMWY3MmViMDZhZmE3ZTQ0MmNjZDY2OTFjZTc3Mjc5M2VmNjMzMTc3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDdkNTExMjQ1ODhmZDUwMDA1ODMwOTk0OTVlMTcwZjg3Y2FlMDkzZGQxMTQ0MmExNDVjMDMxZGQ2ZmM5ZDU4NiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L33-L41",
+          "version": "repo-lines-v1:sha256:0d0b99b3b0bf546ecbc10a8793a6b61a055213e6bbe0da600ba40be1179221e4:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAyYjNiZmY1MDgzMWE3MDYyYjQ4MTIzZWUzODVlNTQ3ZGM0MDYxOWI3NTBhMDRjYTA2NDdiYWY4Y2FmOTJiNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGY5YjQ1YjBjYTRiYjQ2ODQ4NmEwMGExOWQ4ZDliZmJmMmYxZGJhMGU3NjMzMDQxODYxYjY4YzFmY2VhMzYyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmM3YmY5YzI2NzE2NGE3NjcxMjQwZWY5Yzc0Y2FlNTRiYTQ2YmUxNWNmZmFjMWVmZDQyNzVhMTdmOTE0MTUyYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bbf15b72e8a3435aa0931e9fccc1c90b",
+      "statement": "SessionsPage 把 TopBar / CenterZone / Sidebar+SidebarFooter / RightZone 分别装入 Layout 的 top / center / left / right 四个 slot，SettingsPanel 作为浮层 modal 由 footer 或 topbar 的按钮触发打开。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L68-L82",
+          "version": "repo-lines-v1:sha256:0ae6d5ebb43b5b951c2befbb6bf08c9192c25b708c941e4e055ec20830445e5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTk3NjdlNzViYzRjNGRiMTVhOTc4ZjJhZDVhZDliYmE3N2JlMmJiYTliMzg4MTIzODAxNDk3ZTg3MDEwNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjMTUwNGFmNWU4ZTg5Njk5YzM5ZjVlYTBkYjQyNTFlY2UxMDVmMWYwYzU0NTNjOTRhNjkxZWRkYzdlZGU0YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQxNDk1MzQ3MDY0MmVlZmIwMjM1OTU1NzdlYmIzNDA0YjZiZjAxYWNjNjI2MzE5OTExOWM0NmQ0NzQyYTEwNjgifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L82-L115",
+          "version": "repo-lines-v1:sha256:7da250cb3a589a41bf5ac2724b53b3e1b9328b18f308b2cc8bc82dbf41eb8be1:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkYTU5M2ViODNjNzlmZTljNmQyNjhkMWMxYjg3ODdhMDkyODEwODYyYjIxZmU4YTFkMTYyZjRmMWQxZjMxMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkN2M5ZDdlNmM1ZDA4YTY5NDMwMTY2OWJlNDQ5NjY5NTkzNzcxYzFhYzQxM2I0NDE5MDU0OGM2NjkwNTZiZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxY2NmMzg4MmYzNGZhYzc4YzRmNDY5YWQ3ODljNzJiYTZiMWM5ZmQ5YWQzOTg2NDVlYjFjODEyM2QxZDc2NzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_98f54556aaf242d896dc9d714ea3faa6",
+      "statement": "选中会话的真值源是 URL query（?session=<id>），Sidebar 点击走 router.replace 且 scroll:false 以避免堆积历史记录与跳转滚动，刷新与深链经 useSearchParams 还原。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L43-L47",
+          "version": "repo-lines-v1:sha256:cd1b7c7e274a990e1a5d51738d7f6ba8b973da8eca53e96b4e0327da1c0183c4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg1MGY4ODk3YzMzYzkxZDk2ODI4ZTdjM2YwNGZmOWQwNWZlN2IyYWY1MWEyMzhlZDVkZmEwNmZjMGE1MGE1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmRiZWE4MTg2YmMyNzRkZmRjNzliNTViYmZhMTI0MWM0NWVhODhiYzk5NGUzMDhlZjU0NmQxNjdlZTc2MDRiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQwYzVkM2RjM2E3NzMwNzkzYzg5Mjc5NDhiNTU5NjY0MjA3Zjc5YmE4Nzc3M2MyMTUwMDQ0MzE5NjJmZDQ4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTg2MWI1ZGZkOGQwN2FmNWM0OTI1MWUwMDIxZDg3ZWI0NWQyYmIwMDNjOWFhYzcxNzAwODY0Mjg5NWNkOWJmNiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L53-L68",
+          "version": "repo-lines-v1:sha256:619e04c76d69739f5202273a0d0c7cb51f39088d160e70cd8350caac96150054:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzYjFkNDY4MWEwZjIwNjRkMTJjM2ZmODgxNjIxMDgyZWMzZWM0YzFiNTQyNDhiNzIyN2YwMjllYjgwYjIzMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTk3NjdlNzViYzRjNGRiMTVhOTc4ZjJhZDVhZDliYmE3N2JlMmJiYTliMzg4MTIzODAxNDk3ZTg3MDEwNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2MWJjNjc4MGYwODAyYTE4ZTVhMDQyMjU0MTczMGUzY2FhOTE0ODE1NzkwZTI1Y2Y0YWMyZDE3ZTQzZDIzNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4ZTg3N2JjNWQyYmQ3NWE5MzczZDNjMzViMTkxODQwMzg3ODJiNjk2ZGYwNjliMjU3ZmI3NWY0YTFlOTIxZDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d65379f740bd4375b3c7c1de1acb664a",
+      "statement": "useSelectedSessionStore 仍存在且被 Sidebar import，但页面与 Sidebar 均不再消费它，注释说明是为兼容潜在外部读取方而保留。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L48-L52",
+          "version": "repo-lines-v1:sha256:35bef5db0f831d9cb29258cf452c67df35281c0def93e2068a5728a5854a62be:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmNiYjM0MzNhNzA3NTg1Y2I1ZTdlMGE1NjkzMWUzM2ZjMGE3NmNiYzliMWNjMjhiZmMxOGJhZTliM2NlNzRiZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDM2YWJiZWExOTEzMTRmYWM4NzI1NGYzYjgzNzk3NDhjNGQwOWRjOWJjZjUzZDZiNjAzOGY0NjEzNmUyNjc1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDM3ZDUwYjU3ZGZiMjFhNDA3NDBjMjk2ZWQxMDNiZjFmYjU5NWUxMGJmNmRjY2RkMTVhZWMxNDI3OGJmM2IzMSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/Sidebar.tsx#L1-L12",
+          "version": "repo-lines-v1:sha256:dc418c2f010978ccd4d090f5483d0b8f6a272202e39447744554f63ee7d03af9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NjRlMDBlYTU3ZWMzOWQ4OGZjM2Y2OTM0YzRiNzA5MWRiMDU2YTZjMmQ1YjExYTk3MTIzMDBkMDZmOGQyM2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2N2YyN2NiODUyZDRkNGYyMDhiNGM4OGE2NGZhM2MwNzY5OWJkM2M5NjAzZWQ4MTc4MWU3OGNmMTc2NDY4NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmMTRlN2FhZWZlY2FjY2Q3MGY1Y2E4NTdhZWU1ZGYwMWZlZDFjZjY2MGI2MWRkN2UzMjczMWMxY2MxNTM0MmIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

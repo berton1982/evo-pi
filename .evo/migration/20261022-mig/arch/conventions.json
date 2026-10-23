@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-10-23T03:45:25.897Z",
+  "root": "repo",
+  "totalFiles": 162,
+  "layers": [
+    {
+      "layer": "features",
+      "files": 26,
+      "paths": [
+        {
+          "path": "packages/web/src/features",
+          "files": 26
+        }
+      ],
+      "samples": [
+        "packages/web/src/features/files/file-explorer.tsx",
+        "packages/web/src/features/files/files-tab.tsx",
+        "packages/web/src/features/files/files-toolbar.tsx"
+      ]
+    },
+    {
+      "layer": "domain",
+      "files": 19,
+      "paths": [
+        {
+          "path": "packages/core/src/_shared/domain",
+          "files": 6
+        },
+        {
+          "path": "packages/core/src/session/domain",
+          "files": 6
+        },
+        {
+          "path": "packages/core/src/mcp/domain",
+          "files": 4
+        },
+        {
+          "path": "packages/core/src/system/domain",
+          "files": 3
+        }
+      ],
+      "samples": [
+        "packages/core/src/_shared/domain/cwd.ts",
+        "packages/core/src/_shared/domain/domain-error.ts",
+        "packages/core/src/_shared/domain/index.ts"
+      ]
+    },
+    {
+      "layer": "shell",
+      "files": 18,
+      "paths": [
+        {
+          "path": "packages/web/src/shell",
+          "files": 18
+        }
+      ],
+      "samples": [
+        "packages/web/src/shell/frame/i18n-provider.tsx",
+        "packages/web/src/shell/frame/providers.tsx",
+        "packages/web/src/shell/layout/app-layout.tsx"
+      ]
+    },
+    {
+      "layer": "use-cases",
+      "files": 16,
+      "paths": [
+        {
+          "path": "packages/core/src/session/use-cases",
+          "files": 8
+        },
+        {
+          "path": "packages/core/src/mcp/use-cases",
+          "files": 6
+        },
+        {
+          "path": "packages/core/src/system/use-cases",
+          "files": 2
+        }
+      ],
+      "samples": [
+        "packages/core/src/mcp/use-cases/batch-actions.ts",
+        "packages/core/src/mcp/use-cases/index.ts",
+        "packages/core/src/mcp/use-cases/load-overview.ts"
+      ]
+    },
+    {
+      "layer": "components",
+      "files": 16,
+      "paths": [
+        {
+          "path": "packages/web/src/components",
+          "files": 16
+        }
+      ],
+      "samples": [
+        "packages/web/src/components/ui/badge.tsx",
+        "packages/web/src/components/ui/button.tsx",
+        "packages/web/src/components/ui/card.tsx"
+      ]
+    },
+    {
+      "layer": "lib",
+      "files": 14,
+      "paths": [
+        {
+          "path": "packages/web/src/lib",
+          "files": 14
+        }
+      ],
+      "samples": [
+        "packages/web/src/lib/agent-message-types.ts",
+        "packages/web/src/lib/api-client.ts",
+        "packages/web/src/lib/api-types.ts"
+      ]
+    },
+    {
+      "layer": "adapters",
+      "files": 13,
+      "paths": [
+        {
+          "path": "packages/core/src/mcp/adapters",
+          "files": 7
+        },
+        {
+          "path": "packages/core/src/session/adapters",
+          "files": 5
+        },
+        {
+          "path": "packages/core/src/system/adapters",
+          "files": 1
+        }
+      ],
+      "samples": [
+        "packages/core/src/mcp/adapters/error-mapping.ts",
+        "packages/core/src/mcp/adapters/http-client.ts",
+        "packages/core/src/mcp/adapters/http-mcp-repository.ts"
+      ]
+    },
+    {
+      "layer": "stores",
+      "files": 10,
+      "paths": [
+        {
+          "path": "packages/web/src/shell/orchestration/stores",
+          "files": 6
+        },
+        {
+          "path": "packages/web/src/features/mcp/stores",
+          "files": 4
+        }
+      ],
+      "samples": [
+        "packages/web/src/features/mcp/stores/mcp-overview-store.ts",
+        "packages/web/src/features/mcp/stores/mcp-selection-store.ts",
+        "packages/web/src/features/mcp/stores/mcp-sign-in-store.ts"
+      ]
+    },
+    {
+      "layer": "ports",
+      "files": 9,
+      "paths": [
+        {
+          "path": "packages/core/src/mcp/domain/ports",
+          "files": 5
+        },
+        {
+          "path": "packages/core/src/session/domain/ports",
+          "files": 4
+        }
+      ],
+      "samples": [
+        "packages/core/src/mcp/domain/ports/index.ts",
+        "packages/core/src/mcp/domain/ports/mcp-repository.ts",
+        "packages/core/src/mcp/domain/ports/mcp-sign-in-flow.ts"
+      ]
+    },
+    {
+      "layer": "app",
+      "files": 9,
+      "paths": [
+        {
+          "path": "packages/web/src/app",
+          "files": 9
+        }
+      ],
+      "samples": [
+        "packages/web/src/app/api/mcp/route.ts",
+        "packages/web/src/app/api/mcp/test/route.ts",
+        "packages/web/src/app/api/project-trust/route.ts"
+      ]
+    },
+    {
+      "layer": "infrastructure",
+      "files": 6,
+      "paths": [
+        {
+          "path": "packages/core/src/session/infrastructure",
+          "files": 5
+        },
+        {
+          "path": "packages/core/src/mcp/infrastructure",
+          "files": 1
+        }
+      ],
+      "samples": [
+        "packages/core/src/mcp/infrastructure/mcp-config.ts",
+        "packages/core/src/session/infrastructure/bounded-reader.ts",
+        "packages/core/src/session/infrastructure/index.ts"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "core",
+      "path": "packages/core",
+      "exists": true
+    },
+    {
+      "name": "web",
+      "path": "packages/web",
+      "exists": true
+    }
+  ]
+}

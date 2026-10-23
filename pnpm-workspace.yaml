@@ -1,0 +1,19 @@
+packages:
+  - 'packages/*'
+  - 'pi-packages/*'
+
+# pnpm 12 supply-chain policy overrides
+# Default minimumReleaseAge = 1440 minutes (24h) blocks recently-published
+# packages. We override to 0 because this repo installs in agent / CI
+# environments where recent releases are normal and expected.
+minimumReleaseAge: 0
+
+# Allow native build scripts for these packages.
+# pnpm 12 format: `allowBuilds` is a map of `package-name: true`.
+# (Earlier list-form `onlyBuiltDependencies` is no longer accepted.)
+allowBuilds:
+  '@google/genai': true
+  '@parcel/watcher': true
+  '@swc/core': true
+  esbuild: true
+  protobufjs: true

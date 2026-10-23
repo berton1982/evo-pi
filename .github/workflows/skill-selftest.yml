@@ -1,0 +1,47 @@
+name: skill-selftest
+
+# 为什么存在：验器本身必须被验。
+# 上一代迁移技能有 17 个校验脚本、零测试、零 CI，
+# 其中「未知参数 → 退出码 0」的误用会静默把门关掉。
+# 这里每次 push 都跑一遍状态机自测 + 技能自检，防止门退化成纸面门禁。
+
+on:
+  push:
+    paths:
+      - '.pi/skills/migrating-god-files/**'
+      - '.github/workflows/skill-selftest.yml'
+  pull_request:
+    paths:
+      - '.pi/skills/migrating-god-files/**'
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 状态机自测（四作用域链路 + 设计门负例 + 误用保护）
+        run: node .pi/skills/migrating-god-files/scripts/selftest.mjs
+
+      # 交付链的判据（桩/联调/验收阶梯）输入是人写的表格，在阶段链路里踩不到真判据，
+      # 所以单独一层单测：真实现写"桩"、L6 由 agent 代签这类错误必须在这里被抓住。
+      - name: delivery gates selftest
+        run: node .pi/skills/migrating-god-files/scripts/selftest-delivery.mjs
+      - name: 技能自检（体积/死链/运行期产物引用/文档与阶段契约一致）
+        run: node .pi/skills/migrating-god-files/scripts/lint-skill.mjs
+      - name: 阶段文档与阶段契约一致（生成物过期即红）
+        run: node .pi/skills/migrating-god-files/scripts/gen-workflow-doc.mjs --check
+      - name: 门目录对账（幻影门 / 死门 / rules.md 与 gates.md 漂移）
+        run: node .pi/skills/migrating-god-files/scripts/check-gates-map.mjs
+      # 迁移门：有 run 目录时跑一遍（advisory——P0 未完成前必然红，不作为 CI 阻塞项）
+      - name: 迁移门（有 run 时）
+        run: |
+          shopt -s nullglob
+          for d in .evo/migration/*/state.json; do
+            echo "::group::$(dirname "$d")"
+            node .pi/skills/migrating-god-files/scripts/check-phase.mjs --run "$(dirname "$d")" --all || true
+            echo "::endgroup::"
+          done

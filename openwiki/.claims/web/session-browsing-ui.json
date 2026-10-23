@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:55189258b7540911ba107f29e1536dc0f0c7c008a503b89449ae5708c86026be",
+  "claims": [
+    {
+      "id": "claim_5abf4aaa30a94897a395666bf796479b",
+      "statement": "SessionTree 的虚拟化参数为固定行高 54px、overscan 由 240px 意图值除以行高换算为条数（ceil(240/54)=5），且行组件的 h-[54px] 类与该常量绑定，不一致会导致定位错位。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree-row.tsx#L21-L21",
+          "version": "repo-lines-v1:sha256:1f88d2186ec559b4177536e79f82d22b5d86215b1e37ecb11ff3e654bd76ab61:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWY4OGQyMTg2ZWM1NTliNDE3NzUzNmU3OWY4MmQyMmI1ZDg2MjE1YjFlMzdlY2IxMWZmM2U2NTRiZDc2YWI2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWY4OGQyMTg2ZWM1NTliNDE3NzUzNmU3OWY4MmQyMmI1ZDg2MjE1YjFlMzdlY2IxMWZmM2U2NTRiZDc2YWI2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTllMzZjMTY2OWNkMWE5M2ZjZmMzNTNmZmZkYTc5NjUyZWMwMmIwNWNmZDQzMzM0YjZmMTMzMWJkNzlkNDk4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTYzMmM3OGZhMzQzOWYyYTEwN2YzMzQ0YWQ2YzQ0NzUyMWY0YmU1YzI2ZjdiZTQzZGE1OGM0OTIyZDU5NGIxZiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree-row.tsx#L88-L89",
+          "version": "repo-lines-v1:sha256:622aec2bc7c038f902cefc2eab219f6d98ce99ac066644278ad1385084ed237f:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmZkN2NhYjM2YzcwNjgzZmJkMWMxOTA4NzEwZGVlNTVhYTE5MDhiMGM3MmViNzJhZjM5MDM4M2Q5MWQ4ZjE1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQ5MTI4NjdkNTBhODNiZDMzYjRhNDU0MTE1ZGM4ZWEyOTgyOGQ1Y2NhMzM0MTlhYWM1MTU4ZjFiMTg4MzVlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTYwZWU5ZWJiZmU1NTIwYjBlMDJmYTBhYzRiZjBmM2E5YjI3ZWFhNmI2ODhiZTQ2MjQyZTE0ODc3MzMzMjY0ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2RlYjMyMTZkYTVkMWUwNDdhNmYyYTBlNWU2NGNhZDgyMTVlN2MxZWZlOTJjODAwMTQyNWViYWVhZDEyOGI4MiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree.tsx#L42-L49",
+          "version": "repo-lines-v1:sha256:19acf17958ec9788b9f89427229953ae39cc68f3523d7623a578e1d4ed5bd386:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTA4Njk2NWIyMGRmMmU3NTJmNmQ3YmIwN2M2NmI2MWQ1MGQ1NzIzNjllYWMwYmZlYzg4MDc5Y2IyNDc5Njc3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjIzNTI1ODljMzRkM2M2MDY4NTkzMWI2ZWNjNGQ1MDk5MWE3YzU2YzhmYmEyODk0MTE0NjU3NjkwMjcyY2FjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzEzNTc4Yjc4NTNlZjlkMzE4YzgwMzNmN2NlNzQwZGRkNWVkNjUyNzVlMmZlOTQyOTI0YjhjMjI5MDU0MTAxYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODNiYmNmZTgwNzYyM2ZiZTBhZDkzYzFhOWVjMmI4ZDEyNjkyMGUxNjc3ZGUxOTA5OWJlYTlkNjI0OWM4YzEzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e03736cde9ef492a866081b94d527dc7",
+      "statement": "SessionTree 在 sessions 为空时不渲染虚拟容器，直接显示 data-component=session-tree-empty 的硬编码英文占位文案，未接入 i18n。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree.tsx#L50-L62",
+          "version": "repo-lines-v1:sha256:e3bba878fc5872aa6ed9ff61c4a7e22020390d3fc88ebdcb3c74cd56b24c7f66:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3MjE2ZThlOWMwYTFhNjhkMDZjMmZiYWE1ZmQyMTM5NDgyYjhlZmQwYTE5MzE1YjkxNWU2Y2NlODQ5ZDg5ZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjODQzODAwMjRlN2ZmMDIxN2EzZjZhNmE0MmY3MWYzZmVhYzg5Y2UwOWE3MWM1M2Q2YjJhNDA3YTU5NzIxNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkY2Y4YTEwNWUyNTNjMTg3YTM4ZGM2MzI2ZDE0YTI0NzdlYzQwMjEwZGIzYjk4OGQ5OTg2NjZkZWRmM2I5MGIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree.tsx#L63-L72",
+          "version": "repo-lines-v1:sha256:ce0154ec6616a2391ec34604d9c84ff1bdb2214255fbb84f4c085cee129d54e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZDAxOTE1OWJmYzVmZTY1NGE2ZTcxZjE1NjI4ODZjNWUwZjBjYjk3YmU2ZTA3YzZiOTRhMDBhZDMyNDE1ZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlNTEyOWQxMzQ2ZDliOGRkMTA1YjM0MmRlNGUwNzAxYjI2NThhZDE0Mzk3NjA0NzYzZjk5YjhkNmE3MmMyODQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzMzAyZmI5NDExYzU4NGVlMGUwMDA3MDlhNzYzMDYzNTk0M2RmOGExYzM4MjYzMGFkNjI1Mzk4YTAyNGJjOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUzNWYyODBmZDI2NWJiNGJkMzRlYmUyZDM3NDQ0NGZmMmI0MDc4ODRhY2RlMTEzNmE3YzEyOGIwYjQ1NTE1OTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c8c3f304a6d845889aff64460e2a500a",
+      "statement": "jsdom 的 clientHeight 为 0 会让 useVirtualizer 渲染 0 行，因此 session-tree 与 Sidebar 的组件测试都必须 mock @tanstack/react-virtual。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sidebar/Sidebar.test.tsx#L1-L4",
+          "version": "repo-lines-v1:sha256:e0ea7473b80a7ef04c03499c99f8f295132824f8cea6f83c44e8ec7818508094:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU1MTcyMzE4ODRmNWFlZTc1ZGQzYjA1MDlmMTBiMzE4Yzg3ZDE5ZjdmM2Q0OWE0NTJmODZlYzU4M2IzODFjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjUxMTFiZTJjZmM3ODYxMjM2MTJiNjFmOWMwMzgyNDNlOTk1MDA4YjE4NjdkM2M0MTM4YjMwNGY0YzdlM2EzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNlYjM0NjkzMjY0ODExMTZlMDgyMjIzZGQxMzNmMjQxZmJhYjBkMzg2Y2MwOTQwMDU0YzZmNzUzY2IzMDdhMiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree.test.tsx#L1-L6",
+          "version": "repo-lines-v1:sha256:550d5ec767041781da6fe09ba70f159af9c67c69bf95adfa37e4e3a12f249922:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU1MTcyMzE4ODRmNWFlZTc1ZGQzYjA1MDlmMTBiMzE4Yzg3ZDE5ZjdmM2Q0OWE0NTJmODZlYzU4M2IzODFjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTQzOTgxODIyYmY5YmQ1NjlhYzIwYTkzMDA5MmIyNjhjNzAxYTdkYmM2ZGM3NDhiNDk4MTRjNDY2YTkyY2NiMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6e600c22af3f4914925263df4749d928",
+      "statement": "Sidebar 用 useSessionList 的全量列表与搜索结果的 session id 求交集来过滤，搜索只收窄已有列表而不展示列表之外的结果；关闭搜索框会同时清空 query 使过滤自动解除。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sidebar/Sidebar.tsx#L16-L45",
+          "version": "repo-lines-v1:sha256:77270ba4871ab38b9677f9a0c1ebd0ae6cdf5bbac5e3705d5579a43377c2ee5d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZjJiZWI0OTE0YzI2N2FmNTg1NWRiOWI1MjA0ZmZjZWY5MjZmODYwMmY2NGM4MWI0MjI5M2QyNWE0ZmRkNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZjM0NDkzNTY0ZGU0MzFhY2Q0MzUxZmU3ZjM5OTg3MTc4NTQ3MGQ2ODQyMTc5NWRmNzUwY2I3ZmVhODQzZjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmMTRlN2FhZWZlY2FjY2Q3MGY1Y2E4NTdhZWU1ZGYwMWZlZDFjZjY2MGI2MWRkN2UzMjczMWMxY2MxNTM0MmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMzNGNlNjNjZGI4Nzc4MWYxMzE3MmM0ODEwM2RiNWRhOTBlNzFiZWU3ZWE3ZWRjZWQ4OGUwZjdjZTdiMDczOTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sidebar/Sidebar.tsx#L75-L82",
+          "version": "repo-lines-v1:sha256:8f3767854000c8241fe4f8b16229ca9b6c6f4e61fa694878d2850d5c736af75c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODI1NWEyYzYxZGZjZTk5N2RlYzQwN2U1NjBmYjQzNWE0MjNlY2FiM2VhMDhiMThiYWQzMzA4YjdmY2I4NWYyMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjNjEwY2M1NzZmYWIyYzZmYTU1NTI5ZTYwMjI4Y2U0MjA3OTVjOTQ1NjUyZDk4NTQ4OWY0OWI2MjE3NDNhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWE5MzljN2UwYjM4YTAwNTBkMTFlMDgxNWZjMzQwMzQxMTM5MjM3ZjNlYmM4NDhjYWU0N2RkNDIzNmE3OGVkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTE4NGM1MjAyNmNjMmE3YTY3ODY3ODJmMWNmOGZlMjk1MmQ4ZmNmM2U1NmI3MDE0ZDQ3NGY3ZDFlZWQwNzliOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_23ee2e439d11419a8f4082e410d94891",
+      "statement": "CenterZone 是四态状态机：未选中显示占位文案、isLoading 渲染 3 行固定骨架并置 aria-busy、error 渲染本地化文案与 error.message、data 渲染 MessageView。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L112-L122",
+          "version": "repo-lines-v1:sha256:e5738bc1527900ed34f9a57550db6d4d831bcad2f50e3a89b25ae15e556e09d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczNzZiY2ZlN2M4ZDdlZWM4NTVlMDE5NzJjOTUwYzIyZWJmMDg4Yjc0MzE4ZDQ1MTQwYzEwZWRjOGY0MzBjZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkYTU5M2ViODNjNzlmZTljNmQyNjhkMWMxYjg3ODdhMDkyODEwODYyYjIxZmU4YTFkMTYyZjRmMWQxZjMxMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlNmEzMTYzM2RhY2VkYWJkNzVmNTcyOWJhZWJjNGNkN2E1YTg2MTgxZDg2Mjk0MWIzMzI3MGMxN2U3NDdiMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZjkwNGUyMTE3ZWNmYTVjZGQ2YzVmNTcwMTI3MmM0OTFkYzQ4N2Q3MWJjZmI0OTlmZjVkNTkzZWM5Mzg5MzMifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L56-L78",
+          "version": "repo-lines-v1:sha256:41f4a632e3c8477ce5aaff71178951c87ec47f0548c0f21b07b9109625113223:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiZDY0ZTQ5ZTAwMDRiYzk2ZDU1MjcxZGFhOTVlODg1NmViZDA3Y2ZjYmExYzliMzRjODdiZDQyYTE3Y2QxN2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExYzA4MGJjMTc4N2U3NmM0ZTU5MWZjYTE0NDQ5YzMxZDgxOWNjMjQxNWY5YWNhYzZmY2FmYjg5MWNmNGY1YzcifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L80-L110",
+          "version": "repo-lines-v1:sha256:d6c655c4bf4cc3bb806da4282ce5db0441e08e51930d6f0c4257821eb42b0961:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzNWFkNDcwMWNlMjE3ODMxMzJhODk0ZDFjNjc5ODE5MWU5OGYzNjVkNDBmMWEyMGYyMjM3ZDY4ZGY2MTQxYTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiZjM5YTg3MjM2NzBlYjBhMWFmYmExMzZhMTkwYTM3MjczNzZjMmJmZDAxMWYwZmVhMjEzNTc1NWI0ZjhkNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzMTM2YjYxM2JjYTViMzNmMGVkNTk0NDVkYWJhZjgxYTgwYzZhODIzNGI5MmQ3NTYwNGExYzcwZDlmNWIyNjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d4d440e61164fa688d6c1962bb03294",
+      "statement": "CenterZone 的错误态直接把 error.message 显示在界面上，配合 route 侧 500 回传原始 message 的行为，内部错误细节会直接暴露给用户。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L82-L85",
+          "version": "repo-lines-v1:sha256:ae953e4a11654623f30c94dbfee8964ef8cc53f2c89baaa81aff97c128896e91:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTI1NDhmNjVhMTBhODNkMWZlM2U4NzVkNGNiNWI1YWYxYmMyMWMxZjI3M2U3NTk2YzUwMDk5YjFkN2RmNTJlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBjMWYxODhmMTQyZWQ3YTgyNDY4MGIyMDcxNzJjNTUxOWJjNjE0YTQ4ZmRhN2NmMTY3ZWRiOGRkZjc5OTU2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ2YzVhNzI0N2QxMzI1ZDZhMDYwZGQ4YzcyNzhiMjk2ODcyOGFlMmVmM2ZkYTE0ZmU1ZTU5NGJiNjY1OGZhZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGY3MzlhMDZjMWNiYjEyNDRlMzM2M2QzOGJjZjlmYTUwY2U4NGZlZDM5OWMyMTkzYTNjN2YwOGQ1OTkxOGIyYSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L80-L106",
+          "version": "repo-lines-v1:sha256:3700d92e22f59e07fb9de227231946e2051b59d6ec761676a67cc77ace015237:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzNWFkNDcwMWNlMjE3ODMxMzJhODk0ZDFjNjc5ODE5MWU5OGYzNjVkNDBmMWEyMGYyMjM3ZDY4ZGY2MTQxYTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NjQ3ZmY1NWFmMzU0NTdkNjRkYmUxNmU1NzhkN2U3MTRjN2JmZGYzYzI0MmJjNGUxNThmZWI1NDgwMDhjYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiZjM5YTg3MjM2NzBlYjBhMWFmYmExMzZhMTkwYTM3MjczNzZjMmJmZDAxMWYwZmVhMjEzNTc1NWI0ZjhkNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZjkwNGUyMTE3ZWNmYTVjZGQ2YzVmNTcwMTI3MmM0OTFkYzQ4N2Q3MWJjZmI0OTlmZjVkNTkzZWM5Mzg5MzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_66d4d4169ab143f298048aaea1172189",
+      "statement": "CenterZone 的 Retry 按钮当前无实际功能：它来自 PR.A 的重试计数器与重新挂载方案，react-query 迁移后未改为 query.refetch()，注释亦坦承这一点。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L93-L105",
+          "version": "repo-lines-v1:sha256:51f581482b8fa24c1bc599bca70df8e41b6fcedb5f25835b6afa495b2ce38e07:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwMDBlZDI5NGVkOGQ1NzI2MWIyZjc0NTczNWJkMWRlODhiYzliN2I0ZTc5NDRlZGExOWYwMDAwYzM0NWM2ZGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhOGViNjkyNDBiZjcwYTRkNzQzNjA1M2Q2NjMwNzU3ZTMwNWQ3OGI3M2M5MmY2OGVjMTRiZDdmMmE0MTc4ZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEyZWE5ZWI0OTE2ZjNlYWUzNThiYTY3MWNjMjgzODdhOTlkNDIyYmFlOTJjYzJlMmZhNDIyNzRhN2RlN2Q1MDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3NjgwMDZkNTA4Y2Q3NmQ0ZWRjYTBkMThmYmQ3Mzg2YTlmNmVjNzM1MDBhMzVmNWIxNGI3NWZjYTNhZGRkYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b439211f72df42a3bd5bde82b535c3a6",
+      "statement": "MessageView 的 DOM 契约包含 message-view / message-row（含 data-testid 变体）/ message-role / entry-id 以及 user-bubble、assistant-meta、assistant-bubble、message-fallback，被 e2e 与组件测试同时依赖。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L12-L22",
+          "version": "repo-lines-v1:sha256:da7339c98fdc6ed70ef0c7b0b050ea422f8026dfbf9b0c57ff2b448f75c66b1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjNmI5YTA0ZTFjYjYwMTg4ZjM3YWI2OGFlNTJlOGYwYzIxYWVmNDRmN2Y4ZjVkMzg5MGU5MGFmZTcyMTk0MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhY2MyYjY1YmZlMDliYWYzYTE0ODZjNTdkMzhiZDYzYjU0OTQ4Y2Y2NWQyOGE0YmNjY2JiMWUxNGU4Yjk5NjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2ZTkxZDRiNjc0N2JmZjAzODBlNTg2OGZmMGUwN2E2MmUxYjY5ODRjM2Q2YmM3YzIzNmRjZTg0ODc5ZWQ4ZDQifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L131-L140",
+          "version": "repo-lines-v1:sha256:4af05507cfb16cdab52f7fe1e4588b108b965f5439279074c16e4f71688e697c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMmE1ZmUzYWVjMzk1NDllN2ZhMzFhMDMwZTRhYThiOGZhNzkyN2QxODZkNDdlZTY2MTNlZmQ5NDY1NmM4MDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNTkyMDhjZGJmYzliOGM3YzgwNTA2ZmY0NzNmNzNlZThjN2NhYTI5Mzc4MTQ1YTE4MTQxM2U4MmE1OTc0MTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0MGM1ZDNkYzNhNzczMDc5M2M4OTI3OTQ4YjU1OTY2NDIwN2Y3OWJhODc3NzNjMjE1MDA0NDMxOTYyZmQ0ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhM2IyMjQyZWI5M2NkYWI3M2FmNzMzMTY0NjE3ZWViNTZiZDM0MjFmYWVhY2U0ZmEzYzE4ODVkYjhkZDdmYzgifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L68-L76",
+          "version": "repo-lines-v1:sha256:4d37c68cc2885cca4837984c1436e5f495834bef7346084296aa6b5b503b29ab:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjQ5OGUzMTlhZDFkNzU0NTIzNWVlMzM1NDk2N2Y2YTQwZDY3OTUyNmI2ZDRlYzQzNzkxOWI3NzgyY2UxMTBkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTZjODZkMGYxZWVhMDQxZWU4YjdhNjFlMDE1NTFhMmIwOWJiYzdkNDA4NDA2ZTM4MDA0NzM3ZmQ3N2FkNjIxZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_068576f96c7a47dfba5caed89c3b0e4a",
+      "statement": "MessageView 的 React key 使用 entryIds[i]，缺失时退化为 idx-<i>，依赖 core 保证同一 session 内 entry id 唯一。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/domain/agent-message.ts#L20-L26",
+          "version": "repo-lines-v1:sha256:bfe84bbcc450caf69d104162d9538b52055453b801ba9056c644a8fcff0fd0ba:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA0NmRiNTZkNzgwZDhiMjcyOTk1Zjc5ZTM0MTI4ZWMyNTc4MDY0NTJkNTQ0ZTcwYjFmNTA5MmU2MmM3MjE5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGE3OWVjY2Y0ODY4OWY0ZDc3N2ViZmM4ZTE0MmFjOTA5ZDYxZjA5MTZhNDc3ODE2ZjQzMWEwMzdhNGU5YjRlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTFkNzdjZjJlYWZjYmM2NzljNDRkMmE2OTlmYzgxNTRmZGEyZDc4MDA3YjU0NWFlYzAxNTU4YThhMmRlYjZmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L133-L141",
+          "version": "repo-lines-v1:sha256:1e22527ed9d3b438401fe25000592a1d8059755e864cc0a8c12a185a6c38f842:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDJkYmM3OGVhYTU0MTE1ZmM0OTY3YzUzNTYyM2Q3YWUyNmI5MWRhMDcxNjM1ZDQ5MWNhYjkxOTU3MTFlYWY1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA1NjMwNGIwZWVhYmQ4OGFkNGNiZGQ2MGJkZjQ2NjUxYWQ4NTdhZDFlMDEwNGU0MmFiZmY2YjA0M2FlOGVhMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTliMjA1YzVlMDQ3Mjc1NDY3MmE2YzdjMjM0MTU5ODYzZTUwYjU3NzE4NTNhZmU5NWJmNWUxYmVmNWM3NzFiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2YxMzE1MGQyMWM2YzY2NTRiNzk1YWQ2MjBmZjdmZGJkNDVhNDU5NWMyMjg3MzJhZjRiNzdjZjAwNTU2NDYwYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9be1ffcb689c4598a18f13a986117b82",
+      "statement": "MessageView 的文本提取只处理字符串与 type==='text' 的块，其余内容（图片、toolResult 等）返回空串并走 fallback 分支只显示角色名，图片与 tool-call 渲染属 Phase 3+。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L110-L125",
+          "version": "repo-lines-v1:sha256:cef5eefd289f4ab1bf7bf3edd9719a62f00f13b229bbf6029e22b1520fcb733c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwYTA0MGIyM2ZhM2U5MThjOTU0M2JlODYzODAwYTJlMDNlNjQzYWQ1NTdmMmE0MzQ5MjJhZTVmNzUyNzk5NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiYWZiNDc4NjYwODVkNzI5ZmExN2RiODAzMGMzZGY5MmM4NTBkNTk3ODk4OGM4MTAzNjJhMDZkNzU0ZDY5YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5MmU3YzA0MGIwZjdlZWY0NDUyYTU5NDdhOGY4OTRlM2Q5ZGU5ODhmZjA5Mzk0NWQ2YTY1MGJlM2FhMDA0MjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3ZThmMTlkODJlYWY1YWU2MDE4ZmU4OTE5MmJlM2Y1ZmNhNzU3OTkzYTk2NzUyN2RmMzE4Y2M0YzlkMjUxZDUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/components/sessions/MessageView.tsx#L36-L58",
+          "version": "repo-lines-v1:sha256:bb4471f978390c7edd652ea74e0f164899d290d1676449549ac188319b820274:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiMWYwNWEwMzY1Mjc3YTY2MDMxODhiODgwOTQ2NTM1NjQyYTMxZWY4ODk5YjE2YzBhZWM2OWJmMzY4YzdiMzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkNmRiMTRmMDQ5NWFkYzE2MjcyMGRmMzA4ZmI4ZjFjNWRkNDk1OTU2NWY2YjBlYWIyZTRmZGY0YjliYzZiNDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjMTFhMDFiYWI2MjNiZmU5YTUxMjBlYjJhYjlhODZjMGY0Y2IxZTUwMzdjYjJhYTRmOTQ0ODU0MzNiOWQwMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhODE0OGE4M2E0ZDc5MDM2Y2I0YzdhMDUwN2Y4MWViNGE3NTM0NGUxZTVmNzI5Njc3ZjliMjQ4YmJkZjY3ZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6777c54e22e342e18c27e4be8697f67c",
+      "statement": "CenterZone 向 MessageView 传参时使用 as unknown as 双重断言桥接 wire 类型与 MessageView 内部的 AgentMessage 定义，原因是 core 与 web 各自维护了一份 AgentMessage 类型而未共用 barrel。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L113-L122",
+          "version": "repo-lines-v1:sha256:ff50c2585bd1aca0a5ac9b0cf5288fc9f6549d6c6505966b61533a19da9d7794:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5NjkyMTQyOWZkNDliZmNhMTg5OWU0NjhlNmQ4MDk4MmVkODc5NWVmZGIwNjRlYjVkMDI5YTljYTAzMjkxNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkYTU5M2ViODNjNzlmZTljNmQyNjhkMWMxYjg3ODdhMDkyODEwODYyYjIxZmU4YTFkMTYyZjRmMWQxZjMxMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwZWU2OWMyZjhjYWIyYzhjOGFlZTk4ZjAyMDUzOTQwMjdhMzNiYTE2MzgyNWEwZGNmOTZjNzJmNGEyODhlNWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZjkwNGUyMTE3ZWNmYTVjZGQ2YzVmNTcwMTI3MmM0OTFkYzQ4N2Q3MWJjZmI0OTlmZjVkNTkzZWM5Mzg5MzMifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/agent-message-types.ts#L1-L60",
+          "version": "repo-lines-v1:sha256:ed9cde6283893be1bd2df724c45074ef2e56f616ae551c8623b5eca45346de60:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwNDNhOWY4YzE3ZTIwZjY3ZjIxZWY3NTE2MDUzNzdkMDkzYzBjOWZkNTc0ZTA5ZDA2ZjMwMzU2NjEyZDM0ZGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwMTQwYzU5YWQwZjI3Y2NmODA1ZGRiMTYyM2UyOTZjYzdjYzM2NDNhNzY0NTJkNDk4YmRjZjI3ZWM4ZDEyZmMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

@@ -1,0 +1,4 @@
+{"type":"session","id":"22222222-2222-2222-2222-222222222222","timestamp":"2025-12-09T01:00:00.000Z","cwd":"/Users/test/proj-b","provider":"anthropic","modelId":"claude-sonnet-4-5","thinkingLevel":"off","branchedFrom":"/Users/test/proj-b/.pi/agent/sessions/--Users-test-proj-b--/2025-12-09T00-30-00-000Z_aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa.jsonl"}
+{"type":"message","timestamp":"2025-12-09T01:00:01.000Z","message":{"role":"user","content":[{"type":"text","text":"forking to try a different approach"}]}}
+{"type":"message","timestamp":"2025-12-09T01:00:02.000Z","message":{"role":"assistant","content":[{"type":"text","text":"forked at entry X. Continuing from there."}]}}
+{"type":"message","timestamp":"2025-12-09T01:00:03.000Z","message":{"role":"user","content":[{"type":"text","text":"show the diff"}]}}

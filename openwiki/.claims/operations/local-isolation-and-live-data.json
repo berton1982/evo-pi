@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:24fd5710be8a3a530a07c6a8526ae825a205d866e7a26b828caf317939a72e3c",
+  "claims": [
+    {
+      "id": "claim_82e4c555221f4e7fbf1a6b257c806588",
+      "statement": "本地开发约定 evo-pi 只绑 30041、pi-web 的 30141 只能用 lsof 查看禁止 kill，且 lsof -ti:30041 才是允许的 kill 入口。",
+      "evidence": [
+        {
+          "resource": "repo://MEMORY.md#L199-L207",
+          "version": "repo-lines-v1:sha256:76c9b6a6d166c2b25327ae5e7976dca57072b253bb0982cc444c0faa23c9205f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzEwMmU4NmM1ZmE3YmY5NGFiODcwMGM2YjgzOTlkYmQyYmQ4MzgwMzFjNTIyZDgzNTYwYzhmMmU1NDU0MjVhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGJmZTU1NWFlMjRmYmZlZDEwYjRkYmVhZGE4MjY4NmQ1Y2ZhYmY4NjdjNzczMWNkODk2M2RmNDY0OTYyY2Y5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDJmZjQ2NDFkYzY1MTdmMmI5YWM1MDhmZWJkMTA3NzkzZDkzYmM5NjFkNTVjZmE3ZjUyODQ2ZDU3ZmQxOTI5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGU3MmNjOWQzNjcyMmM1NDRlODAwMzE3MWFkNjE2ODUzMmQ3MDIzM2VmMGIyYzg2ZGU2MzdiM2ViODA5ODFiOSJ9"
+        },
+        {
+          "resource": "repo://playwright.config.ts#L38-L44",
+          "version": "repo-lines-v1:sha256:c34fb515dcf1f7ed5dd1bf62976eac944fb81ebbceda22a8b2aece4864cc9dd5:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzVlYmRhYWI5MTdmZTRlYTcwNmEzYmUxMzVmNWE2NGE5MjViNmUxNDczNzU4YTk1ZTYyNzhlYzEyZjUzYjFlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYwY2RiOTcyYTdiZmI3ZWQyNDZmOWZmNjcyMzg1ZTU1ZjQ5NjhmYzExMDQzZGM1YjY4NGQ1MWRmYTMxZGJjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODdhNWY1ZjNjYzEwMmI0ZjkxYWE0ZDIyNTRkMzEzOWI0NzA5ZmVhOWFjYmZlOGNjNGQzNmZkMTZmY2I0OTY3MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDMzYzVjOTVmZDY4NTU5MGZlNjNlNzdlNDRmMzU3ZmUyODg1YjMzMzY2ZDMyMTQzYTFhNzAxYzA2ZWMwNGZiMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6c3112cc49f843d79c95e9b46afd1f7f",
+      "statement": "e2e 存在两处独立的默认 baseURL 来源：playwright.config.ts 用 localhost:30041，而三个 spec 各自在模块内 fallback 到 127.0.0.1:30041 并用自己的 BASE_URL 调 page.goto。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L20-L20",
+          "version": "repo-lines-v1:sha256:ec488a28283de209209cb3829607c85da7525a911ec3577d09543ef3e7821aae:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWM0ODhhMjgyODNkZTIwOTIwOWNiMzgyOTYwN2M4NWRhNzUyNWE5MTFlYzM1NzdkMDk1NDNlZjNlNzgyMWFhZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWM0ODhhMjgyODNkZTIwOTIwOWNiMzgyOTYwN2M4NWRhNzUyNWE5MTFlYzM1NzdkMDk1NDNlZjNlNzgyMWFhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmY4M2UxZGRlOWZkMTk0MzBkOTA3ZDAwYzcxOTIxMTRkMTA0ZjFlZWYyYWRkM2JjYmQwMDNhNjBiNzIwNjY5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTVkM2I1ZGE0MGY1YjE0Y2UyMjhiMTBmMWMzMWMxZWM5OWQxNzczODdiMTRlZmIxMjg3ODE0YjQ4NGNkODgwOCJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L23-L23",
+          "version": "repo-lines-v1:sha256:56d18a4cc2a126f0717071ee3e1cf9f0cec753f72e04a6d1fc038737ef0ff708:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTZkMThhNGNjMmExMjZmMDcxNzA3MWVlM2UxY2Y5ZjBjZWM3NTNmNzJlMDRhNmQxZmMwMzg3MzdlZjBmZjcwOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTZkMThhNGNjMmExMjZmMDcxNzA3MWVlM2UxY2Y5ZjBjZWM3NTNmNzJlMDRhNmQxZmMwMzg3MzdlZjBmZjcwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTVkM2I1ZGE0MGY1YjE0Y2UyMjhiMTBmMWMzMWMxZWM5OWQxNzczODdiMTRlZmIxMjg3ODE0YjQ4NGNkODgwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGRkMjU3YTUwMGNlZDYwOTczYmQzYmI4ODMxMzIxMzI1ZjQ5Njg2ZmQyNTI5ZTg1YTZhNjk2MzE0ODU1YWNkYiJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L28-L28",
+          "version": "repo-lines-v1:sha256:972a429382b2e14718e0e37b0570a8a1702991fcd8498cd84060a8bf4f05017b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJjNDc1Y2Y0MjhmOTU3MzFlMjU2MjM2YTI3NDJmNWU2MmFjYjdhMjg0YTVhYWVhN2FiMWY0ZmIxMDQyOGRmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTBjYWZmZWVhZTY2NmIwMTlkNTI5NzZiN2I5NGIyMjJlZGY3NGU4NGIyYTZmMjBlZWMyYzcyMTdlNjZlMGMxZiJ9"
+        },
+        {
+          "resource": "repo://playwright.config.ts#L38-L41",
+          "version": "repo-lines-v1:sha256:d81ab34196dc68e4a6f3fbb5c89bdcde875601e8d26f280708254904ba329d1f:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzVlYmRhYWI5MTdmZTRlYTcwNmEzYmUxMzVmNWE2NGE5MjViNmUxNDczNzU4YTk1ZTYyNzhlYzEyZjUzYjFlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTE3NDE5MTU0NTg4MzUwN2Y4MjU5ZTcxZGU0MjdiZDM5MDY4YTMzODI4YzZmM2EwYWRmYTA5NTk4YzY5YjRiOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODdhNWY1ZjNjYzEwMmI0ZjkxYWE0ZDIyNTRkMzEzOWI0NzA5ZmVhOWFjYmZlOGNjNGQzNmZkMTZmY2I0OTY3MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNhOWVjZDgxM2E2MTEyMDkzOTA1ZTgwYjk3NGYwNzQ3NjQyZGVhZGE2ZWZmMzc3ZTExZWQ5ZjJmNmQ1NzgwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0b09f628a4fd4a1c9b2ff4ad7a0cbf2e",
+      "statement": "进程处理纪律要求 kill 前先确认进程归属，优先按自捕获 PID 或端口 kill，明确禁止 pkill -f、killall 与 pgrep 循环 kill，并在三条默认答案任一为不确定时选择不 kill。",
+      "evidence": [
+        {
+          "resource": "repo://MEMORY.md#L187-L197",
+          "version": "repo-lines-v1:sha256:2f03019aec67d74e881f59367ef915a06a686f817ccb9f767c0c8248e006e3c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwOTI0MjA1MWYyZTYyN2IyNWE0NTNlZmJiNGFkYWZiZDgyN2M1NDBhZjcxMTZjM2U2NGJlOGE2ODEyN2I3MDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlMWNhMGZkN2FkYzExZDkzM2ZhNjJiYjY0ZWMwYzVjZjMyNmQwMGRjYmM5YTA3NTYzOTI5MjhkMWY1NzJkMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlNDE5NWFlOTMyZDQ3YmRkOTNjNTA4NTc2MjgxNGRmN2E5YTE4ZjU3MGUzZjZhYTYyMmJkMmMyMjlkMGYyMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE4NzY1MDM5MWMxZTUzZDkxMWIzYzhmMmJlNzJkNTdhMTAyMmI3NzIzZGJjYjk1MjgzNDVhOGYzZjRjYmE4MGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bba5d8b4570a4dd59dfbfd4706efe814",
+      "statement": "验证时优先用 pnpm -F <pkg> build 而非 dev，以避免常驻进程带来的清理问题。",
+      "evidence": [
+        {
+          "resource": "repo://MEMORY.md#L191-L192",
+          "version": "repo-lines-v1:sha256:90187291009fa7885d1713bebc5e1080c422fca21d1b7af4c97926f6728515bb:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDBjNDllODg1YzJiNjVmMzIzMDVmZDg2M2I4MDcxZmY2ODM0Njg2MDVjZTdmZjMxZjY2YWEwMWY4ZWZiODY5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTc5YmMyNDk4NjU0Nzg4NTE4NDcxMTgyOTg0OTgxY2ViN2M4ZGMxYzQ5MTMyZGNjNDQwYTgzZGJjZWUwNWQzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2I5Mjc3MWY1MDY5MmViZWQyMWMzZmM1NDE1Nzc4OTE0NGMxN2Y2NWMxYjBiYjQ0Zjg4YTkzMTY3YTk4MDczYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGYxZjUwMzExYTNlYmY5ZjdkYTRlMzUzOGZjM2EyOWMwOTBhMGY4NWRlZjk4ZTk2MGVjNDU0ZDUzNTZhMzI2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_90844170cb364ded8005e9c04e6752e0",
+      "statement": "未设置 PI_CODING_AGENT_DIR 时 agentDir 解析为 ~/.pi/agent，而 ScanIndexStore 构造时 warm-load 索引、invalidate 后 500ms debounce 写盘，因此任何在未覆盖 env 的进程里构造该类的代码都会写真实 agentDir，包括导入 web route 的测试。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/scan-index-store.ts#L27-L35",
+          "version": "repo-lines-v1:sha256:85c0de04e39a254cf82e2d68ab048ac31cbda80af809b554b143685e806fdb66:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmQ2MTQ1OTU0YmVjYzdiNWNjNjQ5ODJhMTI0YjM4NTM4MWYzZjU4ZGFiN2QyNzVlN2UxZTc4ZmFmM2IwMzY0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZhN2UyOTFlN2RhYmZmOTIzZDUwODA3ZGY4ODNlNTJhZDJmNWM3NTBkZTA2MmIzZmQ4NDlkZmQwZjRmNmU1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjIzNDUxYmI2ZjRjYzg4YjVlYTA4OWM2ZTBiYjA3MGM2ZjUwZDVjOTMwZjVkNGE0NjEzOGFhMjZjMzRlMjEwYSJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/scan-index-store.ts#L41-L78",
+          "version": "repo-lines-v1:sha256:81f29fd65661dd654b59e8ec54fbb118bfba6f7c32e3c4d02d8cdf4cce9ef64e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4MDczZTZjNTU2ZGU2NmFkMTc4Mjc3ZDBmNWU0ZmZhMTEzN2UwZjJhNjkwMzk2ZTNlOTA0YjYzYzU5NWY5ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1MGRmNjBkMzUyZTZkNDQ3YTNmYTAzYzhiYzgxMTIyNjlhM2NjMmIwMjk3ZjlhMzRiNGU3ZDUyZWIzNjNjYjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhZDY1OTMxYTFhMzVjNjFkMjU4MTE3YWJmNTJmODc5OGMyNTE3M2ZjOWVjMjc2OTc1NjI0ODFmMzkxYmNkMGQifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/system/adapters/in-memory-system-adapter.ts#L30-L34",
+          "version": "repo-lines-v1:sha256:a512b772e282b38ced0756c07555e835e27a2b60b14f676c3e23293cda73a661:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTg5YTZjM2Q1OTUyYjZiMjU0YzZmZGJmNWY5ZThiYWU5ZGZlOWNmMjIyNmUzY2I3NzU4Zjg4NzI4OTQzYTM1NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmU5OWIxYzg5OTIwNDVkMmQwODRkOTAxOTczYjgwZDU4MjE5MTBmOWY1ODA2Y2FkNWFmMjk2MDgyZjEyMWE1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzI0YWFiYmYwMjg0YTQzYTRkOTY1ZGE2YTJmNjQ3N2YxYzc3ZWM3YTc5OTUwYTRlMjQxZTI0NTYwNGRjMmZlNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_feb6af882a17412fb5965d8b4b5c210e",
+      "statement": "规避 live 数据写入的方式是在启动进程之前注入 PI_CODING_AGENT_DIR 指向临时目录；在测试钩子中设置已太晚，因为 route 的模块级单例在 ESM import 阶段就冻结了 agentDir。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/infrastructure/scan-index-storage.ts#L93-L108",
+          "version": "repo-lines-v1:sha256:e3999fa3178316e967c8a7cba3879ac79e0b92a566ddb7e0c42c8dcdd332e17b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhMTc3ZjIyYWJmNTc5OTM1ZWI1MjljMDM4N2RkN2E4OGY5YjVjOWE4MjMwNmVlMGNkNTY2Y2ViNzFjNjYyYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiMjVjNDYzZDhhZmZmODIyNWU1ZTA5Njc0YWI3MDdlNjQ0NzllMGQwN2MyMTExYzU0ODY2NDI1ZWZmZWYzZWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRhZTE4NDZhNTYzOGUzMDcwMTU1YmVlNWM1YzMwY2RkYzQxYjk3N2VjOTExODhlMzhjNjY4ZGU5YTFiYTc5MjEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L53-L56",
+          "version": "repo-lines-v1:sha256:2f300c4bd018122effbf93731122fbd1239efeded1eede42ddeac3459e029c17:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzhhNGRkZWIwYTgxYzA5YjdmMzhhOGFhMGEwNjRjNTcwYTA5NzEyNTg1ODc1MDQwYTU0NmZjODVlZjg2MzA1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM4ODNkMTIwNGQ5ZGExNzk5NTFiZDZkNmY4NzFmZDQxZjc5MTY2YjM3Mzc2MDY4MmRmM2I4MDIzNDJmYTIxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTJjMTRkNjAyOWU1NDFkY2ZhMTBkNjAwZGM3ZWY0OWI3YmFjMjRjM2FjYzk1ZjZjNDMwYTkzZTY1OTJlMDAzZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWY3OGUzNDA5YzA2Y2EyNDU0ZTllNzdjZDE5ZDE3YzQ3ZDhjZGRlNDkzYTI5YTU0ZjdkZDdkZDk5MmRmNDZjNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b326a47f88d64b1c8ffbb5b947908060",
+      "statement": "core 侧测试的既有隔离范式是用 mkdtempSync 建独立 agentDir、手工复刻 SDK 的 cwd 到目录名编码规则、并写入手写 header 行的 JSONL fixture。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/use-cases/list-sessions-perf.test.ts#L34-L48",
+          "version": "repo-lines-v1:sha256:0260a8f21b88d3353ffef55bbc3e262132252425237e7eeea745fee1b8da858e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1ZTA4MGMxMzgyZjZmNGM5YjlkYjZkOTk1YjgwNDdmYTQ5YjVlNjk2NjgyOGY2OTRlOTJiY2EwYzAyMTEwODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5OGVkYjZmMWQ3N2Y4YjlmMjEwNDVjMGE1ODlhNmYyMTk0MjBkNjBhODUyM2ZlZTI3MzJjY2IzOTIzM2NmMDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZmQwMDRmNTFkNGQyOTQ1ODU5ZDIxZGUyMDI3MmM0Y2VkMzQ2ZTBlYTM4NWNjZGE3ODE5M2I3MjJjNmE5NjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFiZDhjNTdkYjdhNzg2MzFhOGIwOTdhMzkzNWE3MTNkMzg1MTU3ZWY3ZWU1OGRjN2ZjOGVkYjFiYmRhOTI4M2MifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/use-cases/read-side-perf.test.ts#L32-L40",
+          "version": "repo-lines-v1:sha256:b7aeb14d171512d83573360ab2fc31e26f0ea12f2fd62f181e68e16d6188a918:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg3ZGNmNDRjMmRkMWEwOWNiZjRhNjA3YTE4MWJmYmU1ZTA5MGI4ZjhlM2MwNzZlYjI3ZGQzY2U3YTM2YzNlMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTJmMmRmNDMwYjllNjc5MDAzZmUzMTcyYTJkNTRkYTkwOWVhZDI1ZTg0M2YzNDEwYzUyYjYzMGEzYjlmMDU0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWIyOTQ1MWNlMjY5ZTdjODg1YzRlYzgyODdmZDljYWEwODIwOWY4ZjBlZDAxYzhjNzdmYTM2MjJlMDQwNjM3YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c454b0a4252b4d1387375b947a0a1eca",
+      "statement": "ref_projects/ 被 .gitignore、biome 的 files.includes 与 .openwikiignore 三处排除，不参与构建、不被 lint、也不进入 wiki。",
+      "evidence": [
+        {
+          "resource": "repo://.gitignore#L1-L2",
+          "version": "repo-lines-v1:sha256:55d23b4b6d78595490145f04262f9f89166bcbf8de5cbf794ff9ae3f18adffed:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODVhZmVlNjQ3YjM0YTkzNzYxOTY2ODdiYzg1MzAwZjFlZTMxZmYzNmFlM2Y3MjhlYjFmY2I1ZmRiMzIxOTZkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTUyYzg4YjgyN2E2Yzg2NGQyMmI3MWZhMzhjM2ZkZDk3YzI5NmU2NDQ4ZjA1NzZjNGRjMzNkMzU5MmM5YWYxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGVlZmQ1ZGQxNWI4YTA5NDIxYjk2MzQxMThkMTlkMjYwOGY1ZWQ0Yzk3OTAyOWQ0M2I0YjY1MDJmYTNmMjRmMSJ9"
+        },
+        {
+          "resource": "repo://.openwikiignore#L1-L7",
+          "version": "repo-lines-v1:sha256:3e56ef563dab44b00f3303c769a651bba32836dc0cf4e79605c7a42ee73184fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTMyM2ZmYTQwMmNlY2U1ZDk4NWQ2ODA5NzZlNTNhM2Y1NTZkZWNlMmJmMjk4ZDg1ZjQ5MmY2NjBkNDBkN2JiZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTUyYzg4YjgyN2E2Yzg2NGQyMmI3MWZhMzhjM2ZkZDk3YzI5NmU2NDQ4ZjA1NzZjNGRjMzNkMzU5MmM5YWYxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://biome.json#L14-L14",
+          "version": "repo-lines-v1:sha256:6ac33eca44a482b0a874c1ab2403eff57acba5b40a6f053f7c9b334fe92baac0:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFjMzNlY2E0NGE0ODJiMGE4NzRjMWFiMjQwM2VmZjU3YWNiYTViNDBhNmYwNTNmN2M5YjMzNGZlOTJiYWFjMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFjMzNlY2E0NGE0ODJiMGE4NzRjMWFiMjQwM2VmZjU3YWNiYTViNDBhNmYwNTNmN2M5YjMzNGZlOTJiYWFjMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGUzNzI3NmRiZDM2MmMzMjEwMjM0Zjk1Y2JkNzY1YWY3OTdjZGU0NjM2Mzc1NTU1MDA1NWVjYWY3NjBlZDdmZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTFlNGFjMTI0Njg0NjMwNTk3MmFlODNkN2Y2ZDk0ZDRlODA5MzBjZDYwYjE5ZDg1MzljNmJkNjQyNGVhNmNlOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_45ca6dd7a51f4a198ee37c397f433125",
+      "statement": "源码注释中大量出现的 ref_projects/pi-web 引用只记录设计意图来源，判断实际行为必须以 packages/ 下的代码为准。",
+      "evidence": [
+        {
+          "resource": "repo://MEMORY.md#L70-L73",
+          "version": "repo-lines-v1:sha256:5aba63e2e65cb6231fd28f2143d07433368827ba75c9504f5360872f059fc6bc:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzYTYyNGM3YWFjNTk4OWE4ZmIyNTc4MDVjNDNmNDJlYmM2YWQwMjE5OWE0NmZjODFjYTRlNTEzYzJlNmNjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE1ZDJjNDdhY2ZjMWExMDVmODkyYmUwNDlkMzc0MGI3N2ZhZjFjZGRjNWVjYjQxNWZmYjEzMmMyMjU2ZjA3OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTgyMTA3ZDRmNDYyYjIyNTRiNjA5ODE0MTg4YTllNTU1NjIwYjRiYmEwODQ0ZDIwN2IzZWUzY2IyYTBjYTI2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDAxZjJlYzE3NTkzYzEwNTRlYjQ2MzY3ZDg0NTNlZjI0YTE3M2NlOTZiNzExN2Q5MWY5YTY4ZDQ0ZmVmOGIwMSJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/types.ts#L1-L34",
+          "version": "repo-lines-v1:sha256:7c764a1233af4fdd06cde7412c8deb52b08634d0b5c41fc8b43f082ecb5be036:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MmE0MjkzODJiMmUxNDcxOGUwZTM3YjA1NzBhOGExNzAyOTkxZmNkODQ5OGNkODQwNjBhOGJmNGYwNTAxN2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1ZGFjMTYyYjYzZWEwYmIwYTg2MjdkZTIwMzdlMjAyNzU1NGYwZjM4NTNkMTA3N2Q3Nzk3MzFmNWFmY2MxN2YifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/core/clean-architecture-layers.md": {
+      "pageVersion": "sha256:b61d5b3d459084d328d2cc53d5abdb5cbb8dc144d996d9c0bfcfe0e92dad5719",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/core/session-capability.md": {
+      "pageVersion": "sha256:04b8a134414eb454d9bb787943047cc57089347efd364b54c0570b3ad4d03cfd",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/core/session-search.md": {
+      "pageVersion": "sha256:9dd6042a1590a1d9cd01bee7e8226ec8dad13505f72a59ceb8b9fa81d2929211",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/core/session-storage-and-scan-index.md": {
+      "pageVersion": "sha256:e6c394c697db71d70b0b0fa9b95526d86a0fb66c246ce6555321ea64691a616a",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/core/system-capability.md": {
+      "pageVersion": "sha256:f8d56701d4488d2ec32b708ab1ddc76442fb33211fd38ea6abd2222d4ea2c3c9",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/operations/developer-workflow.md": {
+      "pageVersion": "sha256:3b6415aa7b45d976c9e4b360b907ef4485f57b427f3bffe562c67caa3b913e7f",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/operations/local-isolation-and-live-data.md": {
+      "pageVersion": "sha256:24fd5710be8a3a530a07c6a8526ae825a205d866e7a26b828caf317939a72e3c",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/overview/system-map.md": {
+      "pageVersion": "sha256:8aea0ba379b3b624fe3c3f5a035decdc141e384517f0f02873e804e9961edf5b",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/process/decision-records-and-delivery.md": {
+      "pageVersion": "sha256:fae32f07216a40737e3141db1c8340e4d0282d64ec0eac6f7dc3526fbb832930",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:2b093988ae4735443a18f37bafb390d17283f003960c869a7ffe90124579a889",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/testing/e2e-playwright.md": {
+      "pageVersion": "sha256:e6093c10bb44f25de88af04e1207dbf3d46f84b1276314b573e7d75181d4a1b3",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/testing/unit-tests.md": {
+      "pageVersion": "sha256:86fee2f239b8df01b9fa52d164a162081e38bbe18653d5c11cc20a6515ec5276",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/web/api-routes.md": {
+      "pageVersion": "sha256:818f26f39d82b6b7698e9b00b954ebab0570bf0fbb7f5e45cbed30cdb379b527",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/web/app-shell.md": {
+      "pageVersion": "sha256:e592986676e2625c6273d0fc8f50a43bf9516633d2ed11ab2d5135b8967a15ad",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/web/data-fetching.md": {
+      "pageVersion": "sha256:05f8d19236a68921d7cbd84fd121446d842db4daca4f559a3bf7d5a1c5e2f94a",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/web/i18n-and-theme.md": {
+      "pageVersion": "sha256:de0c97b34b7125eb77cb548774ad8d6fee9634815c391b16090bb22f9f6e87cf",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    },
+    "/openwiki/web/session-browsing-ui.md": {
+      "pageVersion": "sha256:55189258b7540911ba107f29e1536dc0f0c7c008a503b89449ae5708c86026be",
+      "completedBy": "pi",
+      "completedRunId": "86944408-54f7-4f9b-8294-faf49cd24fbb",
+      "sourceFingerprint": "sha256:e15d9f590f373edfbbc85265d950565981d953a693f954e0e3f3df7bfb9baaca"
+    }
+  }
+}

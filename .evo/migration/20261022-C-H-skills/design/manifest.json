@@ -1,0 +1,786 @@
+{
+  "god": "ref_projects/pi-web/components/SkillsConfig.tsx",
+  "generatedFor": "C-H / R1",
+  "elements": [
+    {
+      "name": "共享类型与标签表",
+      "kind": "shared",
+      "layer": "domain",
+      "lines": "L1-L50",
+      "landing": "packages/web/src/capabilities/skills/shared/skill-labels.ts",
+      "id": "D-S-01",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L1-L50"
+      ]
+    },
+    {
+      "name": "技能视图值对象（SkillScope/标签解析）",
+      "kind": "value",
+      "layer": "domain",
+      "lines": "L51-L67",
+      "landing": "packages/core/src/skills/domain/skill.ts",
+      "id": "D-U-01",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L51-L67"
+      ]
+    },
+    {
+      "name": "技能排序（按休眠度）",
+      "kind": "function",
+      "layer": "domain",
+      "lines": "L68-L80",
+      "landing": "packages/core/src/skills/domain/skill-order.ts",
+      "id": "D-U-02",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L68-L80"
+      ]
+    },
+    {
+      "name": "批量开关的目标计算与结果回填",
+      "kind": "function",
+      "layer": "domain",
+      "lines": "L81-L96",
+      "landing": "packages/core/src/skills/domain/skill-toggle-plan.ts",
+      "id": "D-U-03",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L81-L96"
+      ]
+    },
+    {
+      "name": "详情辅助（键名/短版本/SKILL.md 正文/锚点解析）",
+      "kind": "function",
+      "layer": "domain",
+      "lines": "L97-L129",
+      "landing": "packages/core/src/skills/domain/skill-doc.ts",
+      "id": "D-U-04",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L97-L129"
+      ]
+    },
+    {
+      "name": "技能详情视图（SkillDetail）",
+      "kind": "component",
+      "layer": "presentation",
+      "lines": "L130-L355",
+      "landing": "packages/web/src/capabilities/skills/ui/SkillDetail.tsx",
+      "id": "D-U-05",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L130-L355"
+      ]
+    },
+    {
+      "name": "添加技能面板（AddSkillPanel）",
+      "kind": "component",
+      "layer": "presentation",
+      "lines": "L356-L625",
+      "landing": "packages/web/src/capabilities/skills/ui/AddSkillPanel.tsx",
+      "id": "D-U-06",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L356-L625"
+      ]
+    },
+    {
+      "name": "设置页技能面板根（SkillsConfig）",
+      "kind": "component",
+      "layer": "presentation",
+      "lines": "L626-L1089",
+      "landing": "packages/web/src/capabilities/skills/ui/SkillsPanel.tsx",
+      "id": "D-U-07",
+      "sources": [
+        "ref_projects/pi-web/components/SkillsConfig.tsx#L626-L1089"
+      ]
+    },
+    {
+      "name": "技能仓库端口",
+      "kind": "port",
+      "layer": "application",
+      "rationale": "落地时列表/开关/更新三类调用要能被 e2e 与单测同时替换，若不抽端口，抓测试就得起真 HTTP 服务器，且 UI 无法在没有后端时先行开发。",
+      "derivedFrom": "D-U-07",
+      "id": "P-S-01"
+    },
+    {
+      "name": "技能原文读取端口",
+      "kind": "port",
+      "layer": "application",
+      "rationale": "详情面板要读 SKILL.md 原文，异常是\"文件不在/没有正文\"两类业务错，需要在端口层归一，否则 UI 里会长出 if (status===404)。",
+      "derivedFrom": "D-U-05",
+      "id": "P-S-02"
+    },
+    {
+      "name": "技能市场端口",
+      "kind": "port",
+      "layer": "application",
+      "rationale": "市场搜索/安装是外部依赖（网络 + 包源），端口化后安装面板可以在没有网络的环境里跑通。",
+      "derivedFrom": "D-U-06",
+      "id": "P-S-03"
+    },
+    {
+      "id": "D-B-01",
+      "kind": "usecase",
+      "name": "ListSkills",
+      "file": "packages/core/src/skills/use-cases/list-skills.ts",
+      "summary": "读技能列表并整理成视图所需形状（按休眠度排序、分组）",
+      "rationale": "源码里没有对应函数——这是按端口边界新划的用例层，落点由 C5 新建",
+      "derivedFrom": "D-U-07"
+    },
+    {
+      "id": "D-B-02",
+      "kind": "usecase",
+      "name": "CheckSkillUpdates",
+      "file": "packages/core/src/skills/use-cases/check-skill-updates.ts",
+      "summary": "逐条或全量检查更新，结果按 filePath 累积",
+      "rationale": "源码里没有对应函数——这是按端口边界新划的用例层，落点由 C5 新建",
+      "derivedFrom": "D-U-07"
+    },
+    {
+      "id": "D-B-03",
+      "kind": "usecase",
+      "name": "UpdateSkill",
+      "file": "packages/core/src/skills/use-cases/update-skill.ts",
+      "summary": "执行单个技能更新，成功后就地替换该条",
+      "rationale": "源码里没有对应函数——这是按端口边界新划的用例层，落点由 C5 新建",
+      "derivedFrom": "D-U-07"
+    },
+    {
+      "id": "D-B-04",
+      "kind": "usecase",
+      "name": "ToggleSkill",
+      "file": "packages/core/src/skills/use-cases/toggle-skill.ts",
+      "summary": "单个技能启用/停用，返回结果对象而非抛错",
+      "rationale": "源码里没有对应函数——这是按端口边界新划的用例层，落点由 C5 新建",
+      "derivedFrom": "D-U-07"
+    },
+    {
+      "id": "D-B-05",
+      "kind": "usecase",
+      "name": "ToggleSkillGroup",
+      "file": "packages/core/src/skills/use-cases/toggle-skill-group.ts",
+      "summary": "批量开关：调一次批量端口，返回逐条 results[]",
+      "rationale": "源码里没有对应函数——这是按端口边界新划的用例层，落点由 C5 新建",
+      "derivedFrom": "D-U-07"
+    },
+    {
+      "id": "D-B-06",
+      "kind": "usecase",
+      "name": "InstallSkill",
+      "file": "packages/core/src/skills/use-cases/install-skill.ts",
+      "summary": "安装技能：取包、落盘、刷新列表",
+      "rationale": "源码里安装逻辑内联在 AddSkillPanel 的点击处理里（L417），按端口边界抽成用例",
+      "derivedFrom": "D-U-06"
+    }
+  ],
+  "states": [
+    {
+      "key": "skills",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01",
+        "C-02"
+      ],
+      "writers": [
+        "B-001",
+        "B-006"
+      ],
+      "lifecycle": "页面挂载到卸载",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "loading",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-001"
+      ],
+      "lifecycle": "每次拉取",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "error",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-001",
+        "B-004"
+      ],
+      "lifecycle": "每次拉取",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "selected",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01",
+        "C-02"
+      ],
+      "writers": [
+        "B-003",
+        "B-012"
+      ],
+      "lifecycle": "跨刷新持久化（lastSettingsSelection）",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "toggling",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-006"
+      ],
+      "lifecycle": "单次开关请求",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "saveError",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-006"
+      ],
+      "lifecycle": "单次开关请求",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "bulkGroup",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-007"
+      ],
+      "lifecycle": "批量请求",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "groupStatus",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-007"
+      ],
+      "lifecycle": "批量请求",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "addMode",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01",
+        "C-03"
+      ],
+      "writers": [
+        "B-017",
+        "B-018"
+      ],
+      "lifecycle": "面板开合",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "projectResourcesLoaded",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-001"
+      ],
+      "lifecycle": "项目资源首次就绪",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "updateStatuses",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-013",
+        "B-014",
+        "B-015"
+      ],
+      "lifecycle": "按技能累积，cwd 变化清空",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "checkingUpdates",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-013",
+        "B-014"
+      ],
+      "lifecycle": "单次检查",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "checkingAll",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-014"
+      ],
+      "lifecycle": "一次全量检查",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "updatingSkill",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-015"
+      ],
+      "lifecycle": "单次更新",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "updateError",
+      "owner": "D-U-07",
+      "readers": [
+        "C-01"
+      ],
+      "writers": [
+        "B-015"
+      ],
+      "lifecycle": "单次更新，cwd 变化清空",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "instructions",
+      "owner": "D-U-05",
+      "readers": [
+        "C-02"
+      ],
+      "writers": [
+        "B-008"
+      ],
+      "lifecycle": "按选中技能",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "instructionsError",
+      "owner": "D-U-05",
+      "readers": [
+        "C-02"
+      ],
+      "writers": [
+        "B-008"
+      ],
+      "lifecycle": "按选中技能",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "documents",
+      "owner": "D-U-05",
+      "readers": [
+        "C-02"
+      ],
+      "writers": [
+        "B-008"
+      ],
+      "lifecycle": "按选中技能",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "anchorRequest",
+      "owner": "D-U-05",
+      "readers": [
+        "C-02"
+      ],
+      "writers": [
+        "B-009"
+      ],
+      "lifecycle": "单次锚点请求（递增计数）",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "query",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-011"
+      ],
+      "lifecycle": "面板开合",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "results",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-011"
+      ],
+      "lifecycle": "每次搜索",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "searching",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-011"
+      ],
+      "lifecycle": "每次搜索",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "searchError",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-011"
+      ],
+      "lifecycle": "每次搜索",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "installing",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-012"
+      ],
+      "lifecycle": "单次安装",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "installError",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-012"
+      ],
+      "lifecycle": "单次安装",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "newlyInstalledPkgs",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-012"
+      ],
+      "lifecycle": "面板开合",
+      "mechanism": "react-state"
+    },
+    {
+      "key": "scope",
+      "owner": "D-U-06",
+      "readers": [
+        "C-03"
+      ],
+      "writers": [
+        "B-012"
+      ],
+      "lifecycle": "面板内切换",
+      "mechanism": "react-state"
+    }
+  ],
+  "stores": [
+    {
+      "id": "ST-01",
+      "element": "D-U-07",
+      "name": "skillsView",
+      "stateRefs": [
+        "skills",
+        "loading",
+        "error",
+        "selected",
+        "addMode",
+        "projectResourcesLoaded"
+      ],
+      "why": "页面级视图态，除 selected 外都随 cwd 重置",
+      "file": "packages/web/src/capabilities/skills/ui/use-skills-view.ts"
+    },
+    {
+      "id": "ST-02",
+      "element": "D-U-07",
+      "name": "skillToggle",
+      "stateRefs": [
+        "toggling",
+        "saveError",
+        "bulkGroup",
+        "groupStatus"
+      ],
+      "why": "开关是乐观更新，失败要能只回滚受影响的行",
+      "file": "packages/web/src/capabilities/skills/ui/skill-toggle-store.ts"
+    },
+    {
+      "id": "ST-03",
+      "element": "D-U-07",
+      "name": "skillUpdates",
+      "stateRefs": [
+        "updateStatuses",
+        "checkingUpdates",
+        "checkingAll",
+        "updatingSkill",
+        "updateError"
+      ],
+      "why": "更新状态按技能累积，与列表生命周期不同",
+      "file": "packages/web/src/capabilities/skills/ui/skill-updates-store.ts"
+    },
+    {
+      "id": "ST-04",
+      "element": "D-U-05",
+      "name": "skillDetail",
+      "stateRefs": [
+        "instructions",
+        "instructionsError",
+        "documents",
+        "anchorRequest"
+      ],
+      "why": "详情只在面板打开时存在，关掉就该丢",
+      "file": "packages/web/src/capabilities/skills/ui/use-skill-detail.ts"
+    },
+    {
+      "id": "ST-05",
+      "element": "D-U-06",
+      "name": "skillAdd",
+      "stateRefs": [
+        "query",
+        "results",
+        "searching",
+        "searchError",
+        "installing",
+        "installError",
+        "newlyInstalledPkgs",
+        "scope"
+      ],
+      "why": "搜索/安装是独立子流程，混进列表态会让\"面板关掉要不要清空\"变成猜",
+      "file": "packages/web/src/capabilities/skills/ui/use-skill-add.ts"
+    }
+  ],
+  "components": [
+    {
+      "id": "C-01",
+      "name": "SkillsPanel",
+      "element": "D-U-07",
+      "file": "packages/web/src/capabilities/skills/ui/SkillsPanel.tsx",
+      "props": [
+        "cwd",
+        "trust"
+      ],
+      "sources": [
+        "L626-L1089"
+      ],
+      "whyRoot": "它是唯一持有页面级状态（选中/列表/更新状态）的地方，子组件只收 props 或调 hook"
+    },
+    {
+      "id": "C-02",
+      "name": "SkillDetail",
+      "parent": "C-01",
+      "element": "D-U-05",
+      "file": "packages/web/src/capabilities/skills/ui/SkillDetail.tsx",
+      "props": [
+        "skill",
+        "cwd",
+        "onToggle",
+        "onCheckUpdate",
+        "onUpdate"
+      ],
+      "sources": [
+        "L130-L355"
+      ]
+    },
+    {
+      "id": "C-03",
+      "name": "AddSkillPanel",
+      "parent": "C-01",
+      "element": "D-U-06",
+      "file": "packages/web/src/capabilities/skills/ui/AddSkillPanel.tsx",
+      "props": [
+        "cwd",
+        "scopeLabel",
+        "onClose",
+        "onInstalled"
+      ],
+      "sources": [
+        "L356-L625"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-01",
+      "element": "D-U-07",
+      "signature": "useSkillsView(input: { cwd: string; trust: TrustState }): SkillsView",
+      "file": "packages/web/src/capabilities/skills/ui/use-skills-view.ts",
+      "replaces": "L626-L1089",
+      "usedBy": [
+        "C-01"
+      ],
+      "name": "useSkillsView"
+    },
+    {
+      "id": "H-02",
+      "element": "D-U-05",
+      "signature": "useSkillDetail(input: { skill: Skill | null; cwd: string }): SkillDetailView",
+      "file": "packages/web/src/capabilities/skills/ui/use-skill-detail.ts",
+      "replaces": "L130-L355",
+      "usedBy": [
+        "C-02"
+      ],
+      "name": "useSkillDetail"
+    },
+    {
+      "id": "H-03",
+      "element": "D-U-06",
+      "signature": "useSkillAdd(input: { cwd: string; onInstalled: (s: Skill) => void }): SkillAddView",
+      "file": "packages/web/src/capabilities/skills/ui/use-skill-add.ts",
+      "replaces": "L356-L625",
+      "usedBy": [
+        "C-03"
+      ],
+      "name": "useSkillAdd"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "PA-01",
+      "symptom": "B-006",
+      "name": "乐观更新 + 失败回滚",
+      "rejected": [
+        "等请求返回再改 UI（开关点下去 200ms 没反应，用户会连点）"
+      ],
+      "costIfWrong": "回滚写错会把别人的改动一起撤掉——所以回滚只按 id 精确恢复"
+    },
+    {
+      "id": "PA-02",
+      "symptom": "ref_projects/pi-web/components/SkillsConfig.tsx:840",
+      "name": "批量复用单条端点",
+      "rejected": [
+        "逐条串行 PATCH（24 个技能 = 24 次往返，失败一半难以描述）"
+      ],
+      "costIfWrong": "批量端点语义变了要回来改这里；已在 design/protocols.md 的 PR-04 固化\"返回 results[] 逐条状态\""
+    },
+    {
+      "id": "PA-03",
+      "symptom": "ref_projects/pi-web/components/SkillsConfig.tsx:176",
+      "name": "锚点局部滚动",
+      "rejected": [
+        "整页 location.hash 跳转（详情是面板，跳转会连列表一起滚）"
+      ],
+      "costIfWrong": "锚点解析错了会跳到错标题——D-U-04 的 resolveSkillLink 单测覆盖"
+    }
+  ],
+  "quality": {
+    "maxFileLines": 400,
+    "maxComplexity": 12,
+    "maxProps": 6,
+    "perElement": {
+      "D-U-07": "≤400 行（源 464 行，必须拆出 hook 与子组件）",
+      "D-U-06": "≤250 行",
+      "D-U-05": "≤220 行",
+      "D-U-0X 纯函数": "≤120 行"
+    },
+    "render": "首屏 ≤2000ms、切换选中 ≤300ms（P2 预算）",
+    "tristate": "loading/error/empty 三态必需，不许用 `skills.length===0` 代替 error",
+    "copy": "文案全部走 i18n，命名空间 i18n./skills./config."
+  },
+  "surfaces": {
+    "SF-SC-h1ec727": "D-U-05",
+    "SF-SC-h1ec727-2": "D-U-06",
+    "SF-SC-h1ec727-3": "D-U-06",
+    "SF-SC-h1ec727-4": "D-U-07",
+    "SF-SC-h93710f": "D-U-05",
+    "SF-SC-h93710f-2": "D-U-05",
+    "SF-SC-h93710f-3": "D-U-05",
+    "SF-SC-h93710f-4": "D-U-06",
+    "SF-SC-h93710f-5": "D-U-06",
+    "SF-SC-h93710f-6": "D-U-07",
+    "SF-SC-h93710f-7": "D-U-07",
+    "SF-SC-h93710f-8": "D-U-07",
+    "SF-SC-h93710f-9": "D-U-07",
+    "SF-SC-hba5522": "D-U-06",
+    "SF-SC-i007417": "D-U-05",
+    "SF-SC-i0f4542": "D-U-05",
+    "SF-SC-i0f4542-2": "D-U-05",
+    "SF-SC-i200e95": "D-U-05",
+    "SF-SC-i200e95-2": "D-U-07",
+    "SF-SC-i21a425": "D-U-06",
+    "SF-SC-i21a425-2": "D-U-07",
+    "SF-SC-i258f00": "D-U-07",
+    "SF-SC-i2c5339": "D-U-01",
+    "SF-SC-i2c5339-2": "D-U-07",
+    "SF-SC-i37f5a4": "D-U-06",
+    "SF-SC-i3bcb6f": "D-U-05",
+    "SF-SC-i3c7d3f": "D-U-05",
+    "SF-SC-i44a9ec": "D-U-06",
+    "SF-SC-i44a9ec-2": "D-U-07",
+    "SF-SC-i4e1965": "D-U-06",
+    "SF-SC-i50e66c": "D-U-06",
+    "SF-SC-i58adf3": "D-U-07",
+    "SF-SC-i59f8ec": "D-U-05",
+    "SF-SC-i638a7d": "D-U-07",
+    "SF-SC-i63ee43": "D-U-06",
+    "SF-SC-i6ee4eb": "D-U-06",
+    "SF-SC-i75bec1": "D-U-05",
+    "SF-SC-i7d1817": "D-U-01",
+    "SF-SC-i7d1817-2": "D-U-07",
+    "SF-SC-i7e64c8": "D-U-05",
+    "SF-SC-i7e64c8-2": "D-U-07",
+    "SF-SC-i868e59": "D-U-05",
+    "SF-SC-i94146c": "D-U-07",
+    "SF-SC-i94146c-2": "D-U-07",
+    "SF-SC-i9ef620": "D-U-07",
+    "SF-SC-ia0a528": "D-U-07",
+    "SF-SC-ia4832d": "D-U-06",
+    "SF-SC-iab3947": "D-U-05",
+    "SF-SC-iad90ad": "D-U-07",
+    "SF-SC-ib4d36f": "D-U-05",
+    "SF-SC-ic158c1": "D-U-05",
+    "SF-SC-ic4eeba": "D-U-07",
+    "SF-SC-ic63a09": "D-U-01",
+    "SF-SC-ic63a09-2": "D-U-07",
+    "SF-SC-icaeaac": "D-U-05",
+    "SF-SC-icaeaac-2": "D-U-07",
+    "SF-SC-id0a5ca": "D-U-05",
+    "SF-SC-id58ba7": "D-U-06",
+    "SF-SC-id83dd6": "D-U-05",
+    "SF-SC-ie0cb95": "D-U-05",
+    "SF-SC-if182ba": "D-U-05",
+    "SF-SC-if6e600": "D-U-05",
+    "SF-SC-if7045c": "D-U-06",
+    "SF-SC-if98cbf": "D-U-05",
+    "SF-SC-ka8462c": "D-U-06",
+    "SF-SC-p080c38": "D-U-07",
+    "SF-SC-p226891": "D-U-07",
+    "SF-SC-p226891-2": "D-U-07",
+    "SF-SC-p9fb298": "D-U-05",
+    "SF-SC-pce3753": "D-U-06",
+    "SF-SC-pdbe17a": "D-U-06",
+    "SF-SC-pec89d4": "D-U-07",
+    "SF-SC-pfce405": "D-U-07",
+    "SF-SC-r4b9dc6": "D-U-05",
+    "SF-SC-rab8c82": "D-U-05"
+  }
+}

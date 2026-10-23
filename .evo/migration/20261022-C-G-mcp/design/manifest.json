@@ -1,0 +1,915 @@
+{
+  "//": "C4 设计清单：元素 / 状态 / 协议 / 模式 / 界面 / 组件树。D1–D18 读它。",
+  "capability": "C-G",
+  "god": "ref_projects/pi-web/components/McpConfig.tsx",
+  "elements": [
+    {
+      "id": "D-S-01",
+      "kind": "value",
+      "name": "类型与文案工具",
+      "file": "packages/core/src/mcp/domain/mcp-labels.ts",
+      "type": "feature",
+      "lines": "L1-L173",
+      "responsibility": "Translate 类型、scopeLabel/displayPath/noticeText/failureText/pressedButton 等纯函数",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1-L173"
+      ],
+      "landing": "packages/core/src/mcp/domain/mcp-labels.ts"
+    },
+    {
+      "id": "D-U-01",
+      "kind": "component-contract",
+      "name": "分组与状态文案",
+      "file": "packages/core/src/mcp/domain/mcp-group-labels.ts",
+      "type": "feature",
+      "lines": "L174-L207",
+      "responsibility": "groupStatusText / serverScopeLabel",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L174-L207"
+      ],
+      "behaviors": [
+        "B-006"
+      ],
+      "landing": "packages/core/src/mcp/domain/mcp-group-labels.ts"
+    },
+    {
+      "id": "D-U-02",
+      "kind": "component-contract",
+      "name": "动作失败文案",
+      "file": "packages/core/src/mcp/domain/mcp-action-text.ts",
+      "type": "feature",
+      "lines": "L208-L294",
+      "responsibility": "actionFailureText / testFailureText 的错误分类到文案映射",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L208-L294"
+      ],
+      "landing": "packages/core/src/mcp/domain/mcp-action-text.ts"
+    },
+    {
+      "id": "D-U-03",
+      "kind": "component",
+      "name": "McpPanel（容器）",
+      "file": "packages/web/src/features/mcp/mcp-panel.tsx",
+      "type": "feature",
+      "lines": "L295-L831",
+      "responsibility": "持有页面级状态、串联用例、把 props 下发给展示组件",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L295-L831"
+      ],
+      "behaviors": [
+        "B-001",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-panel.tsx"
+    },
+    {
+      "id": "D-U-04",
+      "kind": "component",
+      "name": "McpPanelView（展示）",
+      "file": "packages/web/src/features/mcp/mcp-panel-view.tsx",
+      "type": "feature",
+      "lines": "L832-L1215",
+      "responsibility": "纯渲染：三栏布局 + 分组列表 + 详情位",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L832-L1215"
+      ],
+      "behaviors": [
+        "B-007"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-panel-view.tsx"
+    },
+    {
+      "id": "D-U-05",
+      "kind": "component",
+      "name": "列表与本组提示",
+      "file": "packages/web/src/features/mcp/mcp-server-list.tsx",
+      "type": "feature",
+      "lines": "L1216-L1410",
+      "responsibility": "McpAddedNoticeView / McpCodemodeRow / McpServerGroupList / McpFieldChips / McpNameList",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1216-L1410"
+      ],
+      "behaviors": [
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-019",
+        "B-020",
+        "B-021",
+        "B-022"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-server-list.tsx"
+    },
+    {
+      "id": "D-U-06",
+      "kind": "component",
+      "name": "McpServerDetail",
+      "file": "packages/web/src/features/mcp/mcp-server-detail.tsx",
+      "type": "feature",
+      "lines": "L1411-L1711",
+      "responsibility": "选中服务器的详情、行内改名、移除确认",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1411-L1711"
+      ],
+      "behaviors": [
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014",
+        "B-015",
+        "B-016",
+        "B-017",
+        "B-018",
+        "B-027",
+        "B-028",
+        "B-029"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-server-detail.tsx"
+    },
+    {
+      "id": "D-U-07",
+      "kind": "component",
+      "name": "测试与状态展示",
+      "file": "packages/web/src/features/mcp/mcp-test-status.tsx",
+      "type": "feature",
+      "lines": "L1712-L1908",
+      "responsibility": "McpTestButton / McpTestStatusLines / McpStatusOutput / revealLines",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1712-L1908"
+      ],
+      "behaviors": [
+        "B-030"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-test-status.tsx"
+    },
+    {
+      "id": "D-U-08",
+      "kind": "component",
+      "name": "状态行",
+      "file": "packages/web/src/features/mcp/mcp-status-row.tsx",
+      "type": "feature",
+      "lines": "L1909-L1975",
+      "responsibility": "McpStatusRow：aria-busy / aria-invalid / 重试入口",
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1909-L1975"
+      ],
+      "behaviors": [
+        "B-031"
+      ],
+      "landing": "packages/web/src/features/mcp/mcp-status-row.tsx"
+    },
+    {
+      "id": "D-B-01",
+      "kind": "use-case",
+      "name": "load-overview",
+      "file": "packages/core/src/mcp/use-cases/load-overview.ts",
+      "type": "skeleton",
+      "responsibility": "读 GET /api/mcp，失败整体降级并保留上一次快照",
+      "rationale": "pi-web 里这段逻辑在 mcp-config-helpers.ts 的 loadMcpOverview，属外部模块；本能力要把它收进用例层才能被测试",
+      "derivedFrom": "D-U-03",
+      "landing": "packages/core/src/mcp/use-cases/load-overview.ts"
+    },
+    {
+      "id": "D-B-02",
+      "kind": "use-case",
+      "name": "test-server",
+      "file": "packages/core/src/mcp/use-cases/test-server.ts",
+      "type": "skeleton",
+      "responsibility": "按 key 并发测试，按 key 去重与回填",
+      "rationale": "测试是服务端主动动作且可并发；用例必须按 key 记账，否则后到结果覆盖先到",
+      "derivedFrom": "D-U-07",
+      "landing": "packages/core/src/mcp/use-cases/test-server.ts"
+    },
+    {
+      "id": "D-B-03",
+      "kind": "use-case",
+      "name": "toggle-server",
+      "file": "packages/core/src/mcp/use-cases/toggle-server.ts",
+      "type": "skeleton",
+      "responsibility": "单个启用/停用 + 失败回滚",
+      "rationale": "pi-web 里是乐观写入后回滚（McpConfig.tsx:733 的 undo 定时器），这条逻辑要独立可测",
+      "derivedFrom": "D-U-06",
+      "landing": "packages/core/src/mcp/use-cases/toggle-server.ts"
+    },
+    {
+      "id": "D-B-04",
+      "kind": "use-case",
+      "name": "batch-actions",
+      "file": "packages/core/src/mcp/use-cases/batch-actions.ts",
+      "type": "skeleton",
+      "responsibility": "分组批量启用/停用，部分成功逐条记账",
+      "rationale": "批量不是单条的循环：失败要逐条回填并提示，不是整批回滚",
+      "derivedFrom": "D-U-05",
+      "landing": "packages/core/src/mcp/use-cases/batch-actions.ts"
+    },
+    {
+      "id": "D-B-05",
+      "kind": "use-case",
+      "name": "sign-in-flow",
+      "file": "packages/core/src/mcp/use-cases/sign-in-flow.ts",
+      "type": "skeleton",
+      "responsibility": "发起签到、轮询状态、取消",
+      "rationale": "签到流程由服务端持有，客户端只轮询；卸载时不许 abort 掉服务端流程",
+      "derivedFrom": "D-U-06",
+      "landing": "packages/core/src/mcp/use-cases/sign-in-flow.ts"
+    },
+    {
+      "id": "D-B-07",
+      "kind": "use-case",
+      "name": "remove-server",
+      "file": "packages/core/src/mcp/use-cases/remove-server.ts",
+      "type": "skeleton",
+      "responsibility": "移除一个 server（用户的显式破坏性动作）",
+      "rationale": "移除要单独成用例：调用方必须显式拿到结果再决定界面怎么收（清选中、不出撤销条），塞进 toggle 会让停用与删除长成同一段代码",
+      "derivedFrom": "D-U-07",
+      "landing": "packages/core/src/mcp/use-cases/remove-server.ts",
+      "behaviors": [
+        "B-032"
+      ]
+    },
+    {
+      "id": "P-S-01",
+      "kind": "port",
+      "name": "McpRepository",
+      "file": "packages/core/src/mcp/domain/ports/mcp-repository.ts",
+      "type": "skeleton",
+      "responsibility": "读服务器清单、启用/停用、增删",
+      "rationale": "HTTP 细节不许进用例；端口方法一一对应命令",
+      "derivedFrom": "D-U-03",
+      "consumers": [
+        "D-B-01",
+        "D-B-03",
+        "D-B-04"
+      ],
+      "methods": [
+        "list(cwd)",
+        "write(ref,enabled,cwd)",
+        "add(input,cwd)",
+        "remove(ref,cwd)"
+      ],
+      "landing": "packages/core/src/mcp/domain/ports/mcp-repository.ts"
+    },
+    {
+      "id": "P-S-02",
+      "kind": "port",
+      "name": "McpTestRunner",
+      "file": "packages/core/src/mcp/domain/ports/mcp-test-runner.ts",
+      "type": "skeleton",
+      "responsibility": "按 key 发起测试并返回结果",
+      "rationale": "测试是可取消的外部动作，必须走端口才能被桩替换",
+      "derivedFrom": "D-U-07",
+      "consumers": [
+        "D-B-02"
+      ],
+      "methods": [
+        "run(ref,cwd)"
+      ],
+      "landing": "packages/core/src/mcp/domain/ports/mcp-test-runner.ts"
+    },
+    {
+      "id": "P-S-03",
+      "kind": "port",
+      "name": "McpSignInFlow",
+      "file": "packages/core/src/mcp/domain/ports/mcp-sign-in-flow.ts",
+      "type": "skeleton",
+      "responsibility": "发起/查询/提交 redirect/取消签到",
+      "rationale": "签到有服务端状态机，端口只暴露四个动作",
+      "derivedFrom": "D-U-06",
+      "consumers": [
+        "D-B-05"
+      ],
+      "methods": [
+        "begin(ref,cwd)",
+        "status(flowId)",
+        "submit(flowId,redirectUrl)",
+        "cancel(flowId)"
+      ],
+      "landing": "packages/core/src/mcp/domain/ports/mcp-sign-in-flow.ts"
+    },
+    {
+      "id": "P-S-05",
+      "kind": "port",
+      "name": "ProjectTrust",
+      "file": "packages/core/src/mcp/domain/ports/project-trust.ts",
+      "type": "skeleton",
+      "responsibility": "提交项目信任",
+      "rationale": "信任对话框属 AppShell，本能力只发请求",
+      "derivedFrom": "D-U-05",
+      "consumers": [
+        "D-B-04"
+      ],
+      "methods": [
+        "request(cwd)"
+      ],
+      "landing": "packages/core/src/mcp/domain/ports/project-trust.ts"
+    }
+  ],
+  "states": [
+    {
+      "key": "overview",
+      "owner": "D-U-03",
+      "kind": "server-state",
+      "source": "useState",
+      "note": "GET /api/mcp 的结果快照"
+    },
+    {
+      "key": "overviewError",
+      "owner": "D-U-03",
+      "kind": "server-state",
+      "source": "useState",
+      "note": "整体降级的错误"
+    },
+    {
+      "key": "loading",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "首次加载"
+    },
+    {
+      "key": "groups",
+      "owner": "D-U-03",
+      "kind": "derived",
+      "source": "useMemo",
+      "note": "按 scope 分组，不落库"
+    },
+    {
+      "key": "selectedKey",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "选中项，持久化到 localStorage（settings-navigation）"
+    },
+    {
+      "key": "requestRef",
+      "owner": "D-U-03",
+      "kind": "perf",
+      "source": "useRef",
+      "note": "加载序号，压住后到的响应"
+    },
+    {
+      "key": "testRequestsRef",
+      "owner": "D-U-03",
+      "kind": "perf",
+      "source": "useRef",
+      "note": "按 key 去重的测试请求"
+    },
+    {
+      "key": "testResults",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "按 key 的测试结果"
+    },
+    {
+      "key": "undo",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "乐观写的撤销条（McpConfig.tsx:733 定时清理）"
+    },
+    {
+      "key": "added",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "刚添加的服务器提示"
+    },
+    {
+      "key": "trustState",
+      "owner": "D-U-03",
+      "kind": "server-state",
+      "source": "useState",
+      "note": "项目信任状态"
+    },
+    {
+      "key": "signInFlow",
+      "owner": "D-U-03",
+      "kind": "server-state",
+      "source": "useState",
+      "note": "签到流程 id 与状态"
+    },
+    {
+      "key": "signInPoll",
+      "owner": "D-U-03",
+      "kind": "effect",
+      "source": "useEffect",
+      "note": "轮询循环，卸载只丢回调"
+    },
+    {
+      "key": "revealedLines",
+      "owner": "D-U-03",
+      "kind": "ui",
+      "source": "useState",
+      "note": "展开更多日志"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "PR-01",
+      "name": "读清单",
+      "contractRef": "GET /api/mcp（wire.md:28）",
+      "idempotent": true,
+      "cancellable": true,
+      "retry": "只读，失败降级保留旧快照，不重试",
+      "error": "返回结果对象 {ok:false,error}",
+      "useCase": "D-B-01"
+    },
+    {
+      "id": "PR-02",
+      "name": "单条测试",
+      "contractRef": "POST /api/mcp/test（wire.md:32）",
+      "idempotent": false,
+      "cancellable": true,
+      "retry": "按 key 去重，同 key 在飞时不重复发起",
+      "error": "按 key 回填失败，不冒泡",
+      "useCase": "D-B-02"
+    },
+    {
+      "id": "PR-03",
+      "name": "启用/停用",
+      "contractRef": "POST /api/mcp（wire.md:29）",
+      "idempotent": true,
+      "cancellable": false,
+      "retry": "失败回滚到上一次值",
+      "error": "回滚 + 撤销条",
+      "useCase": "D-B-03"
+    },
+    {
+      "id": "PR-04",
+      "name": "批量",
+      "contractRef": "POST /api/mcp（wire.md:29）",
+      "idempotent": true,
+      "cancellable": false,
+      "retry": "逐条记账，不整批回滚",
+      "error": "部分成功逐条提示",
+      "useCase": "D-B-04"
+    },
+    {
+      "id": "PR-05",
+      "name": "签到轮询",
+      "contractRef": "GET/POST/DELETE /api/mcp/sign-in/[flowId]（wire.md:39-42）",
+      "idempotent": true,
+      "cancellable": true,
+      "retry": "轮询间隔固定，超时判定在服务端",
+      "error": "失败保留流程 id 供重试",
+      "useCase": "D-B-05"
+    },
+    {
+      "id": "PR-07",
+      "name": "项目信任",
+      "contractRef": "POST /api/project-trust（wire.md:45）",
+      "idempotent": true,
+      "cancellable": false,
+      "retry": "失败保持未信任态",
+      "error": "提示需重新确认",
+      "useCase": "D-B-04"
+    },
+    {
+      "id": "PR-08",
+      "name": "添加服务器",
+      "contractRef": "POST /api/mcp（wire.md:29）",
+      "idempotent": false,
+      "cancellable": true,
+      "retry": "失败不写入清单",
+      "error": "表单内联错误",
+      "useCase": "D-B-01"
+    },
+    {
+      "id": "PR-09",
+      "name": "移除一个 server",
+      "useCase": "D-B-07",
+      "contract": "DELETE /api/mcp {scope,name}",
+      "idempotent": true,
+      "cancelable": false,
+      "retry": "不重试（用户手动再点）",
+      "contractRef": "contracts/wire.md"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "PA-01",
+      "name": "乐观写 + 撤销条",
+      "symptom": "ref_projects/pi-web/components/McpConfig.tsx:733",
+      "choice": "先改本地快照并起撤销定时器，失败立即回滚（McpConfig.tsx:733）",
+      "rejected": [
+        "等响应再改（点击到高亮有 100ms+ 延迟）",
+        "全局 toast 排队（撤销与错误混在一起）"
+      ],
+      "costIfWrong": "选错代价：撤销条与回滚两处状态不同步，会出现'显示已启用但服务端没改'"
+    },
+    {
+      "id": "PA-02",
+      "name": "按 key 去重的并发测试",
+      "symptom": "ref_projects/pi-web/components/McpConfig.tsx:600",
+      "choice": "testRequestsRef 按 key 记账，同 key 不重复发起",
+      "rejected": [
+        "全部串行（一台慢服务器阻塞其余）",
+        "不记账（后到结果覆盖先到）"
+      ],
+      "costIfWrong": "选错代价：结果错配到另一台服务器"
+    },
+    {
+      "id": "PA-03",
+      "name": "生成号压住后到响应",
+      "symptom": "ref_projects/pi-web/components/McpConfig.tsx:520",
+      "choice": "requestRef 自增，回包比对序号后丢弃过期",
+      "rejected": [
+        "AbortController（会连服务端工作一起取消）"
+      ],
+      "costIfWrong": "选错代价：切换目录后显示上一个目录的服务器"
+    }
+  ],
+  "components": [
+    {
+      "id": "C-01",
+      "name": "McpPanel",
+      "type": "container",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/mcp-panel.tsx",
+      "parent": null,
+      "props": [
+        "cwd",
+        "onTrustRequired"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L295-L831"
+      ]
+    },
+    {
+      "id": "C-02",
+      "name": "McpPanelView",
+      "type": "presenter",
+      "element": "D-U-04",
+      "file": "packages/web/src/features/mcp/mcp-panel-view.tsx",
+      "parent": "C-01",
+      "props": [
+        "groups",
+        "selectedKey",
+        "onSelect",
+        "detail"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L832-L1215"
+      ]
+    },
+    {
+      "id": "C-03",
+      "name": "McpServerList",
+      "type": "presenter",
+      "element": "D-U-05",
+      "file": "packages/web/src/features/mcp/mcp-server-list.tsx",
+      "parent": "C-02",
+      "props": [
+        "group",
+        "onToggle",
+        "onBatch"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1216-L1410"
+      ]
+    },
+    {
+      "id": "C-04",
+      "name": "McpServerDetail",
+      "type": "presenter",
+      "element": "D-U-06",
+      "file": "packages/web/src/features/mcp/mcp-server-detail.tsx",
+      "parent": "C-02",
+      "props": [
+        "server",
+        "testState",
+        "onTest",
+        "onSignIn",
+        "onRemove"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1411-L1711"
+      ]
+    },
+    {
+      "id": "C-05",
+      "name": "McpTestStatus",
+      "type": "presenter",
+      "element": "D-U-07",
+      "file": "packages/web/src/features/mcp/mcp-test-status.tsx",
+      "parent": "C-04",
+      "props": [
+        "result",
+        "revealed",
+        "onReveal"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/McpConfig.tsx#L1712-L1908"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-01",
+      "name": "useMcpOverview",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/use-mcp-overview.ts",
+      "signature": "useMcpOverview({cwd, repository}): {overview, error, loading, groups, reload}",
+      "replaces": "McpConfig.tsx#L295-L560 的加载与降级",
+      "usedBy": [
+        "C-01"
+      ]
+    },
+    {
+      "id": "H-02",
+      "name": "useMcpActions",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/use-mcp-actions.ts",
+      "signature": "useMcpActions({repository, testRunner}): {toggle, batchToggle, add, remove, undo}",
+      "replaces": "McpConfig.tsx#L560-L831 的动作与撤销",
+      "usedBy": [
+        "C-01",
+        "C-04"
+      ]
+    },
+    {
+      "id": "H-03",
+      "name": "useMcpSignIn",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/use-mcp-sign-in.ts",
+      "signature": "useMcpSignIn({flow}): {state, start, pasteRedirect, cancel}",
+      "replaces": "McpConfig.tsx#L600-L700 的轮询",
+      "usedBy": [
+        "C-01",
+        "C-04"
+      ]
+    }
+  ],
+  "stores": [
+    {
+      "id": "ST-01",
+      "name": "mcpOverview",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/stores/mcp-overview-store.ts",
+      "stateRefs": [
+        "overview",
+        "overviewError",
+        "loading",
+        "groups",
+        "requestRef"
+      ],
+      "persisted": [],
+      "subscribers": [
+        "C-01",
+        "C-02",
+        "C-03"
+      ]
+    },
+    {
+      "id": "ST-02",
+      "name": "mcpSelection",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/stores/mcp-selection-store.ts",
+      "stateRefs": [
+        "selectedKey"
+      ],
+      "persisted": [
+        "settings-navigation.getLastSettingsSelection"
+      ],
+      "subscribers": [
+        "C-01",
+        "C-02",
+        "C-04"
+      ]
+    },
+    {
+      "id": "ST-03",
+      "name": "mcpTest",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/stores/mcp-test-store.ts",
+      "stateRefs": [
+        "testRequestsRef",
+        "testResults",
+        "undo",
+        "added",
+        "revealedLines"
+      ],
+      "persisted": [],
+      "subscribers": [
+        "C-04",
+        "C-05"
+      ]
+    },
+    {
+      "id": "ST-04",
+      "name": "mcpSignIn",
+      "element": "D-U-03",
+      "file": "packages/web/src/features/mcp/stores/mcp-sign-in-store.ts",
+      "stateRefs": [
+        "signInFlow",
+        "signInPoll",
+        "trustState"
+      ],
+      "persisted": [],
+      "subscribers": [
+        "C-01",
+        "C-04"
+      ]
+    }
+  ],
+  "surfaces": {
+    "SF-MC-i00356c": "D-S-01",
+    "SF-MC-i0712e7": "D-S-01",
+    "SF-MC-i1318e1": "D-S-01",
+    "SF-MC-i16e5a4": "D-S-01",
+    "SF-MC-i16e5a4-2": "D-S-01",
+    "SF-MC-i16e5a4-3": "D-S-01",
+    "SF-MC-i1998b3": "D-S-01",
+    "SF-MC-i1e9e6f": "D-S-01",
+    "SF-MC-i2278f0": "D-S-01",
+    "SF-MC-i22b7d7": "D-S-01",
+    "SF-MC-i242d43": "D-S-01",
+    "SF-MC-i279883": "D-S-01",
+    "SF-MC-i28a9f5": "D-S-01",
+    "SF-MC-i29b9dc": "D-S-01",
+    "SF-MC-i29be1d": "D-S-01",
+    "SF-MC-i2c27dd": "D-S-01",
+    "SF-MC-i2ef75a": "D-S-01",
+    "SF-MC-i313931": "D-S-01",
+    "SF-MC-i313931-2": "D-S-01",
+    "SF-MC-i3286a5": "D-S-01",
+    "SF-MC-i3c5acb": "D-S-01",
+    "SF-MC-i3e4e23": "D-S-01",
+    "SF-MC-i428744": "D-S-01",
+    "SF-MC-i44a60f": "D-S-01",
+    "SF-MC-i4838f4": "D-S-01",
+    "SF-MC-i484fcc": "D-S-01",
+    "SF-MC-i498a8e": "D-S-01",
+    "SF-MC-i4aad70": "D-S-01",
+    "SF-MC-i4da4f8": "D-S-01",
+    "SF-MC-i4f6b8c": "D-S-01",
+    "SF-MC-i549ffa": "D-S-01",
+    "SF-MC-i564e1b": "D-S-01",
+    "SF-MC-i574343": "D-S-01",
+    "SF-MC-i57adc8": "D-S-01",
+    "SF-MC-i580331": "D-S-01",
+    "SF-MC-i592431": "D-S-01",
+    "SF-MC-i59a506": "D-S-01",
+    "SF-MC-i5e6dce": "D-S-01",
+    "SF-MC-i603b7a": "D-S-01",
+    "SF-MC-i63a8e3": "D-S-01",
+    "SF-MC-i684112": "D-S-01",
+    "SF-MC-i6ccea9": "D-S-01",
+    "SF-MC-i6ccea9-2": "D-S-01",
+    "SF-MC-i6ccea9-3": "D-S-01",
+    "SF-MC-i717aa7": "D-S-01",
+    "SF-MC-i71c271": "D-S-01",
+    "SF-MC-i774e49": "D-S-01",
+    "SF-MC-i7a8d56": "D-S-01",
+    "SF-MC-i7f0c1f": "D-S-01",
+    "SF-MC-i7f0eb3": "D-S-01",
+    "SF-MC-i7fd8be": "D-S-01",
+    "SF-MC-i8083b6": "D-S-01",
+    "SF-MC-i84f861": "D-S-01",
+    "SF-MC-i865b4b": "D-S-01",
+    "SF-MC-i86a128": "D-S-01",
+    "SF-MC-i87cb02": "D-S-01",
+    "SF-MC-i89c183": "D-S-01",
+    "SF-MC-i8a5e85": "D-S-01",
+    "SF-MC-i8e063e": "D-S-01",
+    "SF-MC-i923161": "D-S-01",
+    "SF-MC-i9720c0": "D-S-01",
+    "SF-MC-i981b67": "D-S-01",
+    "SF-MC-i9bcc9d": "D-S-01",
+    "SF-MC-i9da2c6": "D-S-01",
+    "SF-MC-i9ed836": "D-S-01",
+    "SF-MC-ia0072b": "D-S-01",
+    "SF-MC-ia00be5": "D-S-01",
+    "SF-MC-ia00be5-2": "D-S-01",
+    "SF-MC-ia00be5-3": "D-S-01",
+    "SF-MC-ia6951c": "D-S-01",
+    "SF-MC-iacd121": "D-S-01",
+    "SF-MC-iaf0487": "D-S-01",
+    "SF-MC-ib27a84": "D-S-01",
+    "SF-MC-ib3ba36": "D-S-01",
+    "SF-MC-ib5a1fa": "D-S-01",
+    "SF-MC-ib93218": "D-S-01",
+    "SF-MC-ib93218-2": "D-S-01",
+    "SF-MC-ib93218-3": "D-S-01",
+    "SF-MC-ibad081": "D-S-01",
+    "SF-MC-ibc0c1d": "D-S-01",
+    "SF-MC-ibcb404": "D-S-01",
+    "SF-MC-ibe4a3d": "D-S-01",
+    "SF-MC-ibe70e5": "D-S-01",
+    "SF-MC-ic03b42": "D-S-01",
+    "SF-MC-ic0cff3": "D-S-01",
+    "SF-MC-ic13183": "D-S-01",
+    "SF-MC-ic1464a": "D-S-01",
+    "SF-MC-ic70a6f": "D-S-01",
+    "SF-MC-ice4c00": "D-S-01",
+    "SF-MC-ice4c00-2": "D-S-01",
+    "SF-MC-ice4c00-3": "D-S-01",
+    "SF-MC-ice4c00-4": "D-S-01",
+    "SF-MC-ice4c00-5": "D-S-01",
+    "SF-MC-id09781": "D-S-01",
+    "SF-MC-id14b06": "D-S-01",
+    "SF-MC-id7da46": "D-S-01",
+    "SF-MC-ida7bca": "D-S-01",
+    "SF-MC-idfb152": "D-S-01",
+    "SF-MC-ie3f3de": "D-S-01",
+    "SF-MC-ie4942d": "D-S-01",
+    "SF-MC-ie61ffb": "D-S-01",
+    "SF-MC-ie6d293": "D-S-01",
+    "SF-MC-ie7638b": "D-S-01",
+    "SF-MC-ieb5d8c": "D-S-01",
+    "SF-MC-ieb5d8c-2": "D-S-01",
+    "SF-MC-iedd8ed": "D-S-01",
+    "SF-MC-if0236b": "D-S-01",
+    "SF-MC-if41ff5": "D-S-01",
+    "SF-MC-if46328": "D-S-01",
+    "SF-MC-if482ef": "D-S-01",
+    "SF-MC-if56012": "D-S-01",
+    "SF-MC-ifcb67a": "D-S-01",
+    "SF-MC-ifd8753": "D-S-01",
+    "SF-MC-h5e8b83": "D-U-03",
+    "SF-MC-h5e8b83-10": "D-U-03",
+    "SF-MC-h5e8b83-11": "D-U-03",
+    "SF-MC-h5e8b83-2": "D-U-03",
+    "SF-MC-h5e8b83-3": "D-U-03",
+    "SF-MC-h5e8b83-4": "D-U-03",
+    "SF-MC-h5e8b83-5": "D-U-03",
+    "SF-MC-h5e8b83-6": "D-U-03",
+    "SF-MC-h5e8b83-7": "D-U-03",
+    "SF-MC-h5e8b83-8": "D-U-03",
+    "SF-MC-h5e8b83-9": "D-U-03",
+    "SF-MC-r8187d7": "D-U-07",
+    "SF-MC-r8187d7-2": "D-U-07",
+    "SF-MC-r8187d7-3": "D-U-07",
+    "SF-MC-r8187d7-4": "D-U-07",
+    "SF-MC-r8187d7-5": "D-U-07",
+    "SF-MC-r8187d7-6": "D-U-07",
+    "SF-MC-r8187d7-7": "D-U-07",
+    "SF-MC-rcdcfc3": "D-U-07",
+    "SF-MC-rcdcfc3-2": "D-U-07",
+    "SF-MC-rcdcfc3-3": "D-U-07",
+    "SF-MC-rcdcfc3-4": "D-U-07",
+    "SF-MC-a29995c": "D-U-08",
+    "SF-MC-a2dbf09": "D-U-08",
+    "SF-MC-a2dbf09-2": "D-U-08",
+    "SF-MC-a2dbf09-3": "D-U-08",
+    "SF-MC-a2dbf09-4": "D-U-08",
+    "SF-MC-abaf602": "D-U-08",
+    "SF-MC-ac35091": "D-U-08",
+    "SF-MC-ac35091-2": "D-U-08",
+    "SF-MC-ac35091-3": "D-U-08",
+    "SF-MC-ac35091-4": "D-U-08",
+    "SF-MC-ac35091-5": "D-U-08",
+    "SF-MC-hdec0c3": "D-U-06",
+    "SF-MC-hdec0c3-2": "D-U-06",
+    "SF-MC-hdec0c3-3": "D-U-06",
+    "SF-MC-hdec0c3-4": "D-U-06",
+    "SF-MC-hdec0c3-5": "D-U-06",
+    "SF-MC-hdec0c3-6": "D-U-06",
+    "SF-MC-hdec0c3-7": "D-U-06",
+    "SF-MC-hdec0c3-8": "D-U-06",
+    "SF-MC-h135f86": "D-U-06",
+    "SF-MC-h135f86-2": "D-U-06"
+  },
+  "quality": {
+    "maxFileLines": 400,
+    "maxComplexity": 12,
+    "maxProps": 6,
+    "maxHooksPerComponent": 4,
+    "notes": "C-01 容器允许 400 行；presenter 单文件 ≤250 行",
+    "targets": [
+      "packages/core/src/mcp",
+      "packages/web/src/features/mcp"
+    ]
+  },
+  "excluded": {},
+  "triStates": [
+    {
+      "boundary": "服务器清单",
+      "loading": "骨架占位",
+      "empty": "还没有添加服务器 + 添加入口",
+      "error": "降级卡片 + 重试，保留上一次清单"
+    },
+    {
+      "boundary": "单条测试",
+      "loading": "aria-busy + 计时",
+      "empty": "未测试中性文案",
+      "error": "aria-invalid + 失败原因 + 重试"
+    },
+    {
+      "boundary": "签到",
+      "loading": "等待浏览器授权 + 取消",
+      "empty": "不适用（必须从某台服务器发起）",
+      "error": "失败原因 + 重新发起"
+    },
+    {
+      "boundary": "Code mode 保存",
+      "loading": "输入禁用 + 保存按钮 loading",
+      "empty": "不适用",
+      "error": "字段级内联错误，另一字段不受影响"
+    }
+  ]
+}

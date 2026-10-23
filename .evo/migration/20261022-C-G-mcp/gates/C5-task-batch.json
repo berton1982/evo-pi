@@ -1,0 +1,48 @@
+{
+  "id": "C5-task-batch",
+  "generatedAt": "2026-10-22T07:42:23.623Z",
+  "runs": [
+    {
+      "cmd": "npx --no-install vitest run packages/core/src/mcp",
+      "exit": 0,
+      "durationMs": 1143,
+      "at": "2026-10-22T07:42:19.853Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\n\n Test Files  5 passed (5)\n      Tests  24 passed (24)\n   Start at  15:42:19\n   Duration  437ms (setup 50%, transform 37%, import 6%, tests 4%, worker 2%)"
+    },
+    {
+      "cmd": "npx --no-install vitest run packages/core/src/mcp/domain",
+      "exit": 0,
+      "durationMs": 898,
+      "at": "2026-10-22T07:42:20.751Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\n\n Test Files  2 passed (2)\n      Tests  9 passed (9)\n   Start at  15:42:20\n   Duration  271ms (setup 63%, transform 26%, import 4%, tests 4%, worker 3%)"
+    },
+    {
+      "cmd": "npx --no-install vitest run packages/core/src/mcp/ports",
+      "exit": 1,
+      "durationMs": 570,
+      "at": "2026-10-22T07:42:21.321Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\nnpm notice run evo-pi@0.0.0 npx\nnpm notice run 'vitest' run packages/core/src/mcp/ports\nNo test files found, exiting with code 1\n\nfilter: packages/core/src/mcp/ports\ninclude: packages/**/*.test.ts, packages/**/*.test.tsx, pi-packages/**/*.test.ts, pi-packages/**/*.test.tsx\nexclude:  node_modules/**, **/node_modules/**, dist/**, coverage/**, **/.turbo/**"
+    },
+    {
+      "cmd": "npx --no-install vitest run packages/core/src/mcp/application",
+      "exit": 1,
+      "durationMs": 631,
+      "at": "2026-10-22T07:42:21.952Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\nnpm notice run evo-pi@0.0.0 npx\nnpm notice run 'vitest' run packages/core/src/mcp/application\nNo test files found, exiting with code 1\n\nfilter: packages/core/src/mcp/application\ninclude: packages/**/*.test.ts, packages/**/*.test.tsx, pi-packages/**/*.test.ts, pi-packages/**/*.test.tsx\nexclude:  node_modules/**, **/node_modules/**, dist/**, coverage/**, **/.turbo/**"
+    },
+    {
+      "cmd": "npx --no-install vitest run packages/web/src/capabilities/mcp",
+      "exit": 1,
+      "durationMs": 603,
+      "at": "2026-10-22T07:42:22.555Z",
+      "tail": "RUN  v5.0.3 /home/berton/evo-pi\n\nnpm notice run evo-pi@0.0.0 npx\nnpm notice run 'vitest' run packages/web/src/capabilities/mcp\nNo test files found, exiting with code 1\n\nfilter: packages/web/src/capabilities/mcp\ninclude: packages/**/*.test.ts, packages/**/*.test.tsx, pi-packages/**/*.test.ts, pi-packages/**/*.test.tsx\nexclude:  node_modules/**, **/node_modules/**, dist/**, coverage/**, **/.turbo/**"
+    },
+    {
+      "cmd": "npx --no-install playwright test e2e/mcp",
+      "exit": 1,
+      "durationMs": 1068,
+      "at": "2026-10-22T07:42:23.623Z",
+      "tail": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.\n\nnpm notice run evo-pi@0.0.0 npx\nnpm notice run 'playwright' test e2e/mcp"
+    }
+  ]
+}

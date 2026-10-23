@@ -1,0 +1,839 @@
+# 符号全集 — `ref_projects/pi-web/components/McpConfig.tsx`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：2259；符号数：**831**；导出时间：2026-10-22T07:12:09.223Z
+
+## 符号（按出现顺序）
+
+- **actionFailureText** (function) — `ref_projects/pi-web/components/McpConfig.tsx:204`
+- **cancelMcpSignInFlow** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:158`
+- **CodemodeMode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:6`
+- **ConfigButton** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:38`
+- **ConfigDetail** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:39`
+- **ConfigDetailActions** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:40`
+- **ConfigDetailGrid** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:41`
+- **ConfigDetailGridRow** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:42`
+- **ConfigDetailHeader** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:43`
+- **ConfigDetailHeaderInfo** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:44`
+- **ConfigDetailStack** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:45`
+- **ConfigDetailTitle** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:46`
+- **ConfigEmptyState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:47`
+- **ConfigFooter** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:49`
+- **ConfigFooterStatus** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:50`
+- **ConfigListAction** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:48`
+- **ConfigNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:51`
+- **ConfigPanelShell** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:52`
+- **ConfigScopeSwitch** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:53`
+- **ConfigScopeTag** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:54`
+- **ConfigSidebar** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:55`
+- **ConfigSidebarGroupLabel** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:56`
+- **ConfigSidebarGroupStatus** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:57`
+- **ConfigSidebarGroupSwitch** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:58`
+- **ConfigSidebarItem** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:59`
+- **ConfigSidebarList** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:60`
+- **ConfigSidebarText** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:61`
+- **ConfigSplitView** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:62`
+- **ConfigStatusDot** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:63`
+- **ConfigSwitch** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:64`
+- **ConfigTrustNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:65`
+- **displayPath** (function) — `ref_projects/pi-web/components/McpConfig.tsx:187`
+- **displayPathWithin** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:21`
+- **EMPTY_MCP_ADD_DRAFT** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:154`
+- **failureText** (function) — `ref_projects/pi-web/components/McpConfig.tsx:198`
+- **focusAfterChange** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:36`
+- **focusIfLost** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:36`
+- **getLastSettingsSelection** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:33`
+- **getMcpSignIn** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:159`
+- **groupStatusText** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1293`
+- **<unknown>** (property) in `groupStatusText` — `ref_projects/pi-web/components/McpConfig.tsx:1303`
+- **error** (const) in `groupStatusText` — `ref_projects/pi-web/components/McpConfig.tsx:1295`
+- **count** (property) in `error` — `ref_projects/pi-web/components/McpConfig.tsx:1299`
+- **status.failures.map() callback** (function) in `error` — `ref_projects/pi-web/components/McpConfig.tsx:1300`
+- **total** (property) in `error` — `ref_projects/pi-web/components/McpConfig.tsx:1299`
+- **note** (const) in `groupStatusText` — `ref_projects/pi-web/components/McpConfig.tsx:1294`
+- **count** (property) in `note` — `ref_projects/pi-web/components/McpConfig.tsx:1294`
+- **isBlockingFileProblem** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:80`
+- **loadMcpOverview** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:81`
+- **MCP_CODEMODE_MODE_DESCRIPTION_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:68`
+- **MCP_CODEMODE_MODE_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:69`
+- **MCP_CODEMODE_SELECTION** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:70`
+- **MCP_CODEMODE_STATE_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:71`
+- **MCP_EXPOSURE_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:72`
+- **MCP_EXPOSURE_OPTIONS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:73`
+- **MCP_EXPOSURE_SHORT_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:74`
+- **MCP_READ_ONLY_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:75`
+- **MCP_ROW_STATE_BADGE_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:76`
+- **MCP_SIGN_IN_POLL_MS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:157`
+- **MCP_TEST_BLOCK_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:77`
+- **MCP_TEST_REFUSAL_KEYS** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:78`
+- **MCP_TEST_SERIAL_KEY** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:79`
+- **McpActionErrorState** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:826`
+- **failure** (property) in `McpActionErrorState` — `ref_projects/pi-web/components/McpConfig.tsx:828`
+- **key** (property) in `McpActionErrorState` — `ref_projects/pi-web/components/McpConfig.tsx:827`
+- **McpActionFailure** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:138`
+- **McpActionRequest** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:139`
+- **McpActionResponse** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:7`
+- **McpActionResult** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:140`
+- **McpAddActionRequest** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:153`
+- **McpAddDraft** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:154`
+- **McpAddedNotice** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:245`
+- **key** (property) in `McpAddedNotice` — `ref_projects/pi-web/components/McpConfig.tsx:249`
+- **name** (property) in `McpAddedNotice` — `ref_projects/pi-web/components/McpConfig.tsx:247`
+- **path** (property) in `McpAddedNotice` — `ref_projects/pi-web/components/McpConfig.tsx:248`
+- **scope** (property) in `McpAddedNotice` — `ref_projects/pi-web/components/McpConfig.tsx:246`
+- **trustedFolder** (property) in `McpAddedNotice` — `ref_projects/pi-web/components/McpConfig.tsx:251`
+- **McpAddedNoticeView** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1216`
+- **<function>** (function) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1247`
+- **asksSignIn** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1242`
+- **folder** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1256`
+- **name** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1239`
+- **name** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1253`
+- **name** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1255`
+- **name** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1256`
+- **path** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1240`
+- **path** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1253`
+- **path** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1255`
+- **path** (property) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1256`
+- **signingIn** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1243`
+- **status** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1241`
+- **t** (const) in `McpAddedNoticeView` — `ref_projects/pi-web/components/McpConfig.tsx:1238`
+- **McpAddServer** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:153`
+- **McpAutoEnableCodemode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:141`
+- **mcpCodemodeAlwaysUnavailableNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:82`
+- **mcpCodemodeAutomaticNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:83`
+- **mcpCodemodeBuiltinNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:84`
+- **McpCodemodeDetail** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1976`
+- **<function>** (function) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2030`
+- **alwaysUnavailable** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2001`
+- **automaticNotice** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2000`
+- **builtinNotice** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2002`
+- **choiceSave** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1999`
+- **error** (property) in `choiceSave` — `ref_projects/pi-web/components/McpConfig.tsx:1999`
+- **saving** (property) in `choiceSave` — `ref_projects/pi-web/components/McpConfig.tsx:1999`
+- **disabled** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2022`
+- **disabled** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2026`
+- **label** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2022`
+- **label** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2025`
+- **preference** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1996`
+- **projectOverride** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2003`
+- **sandbox** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1995`
+- **t** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1994`
+- **value** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2022`
+- **value** (property) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:2024`
+- **waiting** (const) in `McpCodemodeDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1997`
+- **McpCodemodeInfo** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:8`
+- **McpCodemodeInlineBudget** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:9`
+- **mcpCodemodeInlineBudgetNotices** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:85`
+- **McpCodemodeInlineBudgetRow** (function) — `ref_projects/pi-web/components/McpConfig.tsx:2178`
+- **<function>** (function) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2215`
+- **<function>** (function) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2232`
+- **changes** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2200`
+- **default** (property) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2244`
+- **draft** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2194`
+- **hintId** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2192`
+- **inputRef** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2191`
+- **max** (property) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2241`
+- **notices** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2209`
+- **notices.map() callback** (function) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2246`
+- **own** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2201`
+- **parsed** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2199`
+- **saving** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2202`
+- **setDraft** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2194`
+- **stored** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2193`
+- **t** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2190`
+- **useEffect() callback** (function) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2196`
+- **useEffect() callback** (function) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2204`
+- **wasSaving** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:2205`
+- **wasSavingRef** (const) in `McpCodemodeInlineBudgetRow` — `ref_projects/pi-web/components/McpConfig.tsx:2203`
+- **McpCodemodeMode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:10`
+- **mcpCodemodeModeChanges** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:86`
+- **mcpCodemodeModeNotices** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:87`
+- **McpCodemodeModeRow** (function) — `ref_projects/pi-web/components/McpConfig.tsx:2119`
+- **<function>** (function) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2147`
+- **disabled** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2144`
+- **disabled** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2145`
+- **label** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2144`
+- **label** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2145`
+- **notices** (const) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2136`
+- **notices.map() callback** (function) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2154`
+- **own** (const) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2135`
+- **t** (const) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2134`
+- **value** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2144`
+- **value** (property) in `McpCodemodeModeRow` — `ref_projects/pi-web/components/McpConfig.tsx:2145`
+- **McpCodemodePreference** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:11`
+- **mcpCodemodeProjectOverrideNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:88`
+- **McpCodemodeRow** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1263`
+- **<function>** (function) in `McpCodemodeRow` — `ref_projects/pi-web/components/McpConfig.tsx:1283`
+- **state** (const) in `McpCodemodeRow` — `ref_projects/pi-web/components/McpConfig.tsx:1276`
+- **state** (property) in `McpCodemodeRow` — `ref_projects/pi-web/components/McpConfig.tsx:1282`
+- **stateText** (const) in `McpCodemodeRow` — `ref_projects/pi-web/components/McpConfig.tsx:1277`
+- **t** (const) in `McpCodemodeRow` — `ref_projects/pi-web/components/McpConfig.tsx:1275`
+- **mcpCodemodeRowState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:90`
+- **McpCodemodeSaveFailure** (function) — `ref_projects/pi-web/components/McpConfig.tsx:2105`
+- **t** (const) in `McpCodemodeSaveFailure` — `ref_projects/pi-web/components/McpConfig.tsx:2106`
+- **McpCodemodeSaveState** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:210`
+- **error** (property) in `McpCodemodeSaveState` — `ref_projects/pi-web/components/McpConfig.tsx:212`
+- **saving** (property) in `McpCodemodeSaveState` — `ref_projects/pi-web/components/McpConfig.tsx:211`
+- **target** (property) in `McpCodemodeSaveState` — `ref_projects/pi-web/components/McpConfig.tsx:214`
+- **mcpCodemodeTone** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:91`
+- **McpConfig** (function) — `ref_projects/pi-web/components/McpConfig.tsx:295`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:786`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:791`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:797`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:798`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:799`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:800`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:801`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:802`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:803`
+- **setAdded() callback** (function) in `<function>` — `ref_projects/pi-web/components/McpConfig.tsx:807`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:809`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:810`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:811`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:812`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:813`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:814`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:815`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:816`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:817`
+- **<function>** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:818`
+- **actionControllerRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:329`
+- **actionError** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:319`
+- **activeFlowsKey** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:532`
+- **flatMap() callback** (function) in `activeFlowsKey` — `ref_projects/pi-web/components/McpConfig.tsx:533`
+- **addDraft** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:340`
+- **addDraftRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:343`
+- **added** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:346`
+- **addFailure** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:345`
+- **adding** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:339`
+- **applyOverview** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:476`
+- **useCallback() callback** (function) in `applyOverview` — `ref_projects/pi-web/components/McpConfig.tsx:476`
+- **setLoad() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:480`
+- **<unknown>** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:483`
+- **data** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:482`
+- **state** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:481`
+- **setSelected() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:485`
+- **busy** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:318`
+- **cancelSignIn** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:518`
+- **useCallback() callback** (function) in `cancelSignIn` — `ref_projects/pi-web/components/McpConfig.tsx:518`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:519`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:521`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:520`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:520`
+- **<unknown>** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:520`
+- **cancelling** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:520`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:520`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:523`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:525`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:525`
+- **next** (const) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:524`
+- **codemodeSave** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:316`
+- **controllerRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:327`
+- **focusBack** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:322`
+- **groupStatus** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:320`
+- **load** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:313`
+- **loadRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:348`
+- **mountedRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:347`
+- **pasteSignIn** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:505`
+- **useCallback() callback** (function) in `pasteSignIn` — `ref_projects/pi-web/components/McpConfig.tsx:505`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:506`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:510`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:507`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:508`
+- **<unknown>** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:508`
+- **pasteError** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:508`
+- **pasting** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:508`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:508`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:512`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:514`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:514`
+- **next** (const) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:513`
+- **pollRound** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:337`
+- **previousSignInsRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:560`
+- **refresh** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:351`
+- **useCallback() callback** (function) in `refresh` — `ref_projects/pi-web/components/McpConfig.tsx:351`
+- **<unknown>** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:364`
+- **controller** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:354`
+- **data** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:364`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:361`
+- **request** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:352`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:357`
+- **setSelected() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:365`
+- **state** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:361`
+- **state** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:364`
+- **refreshing** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:314`
+- **removeServer** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:631`
+- **useCallback() callback** (function) in `removeServer` — `ref_projects/pi-web/components/McpConfig.tsx:631`
+- **removed** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:644`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:640`
+- **failure** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:639`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:632`
+- **key** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:639`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:633`
+- **removed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:643`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:636`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:636`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:636`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:636`
+- **undoing** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:644`
+- **requestRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:326`
+- **runAction** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:571`
+- **useCallback() callback** (function) in `runAction` — `ref_projects/pi-web/components/McpConfig.tsx:571`
+- **controller** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:577`
+- **current** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:580`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:583`
+- **writeCwd** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:582`
+- **saveCodemode** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:381`
+- **useCallback() callback** (function) in `saveCodemode` — `ref_projects/pi-web/components/McpConfig.tsx:381`
+- **controller** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:382`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:384`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:389`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:385`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:384`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:389`
+- **setLoad() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:391`
+- **current** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:392`
+- **data** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:392`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:384`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:389`
+- **saveCodemodeInlineBudget** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:417`
+- **useCallback() callback** (function) in `saveCodemodeInlineBudget` — `ref_projects/pi-web/components/McpConfig.tsx:417`
+- **controller** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:418`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:420`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:424`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:421`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:420`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:424`
+- **setLoad() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:426`
+- **current** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:427`
+- **data** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:427`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:420`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:424`
+- **saveCodemodeMode** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:401`
+- **useCallback() callback** (function) in `saveCodemodeMode` — `ref_projects/pi-web/components/McpConfig.tsx:401`
+- **controller** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:402`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:404`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:408`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:405`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:404`
+- **saving** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:408`
+- **setLoad() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:410`
+- **current** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:411`
+- **data** (property) in `setLoad() callback` — `ref_projects/pi-web/components/McpConfig.tsx:411`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:404`
+- **target** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:408`
+- **saveControllerRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:328`
+- **selected** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:315`
+- **setActionError** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:319`
+- **setAddDraft** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:340`
+- **setAdded** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:346`
+- **setAddFailure** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:345`
+- **setAdding** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:339`
+- **setBusy** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:318`
+- **setCodemodeSave** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:316`
+- **setFocusBack** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:322`
+- **setGroupStatus** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:320`
+- **setLoad** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:313`
+- **setPollRound** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:337`
+- **setRefreshing** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:314`
+- **setSelected** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:315`
+- **setServerExposure** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:617`
+- **useCallback() callback** (function) in `setServerExposure` — `ref_projects/pi-web/components/McpConfig.tsx:617`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:625`
+- **failure** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:624`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:618`
+- **key** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:624`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:619`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:622`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:622`
+- **exposure** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:622`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:622`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:622`
+- **setSignIns** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:334`
+- **setTests** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:324`
+- **setUndo** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:321`
+- **signIns** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:334`
+- **signInsRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:335`
+- **signOut** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:669`
+- **useCallback() callback** (function) in `signOut` — `ref_projects/pi-web/components/McpConfig.tsx:669`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:690`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:670`
+- **now** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:684`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:671`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:675`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:675`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:675`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:675`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **<unknown>** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **signedOut** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **signOutError** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:674`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:677`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:679`
+- **<unknown>** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:679`
+- **signedOut** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:679`
+- **removed** (property) in `signedOut` — `ref_projects/pi-web/components/McpConfig.tsx:679`
+- **signOutError** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:679`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:678`
+- **setTests() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:685`
+- **[key]** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:687`
+- **runs** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:687`
+- **next** (const) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:686`
+- **startSignIn** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:491`
+- **useCallback() callback** (function) in `startSignIn` — `ref_projects/pi-web/components/McpConfig.tsx:491`
+- **current** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:493`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:492`
+- **listing** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:496`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:499`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:499`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:499`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:495`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:495`
+- **starting** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:495`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:495`
+- **setSignIns() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:501`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:501`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:501`
+- **signInCwd** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:498`
+- **submitAdd** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:696`
+- **useCallback() callback** (function) in `submitAdd` — `ref_projects/pi-web/components/McpConfig.tsx:696`
+- **written** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:722`
+- **<unknown>** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:722`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:712`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:720`
+- **edited** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:705`
+- **key** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:722`
+- **listed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:724`
+- **result.data.servers.find() callback** (function) in `listed` — `ref_projects/pi-web/components/McpConfig.tsx:724`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:697`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:702`
+- **runAction("add") callback** (function) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:702`
+- **sent** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:698`
+- **toSelectedRow** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:720`
+- **trustedFolder** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:715`
+- **written** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:715`
+- **writtenTrust** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:715`
+- **switchGroup** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:740`
+- **useCallback() callback** (function) in `switchGroup` — `ref_projects/pi-web/components/McpConfig.tsx:740`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:751`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:753`
+- **failures** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:757`
+- **map() callback** (function) in `failures` — `ref_projects/pi-web/components/McpConfig.tsx:759`
+- **failure** (property) in `map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:759`
+- **error** (property) in `failure` — `ref_projects/pi-web/components/McpConfig.tsx:759`
+- **reason** (property) in `failure` — `ref_projects/pi-web/components/McpConfig.tsx:759`
+- **name** (property) in `map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:759`
+- **results.filter() callback** (function) in `failures` — `ref_projects/pi-web/components/McpConfig.tsx:758`
+- **failures** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:744`
+- **failures** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:753`
+- **failures** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:760`
+- **keptOff** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:741`
+- **keptOff** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:744`
+- **keptOff** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:753`
+- **keptOff** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:760`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:742`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:746`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **enabled** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **servers** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **targets.map() callback** (function) in `servers` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **name** (property) in `targets.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **scope** (property) in `targets.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:747`
+- **results** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:756`
+- **scope** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:744`
+- **scope** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:753`
+- **scope** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:760`
+- **targets** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:741`
+- **total** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:744`
+- **total** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:753`
+- **total** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:760`
+- **switchServer** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:593`
+- **useCallback() callback** (function) in `switchServer` — `ref_projects/pi-web/components/McpConfig.tsx:593`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:601`
+- **failure** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:600`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:594`
+- **key** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:600`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:595`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:598`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:598`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:598`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:598`
+- **switchServerInProject** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:605`
+- **useCallback() callback** (function) in `switchServerInProject` — `ref_projects/pi-web/components/McpConfig.tsx:605`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:613`
+- **failure** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:612`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:606`
+- **key** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:612`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:607`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:610`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:610`
+- **enabled** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:610`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:610`
+- **testRequestsRef** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:331`
+- **tests** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:324`
+- **testServer** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:455`
+- **useCallback() callback** (function) in `testServer` — `ref_projects/pi-web/components/McpConfig.tsx:455`
+- **current** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:461`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:456`
+- **listed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:470`
+- **listing.data.servers.find() callback** (function) in `listed` — `ref_projects/pi-web/components/McpConfig.tsx:470`
+- **listing** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:469`
+- **request** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:458`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:464`
+- **name** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:464`
+- **scope** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:464`
+- **setTests() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **[key]** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **<unknown>** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **configKey** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **error** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **queueTimedOut** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **running** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **startedAt** (property) in `[key]` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **runs** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:460`
+- **setTests() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:468`
+- **[key]** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:468`
+- **runs** (property) in `setTests() callback` — `ref_projects/pi-web/components/McpConfig.tsx:468`
+- **testCwd** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:463`
+- **trustKey** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:371`
+- **undo** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:321`
+- **undoExpiresInMs** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:730`
+- **undoRemoval** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:647`
+- **useCallback() callback** (function) in `undoRemoval` — `ref_projects/pi-web/components/McpConfig.tsx:647`
+- **notice** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:653`
+- **control** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:664`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:653`
+- **notice** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:648`
+- **pressed** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:650`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:654`
+- **action** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:655`
+- **runAction("undo") callback** (function) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:657`
+- **token** (property) in `result` — `ref_projects/pi-web/components/McpConfig.tsx:655`
+- **setUndo() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:660`
+- **current** (property) in `setUndo() callback` — `ref_projects/pi-web/components/McpConfig.tsx:662`
+- **error** (property) in `setUndo() callback` — `ref_projects/pi-web/components/McpConfig.tsx:662`
+- **undoing** (property) in `setUndo() callback` — `ref_projects/pi-web/components/McpConfig.tsx:662`
+- **undoing** (property) in `useCallback() callback` — `ref_projects/pi-web/components/McpConfig.tsx:653`
+- **undoToken** (const) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:729`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:372`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:374`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:433`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:436`
+- **testRequests** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:434`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:535`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:552`
+- **controller** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:537`
+- **timer** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:538`
+- **setTimeout() callback** (function) in `timer` — `ref_projects/pi-web/components/McpConfig.tsx:538`
+- **flowId** (const) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:540`
+- **item** (const) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:539`
+- **key** (const) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:540`
+- **result** (const) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:543`
+- **sentVersion** (const) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:542`
+- **setPollRound() callback** (function) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:550`
+- **setSignIns() callback** (function) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:545`
+- **[key]** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:547`
+- **runs** (property) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:547`
+- **next** (const) in `setSignIns() callback` — `ref_projects/pi-web/components/McpConfig.tsx:546`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:561`
+- **previous** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:562`
+- **some() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:564`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:731`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:734`
+- **timer** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:733`
+- **setTimeout() callback** (function) in `timer` — `ref_projects/pi-web/components/McpConfig.tsx:733`
+- **setUndo() callback** (function) in `setTimeout() callback` — `ref_projects/pi-web/components/McpConfig.tsx:733`
+- **useEffect() callback** (function) in `McpConfig` — `ref_projects/pi-web/components/McpConfig.tsx:763`
+- **McpConfigFieldRef** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:12`
+- **McpConfigLoad** (type) — `ref_projects/pi-web/components/McpConfig.tsx:177`
+- **McpConfigView** (function) — `ref_projects/pi-web/components/McpConfig.tsx:832`
+- **<function>** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1155`
+- **requestAnimationFrame() callback** (function) in `<function>` — `ref_projects/pi-web/components/McpConfig.tsx:1158`
+- **addActionRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:947`
+- **addedServer** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:930`
+- **servers.find() callback** (function) in `addedServer` — `ref_projects/pi-web/components/McpConfig.tsx:930`
+- **autoEnable** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:971`
+- **blockNoticeId** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:994`
+- **context** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:927`
+- **controlsBusy** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:975`
+- **count** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1183`
+- **counts** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:969`
+- **data** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:925`
+- **emptyKey** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:972`
+- **enabled** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1196`
+- **focusFallback** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:948`
+- **globalFile** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:970`
+- **data.files.find() callback** (function) in `globalFile` — `ref_projects/pi-web/components/McpConfig.tsx:970`
+- **globalPath** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1171`
+- **groups** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:926`
+- **groups.map() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1080`
+- **block** (const) in `groups.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1081`
+- **handledFocusBackRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:982`
+- **hostInactive** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:933`
+- **name** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1042`
+- **offeredTrustRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:949`
+- **offersTrust** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:938`
+- **onTrust** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:937`
+- **owner** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1025`
+- **path** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1025`
+- **path** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1042`
+- **problems** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:968`
+- **problems.map() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1184`
+- **detail** (const) in `problems.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1185`
+- **problems.some() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1182`
+- **projectBlock** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:992`
+- **projectFile** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:934`
+- **data.files.find() callback** (function) in `projectFile` — `ref_projects/pi-web/components/McpConfig.tsx:934`
+- **projectServers** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:991`
+- **groups.find() callback** (function) in `projectServers` — `ref_projects/pi-web/components/McpConfig.tsx:991`
+- **reason** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1028`
+- **selectedRowRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:946`
+- **selectedServer** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:929`
+- **servers.find() callback** (function) in `selectedServer` — `ref_projects/pi-web/components/McpConfig.tsx:929`
+- **servers** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:928`
+- **groups.flatMap() callback** (function) in `servers` — `ref_projects/pi-web/components/McpConfig.tsx:928`
+- **shownUndoRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:961`
+- **t** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:921`
+- **total** (property) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:1196`
+- **trustMessage** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:998`
+- **trustNotice** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:935`
+- **trustNoticeId** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:923`
+- **unavailable** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:931`
+- **unavailableNoticeId** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:922`
+- **undoButtonRef** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:959`
+- **undoToken** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:960`
+- **useEffect() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:950`
+- **offeredTrust** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:951`
+- **useEffect() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:962`
+- **shown** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:963`
+- **useEffect() callback** (function) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:983`
+- **writeBlock** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:989`
+- **writesOff** (const) in `McpConfigView` — `ref_projects/pi-web/components/McpConfig.tsx:990`
+- **mcpEffectiveAutoEnableCodemode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:92`
+- **mcpEmptyDetailKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:93`
+- **McpExposure** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:4`
+- **mcpExposureReachNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:89`
+- **McpFieldChips** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1386`
+- **fields.map() callback** (function) in `McpFieldChips` — `ref_projects/pi-web/components/McpConfig.tsx:1390`
+- **label** (const) in `fields.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1391`
+- **t** (const) in `McpFieldChips` — `ref_projects/pi-web/components/McpConfig.tsx:1387`
+- **mcpFieldLabel** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:23`
+- **mcpFileProblemDetail** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:24`
+- **mcpFileProblems** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:94`
+- **McpFocusBack** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:259`
+- **control** (property) in `McpFocusBack` — `ref_projects/pi-web/components/McpConfig.tsx:260`
+- **toSelectedRow** (property) in `McpFocusBack` — `ref_projects/pi-web/components/McpConfig.tsx:266`
+- **mcpGroupCounts** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:95`
+- **mcpGroupEmptyKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:96`
+- **McpGroupStatus** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:218`
+- **error** (property) in `McpGroupStatus` — `ref_projects/pi-web/components/McpConfig.tsx:226`
+- **failures** (property) in `McpGroupStatus` — `ref_projects/pi-web/components/McpConfig.tsx:223`
+- **keptOff** (property) in `McpGroupStatus` — `ref_projects/pi-web/components/McpConfig.tsx:221`
+- **scope** (property) in `McpGroupStatus` — `ref_projects/pi-web/components/McpConfig.tsx:219`
+- **total** (property) in `McpGroupStatus` — `ref_projects/pi-web/components/McpConfig.tsx:224`
+- **mcpGroupSwitchChecked** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:97`
+- **mcpGroupSwitchTargets** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:98`
+- **mcpInlineBudgetDraftChanges** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:129`
+- **mcpInlineBudgetDraftOf** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:130`
+- **mcpInProjectView** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:99`
+- **McpInProjectView** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:142`
+- **McpLoadFailure** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:143`
+- **McpNameList** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1403`
+- **names.map() callback** (function) in `McpNameList` — `ref_projects/pi-web/components/McpConfig.tsx:1406`
+- **McpNoticeText** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:144`
+- **mcpOverrideNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:25`
+- **mcpProjectTrustable** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:100`
+- **McpResponse** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:13`
+- **mcpRowContext** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:101`
+- **McpRowContext** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:145`
+- **mcpRowStateDetailKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:102`
+- **mcpRowStateLabelKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:103`
+- **mcpRowStateTone** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:104`
+- **McpScope** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:14`
+- **mcpSeconds** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:106`
+- **McpServerDetail** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1411`
+- **<function>** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1525`
+- **<function>** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1535`
+- **<function>** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1629`
+- **exposure** (const) in `<function>` — `ref_projects/pi-web/components/McpConfig.tsx:1630`
+- **<function>** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1664`
+- **<function>** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1674`
+- **connects** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1486`
+- **count** (property) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1646`
+- **exposureId** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1490`
+- **http** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1487`
+- **inProjectNoteId** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1491`
+- **key** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1492`
+- **keys** (property) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1661`
+- **listed** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1484`
+- **map() callback** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1591`
+- **field** (property) in `map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1595`
+- **label** (const) in `map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1592`
+- **variable** (property) in `map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1595`
+- **MCP_EXPOSURE_OPTIONS.map() callback** (function) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1634`
+- **label** (property) in `MCP_EXPOSURE_OPTIONS.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1637`
+- **name** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1493`
+- **name** (property) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1534`
+- **name** (property) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1625`
+- **note** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1500`
+- **noteId** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1478`
+- **passwordKeepsOff** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1495`
+- **reachNotice** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1489`
+- **codemode** (property) in `reachNotice` — `ref_projects/pi-web/components/McpConfig.tsx:1489`
+- **toolSearchDisabled** (property) in `reachNotice` — `ref_projects/pi-web/components/McpConfig.tsx:1489`
+- **state** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1480`
+- **status** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1483`
+- **stdio** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1488`
+- **switchless** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1497`
+- **t** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1477`
+- **target** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1481`
+- **testBlockId** (const) in `McpServerDetail` — `ref_projects/pi-web/components/McpConfig.tsx:1479`
+- **McpServerGroup** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:146`
+- **McpServerGroupList** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1306`
+- **<function>** (function) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1353`
+- **checked** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1338`
+- **emptyKey** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1339`
+- **enabled** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1335`
+- **group** (property) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1352`
+- **group.servers.map() callback** (function) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1361`
+- **<function>** (function) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1374`
+- **badgeKey** (const) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1365`
+- **key** (const) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1362`
+- **name** (const) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1366`
+- **name** (property) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1373`
+- **state** (const) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1363`
+- **state** (property) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1373`
+- **tone** (const) in `group.servers.map() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1364`
+- **statusText** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1340`
+- **t** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1334`
+- **total** (const) in `McpServerGroupList` — `ref_projects/pi-web/components/McpConfig.tsx:1335`
+- **mcpServerGroups** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:105`
+- **mcpServerHasHiddenCharacters** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:26`
+- **McpServerInfo** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:15`
+- **mcpServerKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:107`
+- **mcpServerRowState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:108`
+- **McpServerRowState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:147`
+- **McpServerStatus** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:16`
+- **mcpServerTarget** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:27`
+- **mcpSessionStateView** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:109`
+- **McpSessionStatus** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:17`
+- **McpSessionStatusLines** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1809`
+- **<unknown>** (property) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1817`
+- **closedTime** (const) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1812`
+- **locale** (const) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1810`
+- **path** (property) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1817`
+- **t** (const) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1810`
+- **time** (const) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1811`
+- **time** (property) in `McpSessionStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1817`
+- **mcpSessionSummaryKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:110`
+- **mcpSignInActive** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:160`
+- **mcpSignInBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:161`
+- **mcpSignInJustEnded** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:162`
+- **McpSignInRow** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:155`
+- **McpSignInRun** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:170`
+- **mcpSignInRunAfterCancel** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:163`
+- **mcpSignInRunAfterPaste** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:164`
+- **mcpSignInRunAfterPoll** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:165`
+- **mcpSignInRunAfterStart** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:166`
+- **mcpSignOutBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:167`
+- **McpStateTone** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:148`
+- **mcpStatusDot** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:111`
+- **McpStatusLines** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1749`
+- **McpStatusOutput** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1724`
+- **t** (const) in `McpStatusOutput` — `ref_projects/pi-web/components/McpConfig.tsx:1725`
+- **McpStatusRow** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1909`
+- **blockSaidBy** (const) in `McpStatusRow` — `ref_projects/pi-web/components/McpConfig.tsx:1926`
+- **stateDetail** (const) in `McpStatusRow` — `ref_projects/pi-web/components/McpConfig.tsx:1924`
+- **status** (const) in `McpStatusRow` — `ref_projects/pi-web/components/McpConfig.tsx:1923`
+- **t** (const) in `McpStatusRow` — `ref_projects/pi-web/components/McpConfig.tsx:1922`
+- **mcpStatusRowState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:112`
+- **McpStatusStateWord** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1756`
+- **t** (const) in `McpStatusStateWord` — `ref_projects/pi-web/components/McpConfig.tsx:1757`
+- **mcpStatusTimeText** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:113`
+- **mcpTestAnswerOutdates** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:114`
+- **mcpTestBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:115`
+- **McpTestBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:149`
+- **McpTestButton** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1860`
+- **<function>** (function) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1892`
+- **buttonRef** (const) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1875`
+- **running** (const) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1876`
+- **t** (const) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1874`
+- **useEffect() callback** (function) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1880`
+- **wasRunning** (const) in `useEffect() callback` — `ref_projects/pi-web/components/McpConfig.tsx:1881`
+- **wasRunningRef** (const) in `McpTestButton` — `ref_projects/pi-web/components/McpConfig.tsx:1879`
+- **McpTestRun** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:150`
+- **mcpTestRunAfter** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:116`
+- **mcpTestRunAfterSignOut** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:117`
+- **mcpTestRunFor** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:118`
+- **mcpTestStateView** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:119`
+- **McpTestStatusLines** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1767`
+- **count** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1784`
+- **info** (const) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1779`
+- **locale** (const) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1777`
+- **name** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1789`
+- **path** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1794`
+- **seconds** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1784`
+- **seconds** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1797`
+- **t** (const) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1777`
+- **time** (const) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1778`
+- **time** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1784`
+- **version** (property) in `McpTestStatusLines` — `ref_projects/pi-web/components/McpConfig.tsx:1789`
+- **mcpTestSummaryKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:120`
+- **McpTestToolList** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1830`
+- **count** (property) in `McpTestToolList` — `ref_projects/pi-web/components/McpConfig.tsx:1849`
+- **notShown** (const) in `McpTestToolList` — `ref_projects/pi-web/components/McpConfig.tsx:1832`
+- **status.tools.map() callback** (function) in `McpTestToolList` — `ref_projects/pi-web/components/McpConfig.tsx:1836`
+- **t** (const) in `McpTestToolList` — `ref_projects/pi-web/components/McpConfig.tsx:1831`
+- **mcpTrustNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:121`
+- **mcpUnavailableNotice** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:122`
+- **McpUndoNotice** (interface) — `ref_projects/pi-web/components/McpConfig.tsx:233`
+- **error** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:241`
+- **expiresInMs** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:239`
+- **name** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:236`
+- **path** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:237`
+- **scope** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:235`
+- **token** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:234`
+- **undoing** (property) in `McpUndoNotice` — `ref_projects/pi-web/components/McpConfig.tsx:240`
+- **mcpVariableChips** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:28`
+- **mcpVariableReferencesKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:29`
+- **mcpWithTestResults** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:123`
+- **mcpWriteBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:124`
+- **McpWriteBlock** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:151`
+- **mcpWritesOff** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:125`
+- **noticeText** (function) — `ref_projects/pi-web/components/McpConfig.tsx:192`
+- **params** (property) in `noticeText` — `ref_projects/pi-web/components/McpConfig.tsx:194`
+- **path** (property) in `noticeText` — `ref_projects/pi-web/components/McpConfig.tsx:194`
+- **parseMcpInlineBudgetDraft** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:131`
+- **pasteMcpSignIn** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:168`
+- **pickMcpSelection** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:126`
+- **postMcpAction** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:127`
+- **postMcpSignIn** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:169`
+- **postMcpTest** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:128`
+- **pressedButton** (function) — `ref_projects/pi-web/components/McpConfig.tsx:270`
+- **active** (const) in `pressedButton` — `ref_projects/pi-web/components/McpConfig.tsx:272`
+- **projectTrustReloadKey** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:172`
+- **ProjectTrustStatus** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:18`
+- **Ref** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **revealHiddenCharacters** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:30`
+- **revealLines** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1712`
+- **saveMcpCodemodeInlineBudget** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:132`
+- **saveMcpCodemodeMode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:133`
+- **saveMcpCodemodePreference** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:134`
+- **scopeLabel** (function) — `ref_projects/pi-web/components/McpConfig.tsx:182`
+- **setLastSettingsSelection** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:34`
+- **shortenPath** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:21`
+- **testFailureText** (function) — `ref_projects/pi-web/components/McpConfig.tsx:1717`
+- **key** (const) in `testFailureText` — `ref_projects/pi-web/components/McpConfig.tsx:1719`
+- **Translate** (type) — `ref_projects/pi-web/components/McpConfig.tsx:174`
+- **useCallback** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **useEffect** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **useI18n** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:20`
+- **useId** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **useRef** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **useState** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:3`
+- **withMcpCodemodeInlineBudget** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:135`
+- **withMcpCodemodeMode** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:136`
+- **withMcpCodemodePreference** (alias) — `ref_projects/pi-web/components/McpConfig.tsx:137`

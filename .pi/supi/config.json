@@ -1,0 +1,14 @@
+{
+  "$comment": "LSP 路由修复：本仓 packages/* 用的是 TypeScript 7（原生编译器发行版，lib 里没有 tsserver.js），typescript-language-server 6.0.2 找不到可用的 tsserver 而启动失败，表现为 code_resolve 报 No LSP client can serve this file。这里显式指到全局安装的 TypeScript 5.9.3。若日后仓内出现 node_modules/typescript/lib/tsserver.js，可删除本条覆盖。详见 .pi/skills/migrating-god-files/references/lsp-tooling.md §一。",
+  "lsp": {
+    "servers": {
+      "typescript": {
+        "initializationOptions": {
+          "tsserver": {
+            "path": "/home/berton/.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js"
+          }
+        }
+      }
+    }
+  }
+}

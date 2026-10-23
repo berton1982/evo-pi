@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:05f8d19236a68921d7cbd84fd121446d842db4daca4f559a3bf7d5a1c5e2f94a",
+  "claims": [
+    {
+      "id": "claim_445664b33a0f4231936d1231dd3c1fc0",
+      "statement": "fetchApi 把网络层失败与 JSON 解析失败统一映射为 ApiError 且 status=0，用作“根本没到 HTTP 层”的哨兵值。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-client.ts#L49-L57",
+          "version": "repo-lines-v1:sha256:16580e67034b5937b369a3418b71182e3a30e10a2967fca931197e3aee3b3e1c:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjhhNmYyN2Q5MGJlYmYxNzU2MjU2ZmRmZDcyOTg5YjQ0MGY0ZWYxZmVmYzExYzZjMzNjNTVmMzE5NTczZjlhZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTM4ODA4NzYwYjhkNDE5MDdlYjM1ZGVmNGEwYmJkOTEyNDNmYzhiYTJmYWU5ZmQ5ZmU3YzU2NGIwNjA3NzJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDZhYzIzY2U2Y2NlM2E1Yjk3YThiZjIyYjg0ZGFlYzhkZWI5ZTU2ZTk0MWQ4NGI5NThlMTBmN2U1MjJmMTJkYiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-client.ts#L71-L76",
+          "version": "repo-lines-v1:sha256:e372924872b7a6961783fdd42e3d6ff0a69314aab9991efd44d93c9816cc3c84:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDY1OTVmNGVlNWZmNjNkNTA5NTA0MTlkYzM0NDE0NTEzODUxZGM5NzM2ZmQxN2E0ZjdiZmE5MzBiMjYxYjZmMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWIwY2Y2NDA1ZGNhNzU1N2IyMjViZjFhZGJiZjllMGRkOTJiOGNkNmY1ZjI0ODc2MjI5NGYwNjk2Mjk4NTQ1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7788b46fa0b143b9a012d44931c91ca0",
+      "statement": "fetchApi 对非 2xx 响应会先尝试解析响应体的 error / message 字段作为错误消息，解析失败则回退为 HTTP <status>。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-client.ts#L59-L69",
+          "version": "repo-lines-v1:sha256:fe4f7ef6c41ea22e4833c5b6830008f2f44bd4dd0fbb207293de48d201d15f14:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNTU0YWI1NmQxZTA5MTZiNjNiZGYxY2IyNjExMDIzY2E2OWY2MjM0Yjc2ZGEyYjE4MWQxZjY1ZTI0YjQwNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlOGZkN2RhMDcxNDdjZjE5NjZmNDNiZWMzOTBmZDI5MjEzZmI2YzYwZDc0NGI3MmI1MjA4NmZlMmU2ZTMyYmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3NjhhN2ViY2U2NzE4ZDAzYzg4MTc0MDUwN2Y2OTFkN2RiZDMxMDA3ZTBmMjY2YjNiOGVlMjczNjQ4OWZiODkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bcf2001cb59744cf9c6cd37edfad5aa8",
+      "statement": "ApiError 的构造参数顺序是 (message, status)，与常见库的 (status, message) 相反，代码注释显式记录了这一偏离及其遵循 Error 通用约定的理由。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-client.ts#L18-L39",
+          "version": "repo-lines-v1:sha256:38797c877e2773cc6d31044da82daac1748ba4ef81d89ed09f2c696931e00e93:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyZGE3MDk4NWRhYjQ0NzJlZjZhNTJlZGEyOWJiZmJlNzlkNjFmMjc0ZjRhMjJkYzAyNjAyODAwMzYzMGRiYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2NGJhMTQ1YjE0YTEwODcyMDcwNjgxODc2ZGE3NDRhNmU1MDU2NGIwYjY3OWVmN2QxYTQ5YTU3NTk2MWQ5MzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0NDhkN2U0MzE0ZTFlZjQyOGQ5Y2YwZmI1Zjg0ODFmY2FhMmY2ZjE5OThmNTVkZDRlM2M2MDk1NDQ0NzEzYmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_937553cefd0c480480a23256cf3eb8b7",
+      "statement": "fetchApi 刻意不做重试与 backoff（交给 react-query）、不做 zod 校验（交给调用方）、不区分 SSR/CSR，抽出该层的目的是让测试只需 mock fetch 并统一错误映射。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-client.ts#L12-L20",
+          "version": "repo-lines-v1:sha256:5840fcf4e2421c3e6a85a4eeb677e6d702520ae23768c113d04fdfb5bba88ba3:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIzY2I0YzEzZDY3NzU5ZDU0Zjc2NzFkNDQwMzQ5NzJkMDkwM2EzOWQwOGFmYWU3M2JiOTgxZWI5YWIwZGNmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ5ODMyZTE4ZmNjYmIyMDA4ZjBlYzc1OTFhNTk2MzJkZjE0NGUyYWU0YTIyMzZkMTgzODRlMjk1YzJiOTI4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmMxMWI0MjQ0NjZhZmU0YmQxNzhjNzVhMzIzMTFiYWMwNWRiMDMzOWMwNWFiMzc4ZjI0NjhkYjQ2NGM5ZjhlYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_218e467f701b49ae9544b4029ff46ecc",
+      "statement": "useSessionList 使用固定 queryKey ['sessions','list'] 并刻意不覆盖 staleTime，继承 AppProviders 的全局 5 分钟配置，其 query key 以常量导出供外部 invalidateQueries 使用。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionList.ts#L25-L39",
+          "version": "repo-lines-v1:sha256:d5ead3e886509f45b7e463e53f66921209a2ad190ff8bc6cdaa6f586a2b09407:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5NDM3ZWU1ODU5MTQ2ZWJmYWYwZjk0NjM0Nzk4YjlhYTUxYzU5NDA3YzQyNDRjMWY1Y2M5NTc1ZDU1NDRjMDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyMzUyNTg5YzM0ZDNjNjA2ODU5MzFiNmVjYzRkNTA5OTFhN2M1NmM4ZmJhMjg5NDExNDY1NzY5MDI3MmNhYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3YjUxNTVjYzY4NWFiMWM0NzcxMjY4MDZmODBlNDk3N2UyZTcyM2ZmYzNjNzFhZWEzYjY4Y2VlODMyMjNhYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhOTQ3ZWNlNGM5ODZiYjU1ZjliY2NmZDMzZjM1OTcyY2VlOGJkZWNhY2RiOWY2N2ZmZTE1OTdkZjIwOTJhYTYifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L34-L44",
+          "version": "repo-lines-v1:sha256:f51c9b593847608a21197bc8c234a7c1d155b21450b58b9ca87caacc71c30cfd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwZmI5N2RiN2ZjMzdiODdiZjQ3NGRlMDlkNWUyN2QxYzdjOTdjN2IyNDhkN2IzYzExZTVhZjZhMWM4ODFhNmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZWE3YWY3ZjJlMTgzYjJkNTg5MjJjMGVkY2JkZmZkMjc0MDgxNGNkYmUzY2ZiZWY3ZWJjYzAzODA0ZTc2NmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNTNkMzBhZTU2Mzg4OGZhMTE0MzlhNGJiMWM4OGYxZTY5YTA2MDFjMTk4MmRlODAyYTg1MzE5MWUxMjk2NjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBkOWIxMWMxMDk1ZTA2MGNmNjY1ZGYwNzgyNGNiNTRkZTc4MDFiOTJlZjMxYTA3YWNkNmI5M2VkOWI5Mjg2YWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_487a3d18bcb14a008e60f0135acc6181",
+      "statement": "useSessionContext 把 sessionId、leafId 与 tail 全部纳入 queryKey，tail 默认 50，staleTime 为 30 秒且 retry 为 1，enabled 由 Boolean(sessionId) 决定。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionContext.ts#L47-L74",
+          "version": "repo-lines-v1:sha256:24a23ef74b92fa5f43bcb5c5081ed239ee585d08bf279b47c2ec08d2ad408915:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMjZjODBkYWIyMGNjNjRkMDRkMDJmY2YxMzkzNTQyZjA0OGNhYzA1YTVhNDkxZjNhZTZmNzNmMGI1ODI4N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyMzUyNTg5YzM0ZDNjNjA2ODU5MzFiNmVjYzRkNTA5OTFhN2M1NmM4ZmJhMjg5NDExNDY1NzY5MDI3MmNhYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5NDVkMDAwMGEyODA0NzczMjM1NmMzYjM3OTE4MzczY2UzMDRiMGEyYWQxZjVmYTE2NWI0ZWNkOGNhMzE1ZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhOTQ3ZWNlNGM5ODZiYjU1ZjliY2NmZDMzZjM1OTcyY2VlOGJkZWNhY2RiOWY2N2ZmZTE1OTdkZjIwOTJhYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ed6b6c86eb9f46018e80dc18b974f439",
+      "statement": "useSessionContext 始终显式传 tail=50，因此 route 侧“不传 tail 则用默认 10000”的分支在 UI 路径上不会被触发。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L1-L45",
+          "version": "repo-lines-v1:sha256:27fa497c943ae70de567d06b3271eae94370511d1f7720dfdb3d7c76f9ed16c3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NjRlMDBlYTU3ZWMzOWQ4OGZjM2Y2OTM0YzRiNzA5MWRiMDU2YTZjMmQ1YjExYTk3MTIzMDBkMDZmOGQyM2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzYzcxOTdjNDg1NzBmZDY0ZTg4OTgyMWJmMDQxYjU5MWZkNzk1NDg2N2M4Njc2NjE3NGJmMTMxZmIzMDE4OGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxNGMyMWY3NjVlMDg0ZWI0NDVkZGE5OGU2YjI0NzkzMWMwNmZkNDQyODZiNjVkYjNmNDczYzI2YTk5OWNjNDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2433cb19fbf74e02a504876ea9ff9f8c",
+      "statement": "useSessionContext 的 enabled: Boolean(sessionId) 让 CenterZone 无需额外区分“未选中”与“加载中”两种状态。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionContext.ts#L49-L55",
+          "version": "repo-lines-v1:sha256:9563ccfc4709ab964bfc63cfd2713416d9141dce5abd49210f156570a709b56f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTkzYTVjYTQ2ZjYzZjMyMmI2NmUxNzljZjgzY2Q2ODQ4ZGEzOWUzZmYwNGU3YzhlYmJkODg5Y2Q0YzcxMTJkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWNhMWQxNGRmYjc1M2M3NmMyNmY0YzFiZjFmOTE1MDQ3YWY2OTZhNjk4MDcyYWQyYjJhYTJkNDU4NDhiY2E0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTJhNWQ1ZTBjZjgzOWQ3NTBiYTg4NTZiOWQwYjBmMGMwZmQ0YzYwYTg0ZTNmNTU3NWYyZTc1M2VkNWJkNGQxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_91624cd48af645cea110e4e5270edeb8",
+      "statement": "useSessionSearch 的 queryKey 含原始 query 字符串、staleTime 为 30 秒，且 enabled 为 query.length > 0，空查询不发请求，与 route 端空 q 短路规则对齐；其去重取代了原先手写的 200ms debounce。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionSearch.ts#L30-L50",
+          "version": "repo-lines-v1:sha256:20ba7d69070898597049f2de45b80a60d48e859e904162ac423266813059532a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3YjRhOTkyYmJiOTQ3ZDcxMjMzOWFmZWRlZDA5YTQ3MTI4OGJjZGRjOGIwNTViZGZhM2ViYjZjOTVlYTcxMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyMDY5NzQ2NGJkNWVlMTJiODk0NjNmOTA4NGNhNDljZDA0NmVlYTg0YWRmZDYzMGE5OTViMjRlNDQ0YTk4MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionSearch.ts#L8-L21",
+          "version": "repo-lines-v1:sha256:f71416664f00fc4c71faa8c0694401f3cb23b06665b47bd39826081c150d0c54:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMWJlYjA0ODc0MjRjZDZlN2FjZWRhMWJhNDAwNGJhZjdmMzRjYzY1NWM3MGM0NzI2MzE3ODYwY2IwZjI3YzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MmE0MjkzODJiMmUxNDcxOGUwZTM3YjA1NzBhOGExNzAyOTkxZmNkODQ5OGNkODQwNjBhOGJmNGYwNTAxN2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhMjlmNjkwNjI2ZGRmOWJkYTgwMzUwZWU1MDIwMWFiYTY2NTFhMGYzOGZmNjBlMDJlMTJhMjczMjRkNmY2OTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkNzgwMDBkZGJiYTkwZjUyYjk1ZGVmOThlOTMzMjQ2NWY1ZTFiZTY3YzJiZTM2OGU0YmUwMTFkMmI4NWYyOWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_10f0c4f562c848e29e87ac1a9e6534f3",
+      "statement": "三个 hook 都在客户端对响应重新执行 zod.parse，useSessionList 再经 mapDtoToSessionInfo 把 created / modified 从 ISO 字符串转回 Date，使组件层拿到的仍是 SDK SessionInfo 形状。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionList.ts#L32-L38",
+          "version": "repo-lines-v1:sha256:7bb15ea7acbc25b6d9b955f5ca6494e5ea993b80db4d2a12a87106e19fb45d4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDM1OGY1Nzk3ZGRhZmYzNDdhYjM3NDE4ZGNiMjQzODQ4MTFmZTI3ZWVlY2JjOTBjMzc2NDNkNWVkZjgwYzc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYwY2RiOTcyYTdiZmI3ZWQyNDZmOWZmNjcyMzg1ZTU1ZjQ5NjhmYzExMDQzZGM1YjY4NGQ1MWRmYTMxZGJjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzIxNDA5MTgxOTNmMDUzNjEwNzAxYWZjMjI5YWVhYjRmNTdmY2Q5ZTY5ZmU5MTI0YmRmZDE4MzYwZWQ2ZmFmMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNjNWVlYjYwOTE3YjdmMzI0YTZlNjFiODllZmQ0MWY5MTgwNjBiMWU0YmY4YzlkYWRmMTZlNjZmZWQ1ZWJmYSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L64-L71",
+          "version": "repo-lines-v1:sha256:8303fcf1bb6afd452941f6a5364b02e13b62a9ff3ff3cd47b3904b98e4f1dc93:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdiZGViMjI5ZGE3ZmVlZTAxZDJkOTkxMTM3MzAwMmFmMTNiMGRlYjJiMDg0MmNlNmE0YTFjM2FkY2Y3ZDk1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmJlMzI1OTBkNDM3MjFhNmM2NjE1MDQ0NGIyZWFmY2ZmMjI2YzFkMzVkYmNhYjhlMWJiZjk0ZjdmZGJiN2RjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjllZjZkOWI1ODkyYzBlNDlkNWM2MTViNjBhMDFlMmI1OTkzZjE1ZmQ4ZDlmYTUwMjRlNDU1ODU3NWM0Nzg5OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzRkYjY2NmZkYjA5YzZlNDQzZDQ0M2NkZWJmYWFiOTlmNDhhMDJmOTA2YmQ4MDllZTU2NGFkODkyNjk4YjlkNCJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L83-L100",
+          "version": "repo-lines-v1:sha256:934880fe6f348264c26d2ffa3c83851b8524f094ea27a1f6fdeffc759fc514e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxNjhiNGRmMDRmN2Q4OThkOGIwZmJhYTdjZDZlZDJhMjY1ZTI0NjU4ZDlkMmVkYzIwMzk1YzE4M2YyMWYzY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMTViZTQxZGYyMTkzN2U1OWM0ODUwODZjZGJmYmI4MGE2Yjg0YjEyNmUzNGY0NDU0MjViNmQ2YmMyNDAwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4NzRhYzI4ZTVlYzBmNmI3MTdiNTI0N2U2ZjZlNzM4ZmVhMjI0MWVhZDgyYTU4MDI1ZDY5YTkwMTdlYTRjNGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ec447bfebe541c0b2fe6cd57eea2a01",
+      "statement": "客户端二次 zod 校验落实了 ADR 0004 中“任何外部数据进入 domain 前必须 parse”的硬性要求。",
+      "evidence": [
+        {
+          "resource": "repo://docs/adr/0004-state-management-strategy.md#L40-L70",
+          "version": "repo-lines-v1:sha256:4de26a438d34b672d5f25aa9f1a00c5f104cf808fe8de97c138c11c99621343c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4ZWVjMTAzYmM1NWYxN2ZjODU1MmFmNDcyOWUwOTg4ODQ4ZTBmNGI0NmYwOTBmYzJhMDJjNjg3YTNlMjkwNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzY2MzZTBhMzVkNTU5Y2IzODVmNjg2MzIyNmM3YjExN2E5YWNjNjFiYmZhZTM4NjRhZWJmMTUzMzdlMTcxNWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjMzkyNTNhZDk5ZTQ3ZjllY2E0YzJlZGUzZmU4MDk1ZGEyMDEzNTg5ODNmYTZkZDE5OTIwOGU1ZTI4ODIyOTAifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionList.ts#L32-L38",
+          "version": "repo-lines-v1:sha256:7bb15ea7acbc25b6d9b955f5ca6494e5ea993b80db4d2a12a87106e19fb45d4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDM1OGY1Nzk3ZGRhZmYzNDdhYjM3NDE4ZGNiMjQzODQ4MTFmZTI3ZWVlY2JjOTBjMzc2NDNkNWVkZjgwYzc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYwY2RiOTcyYTdiZmI3ZWQyNDZmOWZmNjcyMzg1ZTU1ZjQ5NjhmYzExMDQzZGM1YjY4NGQ1MWRmYTMxZGJjYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzIxNDA5MTgxOTNmMDUzNjEwNzAxYWZjMjI5YWVhYjRmNTdmY2Q5ZTY5ZmU5MTI0YmRmZDE4MzYwZWQ2ZmFmMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNjNWVlYjYwOTE3YjdmMzI0YTZlNjFiODllZmQ0MWY5MTgwNjBiMWU0YmY4YzlkYWRmMTZlNjZmZWQ1ZWJmYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_46075d729e4c419d81898b0653dc3849",
+      "statement": "选中会话的唯一真值源是 URL query（?session=<id>），Sidebar 点击走 router.replace 且 scroll:false，副作用是浏览器后退不会逐个回到上一个会话而是回到进入页面前的位置。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L43-L47",
+          "version": "repo-lines-v1:sha256:cd1b7c7e274a990e1a5d51738d7f6ba8b973da8eca53e96b4e0327da1c0183c4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg1MGY4ODk3YzMzYzkxZDk2ODI4ZTdjM2YwNGZmOWQwNWZlN2IyYWY1MWEyMzhlZDVkZmEwNmZjMGE1MGE1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmRiZWE4MTg2YmMyNzRkZmRjNzliNTViYmZhMTI0MWM0NWVhODhiYzk5NGUzMDhlZjU0NmQxNjdlZTc2MDRiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQwYzVkM2RjM2E3NzMwNzkzYzg5Mjc5NDhiNTU5NjY0MjA3Zjc5YmE4Nzc3M2MyMTUwMDQ0MzE5NjJmZDQ4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTg2MWI1ZGZkOGQwN2FmNWM0OTI1MWUwMDIxZDg3ZWI0NWQyYmIwMDNjOWFhYzcxNzAwODY0Mjg5NWNkOWJmNiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L53-L68",
+          "version": "repo-lines-v1:sha256:619e04c76d69739f5202273a0d0c7cb51f39088d160e70cd8350caac96150054:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzYjFkNDY4MWEwZjIwNjRkMTJjM2ZmODgxNjIxMDgyZWMzZWM0YzFiNTQyNDhiNzIyN2YwMjllYjgwYjIzMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTk3NjdlNzViYzRjNGRiMTVhOTc4ZjJhZDVhZDliYmE3N2JlMmJiYTliMzg4MTIzODAxNDk3ZTg3MDEwNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2MWJjNjc4MGYwODAyYTE4ZTVhMDQyMjU0MTczMGUzY2FhOTE0ODE1NzkwZTI1Y2Y0YWMyZDE3ZTQzZDIzNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4ZTg3N2JjNWQyYmQ3NWE5MzczZDNjMzViMTkxODQwMzg3ODJiNjk2ZGYwNjliMjU3ZmI3NWY0YTFlOTIxZDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e4f1a8a72e67452e944e5cfd37326cd0",
+      "statement": "useSelectedSessionStore 仍存在但页面与 Sidebar 均不消费，选中态不再经过 zustand，注释说明是为兼容潜在外部读取方保留。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/sessions/page.tsx#L48-L52",
+          "version": "repo-lines-v1:sha256:35bef5db0f831d9cb29258cf452c67df35281c0def93e2068a5728a5854a62be:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmNiYjM0MzNhNzA3NTg1Y2I1ZTdlMGE1NjkzMWUzM2ZjMGE3NmNiYzliMWNjMjhiZmMxOGJhZTliM2NlNzRiZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDM2YWJiZWExOTEzMTRmYWM4NzI1NGYzYjgzNzk3NDhjNGQwOWRjOWJjZjUzZDZiNjAzOGY0NjEzNmUyNjc1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDM3ZDUwYjU3ZGZiMjFhNDA3NDBjMjk2ZWQxMDNiZjFmYjU5NWUxMGJmNmRjY2RkMTVhZWMxNDI3OGJmM2IzMSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-selected-session-store.ts#L1-L25",
+          "version": "repo-lines-v1:sha256:4a5238b1d96dea6948283ba8c147bab5eacfe55b707f3295c27aa64e4afea651:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxMjM4YTc0ZmUxZmMwYWRjZDIxNTMxNGM4MzRkNjNhNjhhNDY2ZTk1MzgyYTY1MzE0ZDU2MmQ0YWM2M2EwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMmQ3YjBlNmZjNGYwYzI5YjhkZjgzMmIzM2Y1NjJmZmEwMzg1MzQ4ODYzNWEzNDNhZTNhMjQ2NDcxNzRhMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_309c7a5baedb469388ccfa23e88ba5b7",
+      "statement": "ApiError.status 目前没有任何消费方：hook 与组件只使用“是否有错误”这一布尔信息，不按状态码分支。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/zones/CenterZone.tsx#L60-L70",
+          "version": "repo-lines-v1:sha256:0cdb3186fedf13ee5eeb70c29f47fb3facfcfd39340de4c4b93ba017ae9312a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3ZDBjZGE1ZDY2Mzc2MTA3OGU4ZGI1ZDBjZjBmMmQ1MTExNWEwNTIyZDNjYjE4YWRkNzIyMTEwYjEwZjc2NDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YjQ2YTdlMzFkMTNkNWRiYWU2Mzk4ZWZlYTg0MDA4NTljOGQ5MDFmN2QwMTc1MjlhNTgyNjZlZGQ2YmM3MWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwNWNlMGFhMDIzNzc0NmViMmY3ZTU5OGVjZTcyYzAzOTQ0OWRkMzI3NzgzYjY2MjJlNTNmYmQyMmFkMWIyY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZTdjZWEyNzk3YjUzMmU4ZTNiZTcyMjMxNWZkNTRhMzYwZTA5MmU2MWMyNjg5Y2U1MThlYTQ0OTJkM2ZmMTIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionContext.ts#L41-L45",
+          "version": "repo-lines-v1:sha256:6f73ecf52268e44bfea325fb4ed15c6c82a60187d7fb818090028c933c1720d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMxM2ZiZjNhZjg5MmEzZTA4MmRmZTg2NTI4NzEzODI2NzhlNjhiNmQ3NTEyY2M4MDU5OGIxNjRjOTNhMzU2ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGEwMDhjODZiNDI4ZjdkZDI5NjUzZmFjMWM2YTM2YWVjNDdiN2FkMjc3ZDUyYTJiNzY0Zjg5NTI5OTBmNzhmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNhMWQxNGRmYjc1M2M3NmMyNmY0YzFiZjFmOTE1MDQ3YWY2OTZhNjk4MDcyYWQyYjJhYTJkNDU4NDhiY2E0ZiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/hooks/useSessionSearch.ts#L30-L34",
+          "version": "repo-lines-v1:sha256:c0f7a0f837828fa180f5882cf4bc69434111eede700f14c2a2b3958e0450c022:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzdiNGE5OTJiYmI5NDdkNzEyMzM5YWZlZGVkMDlhNDcxMjg4YmNkZGM4YjA1NWJkZmEzZWJiNmM5NWVhNzEyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzIwNjk3NDY0YmQ1ZWUxMmI4OTQ2M2Y5MDg0Y2E0OWNkMDQ2ZWVhODRhZGZkNjMwYTk5NWIyNGU0NDRhOTgwNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTY2OGI3ZjUxODE0NTg2MmRmMDc0ZGJmYTNhY2JmZTFjZTJiODkzZjIxZjhhMjFmOWYxOWEzZmQxMzAyYmFkNCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

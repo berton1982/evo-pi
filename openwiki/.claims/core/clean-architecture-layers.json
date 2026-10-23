@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:b61d5b3d459084d328d2cc53d5abdb5cbb8dc144d996d9c0bfcfe0e92dad5719",
+  "claims": [
+    {
+      "id": "claim_bc9e92a9460b4bcf8ab173dc14d80638",
+      "statement": "packages/core 的 session capability 公共 barrel 除了导出 domain 类型与 6 个 use-case factory，还直接 re-export 了具体 adapter 类（FileSystemSessionStorage、InMemoryIndexer、InMemorySessionRepository、InMemorySessionStorage、JsonlSessionRepository、ScanIndexStore），因此消费方可以从单一入口拿到 port 实现。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/index.ts#L1-L18",
+          "version": "repo-lines-v1:sha256:1920e5791bd47059ca9cd1e00faca1ed834a7c891b27516f008d321970262b70:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzZjVkYjE2MTNkNWNhMTFiOWQyMjcwNTAzY2U0YWI0NzljNjZlNjM5OGVlOGJmNGEzZTM1ZmNkNGFiOTlhNmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/index.ts#L12-L55",
+          "version": "repo-lines-v1:sha256:c3c6542f68087bc4b8a03281e92f48a6c2ceb3e106cc1b9a3d2f58f308779d7b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiNmMwMGQ1Njk4NjYzMjBlOTJhNGYzYzBjZDU1MGMyYmRmNjEwYTliM2I2NzEwNmQ5OTFmY2FiYjJmMDgzMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4NzRjZGE1MGI0YWJkNTI4ZDc4NTZlZWVjM2IzZDQ2YjM5Y2YyYjU0Njk5ZmFiNjFmMWRjOGJiYzRlZDUyODQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzZjdlNWVjOWEwY2E5ZGVhN2UwYWNlMWNiYjk1YTQwZDk2Nzc5Y2VjZmFiY2QzMDk1ZDgxYjczNjgxMDBjOWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f328347e0be43e7b173a2d62066b6ca",
+      "statement": "packages/core 通过 package.json 的 exports 映射为每个 capability 提供根 barrel 与通配入口（.、./session、./session/*、./system、./system/*、./_shared/*），全部指向编译产物 dist/。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/package.json#L22-L47",
+          "version": "repo-lines-v1:sha256:406934dde9a2db4e4b1427d7324102d6465a4245b6cd98c8038e279c06862c5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMDViYjlmNGE4Yjk4NDUxMGY4MTVhNWZjNDA3OGQ3N2M1YTIwZTkzZjMzNzNkYzVkZGU0YTM0MWQxYjQwYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxMzMxMGIyODUxNjNlOTNjNWZjMGZlZTZlNzFkYzlmZDVmNTQ5ZjU1NGFjZTNkMGNhOTY0M2Y0ZDc5NTkyNGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5e1487d33ab9463d8144247b4b1d541a",
+      "statement": "packages/web 通过 tsconfig 的 exclude 列表排除 ../core/**，使 web 无法直接引用 core 的源码路径，只能经 @evo-pi/core 的 exports 消费编译产物。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/tsconfig.json#L10-L15",
+          "version": "repo-lines-v1:sha256:49ab023fb2c09fc58f6c6c66cf89897130ffae40832bbc354a3fcce37b5622e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI4MzZiYzc0ZmQ5YTIyYzY5YTgzMzM1ZDRlYmMzZjYxODMwNmU1MmUwMGZlY2VjZTQ3NjMzOTI1ZWMwMDc3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmIwODI3Y2ZiOWIwYzRhYWU4NWQ3YWMxYjQ4NzVlNjNiZGQwM2QyMTc2MzBmMjA2NDgzZGE1NmVkY2VkMzUxZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFjODk5Y2RmMjg3M2NkMGQ2NzVlOTAwYjhlNmIxZWRlZmQxYTUxOGQxOTU3NGE4NTk3M2M0ODhlNmZlNzM1YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_694d259ee8ab47f181664a5631298eb2",
+      "statement": "packages/web 的 next.config.ts 把 @evo-pi/core 与两个 pi SDK 包列入 serverExternalPackages，让 Node 在运行时解析而非由 Turbopack 打包，原因是 SDK 传递依赖含 quickjs-wasi 所需的 wasi_snapshot_preview1 与 env 等 Node 内建模块。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/next.config.ts#L14-L23",
+          "version": "repo-lines-v1:sha256:e5b2426dce29b9961a4ef138bb7a4e45b4341eaa177e23beefabd0d35107741b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkYzMxMjNkODcwZGQwNjg5MmE2YTVkMTI3MWJiMjlkZDY3YjI4ZDMzNjY5NWI0MjMyYTZlMzUxZjE2ODk0NjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzYjdlNjAzNDkxYmVmYjk5YTc5NTFjNGRkMjZkOWI4N2M4ODhkOTcxMDEzOTMyZDg1MTc1YWQ3NDZkYTE5NTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzNWQ5YTRkZmRmY2Q4NDYwYmI5ZGUzZGRkODI0ZjZkNjM2OTU3YWRhZWQwNjIxZmYwYjZkMDZmNzNiMTVmMGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_80a417c54f3a4bbfb498d372d265fa36",
+      "statement": "session/domain 下的 types.ts、session-info.ts、session-entry.ts、agent-message.ts 以及两个 port 文件都从 @earendil-works SDK 导入类型，且全部使用 import type / export type，因此不产生运行时依赖边，但形成编译期对 SDK 的依赖。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/domain/agent-message.ts#L20-L26",
+          "version": "repo-lines-v1:sha256:bfe84bbcc450caf69d104162d9538b52055453b801ba9056c644a8fcff0fd0ba:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA0NmRiNTZkNzgwZDhiMjcyOTk1Zjc5ZTM0MTI4ZWMyNTc4MDY0NTJkNTQ0ZTcwYjFmNTA5MmU2MmM3MjE5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGE3OWVjY2Y0ODY4OWY0ZDc3N2ViZmM4ZTE0MmFjOTA5ZDYxZjA5MTZhNDc3ODE2ZjQzMWEwMzdhNGU5YjRlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTFkNzdjZjJlYWZjYmM2NzljNDRkMmE2OTlmYzgxNTRmZGEyZDc4MDA3YjU0NWFlYzAxNTU4YThhMmRlYjZmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-storage.ts#L1-L5",
+          "version": "repo-lines-v1:sha256:a28758a68e7386ba6933c48a9c8c18613dc37d1697435b5c617628a4def9a616:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWM0ODMwNGU0NzQyMjQ0MWE0ZjI3NTQ2ZmM2YzRkMDllZDA0MTE1NDBmMDE2ODJiMDA5ZDNlYzkxYTgxNDI1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFkZDg1Mzc1ZGE5NmMyZTgzNmY4YTI1MTIwNTFkMTM5OTlkMDIwOTRmMDczYmRlMTUxM2M1YTExNDJhNzdhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDdhNWZlZjQyMmNhNThlYzI1NWViMTZlMzIyYjg4YjhmNTU4YjI4MGIyZWYwZWI0MzM4NmQ1Y2M2ZmE3ZDRlZCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/session-info.ts#L19-L36",
+          "version": "repo-lines-v1:sha256:dff653b20bf66853f19bedeae889704ca564f9a6eb716a529cd0a76b60a9c928:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyMWIxZmVjNTlhNmMyZmUwOGE2NmQ0ZTI0ZDI3ZDVlNjI5NzE2ZjZhZDkxYzU1ZGM0NGM2ZjViZDU1YjY5ZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmOTA1YThiOTMwYmJiNjlkMTdlMTkzMDA4NDlhY2NkMTA2YTQyNmFiMzFkY2ViYTJhZTZkNTNhZGM1NWE3MjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU0Njc0MWJlMWM5ZTVhNjVkY2MwYmQ2NGQxM2I4YjNlYmQwZjUwYmUwZWVmYTFiODM4ZDgxY2I3NGY0ZWIzMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhZTQ4YmMyZjJlN2FhMjk2NTA5NmEyZDVkZTU2NGJmMDlkZTJkNDU5OTQ2ZWI1MzE3MzA2ZjcxYTQ3NjgzZjIifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/types.ts#L39-L42",
+          "version": "repo-lines-v1:sha256:d6ea7f3c7a91d36fa9719ad2433c88bfa7e69f0df27cee86605b89a92c861f6a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQ1NGJkNDJiM2FhN2YxOWYyYzYzMjcxMzg0MTNkZmFlZDM1MWIzNGY0Yjg3MTA1NTBmYjZhOGI5OWEyNTllNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmJjYWY1MzE1MGNmM2Y0N2QzYzAzZGQ1ZTNiMWJmYTVjMDVlZTZiM2FkMDQ2MjkzN2ViMGMwODA2NDZkNWM4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJlODdiYmViY2EyNDY5NDNiNzVmODhjMjQxMjMxOGFjZmVhNjdjZWNiMGJkOTg5Y2U0MGRjNjZiNDhlMTExYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTUwMTVhNDg5ZTQ4NjdjZGNjNWI2MzRiMTA4YzNmMDhmNWUyMzA5MWI4NzljZjVmNDJjM2U5ZTM1ZWFlYzhmZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8d7a5566a7c6409096bfb3d432f1cae9",
+      "statement": "AgentMessage 类型只由 @earendil-works/pi-agent-core 导出而 pi-coding-agent 不 re-export，因此 core 同时依赖 pi-coding-agent 与 pi-agent-core 两个 SDK 包，并要求消费方从 @evo-pi/core 的 barrel 统一导入。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/domain/agent-message.ts#L5-L21",
+          "version": "repo-lines-v1:sha256:649497b1354209d6f78f979dff4f27e4b0c64cca6ea70d10c9ac704cc9bd3f00:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2YWEwMDA3NjY2YTA0NDY1NzRkMjJmODAwMTUwOWI5OGQzNjU1YjY0MzVlZWEwMmFlOGMwYmY5ODZiOWYwZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiYjM2M2M3MDQzZDdhNzIxNWRmNDgwZDNhZTc1Yjg5MDE0MWQ1ZWRmZWFkMGM2YTc0NmE2YjI0Mjc0Y2E4NzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzMDYwMzlkM2UzMjllZGY5NjRhNDY2MDkzZjE1NjU4MTZiYjQyNjNkNzI1N2NmYTMyMzk4ZDE2YzEzMWFhZjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f70cef30a38f441994575344dca3ae27",
+      "statement": "web 的三个 Route Handler 从 @evo-pi/core/session barrel 直接 import JsonlSessionRepository、FileSystemSessionStorage、ScanIndexStore 这些具体实现类并在模块加载时构造，属于在应用最外层做依赖注入的 composition root 模式，而非 Architecture 0001 要求的 web 侧 port adapter。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/index.ts#L15-L23",
+          "version": "repo-lines-v1:sha256:f95c04abffdcc4c894ff0d9937baa01fd66b274667c6f3ee6f2fcb274eff383a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWYyYjlmNGZkZDQ0OWU4OWQ1NDg3MDcyZjc2MzZjM2YyY2NhYWI4MDI1MTdhNDgwM2YwNWUwNzI2NGMxNWNjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjAxZGNkMjk3MjBmNTRiMGFmYWNlYjM5N2Y3M2UwOGVjNjA5Yzg0MDdmNTJkYWQ3MGIxOWQ1MTMwNzIzNmRkYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmFlZmE0YmRjOWY3YzRmZTM3ZGU3OGU4Y2Q5NzMwNWU1YTczNzQ1YjVkMmVlY2IxNDFmNWU4YzYzMTQwNzNjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTM5M2FlNjhhZmE1Yjg3Njg2MjUyMmNmNWI0YmI4MjQ2YmUyMjNmNzAyMzA3NDY3ZWU5Yjk2YzhlY2U5MTk3YiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L1-L11",
+          "version": "repo-lines-v1:sha256:22abaa76f72df145762b1fbbfa753fa8ac0d81e450c41d284410b667b4234eb2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjAwOTY0YTk3ODYzNTUyMmIyYWIwOTBjNjUwNjVkOGVmOGU4NWM0NzMwYmIyZWIwNDYwZDM0YzY3N2RkYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkYjU3OWIyZDJhMDE4YzNmZmFjNmFlMDcyMGFkMmRlZmYwZWVkZWViMTllMTMwZThjMmRhNmJhYzQ4ODYyNDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVmMjEwZjNlNDM3MmFlODEyZjViYzU3NjZhZjQyOWM5MzNkNzJmZDdhOGJhODQzY2JlNTQyNTkwMzE3MDlkNTkifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L1-L7",
+          "version": "repo-lines-v1:sha256:9d27b6523fb051270c8e738ccea98887c4b2556389e122e1637fa90ebd30744f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgyMDA5NjRhOTc4NjM1NTIyYjJhYjA5MGM2NTA2NWQ4ZWY4ZTg1YzQ3MzBiYjJlYjA0NjBkMzRjNjc3ZGRiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDU0YzcxODcxMTNmM2Y3MGRhZTNkY2RmMjI3ODUyYjdjYWE4ZjI0NmMzZGZhMjk2YWFmYjEzOTQxNjk0ZDUyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzc5NTFjMDBkN2E4YTNkZTRiNmIzMGY4Yjk5MmE4MzMyYTUxN2YyODdhMzMwNDFkZDgwNDZlMzhlMTkwNjBlYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8a90144f3364357add6facea895d604",
+      "statement": "infrastructure 层的 SmCache 与 bounded-reader 虽在 barrel 中导出，但除自身测试外没有任何生产代码引用，真实读路径在 adapter 中直接调用 SDK 的 SessionManager.open 与 getEntries。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/filesystem-session-storage.ts#L123-L145",
+          "version": "repo-lines-v1:sha256:e6b7ef5fd7addd10d03ad0960aac4eaea0fe475616a327a435a1694bf3a1ae63:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmZDBmYzc4OGMyMzkwODhlMDZkMjYwMjFjNTNlODFhZGRkN2UxY2VlMWIxMGViZTI0YmZmMjU2Njk4MTM1N2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk2M2Q5M2ZmYzBmNWE1YTcxZWYxYTBiMTc1MmI4OTU3NTA3YTkwYjczODg3MmFiYzMyZjEzNGNiMTEzYTBkMzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/infrastructure/index.ts#L13-L32",
+          "version": "repo-lines-v1:sha256:9d4220c3bb736736fcb6cc0b3a97ef9fa05be49f425f442048e15014b3e0fbbb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExNzQ0MjkwOTg3MDNlNjM0Y2M2NjRlNDk3NWQxNGFjNDkxMjc0OWU1MTYyNGFiMWEzNTNiZTI0NzNmOWMxMGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZTZkMjlmMTMwZmUyOWFhZjkwODkyNjk4M2Q4ZWE2YTdiNjRlMWYzY2NmNDczOWUxMTFmYTAxMDkyMGQyNTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkNmI4YTQzMjlkZDhkMjk1NTA2ZDQxY2U3MDFlNmE1MDAwODYzMzFkMmRmN2ZjZTNiOTRiMTNlYzBjNTkwOGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_61726b70751545bfa720920b285157d3",
+      "statement": "Architecture 0001 的 verification 检查“use-cases/ 不得 import adapters/ 或 infrastructure/”在 session capability 上的命中全部位于测试代码（两个性能测试与 __test-helpers__.ts），生产 use-cases 文件保持干净。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/use-cases/__test-helpers__.ts#L1-L8",
+          "version": "repo-lines-v1:sha256:f732dbb971f83c4027cf5af4125054e76148327e38648240ae068418138a769c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdmYWE2YWJmNGVjMGY0NGViNTAzYTAxMTBjYjgyMGJlNDFlMDllMDA3NGZlODk1N2M4YjYwZmRlZDMyMzA0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGFkNDVjYzM5Mzg4ZTc4NTVmYmMyZDMwYjg5Y2NkNmY2ZTdlYjVkMzJlZmIxOTEyOWQzYTkzZjFjNGE3NWQzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWY4ZDNiZDI3NTI4MjY3YzJmNjQ0MmI0YmUxNTc5YzcxZjkwOTQzOTYwZTVmYWQwYWU1MTI5OTNiNjRjY2JkOCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/use-cases/list-sessions.ts#L1-L30",
+          "version": "repo-lines-v1:sha256:e412e1d526b4954e0828852d7ec1d304a6ee54fe470ce949d8d518a86d1b56e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3ZmFhNmFiZjRlYzBmNDRlYjUwM2EwMTEwY2I4MjBiZTQxZTA5ZTAwNzRmZTg5NTdjOGI2MGZkZWQzMjMwNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_59e93da5032440b9885b89ecdde54319",
+      "statement": "Architecture 0001 的 Concrete Examples 目录树描述的是规划中的目标形态（含 create-session.ts、append-message.ts、file-session-storage.ts、domain/session-context.ts 等当前不存在的文件），与已落地的读侧实现不一致。",
+      "evidence": [
+        {
+          "resource": "repo://docs/architecture/0001-clean-architecture-4-layer-organization.md#L115-L166",
+          "version": "repo-lines-v1:sha256:1d9e6ed50bc839b9f2e6fb4eca317e530ab798134d70d1093efd05f8600c4c73:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4YjZlMjE0ZTEzOWRjMDZkNjVhMmEwYjQwMjkyYWJjM2I4NGRmY2U1YmEwNmNmY2QyOGJkN2FmZjY3Y2RmYzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhMTEzOTBiN2MxYTI4NmU5MWJkMTFkZTMwMmM5M2NjOTRiZDdhODMwYjlmNjFjYjMwOTNlNGQ5Y2NlMDU3NzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1MzU3ODAyN2Y3ZmY4MTZiNmJjODAxZDJmMzBhZDA4MjA1OWM2NzQ4MTk4ODdiNmM0YzIyZDE4Yzg0Yzk1NTYifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/use-cases/index.ts#L1-L14",
+          "version": "repo-lines-v1:sha256:c4bd8c7d336b5f01f23a1943f151d7223345ad4b04b91f924d9de86d9033d6f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiNWQyNTIxZjg4NjU4OTNkNmIxOTNjZmQwZDYwZGU3YWRmNDk1NzI1NGY1MzU5MjI1N2FjODkzMTM2N2NlOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ffbc9db88d024d48947ff3d0d5af0a76",
+      "statement": "四层职责表与 import 允许/禁止清单由 Architecture 0001 定义，macro 层包结构与“domain 不依赖任何其他包”的约束由 ADR 0003 定义，两者共同构成本仓分层规范的权威文本。",
+      "evidence": [
+        {
+          "resource": "repo://docs/adr/0003-clean-architecture-package-layout.md#L26-L38",
+          "version": "repo-lines-v1:sha256:e8b4afed5eeb94d2223dbcc8ed54a304f5178db480e052b9a322fcbed124e0da:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzM2FkYjg1MzhjMzJlYWJjYzFlOTZlNTJlNmJhZmZiNGYzYzdjZGM1YWU2ODUwNjZlNjZiODBlMDFiYTM2NmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkOGNkMDBiYmNlMWNhYTUwNmViNDk5ODZiNTljNGFmYzAwYzRkNTc5NjU1ZDJhMjZhNjhhZGY3ZTA0M2QxZmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3YzA5OTY5Y2JlZGQyMWIzNTk3YWI0NjVhM2NmZjc4ZjM3NWJiNThhODlhY2E0ZWNmZTg3YjljYTMxMDQ1MTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://docs/architecture/0001-clean-architecture-4-layer-organization.md#L51-L89",
+          "version": "repo-lines-v1:sha256:2b64362901f97ea20913f43bc78c666fc85f5885daedbe838d0bb862734ec243:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmY2VlZDczNjRmY2E1MDZmMTgzNDc5MzFiZGY0ZDliYTQyYmZhMDUxNzI3ZmE3Y2U1YWU4MmEyODJlNjNhYjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgyYTVhZTBmOTExY2JhMjI5MTg5ODU0Y2MxODAwYmI5ODQ5MTIwY2MxYzdhYjZhN2ZkNzk5YjlhNTE5YjAxZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyNTg5NTY1OTMwODcyZTVkNzBhMDAxNDVlZWEzOTBlNjdmYzhlMjI4NDU3MjNkMDcwY2JhZmIxNWM3ZmZmN2QifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

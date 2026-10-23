@@ -1,0 +1,1115 @@
+{
+  "generatedAt": "2026-10-22T15:13:29.049Z",
+  "sources": [
+    {
+      "dir": "ref_projects/pi-web/components/McpConfig.tsx",
+      "files": 1,
+      "points": 156
+    }
+  ],
+  "totals": {
+    "points": 156,
+    "byKind": {
+      "aria": 11,
+      "handler:onSubmit": 2,
+      "handler:onClick": 11,
+      "handler:onChange": 8,
+      "i18n": 113,
+      "role": 11
+    }
+  },
+  "entries": [
+    {
+      "id": "SF-MC-a29995c",
+      "kind": "aria",
+      "text": "busy",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1890
+    },
+    {
+      "id": "SF-MC-a2dbf09",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1282
+    },
+    {
+      "id": "SF-MC-a2dbf09-2",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1373
+    },
+    {
+      "id": "SF-MC-a2dbf09-3",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1625
+    },
+    {
+      "id": "SF-MC-a2dbf09-4",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2224
+    },
+    {
+      "id": "SF-MC-abaf602",
+      "kind": "aria",
+      "text": "invalid",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2226
+    },
+    {
+      "id": "SF-MC-ac35091",
+      "kind": "aria",
+      "text": "describedby",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1524
+    },
+    {
+      "id": "SF-MC-ac35091-2",
+      "kind": "aria",
+      "text": "describedby",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1626
+    },
+    {
+      "id": "SF-MC-ac35091-3",
+      "kind": "aria",
+      "text": "describedby",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1673
+    },
+    {
+      "id": "SF-MC-ac35091-4",
+      "kind": "aria",
+      "text": "describedby",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1891
+    },
+    {
+      "id": "SF-MC-ac35091-5",
+      "kind": "aria",
+      "text": "describedby",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2225
+    },
+    {
+      "id": "SF-MC-h135f86",
+      "kind": "handler:onSubmit",
+      "text": "onSubmit={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1120
+    },
+    {
+      "id": "SF-MC-h135f86-2",
+      "kind": "handler:onSubmit",
+      "text": "onSubmit={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2215
+    },
+    {
+      "id": "SF-MC-h5e8b83",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1037
+    },
+    {
+      "id": "SF-MC-h5e8b83-10",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1674
+    },
+    {
+      "id": "SF-MC-h5e8b83-11",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1892
+    },
+    {
+      "id": "SF-MC-h5e8b83-2",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1103
+    },
+    {
+      "id": "SF-MC-h5e8b83-3",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1199
+    },
+    {
+      "id": "SF-MC-h5e8b83-4",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1200
+    },
+    {
+      "id": "SF-MC-h5e8b83-5",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1247
+    },
+    {
+      "id": "SF-MC-h5e8b83-6",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1283
+    },
+    {
+      "id": "SF-MC-h5e8b83-7",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1374
+    },
+    {
+      "id": "SF-MC-h5e8b83-8",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1525
+    },
+    {
+      "id": "SF-MC-h5e8b83-9",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1664
+    },
+    {
+      "id": "SF-MC-hdec0c3",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1129
+    },
+    {
+      "id": "SF-MC-hdec0c3-2",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1353
+    },
+    {
+      "id": "SF-MC-hdec0c3-3",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1535
+    },
+    {
+      "id": "SF-MC-hdec0c3-4",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1629
+    },
+    {
+      "id": "SF-MC-hdec0c3-5",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2030
+    },
+    {
+      "id": "SF-MC-hdec0c3-6",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2058
+    },
+    {
+      "id": "SF-MC-hdec0c3-7",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2147
+    },
+    {
+      "id": "SF-MC-hdec0c3-8",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2232
+    },
+    {
+      "id": "SF-MC-i00356c",
+      "kind": "i18n",
+      "text": "mcp.inProject.refused",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1661
+    },
+    {
+      "id": "SF-MC-i0712e7",
+      "kind": "i18n",
+      "text": "mcp.trust.trustButton",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1031
+    },
+    {
+      "id": "SF-MC-i1318e1",
+      "kind": "i18n",
+      "text": "mcp.undoFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1043
+    },
+    {
+      "id": "SF-MC-i16e5a4",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2075
+    },
+    {
+      "id": "SF-MC-i16e5a4-2",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2211
+    },
+    {
+      "id": "SF-MC-i16e5a4-3",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2224
+    },
+    {
+      "id": "SF-MC-i1998b3",
+      "kind": "i18n",
+      "text": "mcp.exposure.label",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1625
+    },
+    {
+      "id": "SF-MC-i1e9e6f",
+      "kind": "i18n",
+      "text": "mcp.removed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1042
+    },
+    {
+      "id": "SF-MC-i2278f0",
+      "kind": "i18n",
+      "text": "mcp.server.masked",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1705
+    },
+    {
+      "id": "SF-MC-i22b7d7",
+      "kind": "i18n",
+      "text": "mcp.server.shadowedByProject",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1700
+    },
+    {
+      "id": "SF-MC-i242d43",
+      "kind": "i18n",
+      "text": "mcp.detail.transport",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1560
+    },
+    {
+      "id": "SF-MC-i279883",
+      "kind": "i18n",
+      "text": "mcp.detail.cwd",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1566
+    },
+    {
+      "id": "SF-MC-i28a9f5",
+      "kind": "i18n",
+      "text": "mcp.codemode.saveTimedOut",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2107
+    },
+    {
+      "id": "SF-MC-i29b9dc",
+      "kind": "i18n",
+      "text": "mcp.detail.headers",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1574
+    },
+    {
+      "id": "SF-MC-i29be1d",
+      "kind": "i18n",
+      "text": "i18n.removing",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1527
+    },
+    {
+      "id": "SF-MC-i2c27dd",
+      "kind": "i18n",
+      "text": "mcp.serverCount",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1196
+    },
+    {
+      "id": "SF-MC-i2ef75a",
+      "kind": "i18n",
+      "text": "mcp.server.invalid",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1937
+    },
+    {
+      "id": "SF-MC-i313931",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1010
+    },
+    {
+      "id": "SF-MC-i313931-2",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1199
+    },
+    {
+      "id": "SF-MC-i3286a5",
+      "kind": "i18n",
+      "text": "mcp.codemode.intro",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2011
+    },
+    {
+      "id": "SF-MC-i3c5acb",
+      "kind": "i18n",
+      "text": "settings.mcp",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1008
+    },
+    {
+      "id": "SF-MC-i3e4e23",
+      "kind": "i18n",
+      "text": "i18n.refresh",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1201
+    },
+    {
+      "id": "SF-MC-i428744",
+      "kind": "i18n",
+      "text": "mcp.test.requestTimedOut",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1718
+    },
+    {
+      "id": "SF-MC-i44a60f",
+      "kind": "i18n",
+      "text": "mcp.codemode.builtin",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2095
+    },
+    {
+      "id": "SF-MC-i4838f4",
+      "kind": "i18n",
+      "text": "mcp.test.testing",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1894
+    },
+    {
+      "id": "SF-MC-i484fcc",
+      "kind": "i18n",
+      "text": "mcp.inProject.saved",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1681
+    },
+    {
+      "id": "SF-MC-i498a8e",
+      "kind": "i18n",
+      "text": "mcp.detail.shellCommands",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1579
+    },
+    {
+      "id": "SF-MC-i4aad70",
+      "kind": "i18n",
+      "text": "mcp.detail.file",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1687
+    },
+    {
+      "id": "SF-MC-i4da4f8",
+      "kind": "i18n",
+      "text": "mcp.write.savedWhileOff",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1507
+    },
+    {
+      "id": "SF-MC-i4f6b8c",
+      "kind": "i18n",
+      "text": "mcp.hostInactive",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1025
+    },
+    {
+      "id": "SF-MC-i549ffa",
+      "kind": "i18n",
+      "text": "mcp.test.serverInfo",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1789
+    },
+    {
+      "id": "SF-MC-i564e1b",
+      "kind": "i18n",
+      "text": "i18n.remove",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1527
+    },
+    {
+      "id": "SF-MC-i574343",
+      "kind": "i18n",
+      "text": "mcp.server.webPassword",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1943
+    },
+    {
+      "id": "SF-MC-i57adc8",
+      "kind": "i18n",
+      "text": "mcp.undoing",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1038
+    },
+    {
+      "id": "SF-MC-i580331",
+      "kind": "i18n",
+      "text": "mcp.footer.fileProblems",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1183
+    },
+    {
+      "id": "SF-MC-i592431",
+      "kind": "i18n",
+      "text": "mcp.detail.description",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1550
+    },
+    {
+      "id": "SF-MC-i59a506",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget.invalidDraft",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2241
+    },
+    {
+      "id": "SF-MC-i5e6dce",
+      "kind": "i18n",
+      "text": "mcp.add.action",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1104
+    },
+    {
+      "id": "SF-MC-i603b7a",
+      "kind": "i18n",
+      "text": "mcp.codemode.mode",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2014
+    },
+    {
+      "id": "SF-MC-i63a8e3",
+      "kind": "i18n",
+      "text": "mcp.loadFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1067
+    },
+    {
+      "id": "SF-MC-i684112",
+      "kind": "i18n",
+      "text": "mcp.server.hiddenCharacters",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1694
+    },
+    {
+      "id": "SF-MC-i6ccea9",
+      "kind": "i18n",
+      "text": "mcp.codemode.preferenceError",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2042
+    },
+    {
+      "id": "SF-MC-i6ccea9-2",
+      "kind": "i18n",
+      "text": "mcp.codemode.preferenceError",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2062
+    },
+    {
+      "id": "SF-MC-i6ccea9-3",
+      "kind": "i18n",
+      "text": "mcp.codemode.preferenceError",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2077
+    },
+    {
+      "id": "SF-MC-i717aa7",
+      "kind": "i18n",
+      "text": "mcp.detail.inProject",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1656
+    },
+    {
+      "id": "SF-MC-i71c271",
+      "kind": "i18n",
+      "text": "mcp.add.needsSignIn",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1258
+    },
+    {
+      "id": "SF-MC-i774e49",
+      "kind": "i18n",
+      "text": "skills.scope.global",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 183
+    },
+    {
+      "id": "SF-MC-i7a8d56",
+      "kind": "i18n",
+      "text": "i18n.loading",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1064
+    },
+    {
+      "id": "SF-MC-i7f0c1f",
+      "kind": "i18n",
+      "text": "mcp.inProject.show",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1664
+    },
+    {
+      "id": "SF-MC-i7f0eb3",
+      "kind": "i18n",
+      "text": "mcp.test.error",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1730
+    },
+    {
+      "id": "SF-MC-i7fd8be",
+      "kind": "i18n",
+      "text": "mcp.groupKeptOff",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1294
+    },
+    {
+      "id": "SF-MC-i8083b6",
+      "kind": "i18n",
+      "text": "mcp.test.moreTools",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1849
+    },
+    {
+      "id": "SF-MC-i84f861",
+      "kind": "i18n",
+      "text": "mcp.test.never",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1948
+    },
+    {
+      "id": "SF-MC-i865b4b",
+      "kind": "i18n",
+      "text": "mcp.add.added",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1253
+    },
+    {
+      "id": "SF-MC-i86a128",
+      "kind": "i18n",
+      "text": "mcp.server.unchecked",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1696
+    },
+    {
+      "id": "SF-MC-i87cb02",
+      "kind": "i18n",
+      "text": "mcp.add.testing",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1257
+    },
+    {
+      "id": "SF-MC-i89c183",
+      "kind": "i18n",
+      "text": "skills.scope.project",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 183
+    },
+    {
+      "id": "SF-MC-i8a5e85",
+      "kind": "i18n",
+      "text": "mcp.test.resources",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1792
+    },
+    {
+      "id": "SF-MC-i8e063e",
+      "kind": "i18n",
+      "text": "mcp.server.commandFields",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1581
+    },
+    {
+      "id": "SF-MC-i923161",
+      "kind": "i18n",
+      "text": "mcp.exposure.toolOverrides",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1646
+    },
+    {
+      "id": "SF-MC-i9720c0",
+      "kind": "i18n",
+      "text": "mcp.codemode.sandbox.unavailable",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2085
+    },
+    {
+      "id": "SF-MC-i981b67",
+      "kind": "i18n",
+      "text": "mcp.signIn.button",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1248
+    },
+    {
+      "id": "SF-MC-i9bcc9d",
+      "kind": "i18n",
+      "text": "mcp.add.addedTrusted",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1256
+    },
+    {
+      "id": "SF-MC-i9da2c6",
+      "kind": "i18n",
+      "text": "i18n.status",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1932
+    },
+    {
+      "id": "SF-MC-i9ed836",
+      "kind": "i18n",
+      "text": "mcp.test.readOnly",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1840
+    },
+    {
+      "id": "SF-MC-ia0072b",
+      "kind": "i18n",
+      "text": "mcp.add.addedTrustedHere",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1255
+    },
+    {
+      "id": "SF-MC-ia00be5",
+      "kind": "i18n",
+      "text": "mcp.codemode.toolMode",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2060
+    },
+    {
+      "id": "SF-MC-ia00be5-2",
+      "kind": "i18n",
+      "text": "mcp.codemode.toolMode",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2138
+    },
+    {
+      "id": "SF-MC-ia00be5-3",
+      "kind": "i18n",
+      "text": "mcp.codemode.toolMode",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2142
+    },
+    {
+      "id": "SF-MC-ia6951c",
+      "kind": "i18n",
+      "text": "mcp.test.queued",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1797
+    },
+    {
+      "id": "SF-MC-iacd121",
+      "kind": "i18n",
+      "text": "mcp.session.conflictOwner",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1821
+    },
+    {
+      "id": "SF-MC-iaf0487",
+      "kind": "i18n",
+      "text": "mcp.inProject.overridden",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1661
+    },
+    {
+      "id": "SF-MC-ib27a84",
+      "kind": "i18n",
+      "text": "mcp.reason.entry-not-object",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1503
+    },
+    {
+      "id": "SF-MC-ib3ba36",
+      "kind": "i18n",
+      "text": "mcp.loadTimedOut",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 199
+    },
+    {
+      "id": "SF-MC-ib5a1fa",
+      "kind": "i18n",
+      "text": "mcp.reason.web-password",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1505
+    },
+    {
+      "id": "SF-MC-ib93218",
+      "kind": "i18n",
+      "text": "mcp.codemode.title",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1286
+    },
+    {
+      "id": "SF-MC-ib93218-2",
+      "kind": "i18n",
+      "text": "mcp.codemode.title",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2008
+    },
+    {
+      "id": "SF-MC-ib93218-3",
+      "kind": "i18n",
+      "text": "mcp.codemode.title",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2020
+    },
+    {
+      "id": "SF-MC-ibad081",
+      "kind": "i18n",
+      "text": "mcp.test.stderr",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1735
+    },
+    {
+      "id": "SF-MC-ibc0c1d",
+      "kind": "i18n",
+      "text": "mcp.test.button",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1894
+    },
+    {
+      "id": "SF-MC-ibcb404",
+      "kind": "i18n",
+      "text": "mcp.codemode.sandbox",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2082
+    },
+    {
+      "id": "SF-MC-ibe4a3d",
+      "kind": "i18n",
+      "text": "mcp.detail.url",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1556
+    },
+    {
+      "id": "SF-MC-ibe70e5",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget.unit",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2234
+    },
+    {
+      "id": "SF-MC-ic03b42",
+      "kind": "i18n",
+      "text": "mcp.detail.exposure",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1618
+    },
+    {
+      "id": "SF-MC-ic0cff3",
+      "kind": "i18n",
+      "text": "mcp.detail.env",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1569
+    },
+    {
+      "id": "SF-MC-ic13183",
+      "kind": "i18n",
+      "text": "mcp.codemode.rowLabel",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1282
+    },
+    {
+      "id": "SF-MC-ic1464a",
+      "kind": "i18n",
+      "text": "mcp.detail.command",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1556
+    },
+    {
+      "id": "SF-MC-ic70a6f",
+      "kind": "i18n",
+      "text": "mcp.test.requestFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1954
+    },
+    {
+      "id": "SF-MC-ice4c00",
+      "kind": "i18n",
+      "text": "i18n.saving",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1642
+    },
+    {
+      "id": "SF-MC-ice4c00-2",
+      "kind": "i18n",
+      "text": "i18n.saving",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1677
+    },
+    {
+      "id": "SF-MC-ice4c00-3",
+      "kind": "i18n",
+      "text": "i18n.saving",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2034
+    },
+    {
+      "id": "SF-MC-ice4c00-4",
+      "kind": "i18n",
+      "text": "i18n.saving",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2151
+    },
+    {
+      "id": "SF-MC-ice4c00-5",
+      "kind": "i18n",
+      "text": "i18n.saving",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2238
+    },
+    {
+      "id": "SF-MC-id09781",
+      "kind": "i18n",
+      "text": "mcp.server.replacesGlobal",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1697
+    },
+    {
+      "id": "SF-MC-id14b06",
+      "kind": "i18n",
+      "text": "mcp.test.ranIn",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1794
+    },
+    {
+      "id": "SF-MC-id7da46",
+      "kind": "i18n",
+      "text": "mcp.projectNotListed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1028
+    },
+    {
+      "id": "SF-MC-ida7bca",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget.saveFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2251
+    },
+    {
+      "id": "SF-MC-idfb152",
+      "kind": "i18n",
+      "text": "mcp.footer.fileProblem",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1183
+    },
+    {
+      "id": "SF-MC-ie3f3de",
+      "kind": "i18n",
+      "text": "mcp.actionTimedOut",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 205
+    },
+    {
+      "id": "SF-MC-ie4942d",
+      "kind": "i18n",
+      "text": "mcp.bulkFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1299
+    },
+    {
+      "id": "SF-MC-ie61ffb",
+      "kind": "i18n",
+      "text": "mcp.rowLabel",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1373
+    },
+    {
+      "id": "SF-MC-ie6d293",
+      "kind": "i18n",
+      "text": "mcp.server.variableIn",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1595
+    },
+    {
+      "id": "SF-MC-ie7638b",
+      "kind": "i18n",
+      "text": "mcp.server.overriddenByProject",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1703
+    },
+    {
+      "id": "SF-MC-ieb5d8c",
+      "kind": "i18n",
+      "text": "mcp.actionFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1296
+    },
+    {
+      "id": "SF-MC-ieb5d8c-2",
+      "kind": "i18n",
+      "text": "mcp.actionFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1543
+    },
+    {
+      "id": "SF-MC-iedd8ed",
+      "kind": "i18n",
+      "text": "mcp.exposure.optionDefault",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1637
+    },
+    {
+      "id": "SF-MC-if0236b",
+      "kind": "i18n",
+      "text": "mcp.test.queueTimedOut",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1951
+    },
+    {
+      "id": "SF-MC-if41ff5",
+      "kind": "i18n",
+      "text": "mcp.codemode.toolMode.saveFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2159
+    },
+    {
+      "id": "SF-MC-if46328",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget.save",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2236
+    },
+    {
+      "id": "SF-MC-if482ef",
+      "kind": "i18n",
+      "text": "mcp.undo",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1038
+    },
+    {
+      "id": "SF-MC-if56012",
+      "kind": "i18n",
+      "text": "mcp.detail.variables",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1587
+    },
+    {
+      "id": "SF-MC-ifcb67a",
+      "kind": "i18n",
+      "text": "mcp.codemode.inlineBudget.description",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2244
+    },
+    {
+      "id": "SF-MC-ifd8753",
+      "kind": "i18n",
+      "text": "mcp.codemode.saveFailed",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2049
+    },
+    {
+      "id": "SF-MC-r8187d7",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1066
+    },
+    {
+      "id": "SF-MC-r8187d7-2",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1542
+    },
+    {
+      "id": "SF-MC-r8187d7-3",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1951
+    },
+    {
+      "id": "SF-MC-r8187d7-4",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1953
+    },
+    {
+      "id": "SF-MC-r8187d7-5",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2048
+    },
+    {
+      "id": "SF-MC-r8187d7-6",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2158
+    },
+    {
+      "id": "SF-MC-r8187d7-7",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2250
+    },
+    {
+      "id": "SF-MC-rcdcfc3",
+      "kind": "role",
+      "text": "status",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 1642
+    },
+    {
+      "id": "SF-MC-rcdcfc3-2",
+      "kind": "role",
+      "text": "status",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2034
+    },
+    {
+      "id": "SF-MC-rcdcfc3-3",
+      "kind": "role",
+      "text": "status",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2151
+    },
+    {
+      "id": "SF-MC-rcdcfc3-4",
+      "kind": "role",
+      "text": "status",
+      "file": "ref_projects/pi-web/components/McpConfig.tsx",
+      "line": 2238
+    }
+  ]
+}

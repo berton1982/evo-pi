@@ -1,0 +1,27 @@
+{
+  "id": "C6",
+  "generatedAt": "2026-10-23T09:01:51.035Z",
+  "runs": [
+    {
+      "cmd": "npx --no-install playwright test e2e/mcp --workers=1 --reporter=line",
+      "exit": 0,
+      "durationMs": 21541,
+      "at": "2026-10-23T09:01:43.934Z",
+      "tail": "[11/27] [chromium] › e2e/mcp/s-011.spec.ts:13:1 › T-13 勾选发出 POST 并写入配置文件\n[12/27] [chromium] › e2e/mcp/s-012.spec.ts:13:1 › T-13b 停用态回写成 disabled\n[13/27] [chromium] › e2e/mcp/s-013.spec.ts:13:6 › T-18b 撤销条回滚刚刚的开关\n[14/27] [chromium] › e2e/mcp/s-014.spec.ts:13:1 › T-16b 重复测试仍只有一个结果\n[15/27] [chromium] › e2e/mcp/s-015.spec.ts:13:1 › T-16c 结果按 key 回填到对应行\n[16/27] [chromium] › e2e/mcp/s-016.spec.ts:13:1 › T-22b 空态文案可读\n[17/27] [chromium] › e2e/mcp/s-017.spec.ts:13:6 › T-36 添加服务器面板打开（B-017）\n[18/27] [chromium] › e2e/mcp/s-018.spec.ts:13:6 › T-25b 添加成功后刷新列表\n[19/27] [chromium] › e2e/mcp/s-019.spec.ts:15:1 › T-14 组头按钮切换整组\n[20/27] [chromium] › e2e/mcp/s-020.spec.ts:13:6 › T-26 组批量部分失败的逐条回填\n[21/27] [chromium] › e2e/mcp/s-021.spec.ts:13:1 › T-14b 组头计数即时更新\n[22/27] [chromium] › e2e/mcp/s-022.spec.ts:13:6 › T-27 信任提示与跳转\n[23/27] [chromium] › e2e/mcp/s-027.spec.ts:13:6 › T-29 发起签到进入等待授权\n[24/27] [chromium] › e2e/mcp/s-028.spec.ts:13:6 › T-29b 轮询期间显示等待态\n[25/27] [chromium] › e2e/mcp/s-029.spec.ts:13:6 › T-29c 取消签到调用 DELETE\n[26/27] [chromium] › e2e/mcp/s-030.spec.ts:13:1 › T-16 测试三态文案互斥\n[27/27] [chromium] › e2e/mcp/s-031.spec.ts:14:6 › T-24 状态行日志可展开/收起\n  9 skipped\n  18 passed (20.5s)"
+    },
+    {
+      "cmd": "node .evo/migration/20261022-C-G-mcp/harness/parity.mjs",
+      "exit": 0,
+      "durationMs": 233,
+      "at": "2026-10-23T09:01:44.167Z",
+      "tail": "服务器：pi-web 2 / evo-pi 2，差异 0 条\n   测试 user/alpha: pi-web ok [echo,ping] / evo-pi ok [echo,ping]\n字段：pi-web 18 个 / evo-pi 5 个\n写入 /home/berton/evo-pi/.evo/migration/20261022-C-G-mcp/harness/snapshot/parity.json"
+    },
+    {
+      "cmd": "PI_PARITY_CWD=/home/berton/evo-pi/.parity-proj node .evo/migration/20261022-C-G-mcp/harness/fidelity.mjs",
+      "exit": 0,
+      "durationMs": 6868,
+      "at": "2026-10-23T09:01:51.035Z",
+      "tail": "可及元素：pi-web 13 / evo-pi 18\n覆盖率（evo-pi 覆盖 pi-web 的元素比例）：53.8%\n只有 pi-web 有（信息量缺口）：6\n   - div:MCP\n   - button:代码模式：自动\n   - button:gamma：已开启\n   - button:alpha：测试时已连接\n   - button:beta：已开启\n   - select:gamma 的工具如何提供给模型\n只有 evo-pi 有（我们多加的）：11\n   + h2:MCP 服务器\n   + li:alphastdio\n   + switch:关闭 alpha\n   + button:alpha：未测试\n   + li:betahttp\n   + switch:关闭 beta\n正文长度：pi-web 244 字 / evo-pi 132 字\n写入 /home/berton/evo-pi/.evo/migration/20261022-C-G-mcp/harness/snapshot/fidelity"
+    }
+  ]
+}

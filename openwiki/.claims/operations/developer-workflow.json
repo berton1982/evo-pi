@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:3b6415aa7b45d976c9e4b360b907ef4485f57b427f3bffe562c67caa3b913e7f",
+  "claims": [
+    {
+      "id": "claim_d678064248204a9082e50b11092b13bc",
+      "statement": "仓库锁定 pnpm@12.10.1 与 Node >=22.19.0，workspace 为 packages/* 与 pi-packages/* 双层，pnpm-workspace.yaml 同时把 minimumReleaseAge 置 0 并以 allowBuilds 白名单允许 5 个原生构建包。",
+      "evidence": [
+        {
+          "resource": "repo://package.json#L1-L16",
+          "version": "repo-lines-v1:sha256:57a568ec0ee093f57bd079da1b9fd864f5c7661c55b3f5608221afbaeaa61b76:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwNzNkYjM3ZWNmOTI0NGUxZjA0ZjViYmQ2Mjk5NDBlYjVkNWFiMDE4ZTQ2NmNmMDNkYWY0MGRiYmZhOGRjYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3MDAwN2Q5ZmU2Yzc0NGI1ZWU0MTdhYjdlNWQxNTc1NDUyMDIzZjIwNTM4NWZjYjE2YzE5NjEwYjI2MjUyNGQifQ"
+        },
+        {
+          "resource": "repo://pnpm-workspace.yaml#L1-L18",
+          "version": "repo-lines-v1:sha256:a3700be0056b9a8497c2b5ae9090172c4ed1db2c691feb106dc224659dbc49c0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkYjA3NmViODBhZGUxOWZlYTNlMGE0MzE5ODZiNjU1ZjVmYTU5ZWQ2MjY3ZTEwN2Q2ODhiNjFjM2Y0MjE3OTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1ODQyYjM3NzY1Y2Y4OWJkMTJiZmM3ZjE5YWIxYjY0NDg3NzliZjYwYjliZjg1OWE4N2Q1NmFlZDU4MTUzNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ4NDEzM2ZjNzdhMTAwYjBhYzI5OGQyZWExZWM0NDY5NzI3MWZhYTc3ODIxYTQ2OGQ1MGVhMThlNmMyMTM4NjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f06e012402824f2c81641681a424a237",
+      "statement": "turbo.json 定义 5 个 task：build 依赖 ^build 且 outputs 为 dist/**，test outputs coverage/**，dev 与 clean 关闭缓存（dev 标记 persistent），globalEnv 仅有 PLAYWRIGHT_BASE_URL 与 CI。",
+      "evidence": [
+        {
+          "resource": "repo://package.json#L17-L33",
+          "version": "repo-lines-v1:sha256:d3b04aa91166cbcfd084b0b340a10c0f8a098fca976caccb3691bdbddac1c212:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjMzdhZWM4NjAwZjY2MjIwNDQ4MTU4OTJjYjg2ZTczMTVjYTc2ZWEwYjc5MWQ4NjQyNTU0NDllYzg3NTY4NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0NzY0YzM3MmE0YjQ2Yzg1YjU3M2U3YmU3ZjgxZWU5YmFjYWUzMGNjYzEyODZhNWM2ZDY4YmFhNjY3MjQwNWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmYzdlNzcyOGFhMjg5ODJkNDRmOWQ1ZGE0ZGY1YjdmNDFiYTAxOTdmMGM5ZGMzNzc0MTFmYzI2N2JlNzRlNDYifQ"
+        },
+        {
+          "resource": "repo://turbo.json#L1-L21",
+          "version": "repo-lines-v1:sha256:4ec1241684fed6fa4a88c86479b86f411434b4d67363a4807c8b421328417c13:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a5782e85024b4fb29a7e2f78d8a4254d",
+      "statement": "既有约定要求跨包任务必须通过 pnpm script（即 turbo）调度，禁止直接使用 pnpm -r，以免丢失任务图与缓存。",
+      "evidence": [
+        {
+          "resource": "repo://docs/conventions/dev.md#L15-L25",
+          "version": "repo-lines-v1:sha256:6d914173b4a3099e7c7e2b3bccdf416b019318eea960ecf8a9b70d45c0246506:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxMjJhNTljZTE5NzQxMDE3YTUyODlhMzhmZTJmNmQxZjNhNGE4NjBjZDc0MGI4MzA3MjAwODA3YmVjZTI3NWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZmI1NDAxOGJkMDFkNTQ0NmE3NDBjN2MyYjE2ZTMzMWJkYzVkMDQxZjk5MDhjYmQwY2ZmOTNhY2YyZDAyNWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFkODhiMDgxYzgwOTZhOGU3MmU0N2VlMmJjZmMwNzMzMjk1MjA4MDdhZmM2MzE1YTNjNTFiM2ZkN2NhMWY4NmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkOThmNzcwYTIwM2NiMTk5MWI2MTZiMTA3ODAyNjRiNDQwNzJiZTc4M2MzM2U3NDZmYmM3MzIyOGE4MDI2MmUifQ"
+        },
+        {
+          "resource": "repo://package.json#L18-L18",
+          "version": "repo-lines-v1:sha256:8cdbd7ca2d13ad351d20d76392c42732777fb572eefdcfb9555f70b444491224:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGNkYmQ3Y2EyZDEzYWQzNTFkMjBkNzYzOTJjNDI3MzI3NzdmYjU3MmVlZmRjZmI5NTU1ZjcwYjQ0NDQ5MTIyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGNkYmQ3Y2EyZDEzYWQzNTFkMjBkNzYzOTJjNDI3MzI3NzdmYjU3MmVlZmRjZmI5NTU1ZjcwYjQ0NDQ5MTIyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzc1ZmNkOGE1ZGFjMjc4YzdjOTZiM2FjZTcxMWQwNWExMGMxMjhmMjI3NGQxZjA5M2U0ZjkwZTkxZjJiZWFjNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTJkNDZiZGEyZTZhMWY4OTAyYWQzZTIxMTEzYWE4YjFlZjFhNjQ5MWY4YTMyMDc5OGJiOGFlOWM3NjhjOWI5MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ed253abfd382454b84c6a8855bce23d1",
+      "statement": "biome 作为唯一 lint + format 二进制，关键规则为 noExplicitAny=error、useNodejsImportProtocol=error、useImportType=warn，格式化采用 2 空格缩进、行宽 100、单引号、无分号、trailing commas all。",
+      "evidence": [
+        {
+          "resource": "repo://biome.json#L1-L65",
+          "version": "repo-lines-v1:sha256:c5eea39422ba67e8b289fc97dfee2e15b927a06ebc4ab25f05d98720beccfe0f:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_91ad49b1a4e649c78a78f97b46b19059",
+      "statement": "biome 的 files.includes 显式排除 node_modules、dist、.turbo、.next、next-env.d.ts、globals.css、coverage、build、.my-idea 与 ref_projects，因此 vendored 参考项目不会被检查。",
+      "evidence": [
+        {
+          "resource": "repo://biome.json#L3-L16",
+          "version": "repo-lines-v1:sha256:1459baa58eb0b842ecb38ca7a32f0a831227cb901ab83d88f683356a2af16cfe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2MDBmNmRkOGVkZDRlNzU2NzlmYjEwZWE4NjI5OTg2ZTg3N2E4NGJlMDdiN2UyODgyM2YzMTQxZTRkZjRhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg0MmVhYTQ1Y2I0OGU5OTdlY2FkNDIwZWIwM2RkNzY1YTIzZmI2Y2RjNjA0Njc5YWFkN2RjNTQ5OTQ4YzQ2ZjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwZmIxYzkxNWJmM2Q3NmU0ZTk4ZjNjY2E1OGJmZmE3MDQ3MmJkNjIzMWExZTczYzg0NzYzMThhNjE0OTUyOWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_41d9831b6c2d47d8aec6988682024f23",
+      "statement": "pre-commit hook 只执行 pnpm exec lint-staged，其配置内联在根 package.json，只匹配 *.ts(x)/js/jsx/mjs/cjs 与 *.json/jsonc，Markdown 文件不会被提交时处理。",
+      "evidence": [
+        {
+          "resource": "repo://.husky/pre-commit#L1-L1",
+          "version": "repo-lines-v1:sha256:91e038dd1b01a765a39b623e7985faaeab12fcc2e730f90b77ed9f76140530c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFlMDM4ZGQxYjAxYTc2NWEzOWI2MjNlNzk4NWZhYWVhYjEyZmNjMmU3MzBmOTBiNzdlZDlmNzYxNDA1MzBjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFlMDM4ZGQxYjAxYTc2NWEzOWI2MjNlNzk4NWZhYWVhYjEyZmNjMmU3MzBmOTBiNzdlZDlmNzYxNDA1MzBjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://package.json#L34-L38",
+          "version": "repo-lines-v1:sha256:0732e1d6860d58f338b1460becaa9bb0113cb330dc0221cd035043b7d97c7822:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWRjNGRlN2VkMzVhMjMzNjQ1Mzk4NjRkYWRiOTM4Yjg3MjMzMzc5MTc5ZDYyOTJiOWZmNWY2MTlhNmMxMzE2NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWRhOWUzM2VkNGJjZTk4ZDk3ZDliZDA5ZTM2MzcxZmY4MjFkYzczNGQ0MDZkMzE2NWRmMTY3YzdiMmEyM2I5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTMwMTA1NzE3OGQ2Y2M5NzYwM2EyZGRmMjMwNzMzMzY5OGNmNTk4MDdjYzYyZjU1OTNkMmZmN2U5ZmQzNzZlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzBmMmMzNDkzN2FmNmRhNmY2MjMxZjVmZmY0YjNlODY1NTlkMGZkZTM3ZWVkOGI2NTkwMzc1ZmY4NTliN2UzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_34680e793ba5492bbb460aa3692de1bb",
+      "statement": "lint-staged 使用 biome check --write / biome format --write，因此提交时可能直接修改工作区文件，修改结果需要自行检查并再次提交。",
+      "evidence": [
+        {
+          "resource": "repo://package.json#L34-L38",
+          "version": "repo-lines-v1:sha256:0732e1d6860d58f338b1460becaa9bb0113cb330dc0221cd035043b7d97c7822:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWRjNGRlN2VkMzVhMjMzNjQ1Mzk4NjRkYWRiOTM4Yjg3MjMzMzc5MTc5ZDYyOTJiOWZmNWY2MTlhNmMxMzE2NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWRhOWUzM2VkNGJjZTk4ZDk3ZDliZDA5ZTM2MzcxZmY4MjFkYzczNGQ0MDZkMzE2NWRmMTY3YzdiMmEyM2I5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTMwMTA1NzE3OGQ2Y2M5NzYwM2EyZGRmMjMwNzMzMzY5OGNmNTk4MDdjYzYyZjU1OTNkMmZmN2U5ZmQzNzZlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzBmMmMzNDkzN2FmNmRhNmY2MjMxZjVmZmY0YjNlODY1NTlkMGZkZTM3ZWVkOGI2NTkwMzc1ZmY4NTliN2UzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_09b8d027754b42b18ec446bf9b967e30",
+      "statement": "changesets 配置为 baseBranch main、access restricted、commit false、privatePackages 同时开启 tag 与 version、updateInternalDependencies 为 patch。",
+      "evidence": [
+        {
+          "resource": "repo://.changeset/config.json#L1-L17",
+          "version": "repo-lines-v1:sha256:b607427f029a8100f4c88fdb6e34f3f0e879c857eb0e8fff499d5b5b43db2ecb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_122258f1ff3544abab51b28bca85bc36",
+      "statement": "changesets workflow 在 pull_request 的 opened/reopened/synchronize 上触发，用 @changesets/action@v2 在 PR 分支内执行版本 bump 并提交回该分支，权限限定为 contents 与 pull-requests 的 write。",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/changesets.yml#L31-L48",
+          "version": "repo-lines-v1:sha256:4e01ac3c5441b46a1e7af48984781c79488ae9757f7f510714f14be9a9857445:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzMzczMzRhZWMwZGNiMjRlNDBlM2MyMGRjMDlkNTlhZjY3NDNkMDI3ZGJmZjUwYzFhY2EwODk3NDcxMTc2NzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlZGRhNjVkZjZkMzE2ODk5OWMyNGQ2OWFlNTc1NTNjMjQ4NGI4YTg3MWM3MDM0ZDA0NGQ4MzNmZDE1ZGU0NGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhYmMxMGQwMzc1OWJhODk5MTMyMWQ4M2QxNmY3NTQyNjM2ZTU4NjhmMDdiNjE4ZmE0MDc3NTkyMjAzYTFkNGYifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/changesets.yml#L53-L75",
+          "version": "repo-lines-v1:sha256:dec3a4675876015015a753fbf706231eb205dba39a44b152cd1076cd65701bd1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmMTM0YmNkYmRiMWI4OGE0OTNmZGY1M2Y4MmJkYWIxZTgzNjA3Y2JjOGE3NDNhY2MzY2IwZWMzYzRhZDhhODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmM2M1YTcyZjI2ZjA3MDk2YThlNGM0ZWVjNWYzZWRmOWZlMzIyMzY0ZTk4ZDVkNGE1NjZmZWI5M2FiNWNlMDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1NDhkOWEyMzUxZmYzMmJlZWMzMjZmZGVhNjQwNzMyNjI2YzMyNGI3NDZjM2E4ZmI4YjgwMTVjZGZkNjg1Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjOWQ1MGEzMzUyZWE5ZjAyNTM1YWI4NjJlOGI0YTFjMTI3MWY5NzA2YTQ4YTM4MDdhY2ZmMzc0MGI5ZTEyMzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c2a8ce50a86845c9b7233672285c48a1",
+      "statement": "changesets workflow 的注释记录了版本错配陷阱：changesets CLI v3 必须搭配 action v2，且 v2 将 publish 输入改名为 publish-script / version-script。",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/changesets.yml#L19-L30",
+          "version": "repo-lines-v1:sha256:de87b72ffa0e1d0465a726242bdaa88db1724c1d24e4c6ecc4437eb9783b679f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyYzM1Njg3YWIwMjNhY2M3YTI1NDAwN2YwMzRhNWExODY3NzcyZmFmMDQ5Y2IzOGE0NTJmZTVmOTgyZmM3MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MDAzYjVhOTM4OGFjNmY0YzIzYzcyODY4M2FkOWI0MGUzNTgzNGE5YzJkZDFiYWRjYWQ0YmRjYTRiZWNiZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmZDFiYzNhN2QwMzc2ZTA2ZTgxMTgwYWU0MjNiM2ExOTBlNGNhZDFiMzRhOTU0MjdlZWNmYWE4MTE4ZmUwN2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b376387cb45c46c5a17d493e67624ed6",
+      "statement": "changesets 的 baseBranch 配置为 main，与仓库当前本地分支名 master 存在不一致，推送前需确认远端默认分支。",
+      "evidence": [
+        {
+          "resource": "repo://.changeset/config.json#L7-L7",
+          "version": "repo-lines-v1:sha256:4893f40e3781eb896c82d046a08067a11e35cdf2f1dfaf26fea90b8db6676413:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTMyNWIzNDY1MjhmN2E2ZWU0OWY3MmM2YjEzYmFmYWQ4NmY1NmU3NjljMWYxMGMyODIzYWVhOTQ5MmEyOWJlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTFhMmY0ZDU5ODJlODZiMjdmNWFiMDAwMGQzZGIzOGVmYzFmM2FiZTZiM2MxMThhZmIyZWVjOWI4NjhiMDcxOCJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/changesets.yml#L31-L33",
+          "version": "repo-lines-v1:sha256:bfd1bc3a7d0376e06e81180ae423b3a190e4cad1b34a95427eecfaa8118fe07b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk2ZGM0ODE0OWY1YTgzZDFlZDZkYmIzOWJiYzdlMmI5MDJhYTNkMzRkNmJkNWFlNGIyOTFiNjhkZjBjYTc5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWRmZjg4ZWU1ZTE4MGIyYTU5Mjk0NTdjOTU0OGM0ZGE4MjQyMTJkZmU4MjBjNmY3NDBmNzkxZGU2N2I4ZjZiMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2VkZGE2NWRmNmQzMTY4OTk5YzI0ZDY5YWU1NzU1M2MyNDg0YjhhODcxYzcwMzRkMDQ0ZDgzM2ZkMTVkZTQ0YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTkwMDAzNzIzYTM5NzAzZTA3YjZhYzM2ODg5NGQ3ZDBjZGMxMGI1Mjg5OTIzZjhkMDA1ZThhYjgwZGM2N2JhYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c01f059679f49a6982e9534e14abd1c",
+      "statement": "openwiki-update workflow 每天 08:00 UTC 或手动触发，使用 fetch-depth 0 拉取完整历史并全局安装 openwiki@0.7.2（另含 mermaid 与 jsdom 用于图校验）。",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L1-L8",
+          "version": "repo-lines-v1:sha256:078cf74cb6f31643160302fcad8e1eca372859b83507ecbaab9434750253b2c1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDYwMjc4N2FmNmRjYzA4MzRkZTEyMWNiYjFjYjk1Zjk0NTliNzIxZWFiMDM0OWYxMDUwMWI5OTZjMWM3N2ZmZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyNjI0N2VkZTAwNmU5YmRhYjljNjg1MDcyODQyNWQxYjQxNjZjYWY1Y2FjNTBjZjA5NTVjNDRkMjRjMWE4ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTZmN2QzN2ZiMjk3Mzk5ZmVhMmE1Y2VmMWNjNDAyOGM4OTk3OWE5MDUwYTkyODU2ZjBkOTZlMWMxOGJhMTlhNyJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L17-L31",
+          "version": "repo-lines-v1:sha256:9630d6bf6c29a1164b64f75ad18f938419c27cdadc39a12376ccc2c34602b7d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2YzhjYTJiZTAzYjQxODg1ZGQ0MWUwZGFkNDQwNmY0MjI3YTk2ODgxNmRkMWY5NTQyMTljMmM1ZWEyMTZjMWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwMTUzYmZiZjBlNDFkYjU3YWRlNTgyMDk0ZDBlY2ZlZWMzMWYwOGUyMjI5Nzg0ZDBlMTUxNDM2ZWRhNjIwOGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI2NDA0YjA4ZmU2MzJkNjIxYmI4OWFmNTIxZDJhNDBlOTA1N2M0ZmVlMWJiNzA5MjIyNjM4YzQzOGM3ODNlZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzNzY5ZDI5MmFhYTAwYzJkM2QwMjcwZGZjOTIyMzg2YTBkZTRkYTM4YzkwNzAwNTU4ZWIyMzJiOGRiMmI3YjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0a24d34ee0af450bbf09584e072e255b",
+      "statement": "openwiki-update 的 OpenWiki 步骤带 continue-on-error，失败后仍会清理 openwiki/.run.json 并用 create-pull-request 开 PR，PR 正文说明失败时有意保留失败前已完成的页面作为下次基线。",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L33-L44",
+          "version": "repo-lines-v1:sha256:30fce7048cf589bad31f5664c11cd9c39b005b9dd9ffbbc2f394c70f3062b0eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZThmOWZhNDBlN2JkMDQ5OWQxYzBkODNmZDc1OGFhODViMzA4NDJkYmQ2MWYwZWE2YjdhZTEwZWZlYzc2ZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkNWM3NGE1ZTZhZDc0N2Q4ZGQ1NjRjYzg5MzZiM2E0OWVjYTUxNmQ3MWI0OWE4MWNmNjA0OTIwM2FkMjJkMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiNDRjZTgyMmYzMDY4MTljZmQ4Y2FmMjRmNWI5MDViZGFlNDU0YmFlYWRlMTFkZTM3ZDY3NGMzN2M3YzE5Y2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3ZGQ3NWM0YTI1NTVjMTY3Y2NjZDY1MWJmYjU4MTYzMWNiMDEyNTllMjExZWZhMWQzYjQ0NWQ0YzhmMDE3MjQifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L50-L80",
+          "version": "repo-lines-v1:sha256:8259cb286cce2b27174e06ac641d49a1d8568eb7a766031684ce9642070fa742:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3OWM4ODBmNjJkNDIyNTM4YmNhODRjYjU1ZWNlOGZlMTBlOTY1OGIwNjExMTVjM2ZhYmNkYzdiM2JlY2Y0NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzNjE3ODE1YmY5YzBlZGQ4MjRhMWVmNDcwOGI4NTgyZmRjN2I3MTk5NWU5ZjlhOGJkYzg4ZmI0YmRjMTRkZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxOTEzNzMyNTgyYzNlNjAzNTkwNzg2Yzg2ODM2OTUxZmYzNWU5YjJkMGY4ZDMxMDY3ZDRmNGM4NzQzZGIyYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyN2Q5ZWE2MGMzZTBmMzUxMDdmYmE5YThhZjY1ODRiNWM3OTQ1NDEwYTRmZTgzOGM0M2ZlMzRjMWQ1MzBjYzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc24b1e434514144b31a6386643446b7",
+      "statement": "openwiki-update 依赖完整 git 历史以生成变更摘要，而当前仓库 master 分支尚无任何 commit，因此首个 commit 之前该 workflow 的变更摘要为空。",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L17-L22",
+          "version": "repo-lines-v1:sha256:47e4b59df2bf8c677d6af7b6583c0aff37f9e279893f86dc640690a111404205:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTZjOGNhMmJlMDNiNDE4ODVkZDQxZTBkYWQ0NDA2ZjQyMjdhOTY4ODE2ZGQxZjk1NDIxOWMyYzVlYTIxNmMxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwOTc1YzdlMjBlYmE4ODU3ZWZkMzFlNjJiNjY1Zjc4N2U1MTY0MTk1MWE2NjA3ODlmYmE5MzNhNjM0NzIxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjY0MDRiMDhmZTYzMmQ2MjFiYjg5YWY1MjFkMmE0MGU5MDU3YzRmZWUxYmI3MDkyMjI2MzhjNDM4Yzc4M2VkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2VmMTZlM2M4YjU0ZTJiMjA0ODE5NmFiYjRjZDgwZDIyYTUwOGVjZDYwNzQ2MTI0YTJlYTJkY2MzNDE3OTlkMSJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L85-L88",
+          "version": "repo-lines-v1:sha256:c74f2809fab4fa146a1acd6c544f513925be5c1e6ca686e9546fd39f0c551f90:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzY3MThmMDY3YjVlNWMxZjA5OTFhNmU3NDcyNmZlMmEyM2QyNjQzNDVlMDhlNGVhZDA0ZmFmNzNjMjdlZDQ0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmQyM2UyMDFlOTljNTA0MjdmYmIyMzEyMTEyNWVmNjJjY2FhMTg3MGYzOWRlZGViMjE4ZjQ1ZDQ1OGQ2ZTc3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

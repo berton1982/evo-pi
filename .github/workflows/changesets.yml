@@ -1,0 +1,85 @@
+# .github/workflows/changesets.yml
+#
+# Changesets GitHub Action — version bumps on PRs, version PRs on push to main.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# TRIGGER  PR opened/reopened/synchronize (AC: 不需要 push to main)
+# EXPECTED OUTPUT
+#   on PR:
+#     - reads .changeset/*.md in PR head
+#     - runs `pnpm exec changeset version` to bump package versions
+#     - commits the version changes BACK to the PR branch
+#     - updates lockfiles (pnpm-lock.yaml) and CHANGELOG.md
+#   on push to main (future, not in T03b):
+#     - if changesets remained unconsumed, creates automated "Version Packages"
+#       PR with all pending bumps
+# PERMISSIONS (GitHub-native GITHUB_TOKEN)
+#   contents: write         — commit version bumps to the PR branch
+#   pull-requests: write    — create "Version Packages" PR + comment
+#   id-token: write         — npm provenance (skipped here; access: restricted)
+# ─────────────────────────────────────────────────────────────────────────────
+# ACTION VERSION
+#   Uses @changesets/action@v2 (NOT @v1).
+#   v1 is for Changesets CLI v2; v2 is for Changesets CLI v3.
+#   Our changesets/cli is ^3.0.3 (see T03a) — must use action v2.
+#   Inputs also renamed in v2: `publish` → `publish-script`, `version` →
+#   `version-script`. See https://github.com/changesets/action#api for details.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Changesets
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+# Cancel in-progress runs when a new commit pushes to the PR
+concurrency:
+  group: changesets-${{ github.workflow_id }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Minimal permissions the action needs (least-privilege)
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  version:
+    name: Version packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so changesets/action can detect changes vs base
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          # Match the workspace's packageManager pin (pnpm@9.15.0)
+          version: 9.15.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run changesets action
+        id: changesets
+        uses: changesets/action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # packages are private (access: restricted) → publish is a
+          # no-op for now. Action still does version + commit on PR.
+          # When P5+ introduces publishable packages, change to:
+          #   publish-script: pnpm run release
+          publish-script: 'echo "[P0] access=restricted; skipping publish step"'
+          version-script: 'pnpm exec changeset version'
+          commit-message: 'chore(version): version packages'
+          pr-title: 'chore: version packages'

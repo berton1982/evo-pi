@@ -1,0 +1,41 @@
+{
+  "//": "对账脚本登记表：id → 干什么 → 覆盖哪些行为 → 怎么跑。C3 要求 behaviors.md 里的 script_id 都在这里，且无孤儿。",
+  "baseUrl": "http://127.0.0.1:30141",
+  "flows": [
+    {
+      "id": "s-001",
+      "title": "首屏加载：默认 cwd 的会话列表 + 空消息区",
+      "kind": "auto",
+      "status": "pending",
+      "file": "e2e/parity/first-load.spec.ts"
+    },
+    {
+      "id": "s-002",
+      "title": "会话切换：点侧边栏切到另一会话，消息区与 URL 同步",
+      "kind": "auto",
+      "status": "pending",
+      "file": "e2e/parity/switch-session.spec.ts"
+    },
+    {
+      "id": "s-003",
+      "title": "发送消息并流式接收（含中止）",
+      "kind": "auto",
+      "status": "pending",
+      "file": "e2e/parity/send-and-stream.spec.ts"
+    },
+    {
+      "id": "s-004",
+      "title": "打开设置 → 技能页，列表与开关渲染",
+      "kind": "auto",
+      "status": "pending",
+      "file": "e2e/parity/settings-skills.spec.ts"
+    },
+    {
+      "id": "m-001",
+      "title": "Esc 中止当前 agent（无弹层时）",
+      "kind": "manual",
+      "status": "manual",
+      "reason": "需要真实长时间运行的 agent 才有可中止对象，无头环境无法稳定复现"
+    }
+  ]
+}

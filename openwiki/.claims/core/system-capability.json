@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f8d56701d4488d2ec32b708ab1ddc76442fb33211fd38ea6abd2222d4ea2c3c9",
+  "claims": [
+    {
+      "id": "claim_47257777f57c42b692e479126e0aa7f9",
+      "statement": "resolveAgentDir 的解析优先级为 PI_CODING_AGENT_DIR 原样返回（不做 ~ 展开）→ HOME/USERPROFILE + /.pi/agent → 字面量 '~/.pi/agent' 兜底；这是全仓唯一读取该 env 的位置。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/adapters/in-memory-system-adapter.ts#L18-L34",
+          "version": "repo-lines-v1:sha256:5395b142cc1f000e1b5896d986030015fae921644456599f2f113afc1022e0f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkNjgxNTgzY2QwYTMzYjc3ODE4N2JkYzgyNDZhNzc1ZmM1YTFmM2RlYmU3MWU3OGNiN2M2NmRjZDg1ZDViODQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjYzE4MTg2OTVkZWNjYTQ2OWNkN2IwOWFhMGMzZDQ2MjNiMGEwYWUzZTJjMGZhYjBlNDQ0ODdhMzc5NzYwYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyNGFhYmJmMDI4NGE0M2E0ZDk2NWRhNmEyZjY0NzdmMWM3N2VjN2E3OTk1MGE0ZTI0MWUyNDU2MDRkYzJmZTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a23ca3b26c5a4b5abcc8e1365a95d617",
+      "statement": "InMemorySystemAdapter.getConfig 每次调用都重新 makeCwd(process.cwd()) 并重跑 resolveAgentDir，而 web 的 Route Handler 在模块加载时把结果冻结为 SYSTEM_CONFIG 常量，导致运行期变更 cwd 或 env 不会影响已接线的 storage 与 indexer。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/adapters/in-memory-system-adapter.ts#L36-L46",
+          "version": "repo-lines-v1:sha256:2fcd02f04f3f052c27199f5977f7b5712f8db73d413cac83f966e53235de6bf7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkNjM1YTUwYWQwZWFiMjAwODA3YTliYzAxOWZjMGQ5NzcxNjJjNGJiOGYyYTY1NTM4Yjg1ZGQ1NDQxOThiMmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ1ZDUzNDFlOTRmYTUxMmNjNmVhNGM1Y2I2Y2M0NjJmYTdjZGEyOGUxZjFjYjU5YjdjYzExNTUxYzdkZDYxMmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxOGIzZTI2YTc5MTBmYzFhY2U0ZGNhMjE0NDhlNWQ2MjBmOGMwNGEzMTk5YTA4ZDU2Nzc5OWU2OWJiZGQzOTkifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L48-L57",
+          "version": "repo-lines-v1:sha256:043507ad5c6b83d250df56f59fc586314370fceef3ab971a194862def499449c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwNTlmNzdjMmVlYjkyNTk0ZDdhZGM4YjY1MmM5MmI2NWRlOThkMDNmYjJlNjk1MjQxMjg1MjJhNDEyMDk3NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExOTYwZDAxYWVjNTA4OGI1YzIyZDdhN2NjZmI3YTgzOTQ3Y2YyMDAxZjUyNjcyNjQ5MDU3MGE5MGM1ZWNjZmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQxY2Q2ZTk4YzViZDkwOGRmZGIzZDhmNTFkMTcyZGY2NWIyOTU2MzJiYTlhZGExMGQ2ZGUxNjlmYjVkZTZmYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQyMmRkN2ZkZjQzMDgyOTJlMTFkN2ZiN2RjOGZjMDM4MzgwZDI4OTk1NzExOTNhMzAxMjczYjFlMjIyYzQ4OTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f85f22d2b444cfda952a3f4d076ebad",
+      "statement": "checkTrust 忽略入参并恒返回 requiresTrust=false/trusted=true/decision=null/inherited=false，因此 /api/sessions 的 403 分支在结构上存在但不可达，当前 evo-pi 无条件读取 defaultCwd 下的会话文件而无任何目录信任校验。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/adapters/in-memory-system-adapter.ts#L47-L56",
+          "version": "repo-lines-v1:sha256:f7dd07015f8992b049991469e6f0f0644b1c26a06f9875d2be46e7cdfffe14aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyZTRhODM1NWFkMGRhNzZjMTk1NGNiNzc5YzQ3NGU3MTg4MTA1ZTcwYWE1ODk3NTdhN2M2MTU2NGUwYTcyMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3MWZhOTJjNTJmYzA4Y2UwZDMyM2VhNmI4ODk4YzcyMWJhNzg4ODQ5ZWJiYzg2MjljYTE3M2ViYmU0MTZiNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L68-L76",
+          "version": "repo-lines-v1:sha256:1b30646e0ac3554531bcae65ed3d83ca072bc7fe6b6d24ec337415f4fee8a2a8:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIyNDY5OTRjMTFlMTcyNzYyOTFjNmJmYTlmYTdhNTJlM2JiMmIzYjZmN2E1ZGQ4NzE4ZGNmZTkzMjI0MTlmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2E1ZjQyZWU2ZjQyMmMxNjNlYTViMjNhMGVjODk2ZTczZGExZTc3MGNjM2YwMDMwMmUyMTEwMmViYjFhOTMxZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGUyY2Y0NzIzNTliYzkxYTkyNTMxNWJjN2E5MGEwNTlmM2MxMmNhNjhlZjVmZGUzMmJhYzZiNDgyOWFiNGNkYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_51bcc6e7f44a4c2da08d43b2b1078ac0",
+      "statement": "ProjectTrustStatus 按参考实现的 7 字段形状定义（含 decisionPath、decisionError），类型注释明确标注当前未接入 SDK ProjectTrustStore、真实实现推迟到后续阶段。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/domain/project-trust.ts#L15-L39",
+          "version": "repo-lines-v1:sha256:cc83e59c1d50b55466102eee22503977ce1b42373d426208132b9e1c801b300b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYWI5ZWIzYzg3MGM2YTk5YTZkZjVmMjkxYzRlMWVmOTgzNmJmOTk0YWU1MjA3ZGM3Mjc1MDU1YjQ1Mzc4Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e009d62cedde4e8ba2b70089abff2b6e",
+      "statement": "system capability 的两个 use-case 与 session capability 同形状：注入端口并返回函数，不含业务判断。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/use-cases/check-project-trust.ts#L1-L21",
+          "version": "repo-lines-v1:sha256:28380173942702fbd3fd6c81ea1bf882131e988e544807c42cefa2ee2f0de238:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxMTFhMzFlYzM5MDQxYmFiZTA1MjI1M2ZjOTdmZmQ2MTEyOTI0ZDIyZWEzNjUyZWY3N2ViOTE2ZWJhNDM2YzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/system/use-cases/get-system-config.ts#L1-L17",
+          "version": "repo-lines-v1:sha256:48494af45876c9f46a53f49e656ae30d90bd590ff75abfd3c896c089f1c180e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmZTEzODcxN2Q5MmYzZWViMDk3NGZjNjA3YjQ5NGU4NjU3NjQwOTc4NDMwNDIyYzhmNWFmNmM5YWEyY2EwYWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c89944d422f8436c94ed80f671d108b2",
+      "statement": "SystemConfig 使用普通 interface 而非 branded type，注释解释为端口边界已校验 Cwd、内部无需重复 brand，并与 SDK SessionInfo 的朴素风格保持一致。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/domain/system-config.ts#L8-L34",
+          "version": "repo-lines-v1:sha256:8ee3d221cd366b85d4e54dbcb0fcbde9c4d68e8a19e1b8f5b11366253b887e00:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4YWM3YzA2ZmFkMGVmZjAzOGFkZGE3YjdhNDNhOTdmOWZkMWI0NTNjOTk4ZWE5MGUzMWY2YmYxNjNhOWE0M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkMTM1YzczMzJhZDk0MmFhYmVjZTNkZjBjZDNlMzBhNmMwMjIwNTcxYzUzYzE5MmVmZmY2ZDk2ZDAwMTY4MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1201f70293f5452d8115bba05a0355a9",
+      "statement": "Cwd 是当前唯一跨 capability 共享的类型，被 SystemConfig.defaultCwd 与 ProjectTrustPort.checkTrust 同时使用，落实了 ADR 0003 中跨 capability 类型必须走 _shared/ 的规则。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/_shared/domain/cwd.ts#L1-L20",
+          "version": "repo-lines-v1:sha256:b0bfcf026961a5ed2be14d994886b65f7e1ef2e7c586038ab8a06145d5edc7b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/system/domain/project-trust.ts#L30-L39",
+          "version": "repo-lines-v1:sha256:7fb0e43fc499a359bceb2a7e6f68d3778f5b9d23cbd528ee6dfd11585b8357f8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjNjE1ZGZiZTA2MjM3MmZkZDU0ZjYzYjQ1NzVlNDVmOTBmMmZjN2MzM2M2YWQ4NzMxZDMxZTJmN2M0MWZkODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/system/domain/system-config.ts#L24-L29",
+          "version": "repo-lines-v1:sha256:8de9a494bb9169af8cd53393f76891776a9013e78c10d719bd447d72f54af0ac:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc0Y2E2OGUxNDk2NWVhOWI3Y2RjZWVjNGQzZjIxZjkyOTI1ZTc3NGYzZDZiYTY3ZjQ2MGNjNjVhYWMyNzc1ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmQ4ZDVkYWI5NmY5NTQ0NzdhMTIxMjVmMzQ1MmEyNmM2Mjk0NzUwYjY0MjFmMjhlMGMwYjdkN2ZjYjgxMzMyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmI4NzkwMThjMmUxMWVmMWVjODAxOGViMmI0ZmQzMmU1N2IwNGZhMGU4ZWM3NWJiMWNkMWVjZTI4NDgzYzQxNyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

@@ -1,0 +1,458 @@
+# 符号全集 — `ref_projects/pi-web/components/SkillsConfig.tsx`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：1090；符号数：**450**；导出时间：2026-10-22T03:09:19.957Z
+
+## 符号（按出现顺序）
+
+- **AddSkillPanel** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:356`
+- **<function>** (function) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:479`
+- **<function>** (function) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:480`
+- **<function>** (function) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:497`
+- **background** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:488`
+- **border** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:489`
+- **borderRadius** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:490`
+- **color** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:491`
+- **color** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:506`
+- **color** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:510`
+- **disabled** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:465`
+- **display** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:450`
+- **display** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:475`
+- **flex** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:485`
+- **flex** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:519`
+- **flexDirection** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:451`
+- **fontSize** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:487`
+- **fontSize** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:506`
+- **fontSize** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:510`
+- **gap** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:452`
+- **gap** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:475`
+- **href** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:458`
+- **inputRef** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:378`
+- **install** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:412`
+- **useCallback() callback** (function) in `install` — `ref_projects/pi-web/components/SkillsConfig.tsx:413`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:422`
+- **error** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:422`
+- **success** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:422`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:431`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:417`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:420`
+- **cwd** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:420`
+- **package** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:420`
+- **scope** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:420`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:419`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:419`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:418`
+- **setNewlyInstalledPkgs() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:427`
+- **installError** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:373`
+- **installing** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:372`
+- **installPath** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:440`
+- **label** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:458`
+- **label** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:464`
+- **label** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:465`
+- **marginBottom** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:453`
+- **newlyInstalledPkgs** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:374`
+- **outline** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:492`
+- **overflowY** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:519`
+- **padding** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:486`
+- **query** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:368`
+- **results** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:369`
+- **results.map() callback** (function) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:520`
+- **<function>** (function) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:597`
+- **alignItems** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:534`
+- **alignItems** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:556`
+- **atIdx** (const) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:526`
+- **background** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:603`
+- **borderBottom** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:537`
+- **color** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:546`
+- **color** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:565`
+- **color** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:573`
+- **color** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:586`
+- **color** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:604`
+- **display** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:533`
+- **display** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:555`
+- **flex** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:540`
+- **flexShrink** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:602`
+- **flexWrap** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:558`
+- **fontFamily** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:563`
+- **fontSize** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:544`
+- **fontSize** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:564`
+- **fontSize** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:572`
+- **fontSize** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:585`
+- **fontWeight** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:545`
+- **fontWeight** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:574`
+- **gap** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:535`
+- **gap** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:557`
+- **isInstalled** (const) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:521`
+- **isInstalling** (const) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:524`
+- **marginBottom** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:547`
+- **minWidth** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:540`
+- **padding** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:536`
+- **repopart** (const) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:527`
+- **skillpart** (const) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:528`
+- **textDecoration** (property) in `results.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:587`
+- **scope** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:377`
+- **search** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:384`
+- **useCallback() callback** (function) in `search` — `ref_projects/pi-web/components/SkillsConfig.tsx:384`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:395`
+- **error** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:397`
+- **results** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:396`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:405`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:390`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:393`
+- **query** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:393`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:392`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:392`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:391`
+- **searchError** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:371`
+- **searching** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:370`
+- **setInstallError** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:373`
+- **setInstalling** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:372`
+- **setNewlyInstalledPkgs** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:374`
+- **setQuery** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:368`
+- **setResults** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:369`
+- **setScope** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:377`
+- **setSearchError** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:371`
+- **setSearching** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:370`
+- **t** (const) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:367`
+- **useEffect() callback** (function) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:380`
+- **value** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:464`
+- **value** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:465`
+- **wordBreak** (property) in `AddSkillPanel` — `ref_projects/pi-web/components/SkillsConfig.tsx:510`
+- **applySkillToggleResults** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:88`
+- **changed** (const) in `applySkillToggleResults` — `ref_projects/pi-web/components/SkillsConfig.tsx:91`
+- **map() callback** (function) in `changed` — `ref_projects/pi-web/components/SkillsConfig.tsx:91`
+- **results.filter() callback** (function) in `changed` — `ref_projects/pi-web/components/SkillsConfig.tsx:91`
+- **skills.map() callback** (function) in `applySkillToggleResults` — `ref_projects/pi-web/components/SkillsConfig.tsx:92`
+- **skill** (property) in `skills.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:93`
+- **disableModelInvocation** (property) in `skills.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:93`
+- **ConfigAddSourceHeading** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:22`
+- **ConfigButton** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:23`
+- **ConfigDetail** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:24`
+- **ConfigDetailActions** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:25`
+- **ConfigDetailHeader** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:26`
+- **ConfigDetailHeaderInfo** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:27`
+- **ConfigDetailStack** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:28`
+- **ConfigEmptyState** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:29`
+- **ConfigField** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:30`
+- **ConfigFooter** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:31`
+- **ConfigListAction** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:32`
+- **ConfigPanelShell** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:33`
+- **ConfigSaveTarget** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:34`
+- **ConfigScopeTag** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:35`
+- **ConfigSidebar** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:36`
+- **ConfigSidebarGroupLabel** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:37`
+- **ConfigSidebarGroupStatus** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:38`
+- **ConfigSidebarGroupSwitch** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:39`
+- **ConfigSidebarItem** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:40`
+- **ConfigSidebarList** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:41`
+- **ConfigSidebarText** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:42`
+- **ConfigSplitView** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:43`
+- **ConfigStatusDot** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:44`
+- **ConfigSwitch** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:45`
+- **ConfigTrustNotice** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:46`
+- **displayPathWithin** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:15`
+- **getLastSettingsSelection** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:18`
+- **itemsToSwitch** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:48`
+- **MarkdownBody** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:49`
+- **orderSkillsByDormancy** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:68`
+- **skills.filter() callback** (function) in `orderSkillsByDormancy` — `ref_projects/pi-web/components/SkillsConfig.tsx:72`
+- **skills.filter() callback** (function) in `orderSkillsByDormancy` — `ref_projects/pi-web/components/SkillsConfig.tsx:73`
+- **parseFrontmatter** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:16`
+- **projectTrustReloadKey** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:48`
+- **ProjectTrustStatus** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:13`
+- **resolveSkillLink** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:116`
+- **anchor** (const) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:118`
+- **anchor** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:120`
+- **anchor** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:121`
+- **anchor** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:127`
+- **document** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:120`
+- **document** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:121`
+- **document** (property) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:127`
+- **hash** (const) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:117`
+- **linkPath** (const) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:118`
+- **part** (const) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:123`
+- **parts** (const) in `resolveSkillLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:122`
+- **scopeLabel** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:62`
+- **setLastSettingsSelection** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:19`
+- **shortenPath** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:15`
+- **shortVersion** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:103`
+- **Skill** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:7`
+- **SkillContentResponse** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:6`
+- **SkillDetail** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:130`
+- **<function>** (function) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:226`
+- **<function>** (function) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:333`
+- **setDocuments() callback** (function) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:333`
+- **anchorRequest** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:167`
+- **color** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:232`
+- **color** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:237`
+- **color** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:312`
+- **documentPath** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:163`
+- **documents** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:162`
+- **enabled** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:157`
+- **fontSize** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:232`
+- **fontSize** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:237`
+- **fontSize** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:312`
+- **instructions** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:158`
+- **instructionsError** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:159`
+- **instructionsRef** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:164`
+- **label** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:156`
+- **openLink** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:169`
+- **useCallback() callback** (function) in `openLink` — `ref_projects/pi-web/components/SkillsConfig.tsx:169`
+- **link** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:170`
+- **setAnchorRequest() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:172`
+- **setDocuments() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:173`
+- **overflowWrap** (property) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:237`
+- **pendingAnchor** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:166`
+- **rootDocument** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:161`
+- **setAnchorRequest** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:167`
+- **setDocuments** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:162`
+- **setInstructions** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:158`
+- **setInstructionsError** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:159`
+- **t** (const) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:155`
+- **useEffect() callback** (function) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:185`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:207`
+- **controller** (const) in `useEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:186`
+- **load** (const) in `useEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:190`
+- **data** (const) in `load` — `ref_projects/pi-web/components/SkillsConfig.tsx:195`
+- **error** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:195`
+- **error** (var) in `load` — `ref_projects/pi-web/components/SkillsConfig.tsx:200`
+- **params** (const) in `load` — `ref_projects/pi-web/components/SkillsConfig.tsx:192`
+- **cwd** (property) in `params` — `ref_projects/pi-web/components/SkillsConfig.tsx:192`
+- **filePath** (property) in `params` — `ref_projects/pi-web/components/SkillsConfig.tsx:192`
+- **response** (const) in `load` — `ref_projects/pi-web/components/SkillsConfig.tsx:194`
+- **signal** (property) in `response` — `ref_projects/pi-web/components/SkillsConfig.tsx:194`
+- **useLayoutEffect() callback** (function) in `SkillDetail` — `ref_projects/pi-web/components/SkillsConfig.tsx:176`
+- **anchor** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:177`
+- **block** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:182`
+- **heading** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:181`
+- **root** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:178`
+- **SkillInstallScope** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:8`
+- **skillInstructionsBody** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:107`
+- **SkillsConfig** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:626`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:898`
+- **groupDefinitions** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:905`
+- **label** (property) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:907`
+- **label** (property) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:913`
+- **label** (property) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:919`
+- **label** (property) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:925`
+- **label** (property) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:931`
+- **matches** (method) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:908`
+- **matches** (method) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:914`
+- **matches** (method) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:920`
+- **matches** (method) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:926`
+- **matches** (method) in `groupDefinitions` — `ref_projects/pi-web/components/SkillsConfig.tsx:932`
+- **groups** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:899`
+- **groups.map() callback** (function) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:971`
+- **<function>** (function) in `groups.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:984`
+- **allVisible** (const) in `groups.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:973`
+- **group** (property) in `groups.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:983`
+- **visible** (const) in `groups.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:972`
+- **grpSkills.filter() callback** (function) in `visible` — `ref_projects/pi-web/components/SkillsConfig.tsx:972`
+- **grpSkills** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:936`
+- **label** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:935`
+- **label** (property) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:938`
+- **matches** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:935`
+- **renderSkillRow** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:940`
+- **<function>** (function) in `renderSkillRow` — `ref_projects/pi-web/components/SkillsConfig.tsx:948`
+- **<function>** (function) in `renderSkillRow` — `ref_projects/pi-web/components/SkillsConfig.tsx:957`
+- **key** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:958`
+- **status** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:959`
+- **disabled** (const) in `renderSkillRow` — `ref_projects/pi-web/components/SkillsConfig.tsx:943`
+- **isSelected** (const) in `renderSkillRow` — `ref_projects/pi-web/components/SkillsConfig.tsx:941`
+- **scopeLabels** (const) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:900`
+- **global** (property) in `scopeLabels` — `ref_projects/pi-web/components/SkillsConfig.tsx:902`
+- **path** (property) in `scopeLabels` — `ref_projects/pi-web/components/SkillsConfig.tsx:903`
+- **project** (property) in `scopeLabels` — `ref_projects/pi-web/components/SkillsConfig.tsx:901`
+- **skills** (property) in `<function>` — `ref_projects/pi-web/components/SkillsConfig.tsx:938`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1001`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1027`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1051`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1052`
+- **<function>** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1082`
+- **addMode** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:648`
+- **bulkBusy** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:873`
+- **bulkGroup** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:646`
+- **checkForUpdates** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:702`
+- **useCallback() callback** (function) in `checkForUpdates` — `ref_projects/pi-web/components/SkillsConfig.tsx:702`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:724`
+- **error** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:726`
+- **updates** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:725`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:736`
+- **keys** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:706`
+- **filter() callback** (function) in `keys` — `ref_projects/pi-web/components/SkillsConfig.tsx:708`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:715`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:718`
+- **cwd** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:719`
+- **package** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:720`
+- **scope** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:721`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:717`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:717`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:716`
+- **setCheckingUpdates() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:712`
+- **setCheckingUpdates() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:739`
+- **key** (const) in `setCheckingUpdates() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:741`
+- **next** (const) in `setCheckingUpdates() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:740`
+- **setUpdateStatuses() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:729`
+- **next** (const) in `setUpdateStatuses() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:730`
+- **current** (property) in `next` — `ref_projects/pi-web/components/SkillsConfig.tsx:730`
+- **update** (const) in `setUpdateStatuses() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:731`
+- **targets** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:703`
+- **skills.filter() callback** (function) in `targets` — `ref_projects/pi-web/components/SkillsConfig.tsx:705`
+- **checkingAll** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:651`
+- **checkingUpdates** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:650`
+- **color** (property) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1066`
+- **error** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:641`
+- **filter() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1064`
+- **filter() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1069`
+- **filter() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1073`
+- **fontSize** (property) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1066`
+- **global** (property) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1016`
+- **map() callback** (function) in `global` — `ref_projects/pi-web/components/SkillsConfig.tsx:1019`
+- **skills.filter() callback** (function) in `global` — `ref_projects/pi-web/components/SkillsConfig.tsx:1018`
+- **groupStatus** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:647`
+- **loadedTrustKeyRef** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:691`
+- **loading** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:640`
+- **loadSkills** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:656`
+- **useCallback() callback** (function) in `loadSkills` — `ref_projects/pi-web/components/SkillsConfig.tsx:656`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:661`
+- **error** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:661`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:672`
+- **list** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:663`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:660`
+- **setSelected() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:666`
+- **initialSkill** (const) in `setSelected() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:668`
+- **list.find() callback** (function) in `initialSkill` — `ref_projects/pi-web/components/SkillsConfig.tsx:668`
+- **list.some() callback** (function) in `setSelected() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:667`
+- **project** (property) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1021`
+- **map() callback** (function) in `project` — `ref_projects/pi-web/components/SkillsConfig.tsx:1024`
+- **skills.filter() callback** (function) in `project` — `ref_projects/pi-web/components/SkillsConfig.tsx:1023`
+- **projectResourcesLoaded** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:654`
+- **saveError** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:644`
+- **selected** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:642`
+- **selectedSkill** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:872`
+- **skills.find() callback** (function) in `selectedSkill` — `ref_projects/pi-web/components/SkillsConfig.tsx:872`
+- **setAddMode** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:648`
+- **setBulkGroup** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:646`
+- **setCheckingAll** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:651`
+- **setCheckingUpdates** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:650`
+- **setError** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:641`
+- **setGroupSkills** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:830`
+- **useCallback() callback** (function) in `setGroupSkills` — `ref_projects/pi-web/components/SkillsConfig.tsx:830`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:845`
+- **error** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:845`
+- **results** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:845`
+- **disableModelInvocation** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:834`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:860`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:854`
+- **count** (property) in `error` — `ref_projects/pi-web/components/SkillsConfig.tsx:855`
+- **failures.map() callback** (function) in `error` — `ref_projects/pi-web/components/SkillsConfig.tsx:856`
+- **total** (property) in `error` — `ref_projects/pi-web/components/SkillsConfig.tsx:855`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:861`
+- **failures** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:849`
+- **results.filter() callback** (function) in `failures` — `ref_projects/pi-web/components/SkillsConfig.tsx:849`
+- **filePaths** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:833`
+- **targets.map() callback** (function) in `filePaths` — `ref_projects/pi-web/components/SkillsConfig.tsx:833`
+- **group** (property) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:853`
+- **group** (property) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:861`
+- **names** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:851`
+- **targets.map() callback** (function) in `names` — `ref_projects/pi-web/components/SkillsConfig.tsx:851`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:840`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:843`
+- **disableModelInvocation** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:843`
+- **filePaths** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:843`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:842`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:842`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:841`
+- **results** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:847`
+- **setSkills() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:848`
+- **setToggling() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:835`
+- **setToggling() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:864`
+- **filePath** (const) in `setToggling() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:866`
+- **next** (const) in `setToggling() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:865`
+- **targets** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:831`
+- **setGroupStatus** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:647`
+- **setLoading** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:640`
+- **setProjectResourcesLoaded** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:654`
+- **setSaveError** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:644`
+- **setSelected** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:642`
+- **setSkills** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:639`
+- **setToggling** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:643`
+- **setUpdateError** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:653`
+- **setUpdateStatuses** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:649`
+- **setUpdatingSkill** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:652`
+- **skills** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:639`
+- **skills.some() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:1081`
+- **t** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:638`
+- **toggle** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:790`
+- **useCallback() callback** (function) in `toggle` — `ref_projects/pi-web/components/SkillsConfig.tsx:790`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:804`
+- **error** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:804`
+- **success** (property) in `d` — `ref_projects/pi-web/components/SkillsConfig.tsx:804`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:816`
+- **next** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:791`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:796`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:799`
+- **disableModelInvocation** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:801`
+- **filePath** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:800`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:798`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:798`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:797`
+- **setSkills() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:809`
+- **prev.map() callback** (function) in `setSkills() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:810`
+- **s** (property) in `prev.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:812`
+- **disableModelInvocation** (property) in `prev.map() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:812`
+- **setToggling() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:792`
+- **setToggling() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:819`
+- **n** (const) in `setToggling() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:820`
+- **toggling** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:643`
+- **trustKey** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:690`
+- **updateError** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:653`
+- **updateInstalledSkill** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:748`
+- **useCallback() callback** (function) in `updateInstalledSkill` — `ref_projects/pi-web/components/SkillsConfig.tsx:748`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:763`
+- **error** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:766`
+- **skill** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:765`
+- **success** (property) in `data` — `ref_projects/pi-web/components/SkillsConfig.tsx:764`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:783`
+- **key** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:750`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:754`
+- **body** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:757`
+- **cwd** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:758`
+- **package** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:759`
+- **scope** (property) in `body` — `ref_projects/pi-web/components/SkillsConfig.tsx:760`
+- **headers** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:756`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/components/SkillsConfig.tsx:756`
+- **method** (property) in `res` — `ref_projects/pi-web/components/SkillsConfig.tsx:755`
+- **setUpdateStatuses() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:773`
+- **[key]** (property) in `setUpdateStatuses() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:775`
+- **currentVersion** (property) in `[key]` — `ref_projects/pi-web/components/SkillsConfig.tsx:779`
+- **latestVersion** (property) in `[key]` — `ref_projects/pi-web/components/SkillsConfig.tsx:780`
+- **package** (property) in `[key]` — `ref_projects/pi-web/components/SkillsConfig.tsx:776`
+- **scope** (property) in `[key]` — `ref_projects/pi-web/components/SkillsConfig.tsx:777`
+- **state** (property) in `[key]` — `ref_projects/pi-web/components/SkillsConfig.tsx:778`
+- **current** (property) in `setUpdateStatuses() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:774`
+- **versionHash** (const) in `useCallback() callback` — `ref_projects/pi-web/components/SkillsConfig.tsx:772`
+- **updateStatuses** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:649`
+- **updatingSkill** (const) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:652`
+- **useEffect() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:680`
+- **useEffect() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:692`
+- **useEffect() callback** (function) in `SkillsConfig` — `ref_projects/pi-web/components/SkillsConfig.tsx:698`
+- **SkillScope** (type) — `ref_projects/pi-web/components/SkillsConfig.tsx:51`
+- **SkillSearchResult** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:9`
+- **SkillsResponse** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:10`
+- **skillsToSwitch** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:81`
+- **itemsToSwitch() callback** (function) in `skillsToSwitch` — `ref_projects/pi-web/components/SkillsConfig.tsx:84`
+- **SkillToggleResult** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:11`
+- **SkillUpdateResult** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:12`
+- **sourceLabel** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:54`
+- **scope** (const) in `sourceLabel` — `ref_projects/pi-web/components/SkillsConfig.tsx:56`
+- **src** (const) in `sourceLabel` — `ref_projects/pi-web/components/SkillsConfig.tsx:55`
+- **Translate** (type) — `ref_projects/pi-web/components/SkillsConfig.tsx:52`
+- **updateKey** (function) — `ref_projects/pi-web/components/SkillsConfig.tsx:97`
+- **useCallback** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:3`
+- **useEffect** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:3`
+- **useI18n** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:4`
+- **useLayoutEffect** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:3`
+- **useRef** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:3`
+- **useState** (alias) — `ref_projects/pi-web/components/SkillsConfig.tsx:3`

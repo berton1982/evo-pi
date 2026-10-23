@@ -1,0 +1,21 @@
+{
+  "//TODO-init-scaffold": "由 state.mjs init 从 templates/arch-rules.json 铺底，填完删掉本行",
+    "//": "arch/rules.json 的形状样本。ARCHITECTURE.md §1/§2 的机器版本，check-phase 的 archRules/commMatrix 读它。",
+  "//mechanisms": "两种写法都接受：字符串数组，或 { id: label } 对象。值必须原样出现在 arch/communication.md 的「通道」列里。",
+  "//maxFileLines": "数字（全局上限）或按目录的对象，两者都接受。",
+  "layerOrder": ["presentation", "application", "domain", "ports", "adapters"],
+  "layerPaths": {
+    "presentation": ["packages/web/src/app", "packages/web/src/components"],
+    "application": ["packages/core/src/use-cases"],
+    "domain": ["packages/core/src/domain"],
+    "ports": ["packages/core/src/ports"],
+    "adapters": ["packages/core/src/adapters"]
+  },
+  "forbiddenEdges": [
+    { "from": "presentation", "to": "adapters", "reason": "绕过 use-case 与 port" },
+    { "from": "domain", "to": "adapters", "reason": "领域层必须可纯函数测试" },
+    { "from": "ports", "to": "adapters", "reason": "接口不得依赖实现" }
+  ],
+  "mechanisms": ["fetch+zod", "SSE", "props", "zustand→ui-state", "use-case"],
+  "maxFileLines": 400
+}

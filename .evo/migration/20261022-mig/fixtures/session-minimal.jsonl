@@ -1,0 +1,11 @@
+{"type":"session","version":3,"id":"20261022_abc123","timestamp":1760000000000,"cwd":"/home/berton/evo-pi","parentSession":"20261021_parent"}
+{"type":"session_info","name":"迁移试点会话","timestamp":1760000000001}
+{"type":"thinking_level_change","thinkingLevel":"medium","timestamp":1760000000002}
+{"type":"model_change","provider":"anthropic","modelId":"claude-sonnet-4-5","timestamp":1760000000003}
+{"type":"message","role":"user","content":"帮我把 SkillsConfig.tsx 迁过来","timestamp":1760000000004}
+{"type":"message","role":"assistant","content":[{"type":"thinking","thinking":"先读源码"},{"type":"text","text":"我先读一遍源码。"},{"type":"toolCall","id":"tc_1","name":"read","arguments":{"path":"components/SkillsConfig.tsx"}}],"timestamp":1760000000005}
+{"type":"message","role":"tool","content":[{"type":"toolResult","toolCallId":"tc_1","content":"…1089 行…"}],"timestamp":1760000000006}
+{"type":"custom","customType":"pi-web.demo","data":{"note":"未知字段必须保留","n":1},"timestamp":1760000000007}
+{"type":"custom_message","customType":"pi-web.notice","content":"扩展注入的可见消息","timestamp":1760000000008}
+{"type":"compaction","summary":"压缩到 3 条消息","tokensBefore":42000,"timestamp":1760000000009}
+{"type":"future_unknown_type","whatever":{"x":1},"timestamp":1760000000010}

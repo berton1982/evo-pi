@@ -1,0 +1,23 @@
+{
+  // 与 .markdownlint.json 保持一致的规则集；markdownlint-cli2 用自己的配置文件
+  "config": {
+    "default": true,
+    "MD013": false,   // 行长不设限（中文文档 + 表格）
+    "MD033": false,   // 允许内联 HTML
+    "MD060": false,
+    // 本仓 ADR / 技能 / agent 定义用 YAML frontmatter 的 title 字段当标题，
+    // 文档正文不再重复写 H1。让 markdownlint 忽略 frontmatter 里的 title，
+    // 否则它会把 frontmatter title 与正文 H1 判成 MD025。
+    "MD025": { "front_matter_title": "" },
+    "MD041": false    // 技能与 agent 定义文件以 frontmatter 起头，正文首个标题常为 H2
+  },
+  "ignores": [
+    "**/node_modules/**",
+    "ref_projects/**",   // vendored pi-web，不属本仓文档规范
+    "**/dist/**",
+    "**/.next/**",
+    "**/.turbo/**",
+    "openwiki/**",       // OpenWiki 生成物：frontmatter 后的 H1 属 OKF 规范，禁止手改
+    ".evo/**/evidence/**" // LSP 导出与覆盖率报告：机器产物，禁止格式化工具改写
+  ]
+}

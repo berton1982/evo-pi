@@ -1,0 +1,60 @@
+{
+  "name": "@evo-pi/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "evo-pi core capability library (Clean Architecture 4-layer; per ADR 0003). Currently an empty scaffold pending first capability.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "biome check .",
+    "test": "echo 'packages/core tests run via root vitest'",
+    "dev": "echo '[packages/core] dev (placeholder)'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "^1.1.0",
+    "@earendil-works/pi-coding-agent": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "^7.0.2"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./session": {
+      "types": "./dist/session/index.d.ts",
+      "default": "./dist/session/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp/index.d.ts",
+      "default": "./dist/mcp/index.js"
+    },
+    "./mcp/*": {
+      "types": "./dist/mcp/*",
+      "default": "./dist/mcp/*"
+    },
+    "./session/*": {
+      "types": "./dist/session/*",
+      "default": "./dist/session/*"
+    },
+    "./system": {
+      "types": "./dist/system/index.d.ts",
+      "default": "./dist/system/index.js"
+    },
+    "./system/*": {
+      "types": "./dist/system/*",
+      "default": "./dist/system/*"
+    },
+    "./_shared/*": {
+      "types": "./dist/_shared/*",
+      "default": "./dist/_shared/*"
+    },
+    "./mcp/server": {
+      "types": "./dist/mcp/server.d.ts",
+      "default": "./dist/mcp/server.js"
+    }
+  }
+}

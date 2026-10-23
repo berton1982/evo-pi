@@ -1,0 +1,13 @@
+{
+  "file": "ref_projects/pi-web/components/McpConfig.tsx",
+  "mode": "tsserver",
+  "tsserverPath": "../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js",
+  "tsVersion": "5.9.3",
+  "project": "ref_projects/pi-web/tsconfig.json",
+  "projectLoaded": [
+    "ref_projects/pi-web/tsconfig.json"
+  ],
+  "count": 831,
+  "lines": 2259,
+  "generatedAt": "2026-10-22T07:12:09.223Z"
+}

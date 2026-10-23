@@ -1,0 +1,237 @@
+{
+  "//": "ARCHITECTURE.md 的机器版本。archRules/commMatrix/D6/D10 都读它；字段形状说明见 references/templates/arch-rules.json。",
+  "//mechanisms": "值必须原样出现在 arch/communication.md 的「通道」列。",
+  "//maxFileLines": "数字（全局上限）或按目录对象。domain/use-cases 更严，组件次之。",
+  "layerOrder": [
+    "presentation",
+    "application",
+    "domain",
+    "ports",
+    "adapters",
+    "infrastructure"
+  ],
+  "layerPaths": {
+    "presentation": [
+      "packages/web/src/app",
+      "packages/web/src/shell",
+      "packages/web/src/features",
+      "packages/web/src/components",
+      "packages/web/src/lib"
+    ],
+    "use-cases": [
+      "packages/core/src/session/use-cases",
+      "packages/core/src/mcp/use-cases"
+    ],
+    "domain": [
+      "packages/core/src/_shared/domain",
+      "packages/core/src/session/domain",
+      "packages/core/src/mcp/domain",
+      "packages/core/src/system/domain"
+    ],
+    "ports": [
+      "packages/core/src/mcp/domain/ports",
+      "packages/core/src/session/domain/ports"
+    ],
+    "adapters": [
+      "packages/core/src/mcp/adapters",
+      "packages/core/src/session/adapters",
+      "packages/core/src/system/adapters"
+    ],
+    "infrastructure": [
+      "packages/core/src/session/infrastructure",
+      "packages/core/src/mcp/infrastructure"
+    ]
+  },
+  "forbiddenEdges": [
+    {
+      "from": "presentation",
+      "to": "adapters",
+      "why": "前端拿到 adapter 会绕过用例写数据"
+    },
+    {
+      "from": "presentation",
+      "to": "infrastructure",
+      "why": "同上，且会把 node:fs 拖进浏览器包"
+    },
+    {
+      "from": "application",
+      "to": "adapters",
+      "why": "用例依赖实现则端口形同虚设"
+    },
+    {
+      "from": "application",
+      "to": "infrastructure",
+      "why": "同上"
+    },
+    {
+      "from": "domain",
+      "to": "application",
+      "why": "依赖必须向内"
+    },
+    {
+      "from": "domain",
+      "to": "adapters",
+      "why": "dependency inversion"
+    },
+    {
+      "from": "ports",
+      "to": "adapters",
+      "why": "端口只能写接口"
+    }
+  ],
+  "pureModules": [
+    "packages/core/src/_shared/domain/**",
+    "packages/web/src/lib/i18n/**",
+    "packages/web/src/lib/format/**"
+  ],
+  "mechanisms": [
+    {
+      "id": "C-01",
+      "label": "HTTP route → use-case → port"
+    },
+    {
+      "id": "C-02",
+      "label": "HTTP route（幂等键）"
+    },
+    {
+      "id": "C-03",
+      "label": "SSE /api/agent/[id]/events"
+    },
+    {
+      "id": "C-04",
+      "label": "应用框架 notify()（单 sink）"
+    },
+    {
+      "id": "C-05",
+      "label": "带范围的失效广播"
+    },
+    {
+      "id": "C-06",
+      "label": "编排层一次性 reset(scope)"
+    },
+    {
+      "id": "C-07",
+      "label": "store 真源 + URL 镜像"
+    },
+    {
+      "id": "C-08",
+      "label": "localStorage（键名冻结）"
+    },
+    {
+      "id": "C-09",
+      "label": "用例返回结果对象"
+    },
+    {
+      "id": "C-10",
+      "label": "文件系统 + 索引缓存（可丢）"
+    }
+  ],
+  "forbiddenMechanisms": [
+    "全局事件总线",
+    "window.postMessage",
+    "组件间 ref 直连",
+    "localStorage 当业务数据源"
+  ],
+  "maxFileLines": {
+    "packages/core/src/*/domain": 300,
+    "packages/core/src/*/use-cases": 300,
+    "packages/core/src/*/ports": 200,
+    "packages/core/src/*/adapters": 400,
+    "packages/web/src/components": 400,
+    "default": 500
+  },
+  "frontend": {
+    "doc": "arch/frontend.md",
+    "layers": [
+      {
+        "name": "route",
+        "path": "packages/web/src/app",
+        "mayImport": [
+          "lib",
+          "components"
+        ],
+        "mustNot": [
+          "core/adapters"
+        ]
+      },
+      {
+        "name": "feature",
+        "path": "packages/web/src/components",
+        "mayImport": [
+          "lib",
+          "ui"
+        ],
+        "mustNot": [
+          "app/api"
+        ]
+      },
+      {
+        "name": "lib",
+        "path": "packages/web/src/lib",
+        "mayImport": [
+          "core DTO"
+        ],
+        "mustNot": [
+          "react",
+          "next"
+        ]
+      },
+      {
+        "name": "ui",
+        "path": "packages/web/src/components/ui",
+        "mayImport": [
+          "lib"
+        ],
+        "mustNot": [
+          "feature"
+        ]
+      }
+    ],
+    "stateClasses": [
+      {
+        "name": "server-data",
+        "rule": "有网络往返、可能被外部改的数据放 store，靠失效广播更新",
+        "forbidden": "塞进组件 state，切页即丢"
+      },
+      {
+        "name": "user-preference",
+        "rule": "长期偏好写 localStorage，键名冻结并集中在 lib/preferences",
+        "forbidden": "写进 URL，分享链接带上别人的配置"
+      },
+      {
+        "name": "selection",
+        "rule": "选中态以 store 为真源、URL 为镜像，双向同步",
+        "forbidden": "以 URL 为唯一真源"
+      },
+      {
+        "name": "transient",
+        "rule": "只影响当前组件的瞬时状态留在组件内",
+        "forbidden": "为了省 props 放进全局 store 造成全树重渲染"
+      }
+    ],
+    "forbidden": [
+      "组件内直接 fetch 并自己 parse（绕过 zod 与错误码）",
+      "自绘按钮/开关等原语（必须用 components/ui）",
+      "在组件里写死颜色（必须用 token）",
+      "props 超过 6 个仍继续往下传 setter"
+    ],
+    "budgets": {
+      "maxProps": 6,
+      "maxLinesPerComponent": 400,
+      "maxFirstPaintMs": 2000,
+      "maxInteractionMs": 300
+    }
+  },
+  "web": {
+    "enabled": true,
+    "root": "packages/web/src",
+    "slices": "features",
+    "allowedRoots": [
+      "app",
+      "shell",
+      "features",
+      "components/ui"
+    ],
+    "template": "_template"
+  }
+}

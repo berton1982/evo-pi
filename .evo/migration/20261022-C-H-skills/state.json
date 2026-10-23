@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-22T03:08:00.242Z",
+  "updatedAt": "2026-10-22T03:30:24.724Z",
+  "scope": "capability",
+  "rLevel": "R1",
+  "programRun": ".evo/migration/20261022-mig",
+  "gods": [
+    {
+      "path": "ref_projects/pi-web/components/SkillsConfig.tsx",
+      "lines": 1089,
+      "sha1": "8f06ea826e7c968a248f383e56ba943f71e0629f",
+      "symbols": 450,
+      "symbolSource": "LSP"
+    }
+  ],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "488d7ae5dfe31d3c7bb612a1cd95e1a0c55371e6"
+  },
+  "surfaceCount": 0,
+  "phase": "C5",
+  "phaseStatus": "in_progress",
+  "phases": {
+    "C0": {
+      "startedAt": "2026-10-22T03:08:00.242Z",
+      "doneAt": "2026-10-22T03:08:44.726Z"
+    },
+    "C1": {
+      "startedAt": "2026-10-22T03:08:44.726Z",
+      "doneAt": "2026-10-22T03:10:27.823Z"
+    },
+    "C2": {
+      "startedAt": "2026-10-22T03:10:27.823Z",
+      "doneAt": "2026-10-22T03:30:15.232Z"
+    },
+    "C3": {
+      "startedAt": "2026-10-22T03:30:15.233Z",
+      "doneAt": "2026-10-22T03:30:15.300Z"
+    },
+    "C4": {
+      "startedAt": "2026-10-22T03:30:15.300Z",
+      "doneAt": "2026-10-22T03:30:15.377Z"
+    },
+    "C5": {
+      "startedAt": "2026-10-22T03:30:15.377Z",
+      "doneAt": null
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {},
+  "decisions": [],
+  "tasks": {},
+  "history": [
+    {
+      "at": "2026-10-22T03:30:24.724Z",
+      "event": "pause",
+      "note": "C4 设计产物已收（9 职责/3 端口/27 state/5 store/3 组件/3 hook/8 协议/3 模式/4 原则/3 图，D2–D16 全绿，interfaces.ts 过 tsc --strict）；C5 真实现未开工"
+    }
+  ],
+  "paused": true,
+  "lastCommand": null,
+  "closed": false,
+  "run": ".evo/migration/20261022-C-H-skills"
+}

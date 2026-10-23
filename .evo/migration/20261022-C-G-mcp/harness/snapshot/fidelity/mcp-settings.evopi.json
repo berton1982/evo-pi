@@ -1,0 +1,3710 @@
+{
+  "capturedAt": "2026-10-23T09:01:50.971Z",
+  "url": "http://127.0.0.1:30041/sessions?cwd=%2Fhome%2Fberton%2Fevo-pi%2F.parity-proj",
+  "entries": [
+    {
+      "role": "h2",
+      "name": "MCP 服务器",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "刷新",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "添加 MCP",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "刷新",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "添加 MCP",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 5,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 5,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 6,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "刷新",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "添加 MCP",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "刷新",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "添加 MCP",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 4,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 5,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 3,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 4,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 全局 中的所有服务器",
+      "depth": 0,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "alphastdio",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 alpha",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "alpha：未测试",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "betahttp",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 beta",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "beta：未测试",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 2,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 3,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 1,
+      "state": "true"
+    },
+    {
+      "role": "switch",
+      "name": "关闭 项目 中的所有服务器",
+      "depth": 0,
+      "state": "true"
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "li",
+      "name": "gammastdio",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "switch",
+      "name": "关闭 gamma",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "gamma：未测试",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 2,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "h3",
+      "name": "alpha",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "测试连接",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "button",
+      "name": "移除",
+      "depth": 0,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 1,
+      "state": null
+    },
+    {
+      "role": "dt",
+      "name": "配置文件",
+      "depth": 0,
+      "state": null
+    }
+  ],
+  "textLength": 132,
+  "text": "MCP 服务器 刷新 添加 MCP 用户级 已启用 2/2 全部停用 alpha STDIO beta HTTP 本项目 已启用 1/1 全部停用 gamma STDIO alpha 用户级 测试连接 移除 配置文件 /tmp/e2e-agent/mcp.json"
+}

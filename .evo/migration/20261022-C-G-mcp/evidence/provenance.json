@@ -1,0 +1,9 @@
+{
+  "surface": {
+    "kind": "surface",
+    "count": 156,
+    "source": "cmd",
+    "cmd": "node .pi/skills/migrating-god-files/scripts/enumerate-surface.mjs --run .evo/migration/20261022-C-G-mcp",
+    "at": "2026-10-22T15:13:29.051Z"
+  }
+}

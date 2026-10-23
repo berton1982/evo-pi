@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:04b8a134414eb454d9bb787943047cc57089347efd364b54c0570b3ad4d03cfd",
+  "claims": [
+    {
+      "id": "claim_d6f58aa895ee4ddaaed9f9f155ef458c",
+      "statement": "SessionRepositoryPort 声明 7 个读侧方法，其中 readSessionInfo 采用 null-on-miss 契约，而 readSessionContext / readSessionEntries / readSessionTree 在找不到 session 时抛 typed error。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-repository.ts#L29-L95",
+          "version": "repo-lines-v1:sha256:b2648518a89443e0333ecf0db61ebcf121250c928fb324b6adb3b7f4bb4d3468:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNTdiMzA4M2Q3ZWZlOTFlZTJhYzMwOGQxZjkzNGZiZjdlYmM3NzIxMDkzMDI2YjE3ZWEzYTQwZDQ1MjE2NzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkN2JjZWI0ODJkMDZjYzkzMzdkNWE1MjA1ZjE5MjA5M2QwZTQ2ZDUwZGU0MDEyNmQ4ZWUxMzhhZjliOTdlOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c17bd78d866b40a986ceb6d28b46fd83",
+      "statement": "searchSessions 的签名在 Phase 2 从 searchSessions(cwd, query) 返回 SessionInfo[] 破坏性变更为 searchSessions(query) 返回 SessionSearchResponse，变更时通过全仓检索确认除占位实现与端口声明外没有外部调用者。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L245-L252",
+          "version": "repo-lines-v1:sha256:8bcdde4aa9660f046c6581d16d607c95460ae9261e535c2cb0021ee82adfbbff:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjE3OWI0ZjU5ZGMyOTg1ZmQxNTlhODhjM2JiNTViNWU4NjM0MDM5M2I3Y2NiNGI3Y2MzOGUxNzFiOWFlNDk1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTAyY2E5NmVhMTZkY2U1NmUyNDcxMmM1MWMwYzdjODRkOWIzM2UxMDMxZTEwNjIwNzVkYzI4ZGUzYzk1ZDE0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNThhNDhlYTUwNGMxMWZiMDI0OGMwZDgyZGRkOWUwOGQ2ZjBjNTZmODVlMDIzMDY5NjhkNzUzZTliODBiZmEyOCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-repository.ts#L42-L53",
+          "version": "repo-lines-v1:sha256:5c3ab0fe32ef95667cb20352e16617f0a85039ca7540520bf32bce5e27f3d91b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNGVhODg0YjU3NjA0M2VjNTkwZWYwZTQxNTM4MzcwNzRhNGQ4MzljOTU0ODJiZTcwNzRmMTBlNWM1OTZiZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5MjI4ODkwZmNjZDEzOTkzNDMxNGUwMTE4ZjE1OWViZTkzODFlMmFlODdiZjBmM2Q5ZDA3NjRkYWYwYjkwYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU1ODkwZjQ1YWFmOGE4NDE5ZDBmZTViNGVkYWY4YjI5ZjVkZWFlNDQ2MTVmOTVmMzExMWIxN2E2NzBlN2E0NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_34e91b89716c440bb7d5a9e7ad190e8f",
+      "statement": "SessionStoragePort 是纯 IO 抽象（6 个方法），路径编码不自行实现，getSessionDir 直接委托 SDK 的 SessionManager.create(cwd).getSessionDir()。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/filesystem-session-storage.ts#L25-L33",
+          "version": "repo-lines-v1:sha256:ccf0ecb3c5dbbf8c3af26564a2a58f312b8d46f899361b2f58a79e9a47decec9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWVjZTUwOWY5YmExNjIyZWI1YzUyZTc4Y2FkYmNjMzZlOWI0NTQxMWNhYWFjMTk1OGU4MTMyMmJjOWYwMTZiOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JjOTdiOWM4ZGE2NWQwYjkyODQyNmI3M2M5NjY4YjdjNmRhNmIxZWFkNTM5MTY1YWMxNjJlMjhhZTQwNTg5YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODJlM2I0YmE2NjZjMWI4NzJlNzEwNjFkYzJmNDA2ZGQ0Y2Y4YTU2NGI2ZTU3NTExMTAwZTFjNjE2ZjgzZTIwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWE5MjkzZmQ4MDU0YjZlNDcyNDgzNzNmMzlmNGRkNzc4MDAxMDVlYjc1ODM0ODY4NzI1NDI4NWNkMTI4MmI3OCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-storage.ts#L35-L105",
+          "version": "repo-lines-v1:sha256:2c6d9343d807d2765dcf222313698ffde19a2cae648a91beacb373d3a2d9c635:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjNWNkMGQ4ZTZmMDRlZWIxMzU4ZjQ1ZGIzMTg5YzNlZGRlN2QyYzUwMDJkNTU2NDhlZjE0NDA3MDU5YTYzZmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0MWYyN2M5ZTcxMjRiMjkwODI2MGIwZWJlMjc3OTE2NTU3OTllOTIyNGZjN2JlNWQzZTQ2MTA0ZjBhMjZlNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7cdab36ca090420882e9a2ca7a7030ca",
+      "statement": "SessionIndexerPort 只缓存最小指纹字段（filePath / mtimeMs / size / id），不缓存 SessionInfo 本体，写入通过 invalidate 而非直接改动 getIndex 返回的引用。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-indexer.ts#L42-L57",
+          "version": "repo-lines-v1:sha256:3ee907f29b02ddeb5a940898ca73c893e3978832bc26b4f5c6750133f2a412a7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzNWViZmY3YmQ0Y2ZkNDEwODc4ZWYxMjEwN2IyMzA3ODg2NjUxZDNhMTRlMjIzZTNhZGU1MThlODlkN2ZkZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3YTE0MTUyNTE5YWRhOGY3NWFmZGVmYTI3Zjk0YWNhNWE3NmQxYWU1NGNlNTE5YmFjNDczMDIwY2E4NGU3YTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_004423ebeb8143198757c16a07255efe",
+      "statement": "6 个 use-case 全部是注入 port 并返回函数的纯 factory pass-through，本身不含业务判断，使测试可注入 fake port 而不依赖文件系统与 SDK。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/use-cases/list-sessions.ts#L1-L30",
+          "version": "repo-lines-v1:sha256:e412e1d526b4954e0828852d7ec1d304a6ee54fe470ce949d8d518a86d1b56e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3ZmFhNmFiZjRlYzBmNDRlYjUwM2EwMTEwY2I4MjBiZTQxZTA5ZTAwNzRmZTg5NTdjOGI2MGZkZWQzMjMwNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/use-cases/read-session-context.ts#L1-L26",
+          "version": "repo-lines-v1:sha256:095d25ab5c01ee3e7b71923c4ab1ad7450a81989074c9c84d1946bc6683fcee9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjZmRlMWE1YzJmMTk3YjUxZWEyYTY1Njc1OTczNjVmMTZmNzllOGE5NWRmYWY4MTVmNGZkZGVkZTg0YzdjY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_350f58baf4694bd9b0dad9b0372f95ca",
+      "statement": "JsonlSessionRepository.enumerateUnderDir 忽略传入的目录参数（参数名带下划线前缀），直接调用 storage.enumerateSessionFiles() 遍历 agentDir/sessions 下全部 cwd 子目录，因此 listSessions(cwd) 返回的是 agentDir 下所有会话而非端口注释承诺的 cwd 范围。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/filesystem-session-storage.ts#L109-L118",
+          "version": "repo-lines-v1:sha256:8db0f823d772f40eaeef24cca97633c2c9a573a7fcb8ee920e76ae7212b36d8d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlMTNiMWM0YjkyMzc4MDFiMmFiMDI4OWU1MWM4OThjYzM3MzVmYjQ4ZjI3ZjAwOWM0NWFhNTY1MjY3YzFlZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZGRkMjE2MGRkZTdkMTJhYzY2MWI0NGIwNTExOTA1NThjMTgxZjMzZGFjYTZiYWY3ZTI0Njg1ZmQwNDFlMDUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L369-L372",
+          "version": "repo-lines-v1:sha256:4be43185771c843d209fe3cb875a9d9633a088a0a6dbbdece75fbc3dd80021a8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ2YjJiNzE1NDk2ZDYyZjMzNWJlMDY5Zjc0MDFhODA4OWQ4YjE3MTNmMTk3MGJhMjAxZDZlMGJlOTgxM2NiMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzE3NGRmOTg5NmM5ZmY4YzFkYjdhMGYwNGNjMGI0ZTZkZTdjZTUzNWRhOGVlZTQ3NDU2YzJiOTY5NDYyNzliMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGFmODFmY2FkMjMwYjNkNzVkMzdlOTcyOTc3NWQzOWY4MDJjZWRkMDUzNTA0NzRjZGI2N2I4MTBlNDZhYmIyNSJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L56-L58",
+          "version": "repo-lines-v1:sha256:5282e73077b0e3f77b2bab06e1e779ff67ca106451d73859335fe28927227421:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWMwOTVhNDJiZTY0ODQ2NWMyZjUxYmY2MjgwZjk1MjM4ZDc5YjJmZDVkYTQxNTRlMDY5MTliMTAzMDgwYmI1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFmZDYxYzY2N2Q2MWY5OTJmNjFjMDc5NjI5MTM3ZDcyNzdiZWE1MjI5NmIxMGVlZjMyNWE2N2Q4ZTM4ZDJkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjg5MGM0Mjc5MDRlNTE3YzYzODA2ODc3YWNiODA3MTEzYmNlM2QwZmM5NjVmZDg2ZTQ4YzdkYmJhNWQwOGM0YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTczNmFlODYyODg0MGVmNDEyNzdjZWExMmNmNmZmMjVkMmM4ZjRkZWQ1NjdmY2Q5MDJhYjI4ZTM1ODNjOTZkNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_64fc6495a9314049b5ef4ff695e492c9",
+      "statement": "listSessions 的 scan-index 缓存命中分支只有注释而没有短路逻辑，指纹命中后仍然对每个文件调用 storage.readSessionInfo，索引在该路径上实际只承担写入指纹与清理已删除条目两个作用。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L388-L395",
+          "version": "repo-lines-v1:sha256:f73e34c61ca1f8562f9cf5eb72a58f0f564ac70c9b5bc20917d06a4b1749b58f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc0ZWVmNzAwZGMwYTQwOTkwNjAxZjVjYTQ3OGY0MTFiNmYzOGFmZjA0ZTc4YzI3NTRmYWRjNDM3ZTA0MDQyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmQwYjM5MDlkYjIzNTJkODc0NzNjZWI2NTUyOTVlMzU3OTE3YTdkZTA3N2Y5YzRjZjllOWY3MDQ0ODZiYWM0NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDVmZjNkODE1MDcyYTczZDFiOTI4YTVhZDY4YWRiZWIzNDFhOGYyNzkxMTlhYzgxOGRjMWZhZTY4NDY5MzZhMSJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L64-L75",
+          "version": "repo-lines-v1:sha256:895ead98843b0e4f661d887debda67f158a983dffda1cb81564dca8e538df6b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNWE5ZTMyNjRiNmFmZDEwNjhkZTE0MTdmMThmMGJiNWU5MThjODU0YWY2MDQxODFkMDg5NDgwZjQ0ODRlNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwNDRhNzhmZTVmMTQ0MzNlODhjMTY0NmM2ZDJlNzNjZTNhOGU3Y2E1ZDk2NTM1NWFmNDU2NzEwZGMwMjAzZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI3NTk5ZWExNzBkY2NmMTYwMWU0YjdmYjkyYmY5M2UzNTBhNzkzNjA1YTYxZTBmMzYxMTAzMWQwMWRiNmNlZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzMWFkMDNhODFjYjcyNDNlNDcwY2RiY2Q3NTc3MjczODMwNjg0NGM3MzVhNzQ2MDVjNmE3ZWI2Y2UxODY2ZDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fde0531b402c42cebdadc8222552fbd4",
+      "statement": "searchSessions 不复用 listSessions，而是调用私有 listSessionsSummaryAll() 枚举全部文件逐个 readSessionInfo，完全不经过 scan-index，与该方法上方“uses cache”的注释不符。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L374-L386",
+          "version": "repo-lines-v1:sha256:ba84d6f21a208c727729fcb9ba324738da63303887c218ef0129261944bb291c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2YzVmNGVjNWYwMzIwMzAzMjhjMmE2NGQ5MWUzNjdmYzczODQzYTBhYjViNTBjMDk3MjYyNzA2ZGIwNjhmZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5YmRlMWQ2ZTJiOGYwZDA0OTFlNGM4MTY5NmEyMTQ0MTU1Y2FhNThhZmQ5M2NiNjQ5M2I0MDZhMGE0Y2Q1NjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMmIwNjlmMTEzMjRiZTg3NjJjZWRkYWMyNDVlZDMxNzY0MTExZGVhYjFmYWRlY2Q2OTA2MTg4ZGRhNDkyYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f56e87ffaab450383ab3776cf34fecf",
+      "statement": "readSessionContext 的 before 游标语义是只返回严格早于 before 的祖先 entry：beforeIdx>0 取前段，beforeIdx===0（before 是首条）与 beforeIdx===-1（游标无效）都返回空集合。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L150-L168",
+          "version": "repo-lines-v1:sha256:070ef43a7ef515942d67c0ede1bdbb49c240763369185560d24c4be41a2401c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwNzRkZjRiOWE5NGNmOGIxOGI4YWM1MmUwYzQwNmQ5OTgzYzU3YmYxOTI1ODA2Nzk0YWEzYmQ0ZjFiMjE2NGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZmM5ZTY5MDA1NzU3NDVmOWI3ZjNmYzExZjg5YWIzMTM3NjhlMjEyOTY4ZmNjYWMyZWZhYjlkOWE3ZGVjYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1MWYyMzAzNTcyYTc1NmQyNTQ5NWFlZTJkMWIzN2Q0NTI3Mzk2MmI2OWJlYjllMTZhZjVlMjQxZjZjYmM4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQyYWE2MGY2OGJlYjQyMDQxOTViZDNlZDgzNGYwZmI1MjExOTYwZTNjOWY5NTkzMjQ2ODU1ZTQxYWI0NjdkZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_241075133b3743fcb866481a637ca87f",
+      "statement": "readSessionContext 的 tail 默认值从 50 提升到 10000 并以 10000 为硬上限（取值夹在 1..10000），hasMore 在 tail 切片之后按“返回条数少于 scoped 总数”计算。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L131-L136",
+          "version": "repo-lines-v1:sha256:d6adcaf04cf397102d9eb1a22b81f11f1e97b28d7bb9bc58f454bb59b4844183:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGYzYjAyMGUzMTgxODI1NGQ4MDU2OTg1OWVlM2I1YjRiOTk0NzY1M2UwMWE3YmVkM2I2YzRkY2E3ODAwNmMzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWU3MTEyN2Y3ZjVmMTcxN2I5NmU3ZTk3NjkwYTdkMTgxYTUwNzIzN2ZjYWQxODg0MGJiYjA5MzQwMjJhOTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjUwN2E2MTJmZTExYjA0NTc5OTlkZjgyZGI1YzQwNGI5ZWZlNDc1ZTUwNTAwOTVkZWEzNDllNGI3Y2M3NzhiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2UxZDUyNDFmZGMzZjlkYzRlZjM3ZDZiYjFiNzFlNjVlNGEzNDNiMzAxY2E0MTY3NWRhMDc3YzQwN2Y4NDMyYyJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L170-L178",
+          "version": "repo-lines-v1:sha256:4b16f2039998869eca987317f58c706851d940d510256a6aa71afaf98ab59eac:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTI2Y2MzMDRkYTM3ZGU5ZDUzMjUxZTEwNzJjNjNjOGRiN2MxMjA0NjhjMzIzYzg3YjZkOWIzYjI3MGQyMWUyYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGYzODU4YmYxN2Q2OGIyNzFhMDM4Yjg4NWI2MDg2MWEyZjM1NzYyYzg2NDBjM2NhNGQ0OWUxODMwZDhlODE1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzJiNjUzODYyOTVhNDk0ZDdjODkxYzliMjNmZDA1NTUwZDdmZjgwYWQyNTAyNjY4MmE3ZTk5OTQ5YjU0YzgyYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzMzZDk2NTQwMGE0NzE1N2RkODA3MDhmNGIzYzNiYTU5MjY3N2M1OTNhZTc3ODA5OTJhZGIyNTQ3ZTBlZTRiMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6eca9640f59c4632af0837c1ac015906",
+      "statement": "readSessionContext 调 SDK 的 buildSessionContext(walkEntries, undefined) 并把结果映射为 6 字段 wire SessionContext，其中与 messages 平行的 entryIds 由 filter(type==='message').map(id).slice(-messages.length) 得到。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L183-L196",
+          "version": "repo-lines-v1:sha256:a09adb2fc86e44e3357bbd214affb24b960d2ddddba7b558a8cbad50acc93e9c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkMGY5YzgyOTJiYzFjOTNmZGNkYmQzMDlmNWEyOTUyZjY4YzVmZTRhZDQyNDhjMjUxZWNkNGIzYTFiZmJkNzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjN2Y1YzQyMGI0ZGY1NzY1ZTc3YWY1YWFmMjNlMzA3YzIwMDNlMzYzNzRiYTAyNTMwN2NkNGMyMTFlNmI1N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUwMjFmOTM1YzRmN2RmNDljZjVlYTU0Nzg4ZDJlOTk0ZTA5MjdlMWQ3NDg5ZTM5ZDRlMzJkZGY0MTc0NzViODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/types.ts#L62-L69",
+          "version": "repo-lines-v1:sha256:8b0d01f7151fb33346645a819c6669ff426bbe2936b61f7de1baa40393dc20a6:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWM2MzQwNDhkYzFlNTc4YTI1Mjc1ZjQ5NDQ1NmRhZjFkNzFmMDhhNGY3NjgyODNlNDUzZTIxMmUzNTYzNTMwNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTc0YTM4ZGNkMTc4MTgyYTBlYzc3ZjNjZGI4ODIxZDI5NmQ5NmM1NDM2ODMzZmM4MjhiOWIxM2I5ZDkxY2JhZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjZmMGYzZTE0MDYxM2ZkOTI1NDgyNjMzODg0YjFjYWY1MDliYjcwN2JmY2ViZWY3YzIzZmNhOGVmNWZkODllNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_02478295bab748b99cc271fff9c031dd",
+      "statement": "session capability 的两个领域错误 SessionNotFoundError 与 SessionReadError 均继承 _shared/domain 的抽象基类 DomainError，携带 kind discriminator（session_not_found / session_read_error）与 cause，并用 Object.setPrototypeOf 修复原型链。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/_shared/domain/domain-error.ts#L19-L31",
+          "version": "repo-lines-v1:sha256:7198d3691a82063c5b23d2e78cff35270cbf136808eed73f87c7ac24db35d40b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNzUxMTk1M2JlZjY3NjJmMjNkMDY3ZmQ4ZDEzNjQ5ZDhkNzk4NTdjMzZjMWZjMjZkNDY5MDI5MTUzMTUwZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MDA5MjE2YTk0ZTliYzgxMmQ2MmI0Mjc3N2NhYmI1Y2MxYTRkZWYwZDRjMWYxNDhiYWViNmE2OWI3MjNhYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/session-not-found-error.ts#L24-L54",
+          "version": "repo-lines-v1:sha256:667df08a05a43b750db9d0bda699278891b59bc5f853815fc92226bee59f1f5e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyMTVhYmNkYTIyMGJmNjgyM2FkOWEyNTU0YjNiOGI3MjdhMmQ3ZDVkMjJmZTEwMjY5ZWY0ZjVmNzE2NWY0ZWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExM2ZkMmVhNGZiNjBmZDcyZDJhMjFkNzcxNjNlZWYyM2M2Y2Y1YmY5NzMwZDYyNDgzMTA5Yjk5ODhjNDBiOTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3cc49912f8df4698908c5d9b9ca8cae0",
+      "statement": "SessionReadError 的抛出覆盖不完整：readSessionTree 显式 catch SDK 异常并包装，而 readSessionContext 对 buildSessionContext 的失败没有任何 try/catch，异常会直接冒泡到调用方。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L137-L208",
+          "version": "repo-lines-v1:sha256:b60f42cf2e28655f6b65490aef9dda289c507fd8abd51551da96e1d0b43f7c97:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwZGRmZjcyYjk2MGRjNjg1NTZiOTFlNTkzNGU1MjUzZGI4ZTdiZTU2ZjU5Mjk2NTQwYzgzMDVkM2E1NmExY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmN2IxNDlmZDA0NzFlMjRlN2Y3NWZkZGYyNjNjMGY0ZTJhMTQwMDIwNmE2MmFlYWFlYTVkNzY2MTQ2ZDU2MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRkOTI2MzZjMmU0NDI3MGZjMzQ3MjljNzE5NzczYWE3ZDQyNTgyMGZiZTJmNjk5MGJlYzJlNTdlMmYxOWVlODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiNzFiOTRiZjUyMTk0NWQ3ZjdkMWY2YzkxOWVlYzM1ODFmNDYzYmNmOTYyZTBhMTliNWRlNGEzZDdmMjZkMWEifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L210-L223",
+          "version": "repo-lines-v1:sha256:9ad84a3b2bcba9fd430591d02d791981c7e9fda7fb3dca1c764b690215e425a9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4ZWFjZjQ3NDAxOWUwOWEyZWI0ODc2YmQxNDJhMzI3ODBkY2I2NzU2ZWQyOGFjYmUwMDU0ZjYxNmZkNmUxMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmZGMwNzFlMDBmNTI1OTQxM2FlMDFiOGZiNGM1YjkwMjhlYzQwN2M5NWRlZTFiM2Y2ZmVhMmIwZDcxYWZhYTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmYzExYWYyYjU2MTU0NGEwNmU5YmQyMWQyODRlZTk4YzE4MDlkNDdkMzlhN2RkYzRjYWYyYmVjZjNiNmJiMDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3af9589f044e40a1b6edff767af58fd9",
+      "statement": "JsonlSessionRepository 的 JSONL 解析全部委托 pi SDK（SessionManager.open / getEntries / getTree / buildSessionContext），未自行实现解析器。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L23-L45",
+          "version": "repo-lines-v1:sha256:4d13a6b64ab10026526a0d456d52d4189f3ae88da878d33244bf55de9575934b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhNjE5NWZhZDdmMWFiNjY0ZWNmZWZkODQ2NzBhOTA3Zjc3NjY4OTQxNmYxNTc3NGU3NDU2MzE1NTUxM2M5NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyYTg5NjAyNTQxYTliZWVjYTU1MjEyZjIzZjU1YmVmODRkYjUxYThjNDBkYjhiOTYyNDhmZDZjOTYwZDZjMTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjczNjVhMjNlZjM1MjRhMTdiZTM4ZWRlYmI0MTgzNTMwYWMwYzNiNDUyYmMyNDZlZWU1MWM1ODJhZDExOWU1YjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI1MTQ3NjhiZjUxMmFhNThmM2MzN2Y5ZDIzMTc4ZWNmYzAwNzI2YWI5YjRlMWVhMGIwOTcxMzA1N2EwOWRjM2IifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

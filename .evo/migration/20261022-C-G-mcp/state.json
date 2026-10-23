@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-22T07:10:34.318Z",
+  "updatedAt": "2026-10-23T09:33:44.441Z",
+  "scope": "capability",
+  "rLevel": "R2",
+  "programRun": ".evo/migration/20261022-mig",
+  "gods": [
+    {
+      "path": "ref_projects/pi-web/components/McpConfig.tsx",
+      "lines": 2258,
+      "sha1": "f739593bd6e38f8abb7e6de32b5988d6bc6beae5",
+      "symbols": 831,
+      "symbolSource": "LSP"
+    }
+  ],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "488d7ae5dfe31d3c7bb612a1cd95e1a0c55371e6"
+  },
+  "surfaceCount": 0,
+  "phase": "C7",
+  "phaseStatus": "done",
+  "phases": {
+    "C0": {
+      "startedAt": "2026-10-22T07:10:34.318Z",
+      "doneAt": "2026-10-22T07:12:01.322Z"
+    },
+    "C1": {
+      "startedAt": "2026-10-22T07:12:01.323Z",
+      "doneAt": "2026-10-22T07:23:24.025Z"
+    },
+    "C2": {
+      "startedAt": "2026-10-22T07:23:24.026Z",
+      "doneAt": "2026-10-22T07:43:36.209Z"
+    },
+    "C3": {
+      "startedAt": "2026-10-22T07:43:36.209Z",
+      "doneAt": "2026-10-22T07:43:36.264Z"
+    },
+    "C4": {
+      "startedAt": "2026-10-22T07:43:36.264Z",
+      "doneAt": "2026-10-22T07:43:36.351Z"
+    },
+    "C5": {
+      "startedAt": "2026-10-22T07:43:36.352Z",
+      "doneAt": "2026-10-22T08:29:24.606Z"
+    },
+    "C6": {
+      "startedAt": "2026-10-22T08:29:24.607Z",
+      "doneAt": "2026-10-22T09:30:53.210Z"
+    },
+    "C7": {
+      "startedAt": "2026-10-22T09:30:53.210Z",
+      "doneAt": "2026-10-23T09:23:51.643Z"
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {
+    "design/manifest.json": {
+      "sha1": "06b1f5f5e4b68052d66618d4840ce8b4e20f56b9",
+      "by": "用户（m06250 批准移除缺口）",
+      "saw": "D-B-07 绑定 B-032，PR-09 承载移除协议",
+      "at": "2026-10-23T09:29:21.224Z"
+    },
+    "spec.md": {
+      "sha1": "427150a5d9c6e2042ea9f206f1ae10c45ab407db",
+      "by": "用户（m04557 批准）",
+      "saw": "不做清单 3 项 + 11 条人工决策（交互形态=panel、保真度=像素级、Code mode/信任不迁）",
+      "at": "2026-10-22T16:05:14.572Z"
+    },
+    "design/components.md": {
+      "sha1": "21c08d691cd5490701cf445a017000056047765a",
+      "by": "用户（m04557 批准）",
+      "saw": "UML 类图（1 container + 5 presenter + hook/store 职责列）",
+      "at": "2026-10-22T16:05:14.708Z"
+    },
+    "design/ui.md": {
+      "sha1": "ba0a47e11b75bda6407c0d070d39ca1bf66942bc",
+      "by": "用户（m04557 批准，'同意 ui.md 的设计'）",
+      "saw": "主屏/空态/失败态三块 ASCII 与 6 行交互态",
+      "at": "2026-10-22T16:05:14.775Z"
+    },
+    "parity.md": {
+      "sha1": "e11b8b1abb411639ba167dae947f012a3f018872",
+      "by": "用户（m04557 批准）",
+      "saw": "28 条行为对账 + 保真 77%（10/13），剩 1 命名 + 2 砍单",
+      "at": "2026-10-23T09:29:21.291Z"
+    },
+    "acceptance.md": {
+      "sha1": "4a50af0dc4f32eebd6c92ab0ef2da50a4f3a2e80",
+      "by": "berton",
+      "saw": "按 L6 清单 15 条逐条验收，全部通过",
+      "at": "2026-10-23T09:33:44.441Z"
+    }
+  },
+  "decisions": [],
+  "tasks": {
+    "T-01": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.677Z"
+    },
+    "T-02": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.732Z"
+    },
+    "T-03": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.786Z"
+    },
+    "T-04": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.874Z"
+    },
+    "T-05": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.929Z"
+    },
+    "T-06": {
+      "status": "done",
+      "at": "2026-10-22T07:42:23.977Z"
+    },
+    "T-07": {
+      "status": "done",
+      "at": "2026-10-22T07:42:24.031Z"
+    },
+    "T-08": {
+      "status": "done",
+      "at": "2026-10-22T07:42:24.107Z"
+    },
+    "T-09": {
+      "status": "done",
+      "at": "2026-10-22T07:42:24.167Z"
+    },
+    "T-10": {
+      "status": "done",
+      "at": "2026-10-22T07:42:24.230Z"
+    },
+    "T-11": {
+      "status": "done",
+      "at": "2026-10-22T07:42:24.300Z"
+    },
+    "T-12": {
+      "status": "done",
+      "at": "2026-10-22T07:51:01.980Z"
+    },
+    "T-13": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.042Z"
+    },
+    "T-14": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.102Z"
+    },
+    "T-15": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.154Z"
+    },
+    "T-16": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.202Z"
+    },
+    "T-17": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.248Z"
+    },
+    "T-18": {
+      "status": "done",
+      "at": "2026-10-22T07:51:02.297Z"
+    },
+    "T-19": {
+      "status": "done",
+      "at": "2026-10-22T08:00:23.114Z"
+    },
+    "T-20": {
+      "status": "done",
+      "at": "2026-10-22T08:00:23.166Z"
+    },
+    "T-21": {
+      "status": "done",
+      "at": "2026-10-22T08:00:23.220Z"
+    },
+    "T-22": {
+      "status": "done",
+      "at": "2026-10-22T08:00:23.267Z"
+    },
+    "T-23": {
+      "status": "done",
+      "at": "2026-10-22T08:00:23.323Z"
+    },
+    "T-24": {
+      "status": "done",
+      "at": "2026-10-22T08:08:16.862Z"
+    },
+    "T-25": {
+      "status": "done",
+      "at": "2026-10-22T08:08:16.914Z"
+    },
+    "T-26": {
+      "status": "done",
+      "at": "2026-10-22T08:08:16.974Z"
+    },
+    "T-27": {
+      "status": "done",
+      "at": "2026-10-22T08:08:17.025Z"
+    },
+    "T-28": {
+      "status": "done",
+      "at": "2026-10-22T08:08:17.078Z"
+    },
+    "T-29": {
+      "status": "done",
+      "at": "2026-10-22T08:08:17.135Z"
+    },
+    "T-30": {
+      "status": "done",
+      "at": "2026-10-22T08:08:17.190Z"
+    },
+    "T-31": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.171Z"
+    },
+    "T-32": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.228Z"
+    },
+    "T-33": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.284Z"
+    },
+    "T-34": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.355Z"
+    },
+    "T-35": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.415Z"
+    },
+    "T-36": {
+      "status": "done",
+      "at": "2026-10-22T08:10:49.464Z"
+    }
+  },
+  "history": [],
+  "paused": false,
+  "lastCommand": null,
+  "closed": true,
+  "run": ".evo/migration/20261022-C-G-mcp"
+}

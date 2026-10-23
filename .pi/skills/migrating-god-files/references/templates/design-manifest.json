@@ -1,0 +1,131 @@
+{
+  "//": "设计 manifest 模板：复制到 <run>/design/manifest.json 后填写。机器只读这份；散文只做解释。",
+  "//god": "本次迁移的 god 文件（相对仓库根）；元素没写 sources 时，D14 用 god + lines 拼出处。",
+  "//surfaces": "从 surface.json 拿 ID，逐个认领到元素或写进 excluded 并给理由。D2 会核对。",
+  "//patterns": "symptom 必须是 path:line（文件真实存在）或行为 ID；rejected 与 costIfWrong 必填（D8）。",
+  "//landing": "每个 feature/skeleton 元素必须给 landing（evo-pi 里的实现文件，相对仓库根）；C5 会检查文件存在且含 `@design <id>`。",
+  "//sources": "出处必须是本 god 的行区间：sources:[\"<god>#Lx-Ly\"] 或给 lines 让 D14 自动拼。必须与 ownership 的归属逐段一致；新增/派生元素写 rationale + derivedFrom（指向真实元素；可以写一个 id 或数组）。",
+  "//components": "实施图纸（D11）：唯一根、parent 存在且无环、element 已声明、file 在 evo-pi 里、props 是数组、sources 非空。人读版本写 design/components.md。",
+  "//hooks": "实施图纸（D12）：signature 写全、replaces 必填（新 hook 没有对应旧代码就是多造抽象）、usedBy 非空且都是已声明组件。",
+  "//stores": "实施图纸（D12）：stateRefs ⊆ states，且每个 key 的 owner 必须就是这个 store 的 element（一个状态只能有一个持有者）。",
+  "//principles": "已移除：原则层对实施没有指导力（用户评审结论）。架构约束写 arch/rules.json（D6/D10），关键取舍写 components.md §关键取舍（D8 读 manifest.patterns）。",
+  "god": "ref_projects/pi-web/components/AppShell.tsx",
+  "elements": [
+    {
+      "id": "D-B-01",
+      "kind": "component",
+      "name": "SessionOrchestrator",
+      "layer": "ui",
+      "landing": "packages/web/src/components/SessionOrchestrator.tsx",
+      "behaviors": ["B-001"],
+      "dependsOn": ["D-U-01"],
+      "symptom": "ref_projects/pi-web/components/AppShell.tsx:841",
+      "lines": "L820-L900",
+      "sources": ["ref_projects/pi-web/components/AppShell.tsx#L820-L900"]
+    },
+    {
+      "id": "D-U-01",
+      "kind": "use-case",
+      "name": "openSession",
+      "layer": "use-cases",
+      "landing": "packages/core/src/session/use-cases/open-session.ts",
+      "behaviors": [],
+      "dependsOn": [],
+      "lines": "L1-L200"
+    }
+  ],
+  "components": [
+    {
+      "id": "C-01",
+      "name": "SessionShell",
+      "element": "D-B-01",
+      "parent": null,
+      "file": "packages/web/src/components/session/SessionShell.tsx",
+      "props": [],
+      "sources": ["ref_projects/pi-web/components/AppShell.tsx#L820-L900"]
+    },
+    {
+      "id": "C-02",
+      "name": "SessionList",
+      "element": "D-B-01",
+      "parent": "C-01",
+      "file": "packages/web/src/components/session/SessionList.tsx",
+      "props": ["items", "onSelect"],
+      "sources": ["ref_projects/pi-web/components/AppShell.tsx#L860-L880"]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-01",
+      "name": "useSessionShell",
+      "element": "D-B-01",
+      "file": "packages/web/src/components/session/use-session-shell.ts",
+      "signature": "useSessionShell(input: { id: string }): { state: string, select: (id: string) => void }",
+      "usedBy": ["C-01"],
+      "replaces": "ref_projects/pi-web/components/AppShell.tsx#L820-L900"
+    }
+  ],
+  "stores": [
+    {
+      "id": "ST-01",
+      "name": "sessionShell",
+      "element": "D-B-01",
+      "file": "packages/web/src/components/session/use-session-shell.ts",
+      "stateRefs": ["selectedSessionId"],
+      "persisted": []
+    }
+  ],
+  "states": [
+    {
+      "key": "selectedSessionId",
+      "owner": "D-B-01",
+      "readers": ["D-U-01"],
+      "mechanism": "url",
+      "lifecycle": "URL 变化时同步；无 session 参数时为空"
+    }
+  ],
+  "ports": [
+    {
+      "id": "D-P-01",
+      "name": "SessionRepository",
+      "consumers": ["D-U-01"],
+      "methods": ["readContext(id: string, opts?: { tail?: number }): Promise<SessionContext>"]
+    }
+  ],
+  "protocols": [
+    {
+      "id": "D-X-01",
+      "kind": "command",
+      "name": "sessions.context",
+      "useCase": "D-U-01",
+      "contractRef": "contracts/wire.md#命令",
+      "idempotent": true
+    }
+  ],
+  "sequences": [
+    { "id": "S-01", "file": "design/sequences/S-01.md", "participants": ["D-B-01", "D-U-01"] }
+  ],
+  "patterns": [
+    {
+      "id": "PT-01",
+      "symptom": "ref_projects/pi-web/components/AppShell.tsx:841",
+      "chosen": "回调上提，由编排层统一重置",
+      "rejected": ["事件总线", "在子组件内各自重置"],
+      "costIfWrong": "小：改回局部状态即可"
+    }
+  ],
+  "triStates": [{ "boundary": "session-context", "loading": true, "empty": true, "error": true }],
+  "quality": {
+    "maxFileLines": 300,
+    "maxComplexity": 10,
+    "maxProps": 8,
+    "renderBudget": 2,
+    "targets": ["packages/web/src/components/<cap>"]
+  },
+  "surfaces": {
+    "SF-AS-000000": "D-B-01"
+  },
+  "excluded": {
+    "SF-AS-ffffff": "pi-web 特有交互，不迁（理由）"
+  }
+}

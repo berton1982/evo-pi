@@ -1,0 +1,24 @@
+{
+  "//": "行为脚本登记表。C3 要求 behaviors.md 的 script_id 与本表双向零孤儿；status 在 C5/C6 推进（captured/implemented/passing/manual）。",
+  "base": "http://127.0.0.1:30041",
+  "flows": [
+    { "id": "s-001", "kind": "auto", "status": "planned", "file": "e2e/skills/first-load.spec.ts", "behavior": "B-001" },
+    { "id": "s-002", "kind": "auto", "status": "planned", "file": "e2e/skills/trust-reload.spec.ts", "behavior": "B-002" },
+    { "id": "s-003", "kind": "auto", "status": "planned", "file": "e2e/skills/selection-persist.spec.ts", "behavior": "B-003" },
+    { "id": "s-004", "kind": "auto", "status": "planned", "file": "e2e/skills/load-error.spec.ts", "behavior": "B-004" },
+    { "id": "s-005", "kind": "auto", "status": "planned", "file": "e2e/skills/order.spec.ts", "behavior": "B-005" },
+    { "id": "s-006", "kind": "auto", "status": "planned", "file": "e2e/skills/toggle-single.spec.ts", "behavior": "B-006" },
+    { "id": "s-007", "kind": "auto", "status": "planned", "file": "e2e/skills/toggle-group.spec.ts", "behavior": "B-007" },
+    { "id": "s-008", "kind": "auto", "status": "planned", "file": "e2e/skills/detail-content.spec.ts", "behavior": "B-008" },
+    { "id": "s-009", "kind": "auto", "status": "planned", "file": "e2e/skills/anchor-scroll.spec.ts", "behavior": "B-009" },
+    { "id": "s-010", "kind": "auto", "status": "planned", "file": "e2e/skills/status-vs-alert.spec.ts", "behavior": "B-010" },
+    { "id": "s-011", "kind": "auto", "status": "planned", "file": "e2e/skills/market-search.spec.ts", "behavior": "B-011" },
+    { "id": "s-012", "kind": "auto", "status": "planned", "file": "e2e/skills/install.spec.ts", "behavior": "B-012" },
+    { "id": "s-013", "kind": "auto", "status": "planned", "file": "e2e/skills/check-one.spec.ts", "behavior": "B-013" },
+    { "id": "s-014", "kind": "auto", "status": "planned", "file": "e2e/skills/check-all.spec.ts", "behavior": "B-014" },
+    { "id": "s-015", "kind": "auto", "status": "planned", "file": "e2e/skills/update.spec.ts", "behavior": "B-015" },
+    { "id": "s-016", "kind": "auto", "status": "planned", "file": "e2e/skills/empty-state.spec.ts", "behavior": "B-016" },
+    { "id": "s-017", "kind": "auto", "status": "planned", "file": "e2e/skills/add-panel-open.spec.ts", "behavior": "B-017" },
+    { "id": "s-018", "kind": "manual", "status": "manual", "reason": "关闭面板后回到列表的过渡动画与焦点归位，自动化只能验 DOM，验不出「手感」，留人工确认", "behavior": "B-018" }
+  ]
+}

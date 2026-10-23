@@ -1,0 +1,1 @@
+{ "mcpServers": { "gamma": { "command": "node", "args": ["/home/berton/evo-pi/e2e/fixtures/mcp-stub-server.mjs"] } } }

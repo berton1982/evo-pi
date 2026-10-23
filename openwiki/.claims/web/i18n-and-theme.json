@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:de0c97b34b7125eb77cb548774ad8d6fee9634815c391b16090bb22f9f6e87cf",
+  "claims": [
+    {
+      "id": "claim_adaade43dc384c1581151bcf14b86235",
+      "statement": "项目虽安装了 i18next 与 react-i18next，但实际使用自实现的 translateMessage 与 getMessagesByLocale，代码注释把该偏离记录为 Phase 0 的刻意选择并标注后续可低成本切换。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/i18n-provider.tsx#L14-L24",
+          "version": "repo-lines-v1:sha256:0f2986c97d6ae06d9999aba720048036869d01823776382f6d1fa0da43bc37c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmZGM0MWQzYjMxMTk5MDI0Nzk2ZTQ1ZmJlNjZiNDJlYTFlN2Q1MzBlNWE1NzNiYzA1MDVkZjBlZTZjZmYzZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVmYzA5NjcyY2JjMzhhZGYwY2Q2ZDYwNjlhZjljODVlZDg2MzIyODdjMGJlOWQ1ZTFmYmFlZDc0M2EwY2I3ZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1ZDVkZDQ5MmRiMDUxMGU4MGNjM2NiYWUyNTRiYzk4YmY3ZTY5ZTUzMTI5NWEyNzExMWMzMDJjY2EwMjk2MWUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/i18n/format.ts#L1-L37",
+          "version": "repo-lines-v1:sha256:e31b211c798885050a544ef2241ec5d21d5b193e7967014df131c1a5378b3b8b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3NzgzZmY3ZjFlMWZmYzgxYTk1MmY3ZjViZWFjZGI4ZWNhYzg0MjFiNjIwNmE3MDM5ZDdjYzZkZGY4OWUwNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc2a4a17a0ce43cab1dd0b85cd8b5f7c",
+      "statement": "translateMessage 的回退链为当前 locale → en → key 本身，最后一级兜底使缺译在 UI 上显示为原始 key 从而可见。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/i18n/format.ts#L29-L37",
+          "version": "repo-lines-v1:sha256:5b051ed09ad41a3c9425d3a9d540096ee6f8af6a322f9e458a56bb2907f13bd3:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjViZThhNTIyYmI5ODZlYjMzMGM4ODkyNmI1N2EyNjY1MTRiOTVlMzlmMGZjZDRlMzc1ZWZjM2M4ZjZjZGM1NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUwMDkzMWQwM2I1YzNjNGRiMzc1MzA4ZGQxOTQ5ZmIyZjcxNjUwOWJiNmJmZTg0MGIxMjkwMWNmZWFhOWMyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1f5dc081f2b14192bf07e9bf9e1a6b54",
+      "statement": "插值使用 {name} 形式的简单替换，正则允许 key 含点号与连字符，不支持嵌套与转义，未提供的参数保持占位符原样。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/i18n/format.ts#L13-L27",
+          "version": "repo-lines-v1:sha256:dcd9b948f387e5b6d83832c93b2f50ac8df9386b58da6db8765ba2bb7882d7aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZTM1MTg0ODg5OGY4NjFlZGYyZTAwZGJhNjZlNzgxYjFlMDM1NmJjMjBlZjViMDRmNGJhZTE5ZWZjMTU3N2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4NWY5M2E1MTEzYzRlMDZiYzRlZmFjZjM4OTlkYTYwMzRmNjlmZDBmOTkzMThiYTMyMGNhMGE4NTVlYzY0OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiZDg2YjljNzdkM2ZjYjZmYWI1ZGEzNjg1NDZiOTBjNGY3NjliZWQxYjg2YzhmMWJkMWRjNmJlZTY3ZTFhMzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a971673061934cd5a732dd288c35685c",
+      "statement": "locale 注册表按 en → zh-CN → zh-TW 的顺序排列，该顺序同时决定语言切换菜单的显示顺序。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/i18n/locale-registry.ts#L14-L21",
+          "version": "repo-lines-v1:sha256:5ffc3205ac3898a4df05f22410adf74dd34ef82fb5cfecebfab52c1841ad073e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFmMjJjZjA3MzI1OTJjMjQ3MTQxY2JlNjFlZmExMTAxMjYxMmY1YTMxMjJiOWFmOWJiYWY1MmY1NzI0ZDE5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFmMjJjZjA3MzI1OTJjMjQ3MTQxY2JlNjFlZmExMTAxMjYxMmY1YTMxMjJiOWFmOWJiYWY1MmY1NzI0ZDE5NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQ1MzU5MjJiZjVjZWQzN2U3MmMyYjY5ODc4YjQ0ZmQ3ODQ2MTY4ZjQ3ODgyZDViZTU4MWRmY2NmMGYyZTdlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDM0NTYxNzViMTk0NTJjZjlmYjJiNDYwOTIzZmE3ZWE2YTRhNDg5NzcxYTZjZjlmOWMyNDMzZDU0MTY1NzJiZSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/i18n/locale-registry.ts#L5-L12",
+          "version": "repo-lines-v1:sha256:87b711e3836ec24731ed69769e2850f111cd65b5d71e351bf96c69d26ee0d3b6:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk4NmJjODY2NzU2Mjk4MTE2MWU4Y2E0NDhkOWJkY2Y3ZDU4MmQwZjhlNTgxZTJlODE4NDNlMTAzYTA2MWY3ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTA1MjI4Y2JhMzQwNmMxMTEzMTIxNTgxYzk4M2ZkNjg4ZWJiYjlmZTQ2OWE2ZDQxYTg5ZTVmMjIwYzc0ZDllMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDJmNmNhMGFiODdlNjZlODRjOTI4NGI0YzI1Mzc0OGEyNzQ1NWQ4MTg5NDVhYjQ0OWQ0ZWI0NGY5MGI5MGY4NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e67c4ed60795413aafae9e25494eb133",
+      "statement": "resolveBrowserLocale 的匹配规则为 en* → en，zh / zh-cn* / zh-sg* / zh-hans* → zh-CN，zh-tw* / zh-hk* / zh-mo* / zh-hant* → zh-TW，其他 zh-* → zh-CN，无匹配回退 en。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/i18n/locale-registry.ts#L30-L54",
+          "version": "repo-lines-v1:sha256:85bc1dfeb190f205b9406b06c604d06761c76fe2b2edbef12cae0be0bc948c76:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkNDBmOTBkNGQyMGRmMDJkYmZhNjk5OWExZGNhYzE0OThmZWMxNzVlZGMzNTRkYTA3YTEzYzA0Njg4N2RmYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkNDBiMzA5YjJjNzg4YjFhYTU4MmU2OThlMTA2NDRjZjAwNGQ5NTQwNjQ1Yjc2YTc2NTFlZGFjMzdmYjY5MmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3MzBlOWFkZmM0YjhmNTJjMWE5ZTU1ZTA3NzJiYjdlNTM0YjQxOTdiZjVjMGNlYzc1ZTNkZDBmYmVjZTMwOWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxMzY5NDIwOTRiYjI2NDhlZjdlYjljZmNhZjA2OGZiNGQ2MmUzZTE4NGZkOTU3ODQ2OTI2NTJiMDIxMGM2ZmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdb626d83ee743ae92605d404416f4b0",
+      "statement": "i18n 首帧策略为 SSR 用 en 保证 HTML 一致、浏览器挂载后 effect 读 localStorage['evo-pi-locale'] 或 navigator.languages 决定 locale 并同步 document.documentElement.lang。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/i18n-provider.tsx#L59-L78",
+          "version": "repo-lines-v1:sha256:a23522e80e2d124aa3d5a73bc61918269cc2baab52e5e107089cb0d499872dac:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZjkwMjc4ZGE0OWMxNTM5YTgwMmEzYjYwZDYwZTQ3MDRmMTYzYmFlYjRhYTE3N2NjODJhYjA5NmU4MTg3Y2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2NGIxYjQ2YTE3YjBlZDE2NDYxYjUyODFkYmE1OWNjYjI3MDE3NDdjYzQ5NGVjOTU0MzMyNGEzMWM4ZTMxN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmYWIzNWRkZGY2OTY3NzcyZDkzZTgxZTVkZjY5ZDMzMjI0Mjg1NTQxZTQ4Yjg3NDk3ZDcxNTU1ZmEzYmRmMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhY2JlOGY5Mjg4ZDIyMzQ1MWNlZWU5NjAwMWQzOGJjYjYzN2FjMTNkZWVlNGRmYTU3OGE3MDdkMTg1M2QyZGYifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-locale-store.ts#L13-L25",
+          "version": "repo-lines-v1:sha256:0283dde838675d92a2778e07c60acc9e9dd1c512852762b3aa2b5a7cd3bf992b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MmE0MjkzODJiMmUxNDcxOGUwZTM3YjA1NzBhOGExNzAyOTkxZmNkODQ5OGNkODQwNjBhOGJmNGYwNTAxN2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMmQ3YjBlNmZjNGYwYzI5YjhkZjgzMmIzM2Y1NjJmZmEwMzg1MzQ4ODYzNWEzNDNhZTNhMjQ2NDcxNzRhMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyZTA5NTExZGFmMGYxZDlkNzljNGQ4ZDZjZmZlOTNkMjg1ZWU5ZjRlOGViOTZhNzRmMDUyNTYxOGViMWQwOTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8cd6a7728474956a0e57ed14f183348",
+      "statement": "locale 的 localStorage 键名为 evo-pi-locale，且只接受 en / zh-CN / zh-TW 三个值，其余一律走浏览器语言解析。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/i18n-provider.tsx#L61-L72",
+          "version": "repo-lines-v1:sha256:e6db7cf03f76b6afb7b4f5696b5c727e126a6bdf80cfaa669ffcc6590c18f774:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MTU0ZDhkYmM0Mjc5NmYyOTVlM2I2NzdkMTM1YTVlZjViZGI1ZTg1ZWYwYmYxMDU5ZjkyY2JlOGE4MTU0YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxZmNkZjVmZjA4MmIwM2I5N2Q0YTYyYzNlODA0NmNjNjEzZTQ5ODdkZTVmOTc3NTU0N2ExNDJkZDMzODgzZDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQzMjYzNDFmOGE4YzVjMjU2MmNjYjdkMTk2ODFlOTJjMWFhZWJmNWQwNjZmZmMyNGZiNGVkMTRlNjQ5ZWNiODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmYmU0ZThiZjdjYWVhOWQzMjg5MzgyMmE5YjJjMzZhM2UwMTc2YzAwN2UzZWM1NGMzNjQyNTEzN2E1ZjYzMzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9e0c07f6eb1e4c96adc3a01b3405ed76",
+      "statement": "主题由 next-themes 管 DOM、zustand 管偏好：ThemeProvider 用 attribute=class 与 enableSystem，defaultTheme 直接读 useThemeStore.getState().theme。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-theme-store.ts#L1-L26",
+          "version": "repo-lines-v1:sha256:d64dcc70f187beecd1a9d79befde2b7affc94cd83df403bc4b37cfade033fab7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxMjM4YTc0ZmUxZmMwYWRjZDIxNTMxNGM4MzRkNjNhNjhhNDY2ZTk1MzgyYTY1MzE0ZDU2MmQ0YWM2M2EwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMmQ3YjBlNmZjNGYwYzI5YjhkZjgzMmIzM2Y1NjJmZmEwMzg1MzQ4ODYzNWEzNDNhZTNhMjQ2NDcxNzRhMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/providers.tsx#L45-L49",
+          "version": "repo-lines-v1:sha256:e79b51db82ae738e7528249b50094934f7d9a1c373422ac3955db8694ba2d9b4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU1MmY1OTI1OTFmYWQ1ZmNlNDFlMmI5MTdjMDI0YWQxZGI3MDdiY2RiYjk1MDFjY2UzNDM2YzRlNmUxODVlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiODRiY2VlYzQ3MTIzZGM5MDJkYTQ0ZTcwYzg2Y2Q5YmMwODA1OGNkNzE2ZWU3ZDI2NGEyMTlhMWMwY2ExNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmI3OGFkODQ0ZDcwOGRmOThlYWUxYTEyYzIxMWY3MTgzYzFmYzFlZjdkZjBiMDRiZDM2Y2JiNTc4NGFjYTVlZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2NjZmExMTg5ZGIzOTVjMTY1OWQ3YWEzY2FiZDUwMGU2NTVhMDU5M2RjMWQ5NWVmMzBhNjk2Nzg3OWFjMzQzMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4011433362ad4add8681262d6ab833fb",
+      "statement": "useThemeStore 为 light / dark / system 三态且默认 system，Phase 0 不持久化，注释标注后续加 persist 中间件并参考键名 pi-theme。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-theme-store.ts#L12-L26",
+          "version": "repo-lines-v1:sha256:4d87fe245608efa1e5b5a5fcb57fc860b700103a43a3efa20068b668191a0275:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MmE0MjkzODJiMmUxNDcxOGUwZTM3YjA1NzBhOGExNzAyOTkxZmNkODQ5OGNkODQwNjBhOGJmNGYwNTAxN2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMmQ3YjBlNmZjNGYwYzI5YjhkZjgzMmIzM2Y1NjJmZmEwMzg1MzQ4ODYzNWEzNDNhZTNhMjQ2NDcxNzRhMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlZDg3N2M3NWZjZjZlZWNlMjRhZGViOTQ4MTlmMzQ5Y2YyNGMxY2EzNmM2MGVhYmJlNzI5NzJmNjY0Yzk2MjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_693527c1202643fa89c9a0834a0a0af0",
+      "statement": "zustand persist 当前只用于 use-sidebar-prefs-store（localStorage 键 evo-pi-sidebar-prefs），其余 store 均为内存态；locale 的持久化实际由 I18nProvider 手写 localStorage 完成。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-locale-store.ts#L13-L25",
+          "version": "repo-lines-v1:sha256:0283dde838675d92a2778e07c60acc9e9dd1c512852762b3aa2b5a7cd3bf992b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MmE0MjkzODJiMmUxNDcxOGUwZTM3YjA1NzBhOGExNzAyOTkxZmNkODQ5OGNkODQwNjBhOGJmNGYwNTAxN2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMmQ3YjBlNmZjNGYwYzI5YjhkZjgzMmIzM2Y1NjJmZmEwMzg1MzQ4ODYzNWEzNDNhZTNhMjQ2NDcxNzRhMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyZTA5NTExZGFmMGYxZDlkNzljNGQ4ZDZjZmZlOTNkMjg1ZWU5ZjRlOGViOTZhNzRmMDUyNTYxOGViMWQwOTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-sidebar-prefs-store.ts#L1-L38",
+          "version": "repo-lines-v1:sha256:2c2bcdd70d93a3795188ccb611f29d2839353e285692d0bce5c727676950fffd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxMjM4YTc0ZmUxZmMwYWRjZDIxNTMxNGM4MzRkNjNhNjhhNDY2ZTk1MzgyYTY1MzE0ZDU2MmQ0YWM2M2EwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-sidebar-prefs-store.ts#L15-L24",
+          "version": "repo-lines-v1:sha256:aa19b084364349fd68332e1a816bde1e70df66137e3b4cb9a5ce526c85e3a879:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2N2ZjMTU2NjhiYzQzMGU5ZDE5OTY0N2Q0YjAwMjljZjg1MTUxNmU0YjY2NDNlZDQ2ZjQyZmJkNTAwNDcwZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwMTFjOTdjOTA4ZWExNjUxZTIzY2UwNTgxMTM3Mjc4MTg5YTg3MDVhNmI1MzYyN2ZmYWRmZmY3Y2U3MjNmYmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkY2Q5ZGQ1MmUwNTkyZTNhZTdjODcyNDM4MmFjMmMyNDJiMzdlMGExYmZmYzQ0NmMwNmE4ZmZjYzU3N2FlNTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ4YmJiNGVkNDk3ODY1OTQxZjZlODVmODMwNjQzMzJhMTFiNGQ5YzIyOWVlYjI0ZThlZWM5ZTBmNjE1MmVkZGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3b64bbfea2394a4f9f51ca37efa78363",
+      "statement": "use-sidebar-prefs-store 的注释记录了一个已知待办：SSR 场景需要为 persist 配置 skipHydration，当前 Phase 0 仅客户端渲染故未处理。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/stores/use-sidebar-prefs-store.ts#L14-L16",
+          "version": "repo-lines-v1:sha256:333ea7170ec03de7cf69150a5fb75671343b2883a7b83cb8de3c973a8585a055:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWJlMzFkNWIxZTcwZjNkYmFjZDQzOWNkOTJhNTVhYjAwNGEzOWIxMWRhMDViYWM2NDZlNDQxZTRmYWQ3NTA2NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjMyMWIyMzEyNDg5ODZkZmNlOTU3OTQ2ZmIyMTAzZTM1NWRkMmI0NDUyMTRiMDEyMzk5ODk5YTBmODRhNzEyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNkYjAxZmNiYWVlMWJlOTM3ZDA0OTRlNGUxMGZkYmE2ZWNlY2VkZDYzYWI5NDMwOTgwN2U4ZDI3YmUyY2VmNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_97eb28cef9ef49cd845db2242c78151c",
+      "statement": "shadcn 配置为 style base-nova、tailwind.css 指向 src/app/globals.css、cssVariables 为 true、iconLibrary 为 lucide，aliases 与 tsconfig 的 @ 路径对齐。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/components.json#L1-L25",
+          "version": "repo-lines-v1:sha256:7f89b1e9e3995be8620be3162df8e08b7dd512f894fb0accb559193138fdc390:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fdb70fb956244dd0ab4808b6edd1ba4c",
+      "statement": "globals.css 通过导入 tailwindcss、tw-animate-css 与 shadcn/tailwind.css，再用 @theme inline 把 shadcn 语义变量映射为 --color-* token，配合 @custom-variant dark 实现 class 驱动的暗色模式。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/globals.css#L1-L20",
+          "version": "repo-lines-v1:sha256:3e637f82b1dddb4942259730664b887f63b6b2aecac84c984ea76214cd11c010:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZTc5ZjMzYzg5ZDQ3OTFmNmUyMTUxNGM3MDVkZTQzNWI2Zjk4Y2YwNmMyNDk4MDA1MTEyMzQyYjc5ZWZmNTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0MDJlNGE5NWYzMmI1NzA2N2FlMmJkZWIzNzVkMmI2Y2VkNDQzMTVlZmI0YTZkZTE1ZmYxMjAyYmM3NzljMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1ZDAwN2ZlNTg0MDRhN2Q2OWQzNDU0MjBjMjNkMWI0ZWVkODQ5MDE3YmQ2N2U3NWRhM2M4NjkxNTE2NjViNjEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/globals.css#L20-L45",
+          "version": "repo-lines-v1:sha256:cf344edb6d6cb0474be7e606da330ab6b695397769d8ae9f24612424ddfa3ce1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0MDJlNGE5NWYzMmI1NzA2N2FlMmJkZWIzNzVkMmI2Y2VkNDQzMTVlZmI0YTZkZTE1ZmYxMjAyYmM3NzljMjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Mjk3ZDVmYjU0MGMyMDViZDRjMDdkNDNjYjIwZDgxYzE2MDBkZjY3NzFjNzQ5ZjI2NjVhY2QwMjk5ZWEwMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhMTQ0OTM5ZGQ3ZTEwMGNhZjM1NTJjOGQ5MTY2OWIwMjVhYWQwNWE0MmE0NDU0NTZjOGU1ZTZmNjlkNTM1MGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwMDI4NjFhYjVhYTRiZTkwZDc1Y2FhNTRkZDQyNDZiMDNjYjA4MDFjODk0MmE5YzQwZDAxODdlN2M2YjQwYWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6b819fa7d92641fd91d8df132b0041ff",
+      "statement": "三个语言包当前各覆盖 10 个 key 并按 common / sidebar / center / topbar / rightzone / settings / app 前缀分组，而 SessionTree 的空态文案仍是硬编码英文未接入 i18n。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/components/sidebar/session-tree.tsx#L55-L62",
+          "version": "repo-lines-v1:sha256:d5d72de569b66a636be9f14ca3a6b7ff9418d8c7e40818a5880758a1529c110c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQxMGQyOWY4MDkwNzVhMDg1MjJhNjNiZTM4MTM3NTM3MTdkOWUzYTlmNDc2M2RkYjcyOTYxOTg0MmM0NWMxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTcyMTZlOGU5YzBhMWE2OGQwNmMyZmJhYTVmZDIxMzk0ODJiOGVmZDBhMTkzMTViOTE1ZTZjY2U4NDlkODlkYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDE4YjM3MzFmYWJjZTQ3OWNhMGFiNzJmMTE2MTAzNGE3NGZjYWZjMWM0NjkwYzIzZDg0ZmE3OWE5YTkwZjAzNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2RjZjhhMTA1ZTI1M2MxODdhMzhkYzYzMjZkMTRhMjQ3N2VjNDAyMTBkYjNiOTg4ZDk5ODY2NmRlZGYzYjkwYiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/i18n/messages/en.ts#L1-L35",
+          "version": "repo-lines-v1:sha256:4613050e1c1a1961ea4fd56ef5447140b41c48a917c3d2d6c224ab156b24556d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjYzRmNjJhYTQ3MjgwOTM2Y2ZhOGExMGIxYzVkMWE0ZWUxNDVmNjI0YWJlZTYzMzYxMjRiMDUxYTQ2ZTFjZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0de875967c274f619c5a99721c20d173",
+      "statement": "Locale 使用字符串字面量联合而非 enum，注释解释为与参考实现一致且 enum 会带来运行时开销并与 noUncheckedIndexedAccess 不友好。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/i18n/types.ts#L1-L12",
+          "version": "repo-lines-v1:sha256:74eb49e32eef81bfacea97deccf9e9bd7e4f460fb7a194b7eb9d4fb4f60ff68f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyMGZjNzc1N2FmZWRlMzhmMzczMmFjYTgxMjYxZTA2NWQ0YzM5ZWM1MTM2YjIyMjQ3MThhMzQwZjQ5OTQ3NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiMmVmMGM3Y2IwM2Q0MDU1NDM4OGVhMzMyM2U1N2JiMzU3YzU5YjQ4ODYzMjIxMTM4NTI4NGYzODk4OTljNmIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

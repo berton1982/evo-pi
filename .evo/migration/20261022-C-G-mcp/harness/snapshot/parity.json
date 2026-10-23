@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-10-23T09:01:44.161Z",
+  "cwd": null,
+  "servers": {
+    "piweb": 2,
+    "evopi": 2,
+    "matched": 2
+  },
+  "fieldRichness": {
+    "piweb": [
+      "name",
+      "scope",
+      "sourcePath",
+      "configKey",
+      "enabled",
+      "validated",
+      "envNames",
+      "headerNames",
+      "usesOAuth",
+      "commandFields",
+      "variableReferences",
+      "masked",
+      "transport",
+      "exposure",
+      "description",
+      "command",
+      "args",
+      "status"
+    ],
+    "evopi": [
+      "scope",
+      "name",
+      "enabled",
+      "transport",
+      "sourcePath"
+    ],
+    "piwebTopLevel": [
+      "mcp",
+      "codemode",
+      "files",
+      "servers"
+    ],
+    "evopiTopLevel": [
+      "servers",
+      "paths"
+    ]
+  },
+  "tests": [
+    {
+      "key": "user/alpha",
+      "piweb": {
+        "ok": true,
+        "tools": [
+          "echo",
+          "ping"
+        ]
+      },
+      "evopi": {
+        "ok": true,
+        "tools": [
+          "echo",
+          "ping"
+        ]
+      }
+    }
+  ],
+  "diffs": []
+}

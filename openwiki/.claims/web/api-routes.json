@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:818f26f39d82b6b7698e9b00b954ebab0570bf0fbb7f5e45cbed30cdb379b527",
+  "claims": [
+    {
+      "id": "claim_813f6209afcf4c2dbe992f14d91798bb",
+      "statement": "三个 Route Handler 全部导出 dynamic='force-dynamic'，且包括错误响应在内的所有响应都带 Cache-Control: no-store。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L42-L42",
+          "version": "repo-lines-v1:sha256:8f5b72657c42666cbfa81acfbb02aefdfb3022d495dba34a2cca719831f4fa32:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzU0Yjc5ZTQyNjZmYzg0NjJiMmM3YjgxNjkzYmU0MDU3ZWJkM2ViY2NhNWVhYTMxZmIyYjI2ZTcxMjMxNDA4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTkyNTE0MGEzYzhhODE1MTg3NmM3ZWI4NDY2ZjUyYmY3MDE4YWRiNTFlOTMyNTJhYTQ3NjliNzliZDMzMjNlZCJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L103-L105",
+          "version": "repo-lines-v1:sha256:95f3cba70db4a60177ed98ecf551c41cef3fab6b86301abc45d9ce5d2a87731a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzE2Y2IxYzIwYjRhNjNhNzFjNzM5OTU3NWVhZTE4YjFhM2Y4ZGE0MjcxYzhkYzU0MTcxZDNkMDhiOTdjMTlmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjIzNTI1ODljMzRkM2M2MDY4NTkzMWI2ZWNjNGQ1MDk5MWE3YzU2YzhmYmEyODk0MTE0NjU3NjkwMjcyY2FjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzc3OTFhNDgyMDYzN2U2YjVlM2IyOGJhZTQwYTJmNWY1MmViZTM4MDU0NmEwMDBhM2JhNGE3Y2M2N2FkYWMyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L63-L63",
+          "version": "repo-lines-v1:sha256:8f5b72657c42666cbfa81acfbb02aefdfb3022d495dba34a2cca719831f4fa32:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ4ODA5M2FjYTIxZDc4NDFmNjU0NjllMDNkMGYyMDY5MDRiMzZkMDE3MWI0NTU1MDY2NmEyZjlkOTkzNzYwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEyMDVlNjVkZmM2Mjk4ZDM5N2I5ODJlMTgzYmQ5YzZhMmE2ZmY3MWRiNjM3ZWNiNTY2ZmYyYmZjYjhjYzEzYSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L32-L32",
+          "version": "repo-lines-v1:sha256:8f5b72657c42666cbfa81acfbb02aefdfb3022d495dba34a2cca719831f4fa32:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY1YjcyNjU3YzQyNjY2Y2JmYTgxYWNmYmIwMmFlZmRmYjMwMjJkNDk1ZGJhMzRhMmNjYTcxOTgzMWY0ZmEzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTE5MzkwNGYxNzM1MDU4MzAzNzYyN2UxMzJkZmU2NmFlNTdiYjQwOGYzYWFjMjdmZjZhNDJkOWI0ZWI4OGEwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODkzNWQwNWEzMzAwYjhjZmZkNDI1MDMwY2JiNmUyYjAyZmY3OTJiMmUxYWUwY2JlZTZjMjVjZTU2ZmI0MzNmZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f741b7466c95426c937af1088c48cb28",
+      "statement": "三个 route 各自在模块加载时重复构造一套 FileSystemSessionStorage + ScanIndexStore + JsonlSessionRepository，因此同一进程内存在 3 份互不共享的内存 scan-index，只有落盘的索引文件共享，跨 route 的 invalidate 互不影响。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L29-L35",
+          "version": "repo-lines-v1:sha256:b140a62b6a961fa5d53526bf075965a337ccea79f20c5b906e0bd6610aa22d2c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjA1OWY3N2MyZWViOTI1OTRkN2FkYzhiNjUyYzkyYjY1ZGU5OGQwM2ZiMmU2OTUyNDEyODUyMmE0MTIwOTc1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBlNmYxNzZkNzlmYjM3OGUxZjgwMjM0NGNjMGQ0N2Y5ZTI1NDc2NzhlMTI0OTE5NDc5OGFkYjVjNmU5ZDEzNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmE2MzZkNDMxZjU1ZTZkNzQ4OTZjNWJmNTk2NWQ2NmFiNWU5OWRiNGJlNTk1ODIxYzZhYmE1NGUxYjdlOTQ0YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk4N2IxZWFiYTBkOTU0NTViY2NhMTQzMzQ1ZDg2NDYwOWNlMTZjZDQxYjcxZmQ4ZTFlYjZlNWVmYTUyZTlkZiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L46-L57",
+          "version": "repo-lines-v1:sha256:6f31e2273bad0c2181f650fa53c5d4b7329c02b7beb87c7b1ae5c563f4a94692:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMjBjNWFkNGZmMGQyYmU5YzNhYTg0ZTRlNjNlMWNjZTA0NmQ1YWJmMTcyM2UwMWE5YzJmNzg3YzA3MGJhNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExOTYwZDAxYWVjNTA4OGI1YzIyZDdhN2NjZmI3YTgzOTQ3Y2YyMDAxZjUyNjcyNjQ5MDU3MGE5MGM1ZWNjZmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzYzExZWEwZGZhOTA4OGQxMTBmOGY4YTk1ZjNmYTMxZjQ2ZmUwZmQ2NjhhZGM1MDZlMjAzMzljNGZhNzlhYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQyMmRkN2ZkZjQzMDgyOTJlMTFkN2ZiN2RjOGZjMDM4MzgwZDI4OTk1NzExOTNhMzAxMjczYjFlMjIyYzQ4OTIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L22-L28",
+          "version": "repo-lines-v1:sha256:496977d1ab9579922c8241c7bf282afa14626440ac76469c54a52b8352f3b881:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjA1OWY3N2MyZWViOTI1OTRkN2FkYzhiNjUyYzkyYjY1ZGU5OGQwM2ZiMmU2OTUyNDEyODUyMmE0MTIwOTc1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg2MjllN2Y5N2ViNzZkM2E0MzFjYTg2MGM1OGZmM2RlNDA1NmZjMTBlNDYwMmYzMzVkNmIzOTA1MmFmNjM3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjg1MmUxMDQ2NTgwOWRiNTNjNGJjYWFlNTI4ZjE0NTI5ZGU5YjNkYTcyYWY0YjMzOGQzMjgzZDgyMWJlZDQ3MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTE5MzkwNGYxNzM1MDU4MzAzNzYyN2UxMzJkZmU2NmFlNTdiYjQwOGYzYWFjMjdmZjZhNDJkOWI0ZWI4OGEwMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_035d857f98eb4195b4112d11928e9079",
+      "statement": "wire 层 SessionInfoDto 与 SDK SessionInfo 字段一一对应，差异仅在 created / modified：route 侧 toISOString 成字符串，hook 侧 mapDtoToSessionInfo 再用 new Date 转回，两侧各自 zod.parse。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L81-L101",
+          "version": "repo-lines-v1:sha256:5c7a0883cf87b3f6ed2e429075291dd5bb7c9fff85b3f957ae1ab91a025a6b92:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNGY5MWQzMDQwZTczMDI1MzRjOTUxYjIyZGU3NjJhYWQxZmQyMTgxZjFmYThjOWE2YTFkMDhkNWMyNDEyZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZTUzNjA0NTI5ODQyYWFjOTVlNmIwYzQxYmM4NmQ1NjliOGIyNDA4MTU4MTg2OWU2YWEzYmYyMDE4MTg0NzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhZjc2ODE4OWUzZDhmNmU4ZmVjODZkNDA5OWIzZTViYzQwZTg1NDlhODY1Y2E2YWQ0NjRmODIyMzZhMWI1MDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzYmFjMjJmMzllNDQ4NjNhYzFhMmMzMjUzNzY1ODIxNGY2YTFlNmM5Nzc0NWMyOTVhNDM0NWI5MzBkOTgwNjIifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L37-L48",
+          "version": "repo-lines-v1:sha256:4325de510e2071a9711be678f1457999e0bc466cd3ce7a0ac7095fd716335556:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlM2U2OWVmZmRhZWY0MjQxOTEwMDY0NDU2YTUxYjIxZjgyMmY5NGU5ZTM2YTU0YzIzMDUxNDg5MGUzZTg4OGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4YzJjYzlhNWRmZmUxZTAyZWQ5NjJiM2U0ZTQwOGM2ZjFhNTVhOWQ0YTU5Mzg5NGZhZDliMzBkM2YyZTlkZGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3OGFjNjQ2YzBiMTE5NGU2Yzk4YTNkZTA0Nzg2NTJlZmZhMDBjYzNkMzRmYzI5NzAzMWYxNzcyMTE5OTU2ZjgifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L83-L100",
+          "version": "repo-lines-v1:sha256:934880fe6f348264c26d2ffa3c83851b8524f094ea27a1f6fdeffc759fc514e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxNjhiNGRmMDRmN2Q4OThkOGIwZmJhYTdjZDZlZDJhMjY1ZTI0NjU4ZDlkMmVkYzIwMzk1YzE4M2YyMWYzY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMTViZTQxZGYyMTkzN2U1OWM0ODUwODZjZGJmYmI4MGE2Yjg0YjEyNmUzNGY0NDU0MjViNmQ2YmMyNDAwY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4NzRhYzI4ZTVlYzBmNmI3MTdiNTI0N2U2ZjZlNzM4ZmVhMjI0MWVhZDgyYTU4MDI1ZDY5YTkwMTdlYTRjNGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f26fc10f9cc6427da03bd7f01e53d47c",
+      "statement": "search route 的 zod parse 是防御性的：不做 Date→ISO 转换会导致 SessionSearchResponseSchema.parse 抛错并使请求退化为 500。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L43-L56",
+          "version": "repo-lines-v1:sha256:a65c2d16e2ee42ac5c536518c68d3d87cc60bc12e9d5acec3199a2cb764aef7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyMzhmMzFmZDE2MjM5NGYyNTM5NDlkMDdmZDg3MzIwYTlmODVlNzg1NDBkMzE2ODVhN2QzZmE5NGQwZDk3ZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjZDU4ZjFkZjBlZjAwODc2NzY1NGVhYTYyMDhjYjA2OTJkYzYyNmI1NWMyZGFiMTlmMGMwM2I0YTQ4ZTEyM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzMDY3M2ZhMDYzYjhhM2M1ZTM1YjU3MmRmYmVmOThhYzc1NDkzMzU5YjMxYjdiMThmOWIxZGYyZjM4MWIzNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjRiMzNiN2Q1OTBiNWY4YzM4YWMyNjVhYjJjOTE0ZmFjYTlkYWE0ZGY3YjM3N2Y4YTRiN2E5N2ZhNTQzMGYifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L221-L239",
+          "version": "repo-lines-v1:sha256:0ca19f61afa6dab141a1ec0c4759df13225db9f3461357917415bd36bee93a06:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhYThhZWMxZGQzMDU2ZmNiNjEyMzc0NWQzNTU4NTQ0NDJhYzJlNzc0MGEzZGYxNDA0YWQ1NzUxNDMwZGM1ODQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM0OWZiYjEzOWQ2NTZmYjY5M2U5M2FhZWU0OWYyMTFiMzA5ZjdhMjI0NTQ5MGFmZTY0YTQxZGUwYzk3MDk3NDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNTQzMjQxODQyY2NjOTM2ZGUwMzU0Y2I1MTBjMjdlZDQwOThjOWJmYzFhNWFkOTA4NmU5NzRkNDEyNmY3NTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_24282a2c3a574a089f63479439239485",
+      "statement": "列表响应的 sessionListVersion 恒为 0、runningSessionIds 与 completionNotificationSuppressedSessionIds 恒为空数组，这三个字段为保持与参考实现的 wire 兼容而保留但尚未接线。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L96-L99",
+          "version": "repo-lines-v1:sha256:14ddef38339e2d32cc9d19af989670f06b082c64590117edb5fcf69adc828ef5:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjViZDU5MWJmMWY4ZjA0YmQwMzhlZDMzNWQ0NmE2NjNhZTFlYzQyNWEyOGUzNjkyYjU3M2U0OTA1ZGM0NjZhZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWYxMmM1NWIzM2NlMmFkNWU3ZmQ2OGYzODRjNDE2ZThlZjViMTkyNDRjMTQzNjYxMzk3NmE4MWJkOGUyM2E1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc3OTFhNDgyMDYzN2U2YjVlM2IyOGJhZTQwYTJmNWY1MmViZTM4MDU0NmEwMDBhM2JhNGE3Y2M2N2FkYWMyOCJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L64-L69",
+          "version": "repo-lines-v1:sha256:b392f3b0513775da1bd560b7902179681bdaad5b8ff8c7f41035e87c4c0c9b57:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdiZGViMjI5ZGE3ZmVlZTAxZDJkOTkxMTM3MzAwMmFmMTNiMGRlYjJiMDg0MmNlNmE0YTFjM2FkY2Y3ZDk1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODU4MGI3NjUxOGRhZTk3OWZhZWJkMDIzNjdhMjkyOTJhNTBkOTc2MDkyMjUxYTM4YTZjZTMwODgwYmE0MjgyNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjllZjZkOWI1ODkyYzBlNDlkNWM2MTViNjBhMDFlMmI1OTkzZjE1ZmQ4ZDlmYTUwMjRlNDU1ODU3NWM0Nzg5OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDI3MWUxOWRjZjBhNDhiZjFjYjE4MmU4ZGExNmZlNzdkNTdkNjY1YmE1N2U3MjZhYzczN2UwZjVkMDA0MTUyZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9cb9b696f9174ba7ac3df1434a752575",
+      "statement": "AgentMessageSchema 是 user / assistant 两个类型化分支加一个 z.record(z.unknown()) 宽松分支的联合，且宽松分支必须置于最后以免在 safeParse 时抢先匹配。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L168-L184",
+          "version": "repo-lines-v1:sha256:97742d6b64933b2e9c4382cebd50bbbc63d67c6c07a7a6cd702355fd83ea3baa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2M2FhZTM5YWQ1OWZhZjMyZDNhMDQ1OGI4OTM0NmU4ZTg4ZTkxZmRkNDA0NTQwM2E4OGEwNjdlYjU2Mjk5NjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlZDdkZWY4ODRlMzc1MDI0ODM3OGUxMGVmZmRkNTRiZjk2NGIxM2FkNDY4NTgyMzE1ZDQzZWE2MjhhZThmYWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3MDBkNTY3ZDY0YTM2Y2VkYzY0NzE5MzdiYTZmOTlkNWM4MDkyMTM2YWFlYWFhNDYyMmI2YWE2ZDFmMmUzNTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5c2d879b827e4b02951cab88b1772175",
+      "statement": "SessionContextSchema 不校验 messages 与 entryIds 的平行数组不变量，schema 注释说明该不变量由 route handler 与 core 保证。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/lib/api-types.ts#L186-L209",
+          "version": "repo-lines-v1:sha256:3d5a580fe4ba194a864ae3aabeafc395a9ee88c185c3142b45629b74c5bf4433:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhNDQxNTExYjNkNzU3Nzg5MmM1MWZmZmNmZGNlMDU1ZTVjNzQwNGQ2NWVlZjAzMzMwYWFkY2I2NTM2YzQ4ZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdiNjc5YmUwNzFjODRlM2FjMGZmNGE2OGMxMjNhZDE2Y2IzOTk3ZmRmNTViMGRjYjNjOTczOTIwZDgwYWNlMGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dfaecbf45746433991b540d99778a439",
+      "statement": "context route 的 HARD_TAIL_CAP 为 10000，超过返回 400；不传 tail 参数时完全不下传以交由 core 的默认 10000 生效，响应回显实际生效的 tail 与请求中的 before（缺省为 null）。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L37-L72",
+          "version": "repo-lines-v1:sha256:fdbffb5684b6f84455e47b762a2eee9f0598a590abc61551b6b0f9e88530ae77:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2MWFkNDk4ODc1Yzc1NzMzNDBjZDg0YzAxYzM3MGM5ZjQ2NzRjZjFmYmY3Y2NhY2NiNzg5NDZmYTIxMGM1MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNjkwMGM1Y2Y0N2ZlMjFjNmVkMjlmNjAwMzZjYjg4ZmFlZWY3N2FlNTc0NGM5ZGFmYjBjZmU1OTUyNGZmNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNTIyNjE4ZTNkMmQxYzBlZjg5YjdjN2JlMmFlYzI2NTliMWRlYWJkNmM3ZTA3YmY5NzUxNDYxOTBkOWUwMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkwZDA3MGQwMjMwMDM5YmU5MDFlZjBlMmRiYTM2ZTVkODFlNTg1YjgyYjIzMTNjMTNhZjcxNmZmZmY0NzMzNTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_eee7f9f0693e4e74a9b4d1d517249a55",
+      "statement": "search route 另定义了一份 MAX_QUERY_LENGTH = 200，与 core 的同名常量数值相同但未共享定义，修改时需要同步两处。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L45-L45",
+          "version": "repo-lines-v1:sha256:a2a89602541a9beeca55212f23f55bef84db51a8c40db8b96248fd6c960d6c16:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTJhODk2MDI1NDFhOWJlZWNhNTUyMTJmMjNmNTViZWY4NGRiNTFhOGM0MGRiOGI5NjI0OGZkNmM5NjBkNmMxNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTJhODk2MDI1NDFhOWJlZWNhNTUyMTJmMjNmNTViZWY4NGRiNTFhOGM0MGRiOGI5NjI0OGZkNmM5NjBkNmMxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjAxYzdlZjRkMmJmNGM4ZjhmMDFkNDgzM2VlMmNkNTAwZmRjNGJhZjU5NjM1ZDU0MWRiNzM3Nzk4MWNmM2ZkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUxNDc2OGJmNTEyYWE1OGYzYzM3ZjlkMjMxNzhlY2ZjMDA3MjZhYjliNGUxZWEwYjA5NzEzMDU3YTA5ZGMzYiJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L30-L41",
+          "version": "repo-lines-v1:sha256:2ce2a33946c383401893d261dc43a8a72eb0ae53b42a5df2073e356e922d1384:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiMjg2NTZmN2FhYzNhNGJjMDFmNzg1ZjNhNTE5OTkwMzJiZmExYmUyMGNkNzA5Nzg1ZTRiZmMxM2U5YmY0ZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyNzgyZmJiMTJhNDQyY2E1ZTk2Y2NiMmZkMzI0Yzk5OTZmMDQ2ZDIzNWUxYzIyN2U4OGE5Y2M2Mzc0YzkzNWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlY2M5MTMwZDc3NDMzNTU5NGM1MDU2YzkzMzViMjJjNWI3ZTI4OWQ4Nzg0Y2RjZWNjNDhkZTI4OWYwNDA4YzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_de4799218d18456d83559dcfcfbea15d",
+      "statement": "错误映射为：SessionNotFoundError→404 session_not_found、tail 超限→400、trust 未通过→403 project_not_trusted、RangeError 含 '200'→400，其余异常→500 并把原始 error.message 回传客户端。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L68-L86",
+          "version": "repo-lines-v1:sha256:213ed1f0e526f2a5a39b2c754bfb81783d244284d8035075109bd535b9f0eaa8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NTk1ZjRlZTVmZjYzZDUwOTUwNDE5ZGMzNDQxNDUxMzg1MWRjOTczNmZkMTdhNGY3YmZhOTMwYjI2MWI2ZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5NWYzMGM5ZDQ1YWNjZDU0ZmVjYWQ4MDRjMmQ2OWZmZDllZjhlNTVkYmJmMWI0N2E4MWQ3MTdkMzM1NzI1MDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L68-L76",
+          "version": "repo-lines-v1:sha256:1b30646e0ac3554531bcae65ed3d83ca072bc7fe6b6d24ec337415f4fee8a2a8:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIyNDY5OTRjMTFlMTcyNzYyOTFjNmJmYTlmYTdhNTJlM2JiMmIzYjZmN2E1ZGQ4NzE4ZGNmZTkzMjI0MTlmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2E1ZjQyZWU2ZjQyMmMxNjNlYTViMjNhMGVjODk2ZTczZGExZTc3MGNjM2YwMDMwMmUyMTEwMmViYjFhOTMxZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGUyY2Y0NzIzNTliYzkxYTkyNTMxNWJjN2E5MGEwNTlmM2MxMmNhNjhlZjVmZGUzMmJhYzZiNDgyOWFiNGNkYSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L58-L69",
+          "version": "repo-lines-v1:sha256:3cb13919d88aa3e4317a7d6bdb69817fb1c51f9063eec47e5576bcc2bf921a7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlZGJmODM4NzUzNjg5NjZmMzEzYWU2Mzk1MzljNDAzNzAwNDViYTUzZTJlMmNlZTkzYmI2N2Q1ZGExN2I5ODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5OWFmNTQ1Zjc5YjdiNTFlMzA1ZmY5OWU0ZjE0NDg3MjMzNTUxN2E4MDUwNjY2ODRiYjA4OTRiZjU1NmZlOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6fa67df5429148adbe6d439d416506fc",
+      "statement": "400 分支的判定依赖异常消息文本（RangeError 且 message 含 '200'）而非稳定的错误类型字段，core 改动错误文案会使其静默退化为 500。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L82-L94",
+          "version": "repo-lines-v1:sha256:f6dfb5ba975afd6193e84b3811809bbe1233dc3dddf7daac137137dfd31592fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZjg4Y2I3ZWMzZTZmMTQ0YWQ1ZmQ2ODNhZjE3MTc2MjIyMDczY2NlNTBkZGVjZWRhMzk1MzMyY2M5NThkNzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2NzdkMmYwMzFlOThiNWU5MTFjNWFkNGZiOWIyMTg2YTkzMjUyMmU4ZjQ2ZWU0MGJhYmZhZTNkYTAwZmMxMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3MTk2MTQyNDM2M2I5ZjQxNDcxOWNlZDFjZTRiMTc1OTI0MGYzZDg4OTJkNjE1OTk5YjRhOTk4N2U4ZTMwYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjZWZmMTMyYWJiYzM5ZTdmYmUzNzJlMjJlZDk4NmYzZDEwOWFiYTc5ZGM3ZTE4YzkxNmVkYTcwNjgxODkyOTMifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L59-L63",
+          "version": "repo-lines-v1:sha256:8a82473e743a8bce503f30abf5216136006dec881f18bbfba259e5389b2e95d7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTc5YTFlNmI3YWY2OGU2NmJmZmI5YmFkNjM4OGIyMzM5Y2JiMmM3OGUxNGNkOTY2NTEwMWE5NzhlZmU3YWMyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYyMjBkMWM5ODI2YWJhM2JjNzYxNGM5ZDgwMzJkNjcwNTUzZmFmYjVmYTllZDJmZTQzNmEwZGVkNDdiODNiOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDRhZjA4MzYxYjVhNGNiM2UwMzc2ZjBlMzJhMzk5YTk0M2E2YzM0ZTc1NmFiYTQ2MjI3ODhiNjBiOTBjODczMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTBkMTUzMWEyNWI1ZDQ2YjI5Nzk3NDMwMDY5MTY3OGU5YmU5NDgzOTg2OTQ5NTMwODZmZDU1OGE0Mjg2ZDhlNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_012a6e1f3ded42a0aa66047397170ecf",
+      "statement": "/api/sessions 的 403 分支结构完整但当前不可达，因为 checkTrust 恒返回 trusted 为 true。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/system/adapters/in-memory-system-adapter.ts#L47-L56",
+          "version": "repo-lines-v1:sha256:f7dd07015f8992b049991469e6f0f0644b1c26a06f9875d2be46e7cdfffe14aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyZTRhODM1NWFkMGRhNzZjMTk1NGNiNzc5YzQ3NGU3MTg4MTA1ZTcwYWE1ODk3NTdhN2M2MTU2NGUwYTcyMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3MWZhOTJjNTJmYzA4Y2UwZDMyM2VhNmI4ODk4YzcyMWJhNzg4ODQ5ZWJiYzg2MjljYTE3M2ViYmU0MTZiNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/route.ts#L68-L76",
+          "version": "repo-lines-v1:sha256:1b30646e0ac3554531bcae65ed3d83ca072bc7fe6b6d24ec337415f4fee8a2a8:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIyNDY5OTRjMTFlMTcyNzYyOTFjNmJmYTlmYTdhNTJlM2JiMmIzYjZmN2E1ZGQ4NzE4ZGNmZTkzMjI0MTlmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2E1ZjQyZWU2ZjQyMmMxNjNlYTViMjNhMGVjODk2ZTczZGExZTc3MGNjM2YwMDMwMmUyMTEwMmViYjFhOTMxZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGUyY2Y0NzIzNTliYzkxYTkyNTMxNWJjN2E5MGEwNTlmM2MxMmNhNjhlZjVmZGUzMmJhYzZiNDgyOWFiNGNkYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a74557a6d4fb4b0da5288d921c15403c",
+      "statement": "web 通过 lib/session-id-helper.ts 单点 re-export core 的 sessionId brand 构造函数，供 route 在 URL 边界把裸字符串提升为 SessionId，避免直接 import core 的 _shared 深层路径。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/%5Bid%5D/context/route.ts#L11-L11",
+          "version": "repo-lines-v1:sha256:c2eb186c1efe89e2df3cc70863da0d4802f96721871c8a137689fa1d6d23f82d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzJlYjE4NmMxZWZlODllMmRmM2NjNzA4NjNkYTBkNDgwMmY5NjcyMTg3MWM4YTEzNzY4OWZhMWQ2ZDIzZjgyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzJlYjE4NmMxZWZlODllMmRmM2NjNzA4NjNkYTBkNDgwMmY5NjcyMTg3MWM4YTEzNzY4OWZhMWQ2ZDIzZjgyZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxYjA0ZTkzODQ5ZWU4ZmUyOTU1ODkwM2JkYTBjMjZlZmFjNWIxNzAzMjQ4ZDc5MzQ1N2FjMGYwMDAyYjQyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjdiMGE4YzQ5OGQyODExNzcwZjg4Yjk3OGRlZDdiMDc5NDk5MWY0M2ZjNzE3NzIzMmM2ZGE1N2IyZDA0MmRiMSJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/lib/session-id-helper.ts#L1-L10",
+          "version": "repo-lines-v1:sha256:841c84666a6b0884c583ea20691ab56b752a7e4e69dd8086ccab119d4ad62510:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjIyY2YwNzMyNTkyYzI0NzE0MWNiZTYxZWZhMTEwMTI2MTJmNWEzMTIyYjlhZjliYmFmNTJmNTcyNGQxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmNjZlNDZkOTliNGQ0YzE1NDA0ODhjMmRiYWQzMTMzZGZlYmJlMGQwOGFjMmMzMzU0OTNmNzE4OTY2OTk3ZGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

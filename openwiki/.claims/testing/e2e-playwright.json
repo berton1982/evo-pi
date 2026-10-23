@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:e6093c10bb44f25de88af04e1207dbf3d46f84b1276314b573e7d75181d4a1b3",
+  "claims": [
+    {
+      "id": "claim_4792f894b48d4079afc91e0e4b9b20b9",
+      "statement": "playwright.config.ts 设置 testDir 为根级 ./e2e、testMatch 只认 .spec.ts、fullyParallel 开启，CI 下 forbidOnly 生效、retries 为 2 且 workers 固定为 1，reporter 在 CI 额外产出 HTML 报告，projects 只含 chromium。",
+      "evidence": [
+        {
+          "resource": "repo://playwright.config.ts#L27-L33",
+          "version": "repo-lines-v1:sha256:3541eb9956a6aa9a90222552cacff2242962887a3187ef330f9cd09eb6f1f899:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2MxYzBhNTliYjUyZWM4ZGMwZDExOWI5NjI4ZThjMmRhM2U5MGYzNzA2NzE4NGMyZDdjYjBiOGJjMzc1YWQ2MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjYyMWRkOTg1MjM2ZTIyNjcwNjA1ZTU3M2VjYmRiNWNmYTExNWUzZTIwYmIyYmExNWYxNWU4MjA1ZWMzZGQ0NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGM3YjM1NmE0YmNhYTQ2ZjNjMzgxNzRkMTk4OTVhODFhYjY4MDU1M2UyMDRkMjFlYmIxZjg4MzNiMTgyMGJlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDRhMmNkY2FiMTE4NzAyYzA4MTIxNjUzNWE2YjdmOTRmN2U2N2UxZTlmNmUyZGEzNzgwMDdjNmJmZWY5ZmIwMSJ9"
+        },
+        {
+          "resource": "repo://playwright.config.ts#L46-L51",
+          "version": "repo-lines-v1:sha256:62485e9b9bbc9170f657a57495e11af5a8243ac9adfdf8ae25d74a0593916b4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2E4MTUyYzRhNGIzMWRmMTZhMmVjNzVhYzZhMjE5OGI0NmVmMzMxZTVjYzVmNTBhZmIyNWJiNDE4MmI4MzJjOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTY0ZDhjMDczNDI5ODkzMTAxNTc2ZDg4ZDk5MTI3ZTg5ZDY4OTFkM2IxN2U4OWRmMDJlYzlhZTcwNzA1ZDhiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDA3YWFhOGIxZjE2MzNjZWQ2MzQyNmZjY2I5ZjZhNTllOTkyNWQwZTBhZGZlZTAzYTZlMGY3MzA2MTM3NWYzYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjk4Nzg1MGJkMmQ0NzU3MDdjZDIzZWM3OGViNTUxZTcyMzQ3NmI2YjUzNWYxOWFmMjFmZDJlZWJlODg3OWFhNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_adfee8cde1b44e4389ce129abca62153",
+      "statement": "浏览器使用系统 Chrome（默认 /usr/bin/google-chrome，可用 PLAYWRIGHT_CHROMIUM_PATH 覆盖）并附加 --no-sandbox，以避免下载 chromium-headless-shell。",
+      "evidence": [
+        {
+          "resource": "repo://playwright.config.ts#L39-L45",
+          "version": "repo-lines-v1:sha256:10449d9a72f81346275a32fda71b220a22b34ccf92ce30efcb020be516e91ac9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZjYjE4ODMyYjE2MDlmZGI3N2MyNGY2MzIxMzJiNjZhNDM4MDdhOWM0ZDY5ODA2YWRlYzQzZjMzOTUzMzBhMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1Y2QyZmI0ZjNkZjg4NDUxNTI1NWIzOTUyM2YyZjhiNTQ3MmJlZWE5ZjU2NmZmY2EyMDRkYjgwMjU2MTA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGExNjJjMzdiZWQxOWZlMGRlOWIxMDZjYjViYWQ5YjQ0ZDZjOTVjM2Q2MzkxNDY3ZTllNWNjNjk2ZWNjNTIyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTljZTAzYTc5NTgzM2JhMDM3ZmEyYmU1ODY4NDgyOGIzNTBhYjhlNzEwNmZkMWZiMTRmMjQyOWM0M2E4NjRmMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_be111821b46c48f6b85561d433f7c9df",
+      "statement": "playwright.config.ts 的 webServer 段被注释掉，因此 pnpm e2e 不会自动拉起 dev server，必须先自行在 30041 启动 @evo-pi/web。",
+      "evidence": [
+        {
+          "resource": "repo://playwright.config.ts#L52-L58",
+          "version": "repo-lines-v1:sha256:8eb810447bedb76f1edb5177febc5596ea2cd3bd5a4836c0280a15db678ca2d1:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE1MGQzZjQzODA0ODRiZDkxNjFlNGE1ZGU1OTZmZTcxYmFhNDgxMzcwYWIyZTQ4NDA0NWJmYzI0ZGJhNTkzZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODU4MGI3NjUxOGRhZTk3OWZhZWJkMDIzNjdhMjkyOTJhNTBkOTc2MDkyMjUxYTM4YTZjZTMwODgwYmE0MjgyNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzFkZmE1YjQ0MGRhOTU5NDdhYTYyZmYzODBlNDYzNTk3YzZmMTFmOWM4OGM5MWQ1YWMwYjNiZTY5NmM4M2ExNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cba87b7f5d7145aa97c265aa7d3d436e",
+      "statement": "e2e 存在两处独立的 baseURL 来源：config 默认 http://localhost:30041，三个 spec 各自 fallback 到 http://127.0.0.1:30041 并用自己的 BASE_URL 调 page.goto，只有显式设置 PLAYWRIGHT_BASE_URL 时才一致。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L23-L23",
+          "version": "repo-lines-v1:sha256:4f6e48f32279577748ab0343b52e846ed7ec4934b31b8a244074bf35d3e2fc4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2ZTQ4ZjMyMjc5NTc3NzQ4YWIwMzQzYjUyZTg0NmVkN2VjNDkzNGIzMWI4YTI0NDA3NGJmMzVkM2UyZmM0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2ZTQ4ZjMyMjc5NTc3NzQ4YWIwMzQzYjUyZTg0NmVkN2VjNDkzNGIzMWI4YTI0NDA3NGJmMzVkM2UyZmM0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWE0NzJmOWRlZjYwOWI4OWU5ZWJmNzE2Y2Q3ODNlMTVhZTQ5N2NiODMzNGU1MThiZjM0NmFhZTdmYzIwYjIwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWFmYjM5MDIyM2Q4NjJlZWUxMmQ1ZDU0Y2ZiNjViYjBlZTZmOWYxNDViYTExNWYyMmJhYzZkZjk1ZDQzYzMyZiJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L22-L22",
+          "version": "repo-lines-v1:sha256:4f6e48f32279577748ab0343b52e846ed7ec4934b31b8a244074bf35d3e2fc4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2ZTQ4ZjMyMjc5NTc3NzQ4YWIwMzQzYjUyZTg0NmVkN2VjNDkzNGIzMWI4YTI0NDA3NGJmMzVkM2UyZmM0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY2ZTQ4ZjMyMjc5NTc3NzQ4YWIwMzQzYjUyZTg0NmVkN2VjNDkzNGIzMWI4YTI0NDA3NGJmMzVkM2UyZmM0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWE0NzJmOWRlZjYwOWI4OWU5ZWJmNzE2Y2Q3ODNlMTVhZTQ5N2NiODMzNGU1MThiZjM0NmFhZTdmYzIwYjIwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGFiYjlmZjcxZWJiZGI4ODExM2VkYWJhNDUzNWIxMDcyZTVjYzhjNzQxMmRlNWQ4MWMwYjk4OWFjZGMxYTNiOSJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L28-L28",
+          "version": "repo-lines-v1:sha256:972a429382b2e14718e0e37b0570a8a1702991fcd8498cd84060a8bf4f05017b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcyYTQyOTM4MmIyZTE0NzE4ZTBlMzdiMDU3MGE4YTE3MDI5OTFmY2Q4NDk4Y2Q4NDA2MGE4YmY0ZjA1MDE3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJjNDc1Y2Y0MjhmOTU3MzFlMjU2MjM2YTI3NDJmNWU2MmFjYjdhMjg0YTVhYWVhN2FiMWY0ZmIxMDQyOGRmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTBjYWZmZWVhZTY2NmIwMTlkNTI5NzZiN2I5NGIyMjJlZGY3NGU4NGIyYTZmMjBlZWMyYzcyMTdlNjZlMGMxZiJ9"
+        },
+        {
+          "resource": "repo://playwright.config.ts#L35-L35",
+          "version": "repo-lines-v1:sha256:1b65efe198f025e93713727f36aceff24de84ff52b3bfa96b6a1ecc355d8b4e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI2NWVmZTE5OGYwMjVlOTM3MTM3MjdmMzZhY2VmZjI0ZGU4NGZmNTJiM2JmYTk2YjZhMWVjYzM1NWQ4YjRlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI2NWVmZTE5OGYwMjVlOTM3MTM3MjdmMzZhY2VmZjI0ZGU4NGZmNTJiM2JmYTk2YjZhMWVjYzM1NWQ4YjRlNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmZiMzE3NGRhNTM4MjNmZTEyMWQ2MTlmYzI5MTExNTU0YTY4OGU4N2ZiNzlkNjE4MDQ0MGM2NTc1NzVmNjU3ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGExNjJjMzdiZWQxOWZlMGRlOWIxMDZjYjViYWQ5YjQ0ZDZjOTVjM2Q2MzkxNDY3ZTllNWNjNjk2ZWNjNTIyZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b014e38b8f1f4ece803b555bb98e33a5",
+      "statement": "三个 spec 都在计数 session-tree-row 后按 rowCount===0（或 <2）调用 test.skip，因此在空 agentDir 上大部分用例会静默跳过，e2e 有效性需看 skip 数量而非通过率。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L34-L38",
+          "version": "repo-lines-v1:sha256:71873e40a29c373f2aaeeff2aaffc21f39afdd2d179d3b481414491b0f73cfc9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTkxMmJiM2IzYTBhOWU0Yjg3ZmJlNDQzMmNhOTJmYzJmNzExMWYzYTJhNmRmMzIxOTlkMDdjMzYwZjQ2MDkzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjFjYjg4ZTEyZGQ0NmNlYTQzZGRiNmRkYTFiNTlkZDAwYTYxMjBjYThhOTQyMzg4NjI4NTI0ODMxNzNkYWI1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmFkMTc4Y2MzNmIyYzJkNGI2ZjlmZjU5ZjQ3OTQzZTM0MmEzNjdmZTljNWUwZjdjYTEzNzVmMDU3MzYzNmRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWM5NzA0NTcxOGFjYTgwZGU0ODJhMDk1Mjk5ODIzOWIwMTA3YzI2ODNmNDY0YmE3NjI0ZGI1NzE0Nzk0ODM5NyJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L77-L80",
+          "version": "repo-lines-v1:sha256:63fa01549e1455306a1681a1fee0279261d10aaecf716f08d552f4c3e536b1e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmIwNWQ4Zjk1YTljMmFmNDg5NzdhN2NkMTliYTBmMTE2ZmViOWQ1MGMxZGIxNzE4MzE3YThjYTkwZWE5Yzg3ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmViNDcwNGRiYWYzYmFjYzI1ZDJjNjRjYmEyZjk0Njg1MjMyNDY5ZDk3NzhjOGYxN2IzZDAyN2UxMzVjYjE3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzdkODMwN2RmNjgzYzg5OWEzMzUwNjY0Yjc2MGMyYjRkMWMyNDJkMjA1ZmI0NDllMTYxN2ZjMTU5YmM1OWJhNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2E2MjIxOWI1OGRjZWRjYTc1Y2E2ZDhhZDkyZWFiOGM0ZjcxZTdlOTZiOTQ3MmUxYmMwMjA5NDE3ZDdhNjdiNiJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L72-L75",
+          "version": "repo-lines-v1:sha256:282e1d53fabaf08fa7b193aca579208457bf5118370de605f668f5fea25ba9e8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2QzMjUxYWEzODZhYzczOTM5NmZjY2NkMTcxODYwMGY4MzUyMDUyNDAxYTE4ZmJhMWQyNDlkMDg1YjdlMDEyNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjFjYjg4ZTEyZGQ0NmNlYTQzZGRiNmRkYTFiNTlkZDAwYTYxMjBjYThhOTQyMzg4NjI4NTI0ODMxNzNkYWI1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTliZTQzY2I4ZTMyNzhmOTA2YjZmZDdlMTQ0YjQ4OTBlOWEyYzkxMzk5NTVjYzhjNTdlMGM3NzI1YWNjNTNjYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTllNDEwNjE1ZWE4OWY4NzI3YWNmMjUxMDk3ODg5NmY0ZTY3NDQ3YjAwZDVhZGY2YWFlYjkwMDMxOWI1YTE5YSJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L70-L73",
+          "version": "repo-lines-v1:sha256:fb988205fbabfff87128f9f31f8526866fdc84188407c63204937450a7a96441:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjk5NDQyZjQzYmYzMTQ5NGI5MjlhZmQ4NTAwZGY4ZTAwMTJjZmI2ZTlkYjc2NDJjNWY1MmEwOTUxY2E5M2JjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI2N2VlMjZiM2NiMDRhMzhiYWZjMzc4ZmIwNTJhYWI3NWVjOTE0MThhOWRjN2IxNDI5YjIzYzYzN2I5ZmJhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmE0MDBiNDNiYjgxODUwNTEzM2M2NTE4YjA4OTFmMDM3NTEzYjQ3ZGJmNjBhMTFmYmZmMjUyNDRmYjg0NTUwNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmZmNjkzMzhmYjI5YWUzNWYxNGFiMGU1OTE2ZGE3ZDViNmIwNDRjYTZkYTRlZjFiNTJlNWUyODBkZTk3ZjA3ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdf7d438f925479b8d0f45044da68b94",
+      "statement": "detail.spec.ts 断言点击会话行后发出的 context 请求 URL 包含 tail=50，与 route 侧不传 tail 时使用默认 10000 是两条不同代码路径。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L44-L54",
+          "version": "repo-lines-v1:sha256:569259be659db968c29f87c292c669a3d3decd82ebb718dafcc672afc609451d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzZWJlZTdmODkzZDQzYmMxNjUxYzVlNTIxNmNjYTFiNWQ2ZmNhMjFlOGNlODRkZTEyNzg5Y2RlNzkyYWIyZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0Y2JlYzlkMzk3YzE2NmViNGIwNDA1OTMxM2RmZGRmYzJmYTE1ZGJjNjRiZDMxNmVhOWQ0NjgwMDY2ZWZmMzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM4NDE3NGMwZGZkYmNmYmI5NjE0MWIzODYwNTI1MjBkYjU0NWI1ZmM1NzUxZDM2M2YzMDFhNGMwYjQ5ODZjZGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2ZTJjZmM1YmIxYWQzMjNkNTkxYTA3OTFhMGY2ZGU3YWQ0MmY3MGFmY2ExYzMyMzY4YTNkNjkwYWM1ZDA5YWIifQ"
+        },
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L50-L68",
+          "version": "repo-lines-v1:sha256:2def1e8c8deb8fe6cf0ba562cf681f92671d6b54b85262d7522a3819a08810e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNGYzOTU1OWMzNGI2OWM5MTkxODExNmM4NDhhMjdlMzI4ODZkZWQxNzdjMzNkYWRkYmE4OWQ4ZDcyNmI3NzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlOWY2OTVjOGMwODNjYTc1YmJlMDk3NGQ0NzJmNjU4OGNiODg5OGEyN2E1NDg4MGZiNzg5MWQ1NDZlMzc1YTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5YmU0M2NiOGUzMjc4ZjkwNmI2ZmQ3ZTE0NGI0ODkwZTlhMmM5MTM5OTU1Y2M4YzU3ZTBjNzcyNWFjYzUzY2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_899cda8f267948cbb1148c0a12c9e3a9",
+      "statement": "多个 e2e 断言被有意写成弱断言以适配真实磁盘状态：行数用区间 0..30，搜索过滤后只断言 filteredCount >= 0。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L46-L68",
+          "version": "repo-lines-v1:sha256:d5c0344b43193965105ba05905bab8e875fea71fffe255939cd5ca27510abb12:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3NTNiMjJlMzg1NTUxZjJkYmY2MGYxMTljZmQ1ODA4MGMzNDI2Y2Q0YjZjMmJlMGY1M2E3MGU4MzMxZDRhZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyNWEyY2VlNWJjOWQzZDlhYmI3NGU0NGVmMzYyODdjNjRhZmRhM2EzY2FjM2Q0NTYwNTcyMjI4YmEzOWRlZWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5YmU0M2NiOGUzMjc4ZjkwNmI2ZmQ3ZTE0NGI0ODkwZTlhMmM5MTM5OTU1Y2M4YzU3ZTBjNzcyNWFjYzUzY2MifQ"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L110-L127",
+          "version": "repo-lines-v1:sha256:26a202e8e0cb145f9982beefc49a4b4d2219ed5c4dec28922bbba818e88e1a46:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMDVkOGY5NWE5YzJhZjQ4OTc3YTdjZDE5YmEwZjExNmZlYjlkNTBjMWRiMTcxODMxN2E4Y2E5MGVhOWM4N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1YWE0N2U1M2UwODNlNDg2NjVjZTNjNmZlOGUxZWYxZWJjMmY2NDQzMTg0OWY4YTY1YjJiMjk0YjQ2NzdjZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5170073b2abc466481307cf18cf9c0ac",
+      "statement": "search.spec.ts 验证搜索输入初始不存在、点击 search-toggle 后出现且未 disabled，并断言输入后确实发出带 q 参数的 /api/sessions/search 请求。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L32-L62",
+          "version": "repo-lines-v1:sha256:8801ce14db7cdb37f2d86c3088eed0fcb09e5268bfe06abe49ff269a44a50d5e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjMzQwOTIzYWEzZTA0ZTg2YWI1Njc2YWEzZWNjMjE5ZjY4ZmJlYTFjMzVmODFkY2NiYjhjNzNmYzk2ZmZhOTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMDhjMzJkZjYyYTQ1ZmI0YmUyZjk5OGI2NzRhN2E0ZWVkNmMzOTk4ZWUyNzVjOTQxNGVkOGMwNTI3NmVkNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwY2FmZmVlYWU2NjZiMDE5ZDUyOTc2YjdiOTRiMjIyZWRmNzRlODRiMmE2ZjIwZWVjMmM3MjE3ZTY2ZTBjMWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwNDk2OGRmZTM1MmM3MGI4OGQzOTU0NDZiNjQ4OGMwYjY0ZmE4YTQwYjYxMWNlNDQ4MDc5MGZlYTBlNDJlY2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d6d4b408ac7149698e3315392f6a8709",
+      "statement": "detail.spec.ts 在消息渲染成功时只断言 user / assistant / fallback 三类角色计数之和大于 0，不校验具体角色数量，因为活跃分支尾部可能只有 toolResult。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/detail.spec.ts#L55-L73",
+          "version": "repo-lines-v1:sha256:24319fe00e4febc7132702c94ccc736df4b0a505397939cb6be07ee8f08e18ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNDAwZWNlM2Y4NTY5YmVmYjM4NGRmNWEwOTg5M2UwOGYzMWNiOWJlNGJkMzE1YzhiY2M0MWY3OGM3ZDExOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3ZDgzMDdkZjY4M2M4OTlhMzM1MDY2NGI3NjBjMmI0ZDFjMjQyZDIwNWZiNDQ5ZTE2MTdmYzE1OWJjNTliYTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf72477e9edf4b53a8f840e6cd5a070b",
+      "statement": "e2e 通过 data-zone / data-component / data-testid / data-action / aria-current 等属性定位元素，这些 DOM 契约由 Layout、SessionTree、SessionTreeRow、MessageView、CenterZone 与 Sidebar 生产，构成 UI 与测试之间的硬耦合。",
+      "evidence": [
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L40-L45",
+          "version": "repo-lines-v1:sha256:38c42eaf32f6fca78d382bbea0e1baae9df7125d6acae0dffffeda38042d6a1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWViZWIyZWU1Mjk2ZGMwNTcxYjhhMmU4MDM1YzhiMGM4NTZkNGUxNjNkMDI3ZjVkMjJiZGVjNTcyN2NiZmJjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDliYzJlYmVlYjJjOWUxNDkxNjQ2MmRlOTcxMjU2Y2FjMWVjODdmZGMzMzBkNTM2ODIzNzQ1NWNlYzFlNWJmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTA4YjQ3ZjE1MWU1YzMzMjE4MTBmNjEzNDZmZjkzODg4ZGEyNDUxOTcwOWE5NmJhMGJiNGYyMjk2ZmE5MTI3NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzMyZmEyOWIyMDQ3NjhmNTYwNTU4ZWFmZTYxMTEwNmVjOGI5NTAyYzc4OGQ5YWQ0ZTRjMTI5ZTEwMzIyOTJlZSJ9"
+        },
+        {
+          "resource": "repo://e2e/sessions/list-sessions.spec.ts#L95-L113",
+          "version": "repo-lines-v1:sha256:7a600299cbade7c97a9a1c368ccbaa7598f697236826954b834b6b92ba1f3c4a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3NzMwM2I0YTliNDZlMmEwNzg0Y2M5OWM0N2I0ZDI5NjFlNzEwZTY4Y2E0ZTQxYmExNGM0MjI5MGJmOWE2OTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNjkzNmZkM2Y5ZmRkNGZkYzczYjRhYzljMDExYzQ1MmQyOGExN2NkNTM1ODIzOGQ3NDc0Njk4MjYxNDRlMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZkOWRjYTcyMTdmMWUyZWY4ZGE0M2FmM2FkNjM2YTM0OWUxNmUyM2RmMzc1YmIxZjNjZDE5NDAwNjE4MDc2ZGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1ODBiNzY1MThkYWU5NzlmYWViZDAyMzY3YTI5MjkyYTUwZDk3NjA5MjI1MWEzOGE2Y2UzMDg4MGJhNDI4MjUifQ"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L33-L47",
+          "version": "repo-lines-v1:sha256:2356cfdff386d8dc4b6dca981a9713c54d3deee13daec45d2c6379ae85f40b39:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiYWYyZDNkZDI1ZjhjZjZmOGRkMDIzN2UyMTA4OGM1OTlhM2JmZmFlOGM3MjBiYjI3OTFiMjUyODNkZjA5MTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTJiYjNiM2EwYTllNGI4N2ZiZTQ0MzJjYTkyZmMyZjcxMTFmM2EyYTZkZjMyMTk5ZDA3YzM2MGY0NjA5M2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3MmU4NDA4M2ZmZjU4NDA5MzA4ZDI1NTMyMmQxYmIwZjFiMDAyMmQxOTcyN2Y0NmE4NmIyYzExY2Q4Zjg3YWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxNTJiNjY3MTRjYWVhOWY0MGViZTY3MzJiNzA5MDY3MjFlNTUyMTg0ZWIzM2U4MDg0OGJmZWUwMTMwYzU4MmMifQ"
+        },
+        {
+          "resource": "repo://e2e/sessions/search.spec.ts#L85-L89",
+          "version": "repo-lines-v1:sha256:c9e6187f7cefd90e2d6fa867938a3bd1241c4ef807b00d778f9ea02b5191ab66:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWMzNGM3NWIyYTlkYzBlMDc3MWIxYTYzOGMzMzcxMTY4YjIwZjYyNjNkODFkNzdhNTNlNjE4NDBiYjg3YWQxNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBjMjZhMzQ0OGU0ZDE0Yzg2NmY0NTkwM2IzOGRjYjlhNzdiMjBiODk2YjBkMGRlN2I1MjJmYjhhMTg4NzA1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0Nzc3MGZiMGZjMmU2Y2FlZTg4YWY4NWM3NDU0ZmE0ODlmMzY2ODc1MWI1NDcyMWViNDU1ZjhmMGM1ZmRiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmJkZTJhYWM1NzcwMTIwNThkNDhhY2Q0MGI5YTgwYjY3ZjhkOWYyZmM0NWNkYzJlNjIyOGY1OTRjNWJiOTdhNyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

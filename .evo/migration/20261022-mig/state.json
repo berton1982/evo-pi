@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-22T02:55:38.246Z",
+  "updatedAt": "2026-10-23T03:46:57.739Z",
+  "scope": "program",
+  "rLevel": null,
+  "programRun": null,
+  "gods": [],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "488d7ae5dfe31d3c7bb612a1cd95e1a0c55371e6"
+  },
+  "surfaceCount": 0,
+  "phase": "P4",
+  "phaseStatus": "done",
+  "phases": {
+    "P0": {
+      "startedAt": "2026-10-22T02:55:38.247Z",
+      "doneAt": "2026-10-22T02:56:32.403Z"
+    },
+    "P1": {
+      "startedAt": "2026-10-22T02:56:32.403Z",
+      "doneAt": "2026-10-22T03:00:51.961Z"
+    },
+    "P2": {
+      "startedAt": "2026-10-22T03:00:51.961Z",
+      "doneAt": "2026-10-22T03:04:13.764Z"
+    },
+    "P2.5": {
+      "startedAt": "2026-10-22T03:04:13.764Z",
+      "doneAt": "2026-10-22T03:06:26.304Z"
+    },
+    "P3": {
+      "startedAt": "2026-10-22T03:06:26.304Z",
+      "doneAt": "2026-10-22T03:07:03.109Z"
+    },
+    "P4": {
+      "startedAt": "2026-10-22T03:07:03.109Z",
+      "doneAt": "2026-10-22T03:07:47.159Z"
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {
+    "ARCHITECTURE.md": {
+      "sha1": "c9f1779d87c283fc3e5f9ceccd1a027adcfe7b54",
+      "by": "用户（m04557 批准）",
+      "saw": "AD + rules.json#layerPaths 已按 arch/conventions.json 的仓库事实修正（ports 在 domain/ports、use-cases 不叫 application）",
+      "at": "2026-10-23T03:46:57.739Z"
+    },
+    "CAPABILITIES.md": {
+      "sha1": "917454289488680eb9b6a73f2d43f3d4d075394f",
+      "by": "agent（试点代签，待用户复核）",
+      "at": "2026-10-22T03:06:51.554Z"
+    }
+  },
+  "decisions": [],
+  "tasks": {},
+  "history": [],
+  "paused": false,
+  "lastCommand": null,
+  "closed": true,
+  "run": ".evo/migration/20261022-mig"
+}

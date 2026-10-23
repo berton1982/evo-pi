@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:9dd6042a1590a1d9cd01bee7e8226ec8dad13505f72a59ceb8b9fa81d2929211",
+  "claims": [
+    {
+      "id": "claim_12bc79805a7f428b877347c3e4146167",
+      "statement": "searchSessions 先 trim 查询、空串直接返回空结果、长度超过 MAX_SEARCH_QUERY_LENGTH=200 时抛 RangeError，并把正则元字符转义后构造大小写不敏感的字面量匹配。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L225-L244",
+          "version": "repo-lines-v1:sha256:b8c23369c1f350e9f0fb7d2983a6307019e74f4867cd655d628b5060ca9004be:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNzExMjdmN2Y1ZjE3MTdiOTZlN2U5NzY5MGE3ZDE4MWE1MDcyMzdmY2FkMTg4NDBiYmIwOTM0MDIyYTkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkNzg3NGM2OTYxNGQ5MzAwNjRjYTg5OTM1MzBjMjI0MzI0NWM0ZTNlMzQwY2Y2OTBlODQwM2QzNmE1N2IxYTQifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L246-L255",
+          "version": "repo-lines-v1:sha256:b64d3630d4de19cb6f2596bbba059fffa97bff94f2982cb24f685f654bcb4511:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzMGYwOTAzMTEzOTQ5ZDA0NjUwNjRjMmQxNDAxOGIyMzllOTZlNTFhZDVkMzUzOGQzYzIzOWY0NTE2ZjMwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3ODI3MGY0ODgzOWJjYTBjYjI4MTM3MmJmMmU1ZGM4YjVhMTc2YTk4Y2JkYjlmMTFmY2I3NmEzMmEyMmQ4MmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4Mzc2NDQ1M2QyOTE0ZWViZjFhNjZjYjgwMmIwMGYzODZmOGFhNDFlMjk3NGZkYjk1ZTZmN2VlNjE2NjFmN2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0OWM5NTI5YjU0ZWM3N2NhOWJlMWJhOWNlZTBiMGJjOGFlY2UzZmY2ZmY4YWJlZGQyNzgwM2JiOTU4YzdhMmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a5fb36c18356431aa1c3ceddc67db7be",
+      "statement": "搜索候选集来自私有 listSessionsSummaryAll()，枚举 agentDir 下全部 *.jsonl 并逐个 readSessionInfo，完全不经过 scan-index，与该方法注释中“uses cache”的说法不符。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L257-L260",
+          "version": "repo-lines-v1:sha256:7c649ce3d331d1123fa29905fd0c6afe012db9a501162b729e9cfeea3482da3a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzIyOTBkNDQ4NGI4OTE5ZDAwZGVhNzQyNmI4NWIyMzQ5Y2UyYTBlZDhhZDQzN2ZmZTY3OWE3OTEzOTEzNmRlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjJjNGNmNjA5NjBiMjdjY2NhNWMxNjgzODQwYTU5MjFmZjNlNDI2Njk3YTRmYjJiNTQyMmVlOTNlOTU4NDY4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGFiYmNlYWQyNzU2OWM0OGM4YWE5ZmEyNDk0NTI5YTMyZTk0YzVjY2U4MGJmMjM3MGNiNzVjZWIzODU2YjExMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmRhZTgwYjdkNzZmMjk1NmE3NmUzODVhNWIwMWJhNmNmNzRlODI4MWEwN2VmODJlYTY5YjAyYjRlYzI2NjkyNCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L374-L386",
+          "version": "repo-lines-v1:sha256:ba84d6f21a208c727729fcb9ba324738da63303887c218ef0129261944bb291c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2YzVmNGVjNWYwMzIwMzAzMjhjMmE2NGQ5MWUzNjdmYzczODQzYTBhYjViNTBjMDk3MjYyNzA2ZGIwNjhmZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5YmRlMWQ2ZTJiOGYwZDA0OTFlNGM4MTY5NmEyMTQ0MTU1Y2FhNThhZmQ5M2NiNjQ5M2I0MDZhMGE0Y2Q1NjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMmIwNjlmMTEzMjRiZTg3NjJjZWRkYWMyNDVlZDMxNzY0MTExZGVhYjFmYWRlY2Q2OTA2MTg4ZGRhNDkyYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b86eb3e513cb4d8bb5186e6746392be3",
+      "statement": "搜索候选按 modified 倒序排列，因此最活跃的会话优先占用结果配额。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L259-L260",
+          "version": "repo-lines-v1:sha256:a7ba0b3abd11180671d4b29949ecb2c5c9988fe7da4986eeebfdde7fa1ec88fc:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRiOTYzYWVhMzc5YzE4OTEzZmNhNmM0NmRmOTRhYjcyNTk4MzMwYmQxZWM5NTI5MzIyMjk2OGJjY2EzZWIzZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjJjNGNmNjA5NjBiMjdjY2NhNWMxNjgzODQwYTU5MjFmZjNlNDI2Njk3YTRmYjJiNTQyMmVlOTNlOTU4NDY4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjQ5Yzk1MjliNTRlYzc3Y2E5YmUxYmE5Y2VlMGIwYmM4YWVjZTNmZjZmZjhhYmVkZDI3ODAzYmI5NThjN2EyZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmRhZTgwYjdkNzZmMjk1NmE3NmUzODVhNWIwMWJhNmNmNzRlODI4MWEwN2VmODJlYTY5YjAyYjRlYzI2NjkyNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3c35440a8d24e759bbbe3dce0824815",
+      "statement": "搜索只处理 JSONL 中 type === 'message' 且 content 存在的行，content 支持字符串与数组两种形态，数组只取 type === 'text' 的块并以块下标作为 blockIndex。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L272-L300",
+          "version": "repo-lines-v1:sha256:f2cac4c78f26d45c68f62d0bdec184ccc372d01afd46b7e747a38ad0d13b66c7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0MjYzOThjNzYzZmQ5OWQ3ZjQwMzRjNDYxNWZkNWZlOTdjN2I0N2E4Y2Q3ZTlmMWNjMWJmN2FkZDA1MGY3ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4MDE4ODNhNDhjMDBhNjZkNmIwOThhZTc5NjVlYTcyOGQxMmJkNTQyMWMwOTVlN2FiY2UyMjg1ZDZkY2VhNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyZTM2MGFlNjBhZmJhMzhkZTU3NTZkYjE4MzU3NTNjZmQxYjhjMTYxMTk1ZGRjNjVlNjJmNzRlZmI0NzdiNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA2MDNmY2UyMWYxMTEwODZkMDk3MmM3YjkwZWUzY2NiYzM0MTlhODk3YzNhNjZkOWQwMmYxMTdmNjQ4OTEwYzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9d6402271d994266838e1c7a755e79b2",
+      "statement": "每个 session 在首个命中后立即跳出内层循环，因此最多贡献一条搜索结果。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L329-L341",
+          "version": "repo-lines-v1:sha256:d2a8b462bee1a1d141997675d385763c3e4536c3d6eb8467278db728a298bfdb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlOGEwNTBmNTMyY2M5OTljMWNlOTNkMjEyMGQxZDE5YzVjNGFkNzY0ZjBlM2QxZmYxNDI2ZDBkODYwZWVjNTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5OWVmMjE1YmZiMmExNmM1NmI3NWFmNGM0ZmFiYThjNzljNTQxZGE2YjM1YTk1OWQ0MzliNjNlMjI3MzY3ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3MGI1MzhjYzk2NmQ1OGRiMWY5YzgyZDRhMWI4MGI4YmVlZjcxMjRlODc1ZDYyOTJlMGMyYzhjMjFlZThjMGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e5a60644ff747d58ce0446d4ba06745",
+      "statement": "搜索结果的 snippet 由命中点前后各最多 80 字符组成，折叠连续空白，并在被截断的一侧前置或追加省略号。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L306-L327",
+          "version": "repo-lines-v1:sha256:01c4164b753b4511eaea2e56cf61a5818f157b4282f0b436b0cb1cf8aaa819f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzQxM2MxNGEyM2JkNTRjN2M1MzkzMDE1NDg1NGUxYTc0NjA3OTY5M2YzMzQyN2VmOGVmM2FmZjRiZDQyNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNmQzNjliZTdjODZhNzEyODBmZmUyM2U0NjIwYzU3NTYwYzBlMWZmNGNhY2RmNzM5NDM0YmEwYjgyNzk1NzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2MGI5Yjc2NWZjMmI5MmUzYjFkMzBjYjFhY2M3YTAzZTE0OWY4YzA4YTc5ZTVhZGY5ZTQxZDJmNmQ0NDQ0MmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhMzQ5NGNjMGZkZGQxMmMyZjMyNGZkNjk1NmY3MzA4NDIxNDI4YTA5ZTU2OWI2MDYxNzNmY2YyN2ZjNjExMGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d863cd32d8442c4a5d29f2309b42589",
+      "statement": "搜索结果 blockIndex 的计算依赖 blocks.find() 回调内的副作用式偏移累加（按每块之间一个换行符计），因此正确性依赖回调求值顺序。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L308-L315",
+          "version": "repo-lines-v1:sha256:cfb4b4c4544526a36a9433d58c3562f8fb1a0ceda2d4c2242bd03f307db645dc:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWRiNzE2NjJkMmU3NTdmNmVlODZjNzdmODIzY2Y3NjVmYTQxNWE3Y2MzZjUwNzIzODMzMGI2NzNjNzhhNjA1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODI2YTEyODQwZTZjMWQyZTcwODMyMzQyNDg3MDJjNDgwMzY2NzM1OTMwY2I0MWM3YjcyNTQ3OGM5NzNlYjBmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYxMGQ5NzQ0NGNmNDY0ZGY4ZTI0MzE1Mjc5MmI1N2U5ODZiNTQzZmUyNjc1ZDdlNmNkMDU4NDIxM2NlN2EwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWI5MzlkODk1NmU2NmZlMjExYmQ3NzNlMmVkNGRmMzg5ODE4YjlkZjYzNjNlNDg4ZjhlYzVmYmEwZTdkNjFmNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6fc3447f862043249691395518051405",
+      "statement": "注释中声明的 MAX_FILES=500、MAX_LINE_CHARS=1MB 与 3s TIME_BUDGET 三个上限均未实现，代码实际只实现了查询长度 200 与结果数 30 两个上限，因此 truncated 的唯一含义是结果数触顶。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L225-L244",
+          "version": "repo-lines-v1:sha256:b8c23369c1f350e9f0fb7d2983a6307019e74f4867cd655d628b5060ca9004be:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNzExMjdmN2Y1ZjE3MTdiOTZlN2U5NzY5MGE3ZDE4MWE1MDcyMzdmY2FkMTg4NDBiYmIwOTM0MDIyYTkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkNzg3NGM2OTYxNGQ5MzAwNjRjYTg5OTM1MzBjMjI0MzI0NWM0ZTNlMzQwY2Y2OTBlODQwM2QzNmE1N2IxYTQifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L262-L269",
+          "version": "repo-lines-v1:sha256:078de751477c60869379ac64f84b834b387a40c71b94b45ef8a77b8ba20da809:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGFjMWUxZDljOWMyYjkyZjA5NTkyMDNlMTllMWE4YjY4MzkxZjViZGE5Mzc3MmUwZGE0ZDA2NWU1Mjc0NTZhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI2MmY2MGQ4NTkwYTU3OWNmNDZmOGQ2NzM3OGM0YzU3MmI5NjJjZWNjZGI5MGM3YTVmN2I0MmI5NjA3ODJhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGExZmY0YjA5ZGVkMTVjOGYzMzE4YzBlZDgzNzRjZGM4NjcyNzhjMjk3MmQ5ZWRlNGZmZjVlYjZiNDBmNDg3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2VmZGJkMzM3OTA1MDEwODY2YzVlZTgxYWQ3MTk2MTc4ZGQ5ODhmZmUwODY5ZDgzNWI4N2I4YTdjZjAzOTJhNiJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L346-L348",
+          "version": "repo-lines-v1:sha256:8ef0f7b6bcb7fe8c6b52189a90c575db54fa0358dbb51dbcd02ed767441aec71:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjQyOGNlYjliY2UxZWNmMmMyY2I0YjdkMDM0YzYyMjM0ZWUwYjY3ZGIyODY4NDkyZDdiMTJiMDljOWM1NzNiMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGRkN2ZlZWNkN2M5YjFhMTNmODhhYThiMTVjNTYzMGNmY2NiOWYwODkzZTI4M2EwMDg3MmU5OGM1YjVkZDJiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTIwMjY2NDI5Yjg5NTk1ZWI3YTIwM2ZkNjlmYzJjMWU0MWZhZGUyMDZkMmJmY2M2ZWY2ZjcwYTMyYzk0MzUyYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd3ce91a1b76460da73f209cf8e5f8b3",
+      "statement": "搜索结果不包含 entryId，因为该处只解析了 JSONL 行的 message.content 而未解析行的 id 字段，导致 wire 层 SessionSearchResult.entryId 恒为 undefined。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L329-L338",
+          "version": "repo-lines-v1:sha256:a3c5dd956e25a85f0481dc24c0d1235c34b4ac782e01382eaa95397ab72e7d11:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlOGEwNTBmNTMyY2M5OTljMWNlOTNkMjEyMGQxZDE5YzVjNGFkNzY0ZjBlM2QxZmYxNDI2ZDBkODYwZWVjNTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YjE5ODJlOGRkNzQ4MTE4MTQ2YjM5YTJkMDA2MmY0MDgxZTM0Nzc5Yjg2NzVjMjM0YzRmYjEyNGRjMzkzOTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5OWVmMjE1YmZiMmExNmM1NmI3NWFmNGM0ZmFiYThjNzljNTQxZGE2YjM1YTk1OWQ0MzliNjNlMjI3MzY3ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjNzlhZjgzYTZhZTU4MWIzYmIyNmNmOTUyYThjNTMyM2UzNDJhNTg5YTdiODY1YWMyZTRlNjg2OTk0MDQzMzEifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/types.ts#L81-L94",
+          "version": "repo-lines-v1:sha256:bdc1b23ccb329a418238e87048e9e691cafb1eddd7be22bc68f07e4860bf1841:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YWFlMzdiYTY0ZjgzZTBhMzAwNzMwNTQ0YWZkYTEzODM2NzIzOGQ3YTJhYzRlZmUzNWYyY2UxYmE2MTNiOWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk1YjdlN2ZmMTQ5ZmIxY2NiZmU2ZDY3Mjk0MmEwNmMxMzY5N2Q4MGNjOGNhMzJmMmIxMThiODY0NTk1ZTYyMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiOTgwYzZkZmUyOTNkOTVhM2JlNmQ4YzlmYzE4NTE1NjJjY2M1OGRkZmExMmJlYjE5ZGExNDRjNjNmY2Y5YjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_50bff402507343fba45a18a69609725e",
+      "statement": "streamForSearch 的 AbortSignal 能力只在端口签名与 FileSystemSessionStorage 实现中存在，searchSessions 调用时未传入 signal，因此当前没有超时或取消真正生效。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/filesystem-session-storage.ts#L182-L210",
+          "version": "repo-lines-v1:sha256:34ff61e88f4e55a0c7b728791ad005a6fc5ee35fbe31e53cf97af8de256ed261:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhOWE3ZDRkZDViNmM2NDM3NGE2YTIxYzFhMzQyZTNkMzI1MzEzYWVhMDM2MGRlNzBlOTAyM2U1ZTljYmU4NjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhOTI5M2ZkODA1NGI2ZTQ3MjQ4MzczZjM5ZjRkZDc3ODAwMTA1ZWI3NTgzNDg2ODcyNTQyODVjZDEyODJiNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkYjM4NTU0Y2Y2ZDhhNmIwNzM4M2ZiYzVmNzE1ODRlOWU2ZTQ1ZWJmZTNjY2Y1MDBlNjY5MDQ4MTBhZDJiOGYifQ"
+        },
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L272-L272",
+          "version": "repo-lines-v1:sha256:d426398c763fd99d7f4034c4615fd5fe97c7b47a8cd7e9f1cc1bf7add050f789:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDQyNjM5OGM3NjNmZDk5ZDdmNDAzNGM0NjE1ZmQ1ZmU5N2M3YjQ3YThjZDdlOWYxY2MxYmY3YWRkMDUwZjc4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDQyNjM5OGM3NjNmZDk5ZDdmNDAzNGM0NjE1ZmQ1ZmU5N2M3YjQ3YThjZDdlOWYxY2MxYmY3YWRkMDUwZjc4OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjJlMzYwYWU2MGFmYmEzOGRlNTc1NmRiMTgzNTc1M2NmZDFiOGMxNjExOTVkZGM2NWU2MmY3NGVmYjQ3N2I1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGVlYmQ2ZGM2ZDJmZTJjOTIzYzlkZjJiZjkwMTY2ZDg1ZTI1NjBmNzM1NGFiOWMwNGYzMTljODdlM2Y4MGQwZCJ9"
+        },
+        {
+          "resource": "repo://packages/core/src/session/domain/ports/session-storage.ts#L93-L105",
+          "version": "repo-lines-v1:sha256:12faeb654168d45e4050402f2b3731f1b42e650e410dabbe19d074fe19c89498:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlNWUxNjNhMDFmZDU5ZDgyYTc2OTEwZmU2MWQxNmE4Yjk0ZTRjOGJmNTZhYzUxZWUyMzcwOTU4MzIxODQ5MzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2af341fd24d84be1a24dfefc83d8f921",
+      "statement": "会话级字段（name / firstMessage / allMessagesText）当前不参与搜索匹配，只匹配消息正文，属 Phase 3+ 范围。",
+      "evidence": [
+        {
+          "resource": "repo://packages/core/src/session/adapters/jsonl-session-repository.ts#L239-L241",
+          "version": "repo-lines-v1:sha256:d5a9147f74e427c6131b68b05694184e87ff540f331534350da847d376d2bdb3:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU4ZTJkYzRhM2NiN2I2OGExOTlkMDg1NGRhOWY3NTM4MjI4YjIzOTMzZmIzYjkxZDJhZTVhNzYyZTczNjRiYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWIyNzA1NDJiODljNmRjMjI0YmZmMTQyNTE1MDI1YjEyNWFiMWViNTFhMTBkYTI0YWFmOTQ4MDc4YjE0MGU4ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzUzMjllNThjZWJkZjQ5OTFiODI2MjliZWU4YmU0MmQ5NTdiNGEwNDIzMjIzMjYyYWE0Y2IxYTM3NTg1NTI0NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTAyY2E5NmVhMTZkY2U1NmUyNDcxMmM1MWMwYzdjODRkOWIzM2UxMDMxZTEwNjIwNzVkYzI4ZGUzYzk1ZDE0YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aaef4ca8814c42d8b082c67e1f21c1e4",
+      "statement": "搜索 route 对空 q 直接返回空结果而不触发扫描，并把 SDK SessionInfo 的 Date 字段转成 ISO 字符串以通过 wire schema 校验，RangeError 含 200 时映射 400，其余异常映射 500 并回传 message。",
+      "evidence": [
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L34-L41",
+          "version": "repo-lines-v1:sha256:7142ba5c34e5571525fc6c30439cc16911cf601720184608a276702789a7aaf9:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI5N2MxMDY0ZTdhMDZlMmU5ZDQzNmMwYzJiYTk5NDIxMjU5NDk5ZTMwYTEwYmFlODM4MDg5M2E3YmYyMTUzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMThmOGE0NDA3ZDM2NzU0YWM2MzIyYmY0M2M5NTVmZmUxZTVhZDg3NmVhZmU1ODE1MDU1NzAyYmMwOGI0NzY4MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2VjYzkxMzBkNzc0MzM1NTk0YzUwNTZjOTMzNWIyMmM1YjdlMjg5ZDg3ODRjZGNlY2M0OGRlMjg5ZjA0MDhjMyJ9"
+        },
+        {
+          "resource": "repo://packages/web/src/app/api/sessions/search/route.ts#L47-L69",
+          "version": "repo-lines-v1:sha256:99b0451d5444c2b67dd6b6bac4be86ff19a467126e39ec5a411753f45eec823c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3NmY2YzliZDdkNWNjN2JhMTNmZjZmYjE3YTM3YjA3MzYwZjZmMmYyYmI4M2RiZTc5OTY0NzU2YzYwYTkwMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwMWZlYTMyM2YxZTRmNjI1NTExNDdhMmZkZDA5YzM4ZGRiMmNiMDE3MjVjOGMxMmY3YzAzYTZiMTU4YWI2OTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-17T09:08:25.607Z"
+  }
+}

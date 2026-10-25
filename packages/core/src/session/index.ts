@@ -45,6 +45,7 @@ export {
 // (our local extension of SDK's narrower 3-field SessionContext).
 // PR.C 2C.1: new search types
 export type { SessionContext, SessionSearchResponse, SessionSearchResult } from './domain/types'
+export { createNewSession, type NewSession } from './use-cases/create-session'
 export {
   makeListSessions,
   makeReadSessionContext,

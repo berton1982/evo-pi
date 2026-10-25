@@ -27,25 +27,37 @@ interface SidebarPaneProps {
    * 表现为"会话少了一半"，而代码里看不出谁该负责清空。
    */
   onSearchToggle: () => void
+  /** 当前项目根（null = 还没选项目）：项目选择器显示它 */
+  cwd: string | null
+  /** 换项目交给装配点的 hook（URL 是唯一事实源，壳只转发） */
+  onPickProject: (next: string) => void
+  /** 新建会话（POST /api/sessions 只发号，落盘在第一条消息时） */
+  onNew: () => void
 }
 
-export function Sidebar({ tabs, onSearchToggle }: SidebarPaneProps): React.JSX.Element {
+export function Sidebar({
+  tabs,
+  onSearchToggle,
+  cwd,
+  onPickProject,
+  onNew,
+}: SidebarPaneProps): React.JSX.Element {
   const [activeTab, setActiveTab] = useState<SidebarTab>('sessions')
   const { t } = useI18n()
 
   return (
-    <div
+    <section
       className="flex h-full flex-col"
       data-component="sidebar"
-      role="region"
       aria-label={t('sidebar.region')}
     >
       <SidebarHeader
         activeTab={activeTab}
         onTabChange={setActiveTab}
-        // Phase 1（create-session）接新建会话；Phase 0 不假装能建
-        onNew={() => {}}
+        onNew={onNew}
         onSearchToggle={onSearchToggle}
+        cwd={cwd}
+        onPickProject={onPickProject}
       />
       <div className="min-h-0 flex-1 overflow-hidden" data-component="sidebar-panel">
         {activeTab === 'sessions' ? tabs.sessions : null}
@@ -53,7 +65,7 @@ export function Sidebar({ tabs, onSearchToggle }: SidebarPaneProps): React.JSX.E
       </div>
       <SidebarMenu />
       <SidebarToast />
-    </div>
+    </section>
   )
 }
 

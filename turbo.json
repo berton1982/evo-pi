@@ -1,14 +1,24 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["PLAYWRIGHT_BASE_URL", "CI"],
+  "globalEnv": [
+    "AGENT_FAKE_DELAY_MS",
+    "CI",
+    "PLAYWRIGHT_BASE_URL"
+  ],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
     },
     "lint": {},
     "test": {
-      "outputs": ["coverage/**"]
+      "outputs": [
+        "coverage/**"
+      ]
     },
     "dev": {
       "cache": false,

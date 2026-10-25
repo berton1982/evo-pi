@@ -6,5 +6,6 @@
  *      `import { createInMemorySystemAdapter } from '@evo-pi/core/system'`
  */
 
+export * from './chat'
 export * from './session/index'
 export * from './system/index'

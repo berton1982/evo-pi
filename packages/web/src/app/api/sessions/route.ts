@@ -1,4 +1,6 @@
+import { existsSync } from 'node:fs'
 import {
+  createNewSession,
   FileSystemSessionStorage,
   JsonlSessionRepository,
   makeListSessions,
@@ -103,4 +105,37 @@ export async function GET(_req: Request): Promise<Response> {
   return NextResponse.json(validated, {
     headers: { 'Cache-Control': 'no-store' },
   })
+}
+
+/**
+ * POST /api/sessions — 新建会话（只发号，不落盘）。
+ *
+ * 语义按 pi SDK：会话文件在第一条消息时才产生，所以这里不写 JSONL；
+ * 返回的新 id 由前端放进 URL，第一次发消息时 agent 侧在同一 id 上落盘。
+ * 只校验 cwd 是存在的绝对路径——写盘动作不在这一步，越权面最小。
+ */
+export async function POST(req: Request): Promise<Response> {
+  let body: unknown
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json(
+      { error: { code: 'invalid-request', message: '请求体不是 JSON' } },
+      { status: 400 },
+    )
+  }
+  const cwd = (body as { cwd?: unknown } | null)?.cwd
+  if (typeof cwd !== 'string' || !cwd.startsWith('/')) {
+    return NextResponse.json(
+      { error: { code: 'invalid-request', message: 'cwd 必须是绝对路径' } },
+      { status: 400 },
+    )
+  }
+  if (!existsSync(cwd)) {
+    return NextResponse.json(
+      { error: { code: 'not-found', message: 'cwd 不存在' } },
+      { status: 404 },
+    )
+  }
+  return NextResponse.json({ session: createNewSession(cwd) }, { status: 201 })
 }

@@ -7,6 +7,7 @@ import {
   Panel as ResizablePanel,
   Group as ResizablePanelGroup,
 } from 'react-resizable-panels'
+import { useI18n } from '@/shell/frame/i18n-provider'
 import type { LayoutProps } from '@/shell/layout/types'
 import { useSidebarStore } from '@/shell/orchestration/stores'
 
@@ -40,8 +41,10 @@ export function Layout({
   right,
   onSidebarResize,
 }: LayoutProps): React.JSX.Element {
+  const { t } = useI18n()
   const sidebarOpen = useSidebarStore((s) => s.sidebarOpen)
   const rightPanelOpen = useSidebarStore((s) => s.rightPanelOpen)
+  const rightPanelFull = useSidebarStore((s) => s.rightPanelFull)
 
   const leftPanelRef = useRef<PanelImperativeHandle>(null)
   const rightPanelRef = useRef<PanelImperativeHandle>(null)
@@ -52,6 +55,12 @@ export function Layout({
     if (sidebarOpen) leftPanelRef.current.expand()
     else leftPanelRef.current.collapse()
   }, [sidebarOpen])
+
+  // 全宽模式：面板本身不会因为 defaultSize 变化而重排，要显式 resize
+  useEffect(() => {
+    if (!rightPanelRef.current || !rightPanelOpen) return
+    rightPanelRef.current.resize(rightPanelFull ? '55%' : '25%')
+  }, [rightPanelFull, rightPanelOpen])
 
   // Sync rightPanelOpen -> right panel
   useEffect(() => {
@@ -89,7 +98,7 @@ export function Layout({
         </aside>
       </ResizablePanel>
 
-      <ResizableHandle className="resize-handle" />
+      <ResizableHandle className="resize-handle" aria-label={t('layout.resizeSidebar')} />
 
       {/* Center: chat (always present, fills remaining space) */}
       <ResizablePanel defaultSize="60%" minSize="40%" id="center">
@@ -101,7 +110,7 @@ export function Layout({
         </main>
       </ResizablePanel>
 
-      <ResizableHandle className="resize-handle" />
+      <ResizableHandle className="resize-handle" aria-label={t('layout.resizeRight')} />
 
       {/* Right: file viewer / terminal panel */}
       <ResizablePanel
@@ -109,8 +118,8 @@ export function Layout({
         collapsible
         collapsedSize="0%"
         minSize="20%"
-        maxSize="50%"
-        defaultSize="20%"
+        maxSize={rightPanelFull ? '80%' : '50%'}
+        defaultSize={rightPanelFull ? '55%' : '20%'}
         id="right"
       >
         <aside

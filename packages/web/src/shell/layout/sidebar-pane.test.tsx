@@ -19,6 +19,9 @@ function renderSidebar(onSearchToggle = vi.fn()): {
     <I18nProvider>
       <Sidebar
         onSearchToggle={onSearchToggle}
+        cwd="/repo"
+        onPickProject={() => {}}
+        onNew={() => {}}
         tabs={{
           sessions: <div data-testid="sessions-slot">sessions</div>,
           files: <div data-testid="files-slot">files</div>,

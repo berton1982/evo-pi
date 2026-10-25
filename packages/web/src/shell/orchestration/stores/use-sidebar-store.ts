@@ -16,11 +16,15 @@ interface SidebarState {
   sidebarOpen: boolean
   sidebarWidth: number
   rightPanelOpen: boolean
+  /** 文件面板"全宽"：把右侧面板撑到一半以上（pi-web 顶栏有这个按钮，位置一致） */
+  rightPanelFull: boolean
   setSidebarOpen: (open: boolean) => void
   setSidebarWidth: (width: number) => void
   toggleSidebar: () => void
   setRightPanelOpen: (open: boolean) => void
   toggleRightPanel: () => void
+  setRightPanelFull: (full: boolean) => void
+  toggleRightPanelFull: () => void
 }
 
 const DEFAULT_WIDTH = 260
@@ -30,7 +34,10 @@ const MAX_WIDTH = 480
 export const useSidebarStore = create<SidebarState>((set) => ({
   sidebarOpen: true,
   sidebarWidth: DEFAULT_WIDTH,
-  rightPanelOpen: false,
+  // 默认展开：pi-web 打开时右栏就显示（文件/详情），关着的默认态会让"隐藏文件面板"
+  // 这类入口在保真对比里永远采不到，也不是用户期望的初始界面
+  rightPanelOpen: true,
+  rightPanelFull: false,
   setSidebarOpen: (open) => {
     set({ sidebarOpen: open })
   },
@@ -46,5 +53,12 @@ export const useSidebarStore = create<SidebarState>((set) => ({
   },
   toggleRightPanel: () => {
     set((state) => ({ rightPanelOpen: !state.rightPanelOpen }))
+  },
+  setRightPanelFull: (full) => {
+    // 打开"全宽"必然意味着面板要可见（否则按钮点了没反应）；关掉时保留当前可见性
+    set((state) => ({ rightPanelFull: full, rightPanelOpen: full ? true : state.rightPanelOpen }))
+  },
+  toggleRightPanelFull: () => {
+    set((state) => ({ rightPanelFull: !state.rightPanelFull, rightPanelOpen: true }))
   },
 }))

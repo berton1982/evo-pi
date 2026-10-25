@@ -20,6 +20,8 @@ export interface McpTestStatusProps {
   t: Translate
 }
 
+// @design D-U-08 —— 测试三态与状态行由本组件承担
+// @design C-05
 export function McpTestStatus({ result, running, t }: McpTestStatusProps) {
   if (running) {
     return (

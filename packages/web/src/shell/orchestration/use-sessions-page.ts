@@ -39,6 +39,42 @@ export function useSessionsPage() {
   const selectedSessionId = searchParams.get('session') ?? undefined
   const cwd = searchParams.get('cwd')
 
+  /**
+   * 新建会话：POST 只发号（pi SDK 的会话文件在第一条消息时才产生），
+   * 拿到 id 直接进 URL——刷新后还是这个新会话，不需要前端另存一份。
+   */
+  const createSession = useCallback(async () => {
+    const target = cwd ?? undefined
+    if (!target) return
+    const res = await fetch('/api/sessions', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ cwd: target }),
+    })
+    if (!res.ok) return
+    const body = (await res.json()) as { session?: { id?: string } }
+    const id = body.session?.id
+    if (!id) return
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('cwd', target)
+    params.set('session', id)
+    router.replace(`/sessions?${params.toString()}`, { scroll: false })
+  }, [cwd, router, searchParams])
+
+  /**
+   * 换项目：URL 的 cwd 是唯一事实源，换项目必须同时丢掉旧 session——
+   * 旧会话不属于新项目，留着会在新项目里显示一个"找不到"的详情。
+   */
+  const selectProject = useCallback(
+    (next: string) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set('cwd', next)
+      params.delete('session')
+      router.replace(`/sessions?${params.toString()}`, { scroll: false })
+    },
+    [router, searchParams],
+  )
+
   const selectSession = useCallback(
     (id: string) => {
       const params = new URLSearchParams(searchParams.toString())
@@ -68,6 +104,8 @@ export function useSessionsPage() {
     cwd,
     selectedSessionId,
     selectSession,
+    selectProject,
+    createSession,
     settingsOpen,
     initialSection,
     closeSettings: () => {

@@ -43,6 +43,13 @@ interface CenterZoneProps {
    * 壳负责"取数据 + 三态"，能力负责"怎么画一条消息"。
    */
   renderMessages: (messages: AgentMessage[], entryIds: (string | undefined)[]) => React.ReactNode
+  /**
+   * 渲染器自己装数据（能力持有数据源）时置 true：壳不再 fetch、也不再替它判三态。
+   *
+   * 为什么需要这个开关：壳取一份、能力再取一份，两处必然漂移（C-C 的
+   * `useSessionMessages` 就是要自己装）。默认 false，保持 PR.A 的旧行为。
+   */
+  selfManaged?: boolean
 }
 
 // Skeleton row keys: stable (Phase 2 minimum = 3 rows). If the count
@@ -116,6 +123,9 @@ function CenterZoneInner({
   }
 
   if (data) {
+    // 已知缺陷：这一层 overflow-y-auto 让会话面的 chat-scroll 拿到内容高度
+    // （实测 scrollHeight === clientHeight），贴底/回到顶部等几何行为在整页布局下验不出来。
+    // 修法要连壳的高度链一起改，属 C-B；C-C 已把这条记在 behaviors B-003/B-004。
     return (
       <div className="h-full overflow-y-auto" data-component="center-zone-data" data-slot="data">
         {/* 消息怎么画属于会话能力；壳只把"取到的数据"交给注入的渲染器 */}
@@ -136,6 +146,7 @@ function CenterZoneInner({
 export function CenterZone({
   selectedSessionId,
   renderMessages,
+  selfManaged = false,
 }: CenterZoneProps): React.JSX.Element {
   const { t } = useI18n()
   // retry counter: not yet wired in PR.A (Retry button is disabled).
@@ -143,6 +154,21 @@ export function CenterZone({
   // without changing the call signature.
   const [_retryCounter, setRetryCounter] = useState(0)
   void setRetryCounter // silence unused-var lint
+
+  // 自管数据的渲染器：无会话也要画（输入框在没会话时也要在），且壳不判三态
+  if (selfManaged) {
+    return (
+      // h-full + flex-1 缺一不可：只写 min-h-0 时子层 `h-full` 没有确定高度，
+      // 会话区会跟内容一起撑高、整页滚动，输入框就不固定在底部了（pi-web 是固定底栏）
+      <section
+        className="flex h-full min-h-0 flex-1 flex-col"
+        data-component="center-zone"
+        data-slot="self-managed"
+      >
+        {renderMessages([], [])}
+      </section>
+    )
+  }
 
   // selectedSessionId undefined → Phase 0 placeholder (no fetch)
   if (!selectedSessionId) {

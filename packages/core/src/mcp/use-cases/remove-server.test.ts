@@ -68,9 +68,9 @@ describe('removeServer（真实文件）', () => {
       }),
     )
     const { removeServer } = await import('../infrastructure/mcp-config')
-    removeServer('user', 'alpha', null)
+    removeServer('user', 'alpha')
     expect(JSON.parse(readFileSync(file, 'utf8')).mcpServers).toEqual({ beta: { command: 'b' } })
     // 幂等：再删一次不抛错
-    expect(() => removeServer('user', 'alpha', null)).not.toThrow()
+    expect(() => removeServer('user', 'alpha')).not.toThrow()
   })
 })

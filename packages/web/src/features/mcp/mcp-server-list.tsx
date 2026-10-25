@@ -131,6 +131,7 @@ function McpServerRow({
         onChange={(e) => onToggle(server, e.target.checked)}
         // role=switch 而不是 checkbox：pi-web 的逐行开关就是 switch，读屏读"开关"比"复选框"准确
         role="switch"
+        aria-checked={server.enabled}
         type="checkbox"
       />
       {/* 行名 = 「名字：连接态」，对齐 pi-web（`alpha：测试时已连接`）。

@@ -1,7 +1,7 @@
 'use client'
 
+import { ChatSurface } from '@/features/chat'
 import { mcpSettingsPanel } from '@/features/mcp/panel-spec'
-import { MessageView } from '@/features/sessions/message-view'
 import { Layout } from '@/shell/layout/app-layout'
 import { CenterZone } from '@/shell/layout/center-pane'
 import { RightZone } from '@/shell/layout/detail-pane'
@@ -47,15 +47,15 @@ export function SessionSurface(): React.JSX.Element {
   return (
     <>
       <Layout
-        top={<TopBar onSettingsSection={page.openSection} />}
+        top={<TopBar onSettingsSection={page.openSection} onNewSession={page.createSession} />}
         center={
           <CenterZone
+            selfManaged
             selectedSessionId={page.selectedSessionId}
-            renderMessages={(messages, entryIds) => (
-              <MessageView
-                messages={messages}
-                entryIds={entryIds.filter((id): id is string => Boolean(id))}
-              />
+            // 会话面自己装数据（`useSessionMessages` 走 `/api/sessions/[id]/context`），
+            // 所以这里不再把 CenterZone 取到的 messages 传进去——两处取数必然漂移。
+            renderMessages={() => (
+              <ChatSurface sessionId={page.selectedSessionId ?? null} cwd={page.cwd ?? null} />
             )}
           />
         }

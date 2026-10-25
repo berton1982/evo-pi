@@ -10,6 +10,20 @@ import { resolve } from 'node:path'
 import { agentDir } from '@evo-pi/core/mcp/server'
 import { NextResponse } from 'next/server'
 
+export async function GET() {
+  // 项目选择器要的是"我知道哪几个项目"：trust.json 就是这台机器上被用过/信任过的目录清单。
+  // 不接受客户端传 cwd 来列举（那等于让任意路径来探库）。
+  const path = `${agentDir()}/trust.json`
+  const all = existsSync(path)
+    ? (JSON.parse(readFileSync(path, 'utf8')) as Record<string, { trusted?: boolean }>)
+    : {}
+  const projects = Object.entries(all)
+    .filter(([, v]) => v?.trusted !== false)
+    .map(([cwd]) => cwd)
+    .sort()
+  return NextResponse.json({ projects })
+}
+
 export async function POST(req: Request) {
   let body: { cwd?: unknown }
   try {

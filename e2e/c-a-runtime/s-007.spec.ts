@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { snapshot, waitIdle } from './helpers'
+import { waitIdle } from './helpers'
 
 /**
  * 乱序回包只应用更高 request id：低 id 的回包必须被丢弃。

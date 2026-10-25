@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { snapshot, waitIdle } from './helpers'
+import { waitIdle } from './helpers'
 
 /**
  * agent_start / agent_end：一轮结束必须回到 idle，且 `lastRequestId` 前进。

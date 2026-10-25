@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { snapshot, waitIdle } from './helpers'
+import { waitIdle } from './helpers'
 
 /** B-003 get_state：回包必须带 phase / lastRequestId（界面靠它决定显示"运行中"还是"空闲"）。 */
 test('snapshot 回包带 phase 与 lastRequestId', async ({ request }) => {

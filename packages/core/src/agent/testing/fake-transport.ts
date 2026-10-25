@@ -14,7 +14,6 @@ import type {
   AgentTransport,
   TransportEvent,
   TransportOutcome,
-  TransportPrompt,
 } from '../domain/ports/agent-transport'
 
 export interface FakeTransportOptions {

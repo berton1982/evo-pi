@@ -7,9 +7,9 @@
 | L1 | `npx --no-install vitest run packages/core/src/agent/domain` | pass | gates/C5.json |
 | L2 | `npx --no-install vitest run packages/core/src/agent/use-cases` | pass | gates/C5.json |
 | L3 | `npx --no-install vitest run packages/core/src/agent` | pass | gates/C6.json |
-| L4 | `npx playwright test e2e/c-a-runtime` | skipped | `/api/agent` 路由属 H2 未实现，44 条为 fixme 占位 |
+| L4 | `npx playwright test e2e/c-a-runtime` | pass | gates/C6.json |
 | L5 | — | skipped | 本能力无界面，见 design/ui.md 的「不适用」 |
-| L6 | 人工 | pending | 待 L4 可跑后由人逐条验收 |
+| L6 | 人工 | pending | 待人工逐条验收（L4 已可跑：`e2e/c-a-runtime` 12 passed） |
 
 ## 每层抓得到 / 抓不到什么
 

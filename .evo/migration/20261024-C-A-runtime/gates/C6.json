@@ -1,13 +1,13 @@
 {
   "id": "C6",
-  "generatedAt": "2026-10-25T09:27:42.160Z",
+  "generatedAt": "2026-10-25T14:18:33.735Z",
   "runs": [
     {
-      "cmd": "npx --no-install playwright test e2e/c-a-runtime --workers=1 --reporter=line",
+      "cmd": "cd /home/berton/evo-pi && npx --no-install playwright test e2e/c-a-runtime --workers=1 --reporter=line",
       "exit": 0,
-      "durationMs": 3421,
-      "at": "2026-10-25T09:27:42.159Z",
-      "tail": "[29/45] [chromium] › e2e/c-a-runtime/s-028.spec.ts:8:6 › 乱序回包只应用更高 request id，低 id 回包丢弃\n[30/45] [chromium] › e2e/c-a-runtime/s-029.spec.ts:8:6 › 会话读 single-flight：同一会话并发读合并成一次请求\n[31/45] [chromium] › e2e/c-a-runtime/s-030.spec.ts:8:6 › 切换会话时旧会话的在途结果不再写入新会话\n[32/45] [chromium] › e2e/c-a-runtime/s-031.spec.ts:8:6 › navigate 之后等一次 idle 再收尾，避免读到半新状态\n[33/45] [chromium] › e2e/c-a-runtime/s-032.spec.ts:8:6 › 读取会话失败返回错误状态，不保留半份数据\n[34/45] [chromium] › e2e/c-a-runtime/s-033.spec.ts:8:6 › MCP 空闲超时读环境变量，缺省值与非法值都回落到默认\n[35/45] [chromium] › e2e/c-a-runtime/s-034.spec.ts:8:6 › 未受信任项目里的 MCP 条目不加载进运行时配置\n[36/45] [chromium] › e2e/c-a-runtime/s-035.spec.ts:8:6 › codemode 不可用时把该 server 的 exposure 降级为不可达\n[37/45] [chromium] › e2e/c-a-runtime/s-036.spec.ts:8:6 › 连接监视只回调一次 ready/closed，重复事件被忽略\n[38/45] [chromium] › e2e/c-a-runtime/s-037.spec.ts:8:6 › 传输层断开要触发重连并在重连期间拒绝新工具调用\n[39/45] [chromium] › e2e/c-a-runtime/s-038.spec.ts:8:6 › prompt 前准备 MCP：可选等待连接就绪，超时则带警告继续\n[40/45] [chromium] › e2e/c-a-runtime/s-039.spec.ts:8:6 › 解析 frontmatter 的工具名列表时容忍空值与非法形状\n[41/45] [chromium] › e2e/c-a-runtime/s-040.spec.ts:8:6 › 子代理档案按 用户 < 项目 的优先级合并（项目覆盖用户）\n[42/45] [chromium] › e2e/c-a-runtime/s-041.spec.ts:8:6 › 解析不到名字时返回 undefined，不抛异常\n[43/45] [chromium] › e2e/c-a-runtime/s-042.spec.ts:8:6 › 保存档案按 scope 选目录，文件名取名字且拒绝路径穿越\n[44/45] [chromium] › e2e/c-a-runtime/s-043.spec.ts:8:6 › 删除档案只删自己的文件，名字不存在时不报错\n[45/45] [chromium] › e2e/c-a-runtime/s-044.spec.ts:8:6 › 会话里的子代理资源快照缺失时按空集合处理\n  36 skipped\n  9 passed (2.5s)"
+      "durationMs": 18046,
+      "at": "2026-10-25T14:18:33.734Z",
+      "tail": "[29/45] [chromium] › e2e/c-a-runtime/s-028.spec.ts:8:6 › 乱序回包只应用更高 request id，低 id 回包丢弃\n[30/45] [chromium] › e2e/c-a-runtime/s-029.spec.ts:8:6 › 会话读 single-flight：同一会话并发读合并成一次请求\n[31/45] [chromium] › e2e/c-a-runtime/s-030.spec.ts:8:6 › 切换会话时旧会话的在途结果不再写入新会话\n[32/45] [chromium] › e2e/c-a-runtime/s-031.spec.ts:8:6 › navigate 之后等一次 idle 再收尾，避免读到半新状态\n[33/45] [chromium] › e2e/c-a-runtime/s-032.spec.ts:8:6 › 读取会话失败返回错误状态，不保留半份数据\n[34/45] [chromium] › e2e/c-a-runtime/s-033.spec.ts:8:6 › MCP 空闲超时读环境变量，缺省值与非法值都回落到默认\n[35/45] [chromium] › e2e/c-a-runtime/s-034.spec.ts:8:6 › 未受信任项目里的 MCP 条目不加载进运行时配置\n[36/45] [chromium] › e2e/c-a-runtime/s-035.spec.ts:8:6 › codemode 不可用时把该 server 的 exposure 降级为不可达\n[37/45] [chromium] › e2e/c-a-runtime/s-036.spec.ts:8:6 › 连接监视只回调一次 ready/closed，重复事件被忽略\n[38/45] [chromium] › e2e/c-a-runtime/s-037.spec.ts:8:6 › 传输层断开要触发重连并在重连期间拒绝新工具调用\n[39/45] [chromium] › e2e/c-a-runtime/s-038.spec.ts:8:6 › prompt 前准备 MCP：可选等待连接就绪，超时则带警告继续\n[40/45] [chromium] › e2e/c-a-runtime/s-039.spec.ts:8:6 › 解析 frontmatter 的工具名列表时容忍空值与非法形状\n[41/45] [chromium] › e2e/c-a-runtime/s-040.spec.ts:8:6 › 子代理档案按 用户 < 项目 的优先级合并（项目覆盖用户）\n[42/45] [chromium] › e2e/c-a-runtime/s-041.spec.ts:8:6 › 解析不到名字时返回 undefined，不抛异常\n[43/45] [chromium] › e2e/c-a-runtime/s-042.spec.ts:8:6 › 保存档案按 scope 选目录，文件名取名字且拒绝路径穿越\n[44/45] [chromium] › e2e/c-a-runtime/s-043.spec.ts:8:6 › 删除档案只删自己的文件，名字不存在时不报错\n[45/45] [chromium] › e2e/c-a-runtime/s-044.spec.ts:8:6 › 会话里的子代理资源快照缺失时按空集合处理\n  33 skipped\n  12 passed (17.0s)"
     }
   ]
 }

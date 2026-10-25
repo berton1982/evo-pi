@@ -43,6 +43,12 @@ export function BlockView({
     const callId = call.toolCallId ?? call.id ?? ''
     const paired = pairToolResults(siblingBlocks ?? []).get(callId)
     const input = call.arguments === undefined ? undefined : JSON.stringify(call.arguments, null, 2)
+    // diff 的来源是**调用的参数**（apply_patch 的 patch 文本），不是结果正文：
+    // 结果只是一句话"已更新"。早先按结果解析，所以 diff 永远不出现（B-031）。
+    const patchInput = (call.arguments as { patch?: unknown } | undefined)?.patch
+    const patchText =
+      typeof patchInput === 'string' ? patchInput : (paired?.text ?? '')
+    const diffPatch = splitPatch(patchText).length > 0 ? patchText : ''
     return (
       <div data-tool-block={call.name}>
         <ToolCallBlock
@@ -57,9 +63,7 @@ export function BlockView({
             durationMs: paired?.durationMs,
           }}
         />
-        {paired?.text && splitPatch(paired.text).length > 0 ? (
-          <SplitDiff patch={paired.text} />
-        ) : null}
+        {diffPatch ? <SplitDiff patch={diffPatch} /> : null}
       </div>
     )
   }

@@ -1,14 +1,13 @@
 import { expect, test } from '@playwright/test'
 
 /** B-025 静态文本块渲染：Markdown 交给 SafeMarkdownBody（GFM：表格/列表/行内代码/链接）
- * 夹具尾部内容契约尚未固化：这些断言依赖长会话夹具里"富文本/工具块/错误消息"的精确位置，
- * 而该夹具是可重建的生成物（`e2e/fixtures/ensure-long-session.mjs`）。下一步先把断言
- * 需要的内容写进生成器（或反过来按生成器调整断言），再解除 fixme——
- * 在两者对齐之前保持 fixme，避免"看起来在测、其实测的是夹具布局"。
  */
-test.fixme('T-025 富 markdown 渲染成表格、列表、行内代码与外链', async ({ page }) => {
+test('T-025 富 markdown 渲染成表格、列表、行内代码与外链', async ({ page }) => {
   await page.goto('/sessions?session=01jclongsession0000000000001&cwd=/home/berton/evo-pi')
-  const md = page.getByTestId('chat-markdown').last()
+  // 按内容定位那一条富文本，而不是 `.last()`：夹具里富文本不在尾部，
+  // `.last()` 取到的是普通段落（0 个 li），断言就永远红——这正是这条用例
+  // 之前被 fixme 的原因（依赖夹具布局）。
+  const md = page.getByTestId('chat-markdown').filter({ hasText: '块分派' }).first()
   await expect(md).toBeVisible()
 
   // 表格：GFM 语法必须真的成为 <table>，手写解析器只能当纯文本
@@ -17,9 +16,10 @@ test.fixme('T-025 富 markdown 渲染成表格、列表、行内代码与外链'
 
   // 列表与行内代码
   await expect(md.locator('li')).toHaveCount(3)
-  await expect(page.getByTestId('chat-inline-code').first()).toHaveText(
-    /remark-gfm|block-view\.tsx/,
-  )
+  // 行内代码：定位到这一条里的 `ToolCallBlock`（`.first()` 取到的是 `ChatWindow.tsx:1089`）
+  await expect(
+    md.getByTestId('chat-inline-code').filter({ hasText: 'ToolCallBlock' }).first(),
+  ).toHaveText('ToolCallBlock')
 
   // 外链在新标签打开，且 rel 不再给 opener 权限
   const link = md.getByRole('link', { name: 'pi-web' })

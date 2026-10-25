@@ -34,21 +34,19 @@ export function AssistantMessageView({
   return (
     <div data-testid="chat-assistant" className="space-y-2">
       {processBlocks.length > 0 ? (
-        <div data-testid="chat-process">
-          <button
-            type="button"
+        <details
+          data-testid="chat-process"
+          open={!collapsible || processOpen}
+          onToggle={(event) => setProcessOpen(event.currentTarget.open)}
+          className="text-xs"
+        >
+          <summary
             data-testid="chat-process-toggle"
-            aria-expanded={processOpen || !collapsible}
-            aria-disabled={!collapsible}
-            onClick={() => {
-              if (collapsible) setProcessOpen((open) => !open)
-            }}
-            className="text-xs text-muted-foreground"
+            className="cursor-pointer text-xs text-muted-foreground"
           >
             {collapsible ? (processOpen ? '收起过程' : `过程（${processBlocks.length}）`) : '过程'}
-          </button>
-          {collapsible && !processOpen ? null : (
-            <div className="mt-1 space-y-1 border-border border-l pl-2">
+          </summary>
+          <div className="mt-1 space-y-1 border-border border-l pl-2">
               {processBlocks.map((block, blockIndex) => {
                 const blockKey = `${messageId}-process-${blockIndex}`
                 return (
@@ -62,9 +60,8 @@ export function AssistantMessageView({
                   />
                 )
               })}
-            </div>
-          )}
-        </div>
+          </div>
+        </details>
       ) : null}
 
       {answerBlocks.map((block, blockIndex) => {

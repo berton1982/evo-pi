@@ -114,3 +114,14 @@ node $S/state.mjs init --run .evo/migration/20261021-cap-a --scope capability \
 | 设置入口 | AppShell 内弹窗 | 同样用弹窗（已对齐） | — | 已完成 |
 
 > 记录原则：技术实现策略不同但**用户可见行为一致**的，写在这里；造成可见差异的，写进对应 run 的 `parity.md` 缺口组。
+
+## diff 能力的归属（2026-10 核查 pi-web 源码后的结论，暂不实现）
+
+| 位置 | pi-web 证据 | 我们现状 |
+|---|---|---|
+| 聊天内 inline 并排 diff | `components/MessageView.tsx:1359` `SplitPatchView` → `:1370` `SplitFilesView`（`PairedDiffResult` `:1346` 在工具结果能解析成 unified patch 时渲染） | 已有（`packages/web/src/features/chat/diff/split-diff.tsx`），patch 取自**调用参数**的 `patch` 字段 |
+| 右侧面板里的文件 diff | `components/FileViewer.tsx:297` `diffLines` + `:333` `DiffView`，在 `:1790` 以 `mode === 'diff'` 渲染（`:1678` 标题是"对比 HEAD"），属**文件查看器**能力 | **未实现**（右侧文件查看器还没做） |
+| 从聊天跳到文件 | `components/MessageView.tsx:197` `onOpenFile?: (filePath, page?) => void` | 未接（缺文件查看器 → 缺跳转目标） |
+
+结论：用户观察到的"diff 在右侧展示"对应的是 **FileViewer 的 diff 模式**（看某个文件的改动），而不是聊天里的 patch 卡片——后者在 pi-web 里确实存在。
+两者不是同一件事，C-C 只覆盖前者，等文件查看器（C-F）落地时再补后者与 `onOpenFile` 跳转。

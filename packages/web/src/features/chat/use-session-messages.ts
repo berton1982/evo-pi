@@ -51,9 +51,12 @@ export function toChatMessages(messages: readonly RawMessage[]): ChatMessage[] {
  */
 function errorTextOf(message: RawMessage): string | undefined {
   const record = message as unknown as {
+    /** 直接给的人话错误（我们自己的夹具与部分 pi 会话用这个键） */
+    errorText?: string
     error?: string | { message?: string }
     stopReason?: string
   }
+  if (typeof record.errorText === 'string' && record.errorText.trim()) return record.errorText
   const raw = record.error
   if (typeof raw === 'string' && raw.trim()) return raw
   if (raw && typeof raw === 'object') {

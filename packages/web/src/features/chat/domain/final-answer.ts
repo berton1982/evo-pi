@@ -124,13 +124,16 @@ export function pairToolResults(
     const block = raw as {
       type?: string
       toolCallId?: string
+      /** pi SDK 的结果块用 `id`；调用侧两个都认，结果侧只认 toolCallId 就永远贴不回来 */
+      id?: string
       content?: unknown
       isError?: boolean
       /** 结果里记录的耗时（B-029 优先用它，而不是自己掐表） */
       durationMs?: number
     }
-    if (block?.type !== 'toolResult' || typeof block.toolCallId !== 'string') continue
-    map.set(block.toolCallId, {
+    const resultId = block.toolCallId ?? block.id
+    if (block?.type !== 'toolResult' || typeof resultId !== 'string') continue
+    map.set(resultId, {
       text: textOfResult(block.content),
       failed: Boolean(block.isError),
       durationMs: typeof block.durationMs === 'number' ? block.durationMs : undefined,

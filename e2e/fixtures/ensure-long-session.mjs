@@ -74,7 +74,7 @@ const richAssistant = msg(
         '滚动容器在 `ChatWindow.tsx:1089`，行内代码写作 `ToolCallBlock`。\n\n' +
         '- 第一条：块分派\n- 第二条：工具渲染\n- 第三条：diff 视图\n\n' +
         '| 文件 | 作用 |\n| --- | --- |\n| block-view.tsx | 块分派 |\n\n' +
-        '[参考实现](https://example.com/chat)\n\n' +
+        '[pi-web](https://example.com/chat)\n\n' +
         '```ts\nexport function ToolCallBlock() {\n  return null\n}\n```\n',
     },
   ],
@@ -84,7 +84,9 @@ const richAssistant = msg(
 const rows = [{ type: 'session', version: 3, id: sessionId, timestamp: ts(0), cwd }]
 rows.push(msg('user', [{ type: 'text', text: '第 1 条提问：滚动几何测试' }], 0))
 rows.push(richAssistant)
-rows.push(msg('assistant', [{ type: 'text', text: 'model "gpt-none" not found' }], 6))
+const errorMessage = msg('assistant', [{ type: 'text', text: 'model "gpt-none" not found' }], 6)
+errorMessage.message.errorText = 'model "gpt-none" not found'
+rows.push(errorMessage)
 for (let i = 1; i < 30; i += 1) {
   const longText =
     i === 14

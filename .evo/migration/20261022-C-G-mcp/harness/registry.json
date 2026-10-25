@@ -41,163 +41,190 @@
       "id": "s-001",
       "name": "首载读清单",
       "status": "planned",
-      "file": "e2e/mcp/s-001.spec.ts"
+      "file": "e2e/mcp/s-001.spec.ts",
+      "behavior": "B-001"
     },
     {
       "id": "s-002",
       "name": "加载失败整体降级",
       "status": "planned",
-      "file": "e2e/mcp/s-002.spec.ts"
+      "file": "e2e/mcp/s-002.spec.ts",
+      "behavior": "B-002"
     },
     {
       "id": "s-003",
       "name": "后到响应被丢弃",
       "status": "planned",
-      "file": "e2e/mcp/s-003.spec.ts"
+      "file": "e2e/mcp/s-003.spec.ts",
+      "behavior": "B-003"
     },
     {
       "id": "s-004",
       "name": "加载中保留布局高度",
       "status": "planned",
-      "file": "e2e/mcp/s-004.spec.ts"
+      "file": "e2e/mcp/s-004.spec.ts",
+      "behavior": "B-004"
     },
     {
       "id": "s-005",
       "name": "空清单给添加入口",
       "status": "planned",
-      "file": "e2e/mcp/s-005.spec.ts"
+      "file": "e2e/mcp/s-005.spec.ts",
+      "behavior": "B-005"
     },
     {
       "id": "s-006",
       "name": "作用域文案",
       "status": "planned",
-      "file": "e2e/mcp/s-006.spec.ts"
+      "file": "e2e/mcp/s-006.spec.ts",
+      "behavior": "B-006"
     },
     {
       "id": "s-007",
       "name": "按作用域分组",
       "status": "planned",
-      "file": "e2e/mcp/s-007.spec.ts"
+      "file": "e2e/mcp/s-007.spec.ts",
+      "behavior": "B-007"
     },
     {
       "id": "s-008",
       "name": "组头显示启用计数",
       "status": "planned",
-      "file": "e2e/mcp/s-008.spec.ts"
+      "file": "e2e/mcp/s-008.spec.ts",
+      "behavior": "B-008"
     },
     {
       "id": "s-009",
       "name": "选中项来自持久化",
       "status": "planned",
-      "file": "e2e/mcp/s-009.spec.ts"
+      "file": "e2e/mcp/s-009.spec.ts",
+      "behavior": "B-009"
     },
     {
       "id": "s-010",
       "name": "选中项跨刷新保持",
       "status": "planned",
-      "file": "e2e/mcp/s-010.spec.ts"
+      "file": "e2e/mcp/s-010.spec.ts",
+      "behavior": "B-010"
     },
     {
       "id": "s-011",
       "name": "单条启用",
       "status": "planned",
-      "file": "e2e/mcp/s-011.spec.ts"
+      "file": "e2e/mcp/s-011.spec.ts",
+      "behavior": "B-011"
     },
     {
       "id": "s-012",
       "name": "启用失败回滚",
       "status": "planned",
-      "file": "e2e/mcp/s-012.spec.ts"
+      "file": "e2e/mcp/s-012.spec.ts",
+      "behavior": "B-012"
     },
     {
       "id": "s-013",
       "name": "需要信任时提示",
       "status": "planned",
-      "file": "e2e/mcp/s-013.spec.ts"
+      "file": "e2e/mcp/s-013.spec.ts",
+      "behavior": "B-013"
     },
     {
       "id": "s-014",
       "name": "项目内覆盖开关",
       "status": "planned",
-      "file": "e2e/mcp/s-014.spec.ts"
+      "file": "e2e/mcp/s-014.spec.ts",
+      "behavior": "B-014"
     },
     {
       "id": "s-015",
       "name": "添加服务器成功",
       "status": "planned",
-      "file": "e2e/mcp/s-015.spec.ts"
+      "file": "e2e/mcp/s-015.spec.ts",
+      "behavior": "B-015"
     },
     {
       "id": "s-016",
       "name": "添加被编辑丢弃旧答案",
       "status": "planned",
-      "file": "e2e/mcp/s-016.spec.ts"
+      "file": "e2e/mcp/s-016.spec.ts",
+      "behavior": "B-016"
     },
     {
       "id": "s-017",
       "name": "移除服务器",
       "status": "planned",
-      "file": "e2e/mcp/s-017.spec.ts"
+      "file": "e2e/mcp/s-017.spec.ts",
+      "behavior": "B-017"
     },
     {
       "id": "s-018",
       "name": "撤销条到点自清",
       "status": "planned",
-      "file": "e2e/mcp/s-018.spec.ts"
+      "file": "e2e/mcp/s-018.spec.ts",
+      "behavior": "B-018"
     },
     {
       "id": "s-019",
       "name": "组批量启用",
       "status": "planned",
-      "file": "e2e/mcp/s-019.spec.ts"
+      "file": "e2e/mcp/s-019.spec.ts",
+      "behavior": "B-019"
     },
     {
       "id": "s-020",
       "name": "批量部分失败",
       "status": "planned",
-      "file": "e2e/mcp/s-020.spec.ts"
+      "file": "e2e/mcp/s-020.spec.ts",
+      "behavior": "B-020"
     },
     {
       "id": "s-021",
       "name": "批量遇到密码变量",
       "status": "planned",
-      "file": "e2e/mcp/s-021.spec.ts"
+      "file": "e2e/mcp/s-021.spec.ts",
+      "behavior": "B-021"
     },
     {
       "id": "s-022",
       "name": "信任后重试",
       "status": "planned",
-      "file": "e2e/mcp/s-022.spec.ts"
+      "file": "e2e/mcp/s-022.spec.ts",
+      "behavior": "B-022"
     },
     {
       "id": "s-027",
       "name": "发起签到",
       "status": "planned",
-      "file": "e2e/mcp/s-027.spec.ts"
+      "file": "e2e/mcp/s-027.spec.ts",
+      "behavior": "B-027"
     },
     {
       "id": "s-028",
       "name": "轮询签到状态",
       "status": "planned",
-      "file": "e2e/mcp/s-028.spec.ts"
+      "file": "e2e/mcp/s-028.spec.ts",
+      "behavior": "B-028"
     },
     {
       "id": "s-029",
       "name": "取消签到",
       "status": "planned",
-      "file": "e2e/mcp/s-029.spec.ts"
+      "file": "e2e/mcp/s-029.spec.ts",
+      "behavior": "B-029"
     },
     {
       "id": "s-030",
       "name": "测试状态可读",
       "status": "planned",
-      "file": "e2e/mcp/s-030.spec.ts"
+      "file": "e2e/mcp/s-030.spec.ts",
+      "behavior": "B-030"
     },
     {
       "id": "s-031",
       "name": "测试日志展开",
       "status": "planned",
-      "file": "e2e/mcp/s-031.spec.ts"
+      "file": "e2e/mcp/s-031.spec.ts",
+      "behavior": "B-031"
     },
     {
       "id": "s-032",

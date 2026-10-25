@@ -1,356 +1,356 @@
 {
- "scripts": [
-  {
-   "id": "s-001",
-   "behavior": "B-001",
-   "name": "prompt 命令：先申请准入，再按 generation 判定是否仍然有效，最",
-   "file": "e2e/c-a-runtime/s-001.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-002",
-   "behavior": "B-002",
-   "name": "abort 命令：中断当前 run 但保留队列，不清会话状态",
-   "file": "e2e/c-a-runtime/s-002.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-003",
-   "behavior": "B-003",
-   "name": "get_state 回包必须带 model/thinkingLevel/queu",
-   "file": "e2e/c-a-runtime/s-003.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-004",
-   "behavior": "B-004",
-   "name": "set_model 失败时回滚到原模型并回错误，不留半切换状态",
-   "file": "e2e/c-a-runtime/s-004.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-005",
-   "behavior": "B-005",
-   "name": "fork 与 fork_branch 走同一替换路径，替换期间新命令被拒",
-   "file": "e2e/c-a-runtime/s-005.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-006",
-   "behavior": "B-006",
-   "name": "clone 复制当前分支并把选中项重置到新会话",
-   "file": "e2e/c-a-runtime/s-006.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-007",
-   "behavior": "B-007",
-   "name": "navigate_tree 保留工具选择（导航不改工具开关）",
-   "file": "e2e/c-a-runtime/s-007.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-008",
-   "behavior": "B-008",
-   "name": "set_thinking_level 只接受具体档位，非法值按 null 处理",
-   "file": "e2e/c-a-runtime/s-008.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-009",
-   "behavior": "B-009",
-   "name": "compact 结束必须回读压缩结果，读不出就当失败而不是静默成功",
-   "file": "e2e/c-a-runtime/s-009.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-010",
-   "behavior": "B-010",
-   "name": "set_tools 只改传入的条目，未传的保持原状（部分更新语义）",
-   "file": "e2e/c-a-runtime/s-010.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-011",
-   "behavior": "B-011",
-   "name": "extension_ui_response 只对未关闭的请求生效，重复回包被忽略",
-   "file": "e2e/c-a-runtime/s-011.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-012",
-   "behavior": "B-012",
-   "name": "bash 命令与 abort_bash 成对：能起也能停，停后不产生第二批输出",
-   "file": "e2e/c-a-runtime/s-012.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-013",
-   "behavior": "B-013",
-   "name": "get_commands 按 generation 丢弃过期结果，旧 gener",
-   "file": "e2e/c-a-runtime/s-013.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-014",
-   "behavior": "B-014",
-   "name": "等待扩展绑定完成期间不接受 prompt（waitForExtensionsBo",
-   "file": "e2e/c-a-runtime/s-014.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-015",
-   "behavior": "B-015",
-   "name": "connected 事件把连接态置为已连接，并清掉上一次的连接错误",
-   "file": "e2e/c-a-runtime/s-015.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-016",
-   "behavior": "B-016",
-   "name": "agent_start 记录开始时刻并清空上一轮的结束标记",
-   "file": "e2e/c-a-runtime/s-016.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-017",
-   "behavior": "B-017",
-   "name": "message_start 建一条新消息占位，带 role 与 id",
-   "file": "e2e/c-a-runtime/s-017.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-018",
-   "behavior": "B-018",
-   "name": "message_update 以增量合并进同一条消息，不新建条目",
-   "file": "e2e/c-a-runtime/s-018.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-019",
-   "behavior": "B-019",
-   "name": "message_end 用最终内容覆盖增量累积结果（以终态为准）",
-   "file": "e2e/c-a-runtime/s-019.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-020",
-   "behavior": "B-020",
-   "name": "tool_execution_start 记录工具调用起点，同名工具并发调用不互",
-   "file": "e2e/c-a-runtime/s-020.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-021",
-   "behavior": "B-021",
-   "name": "queue_update 用整份队列覆盖本地队列，不做增量拼接",
-   "file": "e2e/c-a-runtime/s-021.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-022",
-   "behavior": "B-022",
-   "name": "auto_compaction_start 标记压缩中，期间禁止发送新 prom",
-   "file": "e2e/c-a-runtime/s-022.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-023",
-   "behavior": "B-023",
-   "name": "extension_ui_request 四种交互（confirm/select",
-   "file": "e2e/c-a-runtime/s-023.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-024",
-   "behavior": "B-024",
-   "name": "agent_end 收尾：落库最终消息、解除排队、刷新统计",
-   "file": "e2e/c-a-runtime/s-024.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-025",
-   "behavior": "B-025",
-   "name": "通知最多 3 条，超出时最旧一条进入 exiting 并延迟移除",
-   "file": "e2e/c-a-runtime/s-025.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-026",
-   "behavior": "B-026",
-   "name": "通知 reducer 只处理 add/exit/remove 三类动作，未知动作",
-   "file": "e2e/c-a-runtime/s-026.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-027",
-   "behavior": "B-027",
-   "name": "流式 chunk 只更新 ref，不进 React state（避免每帧重渲染）",
-   "file": "e2e/c-a-runtime/s-027.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-028",
-   "behavior": "B-028",
-   "name": "乱序回包只应用更高 request id，低 id 回包丢弃",
-   "file": "e2e/c-a-runtime/s-028.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-029",
-   "behavior": "B-029",
-   "name": "会话读 single-flight：同一会话并发读合并成一次请求",
-   "file": "e2e/c-a-runtime/s-029.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-030",
-   "behavior": "B-030",
-   "name": "切换会话时旧会话的在途结果不再写入新会话",
-   "file": "e2e/c-a-runtime/s-030.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-031",
-   "behavior": "B-031",
-   "name": "navigate 之后等一次 idle 再收尾，避免读到半新状态",
-   "file": "e2e/c-a-runtime/s-031.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-032",
-   "behavior": "B-032",
-   "name": "读取会话失败返回错误状态，不保留半份数据",
-   "file": "e2e/c-a-runtime/s-032.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-033",
-   "behavior": "B-033",
-   "name": "MCP 空闲超时读环境变量，缺省值与非法值都回落到默认",
-   "file": "e2e/c-a-runtime/s-033.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-034",
-   "behavior": "B-034",
-   "name": "未受信任项目里的 MCP 条目不加载进运行时配置",
-   "file": "e2e/c-a-runtime/s-034.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-035",
-   "behavior": "B-035",
-   "name": "codemode 不可用时把该 server 的 exposure 降级为不可达",
-   "file": "e2e/c-a-runtime/s-035.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-036",
-   "behavior": "B-036",
-   "name": "连接监视只回调一次 ready/closed，重复事件被忽略",
-   "file": "e2e/c-a-runtime/s-036.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-037",
-   "behavior": "B-037",
-   "name": "传输层断开要触发重连并在重连期间拒绝新工具调用",
-   "file": "e2e/c-a-runtime/s-037.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-038",
-   "behavior": "B-038",
-   "name": "prompt 前准备 MCP：可选等待连接就绪，超时则带警告继续",
-   "file": "e2e/c-a-runtime/s-038.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-039",
-   "behavior": "B-039",
-   "name": "解析 frontmatter 的工具名列表时容忍空值与非法形状",
-   "file": "e2e/c-a-runtime/s-039.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-040",
-   "behavior": "B-040",
-   "name": "子代理档案按 用户 < 项目 的优先级合并（项目覆盖用户）",
-   "file": "e2e/c-a-runtime/s-040.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-041",
-   "behavior": "B-041",
-   "name": "解析不到名字时返回 undefined，不抛异常",
-   "file": "e2e/c-a-runtime/s-041.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-042",
-   "behavior": "B-042",
-   "name": "保存档案按 scope 选目录，文件名取名字且拒绝路径穿越",
-   "file": "e2e/c-a-runtime/s-042.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-043",
-   "behavior": "B-043",
-   "name": "删除档案只删自己的文件，名字不存在时不报错",
-   "file": "e2e/c-a-runtime/s-043.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  },
-  {
-   "id": "s-044",
-   "behavior": "B-044",
-   "name": "会话里的子代理资源快照缺失时按空集合处理",
-   "file": "e2e/c-a-runtime/s-044.spec.ts",
-   "status": "planned",
-   "mode": "auto"
-  }
- ]
+  "scripts": [
+    {
+      "id": "s-001",
+      "behavior": "B-001",
+      "name": "prompt 命令：先申请准入，再按 generation 判定是否仍然有效，最",
+      "file": "e2e/c-a-runtime/s-001.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-002",
+      "behavior": "B-002",
+      "name": "abort 命令：中断当前 run 但保留队列，不清会话状态",
+      "file": "e2e/c-a-runtime/s-002.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-003",
+      "behavior": "B-003",
+      "name": "get_state 回包必须带 model/thinkingLevel/queu",
+      "file": "e2e/c-a-runtime/s-003.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-004",
+      "behavior": "B-004",
+      "name": "set_model 失败时回滚到原模型并回错误，不留半切换状态",
+      "file": "e2e/c-a-runtime/s-004.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-005",
+      "behavior": "B-005",
+      "name": "fork 与 fork_branch 走同一替换路径，替换期间新命令被拒",
+      "file": "e2e/c-a-runtime/s-005.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-006",
+      "behavior": "B-006",
+      "name": "clone 复制当前分支并把选中项重置到新会话",
+      "file": "e2e/c-a-runtime/s-006.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-007",
+      "behavior": "B-007",
+      "name": "navigate_tree 保留工具选择（导航不改工具开关）",
+      "file": "e2e/c-a-runtime/s-007.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-008",
+      "behavior": "B-008",
+      "name": "set_thinking_level 只接受具体档位，非法值按 null 处理",
+      "file": "e2e/c-a-runtime/s-008.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-009",
+      "behavior": "B-009",
+      "name": "compact 结束必须回读压缩结果，读不出就当失败而不是静默成功",
+      "file": "e2e/c-a-runtime/s-009.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-010",
+      "behavior": "B-010",
+      "name": "set_tools 只改传入的条目，未传的保持原状（部分更新语义）",
+      "file": "e2e/c-a-runtime/s-010.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-011",
+      "behavior": "B-011",
+      "name": "extension_ui_response 只对未关闭的请求生效，重复回包被忽略",
+      "file": "e2e/c-a-runtime/s-011.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-012",
+      "behavior": "B-012",
+      "name": "bash 命令与 abort_bash 成对：能起也能停，停后不产生第二批输出",
+      "file": "e2e/c-a-runtime/s-012.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-013",
+      "behavior": "B-013",
+      "name": "get_commands 按 generation 丢弃过期结果，旧 gener",
+      "file": "e2e/c-a-runtime/s-013.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-014",
+      "behavior": "B-014",
+      "name": "等待扩展绑定完成期间不接受 prompt（waitForExtensionsBo",
+      "file": "e2e/c-a-runtime/s-014.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-015",
+      "behavior": "B-015",
+      "name": "connected 事件把连接态置为已连接，并清掉上一次的连接错误",
+      "file": "e2e/c-a-runtime/s-015.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-016",
+      "behavior": "B-016",
+      "name": "agent_start 记录开始时刻并清空上一轮的结束标记",
+      "file": "e2e/c-a-runtime/s-016.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-017",
+      "behavior": "B-017",
+      "name": "message_start 建一条新消息占位，带 role 与 id",
+      "file": "e2e/c-a-runtime/s-017.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-018",
+      "behavior": "B-018",
+      "name": "message_update 以增量合并进同一条消息，不新建条目",
+      "file": "e2e/c-a-runtime/s-018.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-019",
+      "behavior": "B-019",
+      "name": "message_end 用最终内容覆盖增量累积结果（以终态为准）",
+      "file": "e2e/c-a-runtime/s-019.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-020",
+      "behavior": "B-020",
+      "name": "tool_execution_start 记录工具调用起点，同名工具并发调用不互",
+      "file": "e2e/c-a-runtime/s-020.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-021",
+      "behavior": "B-021",
+      "name": "queue_update 用整份队列覆盖本地队列，不做增量拼接",
+      "file": "e2e/c-a-runtime/s-021.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-022",
+      "behavior": "B-022",
+      "name": "auto_compaction_start 标记压缩中，期间禁止发送新 prom",
+      "file": "e2e/c-a-runtime/s-022.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-023",
+      "behavior": "B-023",
+      "name": "extension_ui_request 四种交互（confirm/select",
+      "file": "e2e/c-a-runtime/s-023.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-024",
+      "behavior": "B-024",
+      "name": "agent_end 收尾：落库最终消息、解除排队、刷新统计",
+      "file": "e2e/c-a-runtime/s-024.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-025",
+      "behavior": "B-025",
+      "name": "通知最多 3 条，超出时最旧一条进入 exiting 并延迟移除",
+      "file": "e2e/c-a-runtime/s-025.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-026",
+      "behavior": "B-026",
+      "name": "通知 reducer 只处理 add/exit/remove 三类动作，未知动作",
+      "file": "e2e/c-a-runtime/s-026.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-027",
+      "behavior": "B-027",
+      "name": "流式 chunk 只更新 ref，不进 React state（避免每帧重渲染）",
+      "file": "e2e/c-a-runtime/s-027.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-028",
+      "behavior": "B-028",
+      "name": "乱序回包只应用更高 request id，低 id 回包丢弃",
+      "file": "e2e/c-a-runtime/s-028.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-029",
+      "behavior": "B-029",
+      "name": "会话读 single-flight：同一会话并发读合并成一次请求",
+      "file": "e2e/c-a-runtime/s-029.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-030",
+      "behavior": "B-030",
+      "name": "切换会话时旧会话的在途结果不再写入新会话",
+      "file": "e2e/c-a-runtime/s-030.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-031",
+      "behavior": "B-031",
+      "name": "navigate 之后等一次 idle 再收尾，避免读到半新状态",
+      "file": "e2e/c-a-runtime/s-031.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-032",
+      "behavior": "B-032",
+      "name": "读取会话失败返回错误状态，不保留半份数据",
+      "file": "e2e/c-a-runtime/s-032.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-033",
+      "behavior": "B-033",
+      "name": "MCP 空闲超时读环境变量，缺省值与非法值都回落到默认",
+      "file": "e2e/c-a-runtime/s-033.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-034",
+      "behavior": "B-034",
+      "name": "未受信任项目里的 MCP 条目不加载进运行时配置",
+      "file": "e2e/c-a-runtime/s-034.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-035",
+      "behavior": "B-035",
+      "name": "codemode 不可用时把该 server 的 exposure 降级为不可达",
+      "file": "e2e/c-a-runtime/s-035.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-036",
+      "behavior": "B-036",
+      "name": "连接监视只回调一次 ready/closed，重复事件被忽略",
+      "file": "e2e/c-a-runtime/s-036.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-037",
+      "behavior": "B-037",
+      "name": "传输层断开要触发重连并在重连期间拒绝新工具调用",
+      "file": "e2e/c-a-runtime/s-037.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-038",
+      "behavior": "B-038",
+      "name": "prompt 前准备 MCP：可选等待连接就绪，超时则带警告继续",
+      "file": "e2e/c-a-runtime/s-038.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-039",
+      "behavior": "B-039",
+      "name": "解析 frontmatter 的工具名列表时容忍空值与非法形状",
+      "file": "e2e/c-a-runtime/s-039.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-040",
+      "behavior": "B-040",
+      "name": "子代理档案按 用户 < 项目 的优先级合并（项目覆盖用户）",
+      "file": "e2e/c-a-runtime/s-040.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-041",
+      "behavior": "B-041",
+      "name": "解析不到名字时返回 undefined，不抛异常",
+      "file": "e2e/c-a-runtime/s-041.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-042",
+      "behavior": "B-042",
+      "name": "保存档案按 scope 选目录，文件名取名字且拒绝路径穿越",
+      "file": "e2e/c-a-runtime/s-042.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-043",
+      "behavior": "B-043",
+      "name": "删除档案只删自己的文件，名字不存在时不报错",
+      "file": "e2e/c-a-runtime/s-043.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    },
+    {
+      "id": "s-044",
+      "behavior": "B-044",
+      "name": "会话里的子代理资源快照缺失时按空集合处理",
+      "file": "e2e/c-a-runtime/s-044.spec.ts",
+      "status": "planned",
+      "mode": "auto"
+    }
+  ]
 }

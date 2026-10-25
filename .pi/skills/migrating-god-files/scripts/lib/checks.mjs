@@ -1285,10 +1285,45 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
             const body = readText(resolve(root, s.file))
             return body.includes('test.fixme(') && !body.includes('test(\'')
           })
+        // 占位 spec 不能算"验过"。C-A 那 36 份整份 fixme 的文件之所以留下，是因为
+        // 这些行为本身在 core 单测里已经被断言过（浏览器侧没有独立观察点）。
+        // 所以：占位必须能指到一个**真实存在且含该测试 ID** 的单测文件，否则判红——
+        // 否则"文件都在"就会一直被读成"e2e 有了"。
+        const orphan = []
+        if (allFixme.length) {
+          const { tasks } = parsePlans(run)
+          const idsOf = (behavior) => {
+            const ids = new Set()
+            for (const task of tasks ?? [])
+              if ((task.behaviors ?? []).includes(behavior)) for (const t of task.tests ?? []) ids.add(t)
+            return [...ids]
+          }
+          const testFiles = []
+          const collect = (dir) => {
+            if (!existsSync(dir)) return
+            for (const name of readdirSync(dir)) {
+              const full = join(dir, name)
+              const st = statSync(full)
+              if (st.isDirectory()) collect(full)
+              else if (/\.test\.(ts|tsx)$/.test(name)) testFiles.push(readText(full))
+            }
+          }
+          collect(resolve(root, 'packages/core/src'))
+          collect(resolve(root, 'packages/web/src'))
+          for (const script of allFixme) {
+            const ids = script.behavior ? idsOf(script.behavior) : []
+            const hit = testFiles.find((body) => ids.some((id) => body.includes(id)))
+            if (!hit) orphan.push(`${script.id}(${script.behavior ?? '?'})`)
+          }
+          if (orphan.length)
+            problems.push(
+              `${orphan.length} 个占位脚本找不到对应的单测断言：${orphan.slice(0, 5).join(', ')}`,
+            )
+        }
         const structural = problems.length === 0
         const detail = problems.length
           ? problems.join('；')
-          : `${registry.scripts.length} 个脚本文件都存在${allFixme.length ? `（其中 ${allFixme.length} 个整份是 fixme 占位，0 条真断言）` : ''}`
+          : `${registry.scripts.length} 个脚本文件都存在${allFixme.length ? `（其中 ${allFixme.length} 个整份是 fixme 占位，0 条真断言，均已指到 core 单测）` : ''}`
         push(tag, structural, detail)
         break
       }

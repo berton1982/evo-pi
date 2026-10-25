@@ -2053,6 +2053,30 @@ try {
   // 拿 label 当 needle 会让这条断言永远红
   expectNotContains('WEB 恢复后 webScaffold 全绿', r, '个组件不在允许的落点')
 
+  // behaviorScripts：整份 fixme 的占位必须指到真实单测，否则"文件都在"会被读成"验过了"
+  const regPathBs = `${states.cap}/harness/registry.json`
+  const regGoodBs = readFileSync(join(root, regPathBs), 'utf8')
+  w('e2e/b99.spec.ts', "test.fixme('T-99 占位', () => {})\n")
+  w(
+    regPathBs,
+    JSON.stringify(
+      {
+        scripts: [
+          { id: 's-01', file: 'e2e/b01.spec.ts', kind: 'auto' },
+          { id: 's-99', behavior: 'B-999', file: 'e2e/b99.spec.ts', kind: 'auto' },
+        ],
+      },
+      null,
+      2,
+    ),
+  )
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5'])
+  expectContains('BS 占位指不到单测 → C5 红', r, '个占位脚本找不到对应的单测断言')
+  w(regPathBs, regGoodBs)
+  rmSync(join(root, 'e2e/b99.spec.ts'))
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5'])
+  expectNotContains('BS 恢复后不再报占位', r, '个占位脚本找不到对应的单测断言')
+
   r = run(VERIFY, [
     '--root',
     root,

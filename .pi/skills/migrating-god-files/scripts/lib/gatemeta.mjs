@@ -16,7 +16,11 @@
 export const GATE_META = {
   acceptance: { layer: 'structure', canCatch: '六层阶梯缺层、L6 未签、签字像 agent', cannotCatch: 'L6 用户是否真的看懂了界面' },
   archRules: { layer: 'structure', canCatch: 'rules.json 结构缺项、层序非法', cannotCatch: '这套分层是否适合本项目' },
-  behaviorScripts: { layer: 'existence', canCatch: '行为声明的脚本文件不存在', cannotCatch: '脚本是否真的断言了该行为' },
+  behaviorScripts: {
+    layer: 'structure',
+    canCatch: '脚本文件不存在；整份 fixme 的占位指不到任何单测断言',
+    cannotCatch: '真断言写得对不对、断言是否打在该行为的真实触发路径上',
+  },
   behaviors: { layer: 'structure', canCatch: '行为无证据锚点、无脚本、重复 id', cannotCatch: '行为清单是否覆盖了用户真正在意的点' },
   capSpec: { layer: 'structure', canCatch: '缺用户故事/源码行区间/交互机制/人工决策', cannotCatch: '故事写得对不对、机制选得好不好' },
   capabilityPlan: { layer: 'structure', canCatch: 'god 未归入能力、拓扑序缺失', cannotCatch: '能力边界切得合不合理' },

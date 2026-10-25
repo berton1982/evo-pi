@@ -72,7 +72,8 @@ export function createFakeTransport(options: FakeTransportOptions = {}): AgentTr
       // 增量就是增量：曾经这里给第一块拼上了用户的 prompt 文本（`text`），
       // 在只有 `message_start` 能穿过 HTTP 的那段时间看起来正常；`acceptEvent` 修好后
       // 全部增量都到浏览器，界面就变成"一致性检查一致性检查"——e2e `s-045` 抓到的就是这个。
-      for (const chunk of chunks) push({ requestId: id, type: 'text_delta', payload: { text: chunk } })
+      for (const chunk of chunks)
+        push({ requestId: id, type: 'text_delta', payload: { text: chunk } })
       push({ requestId: id, type: 'message_end', payload: {} })
       return { ok: true, value: { requestId: id } }
     },

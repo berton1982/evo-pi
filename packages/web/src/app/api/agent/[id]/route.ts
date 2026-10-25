@@ -8,7 +8,12 @@
  * 边界：不负责会话历史（那是 `/api/sessions/[id]`），只管"这一轮怎么跑"。
  */
 import { type NextRequest, NextResponse } from 'next/server'
-import { agentSnapshot, dispatchAgent, subscribeAgent } from '@/lib/agent-runtime-server'
+import {
+  agentSnapshot,
+  agentTransportInfo,
+  dispatchAgent,
+  subscribeAgent,
+} from '@/lib/agent-runtime-server'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,7 +28,7 @@ export async function GET(
 
   // 一次性取状态：给"进页面先看现在跑到哪"用（比开 SSE 再关掉省事）
   if (request.nextUrl.searchParams.get('snapshot') === '1') {
-    return NextResponse.json({ state: agentSnapshot(id) })
+    return NextResponse.json({ state: agentSnapshot(id), transport: agentTransportInfo(id) })
   }
 
   const stream = new ReadableStream({

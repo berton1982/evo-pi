@@ -30,7 +30,15 @@ export interface AgentRuntimeEvent {
   event?: TransportEvent
 }
 
+export interface RuntimeTransportInfo {
+  /** `fake` = 桩；`pi` = 真实 SDK（尚未实现） */
+  kind: 'fake' | 'pi'
+  /** 给界面显示的一条人话，说明现在连的是什么 */
+  hint: string
+}
+
 interface SessionRuntime {
+  transportInfo: RuntimeTransportInfo
   state: SessionState
   transport: AgentTransport
   subscribers: Set<(e: AgentRuntimeEvent) => void>
@@ -60,8 +68,11 @@ function runtimeFor(sessionId: string): SessionRuntime {
   // `AGENT_FAKE_DELAY_MS` 让增量分批到达：默认 0（同步跑完），e2e 要观察
   // 「运行中」这一段时设成 30~50ms，配合下面的 drain 定时器。
   const delayMs = Number(process.env.AGENT_FAKE_DELAY_MS ?? 0)
+  // 注意：**这是桩，不是真实 agent**。真接通要把这里换成 pi SDK 的会话传输
+  // （`ref_projects/pi-web/lib/rpc-manager.ts` 承担的角色），端口与编排都不用改。
+  // 桩文本显式写"演示"，避免把演示当成接通（用户实际就这么误会过一次）。
   const transport = createFakeTransport({
-    chunks: ['收到：', '一致性检查。', '这是假传输的回复。'],
+    chunks: ['（演示模式，尚未接入真实 agent）', '收到：', '一致性检查。', '这是假传输的回复。'],
     delayMs,
   })
   if (delayMs > 0) {
@@ -71,6 +82,10 @@ function runtimeFor(sessionId: string): SessionRuntime {
     timer.unref?.()
   }
   const runtime: SessionRuntime = {
+    transportInfo: {
+      kind: 'fake',
+      hint: '演示模式：回复由本地桩产生，没有连真实 agent',
+    },
     state: initialSessionState(),
     transport,
     subscribers: new Set(),
@@ -107,6 +122,11 @@ export function subscribeAgent(sessionId: string, fn: (e: AgentRuntimeEvent) => 
 
 export function agentSnapshot(sessionId: string): SessionState {
   return runtimeFor(sessionId).state
+}
+
+/** 现在连的是桩还是真 agent——界面要能如实标注，不能让演示看着像接通 */
+export function agentTransportInfo(sessionId: string): RuntimeTransportInfo {
+  return runtimeFor(sessionId).transportInfo
 }
 
 export async function dispatchAgent(

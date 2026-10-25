@@ -11,5 +11,7 @@ test('T-045 流式增量拼出的文本与完整消息一致', async ({ page }) 
   // 流式结束后不再有 aria-busy（说明已按完整消息渲染）
   await expect(page.getByTestId('chat-streaming')).toHaveCount(0)
   // 文本连续性：拼接后的正文不含被吞掉的字符（假传输按块推 "收到：/文本/。/结尾"）
-  await expect(live.first()).toHaveText('收到：一致性检查。这是假传输的回复。')
+  // 桩的前缀"（演示模式，尚未接入真实 agent）"是刻意加的：不做成接通的样子。
+  // 因此这里断言"包含"而不是"等于"——连续性靠前后两段都在同一节点里体现。
+  await expect(live.first()).toContainText('收到：一致性检查。这是假传输的回复。')
 })

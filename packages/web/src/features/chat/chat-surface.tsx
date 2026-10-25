@@ -15,7 +15,6 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { createHttpAgentTransport } from './adapters/http-agent-transport'
 import { ComposerQueue, type QueuedItem } from './composer-queue'
 import { ComposerToolbar, type SendMode } from './composer-toolbar'
-import { createFakeTransport } from './dev-fake-transport'
 import { type AppUpdateInfo, shouldShowUpdate } from './domain/app-update-banner'
 import { MessageList } from './message-list'
 import { SessionInfoPanel } from './session-info-panel'
@@ -66,18 +65,30 @@ export function ChatSurface({
   // （离线跑组件测试、或后端没起时用——它不经过网络，验不到"命令往返"这件事）。
   const wiredTransport = useMemo(() => {
     if (transport) return transport
-    if (process.env.NEXT_PUBLIC_E2E_FAKE_TRANSPORT === '1') return createFakeTransport()
+    // 只有注入与 HTTP 两条路。in-page 假传输（`NEXT_PUBLIC_E2E_FAKE_TRANSPORT`）已移除：
+    // 它不经过网络，会让"发送后拿到的是桩回复"看起来像接通（用户实际误会过一次）。
     return sessionId ? createHttpAgentTransport(sessionId) : null
   }, [transport, sessionId])
   // 传输来源必须可观测：此前"发送没反应"只能靠读代码推断走的是哪条路
   // （注入 / in-page 假传输 / HTTP SSE），e2e 也因此写出过"以为在测 HTTP"的用例。
-  const transportKind = transport
-    ? 'injected'
-    : process.env.NEXT_PUBLIC_E2E_FAKE_TRANSPORT === '1'
-      ? 'fake'
-      : sessionId
-        ? 'http'
-        : 'none'
+  const transportKind = transport ? 'injected' : sessionId ? 'http' : 'none'
+  // 后端连的到底是桩还是真 agent：只有后端知道，必须问它并如实显示
+  const [backendTransport, setBackendTransport] = useState<{ kind: string; hint: string } | null>(
+    null,
+  )
+  useEffect(() => {
+    if (!sessionId) return
+    let cancelled = false
+    void fetch(`/api/agent/${encodeURIComponent(sessionId)}?snapshot=1`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((body: { transport?: { kind: string; hint: string } } | null) => {
+        if (!cancelled) setBackendTransport(body?.transport ?? null)
+      })
+      .catch(() => undefined)
+    return () => {
+      cancelled = true
+    }
+  }, [sessionId])
   const [streamingRun, setStreamingRun] = useState(false)
   const isRunning = running || streamingRun
   if (process.env.NEXT_PUBLIC_E2E_DEBUG === '1')
@@ -342,7 +353,15 @@ export function ChatSurface({
           }}
         />
 
-        <ComposerToolbar
+        {backendTransport?.kind === 'fake' ? (
+        <p
+          data-testid="chat-transport-badge"
+          className="mx-auto mb-1 w-full max-w-[820px] px-4 text-[11px] text-muted-foreground"
+        >
+          演示模式：{backendTransport.hint}
+        </p>
+      ) : null}
+      <ComposerToolbar
           running={isRunning}
           soundOn={soundOn}
           onToggleSound={() => {

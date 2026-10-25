@@ -11,7 +11,7 @@
  * 写入 `sessions/--home-berton-evo-pi-packages-web--/01jcchatfixture0000000000001.jsonl`，
  * 不含任何用户真实会话内容。
  */
-import { mkdirSync, existsSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const agentDir = process.argv[2] ?? process.env.PI_CODING_AGENT_DIR ?? '/tmp/e2e-agent'

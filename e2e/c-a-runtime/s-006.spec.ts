@@ -14,7 +14,9 @@ test('prompt 结束后状态回到 idle 且 requestId 前进', async ({ request 
 
   await request.post(`/api/agent/${sessionId}`, { data: { command: 'prompt', text: 'a' } })
   const after = await request.get(`/api/agent/${sessionId}?snapshot=1`)
-  const a = (await after.json()) as { state: { lastRequestId: number; phase: string; queued: number } }
+  const a = (await after.json()) as {
+    state: { lastRequestId: number; phase: string; queued: number }
+  }
   expect(a.state.lastRequestId).toBeGreaterThan(b.state.lastRequestId)
   expect(a.state.phase).toBe('idle')
   expect(a.state.queued).toBe(0)

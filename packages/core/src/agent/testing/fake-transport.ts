@@ -60,8 +60,15 @@ export function createFakeTransport(options: FakeTransportOptions = {}): AgentTr
         return { ok: true }
       }
       if (command === 'compact') {
-        emit({ requestId, type: 'compaction_start', payload: {} })
-        emit({ requestId, type: 'compaction_end', payload: {} })
+        // 有延迟时把压缩事件也排进队列：否则 compaction 的两个事件在同一 tick 到达，
+        // "压缩中"这段窗口宽度为 0，界面与 e2e 都观察不到（B-014 要靠它断言）。
+        if ((options.delayMs ?? 0) > 0) {
+          push({ requestId, type: 'compaction_start', payload: {} })
+          push({ requestId, type: 'compaction_end', payload: {} })
+        } else {
+          emit({ requestId, type: 'compaction_start', payload: {} })
+          emit({ requestId, type: 'compaction_end', payload: {} })
+        }
         return { ok: true }
       }
       if (options.failPrompt)

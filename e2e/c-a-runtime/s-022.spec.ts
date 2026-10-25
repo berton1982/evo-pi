@@ -1,12 +1,47 @@
 import { expect, test } from '@playwright/test'
 
 /**
- * auto_compaction_start 标记压缩中，期间禁止发送新 prom
+ * B-014 压缩：SSE 上必须出现 `compaction_start` → `compaction_end`，且最终回 idle。
  *
- * C-A 是运行时能力（4 文件 7,669 行），核心断言在 core 单测里（`packages/core/src/agent` 下的 test 文件，41 条）。**覆盖来源**：core 单测（`packages/core/src/agent` 下的 test 文件，47 条）。这类行为是纯事件归约或领域规则，浏览器侧没有独立观察点；`/api/agent` 的 SSE 已落地，能端到端验的三条（命令分发、事件序列、压缩）已在 `s-001`～`s-008` 转真。保留 fixme 只为让 registry 的 44 条脚本文件仍在（`behaviorScripts` 结构绿），不是留给将来在这里补断言。
+ * 为什么用 SSE 而不是轮询快照："压缩中"只有 400ms（假传输按 `AGENT_FAKE_DELAY_MS`
+ * 分批送），轮询会撞运气——第一次写这条用例时就是在 250ms 撞空、报"没进压缩态"。
+ * 事件序列是确定性证据：收到了哪些事件、按什么顺序。
  */
-test.fixme('auto_compaction_start 标记压缩中，期间禁止发送新 prom', async ({ page }) => {
-  // 解除条件：`/api/agent` SSE 路由落地 + 假传输开关可用后，把 fixme 换成真断言
-  await page.goto('/')
-  expect(page).toBeTruthy()
+test('B-014 压缩事件成对出现，事件后回到 idle', async ({ page, request }) => {
+  const sessionId = `s-022-${Date.now()}`
+  await page.goto('/sessions')
+  await page.evaluate((id) => {
+    const events: string[] = []
+    ;(window as unknown as { __events: string[] }).__events = events
+    const es = new EventSource(`/api/agent/${id}`)
+    es.onmessage = (m) => {
+      const frame = JSON.parse(m.data) as { type: string; event?: { type?: string } }
+      const name = frame.type === 'transport' ? (frame.event?.type ?? '') : frame.type
+      if (name) events.push(name)
+    }
+    ;(window as unknown as { __es: EventSource }).__es = es
+  }, sessionId)
+
+  await request.post(`/api/agent/${sessionId}`, { data: { command: 'compact' } })
+
+  await expect
+    .poll(
+      async () =>
+        page.evaluate(() => (window as unknown as { __events: string[] }).__events.slice()),
+      { timeout: 15000 },
+    )
+    .toEqual(expect.arrayContaining(['compaction_start', 'compaction_end']))
+
+  // 结束后一定是 idle：压缩态不能粘住
+  await expect
+    .poll(
+      async () => {
+        const res = await request.get(`/api/agent/${sessionId}?snapshot=1`)
+        return ((await res.json()) as { state: { phase: string } }).state.phase
+      },
+      { timeout: 15000 },
+    )
+    .toBe('idle')
+
+  await page.evaluate(() => (window as unknown as { __es: EventSource }).__es.close())
 })

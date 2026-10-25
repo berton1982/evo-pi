@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { snapshot, waitIdle } from './helpers'
 
 /**
  * 乱序回包只应用更高 request id：低 id 的回包必须被丢弃。
@@ -9,12 +10,10 @@ import { expect, test } from '@playwright/test'
 test('连续两轮：requestId 严格递增，低 id 回包不覆盖', async ({ request }) => {
   const sessionId = `s-007-${Date.now()}`
   await request.post(`/api/agent/${sessionId}`, { data: { command: 'prompt', text: '一' } })
-  const first = await request.get(`/api/agent/${sessionId}?snapshot=1`)
-  const r1 = ((await first.json()) as { state: { lastRequestId: number } }).state.lastRequestId
+  const r1 = (await waitIdle(request, sessionId)).lastRequestId
 
   await request.post(`/api/agent/${sessionId}`, { data: { command: 'prompt', text: '二' } })
-  const second = await request.get(`/api/agent/${sessionId}?snapshot=1`)
-  const r2 = ((await second.json()) as { state: { lastRequestId: number } }).state.lastRequestId
+  const r2 = (await waitIdle(request, sessionId, r1 + 1)).lastRequestId
 
   expect(r1).toBeGreaterThan(0)
   expect(r2).toBeGreaterThan(r1)

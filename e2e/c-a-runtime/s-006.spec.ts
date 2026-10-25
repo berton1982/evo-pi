@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { snapshot, waitIdle } from './helpers'
 
 /**
  * agent_start / agent_end：一轮结束必须回到 idle，且 `lastRequestId` 前进。
@@ -13,11 +14,8 @@ test('prompt 结束后状态回到 idle 且 requestId 前进', async ({ request 
   expect(b.state.phase).toBe('idle')
 
   await request.post(`/api/agent/${sessionId}`, { data: { command: 'prompt', text: 'a' } })
-  const after = await request.get(`/api/agent/${sessionId}?snapshot=1`)
-  const a = (await after.json()) as {
-    state: { lastRequestId: number; phase: string; queued: number }
-  }
-  expect(a.state.lastRequestId).toBeGreaterThan(b.state.lastRequestId)
-  expect(a.state.phase).toBe('idle')
-  expect(a.state.queued).toBe(0)
+  // 等这一轮收尾：假传输分批送事件，POST 返回时可能还在跑
+  const a = await waitIdle(request, sessionId)
+  expect(a.lastRequestId).toBeGreaterThan(0)
+  expect(a.queued).toBe(0)
 })

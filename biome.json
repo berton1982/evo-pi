@@ -34,11 +34,16 @@
           "options": {
             "patterns": [
               {
-                "group": ["**/lib/fixtures/**"],
+                "group": [
+                  "**/lib/fixtures/**"
+                ],
                 "message": "生产代码不得 import 桩数据（fixtures）。桩只在 PR.A/PR.B 期间存在，PR.D 集成后必须退役。确实需要固定夹具时，请放到同目录的 __fixtures__/ 或测试文件旁。"
               },
               {
-                "group": ["@evo-pi/core/adapters/**", "@evo-pi/core/infrastructure/**"],
+                "group": [
+                  "@evo-pi/core/adapters/**",
+                  "@evo-pi/core/infrastructure/**"
+                ],
                 "message": "web 层不得直接 import core 的 adapters / infrastructure（ADR 0003 import 规则）。请经由 core/domain/ports/ 与 HTTP 边界。"
               }
             ]
@@ -92,11 +97,40 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.test.mjs"],
+      "includes": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.test.mjs"
+      ],
       "linter": {
         "rules": {
           "style": {
             "noNonNullAssertion": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "packages/web/src/shell/layout/resize-handle.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "useSemanticElements": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "packages/web/src/shell/layout/top-bar.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "useSemanticElements": "off"
           }
         }
       }

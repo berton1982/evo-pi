@@ -330,6 +330,7 @@ export const PHASES = [
       { kind: 'heading', path: 'CHARTER.md', text: '## 1. 范围' },
       { kind: 'heading', path: 'CHARTER.md', text: '## 2. 基线指纹' },
       { kind: 'heading', path: 'CHARTER.md', text: '## 3. 不做清单' },
+      { kind: 'renderBoundary' },
       { kind: 'godFingerprint' },
       { kind: 'godRegistry' },
       { kind: 'rlevel' },
@@ -424,13 +425,14 @@ export const PHASES = [
     checks: [
       { kind: 'file', path: 'spec.md', minBytes: 400 },
       { kind: 'capSpec', path: 'spec.md' },
+      { kind: 'readlogCoverage' },
       // 需求理解错了，后面 30 条行为都是精致的错：这一份必须用户本人签
       { kind: 'humanSignoff', artifacts: ['spec.md'] },
       { kind: 'file', path: 'behaviors.md', minBytes: 200 },
       { kind: 'heading', path: 'behaviors.md', text: '## 行为清单' },
       { kind: 'behaviors', path: 'behaviors.md', registry: 'harness/registry.json' },
       { kind: 'specs', min: 1, levels: ['R3'] },
-      { kind: 'specTests', levels: ['R3'] },
+      { kind: 'specTests', levels: ['R3'], mode: 'declare' },
     ],
   },
   {
@@ -496,6 +498,7 @@ export const PHASES = [
       { kind: 'design', levels: ['R1', 'R2', 'R3'] },
       // 落点必须在已声明层里（C4 文件还没写，只判路径形态）
       { kind: 'placement', mode: 'plan' },
+      { kind: 'runtimeFit' },
       { kind: 'lines', mode: 'bind' },
       { kind: 'plan', levels: ['R2', 'R3'] },
       { kind: 'signoff', artifact: 'design/manifest.json', levels: ['R2', 'R3'] },
@@ -529,12 +532,15 @@ export const PHASES = [
     ],
     checks: [
       { kind: 'verification', id: 'C5' },
+      // 实施前的观察：先把 pi-web 真长什么样写下来再动手（不是自觉，是步骤）
+      { kind: 'observations' },
       { kind: 'lines', mode: 'landed' },
       { kind: 'quality', levels: ['R1', 'R2', 'R3'] },
       { kind: 'drift', levels: ['R2', 'R3'] },
       { kind: 'trace', levels: ['R2', 'R3'] },
       { kind: 'review' },
       { kind: 'placement', mode: 'landed' },
+      { kind: 'runtimeFit' },
       // C 项：web 切片落点（骨架 + 组件落点），与仓库自己的 check-boundaries 互补
       { kind: 'webScaffold' },
       { kind: 'changePropagation' },
@@ -569,7 +575,8 @@ export const PHASES = [
       { kind: 'humanSignoff', artifacts: ['parity.md'] },
       { kind: 'acceptance', mode: 'pre' },
       { kind: 'verification', id: 'C6' },
-      { kind: 'heading', path: 'parity.md', text: '## 渲染预算', levels: ['R3'] },
+      // 基础设施形态没有渲染，这条对它是空分母：门里按 manifest.kind 跳过（写明理由）
+      { kind: 'heading', path: 'parity.md', text: '## 渲染预算', levels: ['R3'], infraSkip: true },
     ],
   },
   {

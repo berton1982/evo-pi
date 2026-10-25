@@ -25,6 +25,7 @@
     },
     {
       "id": "D-U-01",
+      "runtime": "server",
       "kind": "use-case",
       "name": "openSession",
       "layer": "use-cases",

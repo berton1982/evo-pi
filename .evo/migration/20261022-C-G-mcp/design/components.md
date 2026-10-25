@@ -122,3 +122,22 @@ classDiagram
 - **派生元素**（`D-B-0x`、`P-S-0x`）：pi-web 里这些逻辑散在 `mcp-config-helpers.ts`（外部模块），本能力要把它们收进用例层/端口层，因此写 `rationale` + `derivedFrom`；`derivedFrom` 指向它们真正服务的那个界面元素。
 
 > 本次不迁：Code mode 面板（组件/hook/store/用例均已从本设计移除，见 `spec.md` 不做清单）、项目信任对话框。
+
+## 4.5 区域 → 入口清单
+
+| 区域 | 入口 | 源 |
+|---|---|---|
+| 顶栏（工具栏） | 刷新 | `ref_projects/pi-web/components/McpConfig.tsx:2105` |
+| 顶栏（工具栏） | 添加服务器 | `ref_projects/pi-web/components/McpConfig.tsx:2105` |
+| 列表 · 用户级组 | 全部启用▣ | `ref_projects/pi-web/components/McpConfig.tsx:1306` |
+| 列表 · 项目级组 | 全部启用▣ | `ref_projects/pi-web/components/McpConfig.tsx:1403` |
+| 详情 | 测试 | `ref_projects/pi-web/components/McpConfig.tsx:1411` |
+| 空态表单 | 名称 | `ref_projects/pi-web/components/McpConfig.tsx:1000` |
+| 空态表单 | 作用域 user ▾ | `ref_projects/pi-web/components/McpConfig.tsx:1000` |
+| 空态表单 | 传输 stdio ▾ | `ref_projects/pi-web/components/McpConfig.tsx:1000` |
+| 空态表单 | 命令/URL | `ref_projects/pi-web/components/McpConfig.tsx:1000` |
+| 失败态 | 重试 | `ref_projects/pi-web/components/McpConfig.tsx:1055` |
+| 失败态 | 查看该文件 | `ref_projects/pi-web/components/McpConfig.tsx:1055` |
+| 弹窗外壳（宿主） | Esc | `packages/web/src/shell/layout/settings-panel.tsx:46` |
+
+> 只有「分区本体」属本能力；Esc 归壳（`shell`）。逐行开关画成原型里的 `▣`（不是文字入口），整行可点也不算入口，故不入清单。

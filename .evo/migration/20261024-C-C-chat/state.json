@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-24T02:58:57.331Z",
+  "updatedAt": "2026-10-25T08:51:04.686Z",
+  "scope": "capability",
+  "rLevel": "R3",
+  "programRun": ".evo/migration/20261022-mig",
+  "gods": [
+    {
+      "path": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "lines": 2282,
+      "sha1": "8f443885df5f9e37f7e9ea10d8e4df143ee54dfa",
+      "symbols": 1139,
+      "symbolSource": "LSP"
+    },
+    {
+      "path": "ref_projects/pi-web/components/MessageView.tsx",
+      "lines": 2161,
+      "sha1": "075a192bc6612b73fa34d42d3b16085aafc79c21",
+      "symbols": 1126,
+      "symbolSource": "LSP"
+    }
+  ],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "ec95d366d5c2712af79db5cd2a990758acdfe459",
+    "history": [
+      {
+        "sha1": "a8156dcf45ab9814ffb2c3f2e1360578b948aa7a",
+        "at": "2026-10-25T03:57:44.181Z",
+        "reason": "C7 收尾时改动 GODS.md 状态列（C-A 已完成），C-C 的邻居结论未受影响"
+      }
+    ]
+  },
+  "surfaceCount": 0,
+  "phase": "C6",
+  "phaseStatus": "in_progress",
+  "phases": {
+    "C0": {
+      "startedAt": "2026-10-24T02:58:57.331Z",
+      "doneAt": "2026-10-24T03:01:56.869Z"
+    },
+    "C1": {
+      "startedAt": "2026-10-24T03:01:56.870Z",
+      "doneAt": "2026-10-24T03:11:23.613Z"
+    },
+    "C2": {
+      "startedAt": "2026-10-24T03:11:23.613Z",
+      "doneAt": "2026-10-24T03:27:14.075Z"
+    },
+    "C3": {
+      "startedAt": "2026-10-24T03:27:14.075Z",
+      "doneAt": "2026-10-24T03:27:33.100Z"
+    },
+    "C4": {
+      "startedAt": "2026-10-24T03:27:33.100Z",
+      "doneAt": "2026-10-24T06:04:14.699Z"
+    },
+    "C5": {
+      "startedAt": "2026-10-24T06:04:14.699Z",
+      "doneAt": "2026-10-24T12:34:03.987Z"
+    },
+    "C6": {
+      "startedAt": "2026-10-24T12:34:03.987Z",
+      "doneAt": null
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {
+    "spec.md": {
+      "sha1": "7b03db9e52d328dbd02334cc6e2f8330b2d5bd0c",
+      "by": "berton",
+      "saw": "看过 7 条用户故事、4443 行覆盖、11 项人工决策",
+      "at": "2026-10-24T03:26:42.220Z"
+    },
+    "design/manifest.json": {
+      "sha1": "87969cbffeeaadef5f40bcdd7fe0d5a40c54f42f",
+      "by": "berton",
+      "saw": "把 C5 期新增的 6 个元素落点补进 manifest（含 D-C-01 端口），设计意图未变",
+      "at": "2026-10-25T04:52:30.651Z",
+      "previous": {
+        "by": "berton",
+        "sha1": "5441d205331ed5b300650c64a480a1c26ce18a96",
+        "saw": "按 ADR-0001 重新划了 core/web：patch-diff、send-turn/abort/compact、agent-transport 端口回 core（runtime server/both）；final-answer、chat-scroll 留 web（client）；新增 runtime  \n 字段 25 个元素逐条声明",
+        "at": "2026-10-24T08:27:01.835Z"
+      },
+      "history": [
+        {
+          "by": "berton",
+          "sha1": "7463c46dc99910f0ab3cde8cbb936b20c38854dd",
+          "saw": "看过渲染边界（顶栏属 C-B）+ 13 个入口双向一致 + 三段 ASCII 原型",
+          "at": "2026-10-24T06:03:00.593Z"
+        },
+        {
+          "by": "berton",
+          "sha1": "5441d205331ed5b300650c64a480a1c26ce18a96",
+          "saw": "按 ADR-0001 重新划了 core/web：patch-diff、send-turn/abort/compact、agent-transport 端口回 core（runtime server/both）；final-answer、chat-scroll 留 web（client）；新增 runtime  \n 字段 25 个元素逐条声明",
+          "at": "2026-10-24T08:27:01.835Z"
+        }
+      ]
+    },
+    "design/components.md": {
+      "sha1": "3e82192a1deda86d20cbbab6ce891d66f387058f",
+      "by": "berton",
+      "saw": "看过渲染边界（顶栏属 C-B）+ 13 个入口双向一致 + 三段 ASCII 原型",
+      "at": "2026-10-24T06:03:17.436Z"
+    },
+    "design/ui.md": {
+      "sha1": "6e78cb8bc356594951c1042ff9a0712bdfb73a31",
+      "by": "berton",
+      "saw": "看过渲染边界（顶栏属 C-B）+ 13 个入口双向一致 + 三段 ASCII 原型",
+      "at": "2026-10-24T06:03:34.871Z"
+    },
+    "parity.md": {
+      "sha1": "4f1215a9a5f66efd66533461a285c317a8012329",
+      "by": "berton",
+      "saw": "新增懒加载 vs 一次性渲染的技术差异记录（含 react-virtuoso 后续评估），缺口组分类仍为命名/差异/砍单",
+      "at": "2026-10-25T08:51:04.686Z",
+      "previous": {
+        "by": "berton",
+        "sha1": "286e6d4eff6086a0dec503643ee8c7732ffa0f2f",
+        "saw": "保真采集改用消息行选择器（data-entry-id/data-message-id），覆盖率 41%，6 条未对齐项按命名/差异/砍单分类登记",
+        "at": "2026-10-25T08:24:07.151Z"
+      },
+      "history": [
+        {
+          "by": "berton",
+          "sha1": "6ca23e8b8ee00b37b9597c6471ab893ff78467ef",
+          "saw": "看过 57 条行为对账 + 保真缺口组 9 组 + 未对齐元素清单：顶栏 12 入口属 C-B、滚动几何 blocked、扩展 UI 砍单",
+          "at": "2026-10-25T04:53:18.223Z"
+        },
+        {
+          "by": "berton",
+          "sha1": "286e6d4eff6086a0dec503643ee8c7732ffa0f2f",
+          "saw": "保真采集改用消息行选择器（data-entry-id/data-message-id），覆盖率 41%，6 条未对齐项按命名/差异/砍单分类登记",
+          "at": "2026-10-25T08:24:07.151Z"
+        }
+      ]
+    }
+  },
+  "decisions": [],
+  "tasks": {
+    "T-01": {
+      "status": "done",
+      "at": "2026-10-24T06:11:23.715Z"
+    },
+    "T-02": {
+      "status": "done",
+      "at": "2026-10-24T06:11:23.785Z"
+    },
+    "T-03": {
+      "status": "done",
+      "at": "2026-10-24T06:11:23.856Z"
+    },
+    "T-04": {
+      "status": "done",
+      "at": "2026-10-24T06:11:23.928Z"
+    }
+  },
+  "history": [],
+  "paused": false,
+  "lastCommand": null,
+  "closed": false,
+  "run": ".evo/migration/20261024-C-C-chat"
+}

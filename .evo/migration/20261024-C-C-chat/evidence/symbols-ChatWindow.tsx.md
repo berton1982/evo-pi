@@ -1,0 +1,1147 @@
+# 符号全集 — `ref_projects/pi-web/components/ChatWindow.tsx`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：2283；符号数：**1139**；导出时间：2026-10-24T03:02:06.031Z
+
+## 符号（按出现顺序）
+
+- **AgentEndInfo** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:25`
+- **AgentMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **AnsiText** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:22`
+- **appUpdateCheck** (let) — `ref_projects/pi-web/components/ChatWindow.tsx:102`
+- **appUpdateFound** (let) — `ref_projects/pi-web/components/ChatWindow.tsx:103`
+- **AppUpdateResponse** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:32`
+- **asBracketedPaste** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:10`
+- **AssistantContentBlock** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **AssistantMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **BashExecutionMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **BlockingExtensionUiRequest** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **buildQuotedSelection** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:15`
+- **CacheMissSummary** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:35`
+- **cacheMissSummaryText** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:36`
+- **captureScrollDistance** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:39`
+- **CHAT_COLUMN_PADDING** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:96`
+- **CHAT_MINIMAP_WIDTH** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:95`
+- **ChatInput** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:19`
+- **ChatInputHandle** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:19`
+- **ChatMinimap** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:20`
+- **ChatScrollPosition** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:37`
+- **ChatWindow** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:250`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1094`
+- **<function>** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1277`
+- **answered** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1272`
+- **attachRef** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1243`
+- **attachRef** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1261`
+- **attachVisibleRef** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1115`
+- **<function>** (function) in `attachVisibleRef` — `ref_projects/pi-web/components/ChatWindow.tsx:1115`
+- **current** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1117`
+- **b** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1300`
+- **blocks** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1250`
+- **endIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1197`
+- **finalAnswerMessage** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1227`
+- **finalAssistantIdx** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1200`
+- **finalViews** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1226`
+- **groupStartIdx** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1196`
+- **hasAnchor** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1185`
+- **hasMore** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1318`
+- **i** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1096`
+- **i** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1103`
+- **i** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1297`
+- **idx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1183`
+- **isLiveTail** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1210`
+- **keyPrefix** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1243`
+- **keyPrefix** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1262`
+- **lastAnchorIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1102`
+- **lastUserIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1095`
+- **m** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1298`
+- **message** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1247`
+- **messageOverride** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1263`
+- **messageOverride** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1305`
+- **messages.forEach() callback** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1109`
+- **msg** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1184`
+- **notices** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1252`
+- **processCacheMisses** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1273`
+- **processIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1236`
+- **processMessage** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1237`
+- **processMessageCount** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1231`
+- **processRefIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1233`
+- **processToolCount** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1232`
+- **processViews** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1229`
+- **recoverTruncation** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1309`
+- **refIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1108`
+- **rendered** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1182`
+- **renderIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1203`
+- **renderIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1212`
+- **renderIdx** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1312`
+- **renderMessage** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **attachRef** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **currentRefIdx** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1126`
+- **isVisible** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1125`
+- **j** (let) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1134`
+- **keyPrefix** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **keyPrefix** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1127`
+- **messageKey** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1130`
+- **messageOverride** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **msg** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1121`
+- **noticeLines** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1171`
+- **notices** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1124`
+- **r** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1135`
+- **recoverTruncation** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **showTimestamp** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **showTimestamp** (let) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1131`
+- **turnDurationMs** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **view** (const) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1145`
+- **timestamp** (property) in `view` — `ref_projects/pi-web/components/ChatWindow.tsx:1162`
+- **withNotices** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **writtenFiles** (property) in `renderMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:1120`
+- **revealProcess** (let) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1234`
+- **showTimestamp** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1264`
+- **startIndex** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1317`
+- **turnContent** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1296`
+- **turnDurationMs** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1224`
+- **turnDurationMs** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1308`
+- **userIdx** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1195`
+- **visibleRefIndexByMessage** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1107`
+- **withNotices** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1249`
+- **withNotices** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1265`
+- **writtenFiles** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1303`
+- **writtenFiles** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1306`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1427`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1440`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1441`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1475`
+- **<function>** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1497`
+- **version** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1497`
+- **activeLeafId** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:302`
+- **activeToolResults** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **addNotice** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **agentPhase** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:290`
+- **agentRunning** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **alignItems** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1406`
+- **askSelectionHere** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:430`
+- **useCallback() callback** (function) in `askSelectionHere` — `ref_projects/pi-web/components/ChatWindow.tsx:430`
+- **askSelectionInNewChat** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:441`
+- **useCallback() callback** (function) in `askSelectionInNewChat` — `ref_projects/pi-web/components/ChatWindow.tsx:441`
+- **error** (var) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:454`
+- **sourceSessionId** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:442`
+- **availableThinkingLevels** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:942`
+- **background** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1396`
+- **bashRunning** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **border** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1394`
+- **border** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **border** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1408`
+- **border** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **border** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **borderRadius** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1395`
+- **bottom** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1460`
+- **boxShadow** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1397`
+- **cancelEdit** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **captureQuotedSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:342`
+- **useCallback() callback** (function) in `captureQuotedSelection` — `ref_projects/pi-web/components/ChatWindow.tsx:342`
+- **ancestor** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:357`
+- **end** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:363`
+- **left** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:372`
+- **range** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:345`
+- **rect** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:356`
+- **root** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:346`
+- **selection** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:344`
+- **sourceEntryId** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:366`
+- **find() callback** (function) in `sourceEntryId` — `ref_projects/pi-web/components/ChatWindow.tsx:368`
+- **map() callback** (function) in `sourceEntryId` — `ref_projects/pi-web/components/ChatWindow.tsx:367`
+- **sourceEntryId** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:373`
+- **start** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:360`
+- **text** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:351`
+- **text** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:370`
+- **top** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:371`
+- **chatInputElement** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:950`
+- **closeQuotedSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:332`
+- **useCallback() callback** (function) in `closeQuotedSelection` — `ref_projects/pi-web/components/ChatWindow.tsx:332`
+- **color** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1419`
+- **command** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1350`
+- **compactError** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **compactResult** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **completionNotificationsEnabled** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:253`
+- **contextUsage** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:282`
+- **contextUsageRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:752`
+- **ctxKey** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:749`
+- **currentThinkingLevelMap** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:946`
+- **defaultModel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:288`
+- **dismissCompactError** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:298`
+- **display** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1065`
+- **display** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1386`
+- **display** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **display** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1406`
+- **display** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1463`
+- **displayModelValue** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **earlierTurnCount** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **editEntryId** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:292`
+- **entryIds** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **entryIds** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:505`
+- **error** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **excludeFromContext** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1352`
+- **extensionCustomUi** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **extensionDialog** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **extensionDialogShownRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:263`
+- **extensionStatuses** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **extensionWidgets** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **finalAnswerViewCache** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:821`
+- **useMemo() callback** (function) in `finalAnswerViewCache` — `ref_projects/pi-web/components/ChatWindow.tsx:821`
+- **flex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1407`
+- **flex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **flex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **flexDirection** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **flexWrap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1387`
+- **fontSize** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1407`
+- **fontSize** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1419`
+- **fontSize** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **fontSize** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1431`
+- **fontSize** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **fontWeight** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1407`
+- **fontWeight** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **fontWeight** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **forkingEntryId** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:282`
+- **gap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1388`
+- **gap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **gap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1406`
+- **gap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **gap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **getStreamingMessage** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:313`
+- **useCallback() callback** (function) in `getStreamingMessage` — `ref_projects/pi-web/components/ChatWindow.tsx:313`
+- **handleAbort** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **handleAbortCompaction** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:297`
+- **handleBuiltinSlashCommand** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:300`
+- **handleCompact** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:297`
+- **handleDragEnter** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:804`
+- **handleDragLeave** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:804`
+- **handleDragOver** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:804`
+- **handleDrop** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:804`
+- **handleEditContent** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **handleFollowUp** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:297`
+- **handleFork** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **handleModelChange** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **handlePromptWithStreamingBehavior** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:297`
+- **handleRecallQueue** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:299`
+- **handleSend** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:296`
+- **handleSetDefaultModel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **handleSetDefaultThinkingLevel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **handleSteer** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:297`
+- **handleThinkingLevelChange** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **handleToolPresetChange** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **hasEarlierMessages** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **hasEarlierMessages** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:505`
+- **hasStreamingContent** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:312`
+- **height** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **height** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **historyCursor** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **historyCursor** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:505`
+- **initialPromptSentRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:462`
+- **initialScrollPositionRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:272`
+- **inputHistory** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:822`
+- **useMemo() callback** (function) in `inputHistory` — `ref_projects/pi-web/components/ChatWindow.tsx:822`
+- **history** (const) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:824`
+- **i** (let) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:825`
+- **seen** (const) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:823`
+- **text** (const) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:826`
+- **isAutoModelSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:286`
+- **isAutoThinkingSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:287`
+- **isCompacting** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **isDragOver** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:804`
+- **isEmptyNew** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:839`
+- **isMobile** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:252`
+- **isNew** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:291`
+- **isStreaming** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:311`
+- **justifyContent** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1067`
+- **justifyContent** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1464`
+- **lastUserMsgRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:295`
+- **left** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1062`
+- **left** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1384`
+- **left** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1461`
+- **loadContext** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:302`
+- **loading** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **loadingOlderRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:493`
+- **loadOlderPage** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:510`
+- **useCallback() callback** (function) in `loadOlderPage` — `ref_projects/pi-web/components/ChatWindow.tsx:510`
+- **context** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:512`
+- **loadSlashCommands** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **map() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1029`
+- **animationDelay** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1033`
+- **transformOrigin** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1033`
+- **margin** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1093`
+- **margin** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **maxHeight** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1391`
+- **maxWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1093`
+- **maxWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1390`
+- **maxWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1490`
+- **messageContentRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:491`
+- **messageCwd** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:841`
+- **messageKeys** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **messageRefs** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:834`
+- **messages** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **minWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1092`
+- **minWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1093`
+- **minWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **minWidth** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1407`
+- **modelError** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **modelList** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **modelNames** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **modelScopeWarnings** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **modelSwitching** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **modelThinkingLevelMaps** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **modelThinkingLevels** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **notices** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **onAttachFiles** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:800`
+- **useCallback() callback** (function) in `onAttachFiles` — `ref_projects/pi-web/components/ChatWindow.tsx:800`
+- **files.map() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:801`
+- **file** (property) in `files.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:801`
+- **kind** (property) in `files.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:801`
+- **onDrop** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:791`
+- **useCallback() callback** (function) in `onDrop` — `ref_projects/pi-web/components/ChatWindow.tsx:791`
+- **files** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:792`
+- **folders** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:792`
+- **images** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:792`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:795`
+- **names** (property) in `message` — `ref_projects/pi-web/components/ChatWindow.tsx:795`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:795`
+- **output** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1351`
+- **overflowWrap** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1419`
+- **overflowY** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1392`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1068`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1092`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1393`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **padding** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **paddingBottom** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1020`
+- **paddingBottom** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1465`
+- **paddingLeft** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1489`
+- **paddingRight** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1489`
+- **pendingBash** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **pendingScrollRestore** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:273`
+- **pendingScrollRestoreRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:495`
+- **pendingSearchScroll** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:497`
+- **playDoneSoundRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:259`
+- **pointerEvents** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1069`
+- **pointerEvents** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1466`
+- **position** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1060`
+- **position** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1382`
+- **position** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1459`
+- **prevScrollDistanceRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:492`
+- **promptAnchorActive** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:295`
+- **promptAnchorAdjustmentDoneRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:845`
+- **promptAnchorMeasureFrameRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:844`
+- **promptAnchorSpacerHeightRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:843`
+- **promptAnchorSpacerRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:842`
+- **promptAnchorUpdateRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:846`
+- **queuedMessages** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:284`
+- **quoteChatInputRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:331`
+- **quotedSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:321`
+- **quoteError** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:329`
+- **quoteInputOpen** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:327`
+- **quotePopoverRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:330`
+- **quoteSubmitting** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:328`
+- **requestedCursorRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:509`
+- **respondToExtensionUi** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **restoreAnchorReady** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:277`
+- **restoreStartedRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:494`
+- **retryInfo** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:282`
+- **revealHistoryForMinimap** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:835`
+- **useCallback() callback** (function) in `revealHistoryForMinimap` — `ref_projects/pi-web/components/ChatWindow.tsx:835`
+- **setVisibleCount() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:836`
+- **right** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1063`
+- **right** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1462`
+- **role** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1349`
+- **savedDefaultThinkingLevel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:289`
+- **scrollContainerRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:294`
+- **scrollToBottom** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:302`
+- **scrollToMessage** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:302`
+- **scrollUserMsgToTop** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:301`
+- **searchBlock** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:499`
+- **searchMessage.content.find() callback** (function) in `searchBlock` — `ref_projects/pi-web/components/ChatWindow.tsx:501`
+- **searchHistoryRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:504`
+- **entryIds** (property) in `searchHistoryRef` — `ref_projects/pi-web/components/ChatWindow.tsx:504`
+- **hasEarlierMessages** (property) in `searchHistoryRef` — `ref_projects/pi-web/components/ChatWindow.tsx:504`
+- **historyCursor** (property) in `searchHistoryRef` — `ref_projects/pi-web/components/ChatWindow.tsx:504`
+- **searchMessage** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:498`
+- **sendExtensionCustomInput** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **sentinel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:490`
+- **sessionBusy** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:314`
+- **sessionIdRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:294`
+- **sessionStats** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:283`
+- **sessionStatsRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:741`
+- **setNoticePaused** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **setPendingScrollRestore** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:273`
+- **setPendingSearchScroll** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:497`
+- **setQuotedSelection** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:321`
+- **setQuoteError** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:329`
+- **setQuoteInputOpen** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:327`
+- **setQuoteSubmitting** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:328`
+- **setRestoreAnchorReady** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:277`
+- **setSentinel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:490`
+- **setVisibleCount** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:487`
+- **showScrollToBottom** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:293`
+- **slashCommands** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:284`
+- **slashCommandsLoading** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:284`
+- **soundEnabledRef** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:261`
+- **statsKey** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:722`
+- **streamingStore** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:280`
+- **t** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:251`
+- **thinkingLevel** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **toolPreset** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:281`
+- **toolResultsMap** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:811`
+- **useMemo() callback** (function) in `toolResultsMap` — `ref_projects/pi-web/components/ChatWindow.tsx:811`
+- **map** (const) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:812`
+- **msg** (const) in `useMemo() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:813`
+- **top** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1061`
+- **top** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1383`
+- **updatePromptAnchor** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:937`
+- **useCallback() callback** (function) in `updatePromptAnchor` — `ref_projects/pi-web/components/ChatWindow.tsx:937`
+- **uploadDroppedFiles** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:763`
+- **useCallback() callback** (function) in `uploadDroppedFiles` — `ref_projects/pi-web/components/ChatWindow.tsx:763`
+- **cwd** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:764`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:770`
+- **failure** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:783`
+- **mentions** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:774`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:766`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:777`
+- **count** (property) in `message` — `ref_projects/pi-web/components/ChatWindow.tsx:777`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:781`
+- **names** (property) in `message` — `ref_projects/pi-web/components/ChatWindow.tsx:781`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:784`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:787`
+- **skipped** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:773`
+- **status** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:770`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:766`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:777`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:781`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:784`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:787`
+- **uploaded** (const) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:772`
+- **uploadError** (var) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:786`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:317`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:338`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:377`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:411`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:424`
+- **onKeyDown** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:416`
+- **onPointerDown** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:413`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:463`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:472`
+- **surfaced** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:473`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:480`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:517`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:549`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:553`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:599`
+- **controller** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:558`
+- **locate** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:560`
+- **before** (let) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:569`
+- **context** (const) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:573`
+- **signal** (property) in `context` — `ref_projects/pi-web/components/ChatWindow.tsx:573`
+- **hasMore** (let) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:570`
+- **initialHistory** (const) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:561`
+- **setVisibleCount() callback** (function) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:563`
+- **setVisibleCount() callback** (function) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:580`
+- **position** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:554`
+- **sessionId** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:555`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:624`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:649`
+- **controller** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:626`
+- **locate** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:627`
+- **container** (const) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:632`
+- **context** (const) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:635`
+- **signal** (property) in `context` — `ref_projects/pi-web/components/ChatWindow.tsx:635`
+- **tail** (property) in `context` — `ref_projects/pi-web/components/ChatWindow.tsx:635`
+- **found** (let) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:629`
+- **history** (const) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:628`
+- **setVisibleCount() callback** (function) in `locate` — `ref_projects/pi-web/components/ChatWindow.tsx:642`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:669`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:702`
+- **container** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:670`
+- **observer** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:672`
+- **<function>** (function) in `observer` — `ref_projects/pi-web/components/ChatWindow.tsx:673`
+- **finally() callback** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:695`
+- **oldestId** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:688`
+- **setVisibleCount() callback** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:683`
+- **sid** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:691`
+- **root** (property) in `observer` — `ref_projects/pi-web/components/ChatWindow.tsx:699`
+- **threshold** (property) in `observer` — `ref_projects/pi-web/components/ChatWindow.tsx:699`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:707`
+- **setVisibleCount() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:708`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:713`
+- **container** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:715`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:743`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:746`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:746`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:754`
+- **useEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:757`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:757`
+- **useLayoutEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:386`
+- **<function>** (function) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:403`
+- **observer** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:398`
+- **popover** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:387`
+- **position** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:390`
+- **left** (const) in `position` — `ref_projects/pi-web/components/ChatWindow.tsx:393`
+- **rect** (const) in `position` — `ref_projects/pi-web/components/ChatWindow.tsx:391`
+- **top** (const) in `position` — `ref_projects/pi-web/components/ChatWindow.tsx:392`
+- **viewport** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:389`
+- **useLayoutEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:522`
+- **<function>** (function) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:527`
+- **anchor** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:543`
+- **anchor** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:539`
+- **atBottom** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:530`
+- **atBottom** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:542`
+- **candidates** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:534`
+- **flatMap() callback** (function) in `candidates` — `ref_projects/pi-web/components/ChatWindow.tsx:534`
+- **bottom** (property) in `flatMap() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:537`
+- **entryId** (property) in `flatMap() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:537`
+- **rect** (const) in `flatMap() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:536`
+- **top** (property) in `flatMap() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:537`
+- **oldestEntryId** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:544`
+- **viewportTop** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:533`
+- **container** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:524`
+- **content** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:525`
+- **sessionId** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:523`
+- **useLayoutEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:606`
+- **content** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:608`
+- **element** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:610`
+- **find() callback** (function) in `element` — `ref_projects/pi-web/components/ChatWindow.tsx:610`
+- **position** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:607`
+- **useLayoutEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:652`
+- **backgroundColor** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:659`
+- **backgroundColor** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:660`
+- **duration** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:661`
+- **element** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:655`
+- **selector** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:654`
+- **useLayoutEffect() callback** (function) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:848`
+- **<function>** (function) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:916`
+- **container** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:858`
+- **disposed** (let) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:863`
+- **messageContent** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:859`
+- **observer** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:910`
+- **schedulePromptAnchorMeasure** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:901`
+- **requestAnimationFrame() callback** (function) in `schedulePromptAnchorMeasure` — `ref_projects/pi-web/components/ChatWindow.tsx:903`
+- **spacer** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:849`
+- **updatePromptAnchorSpacer** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:864`
+- **containerTop** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:873`
+- **contentEnd** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:878`
+- **isInitialMeasurement** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:887`
+- **needsInitialAdjustment** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:888`
+- **nextPromptAnchorSpacerHeight** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:881`
+- **targetTop** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:877`
+- **userMessageTop** (const) in `updatePromptAnchorSpacer` — `ref_projects/pi-web/components/ChatWindow.tsx:874`
+- **userMessage** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:860`
+- **visibility** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1090`
+- **visibleCount** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:487`
+- **visibleMessages** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:806`
+- **messages.filter() callback** (function) in `visibleMessages` — `ref_projects/pi-web/components/ChatWindow.tsx:806`
+- **waitingExtensionCustomUiCount** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **waitingExtensionDialogCount** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:285`
+- **width** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1093`
+- **width** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1389`
+- **width** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1404`
+- **width** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1429`
+- **width** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1442`
+- **wrappedOnAgentEnd** (const) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:264`
+- **useCallback() callback** (function) in `wrappedOnAgentEnd` — `ref_projects/pi-web/components/ChatWindow.tsx:264`
+- **zIndex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1064`
+- **zIndex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1385`
+- **zIndex** (property) in `ChatWindow` — `ref_projects/pi-web/components/ChatWindow.tsx:1467`
+- **checkAppUpdate** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:105`
+- **catch() callback** (function) in `checkAppUpdate` — `ref_projects/pi-web/components/ChatWindow.tsx:116`
+- **then() callback** (function) in `checkAppUpdate` — `ref_projects/pi-web/components/ChatWindow.tsx:107`
+- **result** (const) in `then() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:109`
+- **then() callback** (function) in `checkAppUpdate` — `ref_projects/pi-web/components/ChatWindow.tsx:112`
+- **collapsesProcessDetails** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **countToolCallBlocks** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **createPortal** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:5`
+- **dropMentionText** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:16`
+- **DroppedItem** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:16`
+- **EXTENSION_DIALOG_BASE_WIDTH** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:9`
+- **ExtensionCustomPanel** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:2074`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2111`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2149`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2178`
+- **data** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2180`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2186`
+- **text** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2188`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2192`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2195`
+- **input** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2197`
+- **queueMicrotask() callback** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2198`
+- **text** (const) in `queueMicrotask() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:2199`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2204`
+- **text** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2206`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2225`
+- **<function>** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2247`
+- **alignItems** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2102`
+- **alignItems** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2116`
+- **alignItems** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **alignItems** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2221`
+- **background** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2123`
+- **background** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2165`
+- **background** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2236`
+- **background** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2252`
+- **background** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2268`
+- **border** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2121`
+- **border** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2163`
+- **border** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2214`
+- **border** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2235`
+- **border** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2251`
+- **borderBottom** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **borderRadius** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2122`
+- **borderRadius** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2164`
+- **borderRadius** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2234`
+- **borderRadius** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2250`
+- **boxShadow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2124`
+- **boxShadow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2166`
+- **collapsed** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2087`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2125`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2130`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2142`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2220`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2237`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2253`
+- **color** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2269`
+- **composingRef** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2086`
+- **cursor** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2126`
+- **cursor** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2238`
+- **cursor** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2254`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2101`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2115`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2161`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2221`
+- **display** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2230`
+- **displayLines** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2088`
+- **flex** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **flexDirection** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2162`
+- **flexShrink** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2130`
+- **flexShrink** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **flexShrink** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2142`
+- **flexShrink** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **flexShrink** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2239`
+- **fontFamily** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2270`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2130`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2142`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2220`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2255`
+- **fontSize** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2271`
+- **fontWeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2130`
+- **fontWeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **fontWeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2220`
+- **gap** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2117`
+- **gap** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **gap** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2221`
+- **height** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2212`
+- **height** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2233`
+- **inputRef** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2085`
+- **inset** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2099`
+- **justifyContent** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2103`
+- **justifyContent** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **lineHeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2272`
+- **margin** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2264`
+- **maxHeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2160`
+- **maxWidth** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2118`
+- **maxWidth** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **maxWidth** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2159`
+- **minHeight** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2266`
+- **minWidth** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **minWidth** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2158`
+- **opacity** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2215`
+- **outline** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2168`
+- **overflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **overflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **overflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2167`
+- **overflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2267`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2104`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2120`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2213`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2219`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2249`
+- **padding** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2265`
+- **placeItems** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2231`
+- **pointerEvents** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2105`
+- **pointerEvents** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2114`
+- **pointerEvents** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2153`
+- **pointerEvents** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2216`
+- **position** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2098`
+- **position** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2154`
+- **position** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2210`
+- **setCollapsed** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2087`
+- **summary** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2089`
+- **displayLines.find() callback** (function) in `summary` — `ref_projects/pi-web/components/ChatWindow.tsx:2089`
+- **t** (const) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2084`
+- **textAlign** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2127`
+- **textOverflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **textOverflow** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **useEffect() callback** (function) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2091`
+- **whiteSpace** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2133`
+- **whiteSpace** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2137`
+- **whiteSpace** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2273`
+- **width** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2119`
+- **width** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2157`
+- **width** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2211`
+- **width** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2232`
+- **zIndex** (property) in `ExtensionCustomPanel` — `ref_projects/pi-web/components/ChatWindow.tsx:2100`
+- **ExtensionCustomRequest** (type) — `ref_projects/pi-web/components/ChatWindow.tsx:2072`
+- **ExtensionDialog** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:1698`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1778`
+- **cancelled** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1782`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1798`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1887`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1922`
+- **block** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1932`
+- **buttons** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1924`
+- **index** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1925`
+- **next** (const) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1928`
+- **preventScroll** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1931`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1979`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1980`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1999`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2000`
+- **<function>** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2024`
+- **cancelled** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:2024`
+- **alignItems** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1789`
+- **alignItems** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1803`
+- **alignItems** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1810`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1849`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1877`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1898`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1988`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2009`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2029`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2043`
+- **background** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2057`
+- **bodyRef** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1715`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1808`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1847`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1876`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1897`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1987`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2008`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2028`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2042`
+- **border** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2056`
+- **borderBottom** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1809`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1848`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1875`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1896`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1986`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2007`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2027`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2041`
+- **borderRadius** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2055`
+- **borderTop** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **boxShadow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1811`
+- **boxShadow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1850`
+- **collapsed** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1710`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1812`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1817`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1830`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1878`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1899`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1989`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2010`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2030`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2044`
+- **color** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2058`
+- **countdown** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1762`
+- **color** (property) in `countdown` — `ref_projects/pi-web/components/ChatWindow.tsx:1763`
+- **flexShrink** (property) in `countdown` — `ref_projects/pi-web/components/ChatWindow.tsx:1763`
+- **fontSize** (property) in `countdown` — `ref_projects/pi-web/components/ChatWindow.tsx:1763`
+- **seconds** (property) in `countdown` — `ref_projects/pi-web/components/ChatWindow.tsx:1764`
+- **whiteSpace** (property) in `countdown` — `ref_projects/pi-web/components/ChatWindow.tsx:1763`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1813`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1879`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1900`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2031`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2045`
+- **cursor** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2059`
+- **dialogRef** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1714`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1788`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1802`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1845`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1871`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1892`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1934`
+- **display** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **fitWidth** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1716`
+- **flex** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **flex** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1855`
+- **flex** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1914`
+- **flexDirection** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1846`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1817`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1830`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1880`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1901`
+- **flexShrink** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **flexWrap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **focusFirstOption** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1720`
+- **useCallback() callback** (function) in `focusFirstOption` — `ref_projects/pi-web/components/ChatWindow.tsx:1720`
+- **fontFamily** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **fontFamily** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2015`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1817`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1830`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1991`
+- **fontSize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2013`
+- **fontWeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1817`
+- **fontWeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **fontWeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **full** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1717`
+- **gap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1804`
+- **gap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **gap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **gap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1934`
+- **gap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **height** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1874`
+- **height** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1895`
+- **inset** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1786`
+- **justifyContent** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1790`
+- **justifyContent** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **lineHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **lineHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2014`
+- **marginTop** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1859`
+- **maxHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1844`
+- **maxHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **maxWidth** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1805`
+- **maxWidth** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **minHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **minHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1914`
+- **minHeight** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2005`
+- **minWidth** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **minWidth** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1855`
+- **now** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1719`
+- **outline** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1990`
+- **outline** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2011`
+- **overflow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **overflow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **overflow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1851`
+- **overflowWrap** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **overflowY** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **overflowY** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1914`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1791`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1807`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1854`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1913`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1985`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2006`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2021`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2026`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2040`
+- **padding** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2054`
+- **placeItems** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1872`
+- **placeItems** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1893`
+- **pointerEvents** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1792`
+- **pointerEvents** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1801`
+- **pointerEvents** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1840`
+- **position** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1785`
+- **remainingSeconds** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1722`
+- **request.options.map() callback** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1936`
+- **<function>** (function) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1944`
+- **value** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1944`
+- **<function>** (function) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1945`
+- **value** (property) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:1948`
+- **background** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1955`
+- **border** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1954`
+- **borderRadius** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1953`
+- **color** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1956`
+- **cursor** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1957`
+- **fontSize** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1959`
+- **overflowWrap** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1960`
+- **padding** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1952`
+- **scrollMargin** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1964`
+- **textAlign** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1958`
+- **width** (property) in `request.options.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1951`
+- **resize** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2012`
+- **setCollapsed** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1710`
+- **setFitWidth** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1716`
+- **setFull** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1717`
+- **setNow** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1719`
+- **setValue** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1709`
+- **submitValue** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1768`
+- **confirmed** (property) in `submitValue` — `ref_projects/pi-web/components/ChatWindow.tsx:1770`
+- **value** (property) in `submitValue` — `ref_projects/pi-web/components/ChatWindow.tsx:1772`
+- **summary** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1721`
+- **t** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1708`
+- **textAlign** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1814`
+- **textOverflow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **textOverflow** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **toggleFull** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1718`
+- **useCallback() callback** (function) in `toggleFull` — `ref_projects/pi-web/components/ChatWindow.tsx:1718`
+- **setFull() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1718`
+- **useEffect() callback** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1755`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1759`
+- **timer** (const) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1758`
+- **setInterval() callback** (function) in `timer` — `ref_projects/pi-web/components/ChatWindow.tsx:1758`
+- **useLayoutEffect() callback** (function) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1726`
+- **<function>** (function) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1749`
+- **body** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1729`
+- **characterData** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1747`
+- **childList** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1747`
+- **dialog** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1728`
+- **disposed** (let) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1731`
+- **fit** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1732`
+- **blocks** (const) in `fit` — `ref_projects/pi-web/components/ChatWindow.tsx:1734`
+- **needed** (const) in `fit` — `ref_projects/pi-web/components/ChatWindow.tsx:1736`
+- **Array.from() callback** (function) in `needed` — `ref_projects/pi-web/components/ChatWindow.tsx:1738`
+- **setFitWidth() callback** (function) in `fit` — `ref_projects/pi-web/components/ChatWindow.tsx:1741`
+- **mutations** (const) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1746`
+- **subtree** (property) in `useLayoutEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1747`
+- **value** (const) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1709`
+- **whiteSpace** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1820`
+- **whiteSpace** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1824`
+- **whiteSpace** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1858`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1806`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1843`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1873`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1894`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1984`
+- **width** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:2004`
+- **zIndex** (property) in `ExtensionDialog` — `ref_projects/pi-web/components/ChatWindow.tsx:1787`
+- **ExtensionDialogRequest** (type) — `ref_projects/pi-web/components/ChatWindow.tsx:1665`
+- **ExtensionSizeIcon** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:1688`
+- **ExtensionStatusBar** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:21`
+- **ExtensionUiRequest** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **ExtensionWaitingCount** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:1677`
+- **color** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1681`
+- **count** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1682`
+- **flexShrink** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1681`
+- **fontSize** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1681`
+- **fontWeight** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1681`
+- **t** (const) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1678`
+- **whiteSpace** (property) in `ExtensionWaitingCount` — `ref_projects/pi-web/components/ChatWindow.tsx:1681`
+- **extractTurnWrittenFiles** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:12`
+- **FinalAnswerViews** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:13`
+- **findChatScrollAnchor** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:37`
+- **findFinalAssistantIndex** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:173`
+- **candidateIdx** (let) in `findFinalAssistantIndex` — `ref_projects/pi-web/components/ChatWindow.tsx:174`
+- **candidateIdx** (let) in `findFinalAssistantIndex` — `ref_projects/pi-web/components/ChatWindow.tsx:177`
+- **fitExtensionDialogWidth** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:9`
+- **formatTurnDuration** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:14`
+- **Fragment** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **getDisplayableAssistantBlocks** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **getExtensionDialogSummary** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:1667`
+- **firstLine** (const) in `getExtensionDialogSummary` — `ref_projects/pi-web/components/ChatWindow.tsx:1670`
+- **find() callback** (function) in `firstLine` — `ref_projects/pi-web/components/ChatWindow.tsx:1670`
+- **getFinalAnswerViews** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:13`
+- **getNextVisibleCount** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:40`
+- **getPromptAnchorSpacerHeight** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:41`
+- **getTranscriptNotices** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:35`
+- **getTurnDurationMs** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:14`
+- **getUserInputText** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:183`
+- **text** (const) in `getUserInputText` — `ref_projects/pi-web/components/ChatWindow.tsx:186`
+- **text** (const) in `getUserInputText` — `ref_projects/pi-web/components/ChatWindow.tsx:189`
+- **map() callback** (function) in `text` — `ref_projects/pi-web/components/ChatWindow.tsx:191`
+- **message.content.filter() callback** (function) in `text` — `ref_projects/pi-web/components/ChatWindow.tsx:190`
+- **getVisibleRenderWindow** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:42`
+- **hasAssistantAnswer** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **hasFinalAssistantAnswer** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:166`
+- **answerBlocks.some() callback** (function) in `hasFinalAssistantAnswer` — `ref_projects/pi-web/components/ChatWindow.tsx:168`
+- **Image** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:3`
+- **isHiddenCustomMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **isMessageGroupAnchor** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **isScrollAtTail** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:43`
+- **keepWrittenFiles** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:13`
+- **MarkdownBody** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:18`
+- **memo** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **MessageView** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:17`
+- **NewSessionChoices** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:25`
+- **NewSessionUpdateLink** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:125`
+- **accessibleLabel** (const) in `NewSessionUpdateLink` — `ref_projects/pi-web/components/ChatWindow.tsx:142`
+- **setUpdate** (const) in `NewSessionUpdateLink` — `ref_projects/pi-web/components/ChatWindow.tsx:130`
+- **update** (const) in `NewSessionUpdateLink` — `ref_projects/pi-web/components/ChatWindow.tsx:130`
+- **useEffect() callback** (function) in `NewSessionUpdateLink` — `ref_projects/pi-web/components/ChatWindow.tsx:132`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:138`
+- **cancelled** (let) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:134`
+- **then() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:135`
+- **normalizeCustomPanelLines** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:7`
+- **NOTICE_LINE_BOX_PX** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1543`
+- **NOTICE_MAX_HEIGHT_PX** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1547`
+- **NOTICE_MIN_HEIGHT_PX** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1542`
+- **NOTICE_TEXT_MAX_HEIGHT_PX** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1548`
+- **NOTICE_TEXT_PADDING_Y_PX** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1544`
+- **NoticeItem** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:25`
+- **NoticeShelf** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:1550`
+- **alignItems** (property) in `NoticeShelf` — `ref_projects/pi-web/components/ChatWindow.tsx:1558`
+- **display** (property) in `NoticeShelf` — `ref_projects/pi-web/components/ChatWindow.tsx:1555`
+- **flexDirection** (property) in `NoticeShelf` — `ref_projects/pi-web/components/ChatWindow.tsx:1556`
+- **marginBottom** (property) in `NoticeShelf` — `ref_projects/pi-web/components/ChatWindow.tsx:1559`
+- **notices.map() callback** (function) in `NoticeShelf` — `ref_projects/pi-web/components/ChatWindow.tsx:1562`
+- **<function>** (function) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1574`
+- **<function>** (function) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1575`
+- **<function>** (function) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1578`
+- **<function>** (function) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1579`
+- **alignItems** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1585`
+- **animation** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1612`
+- **background** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1599`
+- **background** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1623`
+- **border** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1598`
+- **borderRadius** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1597`
+- **borderRadius** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1622`
+- **boxShadow** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1603`
+- **color** (const) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1563`
+- **color** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1600`
+- **display** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1583`
+- **flexShrink** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1624`
+- **fontSize** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1606`
+- **gap** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1586`
+- **height** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1588`
+- **height** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1621`
+- **lineHeight** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1607`
+- **map() callback** (function) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1637`
+- **color** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1651`
+- **display** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1644`
+- **fontFamily** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1649`
+- **lineHeight** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1650`
+- **maxWidth** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1646`
+- **overflowX** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1647`
+- **verticalAlign** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1645`
+- **whiteSpace** (property) in `map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1648`
+- **marginBottom** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1595`
+- **marginTop** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1627`
+- **maxHeight** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1591`
+- **maxHeight** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **maxWidth** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1602`
+- **maxWidth** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **minHeight** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1587`
+- **minWidth** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **overflow** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1596`
+- **overflowY** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **padding** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1615`
+- **padding** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **pointerEvents** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1594`
+- **scrollbarWidth** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **transformOrigin** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1608`
+- **whiteSpace** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **width** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1601`
+- **width** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1620`
+- **wordBreak** (property) in `notices.map() callback` — `ref_projects/pi-web/components/ChatWindow.tsx:1635`
+- **phaseLabel** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:24`
+- **ProcessDetailsGroup** (function) — `ref_projects/pi-web/components/ChatWindow.tsx:197`
+- **<function>** (function) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:215`
+- **setExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/ChatWindow.tsx:215`
+- **alignItems** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:218`
+- **background** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:225`
+- **border** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:224`
+- **cacheMissText** (const) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:207`
+- **color** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:226`
+- **color** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:238`
+- **cursor** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:227`
+- **display** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:217`
+- **expanded** (const) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:198`
+- **flexShrink** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:233`
+- **fontSize** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:228`
+- **gap** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:219`
+- **marginBottom** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:210`
+- **marginTop** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:242`
+- **maxWidth** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:221`
+- **minHeight** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:222`
+- **minWidth** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:236`
+- **overflow** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:236`
+- **padding** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:223`
+- **parts** (const) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:203`
+- **setExpanded** (const) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:198`
+- **textAlign** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:229`
+- **textOverflow** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:236`
+- **time** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:205`
+- **transform** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:233`
+- **transition** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:233`
+- **useLayoutEffect() callback** (function) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:199`
+- **whiteSpace** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:236`
+- **width** (property) in `ProcessDetailsGroup` — `ref_projects/pi-web/components/ChatWindow.tsx:220`
+- **Props** (interface) — `ref_projects/pi-web/components/ChatWindow.tsx:48`
+- **chatInputRef** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:68`
+- **holdAudio** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:93`
+- **initialNewSessionChoices** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:60`
+- **initialPrompt** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:84`
+- **initialScrollPosition** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:52`
+- **modelsRefreshKey** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:67`
+- **newSessionContextBar** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:58`
+- **newSessionCwd** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:55`
+- **newSessionDraftKey** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:56`
+- **onAgentEnd** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:62`
+- **onAskInNewChat** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:82`
+- **onAttentionNeeded** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:64`
+- **onBranchDataChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:69`
+- **onContextUsageChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:77`
+- **onFilesUploaded** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:80`
+- **onInitialPromptConsumed** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:85`
+- **onNewSessionChoicesChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:61`
+- **onOpenFile** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:78`
+- **onOpenSettings** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:76`
+- **onOpenSubagent** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:81`
+- **onScrollPositionChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:53`
+- **onSearchTargetHandled** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:51`
+- **onSessionCreated** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:65`
+- **onSessionForked** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:66`
+- **onSessionStatsChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:73`
+- **onSessionStatsPanelOpen** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:74`
+- **onSoundToggle** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:89`
+- **onSystemInfoLoaderChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:72`
+- **onSystemPromptChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:70`
+- **onSystemToolsChange** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:71`
+- **onToolEnd** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:63`
+- **playDoneSound** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:90`
+- **quoteSelectionEnabled** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:83`
+- **searchTarget** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:50`
+- **session** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:49`
+- **sessionRunning** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:54`
+- **soundEnabled** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:88`
+- **unlockAudio** (property) in `Props` — `ref_projects/pi-web/components/ChatWindow.tsx:91`
+- **ReactNode** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **registerAbortHandler** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:2`
+- **restoreScrollTop** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:44`
+- **selectHasStreamingContent** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:26`
+- **selectIsStreaming** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:26`
+- **selectStreamingMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:26`
+- **SessionInfo** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **SessionStatsInfo** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:31`
+- **SessionTreeNode** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **SettingsSection** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:34`
+- **splitDroppedItems** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:16`
+- **splitFinalAssistantBlocks** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:11`
+- **splitNoticeText** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:8`
+- **StreamingReply** (const) — `ref_projects/pi-web/components/ChatWindow.tsx:1521`
+- **StreamingReply** (function) in `StreamingReply` — `ref_projects/pi-web/components/ChatWindow.tsx:1521`
+- **message** (const) in `StreamingReply` — `ref_projects/pi-web/components/ChatWindow.tsx:1531`
+- **StreamingStore** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:27`
+- **summarizeCacheMisses** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:35`
+- **ToolEntry** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:33`
+- **ToolResultMessage** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:6`
+- **toTerminalKeyData** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:10`
+- **TRANSCRIPT_NOTICE_WARNING_COLOR** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:36`
+- **TranscriptNoticeLines** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:36`
+- **uploadFiles** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:16`
+- **useAgentSession** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:25`
+- **useCallback** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useDragDrop** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:28`
+- **useEffect** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useI18n** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:23`
+- **useIsMobile** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:29`
+- **useLayoutEffect** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useMemo** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useMessageRefs** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:20`
+- **useRef** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useScrollbarVisibility** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:30`
+- **useState** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:4`
+- **useStreamingSelector** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:26`
+- **VISIBLE_PAGE_SIZE** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:45`
+- **WrittenFile** (alias) — `ref_projects/pi-web/components/ChatWindow.tsx:12`

@@ -1,0 +1,817 @@
+{
+  "capturedAt": "2026-10-25T08:06:03.560Z",
+  "url": "http://127.0.0.1:30141/?cwd=%2Fhome%2Fberton%2Fevo-pi",
+  "entries": [
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 3,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 3,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 3,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 2,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "复制",
+      "depth": 0,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 1,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "从此处编辑",
+      "depth": 0,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    },
+    {
+      "role": "button",
+      "name": "新会话",
+      "depth": 0,
+      "state": null,
+      "region": "顶栏",
+      "visible": true,
+      "keys": null
+    }
+  ],
+  "blocks": [
+    {
+      "hash": "d9a98204",
+      "textLen": 39,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "e598771",
+      "textLen": 143,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "e598771",
+      "textLen": 143,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "ba76051b",
+      "textLen": 39,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "70316248",
+      "textLen": 143,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "70316248",
+      "textLen": 143,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "f8424203",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "66f7174e",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "66f7174e",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "636bcc2c",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "a04d9817",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "a04d9817",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "9fc71ef1",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "e48c55c8",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "e48c55c8",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "24ff4212",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "498980f1",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "498980f1",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "cdfbc167",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "21486dc2",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "21486dc2",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "6a8cea70",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "c99470ab",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "c99470ab",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "a031b245",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "a268feec",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "a268feec",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "c319ea96",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "2c279075",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "2c279075",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "f614f0b",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "e3923236",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "e3923236",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "8eedb6f4",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "e1d9a87f",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "e1d9a87f",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "69906e04",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "31774883",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "31774883",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "fcfd211b",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "af1f87fa",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "af1f87fa",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "54f358ca",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "c42c0f6d",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "c42c0f6d",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "29b62109",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "f7d1f804",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "f7d1f804",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "5f5c1d88",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "fce2e98f",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "fce2e98f",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "9d637f9f",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "1c18cdc6",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "1c18cdc6",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "44d84a6e",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "8b1644e9",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "8b1644e9",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "a0089b7d",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "5fb32ba0",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "5fb32ba0",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "b28ff5bc",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "f0d64b3b",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "f0d64b3b",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "12dfeed3",
+      "textLen": 40,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "ca0ac492",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "ca0ac492",
+      "textLen": 144,
+      "anchors": [
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "dfae5296",
+      "textLen": 816,
+      "anchors": [
+        "button:复制",
+        "button:从此处编辑",
+        "button:新会话"
+      ]
+    },
+    {
+      "hash": "d594eddd",
+      "textLen": 144,
+      "anchors": [
+        "h3:变更摘要",
+        "table:文件变更block-view.tsx接入 ToolCallBlockmarkdown-body.tsx换成 GFM 渲染",
+        "th:文件",
+        "th:变更",
+        "td:block-view.tsx",
+        "code:block-view.tsx",
+        "td:接入 ToolCallBlock",
+        "code:ToolCallBlock",
+        "td:markdown-body.tsx",
+        "code:markdown-body.tsx",
+        "td:换成 GFM 渲染",
+        "li:表格由 remark-gfm 解析",
+        "code:remark-gfm",
+        "li:行内代码保持等宽",
+        "li:外链在新标签打开：pi-web",
+        "a:pi-web",
+        "button:复制",
+        "pre:1const x: number = 1",
+        "code:1const x: number = 1",
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "d594eddd",
+      "textLen": 144,
+      "anchors": [
+        "h3:变更摘要",
+        "table:文件变更block-view.tsx接入 ToolCallBlockmarkdown-body.tsx换成 GFM 渲染",
+        "th:文件",
+        "th:变更",
+        "td:block-view.tsx",
+        "code:block-view.tsx",
+        "td:接入 ToolCallBlock",
+        "code:ToolCallBlock",
+        "td:markdown-body.tsx",
+        "code:markdown-body.tsx",
+        "td:换成 GFM 渲染",
+        "li:表格由 remark-gfm 解析",
+        "code:remark-gfm",
+        "li:行内代码保持等宽",
+        "li:外链在新标签打开：pi-web",
+        "a:pi-web",
+        "button:复制",
+        "pre:1const x: number = 1",
+        "code:1const x: number = 1",
+        "button:复制"
+      ]
+    },
+    {
+      "hash": "cabf2981",
+      "textLen": 38,
+      "anchors": []
+    },
+    {
+      "hash": "cabf2981",
+      "textLen": 38,
+      "anchors": []
+    },
+    {
+      "hash": "9bbbff52",
+      "textLen": 38,
+      "anchors": [
+        "button:bashgit status"
+      ]
+    },
+    {
+      "hash": "9bbbff52",
+      "textLen": 38,
+      "anchors": [
+        "button:bashgit status"
+      ]
+    }
+  ],
+  "textLength": 43,
+  "text": "第 8 条提问：滚动几何测试 复制 从此处编辑 新会话 1970年1月1日 08:00"
+}

@@ -14,7 +14,8 @@
       "sources": [
         "ref_projects/pi-web/components/McpConfig.tsx#L1-L173"
       ],
-      "landing": "packages/core/src/mcp/domain/mcp-labels.ts"
+      "landing": "packages/core/src/mcp/domain/mcp-labels.ts",
+      "runtime": "server"
     },
     {
       "id": "D-U-01",
@@ -30,7 +31,8 @@
       "behaviors": [
         "B-006"
       ],
-      "landing": "packages/core/src/mcp/domain/mcp-group-labels.ts"
+      "landing": "packages/core/src/mcp/domain/mcp-group-labels.ts",
+      "runtime": "server"
     },
     {
       "id": "D-U-02",
@@ -43,7 +45,8 @@
       "sources": [
         "ref_projects/pi-web/components/McpConfig.tsx#L208-L294"
       ],
-      "landing": "packages/core/src/mcp/domain/mcp-action-text.ts"
+      "landing": "packages/core/src/mcp/domain/mcp-action-text.ts",
+      "runtime": "server"
     },
     {
       "id": "D-U-03",
@@ -63,7 +66,8 @@
         "B-004",
         "B-005"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-panel.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-panel.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-U-04",
@@ -79,7 +83,8 @@
       "behaviors": [
         "B-007"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-panel-view.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-panel-view.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-U-05",
@@ -101,7 +106,8 @@
         "B-021",
         "B-022"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-server-list.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-server-list.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-U-06",
@@ -127,7 +133,8 @@
         "B-028",
         "B-029"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-server-detail.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-server-detail.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-U-07",
@@ -143,23 +150,25 @@
       "behaviors": [
         "B-030"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-test-status.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-test-status.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-U-08",
       "kind": "component",
       "name": "状态行",
-      "file": "packages/web/src/features/mcp/mcp-status-row.tsx",
+      "file": "packages/web/src/features/mcp/mcp-test-status.tsx",
       "type": "feature",
       "lines": "L1909-L1975",
-      "responsibility": "McpStatusRow：aria-busy / aria-invalid / 重试入口",
+      "responsibility": "McpTestStatus / McpStatusRow：测试三态（running/ok/fail）互斥、aria-busy/aria-invalid、日志展开",
       "sources": [
         "ref_projects/pi-web/components/McpConfig.tsx#L1909-L1975"
       ],
       "behaviors": [
         "B-031"
       ],
-      "landing": "packages/web/src/features/mcp/mcp-status-row.tsx"
+      "landing": "packages/web/src/features/mcp/mcp-test-status.tsx",
+      "runtime": "client"
     },
     {
       "id": "D-B-01",
@@ -170,7 +179,8 @@
       "responsibility": "读 GET /api/mcp，失败整体降级并保留上一次快照",
       "rationale": "pi-web 里这段逻辑在 mcp-config-helpers.ts 的 loadMcpOverview，属外部模块；本能力要把它收进用例层才能被测试",
       "derivedFrom": "D-U-03",
-      "landing": "packages/core/src/mcp/use-cases/load-overview.ts"
+      "landing": "packages/core/src/mcp/use-cases/load-overview.ts",
+      "runtime": "server"
     },
     {
       "id": "D-B-02",
@@ -181,7 +191,8 @@
       "responsibility": "按 key 并发测试，按 key 去重与回填",
       "rationale": "测试是服务端主动动作且可并发；用例必须按 key 记账，否则后到结果覆盖先到",
       "derivedFrom": "D-U-07",
-      "landing": "packages/core/src/mcp/use-cases/test-server.ts"
+      "landing": "packages/core/src/mcp/use-cases/test-server.ts",
+      "runtime": "server"
     },
     {
       "id": "D-B-03",
@@ -192,7 +203,8 @@
       "responsibility": "单个启用/停用 + 失败回滚",
       "rationale": "pi-web 里是乐观写入后回滚（McpConfig.tsx:733 的 undo 定时器），这条逻辑要独立可测",
       "derivedFrom": "D-U-06",
-      "landing": "packages/core/src/mcp/use-cases/toggle-server.ts"
+      "landing": "packages/core/src/mcp/use-cases/toggle-server.ts",
+      "runtime": "server"
     },
     {
       "id": "D-B-04",
@@ -203,7 +215,8 @@
       "responsibility": "分组批量启用/停用，部分成功逐条记账",
       "rationale": "批量不是单条的循环：失败要逐条回填并提示，不是整批回滚",
       "derivedFrom": "D-U-05",
-      "landing": "packages/core/src/mcp/use-cases/batch-actions.ts"
+      "landing": "packages/core/src/mcp/use-cases/batch-actions.ts",
+      "runtime": "server"
     },
     {
       "id": "D-B-05",
@@ -214,7 +227,8 @@
       "responsibility": "发起签到、轮询状态、取消",
       "rationale": "签到流程由服务端持有，客户端只轮询；卸载时不许 abort 掉服务端流程",
       "derivedFrom": "D-U-06",
-      "landing": "packages/core/src/mcp/use-cases/sign-in-flow.ts"
+      "landing": "packages/core/src/mcp/use-cases/sign-in-flow.ts",
+      "runtime": "server"
     },
     {
       "id": "D-B-07",
@@ -228,7 +242,8 @@
       "landing": "packages/core/src/mcp/use-cases/remove-server.ts",
       "behaviors": [
         "B-032"
-      ]
+      ],
+      "runtime": "server"
     },
     {
       "id": "P-S-01",
@@ -250,7 +265,8 @@
         "add(input,cwd)",
         "remove(ref,cwd)"
       ],
-      "landing": "packages/core/src/mcp/domain/ports/mcp-repository.ts"
+      "landing": "packages/core/src/mcp/domain/ports/mcp-repository.ts",
+      "runtime": "both"
     },
     {
       "id": "P-S-02",
@@ -267,7 +283,8 @@
       "methods": [
         "run(ref,cwd)"
       ],
-      "landing": "packages/core/src/mcp/domain/ports/mcp-test-runner.ts"
+      "landing": "packages/core/src/mcp/domain/ports/mcp-test-runner.ts",
+      "runtime": "both"
     },
     {
       "id": "P-S-03",
@@ -287,7 +304,8 @@
         "submit(flowId,redirectUrl)",
         "cancel(flowId)"
       ],
-      "landing": "packages/core/src/mcp/domain/ports/mcp-sign-in-flow.ts"
+      "landing": "packages/core/src/mcp/domain/ports/mcp-sign-in-flow.ts",
+      "runtime": "both"
     },
     {
       "id": "P-S-05",
@@ -304,7 +322,8 @@
       "methods": [
         "request(cwd)"
       ],
-      "landing": "packages/core/src/mcp/domain/ports/project-trust.ts"
+      "landing": "packages/core/src/mcp/domain/ports/project-trust.ts",
+      "runtime": "both"
     }
   ],
   "states": [

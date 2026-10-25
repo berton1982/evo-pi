@@ -1,0 +1,1088 @@
+{
+  "god": "ref_projects/pi-web/components/ChatWindow.tsx",
+  "kind": "ui",
+  "elements": [
+    {
+      "id": "D-S-01",
+      "name": "ChatWindow 导入/Props/布局常量",
+      "file": "packages/web/src/features/chat/chat-surface.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L1-L94"
+      ],
+      "landing": "packages/web/src/features/chat/chat-surface.tsx",
+      "behaviors": [
+        "B-046"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-02",
+      "name": "应用更新横幅判定",
+      "file": "packages/web/src/features/chat/domain/app-update-banner.ts",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L95-L165"
+      ],
+      "landing": "packages/web/src/features/chat/domain/app-update-banner.ts",
+      "behaviors": [
+        "B-001"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-03",
+      "name": "\"最终回答\"与输入文本纯函数",
+      "file": "packages/web/src/features/chat/domain/final-answer.ts",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L166-L249"
+      ],
+      "landing": "packages/web/src/features/chat/domain/final-answer.ts",
+      "behaviors": [
+        "B-007",
+        "B-008",
+        "B-037",
+        "B-038"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-05",
+      "name": "容器：首屏三态与消息列表",
+      "file": "packages/web/src/features/chat/message-list.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L250-L700"
+      ],
+      "landing": "packages/web/src/features/chat/message-list.tsx",
+      "behaviors": [
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-042",
+        "B-043",
+        "B-054",
+        "B-055",
+        "B-056",
+        "B-057"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-06",
+      "name": "容器：输入工具条 12 控件",
+      "file": "packages/web/src/features/chat/composer-toolbar.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L701-L1100"
+      ],
+      "landing": "packages/web/src/features/chat/composer-toolbar.tsx",
+      "behaviors": [
+        "B-009",
+        "B-010",
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014",
+        "B-015",
+        "B-016",
+        "B-017",
+        "B-018",
+        "B-019",
+        "B-020",
+        "B-023",
+        "B-024",
+        "B-047",
+        "B-048",
+        "B-049",
+        "B-050",
+        "B-051",
+        "B-052",
+        "B-053"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-07",
+      "name": "容器：上行回调与通知入队",
+      "file": "packages/web/src/features/chat/chat-surface.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L1101-L1520"
+      ],
+      "landing": "packages/web/src/features/chat/chat-surface.tsx",
+      "behaviors": [
+        "B-021",
+        "B-022"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-08",
+      "name": "StreamingReply 与 NoticeShelf",
+      "file": "packages/web/src/features/chat/streaming-reply.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L1521-L1664"
+      ],
+      "landing": "packages/web/src/features/chat/streaming-reply.tsx",
+      "behaviors": [
+        "B-045"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-S-02",
+      "name": "token 估算与 Markdown 包装",
+      "file": "packages/web/src/features/chat/markdown-body.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1-L159"
+      ],
+      "landing": "packages/web/src/features/chat/markdown-body.tsx",
+      "behaviors": [
+        "B-025",
+        "B-039"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-09",
+      "name": "思考正文加载与 MessageView 入口",
+      "file": "packages/web/src/features/chat/use-message-model.ts",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L160-L333"
+      ],
+      "landing": "packages/web/src/features/chat/use-message-model.ts",
+      "behaviors": [
+        "B-036",
+        "B-040"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-10",
+      "name": "UserMessageView",
+      "file": "packages/web/src/features/chat/user-message.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L334-L643"
+      ],
+      "landing": "packages/web/src/features/chat/user-message.tsx",
+      "behaviors": [
+        "B-032",
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-044"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-11",
+      "name": "AssistantMessageView",
+      "file": "packages/web/src/features/chat/assistant-message.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L644-L992"
+      ],
+      "landing": "packages/web/src/features/chat/assistant-message.tsx",
+      "behaviors": [
+        "B-039",
+        "B-041"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-12",
+      "name": "BlockView/TextBlock/ThinkingBlock",
+      "file": "packages/web/src/features/chat/block-view.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L993-L1150"
+      ],
+      "landing": "packages/web/src/features/chat/block-view.tsx",
+      "behaviors": [
+        "B-026",
+        "B-027"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-13",
+      "name": "ToolCallBlock",
+      "file": "packages/web/src/features/chat/tool-call-block.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1151-L1344"
+      ],
+      "landing": "packages/web/src/features/chat/tool-call-block.tsx",
+      "behaviors": [
+        "B-028",
+        "B-029",
+        "B-030"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-14",
+      "name": "diff 族（Split/Patch）",
+      "file": "packages/web/src/features/chat/diff/split-diff.tsx",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1345-L1577"
+      ],
+      "landing": "packages/web/src/features/chat/diff/split-diff.tsx",
+      "behaviors": [
+        "B-031"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-U-15",
+      "name": "apply_patch 解析与其余工具视图",
+      "file": "packages/core/src/chat/domain/patch-diff.ts",
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1578-L2161"
+      ],
+      "landing": "packages/core/src/chat/domain/patch-diff.ts",
+      "behaviors": [
+        "B-031",
+        "B-028"
+      ],
+      "runtime": "server"
+    },
+    {
+      "id": "P-C-01",
+      "name": "agent 传输（复用 C-A）",
+      "file": "packages/core/src/chat/domain/ports/agent-transport.ts",
+      "rationale": "事件与命令的唯一入口已在 C-A 定义，本能力只消费",
+      "derivedFrom": [
+        "D-U-07"
+      ],
+      "methods": [
+        "send(command, payload): Promise<Outcome<void>>",
+        "subscribe(handler): () => void"
+      ],
+      "consumers": [
+        "D-B-01",
+        "D-B-02",
+        "D-B-03"
+      ],
+      "runtime": "both",
+      "landing": "packages/core/src/chat/domain/ports/agent-transport.ts"
+    },
+    {
+      "id": "P-C-02",
+      "name": "会话读",
+      "file": "packages/core/src/chat/domain/ports/chat-session-reader.ts",
+      "rationale": "分页读历史消息需要独立端口，避免页面直接摸 HTTP",
+      "derivedFrom": [
+        "D-U-05"
+      ],
+      "methods": [
+        "readPage(sessionId, opts): Promise<Outcome<{messages: Message[], hasMore: boolean}>>"
+      ],
+      "consumers": [
+        "D-B-01"
+      ],
+      "runtime": "both",
+      "landing": "packages/core/src/chat/domain/ports/chat-session-reader.ts"
+    },
+    {
+      "id": "P-C-03",
+      "name": "文件打开",
+      "file": "packages/core/src/chat/domain/ports/file-opener.ts",
+      "rationale": "diff/工具结果要能跳到文件，但渲染层不许直接开面板",
+      "derivedFrom": [
+        "D-U-13"
+      ],
+      "methods": [
+        "openFile(path, line?): void"
+      ],
+      "consumers": [
+        "D-B-05"
+      ],
+      "runtime": "both",
+      "landing": "packages/core/src/chat/domain/ports/file-opener.ts"
+    },
+    {
+      "id": "P-C-04",
+      "name": "剪贴板",
+      "file": "packages/core/src/chat/domain/ports/clipboard.ts",
+      "rationale": "复制是用户可见副作用，必须可测",
+      "derivedFrom": [
+        "D-U-10"
+      ],
+      "methods": [
+        "write(text): Promise<Outcome<void>>"
+      ],
+      "consumers": [
+        "D-B-06"
+      ],
+      "runtime": "both",
+      "landing": "packages/core/src/chat/domain/ports/clipboard.ts"
+    },
+    {
+      "id": "D-B-01",
+      "name": "发送一轮消息",
+      "file": "packages/core/src/chat/use-cases/send-turn.ts",
+      "landing": "packages/core/src/chat/use-cases/send-turn.ts",
+      "derivedFrom": [
+        "D-U-06"
+      ],
+      "rationale": "发送要幂等 + 运行态守卫，属用例不属组件",
+      "behaviors": [
+        "B-009"
+      ],
+      "runtime": "server"
+    },
+    {
+      "id": "D-B-02",
+      "name": "中断当前轮次",
+      "file": "packages/core/src/chat/use-cases/abort-turn.ts",
+      "landing": "packages/core/src/chat/use-cases/abort-turn.ts",
+      "derivedFrom": [
+        "D-U-06"
+      ],
+      "rationale": "中断语义（保留已产出）只有用例说得清",
+      "behaviors": [
+        "B-010"
+      ],
+      "runtime": "server"
+    },
+    {
+      "id": "D-B-03",
+      "name": "压缩上下文",
+      "file": "packages/core/src/chat/use-cases/compact-context.ts",
+      "landing": "packages/core/src/chat/use-cases/compact-context.ts",
+      "derivedFrom": [
+        "D-U-06"
+      ],
+      "rationale": "压缩有进度与可中断，是流程不是按钮",
+      "behaviors": [
+        "B-014"
+      ],
+      "runtime": "server"
+    },
+    {
+      "id": "D-B-04",
+      "name": "\"最终回答\"判定",
+      "file": "packages/web/src/features/chat/domain/final-answer.ts",
+      "landing": "packages/web/src/features/chat/domain/final-answer.ts",
+      "derivedFrom": [
+        "D-U-03"
+      ],
+      "rationale": "规则复杂（跳过工具结果/中间轮次），必须单测",
+      "behaviors": [
+        "B-007"
+      ],
+      "runtime": "client"
+    },
+    {
+      "id": "D-B-05",
+      "name": "apply_patch 解析",
+      "file": "packages/core/src/chat/domain/patch-diff.ts",
+      "landing": "packages/core/src/chat/domain/patch-diff.ts",
+      "derivedFrom": [
+        "D-U-15"
+      ],
+      "rationale": "解析失败要降级，属纯函数",
+      "behaviors": [
+        "B-031"
+      ],
+      "runtime": "server"
+    },
+    {
+      "id": "D-B-06",
+      "name": "复制消息",
+      "file": "packages/core/src/chat/use-cases/copy-message.ts",
+      "landing": "packages/core/src/chat/use-cases/copy-message.ts",
+      "derivedFrom": [
+        "D-U-10"
+      ],
+      "rationale": "写剪贴板是副作用，要能注入假端口测",
+      "behaviors": [
+        "B-035"
+      ],
+      "runtime": "both"
+    }
+  ],
+  "components": [
+    {
+      "id": "C-01",
+      "name": "ChatSurface",
+      "type": "container",
+      "parent": null,
+      "file": "packages/web/src/features/chat/message-list.tsx",
+      "element": "D-U-05",
+      "props": [
+        "session",
+        "cwd",
+        "onOpenFile"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L250-L1520"
+      ]
+    },
+    {
+      "id": "C-02",
+      "name": "MessageList",
+      "type": "presenter",
+      "parent": "C-01",
+      "file": "packages/web/src/features/chat/message-list.tsx",
+      "element": "D-U-05",
+      "props": [
+        "messages",
+        "streaming",
+        "onCopy"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L512-L604"
+      ]
+    },
+    {
+      "id": "C-03",
+      "name": "MessageItem",
+      "type": "presenter",
+      "parent": "C-02",
+      "file": "packages/web/src/features/chat/user-message.tsx",
+      "element": "D-U-10",
+      "props": [
+        "message",
+        "modelNames"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L334-L992"
+      ]
+    },
+    {
+      "id": "C-04",
+      "name": "ToolCallBlock",
+      "type": "presenter",
+      "parent": "C-03",
+      "file": "packages/web/src/features/chat/tool-call-block.tsx",
+      "element": "D-U-13",
+      "props": [
+        "block",
+        "result",
+        "duration"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1176-L1344"
+      ]
+    },
+    {
+      "id": "C-05",
+      "name": "DiffView",
+      "type": "presenter",
+      "parent": "C-04",
+      "file": "packages/web/src/features/chat/diff/split-diff.tsx",
+      "element": "D-U-14",
+      "props": [
+        "files"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/MessageView.tsx#L1364-L1577"
+      ]
+    },
+    {
+      "id": "C-06",
+      "name": "ComposerToolbar",
+      "type": "presenter",
+      "parent": "C-01",
+      "file": "packages/web/src/features/chat/composer-toolbar.tsx",
+      "element": "D-U-06",
+      "props": [
+        "params",
+        "onChange"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/ChatWindow.tsx#L701-L1100"
+      ]
+    },
+    {
+      "id": "C-07",
+      "name": "ComposerQueue",
+      "type": "presenter",
+      "parent": "C-06",
+      "file": "packages/web/src/features/chat/composer-queue.tsx",
+      "element": "D-U-06",
+      "props": [
+        "steering",
+        "followUp",
+        "onRecall"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/ChatInput.tsx#L522-L560"
+      ]
+    },
+    {
+      "id": "C-08",
+      "name": "SessionInfoPanel",
+      "type": "presenter",
+      "parent": "C-01",
+      "file": "packages/web/src/features/chat/session-info-panel.tsx",
+      "element": "D-U-05",
+      "props": [
+        "session",
+        "stats"
+      ],
+      "sources": [
+        "ref_projects/pi-web/components/AppShell.tsx#L1855-L1900"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-01",
+      "name": "use-chat-scroll",
+      "signature": "useChatScroll(containerRef, deps)",
+      "file": "packages/web/src/features/chat/use-chat-scroll.ts",
+      "replaces": "ChatWindow.tsx L512-L633",
+      "usedBy": [
+        "C-01"
+      ],
+      "duty": "滚动策略：贴底判定与恢复位置",
+      "element": "D-U-05"
+    },
+    {
+      "id": "H-02",
+      "name": "use-streaming-reply",
+      "signature": "useStreamingReply(store, onCommit)",
+      "file": "packages/web/src/features/chat/use-streaming-reply.ts",
+      "replaces": "ChatWindow.tsx L1521-L1541",
+      "usedBy": [
+        "C-02"
+      ],
+      "duty": "流式增量订阅与提交时机",
+      "element": "D-U-08"
+    },
+    {
+      "id": "H-03",
+      "name": "use-composer-params",
+      "signature": "useComposerParams(agent)",
+      "file": "packages/web/src/features/chat/use-composer-params.ts",
+      "replaces": "ChatWindow.tsx L701-L1100 + ChatInput.tsx L1289-L1300（steer/followUp 队列）",
+      "usedBy": [
+        "C-06"
+      ],
+      "duty": "12 个控件的值与动作（不含渲染）",
+      "element": "D-U-06"
+    },
+    {
+      "id": "H-04",
+      "name": "use-message-actions",
+      "signature": "useMessageActions(deps)",
+      "file": "packages/web/src/features/chat/use-message-actions.ts",
+      "replaces": "MessageView.tsx L410-L419",
+      "usedBy": [
+        "C-03"
+      ],
+      "duty": "复制/编辑/分叉三个用户动作",
+      "element": "D-U-10"
+    }
+  ],
+  "stores": [
+    {
+      "id": "ST-01",
+      "name": "chatMessages",
+      "file": "packages/web/src/features/chat/stores/chat-messages.ts",
+      "stateRefs": [
+        "messages",
+        "streamingBlocks"
+      ],
+      "duty": "消息与流式块（唯一持有者）",
+      "element": "D-U-05"
+    },
+    {
+      "id": "ST-02",
+      "name": "composerParams",
+      "file": "packages/web/src/features/chat/stores/composer-params.ts",
+      "stateRefs": [
+        "model",
+        "thinkingLevel",
+        "toolPreset"
+      ],
+      "duty": "输入参数（模型/推理/工具预设）",
+      "element": "D-U-06"
+    },
+    {
+      "id": "ST-03",
+      "name": "noticeQueue",
+      "file": "packages/web/src/features/chat/stores/notice-queue.ts",
+      "stateRefs": [
+        "notices",
+        "paused"
+      ],
+      "duty": "通知队列与暂停态",
+      "element": "D-U-07"
+    }
+  ],
+  "states": [
+    {
+      "key": "messages",
+      "owner": "D-U-05",
+      "kind": "server"
+    },
+    {
+      "key": "streamingBlocks",
+      "owner": "D-U-05",
+      "kind": "server"
+    },
+    {
+      "key": "scrollPosition",
+      "owner": "D-U-05",
+      "kind": "ui"
+    },
+    {
+      "key": "model",
+      "owner": "D-U-06",
+      "kind": "server"
+    },
+    {
+      "key": "thinkingLevel",
+      "owner": "D-U-06",
+      "kind": "server"
+    },
+    {
+      "key": "toolPreset",
+      "owner": "D-U-06",
+      "kind": "server"
+    },
+    {
+      "key": "notices",
+      "owner": "D-U-07",
+      "kind": "ui"
+    },
+    {
+      "key": "paused",
+      "owner": "D-U-07",
+      "kind": "ui"
+    },
+    {
+      "key": "editing",
+      "owner": "D-U-10",
+      "kind": "ui"
+    },
+    {
+      "key": "copied",
+      "owner": "D-U-10",
+      "kind": "ui"
+    },
+    {
+      "key": "draft",
+      "owner": "D-U-06",
+      "kind": "ui"
+    },
+    {
+      "key": "queuedSteer",
+      "owner": "D-U-06",
+      "kind": "ui"
+    },
+    {
+      "key": "queuedFollowUp",
+      "owner": "D-U-06",
+      "kind": "ui"
+    },
+    {
+      "key": "controlsOpen",
+      "owner": "D-U-06",
+      "kind": "ui"
+    },
+    {
+      "key": "attachedImages",
+      "owner": "D-U-06",
+      "kind": "ui"
+    },
+    {
+      "key": "compacting",
+      "owner": "D-U-06",
+      "kind": "server"
+    },
+    {
+      "key": "sessionInfoOpen",
+      "owner": "D-U-05",
+      "kind": "ui"
+    },
+    {
+      "key": "trusted",
+      "owner": "D-U-05",
+      "kind": "server"
+    }
+  ],
+  "ports": [
+    {
+      "id": "P-C-01",
+      "file": "packages/web/src/features/chat/domain/ports/agent-transport.ts",
+      "rationale": "事件与命令的唯一入口已在 C-A 定义，本能力只消费",
+      "derivedFrom": [
+        "D-U-07"
+      ],
+      "methods": [
+        "send(command, payload): Promise<Outcome<void>>",
+        "subscribe(handler): () => void"
+      ],
+      "consumers": [
+        "D-B-01",
+        "D-B-02",
+        "D-B-03"
+      ],
+      "name": "agent 传输（复用 C-A）"
+    },
+    {
+      "id": "P-C-02",
+      "file": "packages/web/src/features/chat/domain/ports/chat-session-reader.ts",
+      "rationale": "分页读历史消息需要独立端口，避免页面直接摸 HTTP",
+      "derivedFrom": [
+        "D-U-05"
+      ],
+      "methods": [
+        "readPage(sessionId, opts): Promise<Outcome<{messages: Message[], hasMore: boolean}>>"
+      ],
+      "consumers": [
+        "D-B-01"
+      ],
+      "name": "会话读"
+    },
+    {
+      "id": "P-C-03",
+      "file": "packages/web/src/features/chat/domain/ports/file-opener.ts",
+      "rationale": "diff/工具结果要能跳到文件，但渲染层不许直接开面板",
+      "derivedFrom": [
+        "D-U-13"
+      ],
+      "methods": [
+        "openFile(path, line?): void"
+      ],
+      "consumers": [
+        "D-B-05"
+      ],
+      "name": "文件打开"
+    },
+    {
+      "id": "P-C-04",
+      "file": "packages/web/src/features/chat/domain/ports/clipboard.ts",
+      "rationale": "复制是用户可见副作用，必须可测",
+      "derivedFrom": [
+        "D-U-10"
+      ],
+      "methods": [
+        "write(text): Promise<Outcome<void>>"
+      ],
+      "consumers": [
+        "D-B-06"
+      ],
+      "name": "剪贴板"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "PR-01",
+      "name": "发送一轮",
+      "kind": "command",
+      "idempotent": true,
+      "cancelable": false,
+      "useCase": "D-B-01",
+      "errorKind": "fatal|retryable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-02",
+      "name": "中断",
+      "kind": "command",
+      "idempotent": true,
+      "cancelable": false,
+      "useCase": "D-B-02",
+      "errorKind": "retryable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-03",
+      "name": "压缩上下文",
+      "kind": "command",
+      "idempotent": false,
+      "cancelable": true,
+      "useCase": "D-B-03",
+      "errorKind": "retryable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-04",
+      "name": "消息事件流",
+      "kind": "event",
+      "idempotent": false,
+      "cancelable": false,
+      "useCase": "D-B-01",
+      "errorKind": "recoverable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-05",
+      "name": "读历史页",
+      "kind": "query",
+      "idempotent": true,
+      "cancelable": true,
+      "useCase": "D-B-01",
+      "errorKind": "retryable",
+      "contractRef": "contracts/wire.md#命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-06",
+      "name": "打开文件",
+      "kind": "command",
+      "idempotent": true,
+      "cancelable": false,
+      "useCase": "D-B-05",
+      "errorKind": "recoverable",
+      "contractRef": "contracts/wire.md#命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-07",
+      "name": "复制到剪贴板",
+      "kind": "command",
+      "idempotent": true,
+      "cancelable": false,
+      "useCase": "D-B-06",
+      "errorKind": "recoverable",
+      "contractRef": "contracts/wire.md#命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-08",
+      "name": "引导投递",
+      "kind": "command",
+      "idempotent": false,
+      "cancelable": false,
+      "useCase": "D-B-01",
+      "errorKind": "retryable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    },
+    {
+      "id": "PR-09",
+      "name": "追加投递",
+      "kind": "command",
+      "idempotent": false,
+      "cancelable": false,
+      "useCase": "D-B-01",
+      "errorKind": "retryable",
+      "contractRef": "contracts/wire.md#rpc-命令",
+      "sla": "—"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "PA-01",
+      "symptom": "ref_projects/pi-web/components/ChatWindow.tsx:1521",
+      "chosen": "独立 StreamingReply 订阅 store",
+      "rejected": [
+        "每 delta 全量重渲染"
+      ],
+      "costIfWrong": "长会话不可用",
+      "evidence": "ref_projects/pi-web/components/ChatWindow.tsx#L1521-L1541"
+    },
+    {
+      "id": "PA-02",
+      "symptom": "B-028",
+      "chosen": "按 toolCallId 绑定结果",
+      "rejected": [
+        "按出现顺序配对"
+      ],
+      "costIfWrong": "用户看到错误归属的工具结果",
+      "evidence": "ref_projects/pi-web/components/MessageView.tsx#L1176-L1344"
+    },
+    {
+      "id": "PA-03",
+      "symptom": "ref_projects/pi-web/components/MessageView.tsx:1508",
+      "chosen": "降级为纯文本并保留原文",
+      "rejected": [
+        "抛错",
+        "渲染空状态"
+      ],
+      "costIfWrong": "用户看不到改动",
+      "evidence": "ref_projects/pi-web/components/MessageView.tsx#L1508-L1577"
+    }
+  ],
+  "triStates": [
+    {
+      "boundary": "消息列表",
+      "loading": "首屏/分页加载中显示骨架",
+      "empty": "无消息显示空态引导",
+      "error": "加载失败显示错误与重试"
+    },
+    {
+      "boundary": "流式回复",
+      "loading": "streaming 中显示光标/占位",
+      "empty": "无流式内容时不渲染节点",
+      "error": "agent_end 失败时降级为完整消息并标错"
+    },
+    {
+      "boundary": "历史分页",
+      "loading": "加载更早消息时列表底部显示 loading",
+      "empty": "无更早消息时隐藏入口",
+      "error": "失败保留已加载内容并提示可重试"
+    },
+    {
+      "boundary": "工具调用",
+      "loading": "running 显示 spinner 与参数摘要",
+      "empty": "无工具调用时不渲染",
+      "error": "failed 显示错误原文并保留参数"
+    }
+  ],
+  "quality": {
+    "maxFileLines": 400,
+    "maxComplexity": 12,
+    "maxProps": 6,
+    "targets": [
+      "packages/core/src/chat",
+      "packages/web/src/features/chat"
+    ]
+  },
+  "sequences": [
+    {
+      "file": "design/sequences/C-C-S-01.md",
+      "participants": [
+        "D-U-05",
+        "D-U-08",
+        "P-C-01",
+        "D-B-01"
+      ]
+    },
+    {
+      "file": "design/sequences/C-C-S-02.md",
+      "participants": [
+        "D-U-13",
+        "P-C-03",
+        "D-B-05"
+      ]
+    }
+  ],
+  "surfaces": {
+    "SF-CW-a020719": "D-U-02",
+    "SF-CW-a020719-2": "D-U-03",
+    "SF-CW-a020719-3": "D-U-07",
+    "SF-CW-a020719-4": "D-U-07",
+    "SF-CW-a020719-5": "D-U-07",
+    "SF-CW-a020719-6": "D-U-07",
+    "SF-CW-a020719-7": "D-U-07",
+    "SF-CW-a6ee16c": "D-U-02",
+    "SF-CW-a6ee16c-2": "D-U-02",
+    "SF-CW-a6ee16c-3": "D-U-07",
+    "SF-CW-a6ee16c-4": "D-U-07",
+    "SF-CW-a6ee16c-5": "D-U-07",
+    "SF-CW-a6ee16c-6": "D-U-07",
+    "SF-CW-a6ee16c-7": "D-U-07",
+    "SF-CW-a6ee16c-8": "D-U-07",
+    "SF-CW-aa89cb0": "D-U-07",
+    "SF-CW-ac6eeba": "D-U-03",
+    "SF-CW-h13d939": "D-U-08",
+    "SF-CW-h1532c3": "D-U-08",
+    "SF-CW-h3d8f56": "D-U-06",
+    "SF-CW-h3da4c3": "D-U-08",
+    "SF-CW-h8d912b": "D-U-06",
+    "SF-CW-hcd305b": "D-U-07",
+    "SF-CW-hcd305b-2": "D-U-07",
+    "SF-CW-hd1e690": "D-U-03",
+    "SF-CW-hd1e690-2": "D-U-07",
+    "SF-CW-hd1e690-3": "D-U-07",
+    "SF-CW-hd1e690-4": "D-U-07",
+    "SF-CW-hd1e690-5": "D-U-07",
+    "SF-CW-hdcfb38": "D-U-06",
+    "SF-CW-hde9c59": "D-U-08",
+    "SF-CW-i082c3a": "D-U-07",
+    "SF-CW-i082c3a-2": "D-U-07",
+    "SF-CW-i1e8768": "D-U-06",
+    "SF-CW-i2d7c7f": "D-U-06",
+    "SF-CW-i2d7c7f-2": "D-U-06",
+    "SF-CW-i34ca87": "D-U-07",
+    "SF-CW-i34ca87-2": "D-U-07",
+    "SF-CW-i34ca87-3": "D-U-07",
+    "SF-CW-i34ca87-4": "D-U-07",
+    "SF-CW-i39cba3": "D-U-06",
+    "SF-CW-i3e3087": "D-U-03",
+    "SF-CW-i440a99": "D-U-05",
+    "SF-CW-i440a99-2": "D-U-05",
+    "SF-CW-i51dca5": "D-U-07",
+    "SF-CW-i5b0da1": "D-U-07",
+    "SF-CW-i5b0da1-2": "D-U-07",
+    "SF-CW-i5b0da1-3": "D-U-07",
+    "SF-CW-i6a7ca6": "D-U-06",
+    "SF-CW-i77fa66": "D-U-07",
+    "SF-CW-i7dc34e": "D-U-03",
+    "SF-CW-i9e6ff8": "D-U-03",
+    "SF-CW-i9fa619": "D-U-06",
+    "SF-CW-ibd66bd": "D-U-06",
+    "SF-CW-icce91c": "D-U-07",
+    "SF-CW-icce91c-2": "D-U-07",
+    "SF-CW-ie213e9": "D-U-07",
+    "SF-CW-ie35860": "D-U-03",
+    "SF-CW-ie746bc": "D-U-05",
+    "SF-CW-ie746bc-2": "D-U-05",
+    "SF-CW-pc24846": "D-U-02",
+    "SF-CW-r60214c": "D-U-07"
+  },
+  "excluded": {
+    "SF-CW-a020719-10": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a020719-11": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a020719-12": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a020719-13": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a020719-8": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a020719-9": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a6ee16c-10": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a6ee16c-11": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-a6ee16c-9": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ac6eeba-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ac6eeba-3": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ac6eeba-4": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ac6eeba-5": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76-3": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76-4": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76-5": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h0d5b76-6": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-h3d8f56-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hbe8652": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hbe8652-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-10": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-11": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-12": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-13": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-14": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-15": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-16": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-6": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-7": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-8": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-hd1e690-9": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i3037b9": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i3037b9-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i6e8bd1": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i6e8bd1-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i6e8bd1-3": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i6e8bd1-4": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i7cab61": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i7cab61-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i890ddc": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i8bb9ab": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-i8bb9ab-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ia214ce": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-iac9e0d": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ib63226": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ib8d10c": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ib8d10c-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-iba5a69": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ic5c713": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ide4d29": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-if34540": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ifa38d2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-ifa38d2-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-k1bd267": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-k2084c3": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-k2fd8c1": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-k628514": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-kdcadf0": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-kdcadf0-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-r5fdc1c": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-r831bf1": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）",
+    "SF-CW-r831bf1-2": "扩展 UI 宿主本次不迁（ChatWindow.tsx L1665-L2282，见 cut-list.md）"
+  },
+  "streamingOwner": "D-U-05"
+}

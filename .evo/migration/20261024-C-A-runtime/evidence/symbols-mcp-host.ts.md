@@ -1,0 +1,438 @@
+# 符号全集 — `ref_projects/pi-web/lib/mcp-host.ts`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：1106；符号数：**430**；导出时间：2026-10-23T14:11:45.142Z
+
+## 符号（按出现顺序）
+
+- **aborted** (function) — `ref_projects/pi-web/lib/mcp-host.ts:502`
+- **<function>** (function) in `aborted` — `ref_projects/pi-web/lib/mcp-host.ts:504`
+- **once** (property) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:504`
+- **signal.addEventListener("abort") callback** (function) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:504`
+- **ALREADY_REGISTERED** (const) — `ref_projects/pi-web/lib/mcp-host.ts:483`
+- **asksForSignIn** (function) — `ref_projects/pi-web/lib/mcp-host.ts:289`
+- **name** (const) in `asksForSignIn` — `ref_projects/pi-web/lib/mcp-host.ts:290`
+- **AttemptState** (type) — `ref_projects/pi-web/lib/mcp-host.ts:400`
+- **canonicalJson** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:15`
+- **canonicalJson** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:33`
+- **closeSync** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **CONFIG_DIR_NAME** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:4`
+- **CONFIG_ERRORS_LOGGED_KEY** (const) — `ref_projects/pi-web/lib/mcp-host.ts:99`
+- **CONFIG_ERRORS_LOGGED_MAX** (const) — `ref_projects/pi-web/lib/mcp-host.ts:100`
+- **CONFIG_ERRORS_LOGGED_PER_SYNC** (const) — `ref_projects/pi-web/lib/mcp-host.ts:102`
+- **ConnectAttempt** (class) — `ref_projects/pi-web/lib/mcp-host.ts:414`
+- **constructor** (function Object() { [native code] }) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:443`
+- **configKey** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:443`
+- **current** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:437`
+- **declaresTools** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:427`
+- **error** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:434`
+- **markStarted** (method) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:448`
+- **listener** (const) in `markStarted` — `ref_projects/pi-web/lib/mcp-host.ts:451`
+- **recorded** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:439`
+- **released** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:432`
+- **scope** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:443`
+- **settled** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:418`
+- **settledListeners** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:441`
+- **started** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:416`
+- **startedListeners** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:440`
+- **state** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:433`
+- **stderr** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:435`
+- **target** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:443`
+- **update** (method) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:455`
+- **listener** (const) in `update` — `ref_projects/pi-web/lib/mcp-host.ts:462`
+- **waited** (property) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:420`
+- **whenSettled** (method) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:470`
+- **<function>** (function) in `whenSettled` — `ref_projects/pi-web/lib/mcp-host.ts:471`
+- **whenStarted** (method) in `ConnectAttempt` — `ref_projects/pi-web/lib/mcp-host.ts:466`
+- **<function>** (function) in `whenStarted` — `ref_projects/pi-web/lib/mcp-host.ts:467`
+- **constants** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **createTestRedactor** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:28`
+- **DEFAULT_MCP_IDLE_MS** (const) — `ref_projects/pi-web/lib/mcp-host.ts:64`
+- **delay** (function) — `ref_projects/pi-web/lib/mcp-host.ts:493`
+- **cancel** (method) in `delay` — `ref_projects/pi-web/lib/mcp-host.ts:499`
+- **promise** (const) in `delay` — `ref_projects/pi-web/lib/mcp-host.ts:495`
+- **<function>** (function) in `promise` — `ref_projects/pi-web/lib/mcp-host.ts:495`
+- **promise** (property) in `delay` — `ref_projects/pi-web/lib/mcp-host.ts:499`
+- **timer** (let) in `delay` — `ref_projects/pi-web/lib/mcp-host.ts:494`
+- **DesiredServer** (interface) — `ref_projects/pi-web/lib/mcp-host.ts:508`
+- **config** (property) in `DesiredServer` — `ref_projects/pi-web/lib/mcp-host.ts:509`
+- **scope** (property) in `DesiredServer` — `ref_projects/pi-web/lib/mcp-host.ts:510`
+- **target** (property) in `DesiredServer` — `ref_projects/pi-web/lib/mcp-host.ts:511`
+- **errorMessage** (function) — `ref_projects/pi-web/lib/mcp-host.ts:94`
+- **errorName** (function) — `ref_projects/pi-web/lib/mcp-host.ts:276`
+- **ExtensionAPI** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:5`
+- **ExtensionContext** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:6`
+- **forgetMcpHostInactive** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:19`
+- **forgetMcpStatus** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:20`
+- **fstatSync** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **hasParentDirectorySegment** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:29`
+- **HostInstance** (class) — `ref_projects/pi-web/lib/mcp-host.ts:515`
+- **constructor** (function Object() { [native code] }) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:543`
+- **pi.on("agent_end") callback** (function) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:566`
+- **pi.on("agent_start") callback** (function) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:562`
+- **pi.on("before_agent_start") callback** (function) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:557`
+- **pi.on("session_shutdown") callback** (function) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:570`
+- **pi.on("session_start") callback** (function) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:544`
+- **commands** (const) in `pi.on("session_start") callback` — `ref_projects/pi-web/lib/mcp-host.ts:550`
+- **abandoned** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:529`
+- **active** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:517`
+- **armIdle** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:991`
+- **setTimeout() callback** (function) in `armIdle` — `ref_projects/pi-web/lib/mcp-host.ts:994`
+- **attemptFor** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:586`
+- **attempt** (const) in `attemptFor` — `ref_projects/pi-web/lib/mcp-host.ts:587`
+- **attempts** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:520`
+- **clearIdle** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:986`
+- **ctx** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:516`
+- **desiredServers** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:859`
+- **agentDir** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:875`
+- **config** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:925`
+- **cwd** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:876`
+- **desired** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:861`
+- **entries** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:886`
+- **entry** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:915`
+- **error** (var) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:879`
+- **error** (var) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:897`
+- **error** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:911`
+- **error** (var) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:930`
+- **globals** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:888`
+- **map() callback** (function) in `globals` — `ref_projects/pi-web/lib/mcp-host.ts:888`
+- **loaded** (let) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:872`
+- **loadedPaths** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:910`
+- **name** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:889`
+- **override** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:919`
+- **projectPath** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:883`
+- **projectReadable** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:871`
+- **projectTrusted** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:877`
+- **report** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:895`
+- **state** (property) in `report` — `ref_projects/pi-web/lib/mcp-host.ts:895`
+- **scope** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:920`
+- **scope** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:926`
+- **status** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:893`
+- **name** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:893`
+- **scope** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:893`
+- **state** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:893`
+- **target** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:894`
+- **configKey** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:894`
+- **name** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:894`
+- **scope** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:894`
+- **sourcePath** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:894`
+- **target** (property) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:928`
+- **configKey** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:928`
+- **name** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:928`
+- **scope** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:928`
+- **sourcePath** (property) in `target` — `ref_projects/pi-web/lib/mcp-host.ts:928`
+- **value** (const) in `desiredServers` — `ref_projects/pi-web/lib/mcp-host.ts:889`
+- **dispose** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:727`
+- **disposed** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:519`
+- **enqueue** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:851`
+- **run** (const) in `enqueue` — `ref_projects/pi-web/lib/mcp-host.ts:852`
+- **run.catch() callback** (function) in `enqueue` — `ref_projects/pi-web/lib/mcp-host.ts:853`
+- **entryConfigKey** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:744`
+- **idleTimer** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:537`
+- **inactiveReport** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:535`
+- **isCommandValue** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:735`
+- **letGo** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:795`
+- **recorded** (property) in `letGo` — `ref_projects/pi-web/lib/mcp-host.ts:800`
+- **closedAt** (property) in `letGo` — `ref_projects/pi-web/lib/mcp-host.ts:800`
+- **recorded** (const) in `letGo` — `ref_projects/pi-web/lib/mcp-host.ts:797`
+- **target** (const) in `letGo` — `ref_projects/pi-web/lib/mcp-host.ts:797`
+- **letGoOfAll** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:809`
+- **attempt** (const) in `letGoOfAll` — `ref_projects/pi-web/lib/mcp-host.ts:810`
+- **status** (const) in `letGoOfAll` — `ref_projects/pi-web/lib/mcp-host.ts:811`
+- **target** (const) in `letGoOfAll` — `ref_projects/pi-web/lib/mcp-host.ts:811`
+- **options** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:543`
+- **pi** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:543`
+- **prepareForPrompt** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:668`
+- **preparing** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:541`
+- **problemReports** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:533`
+- **signature** (property) in `problemReports` — `ref_projects/pi-web/lib/mcp-host.ts:533`
+- **status** (property) in `problemReports` — `ref_projects/pi-web/lib/mcp-host.ts:533`
+- **target** (property) in `problemReports` — `ref_projects/pi-web/lib/mcp-host.ts:533`
+- **problems** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:531`
+- **projectEntryConfigKey** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:753`
+- **global** (property) in `projectEntryConfigKey` — `ref_projects/pi-web/lib/mcp-host.ts:755`
+- **value** (property) in `projectEntryConfigKey` — `ref_projects/pi-web/lib/mcp-host.ts:755`
+- **queue** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:536`
+- **refuseAbandoned** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:597`
+- **count** (const) in `refuseAbandoned` — `ref_projects/pi-web/lib/mcp-host.ts:599`
+- **key** (const) in `refuseAbandoned` — `ref_projects/pi-web/lib/mcp-host.ts:598`
+- **register** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:937`
+- **attempt** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:939`
+- **config** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:938`
+- **error** (var) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:943`
+- **message** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:945`
+- **owner** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:946`
+- **redact** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:947`
+- **isCommandConfigValue** (property) in `redact` — `ref_projects/pi-web/lib/mcp-host.ts:947`
+- **report** (property) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:951`
+- **conflict** (property) in `report` — `ref_projects/pi-web/lib/mcp-host.ts:951`
+- **error** (property) in `report` — `ref_projects/pi-web/lib/mcp-host.ts:951`
+- **state** (property) in `report` — `ref_projects/pi-web/lib/mcp-host.ts:951`
+- **scope** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:938`
+- **status** (property) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **<unknown>** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **error** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **name** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **scope** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **state** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:949`
+- **target** (const) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:938`
+- **target** (property) in `register` — `ref_projects/pi-web/lib/mcp-host.ts:950`
+- **registeredOwner** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:957`
+- **find() callback** (function) in `registeredOwner` — `ref_projects/pi-web/lib/mcp-host.ts:959`
+- **release** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:715`
+- **enqueue() callback** (function) in `release` — `ref_projects/pi-web/lib/mcp-host.ts:716`
+- **name** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:717`
+- **reportActivity** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:836`
+- **info** (const) in `reportActivity` — `ref_projects/pi-web/lib/mcp-host.ts:846`
+- **cwd** (property) in `info` — `ref_projects/pi-web/lib/mcp-host.ts:846`
+- **owner** (property) in `info` — `ref_projects/pi-web/lib/mcp-host.ts:846`
+- **updatedAt** (property) in `info` — `ref_projects/pi-web/lib/mcp-host.ts:846`
+- **info** (property) in `reportActivity` — `ref_projects/pi-web/lib/mcp-host.ts:848`
+- **sessionId** (const) in `reportActivity` — `ref_projects/pi-web/lib/mcp-host.ts:840`
+- **sessionId** (property) in `reportActivity` — `ref_projects/pi-web/lib/mcp-host.ts:848`
+- **reportProblems** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:821`
+- **key** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:824`
+- **key** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:832`
+- **previous** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:827`
+- **report** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:823`
+- **reported** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:822`
+- **signature** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:826`
+- **signature** (property) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:830`
+- **status** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:829`
+- **status** (property) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:830`
+- **target** (const) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:823`
+- **target** (property) in `reportProblems` — `ref_projects/pi-web/lib/mcp-host.ts:830`
+- **runActive** (property) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:539`
+- **serverStates** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:700`
+- **<unknown>** (property) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:707`
+- **<unknown>** (property) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:708`
+- **attempt** (const) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:702`
+- **name** (const) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:702`
+- **name** (property) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:704`
+- **scope** (property) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:705`
+- **state** (property) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:706`
+- **states** (const) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:701`
+- **map() callback** (function) in `states` — `ref_projects/pi-web/lib/mcp-host.ts:701`
+- **states.sort() callback** (function) in `serverStates` — `ref_projects/pi-web/lib/mcp-host.ts:711`
+- **sync** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:646`
+- **synced** (const) in `sync` — `ref_projects/pi-web/lib/mcp-host.ts:647`
+- **enqueue() callback** (function) in `synced` — `ref_projects/pi-web/lib/mcp-host.ts:647`
+- **attempt** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:650`
+- **desired** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:649`
+- **name** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:650`
+- **name** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:655`
+- **wanted** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:655`
+- **wanted** (const) in `enqueue() callback` — `ref_projects/pi-web/lib/mcp-host.ts:651`
+- **synced.then() callback** (function) in `sync` — `ref_projects/pi-web/lib/mcp-host.ts:664`
+- **transportFailed** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:608`
+- **error** (property) in `transportFailed` — `ref_projects/pi-web/lib/mcp-host.ts:611`
+- **redact** (const) in `transportFailed` — `ref_projects/pi-web/lib/mcp-host.ts:610`
+- **isCommandConfigValue** (property) in `redact` — `ref_projects/pi-web/lib/mcp-host.ts:610`
+- **unregister** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:965`
+- **attempt** (const) in `unregister` — `ref_projects/pi-web/lib/mcp-host.ts:966`
+- **deadline** (const) in `unregister` — `ref_projects/pi-web/lib/mcp-host.ts:968`
+- **error** (var) in `unregister` — `ref_projects/pi-web/lib/mcp-host.ts:981`
+- **key** (const) in `unregister` — `ref_projects/pi-web/lib/mcp-host.ts:974`
+- **update** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:779`
+- **details** (property) in `update` — `ref_projects/pi-web/lib/mcp-host.ts:782`
+- **state** (property) in `update` — `ref_projects/pi-web/lib/mcp-host.ts:782`
+- **waitForServers** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:683`
+- **attempt** (const) in `waitForServers` — `ref_projects/pi-web/lib/mcp-host.ts:697`
+- **connecting** (const) in `waitForServers` — `ref_projects/pi-web/lib/mcp-host.ts:687`
+- **filter() callback** (function) in `connecting` — `ref_projects/pi-web/lib/mcp-host.ts:687`
+- **deadline** (const) in `waitForServers` — `ref_projects/pi-web/lib/mcp-host.ts:689`
+- **stopped** (const) in `waitForServers` — `ref_projects/pi-web/lib/mcp-host.ts:684`
+- **timedOut** (const) in `waitForServers` — `ref_projects/pi-web/lib/mcp-host.ts:690`
+- **connecting.map() callback** (function) in `timedOut` — `ref_projects/pi-web/lib/mcp-host.ts:691`
+- **deadline.promise.then() callback** (function) in `timedOut` — `ref_projects/pi-web/lib/mcp-host.ts:692`
+- **stopped.then() callback** (function) in `timedOut` — `ref_projects/pi-web/lib/mcp-host.ts:693`
+- **then() callback** (function) in `timedOut` — `ref_projects/pi-web/lib/mcp-host.ts:691`
+- **watch** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:615`
+- **redact** (const) in `watch` — `ref_projects/pi-web/lib/mcp-host.ts:620`
+- **isCommandConfigValue** (property) in `redact` — `ref_projects/pi-web/lib/mcp-host.ts:621`
+- **redactor** (let) in `watch` — `ref_projects/pi-web/lib/mcp-host.ts:619`
+- **stderr** (const) in `watch` — `ref_projects/pi-web/lib/mcp-host.ts:624`
+- **stderr** (property) in `stderr` — `ref_projects/pi-web/lib/mcp-host.ts:624`
+- **watchTransport() callback** (function) in `watch` — `ref_projects/pi-web/lib/mcp-host.ts:625`
+- **<unknown>** (property) in `watchTransport() callback` — `ref_projects/pi-web/lib/mcp-host.ts:634`
+- **error** (const) in `watchTransport() callback` — `ref_projects/pi-web/lib/mcp-host.ts:633`
+- **error** (property) in `watchTransport() callback` — `ref_projects/pi-web/lib/mcp-host.ts:634`
+- **write** (method) in `HostInstance` — `ref_projects/pi-web/lib/mcp-host.ts:761`
+- **ctx** (const) in `write` — `ref_projects/pi-web/lib/mcp-host.ts:762`
+- **status** (const) in `write` — `ref_projects/pi-web/lib/mcp-host.ts:764`
+- **<unknown>** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:770`
+- **<unknown>** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:771`
+- **<unknown>** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:772`
+- **cwd** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:768`
+- **origin** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:765`
+- **sessionId** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:767`
+- **state** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:766`
+- **updatedAt** (property) in `status` — `ref_projects/pi-web/lib/mcp-host.ts:769`
+- **HostProblem** (interface) — `ref_projects/pi-web/lib/mcp-host.ts:476`
+- **report** (property) in `HostProblem` — `ref_projects/pi-web/lib/mcp-host.ts:479`
+- **status** (property) in `HostProblem` — `ref_projects/pi-web/lib/mcp-host.ts:477`
+- **target** (property) in `HostProblem` — `ref_projects/pi-web/lib/mcp-host.ts:478`
+- **InlineExtension** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:7`
+- **isBuiltinMcpCommand** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:14`
+- **isCurrentMcpStatus** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:21`
+- **isMcpExtensionCommand** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:14`
+- **isMcpOverrideEntry** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:17`
+- **isPathWithinRoots** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:29`
+- **isRecord** (function) — `ref_projects/pi-web/lib/mcp-host.ts:90`
+- **join** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:2`
+- **LIST_METHODS** (const) — `ref_projects/pi-web/lib/mcp-host.ts:74`
+- **logConfigErrorOnce** (function) — `ref_projects/pi-web/lib/mcp-host.ts:108`
+- **logged** (const) in `logConfigErrorOnce` — `ref_projects/pi-web/lib/mcp-host.ts:110`
+- **store** (const) in `logConfigErrorOnce` — `ref_projects/pi-web/lib/mcp-host.ts:109`
+- **maskStatusError** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:28`
+- **maskStatusStderr** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:28`
+- **mayReadProjectConfigNow** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:31`
+- **MCP_HOST_EXTENSION_NAME** (const) — `ref_projects/pi-web/lib/mcp-host.ts:62`
+- **MCP_UNTRUSTED_REPORT_MAX** (const) — `ref_projects/pi-web/lib/mcp-host.ts:127`
+- **mcpConfigKey** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:15`
+- **mcpEntryConfigKey** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:15`
+- **McpExposure** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:8`
+- **McpHost** (class) — `ref_projects/pi-web/lib/mcp-host.ts:1032`
+- **constructor** (function Object() { [native code] }) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1036`
+- **options** (property) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:1041`
+- **idleMs** (property) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:1038`
+- **mayReadProjectConfig** (property) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:1042`
+- **<function>** (function) in `mayReadProjectConfig` — `ref_projects/pi-web/lib/mcp-host.ts:1042`
+- **promptWaitMs** (property) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:1039`
+- **replaceWaitMs** (property) in `constructor` — `ref_projects/pi-web/lib/mcp-host.ts:1040`
+- **current** (property) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1034`
+- **dispose** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1084`
+- **extension** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1046`
+- **factory** (method) in `extension` — `ref_projects/pi-web/lib/mcp-host.ts:1050`
+- **hidden** (property) in `extension` — `ref_projects/pi-web/lib/mcp-host.ts:1049`
+- **name** (property) in `extension` — `ref_projects/pi-web/lib/mcp-host.ts:1048`
+- **options** (property) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1033`
+- **prepareForPrompt** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1093`
+- **release** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1102`
+- **serverStates** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1097`
+- **wrapTransportFactory** (method) in `McpHost` — `ref_projects/pi-web/lib/mcp-host.ts:1057`
+- **<function>** (function) in `wrapTransportFactory` — `ref_projects/pi-web/lib/mcp-host.ts:1058`
+- **attempt** (const) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:1060`
+- **error** (var) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:1067`
+- **host** (const) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:1059`
+- **transport** (let) in `<function>` — `ref_projects/pi-web/lib/mcp-host.ts:1064`
+- **McpHostInactiveInfo** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:13`
+- **McpHostOptions** (interface) — `ref_projects/pi-web/lib/mcp-host.ts:1003`
+- **agentDir** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1004`
+- **codemodeAvailable** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1012`
+- **idleMs** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1021`
+- **internals** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1010`
+- **mayReadProjectConfig** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1020`
+- **promptWaitMs** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1022`
+- **replaceWaitMs** (property) in `McpHostOptions` — `ref_projects/pi-web/lib/mcp-host.ts:1024`
+- **McpHostServerState** (type) — `ref_projects/pi-web/lib/mcp-host.ts:370`
+- **McpHostServerStatus** (interface) — `ref_projects/pi-web/lib/mcp-host.ts:383`
+- **conflict** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:391`
+- **error** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:387`
+- **name** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:384`
+- **scope** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:385`
+- **state** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:386`
+- **stderr** (property) in `McpHostServerStatus` — `ref_projects/pi-web/lib/mcp-host.ts:389`
+- **mcpOverrideRefusal** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:17`
+- **McpScope** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:13`
+- **McpServerConfig** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:9`
+- **McpServerEntry** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:10`
+- **McpSessionState** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:13`
+- **McpSessionStatus** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:13`
+- **McpStatusEntry** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:26`
+- **mcpStatusKey** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:22`
+- **McpTransport** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:30`
+- **McpTransportEvent** (type) — `ref_projects/pi-web/lib/mcp-host.ts:265`
+- **McpTransportFactory** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:11`
+- **NAMES_OPEN_FLAGS** (const) — `ref_projects/pi-web/lib/mcp-host.ts:131`
+- **NOT_READY_MESSAGE** (const) — `ref_projects/pi-web/lib/mcp-host.ts:411`
+- **ObservedTransport** (interface) — `ref_projects/pi-web/lib/mcp-host.ts:198`
+- **close** (method) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:201`
+- **onClose** (method) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:203`
+- **onMessage** (method) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:202`
+- **send** (method) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:199`
+- **start** (method) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:200`
+- **stderr** (property) in `ObservedTransport` — `ref_projects/pi-web/lib/mcp-host.ts:205`
+- **openSync** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **PiSdkInternals** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:30`
+- **PROJECT_CONFIG_MAX_BYTES** (const) — `ref_projects/pi-web/lib/mcp-host.ts:129`
+- **PROMPT_WAIT_MS** (const) — `ref_projects/pi-web/lib/mcp-host.ts:65`
+- **readSync** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **realpathSync** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:1`
+- **recordMcpHostInactive** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:23`
+- **recordMcpStatus** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:24`
+- **REPLACE_WAIT_MS** (const) — `ref_projects/pi-web/lib/mcp-host.ts:73`
+- **replaceMcpStatus** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:25`
+- **resolveMcpIdleMs** (function) — `ref_projects/pi-web/lib/mcp-host.ts:81`
+- **parsed** (const) in `resolveMcpIdleMs` — `ref_projects/pi-web/lib/mcp-host.ts:83`
+- **resolveRealRoots** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:29`
+- **scrubMcpLoadError** (alias) — `ref_projects/pi-web/lib/mcp-host.ts:16`
+- **SESSION_STATES** (const) — `ref_projects/pi-web/lib/mcp-host.ts:402`
+- **connecting** (property) in `SESSION_STATES` — `ref_projects/pi-web/lib/mcp-host.ts:403`
+- **disconnected** (property) in `SESSION_STATES` — `ref_projects/pi-web/lib/mcp-host.ts:407`
+- **failed** (property) in `SESSION_STATES` — `ref_projects/pi-web/lib/mcp-host.ts:405`
+- **"needs-auth"** (property) in `SESSION_STATES` — `ref_projects/pi-web/lib/mcp-host.ts:406`
+- **ready** (property) in `SESSION_STATES` — `ref_projects/pi-web/lib/mcp-host.ts:404`
+- **sessionIdOf** (function) — `ref_projects/pi-web/lib/mcp-host.ts:485`
+- **SessionReport** (type) — `ref_projects/pi-web/lib/mcp-host.ts:398`
+- **StatusTarget** (type) — `ref_projects/pi-web/lib/mcp-host.ts:395`
+- **untrustedProjectServerEntries** (function) — `ref_projects/pi-web/lib/mcp-host.ts:145`
+- **buffer** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:156`
+- **fd** (let) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:147`
+- **length** (let) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:157`
+- **parsed** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:164`
+- **path** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:146`
+- **read** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:159`
+- **realPath** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:150`
+- **stats** (const) in `untrustedProjectServerEntries` — `ref_projects/pi-web/lib/mcp-host.ts:153`
+- **watchConnection** (function) — `ref_projects/pi-web/lib/mcp-host.ts:219`
+- **check** (const) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:230`
+- **setImmediate() callback** (function) in `check` — `ref_projects/pi-web/lib/mcp-host.ts:231`
+- **expectsLists** (let) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:222`
+- **finish** (const) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:225`
+- **finished** (let) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:220`
+- **initialized** (let) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:221`
+- **listsSent** (let) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:223`
+- **pending** (const) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:224`
+- **send** (function) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:238`
+- **send** (const) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:237`
+- **transport.onClose() callback** (function) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:261`
+- **transport.onMessage() callback** (function) in `watchConnection` — `ref_projects/pi-web/lib/mcp-host.ts:250`
+- **capabilities** (const) in `transport.onMessage() callback` — `ref_projects/pi-web/lib/mcp-host.ts:253`
+- **watchTransport** (function) — `ref_projects/pi-web/lib/mcp-host.ts:307`
+- **authRequired** (let) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:313`
+- **close** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:351`
+- **close** (const) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:350`
+- **closeCalled** (let) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:315`
+- **failure** (let) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:314`
+- **initializeId** (let) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:316`
+- **note** (const) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:317`
+- **ready** (let) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:312`
+- **send** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:342`
+- **catch() callback** (function) in `send` — `ref_projects/pi-web/lib/mcp-host.ts:344`
+- **send** (const) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:341`
+- **start** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:335`
+- **catch() callback** (function) in `start` — `ref_projects/pi-web/lib/mcp-host.ts:335`
+- **start** (const) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:334`
+- **stderr** (const) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:321`
+- **stderr** (property) in `stderr` — `ref_projects/pi-web/lib/mcp-host.ts:323`
+- **text** (const) in `stderr` — `ref_projects/pi-web/lib/mcp-host.ts:322`
+- **transport.onClose() callback** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:361`
+- **<unknown>** (property) in `transport.onClose() callback` — `ref_projects/pi-web/lib/mcp-host.ts:362`
+- **authRequired** (property) in `transport.onClose() callback` — `ref_projects/pi-web/lib/mcp-host.ts:362`
+- **dropped** (property) in `transport.onClose() callback` — `ref_projects/pi-web/lib/mcp-host.ts:362`
+- **type** (property) in `transport.onClose() callback` — `ref_projects/pi-web/lib/mcp-host.ts:362`
+- **transport.onMessage() callback** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:356`
+- **watchConnection() callback** (function) in `watchTransport` — `ref_projects/pi-web/lib/mcp-host.ts:325`
+- **<unknown>** (property) in `watchConnection() callback` — `ref_projects/pi-web/lib/mcp-host.ts:330`
+- **authRequired** (property) in `watchConnection() callback` — `ref_projects/pi-web/lib/mcp-host.ts:330`
+- **type** (property) in `watchConnection() callback` — `ref_projects/pi-web/lib/mcp-host.ts:328`
+- **type** (property) in `watchConnection() callback` — `ref_projects/pi-web/lib/mcp-host.ts:330`
+- **withReachableExposure** (function) — `ref_projects/pi-web/lib/mcp-host.ts:180`
+- **config** (property) in `withReachableExposure` — `ref_projects/pi-web/lib/mcp-host.ts:187`
+- **<unknown>** (property) in `withReachableExposure` — `ref_projects/pi-web/lib/mcp-host.ts:189`
+- **exposure** (property) in `withReachableExposure` — `ref_projects/pi-web/lib/mcp-host.ts:188`
+- **reachable** (const) in `withReachableExposure` — `ref_projects/pi-web/lib/mcp-host.ts:182`
+- **toolExposure** (const) in `withReachableExposure` — `ref_projects/pi-web/lib/mcp-host.ts:183`
+- **map() callback** (function) in `toolExposure` — `ref_projects/pi-web/lib/mcp-host.ts:184`

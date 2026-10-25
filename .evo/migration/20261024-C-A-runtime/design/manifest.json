@@ -1,0 +1,778 @@
+{
+  "kind": "infrastructure",
+  "god": "hooks/useAgentSession.ts",
+  "modules": [
+    {
+      "id": "M-domain",
+      "name": "领域模型（事件归约/队列/守卫）",
+      "layer": "domain",
+      "file": "packages/core/src/agent/domain",
+      "dependsOn": []
+    },
+    {
+      "id": "M-ports",
+      "name": "端口（传输/会话读/MCP/档案）",
+      "layer": "ports",
+      "file": "packages/core/src/agent/domain/ports",
+      "dependsOn": [
+        "M-domain"
+      ]
+    },
+    {
+      "id": "M-use-cases",
+      "name": "用例（命令分发/准入/会话读）",
+      "layer": "use-cases",
+      "file": "packages/core/src/agent/use-cases",
+      "dependsOn": [
+        "M-domain",
+        "M-ports"
+      ]
+    },
+    {
+      "id": "M-adapters",
+      "name": "适配器（rpc 传输、fetch）",
+      "layer": "adapters",
+      "file": "packages/core/src/agent/adapters",
+      "dependsOn": [
+        "M-ports"
+      ]
+    },
+    {
+      "id": "M-infra",
+      "name": "基础设施（MCP 生命周期/子代理档案）",
+      "layer": "infrastructure",
+      "file": "packages/core/src/agent/infrastructure",
+      "dependsOn": [
+        "M-ports",
+        "M-domain"
+      ]
+    },
+    {
+      "id": "M-orchestration",
+      "name": "编排（useAgentSession 等价物）",
+      "layer": "orchestration",
+      "file": "packages/core/src/agent/orchestration",
+      "dependsOn": [
+        "M-use-cases",
+        "M-domain"
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "D-U-01",
+      "kind": "feature",
+      "name": "SessionData … isNew（55 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L1-L349",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/session-data.ts"
+    },
+    {
+      "id": "D-U-02",
+      "kind": "feature",
+      "name": "initialChoices … loadSession（69 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L350-L647",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-029",
+        "B-032"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/initial-choices.ts"
+    },
+    {
+      "id": "D-U-03",
+      "kind": "feature",
+      "name": "flight … promoteNewSession（4 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L648-L882",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-028",
+        "B-029",
+        "B-030",
+        "B-031"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/session-flight.ts"
+    },
+    {
+      "id": "D-U-04",
+      "kind": "feature",
+      "name": "ensureNewSession … addNotice（14 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L883-L1150",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-025",
+        "B-026"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/new-session.ts"
+    },
+    {
+      "id": "D-U-05",
+      "kind": "feature",
+      "name": "handleExtensionUiRequest … reconcileAgen",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L1151-L1428",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/extension-ui.ts"
+    },
+    {
+      "id": "D-U-06",
+      "kind": "feature",
+      "name": "handleAgentEvent（1 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L1429-L1722",
+      "module": "M-use-cases",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-015",
+        "B-016",
+        "B-017",
+        "B-018",
+        "B-019",
+        "B-020",
+        "B-021",
+        "B-022",
+        "B-023",
+        "B-024",
+        "B-027"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/reduce-agent-event.ts"
+    },
+    {
+      "id": "D-U-07",
+      "kind": "feature",
+      "name": "handleSend … handleModelChange（7 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L1723-L2012",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/send-prompt.ts"
+    },
+    {
+      "id": "D-U-08",
+      "kind": "feature",
+      "name": "handleCompact … handleBuiltinSlashComman",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L2013-L2281",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/compact-context.ts"
+    },
+    {
+      "id": "D-U-09",
+      "kind": "feature",
+      "name": "sendStreamingPrompt … scrollUserMsgToTop",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L2282-L2488",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/streaming-prompt.ts"
+    },
+    {
+      "id": "D-U-10",
+      "kind": "feature",
+      "name": "handleScrollPositionChange … waitingExte",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L2489-L2761",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/scroll-intent.ts"
+    },
+    {
+      "id": "D-U-11",
+      "kind": "feature",
+      "name": "messageKeys（1 个声明）",
+      "file": "hooks/useAgentSession.ts",
+      "lines": "L2762-L2806",
+      "module": "M-domain",
+      "layer": "domain",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/message-keys.ts"
+    },
+    {
+      "id": "D-U-12",
+      "kind": "feature",
+      "name": "AgentEvent … carriedToolNames（37 个声明）",
+      "file": "lib/rpc-manager.ts",
+      "lines": "L1-L298",
+      "module": "M-use-cases",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-001",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-007",
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/dispatch-command.ts"
+    },
+    {
+      "id": "D-U-13",
+      "kind": "feature",
+      "name": "AgentSessionWrapper（1 个声明；C4 再细分）",
+      "file": "lib/rpc-manager.ts",
+      "lines": "L299-L2080",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "behaviors": [
+        "B-001",
+        "B-022"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/agent-session.ts"
+    },
+    {
+      "id": "D-U-14",
+      "kind": "feature",
+      "name": "getRegistry … hasBusyRpcSessionForCwd（40",
+      "file": "lib/rpc-manager.ts",
+      "lines": "L2081-L2380",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/agent-registry.ts"
+    },
+    {
+      "id": "D-U-15",
+      "kind": "feature",
+      "name": "targetCwd … finishStartingSession（27 个声明",
+      "file": "lib/rpc-manager.ts",
+      "lines": "L2381-L2492",
+      "module": "M-orchestration",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/session-start.ts"
+    },
+    {
+      "id": "D-U-16",
+      "kind": "feature",
+      "name": "starting（1 个声明）",
+      "file": "lib/rpc-manager.ts",
+      "lines": "L2493-L2758",
+      "module": "M-domain",
+      "layer": "domain",
+      "behaviors": [
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-036",
+        "B-037",
+        "B-038"
+      ],
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/session-state.ts"
+    },
+    {
+      "id": "D-M-01",
+      "kind": "feature",
+      "name": "MCP_HOST_EXTENSION_NAME … stderr（45 个声明）",
+      "file": "lib/mcp-host.ts",
+      "lines": "L1-L340",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/mcp-host.ts"
+    },
+    {
+      "id": "D-M-02",
+      "kind": "feature",
+      "name": "send … DesiredServer（17 个声明）",
+      "file": "lib/mcp-host.ts",
+      "lines": "L341-L514",
+      "module": "M-adapters",
+      "layer": "adapters",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/adapters/mcp-runtime.ts"
+    },
+    {
+      "id": "D-M-03",
+      "kind": "feature",
+      "name": "HostInstance（1 个声明）",
+      "file": "lib/mcp-host.ts",
+      "lines": "L515-L1002",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/mcp-host-registry.ts"
+    },
+    {
+      "id": "D-M-04",
+      "kind": "feature",
+      "name": "McpHostOptions … McpHost（2 个声明）",
+      "file": "lib/mcp-host.ts",
+      "lines": "L1003-L1106",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/mcp-host-options.ts"
+    },
+    {
+      "id": "D-A-01",
+      "kind": "feature",
+      "name": "SUBAGENT_META_TYPE … stringList（40 个声明）",
+      "file": "lib/subagents.ts",
+      "lines": "L1-L308",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/subagent-profiles.ts"
+    },
+    {
+      "id": "D-A-02",
+      "kind": "feature",
+      "name": "values … frontmatter（53 个声明）",
+      "file": "lib/subagents.ts",
+      "lines": "L309-L599",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/subagent-frontmatter.ts"
+    },
+    {
+      "id": "D-A-03",
+      "kind": "feature",
+      "name": "yaml … denials（58 个声明）",
+      "file": "lib/subagents.ts",
+      "lines": "L600-L897",
+      "module": "M-infra",
+      "layer": "infrastructure",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/infrastructure/subagent-yaml.ts"
+    },
+    {
+      "id": "D-A-04",
+      "kind": "feature",
+      "name": "selected … persistedStatus（13 个声明）",
+      "file": "lib/subagents.ts",
+      "lines": "L898-L1003",
+      "module": "M-adapters",
+      "layer": "adapters",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/adapters/subagent-store.ts"
+    },
+    {
+      "id": "P-A-01",
+      "kind": "port",
+      "name": "传输端口：发命令 + 订阅事件",
+      "file": "packages/core/src/agent/domain/ports/agent-transport.ts",
+      "module": "M-ports",
+      "derivedFrom": "D-U-02",
+      "rationale": "跨边界能力必须走端口：实现可能在 fetch/子进程/文件系统之间换，用例不该知道",
+      "layer": "ports",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/ports/agent-transport.ts"
+    },
+    {
+      "id": "P-A-02",
+      "kind": "port",
+      "name": "会话读端口：读 JSONL 与元信息",
+      "file": "packages/core/src/agent/domain/ports/session-repository.ts",
+      "module": "M-ports",
+      "derivedFrom": "D-U-02",
+      "rationale": "跨边界能力必须走端口：实现可能在 fetch/子进程/文件系统之间换，用例不该知道",
+      "layer": "ports",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/ports/session-reader.ts"
+    },
+    {
+      "id": "P-A-03",
+      "kind": "port",
+      "name": "MCP 运行时端口：准备/连接监视/降级",
+      "file": "packages/core/src/agent/domain/ports/mcp-runtime.ts",
+      "module": "M-ports",
+      "derivedFrom": "D-M-01",
+      "rationale": "跨边界能力必须走端口：实现可能在 fetch/子进程/文件系统之间换，用例不该知道",
+      "layer": "ports",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/ports/mcp-runtime.ts"
+    },
+    {
+      "id": "P-A-04",
+      "kind": "port",
+      "name": "子代理档案端口：枚举/保存/删除",
+      "file": "packages/core/src/agent/domain/ports/agent-profiles.ts",
+      "module": "M-ports",
+      "derivedFrom": "D-A-01",
+      "rationale": "跨边界能力必须走端口：实现可能在 fetch/子进程/文件系统之间换，用例不该知道",
+      "layer": "ports",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/domain/ports/subagent-profiles.ts"
+    },
+    {
+      "id": "D-B-01",
+      "kind": "usecase",
+      "name": "dispatchCommand：24 个 rpc 命令的分发",
+      "file": "packages/core/src/agent/use-cases/dispatch-command.ts",
+      "module": "M-use-cases",
+      "derivedFrom": [
+        "D-U-12"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "behaviors": [
+        "B-001",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-007",
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014"
+      ],
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/dispatch-command.ts"
+    },
+    {
+      "id": "D-B-02",
+      "kind": "usecase",
+      "name": "admitPrompt：每会话串行准入",
+      "file": "packages/core/src/agent/use-cases/admit-prompt.ts",
+      "module": "M-orchestration",
+      "derivedFrom": [
+        "D-U-03"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "behaviors": [
+        "B-001",
+        "B-022"
+      ],
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/agent-session.ts"
+    },
+    {
+      "id": "D-B-03",
+      "kind": "usecase",
+      "name": "reduceAgentEvent：事件 → 状态",
+      "file": "packages/core/src/agent/use-cases/reduce-event.ts",
+      "module": "M-orchestration",
+      "derivedFrom": [
+        "D-U-06"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/agent-registry.ts"
+    },
+    {
+      "id": "D-B-04",
+      "kind": "usecase",
+      "name": "readSession：single-flight 读会话",
+      "file": "packages/core/src/agent/use-cases/read-session.ts",
+      "module": "M-orchestration",
+      "derivedFrom": [
+        "D-U-02"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/session-start.ts"
+    },
+    {
+      "id": "D-B-05",
+      "kind": "usecase",
+      "name": "prepareMcp：prompt 前准备 MCP",
+      "file": "packages/core/src/agent/use-cases/prepare-mcp.ts",
+      "module": "M-domain",
+      "derivedFrom": [
+        "D-M-01"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "behaviors": [
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-036",
+        "B-037",
+        "B-038"
+      ],
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/prepare-mcp.ts"
+    },
+    {
+      "id": "D-B-06",
+      "kind": "usecase",
+      "name": "manageProfiles：子代理档案读写",
+      "file": "packages/core/src/agent/use-cases/manage-profiles.ts",
+      "module": "M-use-cases",
+      "derivedFrom": [
+        "D-A-01"
+      ],
+      "rationale": "行为规格里每条可观察结果都要有可调用入口；派生自对应 feature 区间的实现逻辑",
+      "behaviors": [
+        "B-039",
+        "B-040",
+        "B-041",
+        "B-042",
+        "B-043",
+        "B-044"
+      ],
+      "layer": "use-cases",
+      "runtime": "server",
+      "landing": "packages/core/src/agent/use-cases/manage-profiles.ts"
+    }
+  ],
+  "states": [
+    {
+      "key": "admissionQueue",
+      "owner": "M-use-cases",
+      "rule": "同一会话同时只允许一个 run",
+      "forbidden": "按会话建队列后仍允许并发发送"
+    },
+    {
+      "key": "requestGuard",
+      "owner": "M-domain",
+      "rule": "只接受更高 request_id 与当前 generation 的回包",
+      "forbidden": "用时间戳判断新旧"
+    },
+    {
+      "key": "noticeQueue",
+      "owner": "M-domain",
+      "rule": "容量 3，溢出挤掉最旧一条",
+      "forbidden": "无限堆叠"
+    },
+    {
+      "key": "connection",
+      "owner": "M-infra",
+      "rule": "connecting → ready | closed，只回调一次",
+      "forbidden": "每次事件都回调"
+    },
+    {
+      "key": "compaction",
+      "owner": "M-use-cases",
+      "rule": "压缩中禁止新 prompt",
+      "forbidden": "压缩与 prompt 并发"
+    },
+    {
+      "key": "profileScope",
+      "owner": "M-infra",
+      "rule": "同名时项目覆盖用户",
+      "forbidden": "用户覆盖项目"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "PR-A-01",
+      "useCase": "D-U-12",
+      "contract": "幂等 false；取消 true；重试 false",
+      "contractRef": "wire.md v0.3 §RPC 命令:prompt"
+    },
+    {
+      "id": "PR-A-02",
+      "useCase": "D-U-13",
+      "contract": "幂等 false；取消 true；重试 false",
+      "contractRef": "wire.md v0.3 §RPC 命令:prompt"
+    },
+    {
+      "id": "PR-A-03",
+      "useCase": "D-U-14",
+      "contract": "幂等 true（同 request_id 重复应用结果一致）",
+      "contractRef": "wire.md v0.3 §RPC 命令:message_update"
+    },
+    {
+      "id": "PR-A-04",
+      "useCase": "D-U-15",
+      "contract": "幂等 true；并发合并",
+      "contractRef": "wire.md v0.3 §RPC 命令:get_state"
+    },
+    {
+      "id": "PR-A-05",
+      "useCase": "D-U-16",
+      "contract": "幂等 true；等待可取消",
+      "contractRef": "wire.md v0.3 §RPC 命令:get_tools"
+    },
+    {
+      "id": "PR-A-06",
+      "useCase": "D-B-06",
+      "contract": "幂等 true（保存同名覆盖）",
+      "contractRef": "wire.md v0.3 §RPC 命令:get_commands"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "PA-A-01",
+      "name": "单飞读会话",
+      "symptom": "hooks/useAgentSession.ts:458",
+      "rejected": [
+        "每次调用都发请求",
+        "用防抖猜足够"
+      ],
+      "costIfWrong": "打开会话时打 3–5 个重复请求，服务端与磁盘被打满"
+    },
+    {
+      "id": "PA-A-02",
+      "name": "generation 丢弃过期回包",
+      "symptom": "lib/rpc-manager.ts:1242",
+      "rejected": [
+        "按时间戳判断",
+        "忽略乱序"
+      ],
+      "costIfWrong": "fork 后旧响应写进新分支，出现幽灵消息"
+    },
+    {
+      "id": "PA-A-03",
+      "name": "流式数据放 ref",
+      "symptom": "hooks/useAgentSession.ts:364",
+      "rejected": [
+        "每个 chunk 一次 setState",
+        "节流到 100ms 更新"
+      ],
+      "costIfWrong": "长回答时每帧重渲染，界面掉帧"
+    }
+  ],
+  "quality": {
+    "targets": [
+      "packages/core/src/agent"
+    ],
+    "maxFileLines": 400,
+    "maxComplexity": 12,
+    "maxProps": 6
+  },
+  "triStates": [
+    {
+      "surface": "readSession",
+      "loading": "读盘中",
+      "empty": "会话为空",
+      "error": "读失败并给原因"
+    }
+  ],
+  "surfaces": {
+    "SF-AS-c01f770": "D-U-01",
+    "SF-AS-c03e0d7": "D-U-01",
+    "SF-AS-c0b9b74": "D-U-01",
+    "SF-AS-c159587": "D-U-01",
+    "SF-AS-c1a6811": "D-U-01",
+    "SF-AS-c21aa25": "D-U-01",
+    "SF-AS-c24e782": "D-U-01",
+    "SF-AS-c307621": "D-U-01",
+    "SF-AS-c3c3168": "D-U-01",
+    "SF-AS-c3e55f0": "D-U-01",
+    "SF-AS-c4950aa": "D-U-01",
+    "SF-AS-c4c219b": "D-U-01",
+    "SF-AS-c5199d2": "D-U-01",
+    "SF-AS-c58cb90": "D-U-01",
+    "SF-AS-c5934f6": "D-U-01",
+    "SF-AS-c5ba9cb": "D-U-01",
+    "SF-AS-c5d62f0": "D-U-01",
+    "SF-AS-c5df14b": "D-U-01",
+    "SF-AS-c5f0c05": "D-U-01",
+    "SF-AS-c65aa1c": "D-U-01",
+    "SF-AS-c65ab1a": "D-U-01",
+    "SF-AS-c6f60fd": "D-U-01",
+    "SF-AS-c76e2bb": "D-U-01",
+    "SF-AS-c832601": "D-U-01",
+    "SF-AS-c87a825": "D-U-01",
+    "SF-AS-c916b58": "D-U-01",
+    "SF-AS-c93693c": "D-U-01",
+    "SF-AS-c971e5c": "D-U-01",
+    "SF-AS-c977fb9": "D-U-01",
+    "SF-AS-c9ffd1c": "D-U-01",
+    "SF-AS-ca4434b": "D-U-01",
+    "SF-AS-ca4b361": "D-U-01",
+    "SF-AS-ca68d34": "D-U-01",
+    "SF-AS-cafa72d": "D-U-01",
+    "SF-AS-cb1007b": "D-U-01",
+    "SF-AS-cc3068c": "D-U-01",
+    "SF-AS-ccaa689": "D-U-01",
+    "SF-AS-cdb5052": "D-U-01",
+    "SF-AS-cdba4c4": "D-U-01",
+    "SF-AS-ce664a1": "D-U-01",
+    "SF-AS-ce6e5fe": "D-U-01",
+    "SF-AS-ce9f56d": "D-U-01",
+    "SF-AS-cfbe327": "D-U-01",
+    "SF-AS-p1b22ec": "D-U-01",
+    "SF-AS-p790d77": "D-U-01",
+    "SF-AS-p828f82": "D-U-01",
+    "SF-AS-pb0a225": "D-U-01",
+    "SF-AS-pb8e5db": "D-U-01",
+    "SF-AS-pb8e5db-2": "D-U-01",
+    "SF-AS-pb8e5db-3": "D-U-01",
+    "SF-AS-pb8e5db-4": "D-U-01",
+    "SF-AS-pb8e5db-5": "D-U-01",
+    "SF-AS-pb8e5db-6": "D-U-01",
+    "SF-AS-pc72c06": "D-U-01",
+    "SF-RM-c0174a4": "D-U-01",
+    "SF-RM-c023d4c": "D-U-01",
+    "SF-RM-c0e0d5f": "D-U-01",
+    "SF-RM-c1cdf6b": "D-U-01",
+    "SF-RM-c1ffc14": "D-U-01",
+    "SF-RM-c278383": "D-U-01",
+    "SF-RM-c28e586": "D-U-01",
+    "SF-RM-c29dd26": "D-U-01",
+    "SF-RM-c2b82e7": "D-U-01",
+    "SF-RM-c2c71b5": "D-U-01",
+    "SF-RM-c375d83": "D-U-01",
+    "SF-RM-c41b79d": "D-U-01",
+    "SF-RM-c49e5b1": "D-U-01",
+    "SF-RM-c58806f": "D-U-01",
+    "SF-RM-c765106": "D-U-01",
+    "SF-RM-c7e4379": "D-U-01",
+    "SF-RM-c896da2": "D-U-01",
+    "SF-RM-ca05e24": "D-U-01",
+    "SF-RM-caa167e": "D-U-01",
+    "SF-RM-cbb9684": "D-U-01",
+    "SF-RM-cc5cc8c": "D-U-01",
+    "SF-RM-ce8d923": "D-U-01",
+    "SF-RM-cee45c9": "D-U-01",
+    "SF-RM-cef2945": "D-U-01",
+    "SF-RM-cf393b5": "D-U-01",
+    "SF-RM-cf88af3": "D-U-01",
+    "SF-RM-cfb3e57": "D-U-01"
+  },
+  "sequences": [
+    {
+      "id": "S-01",
+      "file": "design/sequences/S-01.md",
+      "participants": [
+        "D-B-01",
+        "D-B-02",
+        "P-A-01",
+        "P-A-02"
+      ]
+    },
+    {
+      "id": "S-02",
+      "file": "design/sequences/S-02.md",
+      "participants": [
+        "D-B-05",
+        "P-A-03",
+        "P-A-04"
+      ]
+    }
+  ]
+}

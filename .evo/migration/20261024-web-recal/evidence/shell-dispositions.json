@@ -1,0 +1,98 @@
+{
+ "group:新会话的位置": {
+  "status": "差异",
+  "why": "pi-web 用 role=group 包住底部按钮组；我们用 shell/layout 的 toolbar 区域，语义等价"
+ },
+ "button:文件": {
+  "status": "差异",
+  "why": "pi-web 侧栏页签是 button，我们用 role=tab + tablist（更好的读屏语义，见 sidebar-tabs.tsx）"
+ },
+ "button:搜索文件": {
+  "status": "差异",
+  "why": "pi-web 是\"点按钮才出搜索框\"，我们的搜索框常驻（files-toolbar.tsx data-testid=files-search）"
+ },
+ "button:pi-web": {
+  "status": "差异",
+  "why": "pi-web 顶栏外链自家文档站，evo-pi 不提供该站点，不做"
+ },
+ "button:openwiki": {
+  "status": "差异",
+  "why": "同上：文档站外链，非壳职责"
+ },
+ "button:已归档 · 7": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（归档/历史），需该能力立项"
+ },
+ "button:受限模式": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（受限模式开关）"
+ },
+ "button:完整历史": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（完整历史视图）"
+ },
+ "button:生成标题": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（生成会话标题）"
+ },
+ "button:系统提示词": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（编辑系统提示词）"
+ },
+ "button:工具定义": {
+  "status": "blocked",
+  "why": "属 C-C 会话面板工具条（工具定义查看）"
+ },
+ "button:发送": {
+  "status": "blocked",
+  "why": "消息发送入口属 C-C 会话面板，壳不代劳"
+ },
+ "button:MiniMax-M3.1-Flash": {
+  "status": "blocked",
+  "why": "模型选择属 C-C 会话面板工具条"
+ },
+ "button:更改推理级别": {
+  "status": "blocked",
+  "why": "推理级别属 C-C 会话面板工具条"
+ },
+ "button:更改工具预设": {
+  "status": "blocked",
+  "why": "工具预设属 C-C 会话面板工具条"
+ },
+ "button:压缩上下文": {
+  "status": "blocked",
+  "why": "上下文压缩属 C-C 会话面板工具条"
+ },
+ "button:关闭完成提示音": {
+  "status": "blocked",
+  "why": "完成提示音属 C-C 会话面板工具条"
+ },
+ "button:Pi Web，版本：web 0.12.2，pi 1.2.0": {
+  "status": "差异",
+  "why": "pi-web 把版本融进项目按钮名；我们把版本拆成独立 sr-only 节点（project-picker.tsx project-version，P7 信息融合规矩）"
+ },
+ "button:parity-proj": {
+  "status": "差异",
+  "why": "pi-web 列\"最近 cwd 历史\"，我们列 trust.json 项目清单；夹具目录名不同不算缺口"
+ },
+ "button:cwd2": {
+  "status": "差异",
+  "why": "同上（pi-web 夹具里的历史 cwd）"
+ },
+ "button:cwd": {
+  "status": "差异",
+  "why": "同上（pi-web 夹具里的历史 cwd）"
+ },
+ "button:evo-pi": {
+  "status": "差异",
+  "why": "同上：按 trust.json 列项目，当前夹具以 parity-proj 呈现"
+ },
+ "button:打开其他项目…": {
+  "status": "blocked",
+  "why": "我们的入口在项目面板内（点开才可见，project-picker.tsx:102），pi-web 常驻底栏；面板化是交互形态差异，需人工确认是否改成常驻"
+ },
+ "button:/tmp/parity-proj": {
+  "status": "差异",
+  "why": "pi-web 显示绝对路径，我们显示项目名 + 复制路径按钮"
+ }
+}

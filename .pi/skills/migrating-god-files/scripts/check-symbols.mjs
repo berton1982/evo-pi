@@ -76,7 +76,7 @@ for (const g of gods) {
   }
   reports.push({
     god: basename(g.path),
-    ...runSymbolParity({ symbolsText: symText, mapText, root }),
+    ...runSymbolParity({ symbolsText: symText, mapText, root, godFile: basename(g.path) }),
   })
 }
 

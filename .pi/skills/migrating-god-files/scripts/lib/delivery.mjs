@@ -19,10 +19,9 @@ const clean = (v) => stripCell(v).replace(/^`|`$/g, '').trim()
 // init 铺底的文件带 TODO 横幅。铺底等于"提醒你写"，不等于"已经写了"：
 // 模板里的示例行（L1 层命令 pass / T-03 证据）恰好能满足判据，不拦就会
 // 出现"什么都没填，门全绿"。
-const isScaffold = (t) =>
-  String(t || '')
-    .slice(0, 500)
-    .includes('TODO-init-scaffold')
+// 只认注释语法：正文里提到这个 token（比如"横幅已删"）不算铺底
+const SCAFFOLD_BANNER = /<!--\s*TODO-init-scaffold|^\s*\/\/\s*TODO-init-scaffold/m
+const isScaffold = (t) => SCAFFOLD_BANNER.test(String(t || '').slice(0, 500))
 
 // 路径解析：桩实现通常在仓库里（`apps/web/...`，相对 root），夹具通常在 run 里
 // （`fixtures/...`，相对 programDir）。两处都找，避免"文件明明在却被判不存在"。

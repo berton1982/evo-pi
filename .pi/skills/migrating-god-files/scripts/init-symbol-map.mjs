@@ -64,7 +64,10 @@ if (!gods.length) {
 
 const mapPath = resolve(runDir, 'symbol-map.md')
 const existingText = existsSync(mapPath) ? readFileSync(mapPath, 'utf8') : ''
-const existing = new Map(parseSymbolMap(existingText).map((r) => [r.name, r]))
+// 去重键必须是「文件 + 符号名」：`send`/`values` 这类名字在四个文件里都有，
+// 只按名字去重会把它们的「文件」列互相覆盖（20261024-C-A-runtime 实测 278 行只剩一个文件）。
+const rowsIdx = parseSymbolMap(existingText)
+const existing = new Map(rowsIdx.map((r) => [`${r.file || ''}|${r.name}`, r]))
 
 // 归属由 ownership.md 的区间推导，而不是让人逐行填：
 // C-G 试点里 840 行台账全是 `待定`，说明"手填 owner"在实际成本下不会发生。
@@ -85,6 +88,8 @@ const ownerOfLine = (line) => {
 const rows = []
 let added = 0
 let kept = 0
+// 多 god 共用一张表：每次播种都要把"别的文件"的既有行原样带上，
+// 否则每次播种都会把上一个 god 的行冲掉（20261024-C-A-runtime 实测：四次播种后只剩最后一个文件的 278 行）。
 for (const g of gods) {
   const symPath = symbolsFileFor(runDir, basename(g.path))
   if (!existsSync(symPath)) {
@@ -92,6 +97,7 @@ for (const g of gods) {
     process.exit(1)
   }
   const symbols = parseSymbols(readFileSync(symPath, 'utf8'))
+  const fileBase = basename(symPath).replace(/^symbols-/, '').replace(/\.md$/, '')
   if (!symbols.length) {
     console.error(
       `\u274c ${basename(symPath)} 里没有解析到符号（需要 \`- **Name** (Kind) …\` 列表）`,
@@ -103,19 +109,25 @@ for (const g of gods) {
   // 逐条成行只会把台账变成导出文件的副本（840 行 / 469 唯一符号）。
   const byName = new Map()
   for (const s of symbols) {
-    const cur = byName.get(s.name) ?? { name: s.name, lines: [] }
+    const key = `${fileBase}|${s.name}`
+    const cur = byName.get(key) ?? { name: s.name, lines: [] }
     if (s.line && !cur.lines.includes(s.line)) cur.lines.push(s.line)
-    byName.set(s.name, cur)
+    byName.set(key, cur)
   }
 
-  for (const { name, lines } of byName.values()) {
-    const prev = existing.get(name)
+  for (const r of rowsIdx) {
+    if (r.file && r.file !== fileBase && !rows.some((x) => x[0] === r.file && x[1] === `\`${r.name}\``))
+      rows.push([r.file, `\`${r.name}\``, r.line || '—', r.owner || '待定', r.target || '—', r.status || 'pending', r.reason || ''])
+  }
+  for (const [key, { name, lines }] of byName.entries()) {
+    const prev = existing.get(key)
     const lineText = lines.length ? lines.join('、') : '—'
     const owners = new Set(lines.map(ownerOfLine))
     const owner = owners.size === 1 ? [...owners][0] : owners.size > 1 ? '跨段' : '待定'
     if (prev) {
       kept++
       rows.push([
+        fileBase,
         `\`${name}\``,
         prev.line && prev.line !== '—' ? prev.line : lineText,
         prev.owner && prev.owner !== '待定' ? prev.owner : owner,
@@ -125,12 +137,14 @@ for (const g of gods) {
       ])
     } else {
       added++
-      rows.push([`\`${name}\``, lineText, owner, '—', status, ''])
+      rows.push([fileBase, `\`${name}\``, lineText, owner, '—', status, ''])
     }
   }
 }
 
-const header = ['pi-web 符号', '行号', '归属切分', 'evo-pi 落点', '状态', '理由']
+// 「文件」列不是装饰：多 god 共表时，逐 god 校验要靠它把范围缩回本文件，
+// 否则会把别的文件的符号判成"过期"（20261024-C-A-runtime 实测 1337 条误报）。
+const header = ['文件', 'pi-web 符号', '行号', '归属切分', 'evo-pi 落点', '状态', '理由']
 const md = [
   '# 符号对账表',
   '',

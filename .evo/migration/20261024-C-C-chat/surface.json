@@ -1,0 +1,917 @@
+{
+  "generatedAt": "2026-10-24T03:02:33.555Z",
+  "sources": [
+    {
+      "dir": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "files": 1,
+      "points": 126
+    }
+  ],
+  "totals": {
+    "points": 126,
+    "byKind": {
+      "aria": 30,
+      "handler:onKeyDown": 6,
+      "handler:onFocus": 1,
+      "handler:onMouseLeave": 1,
+      "handler:onInput": 2,
+      "handler:onMouseEnter": 1,
+      "handler:onPointerUp": 1,
+      "handler:onChange": 2,
+      "handler:onPointerDown": 2,
+      "handler:onClick": 16,
+      "handler:onDragOver": 1,
+      "handler:onBlur": 1,
+      "i18n": 51,
+      "hotkey": 6,
+      "api": 1,
+      "role": 4
+    }
+  },
+  "entries": [
+    {
+      "id": "SF-CW-a020719",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 154
+    },
+    {
+      "id": "SF-CW-a020719-10",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1890
+    },
+    {
+      "id": "SF-CW-a020719-11",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1942
+    },
+    {
+      "id": "SF-CW-a020719-12",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2173
+    },
+    {
+      "id": "SF-CW-a020719-13",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2228
+    },
+    {
+      "id": "SF-CW-a020719-2",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 214
+    },
+    {
+      "id": "SF-CW-a020719-3",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1380
+    },
+    {
+      "id": "SF-CW-a020719-4",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1408
+    },
+    {
+      "id": "SF-CW-a020719-5",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1426
+    },
+    {
+      "id": "SF-CW-a020719-6",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1439
+    },
+    {
+      "id": "SF-CW-a020719-7",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1474
+    },
+    {
+      "id": "SF-CW-a020719-8",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1838
+    },
+    {
+      "id": "SF-CW-a020719-9",
+      "kind": "aria",
+      "text": "label",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1869
+    },
+    {
+      "id": "SF-CW-a6ee16c",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 147
+    },
+    {
+      "id": "SF-CW-a6ee16c-10",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1904
+    },
+    {
+      "id": "SF-CW-a6ee16c-11",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2242
+    },
+    {
+      "id": "SF-CW-a6ee16c-2",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 157
+    },
+    {
+      "id": "SF-CW-a6ee16c-3",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1359
+    },
+    {
+      "id": "SF-CW-a6ee16c-4",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1409
+    },
+    {
+      "id": "SF-CW-a6ee16c-5",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1431
+    },
+    {
+      "id": "SF-CW-a6ee16c-6",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1444
+    },
+    {
+      "id": "SF-CW-a6ee16c-7",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1477
+    },
+    {
+      "id": "SF-CW-a6ee16c-8",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1498
+    },
+    {
+      "id": "SF-CW-a6ee16c-9",
+      "kind": "aria",
+      "text": "hidden",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1690
+    },
+    {
+      "id": "SF-CW-aa89cb0",
+      "kind": "aria",
+      "text": "busy",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1403
+    },
+    {
+      "id": "SF-CW-ac6eeba",
+      "kind": "aria",
+      "text": "expanded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 213
+    },
+    {
+      "id": "SF-CW-ac6eeba-2",
+      "kind": "aria",
+      "text": "expanded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1799
+    },
+    {
+      "id": "SF-CW-ac6eeba-3",
+      "kind": "aria",
+      "text": "expanded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1888
+    },
+    {
+      "id": "SF-CW-ac6eeba-4",
+      "kind": "aria",
+      "text": "expanded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2112
+    },
+    {
+      "id": "SF-CW-ac6eeba-5",
+      "kind": "aria",
+      "text": "expanded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2226
+    },
+    {
+      "id": "SF-CW-h0d5b76",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1778
+    },
+    {
+      "id": "SF-CW-h0d5b76-2",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1922
+    },
+    {
+      "id": "SF-CW-h0d5b76-3",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1945
+    },
+    {
+      "id": "SF-CW-h0d5b76-4",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1980
+    },
+    {
+      "id": "SF-CW-h0d5b76-5",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2000
+    },
+    {
+      "id": "SF-CW-h0d5b76-6",
+      "kind": "handler:onKeyDown",
+      "text": "onKeyDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2178
+    },
+    {
+      "id": "SF-CW-h13d939",
+      "kind": "handler:onFocus",
+      "text": "onFocus={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1578
+    },
+    {
+      "id": "SF-CW-h1532c3",
+      "kind": "handler:onMouseLeave",
+      "text": "onMouseLeave={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1575
+    },
+    {
+      "id": "SF-CW-h3d8f56",
+      "kind": "handler:onInput",
+      "text": "onInput={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1080
+    },
+    {
+      "id": "SF-CW-h3d8f56-2",
+      "kind": "handler:onInput",
+      "text": "onInput={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2186
+    },
+    {
+      "id": "SF-CW-h3da4c3",
+      "kind": "handler:onMouseEnter",
+      "text": "onMouseEnter={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1574
+    },
+    {
+      "id": "SF-CW-h8d912b",
+      "kind": "handler:onPointerUp",
+      "text": "onPointerUp={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1093
+    },
+    {
+      "id": "SF-CW-hbe8652",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1979
+    },
+    {
+      "id": "SF-CW-hbe8652-2",
+      "kind": "handler:onChange",
+      "text": "onChange={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1999
+    },
+    {
+      "id": "SF-CW-hcd305b",
+      "kind": "handler:onPointerDown",
+      "text": "onPointerDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1427
+    },
+    {
+      "id": "SF-CW-hcd305b-2",
+      "kind": "handler:onPointerDown",
+      "text": "onPointerDown={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1440
+    },
+    {
+      "id": "SF-CW-hd1e690",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 215
+    },
+    {
+      "id": "SF-CW-hd1e690-10",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2024
+    },
+    {
+      "id": "SF-CW-hd1e690-11",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2038
+    },
+    {
+      "id": "SF-CW-hd1e690-12",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2052
+    },
+    {
+      "id": "SF-CW-hd1e690-13",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2111
+    },
+    {
+      "id": "SF-CW-hd1e690-14",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2149
+    },
+    {
+      "id": "SF-CW-hd1e690-15",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2225
+    },
+    {
+      "id": "SF-CW-hd1e690-16",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2247
+    },
+    {
+      "id": "SF-CW-hd1e690-2",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1408
+    },
+    {
+      "id": "SF-CW-hd1e690-3",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1428
+    },
+    {
+      "id": "SF-CW-hd1e690-4",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1441
+    },
+    {
+      "id": "SF-CW-hd1e690-5",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1475
+    },
+    {
+      "id": "SF-CW-hd1e690-6",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1798
+    },
+    {
+      "id": "SF-CW-hd1e690-7",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1867
+    },
+    {
+      "id": "SF-CW-hd1e690-8",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1887
+    },
+    {
+      "id": "SF-CW-hd1e690-9",
+      "kind": "handler:onClick",
+      "text": "onClick={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1944
+    },
+    {
+      "id": "SF-CW-hdcfb38",
+      "kind": "handler:onDragOver",
+      "text": "onDragOver={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1022
+    },
+    {
+      "id": "SF-CW-hde9c59",
+      "kind": "handler:onBlur",
+      "text": "onBlur={",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1579
+    },
+    {
+      "id": "SF-CW-i082c3a",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1408
+    },
+    {
+      "id": "SF-CW-i082c3a-2",
+      "kind": "i18n",
+      "text": "i18n.close",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1408
+    },
+    {
+      "id": "SF-CW-i1e8768",
+      "kind": "i18n",
+      "text": "chat.dropUploaded",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 777
+    },
+    {
+      "id": "SF-CW-i2d7c7f",
+      "kind": "i18n",
+      "text": "chat.dropFailed",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 784
+    },
+    {
+      "id": "SF-CW-i2d7c7f-2",
+      "kind": "i18n",
+      "text": "chat.dropFailed",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 787
+    },
+    {
+      "id": "SF-CW-i3037b9",
+      "kind": "i18n",
+      "text": "chat.extensionPending",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1818
+    },
+    {
+      "id": "SF-CW-i3037b9-2",
+      "kind": "i18n",
+      "text": "chat.extensionPending",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2131
+    },
+    {
+      "id": "SF-CW-i34ca87",
+      "kind": "i18n",
+      "text": "chat.askInNewChat",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1407
+    },
+    {
+      "id": "SF-CW-i34ca87-2",
+      "kind": "i18n",
+      "text": "chat.askInNewChat",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1438
+    },
+    {
+      "id": "SF-CW-i34ca87-3",
+      "kind": "i18n",
+      "text": "chat.askInNewChat",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1439
+    },
+    {
+      "id": "SF-CW-i34ca87-4",
+      "kind": "i18n",
+      "text": "chat.askInNewChat",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1447
+    },
+    {
+      "id": "SF-CW-i39cba3",
+      "kind": "i18n",
+      "text": "chat.dropNeedsCwd",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 766
+    },
+    {
+      "id": "SF-CW-i3e3087",
+      "kind": "i18n",
+      "text": "chat.expandProcess",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 231
+    },
+    {
+      "id": "SF-CW-i440a99",
+      "kind": "i18n",
+      "text": "chat.quoteIntro",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 381
+    },
+    {
+      "id": "SF-CW-i440a99-2",
+      "kind": "i18n",
+      "text": "chat.quoteIntro",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 434
+    },
+    {
+      "id": "SF-CW-i51dca5",
+      "kind": "i18n",
+      "text": "chat.runningCommand",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1342
+    },
+    {
+      "id": "SF-CW-i5b0da1",
+      "kind": "i18n",
+      "text": "chat.askInCurrent",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1425
+    },
+    {
+      "id": "SF-CW-i5b0da1-2",
+      "kind": "i18n",
+      "text": "chat.askInCurrent",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1426
+    },
+    {
+      "id": "SF-CW-i5b0da1-3",
+      "kind": "i18n",
+      "text": "chat.askInCurrent",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1432
+    },
+    {
+      "id": "SF-CW-i6a7ca6",
+      "kind": "i18n",
+      "text": "chat.loadingSession",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1004
+    },
+    {
+      "id": "SF-CW-i6e8bd1",
+      "kind": "i18n",
+      "text": "chat.extensionCollapse",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1889
+    },
+    {
+      "id": "SF-CW-i6e8bd1-2",
+      "kind": "i18n",
+      "text": "chat.extensionCollapse",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1890
+    },
+    {
+      "id": "SF-CW-i6e8bd1-3",
+      "kind": "i18n",
+      "text": "chat.extensionCollapse",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2227
+    },
+    {
+      "id": "SF-CW-i6e8bd1-4",
+      "kind": "i18n",
+      "text": "chat.extensionCollapse",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2228
+    },
+    {
+      "id": "SF-CW-i77fa66",
+      "kind": "i18n",
+      "text": "chat.loadEarlier",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1323
+    },
+    {
+      "id": "SF-CW-i7cab61",
+      "kind": "i18n",
+      "text": "chat.extensionRestoreSize",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1868
+    },
+    {
+      "id": "SF-CW-i7cab61-2",
+      "kind": "i18n",
+      "text": "chat.extensionRestoreSize",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1869
+    },
+    {
+      "id": "SF-CW-i7dc34e",
+      "kind": "i18n",
+      "text": "chat.turnDuration",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 205
+    },
+    {
+      "id": "SF-CW-i890ddc",
+      "kind": "i18n",
+      "text": "chat.close",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2258
+    },
+    {
+      "id": "SF-CW-i8bb9ab",
+      "kind": "i18n",
+      "text": "chat.extensionExpand",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1831
+    },
+    {
+      "id": "SF-CW-i8bb9ab-2",
+      "kind": "i18n",
+      "text": "chat.extensionExpand",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2143
+    },
+    {
+      "id": "SF-CW-i9e6ff8",
+      "kind": "i18n",
+      "text": "chat.processDetails",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 214
+    },
+    {
+      "id": "SF-CW-i9fa619",
+      "kind": "i18n",
+      "text": "chat.dropFoldersUnsupported",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 795
+    },
+    {
+      "id": "SF-CW-ia214ce",
+      "kind": "i18n",
+      "text": "chat.submit",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2062
+    },
+    {
+      "id": "SF-CW-iac9e0d",
+      "kind": "i18n",
+      "text": "chat.extensionMoreWaiting",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1682
+    },
+    {
+      "id": "SF-CW-ib63226",
+      "kind": "i18n",
+      "text": "chat.cancel",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2034
+    },
+    {
+      "id": "SF-CW-ib8d10c",
+      "kind": "i18n",
+      "text": "chat.extensionMaximize",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1868
+    },
+    {
+      "id": "SF-CW-ib8d10c-2",
+      "kind": "i18n",
+      "text": "chat.extensionMaximize",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1869
+    },
+    {
+      "id": "SF-CW-iba5a69",
+      "kind": "i18n",
+      "text": "chat.extensionInput",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2173
+    },
+    {
+      "id": "SF-CW-ibd66bd",
+      "kind": "i18n",
+      "text": "chat.dropAlreadyExists",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 781
+    },
+    {
+      "id": "SF-CW-ic5c713",
+      "kind": "i18n",
+      "text": "chat.confirm",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2048
+    },
+    {
+      "id": "SF-CW-icce91c",
+      "kind": "i18n",
+      "text": "chat.scrollToLatest",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1473
+    },
+    {
+      "id": "SF-CW-icce91c-2",
+      "kind": "i18n",
+      "text": "chat.scrollToLatest",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1474
+    },
+    {
+      "id": "SF-CW-ide4d29",
+      "kind": "i18n",
+      "text": "chat.extensionExpiresIn",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1764
+    },
+    {
+      "id": "SF-CW-ie213e9",
+      "kind": "i18n",
+      "text": "appUpdate.releaseNotes",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1497
+    },
+    {
+      "id": "SF-CW-ie35860",
+      "kind": "i18n",
+      "text": "chat.collapseProcess",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 231
+    },
+    {
+      "id": "SF-CW-ie746bc",
+      "kind": "i18n",
+      "text": "chat.quoteQuestion",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 382
+    },
+    {
+      "id": "SF-CW-ie746bc-2",
+      "kind": "i18n",
+      "text": "chat.quoteQuestion",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 435
+    },
+    {
+      "id": "SF-CW-if34540",
+      "kind": "i18n",
+      "text": "chat.extensionRequest",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1860
+    },
+    {
+      "id": "SF-CW-ifa38d2",
+      "kind": "i18n",
+      "text": "chat.extensionPanel",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2134
+    },
+    {
+      "id": "SF-CW-ifa38d2-2",
+      "kind": "i18n",
+      "text": "chat.extensionPanel",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2220
+    },
+    {
+      "id": "SF-CW-k1bd267",
+      "kind": "hotkey",
+      "text": "Home",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1928
+    },
+    {
+      "id": "SF-CW-k2084c3",
+      "kind": "hotkey",
+      "text": "End",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1929
+    },
+    {
+      "id": "SF-CW-k2fd8c1",
+      "kind": "hotkey",
+      "text": "ArrowRight",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1930
+    },
+    {
+      "id": "SF-CW-k628514",
+      "kind": "hotkey",
+      "text": "ArrowDown",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1930
+    },
+    {
+      "id": "SF-CW-kdcadf0",
+      "kind": "hotkey",
+      "text": "Enter",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1981
+    },
+    {
+      "id": "SF-CW-kdcadf0-2",
+      "kind": "hotkey",
+      "text": "Enter",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2001
+    },
+    {
+      "id": "SF-CW-pc24846",
+      "kind": "api",
+      "text": "GET /api/app-update",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 106,
+      "method": "GET",
+      "path": "/api/app-update"
+    },
+    {
+      "id": "SF-CW-r5fdc1c",
+      "kind": "role",
+      "text": "button",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1939
+    },
+    {
+      "id": "SF-CW-r60214c",
+      "kind": "role",
+      "text": "alert",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1419
+    },
+    {
+      "id": "SF-CW-r831bf1",
+      "kind": "role",
+      "text": "dialog",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 1837
+    },
+    {
+      "id": "SF-CW-r831bf1-2",
+      "kind": "role",
+      "text": "dialog",
+      "file": "ref_projects/pi-web/components/ChatWindow.tsx",
+      "line": 2148
+    }
+  ]
+}

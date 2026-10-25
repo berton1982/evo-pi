@@ -1,0 +1,16 @@
+{
+  "symbols": {
+    "kind": "symbols",
+    "count": 1126,
+    "source": "cmd",
+    "cmd": "node .pi/skills/migrating-god-files/scripts/enumerate-symbols.mjs --run .evo/migration/20261024-C-C-chat --file ref_projects/pi-web/components/MessageView.tsx",
+    "at": "2026-10-24T03:02:33.383Z"
+  },
+  "surface": {
+    "kind": "surface",
+    "count": 126,
+    "source": "cmd",
+    "cmd": "node .pi/skills/migrating-god-files/scripts/enumerate-surface.mjs --run .evo/migration/20261024-C-C-chat",
+    "at": "2026-10-24T03:02:33.556Z"
+  }
+}

@@ -83,7 +83,9 @@ if (argv.includes('--json')) {
   console.log(`当前阶段: ${state.phase}（${state.phaseStatus}）\n`)
   for (const r of reports) {
     const p = phaseById(r.phase)
-    console.log(`── ${r.phase} ${p.name} ──`)
+    // 回归验早期阶段时 phaseById 可能查不到（阶段表按 scope 组装），
+    // 这里退化成 id 本身，不能因为展示失败把整次校验崩掉。
+    console.log(`── ${r.phase} ${p?.name ?? ''} ──`)
     console.log(formatReport(r))
     console.log(r.ok ? '   \u2713 门通过' : '   \u2717 门未过')
     console.log()

@@ -2,10 +2,10 @@
 
 > 用户的问题：实施后，pi-web 里 god 文件的逻辑是否都会迁到 evo-pi？有没有机器检查？
 >
-> 答案：**有 37 道串联的门**，每一道都堵住一种特定的"漏"。但没有任何单一门能证明"全迁了"——
+> 答案：**有 43 道串联的门**，每一道都堵住一种特定的"漏"。但没有任何单一门能证明"全迁了"——
 > 所以这里把链路写清楚，并明确**残余风险**，避免把"门全绿"当成"绝对没漏"。
 
-## 1. 三十七道门（串联，任一门红即停）
+## 1. 43 道门（串联，任一门红即停）
 
 > 本文是**人话概念门**；它们与 `phases.mjs` 的 50 个阶段 kind、`checks.mjs` 的实现如何对应、有没有幻影门，由 `references/gates.md` + `check-gates-map.mjs` 对账。
 
@@ -49,6 +49,12 @@
 | **35** | **评审要有可核对清单** | `review` 门重写 + `templates/review.md` | C-G 的 `review.md` 39 行全是自述（"依赖方向 ✅"），门只判"文件在 + 两个标题 + 无 ❌" | 12 项固定清单，每项 `pass`/`fix`/`na`；`fix` 必须带 `文件:行`，`na` 必须写理由；`reviewkit` 会量落点文件的行数/状态/副作用/嵌套/`any`，量出的超限项必须在对应清单项写 `fix` 并点名文件，否则红 |
 | **36** | **web 新代码只能落在切片里** | C5 `webScaffold` | `packages/web` 起初是 `components/` 平铺，god 文件就这么长出来；A/B 两门只管"分层事实"和"元素落点"，没有一条判"组件该放哪个目录" | `arch/rules.json#web` 声明 `root`/`slices`/`allowedRoots`/`template`；`features/_template` 必须在；每个 slice 至少一个 `use-*.ts` 或 `*-view.tsx`/`*-panel.tsx`；`.tsx` 只能住在允许根下；`src` 根下不许有游离组件 |
 | **37** | **没提过的「少一点」不算差异** | C6 `fidelity` | 数据面 27 条行为全绿、字段差也登记了，用户并排一看还是「差得远」——因为「页面少了可及元素」从来没人登记 | `harness/snapshot/fidelity/*.{piweb,evopi}.json` 两侧都拍；覆盖率 ≥70%；**pi-web 独有的每个可及元素必须在 `parity.md` 出现名字**（没对齐可以，没提过不行） |
+| **37** | **没提过的"少一点"不算差异** | C6 `fidelity` | 用户说"与 pi-web 差距很大"，而门全绿：从没量过差多少 | 两侧快照同口径采集；pi-web 独有的每个可及元素必须在 `parity.md` 被提过；覆盖率只作参考线 |
+| **38** | **界面任务实施前先观察** | C5 `observations` | 不看现有界面就写组件，凭空发明布局与文案 | `observations/<T-xx>.md` 三段（看到什么/差在哪/决定），"看到什么"必须给 `path:line` |
+| **39** | **渲染边界要写清** | C0 `renderBoundary` | C-C 试点把主区顶栏画成"新建·会话名"，而顶栏属 C-B、输入区属 C-D，本能力从未读过 | `CHARTER.md` 的「## 渲染边界」表：区域 / 宿主（self / shell / other:<能力>）/ 说明 |
+| **40** | **引用谁就得读过谁** | C3 `readlogCoverage` | 原型里画了别人的界面，`readlog.md` 里那个文件出现 0 次 | `spec.md`、`design/ui.md` 点名的每个源文件都必须在 `readlog.md` 有阅读记录 |
+| **41** | **入口清单双向对账** | C4 `uiProto:inventory` | `uiProto` 只查"有 ASCII"，少画 6 个顶栏按钮照样绿 | `components.md` 有「区域 / 入口 / 源」表；表与原型双向一致（少画、多画都红） |
+| **43** | 运行时匹配 | C4 `placement(plan)` / C5 `placement(landed)` | **业务规则被搬进前端、呈现逻辑被塞进后端**（C-C 的 chat 就是这么错的） | 元素必须声明 `runtime`；`server` 不许落 `web/**`、`client` 不许落 `core/**`、web 里不许有 `use-cases/` 或 `domain/ports/`、web 不许直接 import `node:` |
 
 另有五个横向门：
 

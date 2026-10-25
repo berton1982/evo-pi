@@ -3,7 +3,7 @@
   "skill": "migrating-god-files",
   "skillVersion": 3,
   "createdAt": "2026-10-23T11:20:56.557Z",
-  "updatedAt": "2026-10-23T11:20:56.559Z",
+  "updatedAt": "2026-10-25T04:06:13.334Z",
   "scope": "program",
   "rLevel": null,
   "programRun": null,
@@ -26,8 +26,14 @@
   "signoffs": {},
   "decisions": [],
   "tasks": {},
-  "history": [],
-  "paused": false,
+  "history": [
+    {
+      "at": "2026-10-25T04:06:13.334Z",
+      "event": "pause",
+      "note": "D-1…D-5 已全部收口（首页/壳设施/文件区/项目选择器/conventions 重基线），后续功能与保真工作已在 20261024-C-C-chat 与其后的 web 修复中承接；本 run 保留作历史，不再推进门"
+    }
+  ],
+  "paused": true,
   "lastCommand": null,
   "closed": false,
   "run": ".evo/migration/20261024-web-recal"

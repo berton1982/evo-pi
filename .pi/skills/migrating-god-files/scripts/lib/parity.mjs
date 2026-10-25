@@ -46,6 +46,9 @@ export function parseSymbolMap(md) {
     const targetCol = columnOf(t.header, '落点')
     const statusCol = columnOf(t.header, '状态')
     const reasonCol = columnOf(t.header, '理由')
+    // 多 god 的 run 共用一张对账表：没有「文件」列就无法区分同名符号属于哪个文件，
+    // 逐 god 校验会把别的文件的符号全判成"过期"（20261024-C-A-runtime 实测 1337 条误报）。
+    const fileCol = columnOf(t.header, '文件')
     for (const row of t.rows) {
       const nameCols = [...(row[nameCol] || '').matchAll(/`([^`]+)`/g)].map((m) => m[1])
       const name = nameCols[0] || stripCell(row[nameCol])
@@ -57,15 +60,23 @@ export function parseSymbolMap(md) {
         target: targetCol >= 0 ? stripCell(row[targetCol]) : '',
         status: statusCol >= 0 ? stripCell(row[statusCol]).toLowerCase() : '',
         reason: reasonCol >= 0 ? stripCell(row[reasonCol]) : '',
+        file: fileCol >= 0 ? stripCell(row[fileCol]).replace(/`/g, '') : '',
       })
     }
   }
   return out
 }
 
-export function runSymbolParity({ symbolsText, mapText, root = '.' }) {
+export function runSymbolParity({ symbolsText, mapText, root = '.', godFile = null }) {
   const symbols = parseSymbols(symbolsText)
-  const rows = parseSymbolMap(mapText)
+  const all = parseSymbolMap(mapText)
+  // 有「文件」列且指定了 god → 只比这个文件的行；否则退回"整表对该 god"的旧行为
+  const scoped = godFile && all.some((r) => r.file)
+  // 去扩展名再比：`symbols-Fixture.md` 的 fileBase 是 `Fixture`，而 god 的 basename 是 `Fixture.tsx`
+  const strip = (x) => String(x || '').replace(/\.[a-z]+$/i, '')
+  const rows = scoped
+    ? all.filter((r) => strip(r.file) === strip(godFile) || strip(r.file).endsWith(`/${strip(godFile)}`))
+    : all
   const problems = []
   if (!symbols.length) {
     problems.push('符号全集为空或格式不符（需要 `- **Name** (Kind) …` 的 bullet 列表）')

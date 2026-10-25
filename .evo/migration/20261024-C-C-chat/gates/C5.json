@@ -1,0 +1,13 @@
+{
+  "id": "C5",
+  "generatedAt": "2026-10-24T12:30:39.357Z",
+  "runs": [
+    {
+      "cmd": "cd /home/berton/evo-pi && npx playwright test e2e/chat --workers=1 --reporter=line",
+      "exit": 0,
+      "durationMs": 36131,
+      "at": "2026-10-24T12:30:39.356Z",
+      "tail": "[41/57] [chromium] › e2e/chat/s-041.spec.ts:4:1 › T-041 每条消息带稳定锚点，且相邻不重复\n[42/57] [chromium] › e2e/chat/s-042.spec.ts:4:1 › T-042 空会话显示空态引导而不是空白\n[43/57] [chromium] › e2e/chat/s-043.spec.ts:4:1 › T-043 长内容换行，不产生横向滚动条\n[44/57] [chromium] › e2e/chat/s-044.spec.ts:7:6 › T-044 布局常量：列宽/边距由常量与容器宽度共同决定\n[45/57] [chromium] › e2e/chat/s-045.spec.ts:4:1 › T-045 流式增量拼出的文本与完整消息一致\n[46/57] [chromium] › e2e/chat/s-046.spec.ts:4:1 › T-046 消息区是 log 语义且 aria-live=polite\n[47/57] [chromium] › e2e/chat/s-047.spec.ts:4:1 › T-047 运行中提交变成排队，排队行显示引导\n[48/57] [chromium] › e2e/chat/s-048.spec.ts:4:1 › T-048 运行中点追加排队，排队行标记 followUp\n[49/57] [chromium] › e2e/chat/s-049.spec.ts:7:6 › T-049 排队消息以不同颜色行展示，并显示总条数；可一键撤回全部回输入框\n[50/57] [chromium] › e2e/chat/s-050.spec.ts:4:1 › T-050 运行中发送按钮让位给引导/追加\n[51/57] [chromium] › e2e/chat/s-051.spec.ts:4:1 › T-051 点「更多控件」后面板展开，再点收起\n[52/57] [chromium] › e2e/chat/s-052.spec.ts:7:6 › T-052 压缩进行中时按钮变成「停止压缩」，可中断\n[53/57] [chromium] › e2e/chat/s-053.spec.ts:7:6 › T-053 附件可添加/移除，发送时随消息一起提交\n[54/57] [chromium] › e2e/chat/s-054.spec.ts:7:6 › T-054 主区顶栏左侧固定六个入口：信任项目（未信任时）/ 完整历史 / 生成标题 / 分\n[55/57] [chromium] › e2e/chat/s-055.spec.ts:4:1 › T-055 点「会话信息」打开面板，再点关闭\n[56/57] [chromium] › e2e/chat/s-056.spec.ts:7:6 › T-056 「新建会话」只在左侧区顶部，不在主区顶栏（避免同一动作两个入口）\n[57/57] [chromium] › e2e/chat/s-057.spec.ts:7:6 › T-057 未信任项目时顶栏第一个入口是「信任项目」，信任后消失\n  30 skipped\n  27 passed (35.2s)"
+    }
+  ]
+}

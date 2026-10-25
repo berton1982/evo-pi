@@ -389,6 +389,7 @@
 - `CHARTER.md` 含小节 `## 1. 范围`
 - `CHARTER.md` 含小节 `## 2. 基线指纹`
 - `CHARTER.md` 含小节 `## 3. 不做清单`
+- renderBoundary
 - god 指纹（行数 + sha1）与磁盘一致
 - 全景表存在、目标 god 已登记、登记后未漂移
 - 本 run 已声明 R 级
@@ -490,6 +491,7 @@
 
 - 存在 `spec.md`（≥400 B）
 - capSpec
+- readlogCoverage
 - humanSignoff
 - 存在 `behaviors.md`（≥200 B）
 - `behaviors.md` 含小节 `## 行为清单`
@@ -540,6 +542,7 @@
 - uiProto
 - 设计门 D1–D10（按 R 级裁剪）（仅 R1/R2/R3）
 - placement
+- runtimeFit
 - lines
 - plan（仅 R2/R3）
 - `design/manifest.json` 有效签字（改动即失效）（仅 R2/R3）
@@ -574,12 +577,14 @@
 **门（机器判据）**
 
 - verification
+- observations
 - lines
 - 质量预算：文件行数 / 复杂度 / props 上限（仅 R1/R2/R3）
 - `@design` 标注 ↔ 设计元素（无未实现、无隐性设计）（仅 R2/R3）
 - trace（仅 R2/R3）
 - review
 - placement
+- runtimeFit
 - webScaffold
 - changePropagation
 - volume

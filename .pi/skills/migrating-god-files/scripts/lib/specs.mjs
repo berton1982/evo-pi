@@ -56,10 +56,21 @@ export function parseSpecFile(absPath) {
 export function resolveAnchors(anchors, root) {
   const bad = []
   for (const a of anchors) {
-    const p = resolve(root, a.file)
+    // god 文件都在 ref_projects/<repo>/ 下，规格里通常只写仓库内相对路径。
+    // 两种都试：先仓库根，再 ref_projects/*/<file>（否则每条证据都报"不存在"）。
+    let p = resolve(root, a.file)
     if (!existsSync(p)) {
-      bad.push(`${a.file} 不存在`)
-      continue
+      const base = resolve(root, a.file)
+      const dir = resolve(root, 'ref_projects')
+      const hit = existsSync(dir)
+        ? readdirSync(dir).map((d) => join(dir, d, a.file)).find((c) => existsSync(c))
+        : null
+      if (hit) p = hit
+      else {
+        bad.push(`${a.file} 不存在（含 ref_projects/*/ 前缀也未找到）`)
+        continue
+      }
+      void base
     }
     if (a.line) {
       const lines = readFileSync(p, 'utf8').split('\n').length
@@ -91,7 +102,7 @@ export function findMissingTestIds(ids, testDirs, root) {
 }
 
 /** 一次性跑某个 run 的全部 specs */
-export function runSpecGates({ runDir, root = '.', testDirs = [] }) {
+export function runSpecGates({ runDir, root = '.', testDirs = [], mode = 'exists' }) {
   const dir = resolve(runDir, 'specs')
   const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.md')) : []
   if (!files.length) return [{ id: 'SPEC0', ok: false, detail: 'specs/ 为空——R3 必须写端到端规格' }]
@@ -107,6 +118,12 @@ export function runSpecGates({ runDir, root = '.', testDirs = [] }) {
     if (!testIds.length) problems.push(`${f}: 没有声明任何测试 ID`)
   }
 
+  // mode='declare'：C3 只要求"写清要哪些测试"，测试文件要到 C5 才存在。
+  // 反过来的话，规格阶段永远红，逼人在没写代码前编测试名（G-22）。
+  if (mode === 'declare') {
+    const results = [{ id: 'SPEC1', ok: problems.length === 0, detail: problems.join('；') || `${allIds.size} 个测试 ID 已声明，锚点均可核对` }]
+    return results
+  }
   const results = [
     {
       id: 'SPEC1',

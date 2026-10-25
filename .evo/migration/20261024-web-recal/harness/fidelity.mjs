@@ -7,9 +7,10 @@
  * 它既是键盘/读屏用户真正拿到的东西，也是"信息量"的可量化代理。
  *
  * 输出：harness/snapshot/fidelity/<flow>.{piweb,evopi}.json
- * 用法：PI_PARITY_CWD=<cwd> node <run>/harness/fidelity.mjs [--flow mcp-settings]
+ * 用法：PI_PARITY_CWD=<cwd> node <run>/harness/fidelity.mjs [--flow shell] [--side evo|piweb|both]
+ * `--side evo` 只重拍 evo-pi 并复用上次的 pi-web 快照（参照系不每次重拍）
  */
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { chromium } from '@playwright/test'
 
@@ -19,11 +20,27 @@ const cwd = process.env.PI_PARITY_CWD ?? process.cwd()
 const outDir = resolve(import.meta.dirname, 'snapshot/fidelity')
 const out = (name, side) => `${outDir}/${name}.${side}.json`
 
-/** 采集：每个可交互/可读元素 → {role, name, depth}。名称取 aria-label / 文本前 80 字。 */
+/** 采集：每个可交互/可读元素 → {role, name, depth, state, region, visible, keys}。
+ *  名称取 aria-label / 文本前 80 字；region/visible/keys 是阶段 2 新增的三个对比维度。
+ */
 async function capture(page, scope, contains = null) {
   return page.evaluate(
     ({ scopeSel, containsSrc }) => {
       const match = containsSrc ? new RegExp(containsSrc) : null
+    // 角色/标签 → 人认得的区域名（两边 DOM 约定不同，不归一就没法比"哪个区缺什么"）
+    const ZONE = {
+      complementary: '侧栏',
+      banner: '顶栏',
+      main: '主区',
+      navigation: '导航',
+      tabpanel: '主区',
+      dialog: '弹窗',
+      aside: '侧栏',
+      header: '顶栏',
+      nav: '导航',
+      section: '区域',
+      region: '区域',
+    }
     const out = []
     // 同一选择器可能命中多个节点（弹窗 + 隐藏的历史弹窗），按内容挑真正在显示的那个
     const candidates = scopeSel ? [...document.querySelectorAll(scopeSel)] : [document.body]
@@ -41,7 +58,60 @@ async function capture(page, scope, contains = null) {
         const states = el.getAttribute('aria-pressed') ?? el.getAttribute('aria-checked') ?? null
         const keep = Boolean(role || aria || interactive || landmark || states !== null)
         const name = (aria ?? el.textContent ?? '').replace(/\s+/g, ' ').trim().slice(0, 80)
-        if (keep && name) out.push({ role: role ?? tag, name, depth, state: states })
+        // 归属区域：最近的、带 zone 语义的祖先——没有它，两边的"同名元素"可能分属不同区域，
+        // 数量对上也是假对上（C-G 那轮就这么漏过一版）。
+        const regionOf = (n) => {
+          let cur = n.parentElement
+          while (cur) {
+            const tag2 = cur.tagName?.toLowerCase()
+            const r2 = cur.getAttribute?.('role')
+            if (
+              cur.dataset?.zone ||
+              cur.dataset?.component ||
+              cur.dataset?.section ||
+              ['complementary', 'banner', 'main', 'navigation', 'tabpanel', 'dialog', 'region'].includes(r2) ||
+              ['header', 'aside', 'main', 'nav', 'section'].includes(tag2)
+            )
+              return (
+                cur.dataset?.zone ||
+                cur.dataset?.component ||
+                cur.dataset?.section ||
+                ZONE[r2] ||
+                ZONE[tag2] ||
+                r2 ||
+                tag2
+              )
+            cur = cur.parentElement
+          }
+          return null
+        }
+        // 可见性：display:none / 尺寸为 0 的元素不该算"有"（MCP 弹窗里隐藏的历史节点曾把两边计数都放大）
+        const rect = el.getBoundingClientRect()
+        const visible = rect.width > 0 && rect.height > 0
+        // 区域兜底用几何：两边的 DOM 约定不一样，靠语义祖先只能覆盖一半；
+        // 位置是"用户看到的区域"，比 role 更接近事实（pi-web 有一堆无语义 div）。
+        const zoneByGeometry = () => {
+          if (!visible) return null
+          if (rect.top < 56) return '顶栏'
+          if (rect.left + rect.width / 2 < 320) return '侧栏'
+          if (rect.left > window.innerWidth - 560) return '右栏'
+          return '主区'
+        }
+        // 键盘绑定：明确声明的快捷键要单列（快捷键是最容易"看着有其实没绑"的一项）
+        const keys =
+          el.getAttribute('aria-keyshortcuts') ??
+          (el.getAttribute('data-hotkey') || null) ??
+          null
+        if (keep && name)
+          out.push({
+            role: role ?? tag,
+            name,
+            depth,
+            state: states,
+            region: regionOf(el) ?? zoneByGeometry(),
+            visible,
+            keys,
+          })
         // 必须无条件下沉：早先把 `continue` 放在递归前，导致无语义的容器（div/ul/section）
         // 整棵子树被跳过，两边采到的元素数根本不是一个口径。
         walk(el, depth + 1)
@@ -87,6 +157,10 @@ const FLOWS = {
       contains: /会话|侧栏|设置/,
       open: async (page) => {
         await page.waitForTimeout(2000)
+        // 壳的「文件」页签也要拍：它是壳的一部分（pi-web 的文件区一直显示在侧栏里）
+        const filesTab = page.getByRole('tab', { name: /文件/ })
+        if (await filesTab.count()) await filesTab.first().click()
+        await page.waitForTimeout(1200)
       },
     },
   },
@@ -101,14 +175,31 @@ if (!flow) {
   process.exit(2)
 }
 
+// 只拍一侧：`--side evo` 时复用上次落盘的 pi-web 快照。
+// 理由：pi-web 是参照系，它的快照只有在夹具或参照实现变化时才需要重拍；
+// 每次改完 evo-pi 都去起两个服务（还带信任流程）纯属浪费。
+const side = process.argv.includes('--side')
+  ? process.argv[process.argv.indexOf('--side') + 1]
+  : 'both'
+if (!['both', 'evo', 'piweb'].includes(side)) {
+  console.error(`未知 --side ${side}，可用：both | evo | piweb`)
+  process.exit(2)
+}
+
 const browser = await chromium.launch()
-const pi = await shot(browser, flow.pi.url(), flow.pi.open, flow.pi.scope, flow.pi.contains)
-const evo = await shot(browser, flow.evo.url(), flow.evo.open, flow.evo.scope, flow.evo.contains)
+const pi =
+  side === 'evo'
+    ? JSON.parse(readFileSync(out(flowName, 'piweb'), 'utf8'))
+    : await shot(browser, flow.pi.url(), flow.pi.open, flow.pi.scope, flow.pi.contains)
+const evo =
+  side === 'piweb'
+    ? JSON.parse(readFileSync(out(flowName, 'evopi'), 'utf8'))
+    : await shot(browser, flow.evo.url(), flow.evo.open, flow.evo.scope, flow.evo.contains)
 await browser.close()
 
 mkdirSync(outDir, { recursive: true })
-writeFileSync(out(flowName, 'piweb'), `${JSON.stringify(pi, null, 2)}\n`)
-writeFileSync(out(flowName, 'evopi'), `${JSON.stringify(evo, null, 2)}\n`)
+if (side !== 'evo') writeFileSync(out(flowName, 'piweb'), `${JSON.stringify(pi, null, 2)}\n`)
+if (side !== 'piweb') writeFileSync(out(flowName, 'evopi'), `${JSON.stringify(evo, null, 2)}\n`)
 
 const nameOf = (e) => `${e.role}:${e.name}`
 const piNames = new Set(pi.entries.map(nameOf))

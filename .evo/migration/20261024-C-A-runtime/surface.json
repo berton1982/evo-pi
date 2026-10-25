@@ -1,0 +1,623 @@
+{
+  "generatedAt": "2026-10-24T00:59:36.614Z",
+  "sources": [
+    {
+      "dir": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "files": 1,
+      "points": 54
+    },
+    {
+      "dir": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "files": 1,
+      "points": 27
+    },
+    {
+      "dir": "ref_projects/pi-web/lib/mcp-host.ts",
+      "files": 1,
+      "points": 0
+    },
+    {
+      "dir": "ref_projects/pi-web/lib/subagents.ts",
+      "files": 1,
+      "points": 0
+    }
+  ],
+  "totals": {
+    "points": 81,
+    "byKind": {
+      "command": 70,
+      "api": 11
+    }
+  },
+  "entries": [
+    {
+      "id": "SF-AS-c01f770",
+      "kind": "command",
+      "text": "mcp",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2229
+    },
+    {
+      "id": "SF-AS-c03e0d7",
+      "kind": "command",
+      "text": "message_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1536
+    },
+    {
+      "id": "SF-AS-c0b9b74",
+      "kind": "command",
+      "text": "auto_compaction_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1702
+    },
+    {
+      "id": "SF-AS-c159587",
+      "kind": "command",
+      "text": "auto_compaction_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1696
+    },
+    {
+      "id": "SF-AS-c1a6811",
+      "kind": "command",
+      "text": "extension_ui_closed",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1716
+    },
+    {
+      "id": "SF-AS-c21aa25",
+      "kind": "command",
+      "text": "connected",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1431
+    },
+    {
+      "id": "SF-AS-c24e782",
+      "kind": "command",
+      "text": "confirm",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1156
+    },
+    {
+      "id": "SF-AS-c307621",
+      "kind": "command",
+      "text": "copy",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2243
+    },
+    {
+      "id": "SF-AS-c3c3168",
+      "kind": "command",
+      "text": "add",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 278
+    },
+    {
+      "id": "SF-AS-c3e55f0",
+      "kind": "command",
+      "text": "message_update",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1537
+    },
+    {
+      "id": "SF-AS-c4950aa",
+      "kind": "command",
+      "text": "editor",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1158
+    },
+    {
+      "id": "SF-AS-c4c219b",
+      "kind": "command",
+      "text": "auto_retry_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1690
+    },
+    {
+      "id": "SF-AS-c5199d2",
+      "kind": "command",
+      "text": "notify",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1161
+    },
+    {
+      "id": "SF-AS-c58cb90",
+      "kind": "command",
+      "text": "reload",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2199
+    },
+    {
+      "id": "SF-AS-c5934f6",
+      "kind": "command",
+      "text": "tool_execution_update",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1627
+    },
+    {
+      "id": "SF-AS-c5ba9cb",
+      "kind": "command",
+      "text": "set_editor_text",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1188
+    },
+    {
+      "id": "SF-AS-c5d62f0",
+      "kind": "command",
+      "text": "remove",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 291
+    },
+    {
+      "id": "SF-AS-c5df14b",
+      "kind": "command",
+      "text": "auto-compact",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2180
+    },
+    {
+      "id": "SF-AS-c5f0c05",
+      "kind": "command",
+      "text": "extension_ui_request",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1713
+    },
+    {
+      "id": "SF-AS-c65aa1c",
+      "kind": "command",
+      "text": "auto_retry_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1693
+    },
+    {
+      "id": "SF-AS-c65ab1a",
+      "kind": "command",
+      "text": "prompt_error",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1527
+    },
+    {
+      "id": "SF-AS-c6f60fd",
+      "kind": "command",
+      "text": "clone",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2252
+    },
+    {
+      "id": "SF-AS-c76e2bb",
+      "kind": "command",
+      "text": "message_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1575
+    },
+    {
+      "id": "SF-AS-c832601",
+      "kind": "command",
+      "text": "name",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2211
+    },
+    {
+      "id": "SF-AS-c87a825",
+      "kind": "command",
+      "text": "setTitle",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1185
+    },
+    {
+      "id": "SF-AS-c916b58",
+      "kind": "command",
+      "text": "compaction_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1703
+    },
+    {
+      "id": "SF-AS-c93693c",
+      "kind": "command",
+      "text": "input",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1157
+    },
+    {
+      "id": "SF-AS-c971e5c",
+      "kind": "command",
+      "text": "mark_oldest_exiting",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 289
+    },
+    {
+      "id": "SF-AS-c977fb9",
+      "kind": "command",
+      "text": "queue_update",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1684
+    },
+    {
+      "id": "SF-AS-c9ffd1c",
+      "kind": "command",
+      "text": "agent_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1463
+    },
+    {
+      "id": "SF-AS-ca4434b",
+      "kind": "command",
+      "text": "compaction_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1697
+    },
+    {
+      "id": "SF-AS-ca4b361",
+      "kind": "command",
+      "text": "agent_settled",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1492
+    },
+    {
+      "id": "SF-AS-ca68d34",
+      "kind": "command",
+      "text": "tool_execution_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1613
+    },
+    {
+      "id": "SF-AS-cafa72d",
+      "kind": "command",
+      "text": "agent_start",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1451
+    },
+    {
+      "id": "SF-AS-cb1007b",
+      "kind": "command",
+      "text": "setWidget",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1177
+    },
+    {
+      "id": "SF-AS-cc3068c",
+      "kind": "command",
+      "text": "custom",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1191
+    },
+    {
+      "id": "SF-AS-ccaa689",
+      "kind": "command",
+      "text": "setStatus",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1169
+    },
+    {
+      "id": "SF-AS-cdb5052",
+      "kind": "command",
+      "text": "select",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1155
+    },
+    {
+      "id": "SF-AS-cdba4c4",
+      "kind": "command",
+      "text": "extension_error",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1530
+    },
+    {
+      "id": "SF-AS-ce664a1",
+      "kind": "command",
+      "text": "tool_execution_end",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1666
+    },
+    {
+      "id": "SF-AS-ce6e5fe",
+      "kind": "command",
+      "text": "compact",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2166
+    },
+    {
+      "id": "SF-AS-ce9f56d",
+      "kind": "command",
+      "text": "prompt_done",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1507
+    },
+    {
+      "id": "SF-AS-cfbe327",
+      "kind": "command",
+      "text": "session",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2219
+    },
+    {
+      "id": "SF-AS-p1b22ec",
+      "kind": "api",
+      "text": "GET /api/sessions/[id]/state",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 766,
+      "method": "GET",
+      "path": "/api/sessions/[id]/state"
+    },
+    {
+      "id": "SF-AS-p790d77",
+      "kind": "api",
+      "text": "PUT /api/models/default",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 2109,
+      "method": "PUT",
+      "path": "/api/models/default"
+    },
+    {
+      "id": "SF-AS-p828f82",
+      "kind": "api",
+      "text": "POST /api/agent/[id]/lease",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1072,
+      "method": "POST",
+      "path": "/api/agent/[id]/lease"
+    },
+    {
+      "id": "SF-AS-pb0a225",
+      "kind": "api",
+      "text": "POST /api/agent/new",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 898,
+      "method": "POST",
+      "path": "/api/agent/new"
+    },
+    {
+      "id": "SF-AS-pb8e5db",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 633,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pb8e5db-2",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1234,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pb8e5db-3",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1310,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pb8e5db-4",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1338,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pb8e5db-5",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1366,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pb8e5db-6",
+      "kind": "api",
+      "text": "GET /api/agent/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 1476,
+      "method": "GET",
+      "path": "/api/agent/[id]"
+    },
+    {
+      "id": "SF-AS-pc72c06",
+      "kind": "api",
+      "text": "GET /api/sessions/[id]",
+      "file": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "line": 654,
+      "method": "GET",
+      "path": "/api/sessions/[id]"
+    },
+    {
+      "id": "SF-RM-c0174a4",
+      "kind": "command",
+      "text": "set_model",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1027
+    },
+    {
+      "id": "SF-RM-c023d4c",
+      "kind": "command",
+      "text": "set_thinking_level",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1158
+    },
+    {
+      "id": "SF-RM-c0e0d5f",
+      "kind": "command",
+      "text": "get_state",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 991
+    },
+    {
+      "id": "SF-RM-c1cdf6b",
+      "kind": "command",
+      "text": "set_tools",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1271
+    },
+    {
+      "id": "SF-RM-c1ffc14",
+      "kind": "command",
+      "text": "set_auto_compaction",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1200
+    },
+    {
+      "id": "SF-RM-c278383",
+      "kind": "command",
+      "text": "bash",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1324
+    },
+    {
+      "id": "SF-RM-c28e586",
+      "kind": "command",
+      "text": "compact",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1171
+    },
+    {
+      "id": "SF-RM-c29dd26",
+      "kind": "command",
+      "text": "set_auto_retry",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1319
+    },
+    {
+      "id": "SF-RM-c2b82e7",
+      "kind": "command",
+      "text": "steer",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1211
+    },
+    {
+      "id": "SF-RM-c2c71b5",
+      "kind": "command",
+      "text": "clear_queue",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1205
+    },
+    {
+      "id": "SF-RM-c375d83",
+      "kind": "command",
+      "text": "abort",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 971
+    },
+    {
+      "id": "SF-RM-c41b79d",
+      "kind": "command",
+      "text": "fork",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1045
+    },
+    {
+      "id": "SF-RM-c49e5b1",
+      "kind": "command",
+      "text": "abort_compaction",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1304
+    },
+    {
+      "id": "SF-RM-c58806f",
+      "kind": "command",
+      "text": "extension_ui_response",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1309
+    },
+    {
+      "id": "SF-RM-c765106",
+      "kind": "command",
+      "text": "abort_bash",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1348
+    },
+    {
+      "id": "SF-RM-c7e4379",
+      "kind": "command",
+      "text": "reload",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1277
+    },
+    {
+      "id": "SF-RM-c896da2",
+      "kind": "command",
+      "text": "fork_branch",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1100
+    },
+    {
+      "id": "SF-RM-ca05e24",
+      "kind": "command",
+      "text": "get_commands",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1242
+    },
+    {
+      "id": "SF-RM-caa167e",
+      "kind": "command",
+      "text": "extension_ui_input",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1314
+    },
+    {
+      "id": "SF-RM-cbb9684",
+      "kind": "command",
+      "text": "prompt",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 844
+    },
+    {
+      "id": "SF-RM-cc5cc8c",
+      "kind": "command",
+      "text": "get_session_stats",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1189
+    },
+    {
+      "id": "SF-RM-ce8d923",
+      "kind": "command",
+      "text": "set_session_name",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1181
+    },
+    {
+      "id": "SF-RM-cee45c9",
+      "kind": "command",
+      "text": "get_tools",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1223
+    },
+    {
+      "id": "SF-RM-cef2945",
+      "kind": "command",
+      "text": "follow_up",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1217
+    },
+    {
+      "id": "SF-RM-cf393b5",
+      "kind": "command",
+      "text": "clone",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1123
+    },
+    {
+      "id": "SF-RM-cf88af3",
+      "kind": "command",
+      "text": "navigate_tree",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1151
+    },
+    {
+      "id": "SF-RM-cfb3e57",
+      "kind": "command",
+      "text": "get_last_assistant_text",
+      "file": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "line": 1196
+    }
+  ]
+}

@@ -20,26 +20,30 @@
     ],
     "use-cases": [
       "packages/core/src/session/use-cases",
-      "packages/core/src/mcp/use-cases"
+      "packages/core/src/mcp/use-cases",
+      "packages/core/src/*/use-cases/**"
     ],
     "domain": [
       "packages/core/src/_shared/domain",
       "packages/core/src/session/domain",
       "packages/core/src/mcp/domain",
-      "packages/core/src/system/domain"
+      "packages/core/src/system/domain",
+      "packages/core/src/*/domain/**"
     ],
     "ports": [
+      "packages/core/src/session/domain/ports",
       "packages/core/src/mcp/domain/ports",
-      "packages/core/src/session/domain/ports"
+      "packages/core/src/*/domain/ports/**"
     ],
     "adapters": [
-      "packages/core/src/mcp/adapters",
       "packages/core/src/session/adapters",
-      "packages/core/src/system/adapters"
+      "packages/core/src/mcp/adapters",
+      "packages/core/src/*/adapters/**"
     ],
     "infrastructure": [
       "packages/core/src/session/infrastructure",
-      "packages/core/src/mcp/infrastructure"
+      "packages/core/src/mcp/infrastructure",
+      "packages/core/src/*/infrastructure/**"
     ]
   },
   "forbiddenEdges": [

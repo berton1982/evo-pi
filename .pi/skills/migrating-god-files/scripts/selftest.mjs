@@ -15,7 +15,17 @@ import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
+import { checkUiProto } from './lib/capspec.mjs'
+import { checkContractInventory, checkContractAlign, checkSchema } from './lib/contracts.mjs'
 import { checkExternalIo } from './lib/external.mjs'
+import { checkFidelity } from './lib/fidelity.mjs'
+import { runFrontendArch } from './lib/frontend.mjs'
+import { checkEnvDoc } from './lib/envdoc.mjs'
+import { globToRegExp, layerOf } from './lib/placement.mjs'
+import { runStubPlan, runIntegration, runAcceptance } from './lib/delivery.mjs'
+import { runOwnershipTypes } from './lib/ownership.mjs'
+import { runSymbolParity } from './lib/parity.mjs'
+import { resolveAnchors } from './lib/specs.mjs'
 
 const sha8 = (p) => createHash('sha1').update(readFileSync(p)).digest('hex').slice(0, 8)
 const refreshParitySha = () => {
@@ -847,6 +857,19 @@ try {
       '- 不做会话面渲染、不做文件预览、不做 MCP 配置。',
       '- 不做性能优化（本能力不涉及渲染热点）。',
       '',
+      '## 4. 渲染边界',
+      '',
+      table(
+        ['区域', '宿主', '说明'],
+        [
+          ['侧栏', 'shell', '壳负责摆放与开关，本能力只填内容'],
+          ['主区', 'self', '本能力渲染消息列表与输入区'],
+          ['顶栏', 'other:C-B', '顶栏入口属会话编排能力，本能力不画'],
+        ],
+      ),
+      '',
+      '本能力不渲染主区顶栏与设置弹窗——它们在别的能力里。',
+      '',
     ].join('\n'),
   )
   adv('cap', 'C1')
@@ -895,8 +918,9 @@ try {
       table(
         ['行区间', '读到什么'],
         [
-          ['L1-L600', '常量导出'],
-          ['L601-L1200', '常量导出'],
+          ['L1-L600', '常量导出（fake-src/Cap.tsx / Fixture.tsx 的结构）'],
+          ['L601-L1200', '常量导出（packages/web/src/cap-x/foo.ts 的夹具）'],
+          ['L1-L1200', '指令来源 state.mjs 与 helpers.ts 的调用点已读'],
         ],
       ),
     ].join('\n'),
@@ -1077,6 +1101,18 @@ try {
   r = run(SURFACE, ['--root', root, '--run', states.cap, '--src', 'fake-src'])
   expect('C2 收尾恢复表面基线', r, 0)
 
+  {
+    // 渲染边界：能力只迁自己的行，但屏幕上的 chrome 可能是别人的
+    const charterPath = join(root, states.cap, 'CHARTER.md')
+    const charterGood = readFileSync(charterPath, 'utf8')
+    writeFileSync(charterPath, charterGood.replace('## 4. 渲染边界', '## 4. 界面边界'))
+    r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C0'])
+    expectContains('RB 缺「渲染边界」→ C0 红', r, '渲染边界')
+    writeFileSync(charterPath, charterGood)
+    r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C0'])
+    expectNotContains('RB 补齐渲染边界 → C0 绿', r, 'C0:renderBoundary）\n')
+  }
+
   adv('cap', 'C3')
   // C3 规格门：用户故事 + 多文件多行区间 + 交互形态 + 布局映射，且必须人签
   w(
@@ -1144,6 +1180,18 @@ try {
     ].join('\n'),
   )
   expect('C3 规格未签字 → 拒绝推进', advCode('cap'), 1)
+    {
+      // 引用谁就得读过谁：spec.md 里点名一个 readlog 没记录的文件 → 红
+      const specPath = join(root, states.cap, 'spec.md')
+      const specGood = readFileSync(specPath, 'utf8')
+      writeFileSync(specPath, `${specGood}\n顶栏入口见 ref_projects/pi-web/components/NotReadYet.tsx:42 的实现。\n`)
+      r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
+      expectContains('RLC 原型引用了没读过的文件 → C3 红', r, '没有阅读记录')
+      writeFileSync(specPath, specGood)
+      r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
+      expectNotContains('RLC 恢复后不再报缺记录', r, '没有阅读记录')
+    }
+
   expect(
     'C3 规格由 agent 代签 → 红',
     run(STATE, [
@@ -1379,6 +1427,13 @@ try {
       },
     ],
   }
+  // 夹具里的每个元素都要有 runtime：业务规则 server、UI 侧 client（runtimeFit 的判据）
+  for (const e of manifest.elements) {
+    const t = e.landing ?? e.file ?? ''
+    e.runtime ??= t.includes('/ports/') ? 'both' : t.startsWith('packages/core/') ? 'server' : 'client'
+  }
+  for (const arr of [manifest.components, manifest.hooks, manifest.stores])
+    for (const e of arr ?? []) e.runtime ??= 'client'
   w(`${states.cap}/design/manifest.json`, `${JSON.stringify(manifest, null, 2)}\n`)
   w(
     `${states.cap}/design/interfaces.ts`,
@@ -1435,6 +1490,16 @@ try {
         '  H-01 --> D-U-01',
         '  D-U-01 ..> D-P-01 : 调用端口',
         '```',
+        '',
+        '## 区域 → 入口清单',
+        '',
+        '| 区域 | 入口 | 源 |',
+        '|---|---|---|',
+        '| 空态表单 | 名字 | fake-src/Cap.tsx:12 |',
+        '| 空态表单 | 作用域 | fake-src/Cap.tsx:3 |',
+        '| 空态表单 | 传输 | fake-src/Cap.tsx:4 |',
+        '| 空态表单 | 命令 | fake-src/Cap.tsx:5 |',
+        '| 空态表单 | 添加 | fake-src/Cap.tsx:6 |',
         '',
         '## 前端最佳实践',
         '',
@@ -1902,9 +1967,28 @@ try {
         ['任务', '目的', '设计元素', '行为', '验收命令', '测试 ID'],
         [
           ['T-01', '拉取会话上下文', 'D-U-01', 'B-01', '`node -e "process.exit(0)"`', 'T-01'],
-          ['T-02', '会话行点击切换', 'D-B-01', 'B-01', '`node -e "process.exit(0)"`', 'T-01'],
+          // 观察门只认"会画出界面"的任务（元素含 C-/H-/ST-），这也是 C-A 那类基础设施 run 能免观察的原因
+          ['T-02', '会话行点击切换', 'C-01 D-B-01', 'B-01', '`node -e "process.exit(0)"`', 'T-01'],
         ],
       ),
+      '',
+    ].join('\n'),
+  )
+  // 实施前的观察（C5 observations 门）：T-01 已 done 不追溯，只需 T-02
+  w(
+    `${states.cap}/observations/T-02.md`,
+    [
+      '# T-02 会话行点击切换 — 观察',
+      '',
+      '## 看到什么',
+      'pi-web `components/SessionTree.tsx:412` 行是 button，名称就是会话标题；',
+      '点击后右侧换内容，选中态用 aria-current 表达。',
+      '',
+      '## 差在哪',
+      '我们的行是 div + onClick，没有 aria-current，读屏看不出当前选中。',
+      '',
+      '## 决定',
+      '改成 button + aria-current，选中态不靠背景色。',
       '',
     ].join('\n'),
   )
@@ -2084,6 +2168,17 @@ try {
       '',
       '未分类差异：0',
       '',
+      '## 保真缺口组',
+      '',
+      // 覆盖率只说明"差多少"，这张表说明"打算怎么办"——P7 的主判据在这一张表上
+      table(
+        ['缺口组', '条数', '处置', '依据'],
+        [
+          ['行内连接态', '1', 'fix', 'pi-web 行名带连接态，C5 已补 aria-label'],
+          ['项目选择器', '0', 'done', '本能力不涉及项目切换，无该组'],
+        ],
+      ),
+      '',
       '## 渲染预算',
       '',
       '会话切换 1 次渲染（上限 2）；流式更新 1 次/帧（上限 1）。',
@@ -2146,6 +2241,21 @@ try {
   signParity()
   r = (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6']))
   expect('FID 未登记的 pi-web 元素 → C6 红', r, 1)
+  // 负例：没有「保真缺口组」表 → 红（覆盖率不是判据的全部）
+  writeFileSync(join(root, states.cap, 'parity.md'), parityText.replace(/## 保真缺口组[\s\S]*?\n## 渲染预算/, '## 渲染预算'))
+  signParity()
+  r = (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6']))
+  expect('FID 缺缺口组表 → C6 红', r, 1)
+  // 负例：处置写成"待定" → 红（闭集 fix/done/砍单/命名/blocked/差异）
+  writeFileSync(
+    join(root, states.cap, 'parity.md'),
+    parityText.replace('| 行内连接态 | 1 | fix |', '| 行内连接态 | 1 | 待定 |'),
+  )
+  signParity()
+  r = (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6']))
+  expect('FID 处置不在闭集 → C6 红', r, 1)
+  writeFileSync(join(root, states.cap, 'parity.md'), parityText)
+  signParity()
   writeFileSync(join(root, states.cap, 'parity.md'), parityText)
   signParity()
 
@@ -2336,6 +2446,31 @@ try {
   r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
   expect('PLACEMENT 恢复后 C4 绿', r, 0)
 
+  // runtimeFit：业务规则落 web / 呈现逻辑落 core / 缺 runtime 都必须红
+  const rtBad = JSON.parse(mGood2)
+  rtBad.elements.find((e) => e.id === 'D-B-01').runtime = 'server'
+  rtBad.elements.find((e) => e.id === 'D-B-01').landing = 'packages/web/src/cap-x/use-cases/open-session.ts'
+  writeFileSync(mPath2, JSON.stringify(rtBad, null, 2))
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
+  expect('RUNTIME 服务端规则落 web → C4 红', r, 1)
+
+  const rtNoRuntime = JSON.parse(mGood2)
+  delete rtNoRuntime.elements.find((e) => e.id === 'D-B-01').runtime
+  writeFileSync(mPath2, JSON.stringify(rtNoRuntime, null, 2))
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
+  expect('RUNTIME 元素没声明 runtime → C4 红', r, 1)
+
+  const rtClientCore = JSON.parse(mGood2)
+  rtClientCore.elements.find((e) => e.id === 'D-U-01').runtime = 'client'
+  rtClientCore.elements.find((e) => e.id === 'D-U-01').landing =
+    'packages/core/src/cap-x/domain/present.ts'
+  writeFileSync(mPath2, JSON.stringify(rtClientCore, null, 2))
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
+  expect('RUNTIME 呈现逻辑落 core → C4 红', r, 1)
+  writeFileSync(mPath2, mGood2)
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
+  expect('RUNTIME 恢复后 C4 绿', r, 0)
+
   // 度量与清单对账：把落点文件撑到 400 行以上，清单还写 pass → 必须红
   const landedPath = join(root, 'packages/web/src/cap-x/foo.ts')
   const landedGood = readFileSync(landedPath, 'utf8')
@@ -2345,6 +2480,16 @@ try {
   writeFileSync(landedPath, landedGood)
   r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5'])
   expect('REVIEW 恢复后 C5 绿', r, 0)
+
+  // 实施前的观察：删掉 observations/T-02.md → C5 红（不能只靠自觉）
+  const obsPath = join(root, states.cap, 'observations/T-02.md')
+  const obsGood = readFileSync(obsPath, 'utf8')
+  writeFileSync(obsPath, '# 空的\n')
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5'])
+  expect('OBS 观察缺三段 → C5 红', r, 1)
+  writeFileSync(obsPath, obsGood)
+  r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5'])
+  expect('OBS 恢复后 C5 绿', r, 0)
 
   r = run(VERIFY, [
     '--root',
@@ -2440,21 +2585,25 @@ try {
     else bad('EXTERNAL 契约里没有该命令 → 红', JSON.stringify(wrongWire.problems))
   }
 
-  // 播种：幂等且保留人工填写
+  // 播种：幂等且保留人工填写（先播一次拿到真实行，再改一行，再播一次看是否被保留）
   const mapFile = join(root, states.cap, 'symbol-map.md')
+  run(SEED, ['--root', root, '--run', states.cap])
   const mapBefore = readFileSync(mapFile, 'utf8')
-  const mapEdited = mapBefore.replace('| `v0` | L1 | F-01 |', '| `v0` | L1 | F-77 |')
-  writeFileSync(mapFile, mapEdited)
-  r = run(SEED, ['--root', root, '--run', states.cap])
-  expect('SEED 播种幂等', r, 0)
-  const mapAfter = readFileSync(mapFile, 'utf8')
-  if (mapAfter.includes('| `v0` | L1 | F-77 |')) ok('SEED 保留人工填写的 owner')
-  else
-    bad(
-      'SEED 保留人工填写的 owner',
-      mapAfter.split('\n').find((l) => l.includes('v0')),
-    )
-  writeFileSync(mapFile, mapBefore)
+  const mapEdited = mapBefore.replace(
+    /^(\|[^|]+\| `v0` \|[^|]+\| )(待定|[A-Z]{1,3}-\d+)( \|)/m,
+    '$1F-77$3',
+  )
+  if (mapEdited.includes('F-77')) {
+    writeFileSync(mapFile, mapEdited)
+    r = run(SEED, ['--root', root, '--run', states.cap])
+    expect('SEED 播种幂等', r, 0)
+    const mapAfter = readFileSync(mapFile, 'utf8')
+    if (mapAfter.includes('F-77')) ok('SEED 保留人工填写的 owner')
+    else bad('SEED 保留人工填写的 owner', mapAfter.split('\n').find((l) => l.includes('v0')))
+    writeFileSync(mapFile, mapBefore)
+  } else {
+    bad('SEED 保留人工填写的 owner', 'symbol-map 里没有 `v0` 行（播种没覆盖到夹具符号）')
+  }
 
   // 批量认领表面点
   const manifestPath2 = join(root, states.cap, 'design/manifest.json')
@@ -2561,12 +2710,27 @@ try {
   expect('check-symbols 对账平', r, 0)
   const mapPath = join(root, states.cap, 'symbol-map.md')
   const mapGood = readFileSync(mapPath, 'utf8')
-  writeFileSync(mapPath, mapGood.replace(/^\| `v7`.*$/m, ''))
+  // 多 god 之后 symbol-map 的前两列是「文件 | 符号」，按符号名定位而不是按行首定位
+  writeFileSync(mapPath, mapGood.replace(/^\| [^|]+ \| `v7` \|.*$/m, ''))
   r = run(SYMBOLS, ['--root', root, '--run', states.cap])
   expect('check-symbols 漏符号 → 红', r, 1)
   writeFileSync(mapPath, mapGood)
   r = run(SYMBOLS, ['--root', root, '--run', states.cap, '--bogus'])
   expect('check-symbols 未知参数 → exit 2', r, 2)
+
+  // 基础设施能力没有界面：uiProto 允许「## 不适用」，但不许只写四个字
+  if (!checkUiProto({ md: '## 不适用\n没有界面\n' }).ok) ok('UIPROTO 不适用但理由太短 → 红')
+  else bad('UIPROTO 不适用但理由太短 → 红', '仍判绿')
+  if (
+    checkUiProto({
+      md: '## 不适用\n本能力是运行时基础设施，不渲染界面：证据 hooks/useAgentSession.ts:342 只返回状态与动作。\n',
+    }).ok
+  )
+    ok('UIPROTO 不适用 + 理由 + 证据 → 绿')
+  else bad('UIPROTO 不适用 + 理由 + 证据 → 绿', '仍判红')
+  if (!checkUiProto({ md: '```text\n┌──┐\n│a │\n└──┘\n```\n' }).ok)
+    ok('UIPROTO 有 ASCII 但没有交互态 → 仍按界面能力判红')
+  else bad('UIPROTO 有 ASCII 但没有交互态 → 仍按界面能力判红', '判绿了')
 
   r = run(SPECS, ['--root', root, '--run', states.cap])
   expect('check-specs 通过', r, 0)
@@ -2851,9 +3015,205 @@ try {
   else console.log(`\n（KEEP=1：临时根保留在 ${root}）`)
 }
 
+// ─── 第四批反向用例：run 级，用**独立负例 run**（不碰正向夹具） ───
+{
+  // 独立负例 run：只有一个 god + 最小 CHARTER，用来单独踩某道门
+  const neg = '.evo/migration/20990101-neg'
+  const godLines = 4
+  const nogod = (extra = {}) => ({
+    schemaVersion: 3,
+    skill: 'migrating-god-files',
+    skillVersion: 3,
+    scope: 'capability',
+    rLevel: 'R1',
+    gods: [{ path: 'fake-src/neg.ts', lines: godLines, sha1: 'deadbeef', symbols: 2 }],
+    phase: 'C0',
+    phaseStatus: 'in_progress',
+    phases: { C0: { status: 'in_progress' } },
+    signoffs: {},
+    decisions: [],
+    tasks: {},
+    history: [],
+    closed: false,
+    ...extra,
+  })
+  w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
+  w(`${neg}/CHARTER.md`, `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` ${godLines} 行\n\n## 2. 基线指纹\n\n\`deadbeef\` ${godLines} 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1–L6\n\n## 6. 已知风险\n\n- 无\n`)
+  w('fake-src/neg.ts', 'const a = 1\nconst b = 2\nconst c = 3\nconst d = 4\n')
+
+  const redKinds = (phase) => {
+    const res = run(CHECK, ['--root', root, '--run', neg, '--phase', phase, '--json'])
+    try {
+      const j = JSON.parse(res.out)
+      return j.reports.flatMap((r) => r.results || []).filter((x) => !x.ok).map((x) => x.id)
+    } catch {
+      return [`<parse-failed:${res.out.slice(0, 80)}>`]
+    }
+  }
+
+  // RLEVEL：缺 R 级
+  w(`${neg}/state.json`, `${JSON.stringify(nogod({ rLevel: undefined }), null, 2)}\n`)
+  if (redKinds('C0').some((id) => id.startsWith('C0:rlevel'))) ok('RLEVEL 缺 R 级 → 红')
+  else bad('RLEVEL 缺 R 级 → 红', redKinds('C0').join(','))
+
+  // GODFINGERPRINT：行数与源码不符
+  w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2).replace(`"lines": ${godLines}`, '"lines": 999')}\n`)
+  if (redKinds('C0').some((id) => id.startsWith('C0:godFingerprint')))
+    ok('GODFINGERPRINT 行数不符 → 红')
+  else bad('GODFINGERPRINT 行数不符 → 红', redKinds('C0').join(','))
+
+  // HEADING：CHARTER 缺必需小节
+  w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
+  w(
+    `${neg}/CHARTER.md`,
+    '# CHARTER — 负例\n\n## 1. 范围\n\n- `fake-src/neg.ts` 4 行\n',
+  )
+  if (redKinds('C0').some((id) => id.startsWith('C0:heading:CHARTER.md:## 2. 基线指纹')))
+    ok('HEADING 缺必需小节 → 红')
+  else bad('HEADING 缺必需小节 → 红', redKinds('C0').join(','))
+
+  // LINES：归属区间有缝
+  w(`${neg}/CHARTER.md`, `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` 4 行\n\n## 2. 基线指纹\n\n\`deadbeef\` 4 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1\n\n## 6. 已知风险\n\n- 无\n`)
+  w(
+    `${neg}/ownership.md`,
+    '# 归属切分\n\n## 1. 归属区间表\n\n| 区间 | 设计元素 | 类型 | 判据 |\n| --- | --- | --- | --- |\n| L1-L2 | D-U-01 | feature | 前两行 |\n',
+  )
+  if (redKinds('C1').some((id) => id.startsWith('C1:lines'))) ok('LINES 归属区间有缝 → 红')
+  else bad('LINES 归属区间有缝 → 红', redKinds('C1').join(','))
+
+  // PROGRAMPREREQ：能力没关联 program run
+  w(`${neg}/state.json`, `${JSON.stringify(nogod({ programRun: undefined }), null, 2)}\n`)
+  if (redKinds('C0').some((id) => id.startsWith('C0:programPrereq')))
+    ok('PROGRAMPREREQ 没关联 program → 红')
+  else bad('PROGRAMPREREQ 没关联 program → 红', redKinds('C0').join(','))
+
+  // BEHAVIORS：behaviors.md 里没有 B- 行
+  w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
+  w(`${neg}/behaviors.md`, '# 行为\n\n## 行为清单\n\n| id | 说明 | 证据 | 脚本 |\n| --- | --- | --- | --- |\n| X-1 | 不是 B 行 | fake-src/neg.ts:1 | s-001 |\n')
+  w(`${neg}/harness/registry.json`, `${JSON.stringify({ scripts: [] }, null, 2)}\n`)
+  if (redKinds('C3').some((id) => id.startsWith('C3:behaviors')))
+    ok('BEHAVIORS 没有 B- 行 → 红')
+  else bad('BEHAVIORS 没有 B- 行 → 红', redKinds('C3').join(','))
+
+  rmSync(join(root, neg), { recursive: true, force: true })
+}
+
+// ─── 第二批反向用例：lib 级，直接喂坏输入 ───
+{
+  const envBad = checkEnvDoc('## 端口\n\n没有表格也没有关键条目\n')
+  if (!envBad.ok) ok('ENV 环境矩阵缺项 → 红')
+  else bad('ENV 环境矩阵缺项 → 红', '空文档被判绿')
+
+  const feBad = runFrontendArch({ programDir: root, rules: {} })
+  if (!feBad.ok) ok('FRONTEND rules 缺 frontend → 红')
+  else bad('FRONTEND rules 缺 frontend → 红', '未报缺 frontend')
+
+  const tmpProg = mkdtempSync(join(tmpdir(), 'stubplan-'))
+  const spBad = runStubPlan({ programDir: tmpProg, root })
+  if (!spBad.ok) ok('STUBPLAN 缺桩清单 → 红')
+  else bad('STUBPLAN 缺桩清单 → 红', '缺文件被判绿')
+  rmSync(tmpProg, { recursive: true, force: true })
+
+  const tmpCap = mkdtempSync(join(tmpdir(), 'integ-'))
+  writeFileSync(
+    join(tmpCap, 'integration.md'),
+    [
+      '## 替换表',
+      '',
+      '| 命令 | 桩 | 真实现 | 联调证据 |',
+      '| --- | --- | --- | --- |',
+      '| POST /api/x | 假传输 | 桩 | gates/C5.json |',
+      '',
+    ].join('\n'),
+  )
+    // surface 必须给出这条命令，否则"0 个 HTTP 命令"会被判绿（这也是门的一个真实边界）
+  const itBad = runIntegration({
+    capabilityDir: tmpCap,
+    surface: { entries: [{ kind: 'api', text: 'POST /api/x' }] },
+    root,
+  })
+  if (!itBad.ok) ok('INTEGRATION 真实现写成桩 → 红')
+  else bad('INTEGRATION 真实现写成桩 → 红', '写了"桩"仍判绿')
+
+  writeFileSync(
+    join(tmpCap, 'acceptance.md'),
+    ['## 验收阶梯', '', '| 层级 | 命令 | 结果 | 证据 | 签字 |', '| --- | --- | --- | --- | --- |', '| L1 | vitest | pass | gates/C5.json | |', '| L6 | 人工 | pending | | |', ''].join('\n'),
+  )
+  const acBad = runAcceptance({ capabilityDir: tmpCap, surface: { entries: [] }, mode: 'final' })
+  if (!acBad.ok) ok('ACCEPTANCE L6 未签 → 红')
+  else bad('ACCEPTANCE L6 未签 → 红', 'pending 被判绿')
+  rmSync(tmpCap, { recursive: true, force: true })
+
+  const tmpFid = mkdtempSync(join(tmpdir(), 'fid-'))
+  const fidBad = checkFidelity({ runDir: tmpFid, docText: '## 保真缺口组\n\n| 组 |\n| --- |\n' })
+  if (!fidBad.ok) ok('FIDELITY 缺快照 → 红')
+  else bad('FIDELITY 缺快照 → 红', '无快照被判绿')
+  rmSync(tmpFid, { recursive: true, force: true })
+
+  const re = globToRegExp('packages/core/src/*/domain/**')
+  const hit = re.test('packages/core/src/chat/domain/ports/x.ts')
+  const miss = !re.test('packages/web/src/domain/x.ts')
+  // 目录写法（不带 /**）必须同样覆盖子孙：这是 layerOf 的判据，不是 globToRegExp 的
+  // 目录写法（不带通配符）必须自动覆盖子孙：`layerOf` 会给纯目录补 `/**`
+  const dirHit = layerOf('packages/core/src/chat/domain/ports/x.ts', {
+    domain: ['packages/core/src/chat/domain'],
+  }).includes('domain')
+  if (hit && miss && dirHit) ok('GLOB 目录写法覆盖子孙且不跨包')
+  else bad('GLOB 目录写法覆盖子孙且不跨包', JSON.stringify({ hit, miss, dirHit }))
+
+  const invBad = checkContractInventory({
+    surface: { entries: [{ kind: 'api', text: 'GET /api/ghost' }] },
+    wireText: '',
+  })
+  if (!invBad.ok) ok('C2 源码端点未进契约红')
+  else bad('C2 源码端点未进契约红', '空契约被判绿')
+}
+
+// ─── 门自身的反向用例（2026-10-25）：38 道门此前只证明"会绿"，
+// 没证明"会红"。这里直接打 lib 层，不再绕夹具——夹具用例慢且容易互相干扰。
+{
+  const bullets = '- **alpha** (function) …\n'
+  const sym = runSymbolParity({
+    symbolsText: `${bullets}- **beta** (function) …\n`,
+    mapText: '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
+    root,
+  })
+  if (!sym.ok) ok('SYMBOLS 漏符号 → 红')
+  else bad('SYMBOLS 漏符号 → 红', 'runSymbolParity 没报缺失')
+
+  const symOk = runSymbolParity({
+    symbolsText: bullets,
+    mapText: '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
+    root,
+  })
+  if (symOk.ok) ok('SYMBOLS 恢复 → 绿')
+  else bad('SYMBOLS 恢复 → 绿', JSON.stringify(symOk.problems ?? symOk))
+
+  const inv = checkContractInventory({
+    surface: { entries: [{ kind: 'api', name: 'POST /api/ghost-x' }] },
+    wireText: '| 命令 | 方法 | 路径 | 证据 |\n|---|---|---|---|\n| `GET /api/real` | GET | /api/real | a.ts:1 |\n',
+  })
+  if (!inv.ok) ok('C2 源码端点未进契约红')
+  else bad('C2 源码端点未进契约红', '未报缺')
+
+  const align = checkContractAlign('## 对齐表\n\n| 用到的东西 | 契约位置 | 差异处置 |\n|---|---|---|\n| `GET /api/x` | — | — |\n')
+  if (!align.ok) ok('C2 对齐行既无指向也无编号红')
+  else bad('C2 对齐行既无指向也无编号红', '未报缺')
+
+  const own = runOwnershipTypes('## 文件：G.tsx\n\n| 区间 | 元素 | 类型 |\n|---|---|---|\n| L1-L9 | D-U-01 | 乱写 |\n')
+  if (!own.ok) ok('OWNERSHIP 类型非法 → 红')
+  else bad('OWNERSHIP 类型非法 → 红', '未报非法类型')
+
+  // resolveAnchors 直接返回问题清单（数组），不是 {ok}
+  const anchorBad = resolveAnchors([{ file: 'packages/web/src/nope-ghost.ts', line: 12 }], root)
+  if (Array.isArray(anchorBad) && anchorBad.length > 0) ok('SPECS 锚点指向不存在的文件 → 红')
+  else bad('SPECS 锚点指向不存在的文件 → 红', JSON.stringify(anchorBad))
+}
+
 console.log(
   `\n${failures.length ? `\u274c ${failures.length} 个失败 / ${pass} 个通过` : `\u2705 ${pass} 个断言全部通过`}`,
 )
+
 if (failures.length) {
   console.log(failures.map((f) => `- ${f}`).join('\n'))
   process.exit(1)

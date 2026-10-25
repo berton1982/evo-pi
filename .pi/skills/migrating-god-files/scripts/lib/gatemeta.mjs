@@ -79,6 +79,11 @@ export const GATE_META = {
     canCatch: '组件落在 features/shell/app/ui 之外、切片缺 hook/view 骨架、缺 _template 参照、src 根下放组件',
     cannotCatch: '切片内部文件是否还在长大（那是行数/密度判据）',
   },
+  runtimeFit: {
+    layer: 'structure',
+    canCatch: '元素缺 runtime / 服务端规则落 web / 呈现逻辑落 core / web 里出现 use-cases 目录 / web 直接 import node:',
+    cannotCatch: '这条规则到底是业务规则还是呈现规则——划线时人的判断',
+  },
   placement: {
     layer: 'structure',
     canCatch: '落点不在已声明层 / adapters 写进 web / 客户端组件 import node:* 或 core 源码',
@@ -98,6 +103,23 @@ export const GATE_META = {
   verification: { layer: 'structure', canCatch: '证据缺失/失败/过期', cannotCatch: '命令是否覆盖了关键路径' },
   volume: { layer: 'structure', canCatch: '工件超预算、符号表未去重、出现废弃文件', cannotCatch: '剩下的内容是否有价值' },
   wireTable: { layer: 'structure', canCatch: '命令/事件表为空', cannotCatch: '表里的端点是否完整' },
+  renderBoundary: {
+    layer: 'structure',
+    canCatch: 'CHARTER 缺「渲染边界」/宿主写成别的能力/没有一行 self/none 无理由',
+    cannotCatch: '划分本身是否合理（哪块算别人的 chrome）——这是判断题',
+  },
+  readlogCoverage: {
+    layer: 'structure',
+    canCatch: '原型或布局映射点名的源文件，readlog 里没有阅读记录',
+    cannotCatch: '读得是否仔细（有记录 ≠ 读过）',
+  },
+  observations: {
+    // 只查"有没有写、写没写清可核对的东西"，所以是 structure。
+    // 「观察内容对不对」属判断，由 C5 的 review.md 与 L6 人工验收兜——不在这里假装能判。
+    layer: 'structure',
+    canCatch: '界面任务没写观察 / 三段缺一 /「看到什么」没有可核对定位（路径:行号 或 30141 上的具体结构）',
+    cannotCatch: '观察写得对不对、有没有真去看',
+  },
   changePropagation: { layer: 'structure', canCatch: '砍单无变更单、视图未勾、skip 无理由', cannotCatch: '视图列表是否漏了某个真实受影响处' },
 }
 
@@ -124,6 +146,9 @@ export const LAYER_ZH = {
  * 没进这张表的 kind 一律视为"还没有反向用例"，`references/gates.md` 会逐条列出来。
  */
 export const NEGATIVE_TESTS = {
+  observations: 'OBS 观察缺三段 → C5 红',
+  renderBoundary: 'RB 缺「渲染边界」→ C0 红',
+  readlogCoverage: 'RLC 原型引用了没读过的文件 → C3 红',
   contractAlign: 'C2 对齐行既无指向也无编号红',
   contractDelta: 'C2 有差异却无 CHG 号红',
   contractInventory: 'C2 源码端点未进契约红',
@@ -148,6 +173,23 @@ export const NEGATIVE_TESTS = {
   denominator: 'C6 对账分母 → 条数与来源不符时红',
   changePropagation: 'P3 砍单无变更单 → 红',
   envReady: 'P1 环境矩阵缺项 → 红',
+  runtimeFit: 'RUNTIME 服务端规则落 web → C4 红',
+  envReady: 'ENV 环境矩阵缺项 → 红',
+  frontendArch: 'FRONTEND rules 缺 frontend → 红',
+  stubPlan: 'STUBPLAN 缺桩清单 → 红',
+  integration: 'INTEGRATION 真实现写成桩 → 红',
+  acceptance: 'ACCEPTANCE L6 未签 → 红',
+  fidelity: 'FIDELITY 缺快照 → 红',
+  glob: 'GLOB 目录写法覆盖子孙且不跨包',
+  rlevel: 'RLEVEL 缺 R 级 → 红',
+  godFingerprint: 'GODFINGERPRINT 行数不符 → 红',
+  heading: 'HEADING 缺必需小节 → 红',
+  lines: 'LINES 归属区间有缝 → 红',
+  programPrereq: 'PROGRAMPREREQ 没关联 program → 红',
+  behaviors: 'BEHAVIORS 没有 B- 行 → 红',
+  symbols: 'SYMBOLS 漏符号 → 红',
+  ownershipTypes: 'OWNERSHIP 类型非法 → 红',
+  specTests: 'SPECS 锚点指向不存在的文件 → 红',
 }
 
 /** 覆盖率下限：低于这个数说明"门在裸奔"，直接判红。 */

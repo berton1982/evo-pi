@@ -42,6 +42,7 @@
 - `lib/tables.mjs` — markdown 表格 → 数据
 - `lib/delivery.mjs` — 桩清单 / 本能力桩就绪 / 联调替换 / 验收阶梯六层（前后端独立开发的判据）
 - `lib/frontend.mjs` — 前端约定八节 + `arch/rules.json#frontend`（P2.5 `frontendArch`）
+- `lib/observe.mjs` — 实施前的观察门（`observations/<T-xx>.md`：看到什么/差在哪/决定，C5）
 - `lib/fidelity.mjs` — 保真快照对账（pi-web 独有的可及元素必须登记，C6 `fidelity`）
 - `lib/webscaffold.mjs` — web 切片骨架与落点（C5 `webScaffold`）
 - `lib/capspec.mjs` — 能力规格与 ASCII 原型门（用户故事 / 多文件多行区间 / 交互形态 / 布局映射 / 原型块）

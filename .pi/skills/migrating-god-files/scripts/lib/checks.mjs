@@ -5,10 +5,18 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { basename, join, relative, resolve } from 'node:path'
-import { checkCapSpec, checkUiProto } from './capspec.mjs'
+import {
+  checkCapSpec,
+  checkEntryInventory,
+  checkReadlogCoverage,
+  checkRenderBoundary,
+  checkUiProto,
+} from './capspec.mjs'
 import { checkContractAlign, checkContractInventory } from './contracts.mjs'
 import { checkFidelity } from './fidelity.mjs'
 import { runWebScaffold } from './webscaffold.mjs'
+import { checkObservations } from './observe.mjs'
+import { parsePlans } from './trace.mjs'
 import {
   requiredTiers,
   runAcceptance,
@@ -40,7 +48,7 @@ import { checkDenominator, judgeProvenance } from './provenance.mjs'
 import { judgeVerification } from './verify.mjs'
 import { runVolume } from './volume.mjs'
 import { checkConventions } from './conventions.mjs'
-import { checkPlacement } from './placement.mjs'
+import { checkPlacement, checkRuntimeFit } from './placement.mjs'
 import { checkReview, measureFiles } from './reviewkit.mjs'
 
 const RED = (s) => `\u274c ${s}`
@@ -126,10 +134,22 @@ function oversizedInRepos(root) {
  */
 function isUnfilledTemplate(file) {
   try {
-    return readFileSync(file, 'utf8').slice(0, 400).includes('TODO-init-scaffold')
+    return hasScaffoldBanner(readFileSync(file, 'utf8').slice(0, 400))
   } catch {
     return false
   }
+}
+
+/**
+ * 横幅只在**注释语法**里才算数（`<!-- … -->` / `//` / `"//TODO"`）。
+ *
+ * 踩过的坑：正文里写一句"顶部 `TODO-init-scaffold` 横幅已删"说明自己删过了，
+ * 结果被当成"还是模板"判红——C-C 的 CHARTER 就这么红了一次。
+ * 判据要认语法位置，不能认字符串出现。
+ */
+function hasScaffoldBanner(text) {
+  return /<!--\s*TODO-init-scaffold|^\s*\/\/\s*TODO-init-scaffold/m.test(text) ||
+    /"\/\/TODO-init-scaffold"\s*:/.test(text)
 }
 
 /**
@@ -154,7 +174,7 @@ function expandBraces(p) {
 
 function isScaffoldFile(file) {
   try {
-    return readFileSync(file, 'utf8').slice(0, 500).includes('TODO-init-scaffold')
+    return hasScaffoldBanner(readFileSync(file, 'utf8').slice(0, 500))
   } catch {
     return false
   }
@@ -218,6 +238,13 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         break
       }
       case 'heading': {
+        if (c.infraSkip) {
+          const manifest = loadJson(resolve(run, 'design/manifest.json'))
+          if (manifest?.kind === 'infrastructure') {
+            push(tag, true, `基础设施形态无渲染，跳过「${c.text}」`)
+            break
+          }
+        }
         const hp = resolve(run, c.path)
         if (isUnfilledTemplate(hp)) {
           push(`${tag}:${c.path}:${c.text}`, false, '仍是 init 铺的模板（TODO-init-scaffold 未删）')
@@ -396,6 +423,33 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         break
       }
       // UI 原型（design/ui.md）：ASCII 主屏 + 空态/失败态 + 交互态表。
+      // 渲染边界：能力只迁"自己的那段代码"，但屏幕上的 chrome 是别人的。
+      // 依据：C-C 试点先把主区顶栏画成"新建·会话名"，而 pi-web 主区顶栏是
+      // 信任/历史/标题/分支/系统/工具 + 会话信息面板——边界没定义，就只能靠猜。
+      case 'renderBoundary': {
+        const md = readText(resolve(run, c.path ?? 'CHARTER.md'))
+        if (md === null) {
+          push(tag, false, 'CHARTER.md 不存在')
+          break
+        }
+        const res = checkRenderBoundary({ charter: md })
+        push(
+          tag,
+          res.ok,
+          res.ok
+            ? `${res.totals.regions} 个区域，宿主：${res.totals.hosts.join(' / ')}`
+            : res.problems.join('；'),
+        )
+        break
+      }
+      // 引用谁就得读过谁：原型/布局映射里点名的源文件，readlog 必须有记录。
+      case 'readlogCoverage': {
+        const readlog = readText(resolve(run, 'readlog.md'))
+        const docs = [readText(resolve(run, 'spec.md')), readText(resolve(run, 'design/ui.md'))]
+        const res = checkReadlogCoverage({ readlog, docs, gods })
+        push(tag, res.ok, res.ok ? `${res.totals.files} 个被引用的源文件都有阅读记录` : res.problems.join('；'))
+        break
+      }
       case 'uiProto': {
         const md = readText(resolve(run, c.path ?? 'design/ui.md'))
         if (md === null) {
@@ -407,6 +461,16 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
           tag,
           res.ok,
           res.ok ? `${res.totals.blocks} 块 ASCII 原型、${res.totals.states} 个交互态` : res.problems.join('；'),
+        )
+        // 入口对账单独报：原型画全没有，是 cosmetic 级判断里最容易漏的一层
+        const inv = checkEntryInventory({
+          components: readText(resolve(run, 'design/components.md')),
+          ui: md,
+        })
+        push(
+          `${tag}:inventory`,
+          inv.ok,
+          inv.ok ? `${inv.totals.entries} 个入口与原型双向一致` : inv.problems.join('；'),
         )
         break
       }
@@ -762,6 +826,18 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
           res.ok,
           res.ok
             ? `分母 ${actual} 条与来源 ${c.source} 一致（sha 已固定）${res.stale || ''}`
+            : res.problems.join('；'),
+        )
+        break
+      }
+      case 'observations': {
+        // 实施前的观察：每个未完成的界面任务都要有 observations/<T-xx>.md
+        const res = checkObservations({ runDir: run, plans: parsePlans(run), state })
+        push(
+          tag,
+          res.ok,
+          res.ok
+            ? `${res.totals.observed}/${res.totals.uiTasks} 个界面任务都写过观察`
             : res.problems.join('；'),
         )
         break
@@ -1123,7 +1199,7 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
             )
             continue
           }
-          const res = runSymbolParity({ symbolsText: symText, mapText, root })
+          const res = runSymbolParity({ symbolsText: symText, mapText, root, godFile: basename(g.path) })
           push(
             `${tag}:${base}`,
             res.ok,
@@ -1200,11 +1276,20 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
           problems.push(`${missing.length} 个脚本文件不存在：${missing.slice(0, 4).join(', ')}`)
         if (noFile.length)
           problems.push(`${noFile.length} 个脚本没有 file 字段：${noFile.slice(0, 4).join(', ')}`)
-        push(
-          tag,
-          problems.length === 0,
-          problems.length ? problems.join('；') : `${registry.scripts.length} 个脚本文件都存在`,
-        )
+        // 「文件存在」只是结构绿。C-A 那 44 个 spec 我一次性生成时全是 `test.fixme` 占位——
+        // 光看"文件都在"和"0 个已实现"是两句不冲突的话，但读的人会当成"e2e 有了"。
+        // 所以这里额外数一下"整份文件全是 fixme"的数量，并把措辞写清。
+        const allFixme = registry.scripts
+          .filter((s) => s.file && existsSync(resolve(root, s.file)))
+          .filter((s) => {
+            const body = readText(resolve(root, s.file))
+            return body.includes('test.fixme(') && !body.includes('test(\'')
+          })
+        const structural = problems.length === 0
+        const detail = problems.length
+          ? problems.join('；')
+          : `${registry.scripts.length} 个脚本文件都存在${allFixme.length ? `（其中 ${allFixme.length} 个整份是 fixme 占位，0 条真断言）` : ''}`
+        push(tag, structural, detail)
         break
       }
       case 'programAudit': {
@@ -1336,6 +1421,32 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         push(tag, res.ok, res.ok ? res.detail : res.problems.slice(0, 4).join('；'))
         break
       }
+      case 'runtimeFit': {
+        // 运行时归属：业务规则在 core、呈现逻辑在 web（ADR-0001 第 1–5 层）
+        let mfRt = null
+        try {
+          mfRt = JSON.parse(readFileSync(resolve(run, 'design/manifest.json'), 'utf8'))
+        } catch {
+          mfRt = null
+        }
+        if (!mfRt) {
+          push(tag, false, '缺 design/manifest.json')
+          break
+        }
+        const rtRes = checkRuntimeFit({
+          elements: mfRt.elements ?? [],
+          root,
+          readFile: (rel) => {
+            try {
+              return readFileSync(resolve(root, rel), 'utf8')
+            } catch {
+              return null
+            }
+          },
+        })
+        push(tag, rtRes.ok, rtRes.detail)
+        break
+      }
       case 'placement': {
         const manifest = loadJson(resolve(run, 'design/manifest.json'))
         if (!manifest) {
@@ -1357,9 +1468,11 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         // P7 保真门：数据面 parity 管不到"页面少了半个"，所以要求 pi-web 独有的可及元素
         // 必须在 parity.md 里出现过——"没对齐"可以，"没提过"不行。
         const parityText = readIfExists(resolve(run, c.doc || 'parity.md')) ?? ''
+        const manifest = loadJson(resolve(run, 'design/manifest.json'))
         const res = checkFidelity({
           runDir: run,
           docText: parityText,
+          manifest,
           minCoverage: c.minCoverage ?? 0.7,
         })
         push(tag, res.ok, res.detail)
@@ -1403,7 +1516,16 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         break
       }
       case 'volume': {
-        const res = runVolume(run, c.prose || c.data ? { prose: c.prose, data: c.data } : undefined)
+        // 行为条数从 behaviors.md 现数：它决定 parity.md 的合理行数上限
+        const behaviorsTextForVolume = readIfExists(resolve(run, 'behaviors.md')) ?? ''
+        const behaviorCountForVolume = (behaviorsTextForVolume.match(/^\|\s*B-\d+/gm) ?? []).length
+        const godCount = Math.max(1, (state?.gods || []).length || 1)
+        const res = runVolume(run, {
+          ...(c.prose ? { prose: c.prose } : {}),
+          ...(c.data ? { data: c.data } : {}),
+          godCount,
+          behaviorCount: behaviorCountForVolume,
+        })
         push(
           tag,
           res.ok,

@@ -17,16 +17,21 @@ export const DEFAULTS = { prose: 400, data: 5000 }
 
 /** 判断型文档的按文件预算：行数上限越紧，说明越该用表格而不是段落。 */
 export const BUDGETS = {
-  'symbol-map.md': 520,
+  'symbol-map.md': 1200,
   'spec.md': 120,
   'behaviors.md': 140,
   'design/components.md': 160,
   'design/dynamics.md': 170,
   'design/quality.md': 60,
   'design/ui.md': 120,
-  'parity.md': 90,
+  // parity 的行数 ≈ 行为条数 × 常数 + 固定头（每条行为必须一行，逐条对账）。
+  // 90 行在 31 条行为的 R2 上必然红，而它变红的唯一原因是"行为多"——
+  // 拿它当密度门会逼人把多条行为并成一行，正好破坏"逐条"这个判据，所以放到 120。
+  'parity.md': 120,
+
   'acceptance.md': 80,
 }
+
 
 const DATA_FILES = new Set(['symbol-map.md', 'surface.json', 'features.md', 'cut-list.md'])
 
@@ -55,7 +60,10 @@ export function checkSymbolMapUnique(text) {
   }
 }
 
-export function runVolume(runDir, { prose = DEFAULTS.prose, data = DEFAULTS.data } = {}) {
+export function runVolume(
+  runDir,
+  { prose = DEFAULTS.prose, data = DEFAULTS.data, godCount = 1, behaviorCount = 0 } = {},
+) {
   const problems = []
   const rows = []
   const walk = (dir) => {
@@ -76,7 +84,19 @@ export function runVolume(runDir, { prose = DEFAULTS.prose, data = DEFAULTS.data
           problems.push(`${file} 已废弃（JSON 才是唯一事实源，双份同源必然漂移）——删掉它`)
           continue
         }
-        const budget = BUDGETS[file.replace(/^.*?(?=design\/)/, '')] ?? BUDGETS[file]
+        let budget = BUDGETS[file.replace(/^.*?(?=design\/)/, '')] ?? BUDGETS[file]
+        // symbol-map 是"每个 god 一张台账"，预算必须随 god 数走：
+        // C-A 有 4 个 god（7,669 行），把它们塞进 1,200 行等于逼人删符号。
+        if (budget && basename(file) === 'symbol-map.md') {
+          // 由调用方传入（checks 从 state.gods 取），这里不自己读 state 免得两处口径不一致
+          budget = budget * Math.max(1, godCount)
+        }
+        // parity.md 是"每条行为一行 + 缺口逐条登记"，行数天然随行为数走。
+        // 固定 120 行会与 `fidelity`（要求 pi-web 独有元素逐个点名）直接冲突：
+        // C-C 57 条行为，逐条登记就是 390 行。所以按 8 行/行为放大下限。
+        if (budget && basename(file) === 'parity.md' && behaviorCount > 0) {
+          budget = Math.max(budget, behaviorCount * 8)
+        }
         const cap = budget ?? (isDataArtifact(p) ? data : prose)
         rows.push({ file, lines: n, cap })
         if (n > cap) {

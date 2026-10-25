@@ -1,0 +1,1134 @@
+# 符号全集 — `ref_projects/pi-web/components/MessageView.tsx`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：2162；符号数：**1126**；导出时间：2026-10-24T03:02:33.384Z
+
+## 符号（按出现顺序）
+
+- **AgentMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:29`
+- **applyPatchPreviewToFiles** (alias) — `ref_projects/pi-web/components/MessageView.tsx:14`
+- **applyPatchResultHasFailures** (alias) — `ref_projects/pi-web/components/MessageView.tsx:14`
+- **AssistantContentBlock** (alias) — `ref_projects/pi-web/components/MessageView.tsx:35`
+- **AssistantMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:31`
+- **AssistantMessageView** (function) — `ref_projects/pi-web/components/MessageView.tsx:644`
+- **<function>** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:819`
+- **<function>** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:820`
+- **<function>** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:836`
+- **<function>** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:849`
+- **background** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **bg** (const) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:850`
+- **borderRadius** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **color** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **fontSize** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **fontWeight** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **marginLeft** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **padding** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:852`
+- **alignItems** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:842`
+- **alignItems** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:843`
+- **color** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:842`
+- **display** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:842`
+- **display** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:843`
+- **est** (const) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:837`
+- **fontSize** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:843`
+- **fontWeight** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:843`
+- **gap** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:842`
+- **gap** (property) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:843`
+- **<function>** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:969`
+- **<function>** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:970`
+- **alignItems** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:829`
+- **alignItems** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:942`
+- **alignItems** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:957`
+- **background** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:880`
+- **background** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:901`
+- **background** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:922`
+- **background** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:959`
+- **blockItems** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:683`
+- **useMemo() callback** (function) in `blockItems` — `ref_projects/pi-web/components/MessageView.tsx:683`
+- **filter() callback** (function) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:685`
+- **isStreaming** (property) in `filter() callback` — `ref_projects/pi-web/components/MessageView.tsx:685`
+- **map() callback** (function) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:684`
+- **block** (property) in `map() callback` — `ref_projects/pi-web/components/MessageView.tsx:684`
+- **originalIndex** (property) in `map() callback` — `ref_projects/pi-web/components/MessageView.tsx:684`
+- **blockItems.map() callback** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:867`
+- **blockItemsRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:697`
+- **blocks** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:686`
+- **useMemo() callback** (function) in `blocks` — `ref_projects/pi-web/components/MessageView.tsx:686`
+- **blockItems.map() callback** (function) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:686`
+- **blockStartTimesRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:721`
+- **border** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:878`
+- **border** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:899`
+- **border** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:920`
+- **border** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:959`
+- **borderRadius** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:879`
+- **borderRadius** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:900`
+- **borderRadius** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:921`
+- **borderRadius** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:960`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:826`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:881`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:902`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:923`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:932`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:945`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:961`
+- **color** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:986`
+- **copied** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:691`
+- **copyContent** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:754`
+- **then() callback** (function) in `copyContent` — `ref_projects/pi-web/components/MessageView.tsx:755`
+- **setTimeout() callback** (function) in `then() callback` — `ref_projects/pi-web/components/MessageView.tsx:757`
+- **cursor** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:924`
+- **cursor** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:962`
+- **display** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:828`
+- **display** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:864`
+- **display** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:917`
+- **display** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:942`
+- **display** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:957`
+- **estimatedTokens** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:700`
+- **useMemo() callback** (function) in `estimatedTokens` — `ref_projects/pi-web/components/MessageView.tsx:700`
+- **block** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:707`
+- **nextCache** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:705`
+- **originalIndex** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:707`
+- **text** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:708`
+- **text** (property) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:711`
+- **tokens** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:710`
+- **tokens** (property) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:711`
+- **total** (let) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:706`
+- **estimatedTokensRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:717`
+- **flexDirection** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:864`
+- **font** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:925`
+- **fontFamily** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:882`
+- **fontFamily** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:903`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:825`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:883`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:904`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:945`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:963`
+- **fontSize** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:986`
+- **fontWeight** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:963`
+- **gap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:830`
+- **gap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:864`
+- **gap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:942`
+- **gap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:957`
+- **height** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:958`
+- **hovered** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:690`
+- **lineHeight** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:884`
+- **lineHeight** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:905`
+- **marginBottom** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:818`
+- **marginBottom** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:827`
+- **marginLeft** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:986`
+- **marginTop** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:876`
+- **marginTop** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:897`
+- **marginTop** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:918`
+- **marginTop** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:932`
+- **marginTop** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:942`
+- **messageDurationMs** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:727`
+- **opacity** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:965`
+- **overflowWrap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:886`
+- **overflowWrap** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:907`
+- **padding** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:877`
+- **padding** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:898`
+- **padding** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:919`
+- **padding** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:958`
+- **pointerEvents** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:966`
+- **providerError** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:687`
+- **isStreaming** (property) in `providerError` — `ref_projects/pi-web/components/MessageView.tsx:687`
+- **rateKey** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:693`
+- **setCopied** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:691`
+- **setHovered** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:690`
+- **setStreamingDurations** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:722`
+- **setTps** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:696`
+- **streamingDurations** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:722`
+- **streamRateKeyRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:694`
+- **streamStartRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:692`
+- **t** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:681`
+- **textContent** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:749`
+- **blocks.filter() callback** (function) in `textContent` — `ref_projects/pi-web/components/MessageView.tsx:750`
+- **map() callback** (function) in `textContent` — `ref_projects/pi-web/components/MessageView.tsx:751`
+- **thinkingDurationFromFile** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:728`
+- **useMemo() callback** (function) in `thinkingDurationFromFile` — `ref_projects/pi-web/components/MessageView.tsx:728`
+- **ms** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:729`
+- **secs** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:731`
+- **time** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:682`
+- **time** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:948`
+- **tokenEstimateCacheRef** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:699`
+- **toolCallDurations** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:738`
+- **useMemo() callback** (function) in `toolCallDurations` — `ref_projects/pi-web/components/MessageView.tsx:738`
+- **callId** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:741`
+- **map** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:739`
+- **ms** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:742`
+- **result** (const) in `useMemo() callback` — `ref_projects/pi-web/components/MessageView.tsx:741`
+- **tps** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:696`
+- **transition** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:967`
+- **truncated** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:688`
+- **isStreaming** (property) in `truncated` — `ref_projects/pi-web/components/MessageView.tsx:688`
+- **unansweredTruncation** (const) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:689`
+- **useEffect() callback** (function) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:761`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:809`
+- **id** (const) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:808`
+- **now** (const) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:764`
+- **setStreamingDurations() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:765`
+- **idx** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:767`
+- **next** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:766`
+- **start** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:767`
+- **tick** (const) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:776`
+- **items** (const) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:777`
+- **items.forEach() callback** (function) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:781`
+- **now** (const) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:778`
+- **rate** (const) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:805`
+- **setStreamingDurations() callback** (function) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:786`
+- **changed** (let) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:787`
+- **i** (let) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:789`
+- **next** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:788`
+- **nextOriginalIndex** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:791`
+- **nextStart** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:794`
+- **originalIndex** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:790`
+- **start** (const) in `setStreamingDurations() callback` — `ref_projects/pi-web/components/MessageView.tsx:793`
+- **tokens** (const) in `tick` — `ref_projects/pi-web/components/MessageView.tsx:802`
+- **whiteSpace** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:885`
+- **whiteSpace** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:906`
+- **whiteSpace** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:932`
+- **whiteSpace** (property) in `AssistantMessageView` — `ref_projects/pi-web/components/MessageView.tsx:964`
+- **BashExecutionMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:34`
+- **BashExecutionView** (function) — `ref_projects/pi-web/components/MessageView.tsx:2083`
+- **background** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **block** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2119`
+- **input** (property) in `block` — `ref_projects/pi-web/components/MessageView.tsx:2123`
+- **command** (property) in `input` — `ref_projects/pi-web/components/MessageView.tsx:2123`
+- **toolCallId** (property) in `block` — `ref_projects/pi-web/components/MessageView.tsx:2121`
+- **toolName** (property) in `block` — `ref_projects/pi-web/components/MessageView.tsx:2122`
+- **type** (property) in `block` — `ref_projects/pi-web/components/MessageView.tsx:2120`
+- **border** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **color** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **color** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2152`
+- **color** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2156`
+- **cursor** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **displayOutput** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2094`
+- **fontSize** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2140`
+- **fontSize** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **fontSize** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2152`
+- **fontSize** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2156`
+- **fullError** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2086`
+- **fullOutput** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2084`
+- **fullOutputUrl** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2090`
+- **isError** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2089`
+- **isPending** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2088`
+- **loadFullOutput** (function) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2096`
+- **d** (const) in `loadFullOutput` — `ref_projects/pi-web/components/MessageView.tsx:2102`
+- **data** (property) in `d` — `ref_projects/pi-web/components/MessageView.tsx:2102`
+- **error** (property) in `d` — `ref_projects/pi-web/components/MessageView.tsx:2102`
+- **success** (property) in `d` — `ref_projects/pi-web/components/MessageView.tsx:2102`
+- **e** (var) in `loadFullOutput` — `ref_projects/pi-web/components/MessageView.tsx:2108`
+- **res** (const) in `loadFullOutput` — `ref_projects/pi-web/components/MessageView.tsx:2101`
+- **loadingFull** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2085`
+- **margin** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2137`
+- **marginLeft** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2152`
+- **marginLeft** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2156`
+- **marginTop** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2140`
+- **padding** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2140`
+- **padding** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **result** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2125`
+- **content** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2131`
+- **text** (property) in `content` — `ref_projects/pi-web/components/MessageView.tsx:2131`
+- **type** (property) in `content` — `ref_projects/pi-web/components/MessageView.tsx:2131`
+- **isError** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2132`
+- **role** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2128`
+- **timestamp** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2133`
+- **toolCallId** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2129`
+- **toolName** (property) in `result` — `ref_projects/pi-web/components/MessageView.tsx:2130`
+- **setFullError** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2086`
+- **setFullOutput** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2084`
+- **setLoadingFull** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2085`
+- **showFullButton** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2093`
+- **textDecoration** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2145`
+- **textDecoration** (property) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2152`
+- **toolName** (const) in `BashExecutionView` — `ref_projects/pi-web/components/MessageView.tsx:2118`
+- **BlockView** (function) — `ref_projects/pi-web/components/MessageView.tsx:993`
+- **duration** (const) in `BlockView` — `ref_projects/pi-web/components/MessageView.tsx:1003`
+- **result** (const) in `BlockView` — `ref_projects/pi-web/components/MessageView.tsx:1002`
+- **tc** (const) in `BlockView` — `ref_projects/pi-web/components/MessageView.tsx:1001`
+- **CJK_PATTERN** (const) — `ref_projects/pi-web/components/MessageView.tsx:43`
+- **CODEMODE_TOOL_NAME** (alias) — `ref_projects/pi-web/components/MessageView.tsx:22`
+- **CodemodeCallList** (alias) — `ref_projects/pi-web/components/MessageView.tsx:23`
+- **codemodeCalls** (alias) — `ref_projects/pi-web/components/MessageView.tsx:22`
+- **codemodeScript** (alias) — `ref_projects/pi-web/components/MessageView.tsx:22`
+- **codemodeScriptPreview** (alias) — `ref_projects/pi-web/components/MessageView.tsx:22`
+- **CompactionFileList** (function) — `ref_projects/pi-web/components/MessageView.tsx:1814`
+- **files.map() callback** (function) in `CompactionFileList` — `ref_projects/pi-web/components/MessageView.tsx:1819`
+- **CompactionFileMetadata** (function) — `ref_projects/pi-web/components/MessageView.tsx:1796`
+- **details** (property) in `CompactionFileMetadata` — `ref_projects/pi-web/components/MessageView.tsx:1807`
+- **parts** (const) in `CompactionFileMetadata` — `ref_projects/pi-web/components/MessageView.tsx:1801`
+- **t** (const) in `CompactionFileMetadata` — `ref_projects/pi-web/components/MessageView.tsx:1797`
+- **total** (const) in `CompactionFileMetadata` — `ref_projects/pi-web/components/MessageView.tsx:1798`
+- **CompactionMessageView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1694`
+- **<function>** (function) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1736`
+- **setExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:1736`
+- **alignItems** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1717`
+- **alignItems** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1739`
+- **background** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1711`
+- **background** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1721`
+- **background** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1744`
+- **border** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1708`
+- **border** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1743`
+- **borderBottom** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1720`
+- **borderRadius** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1709`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1722`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1728`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1745`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1751`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1759`
+- **color** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1764`
+- **costNotice** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1702`
+- **find() callback** (function) in `costNotice` — `ref_projects/pi-web/components/MessageView.tsx:1702`
+- **cursor** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1746`
+- **display** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1716`
+- **display** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1738`
+- **display** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1755`
+- **display** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1759`
+- **display** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1764`
+- **expanded** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1697`
+- **flexShrink** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1751`
+- **font** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1747`
+- **fontFamily** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1725`
+- **fontSize** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1725`
+- **fontSize** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1728`
+- **fontSize** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1755`
+- **fontSize** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1759`
+- **fontSize** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1764`
+- **fontWeight** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1725`
+- **fontWeight** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1755`
+- **gap** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1718`
+- **gap** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1740`
+- **lineHeight** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1755`
+- **lineHeight** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1759`
+- **lineHeight** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1764`
+- **marginBottom** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1705`
+- **marginLeft** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1728`
+- **marginTop** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1751`
+- **marginTop** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1759`
+- **marginTop** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1764`
+- **minWidth** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1754`
+- **overflow** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1710`
+- **padding** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1719`
+- **padding** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1731`
+- **padding** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1742`
+- **setExpanded** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1697`
+- **summary** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1698`
+- **t** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1695`
+- **textAlign** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1748`
+- **time** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1699`
+- **tokens** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1760`
+- **tokensBefore** (const) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1700`
+- **tokensBefore** (property) in `tokensBefore` — `ref_projects/pi-web/components/MessageView.tsx:1700`
+- **transform** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1751`
+- **transition** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1751`
+- **width** (property) in `CompactionMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1741`
+- **CompactionSummaryDetails** (function) — `ref_projects/pi-web/components/MessageView.tsx:1777`
+- **color** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1783`
+- **color** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1789`
+- **fontSize** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1783`
+- **fontSize** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1789`
+- **lineHeight** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1783`
+- **marginBottom** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1783`
+- **marginTop** (property) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1782`
+- **parsedSummary** (const) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1779`
+- **useMemo() callback** (function) in `parsedSummary` — `ref_projects/pi-web/components/MessageView.tsx:1779`
+- **t** (const) in `CompactionSummaryDetails` — `ref_projects/pi-web/components/MessageView.tsx:1778`
+- **copyText** (alias) — `ref_projects/pi-web/components/MessageView.tsx:8`
+- **CustomMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:32`
+- **CustomMessageView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1827`
+- **<function>** (function) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1871`
+- **setContentExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:1871`
+- **<function>** (function) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1955`
+- **setDetailsExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:1955`
+- **alignItems** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1860`
+- **alignItems** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1876`
+- **alignItems** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1931`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1854`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1864`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1882`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1935`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1944`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1960`
+- **background** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1977`
+- **border** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1851`
+- **border** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1881`
+- **border** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1943`
+- **border** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1959`
+- **borderBottom** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1863`
+- **borderRadius** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1852`
+- **borderTop** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1934`
+- **borderTop** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1976`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1865`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1883`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1889`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1897`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1925`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1945`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1961`
+- **color** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1978`
+- **contentExpanded** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1830`
+- **copied** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1832`
+- **copyContent** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1840`
+- **then() callback** (function) in `copyContent` — `ref_projects/pi-web/components/MessageView.tsx:1841`
+- **setTimeout() callback** (function) in `then() callback` — `ref_projects/pi-web/components/MessageView.tsx:1843`
+- **cursor** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1884`
+- **cursor** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1946`
+- **cursor** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1962`
+- **detailsExpanded** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1831`
+- **detailsText** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1836`
+- **display** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1859`
+- **display** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1875`
+- **display** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1908`
+- **display** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1930`
+- **flex** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1879`
+- **flexShrink** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1889`
+- **flexShrink** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1897`
+- **flexShrink** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1898`
+- **flexWrap** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1908`
+- **fontFamily** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1889`
+- **fontFamily** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1985`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1866`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1885`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1889`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1897`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1925`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1947`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1963`
+- **fontSize** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1979`
+- **fontWeight** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1889`
+- **gap** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1861`
+- **gap** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1877`
+- **gap** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1908`
+- **gap** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1932`
+- **hasDetails** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1835`
+- **images** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1834`
+- **images.map() callback** (function) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1909`
+- **border** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **borderRadius** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **display** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **maxHeight** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **maxWidth** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **objectFit** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1918`
+- **src** (const) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1910`
+- **lineHeight** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1980`
+- **margin** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1974`
+- **marginBottom** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1848`
+- **marginBottom** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1908`
+- **marginLeft** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1897`
+- **marginLeft** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1957`
+- **maxHeight** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1983`
+- **minWidth** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1878`
+- **minWidth** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **overflow** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1853`
+- **overflow** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **overflow** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1984`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1862`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1880`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1906`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1933`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1942`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1958`
+- **padding** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1975`
+- **setContentExpanded** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1830`
+- **setCopied** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1832`
+- **setDetailsExpanded** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1831`
+- **t** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1828`
+- **text** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1833`
+- **textAlign** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1886`
+- **textOverflow** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **time** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1838`
+- **title** (const) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1837`
+- **transform** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1898`
+- **transition** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1898`
+- **whiteSpace** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1893`
+- **whiteSpace** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1981`
+- **wordBreak** (property) in `CustomMessageView` — `ref_projects/pi-web/components/MessageView.tsx:1982`
+- **estimateTokens** (function) — `ref_projects/pi-web/components/MessageView.tsx:44`
+- **ch** (const) in `estimateTokens` — `ref_projects/pi-web/components/MessageView.tsx:47`
+- **cjk** (let) in `estimateTokens` — `ref_projects/pi-web/components/MessageView.tsx:45`
+- **rest** (let) in `estimateTokens` — `ref_projects/pi-web/components/MessageView.tsx:46`
+- **estimateUpdatedTokens** (function) — `ref_projects/pi-web/components/MessageView.tsx:74`
+- **baseTokens** (let) in `estimateUpdatedTokens` — `ref_projects/pi-web/components/MessageView.tsx:77`
+- **suffixStart** (let) in `estimateUpdatedTokens` — `ref_projects/pi-web/components/MessageView.tsx:78`
+- **extractApplyPatchPaths** (alias) — `ref_projects/pi-web/components/MessageView.tsx:14`
+- **formatCustomType** (function) — `ref_projects/pi-web/components/MessageView.tsx:2045`
+- **formatMessageBytes** (function) — `ref_projects/pi-web/components/MessageView.tsx:101`
+- **formatTime** (function) — `ref_projects/pi-web/components/MessageView.tsx:242`
+- **d** (const) in `formatTime` — `ref_projects/pi-web/components/MessageView.tsx:244`
+- **date** (const) in `formatTime` — `ref_projects/pi-web/components/MessageView.tsx:251`
+- **day** (property) in `date` — `ref_projects/pi-web/components/MessageView.tsx:251`
+- **month** (property) in `date` — `ref_projects/pi-web/components/MessageView.tsx:251`
+- **year** (property) in `date` — `ref_projects/pi-web/components/MessageView.tsx:251`
+- **isToday** (const) in `formatTime` — `ref_projects/pi-web/components/MessageView.tsx:246`
+- **now** (const) in `formatTime` — `ref_projects/pi-web/components/MessageView.tsx:245`
+- **time** (const) in `formatTime` — `ref_projects/pi-web/components/MessageView.tsx:249`
+- **hour** (property) in `time` — `ref_projects/pi-web/components/MessageView.tsx:249`
+- **minute** (property) in `time` — `ref_projects/pi-web/components/MessageView.tsx:249`
+- **formatToolDuration** (function) — `ref_projects/pi-web/components/MessageView.tsx:1166`
+- **minutes** (const) in `formatToolDuration` — `ref_projects/pi-web/components/MessageView.tsx:1170`
+- **remainder** (const) in `formatToolDuration` — `ref_projects/pi-web/components/MessageView.tsx:1171`
+- **seconds** (const) in `formatToolDuration` — `ref_projects/pi-web/components/MessageView.tsx:1167`
+- **totalSeconds** (const) in `formatToolDuration` — `ref_projects/pi-web/components/MessageView.tsx:1169`
+- **formatTurnDuration** (alias) — `ref_projects/pi-web/components/MessageView.tsx:12`
+- **formatUsage** (function) — `ref_projects/pi-web/components/MessageView.tsx:2067`
+- **parts** (const) in `formatUsage` — `ref_projects/pi-web/components/MessageView.tsx:2074`
+- **getApplyPatchFiles** (function) — `ref_projects/pi-web/components/MessageView.tsx:1578`
+- **details** (const) in `getApplyPatchFiles` — `ref_projects/pi-web/components/MessageView.tsx:1584`
+- **details** (property) in `details` — `ref_projects/pi-web/components/MessageView.tsx:1584`
+- **fromInput** (const) in `getApplyPatchFiles` — `ref_projects/pi-web/components/MessageView.tsx:1581`
+- **fromPreview** (const) in `getApplyPatchFiles` — `ref_projects/pi-web/components/MessageView.tsx:1586`
+- **getApplyPatchInputText** (alias) — `ref_projects/pi-web/components/MessageView.tsx:14`
+- **getAssistantErrorMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **getMessageImages** (function) — `ref_projects/pi-web/components/MessageView.tsx:2006`
+- **content.filter() callback** (function) in `getMessageImages` — `ref_projects/pi-web/components/MessageView.tsx:2008`
+- **getMessageText** (function) — `ref_projects/pi-web/components/MessageView.tsx:1998`
+- **content.filter() callback** (function) in `getMessageText` — `ref_projects/pi-web/components/MessageView.tsx:2001`
+- **map() callback** (function) in `getMessageText` — `ref_projects/pi-web/components/MessageView.tsx:2002`
+- **getModelDisplayName** (function) — `ref_projects/pi-web/components/MessageView.tsx:223`
+- **configured** (const) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:230`
+- **flatMap() callback** (function) in `configured` — `ref_projects/pi-web/components/MessageView.tsx:230`
+- **id** (property) in `flatMap() callback` — `ref_projects/pi-web/components/MessageView.tsx:233`
+- **name** (property) in `flatMap() callback` — `ref_projects/pi-web/components/MessageView.tsx:233`
+- **separator** (const) in `flatMap() callback` — `ref_projects/pi-web/components/MessageView.tsx:231`
+- **configured.find() callback** (function) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:236`
+- **configured.find() callback** (function) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:237`
+- **find() callback** (function) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:238`
+- **normalizedProvider** (const) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:228`
+- **normalizedResponse** (const) in `getModelDisplayName` — `ref_projects/pi-web/components/MessageView.tsx:229`
+- **getResultDiff** (function) — `ref_projects/pi-web/components/MessageView.tsx:1600`
+- **details** (const) in `getResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1601`
+- **details** (property) in `details` — `ref_projects/pi-web/components/MessageView.tsx:1601`
+- **diff** (const) in `getResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1607`
+- **patch** (const) in `getResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1604`
+- **text** (property) in `getResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1605`
+- **text** (property) in `getResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1608`
+- **getThinkingPreview** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **getTokenEstimateText** (function) — `ref_projects/pi-web/components/MessageView.tsx:59`
+- **getToolCallInputText** (function) — `ref_projects/pi-web/components/MessageView.tsx:2029`
+- **getToolPreview** (function) — `ref_projects/pi-web/components/MessageView.tsx:2050`
+- **first** (const) in `getToolPreview` — `ref_projects/pi-web/components/MessageView.tsx:2063`
+- **input** (const) in `getToolPreview` — `ref_projects/pi-web/components/MessageView.tsx:2051`
+- **keys** (const) in `getToolPreview` — `ref_projects/pi-web/components/MessageView.tsx:2053`
+- **getTranscriptNotices** (alias) — `ref_projects/pi-web/components/MessageView.tsx:26`
+- **getWrittenFileText** (function) — `ref_projects/pi-web/components/MessageView.tsx:2038`
+- **content** (const) in `getWrittenFileText` — `ref_projects/pi-web/components/MessageView.tsx:2040`
+- **every() callback** (function) in `getWrittenFileText` — `ref_projects/pi-web/components/MessageView.tsx:2042`
+- **hasAssistantAnswer** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **haveSameRelevantToolResults** (function) — `ref_projects/pi-web/components/MessageView.tsx:274`
+- **block** (const) in `haveSameRelevantToolResults` — `ref_projects/pi-web/components/MessageView.tsx:280`
+- **ImageContent** (alias) — `ref_projects/pi-web/components/MessageView.tsx:37`
+- **ImagePreview** (alias) — `ref_projects/pi-web/components/MessageView.tsx:6`
+- **imageSource** (function) — `ref_projects/pi-web/components/MessageView.tsx:2011`
+- **flat** (const) in `imageSource` — `ref_projects/pi-web/components/MessageView.tsx:2012`
+- **data** (property) in `flat` — `ref_projects/pi-web/components/MessageView.tsx:2012`
+- **mimeType** (property) in `flat` — `ref_projects/pi-web/components/MessageView.tsx:2012`
+- **isApplyPatchToolName** (alias) — `ref_projects/pi-web/components/MessageView.tsx:15`
+- **isAssistantTruncated** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **isEditToolName** (alias) — `ref_projects/pi-web/components/MessageView.tsx:15`
+- **isEmptyThinkingBlock** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **isHighSurrogate** (function) — `ref_projects/pi-web/components/MessageView.tsx:66`
+- **isLowSurrogate** (function) — `ref_projects/pi-web/components/MessageView.tsx:70`
+- **isRecord** (function) — `ref_projects/pi-web/components/MessageView.tsx:1613`
+- **isSubagentToolDetails** (function) — `ref_projects/pi-web/components/MessageView.tsx:1151`
+- **details** (const) in `isSubagentToolDetails` — `ref_projects/pi-web/components/MessageView.tsx:1153`
+- **isThinkingExpandedByDefault** (alias) — `ref_projects/pi-web/components/MessageView.tsx:17`
+- **isToolCallExpanded** (alias) — `ref_projects/pi-web/components/MessageView.tsx:16`
+- **isWriteToolName** (alias) — `ref_projects/pi-web/components/MessageView.tsx:15`
+- **loadThinkingContent** (function) — `ref_projects/pi-web/components/MessageView.tsx:162`
+- **cached** (const) in `loadThinkingContent` — `ref_projects/pi-web/components/MessageView.tsx:164`
+- **key** (const) in `loadThinkingContent` — `ref_projects/pi-web/components/MessageView.tsx:163`
+- **oldestKey** (const) in `loadThinkingContent` — `ref_projects/pi-web/components/MessageView.tsx:185`
+- **request** (const) in `loadThinkingContent` — `ref_projects/pi-web/components/MessageView.tsx:171`
+- **catch() callback** (function) in `request` — `ref_projects/pi-web/components/MessageView.tsx:178`
+- **then() callback** (function) in `request` — `ref_projects/pi-web/components/MessageView.tsx:173`
+- **data** (const) in `then() callback` — `ref_projects/pi-web/components/MessageView.tsx:175`
+- **thinking** (property) in `data` — `ref_projects/pi-web/components/MessageView.tsx:175`
+- **MarkdownBody** (alias) — `ref_projects/pi-web/components/MessageView.tsx:5`
+- **MAX_MARKDOWN_CHARS** (const) — `ref_projects/pi-web/components/MessageView.tsx:99`
+- **MAX_THINKING_CACHE_ENTRIES** (const) — `ref_projects/pi-web/components/MessageView.tsx:93`
+- **mcpToolLabel** (alias) — `ref_projects/pi-web/components/MessageView.tsx:24`
+- **memo** (alias) — `ref_projects/pi-web/components/MessageView.tsx:3`
+- **MessageView** (const) — `ref_projects/pi-web/components/MessageView.tsx:288`
+- **memo() callback** (function) in `MessageView` — `ref_projects/pi-web/components/MessageView.tsx:309`
+- **MessageView** (function) in `MessageView` — `ref_projects/pi-web/components/MessageView.tsx:288`
+- **PairedDiffResult** (function) — `ref_projects/pi-web/components/MessageView.tsx:1349`
+- **background** (property) in `PairedDiffResult` — `ref_projects/pi-web/components/MessageView.tsx:1356`
+- **borderTop** (property) in `PairedDiffResult` — `ref_projects/pi-web/components/MessageView.tsx:1355`
+- **PairedResult** (function) — `ref_projects/pi-web/components/MessageView.tsx:1659`
+- **background** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1669`
+- **background** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1681`
+- **borderTop** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1668`
+- **color** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1676`
+- **fontSize** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1677`
+- **fontStyle** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1684`
+- **lineHeight** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1678`
+- **margin** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1674`
+- **maxHeight** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1680`
+- **opacity** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1685`
+- **overflow** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1679`
+- **padding** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1675`
+- **t** (const) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1664`
+- **whiteSpace** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1682`
+- **wordBreak** (property) in `PairedResult` — `ref_projects/pi-web/components/MessageView.tsx:1683`
+- **parseApplyPatchInput** (alias) — `ref_projects/pi-web/components/MessageView.tsx:14`
+- **parseCompactionSummary** (alias) — `ref_projects/pi-web/components/MessageView.tsx:10`
+- **parseUnifiedPatch** (alias) — `ref_projects/pi-web/components/MessageView.tsx:13`
+- **PatchTextView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1508`
+- **fontFamily** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **fontSize** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **fontWeight** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **lineHeight** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **lines** (const) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1509`
+- **lines.map() callback** (function) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1513`
+- **background** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1535`
+- **background** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1550`
+- **bg** (const) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1519`
+- **borderLeft** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1536`
+- **borderRight** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1551`
+- **color** (const) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1524`
+- **color** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1549`
+- **color** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1559`
+- **display** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1534`
+- **flexShrink** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1554`
+- **kind** (const) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1514`
+- **overflowWrap** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1559`
+- **padding** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1548`
+- **padding** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1559`
+- **textAlign** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1552`
+- **userSelect** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1553`
+- **whiteSpace** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1559`
+- **width** (property) in `lines.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1547`
+- **maxHeight** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **minWidth** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **overflowX** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **overflowY** (property) in `PatchTextView` — `ref_projects/pi-web/components/MessageView.tsx:1512`
+- **prettyMcpResultText** (alias) — `ref_projects/pi-web/components/MessageView.tsx:24`
+- **Props** (interface) — `ref_projects/pi-web/components/MessageView.tsx:191`
+- **compactError** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:220`
+- **cwd** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:196`
+- **entryId** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:199`
+- **forking** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:202`
+- **isCompacting** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:219`
+- **isEditing** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:205`
+- **isStreaming** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:193`
+- **message** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:192`
+- **modelNames** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:195`
+- **onCancelEdit** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:204`
+- **onCompact** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:218`
+- **onEditContent** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:203`
+- **onFork** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:201`
+- **onOpenFile** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:197`
+- **onOpenSubagent** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:198`
+- **prevTimestamp** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:207`
+- **searchBlock** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:200`
+- **sessionId** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:208`
+- **showTimestamp** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:206`
+- **toolResults** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:194`
+- **turnDurationMs** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:217`
+- **writtenFiles** (property) in `Props` — `ref_projects/pi-web/components/MessageView.tsx:215`
+- **ReactMarkdown** (alias) — `ref_projects/pi-web/components/MessageView.tsx:4`
+- **recordedDurationMs** (function) — `ref_projects/pi-web/components/MessageView.tsx:1158`
+- **replaceUserMessageText** (function) — `ref_projects/pi-web/components/MessageView.tsx:255`
+- **message** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:256`
+- **block** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:266`
+- **message** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:271`
+- **block** (const) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:260`
+- **content** (const) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:258`
+- **content** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:256`
+- **content** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:271`
+- **replaced** (let) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:259`
+- **text** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:266`
+- **text** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:270`
+- **type** (property) in `replaceUserMessageText` — `ref_projects/pi-web/components/MessageView.tsx:270`
+- **ResultDiff** (interface) — `ref_projects/pi-web/components/MessageView.tsx:1345`
+- **text** (property) in `ResultDiff` — `ref_projects/pi-web/components/MessageView.tsx:1346`
+- **ResultImages** (function) — `ref_projects/pi-web/components/MessageView.tsx:1617`
+- **background** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1625`
+- **borderTop** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1626`
+- **display** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1621`
+- **flexWrap** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1623`
+- **gap** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1622`
+- **images.map() callback** (function) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1629`
+- **border** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1649`
+- **borderRadius** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1647`
+- **display** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1644`
+- **maxHeight** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1646`
+- **maxWidth** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1636`
+- **maxWidth** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1645`
+- **objectFit** (property) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1648`
+- **src** (const) in `images.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1630`
+- **padding** (property) in `ResultImages` — `ref_projects/pi-web/components/MessageView.tsx:1624`
+- **safeJson** (function) — `ref_projects/pi-web/components/MessageView.tsx:2021`
+- **SafeMarkdownBody** (function) — `ref_projects/pi-web/components/MessageView.tsx:111`
+- **<function>** (function) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:121`
+- **background** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:129`
+- **border** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:127`
+- **borderRadius** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:128`
+- **color** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:130`
+- **color** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:149`
+- **cursor** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:131`
+- **display** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:123`
+- **fontFamily** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:148`
+- **fontSize** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:132`
+- **fontSize** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:141`
+- **lineHeight** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:141`
+- **margin** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:125`
+- **margin** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:144`
+- **maxHeight** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:141`
+- **overflow** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:141`
+- **padding** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:126`
+- **padding** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:145`
+- **setShowRaw** (const) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:113`
+- **showRaw** (const) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:113`
+- **size** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:136`
+- **t** (const) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:112`
+- **textAlign** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:133`
+- **whiteSpace** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:146`
+- **width** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:124`
+- **wordBreak** (property) in `SafeMarkdownBody` — `ref_projects/pi-web/components/MessageView.tsx:147`
+- **setToolCallExpanded** (alias) — `ref_projects/pi-web/components/MessageView.tsx:16`
+- **skillExpansionToCommand** (alias) — `ref_projects/pi-web/components/MessageView.tsx:20`
+- **SplitDiffCell** (alias) — `ref_projects/pi-web/components/MessageView.tsx:13`
+- **SplitDiffCellView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1443`
+- **background** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1462`
+- **background** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1473`
+- **bg** (const) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1444`
+- **borderRight** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1463`
+- **borderRight** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1474`
+- **color** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1471`
+- **color** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1484`
+- **color** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1497`
+- **display** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1460`
+- **flex** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1494`
+- **flexShrink** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1475`
+- **flexShrink** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1487`
+- **fontWeight** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1486`
+- **marker** (const) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1452`
+- **markerColor** (const) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1454`
+- **minWidth** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1461`
+- **minWidth** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1495`
+- **overflowWrap** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1499`
+- **padding** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1469`
+- **padding** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1483`
+- **padding** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1496`
+- **textAlign** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1470`
+- **userSelect** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1472`
+- **userSelect** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1485`
+- **whiteSpace** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1498`
+- **width** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1468`
+- **width** (property) in `SplitDiffCellView` — `ref_projects/pi-web/components/MessageView.tsx:1482`
+- **SplitDiffFile** (alias) — `ref_projects/pi-web/components/MessageView.tsx:13`
+- **SplitDiffHeader** (function) — `ref_projects/pi-web/components/MessageView.tsx:1425`
+- **borderRight** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1432`
+- **color** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1431`
+- **overflow** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1433`
+- **padding** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1430`
+- **textOverflow** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1434`
+- **whiteSpace** (property) in `SplitDiffHeader` — `ref_projects/pi-web/components/MessageView.tsx:1435`
+- **SplitFilesView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1370`
+- **background** (property) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1375`
+- **files.map() callback** (function) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1376`
+- **background** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1396`
+- **borderBottom** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1397`
+- **borderTop** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1381`
+- **display** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1391`
+- **display** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1405`
+- **file.rows.map() callback** (function) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1406`
+- **display** (property) in `file.rows.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1412`
+- **fontFamily** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1382`
+- **fontSize** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1384`
+- **fontWeight** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1383`
+- **gridTemplateColumns** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1392`
+- **gridTemplateColumns** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1405`
+- **lineHeight** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1385`
+- **minWidth** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1380`
+- **position** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1393`
+- **top** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1394`
+- **zIndex** (property) in `files.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:1395`
+- **maxHeight** (property) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1375`
+- **overflowX** (property) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1375`
+- **overflowY** (property) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1375`
+- **showFileHeaders** (const) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1372`
+- **t** (const) in `SplitFilesView` — `ref_projects/pi-web/components/MessageView.tsx:1371`
+- **SplitPatchView** (function) — `ref_projects/pi-web/components/MessageView.tsx:1364`
+- **files** (const) in `SplitPatchView` — `ref_projects/pi-web/components/MessageView.tsx:1365`
+- **useMemo() callback** (function) in `files` — `ref_projects/pi-web/components/MessageView.tsx:1365`
+- **splitThinkingPieces** (alias) — `ref_projects/pi-web/components/MessageView.tsx:11`
+- **streamRateKey** (alias) — `ref_projects/pi-web/components/MessageView.tsx:25`
+- **streamRateStart** (alias) — `ref_projects/pi-web/components/MessageView.tsx:25`
+- **StreamRateStart** (alias) — `ref_projects/pi-web/components/MessageView.tsx:25`
+- **streamTokensPerSecond** (alias) — `ref_projects/pi-web/components/MessageView.tsx:25`
+- **stripCodemodeHeader** (alias) — `ref_projects/pi-web/components/MessageView.tsx:22`
+- **SubagentToolDetails** (alias) — `ref_projects/pi-web/components/MessageView.tsx:21`
+- **summarizeApplyPatchInput** (function) — `ref_projects/pi-web/components/MessageView.tsx:1594`
+- **paths** (const) in `summarizeApplyPatchInput` — `ref_projects/pi-web/components/MessageView.tsx:1595`
+- **TextBlock** (function) — `ref_projects/pi-web/components/MessageView.tsx:1009`
+- **TextContent** (alias) — `ref_projects/pi-web/components/MessageView.tsx:36`
+- **THINKING_EXPANDED_EVENT** (alias) — `ref_projects/pi-web/components/MessageView.tsx:17`
+- **ThinkingBlock** (function) — `ref_projects/pi-web/components/MessageView.tsx:1026`
+- **<function>** (function) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1106`
+- **setExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:1106`
+- **alignItems** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1092`
+- **alignItems** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1109`
+- **background** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1096`
+- **background** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1116`
+- **border** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1093`
+- **border** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1117`
+- **borderRadius** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1094`
+- **color** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1118`
+- **color** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1136`
+- **color** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1145`
+- **content** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1035`
+- **cursor** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1119`
+- **display** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1092`
+- **display** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1108`
+- **error** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1037`
+- **expanded** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1034`
+- **flex** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1134`
+- **flexShrink** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1112`
+- **flexShrink** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1145`
+- **font** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1120`
+- **fontFamily** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1097`
+- **fontSize** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1098`
+- **fontVariantNumeric** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1145`
+- **gap** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1092`
+- **gap** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1110`
+- **lineHeight** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1099`
+- **loadedKey** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1041`
+- **loading** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1036`
+- **loadKey** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1040`
+- **minHeight** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1114`
+- **minWidth** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1092`
+- **minWidth** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1113`
+- **minWidth** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1126`
+- **minWidth** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1135`
+- **overflow** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1126`
+- **overflowWrap** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1138`
+- **padding** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1095`
+- **padding** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1115`
+- **preview** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1050`
+- **setContent** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1035`
+- **setError** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1037`
+- **setExpanded** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1034`
+- **setLoadedKey** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1041`
+- **setLoading** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1036`
+- **t** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1033`
+- **textAlign** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1121`
+- **textOverflow** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1126`
+- **tRef** (const) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1048`
+- **useEffect() callback** (function) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1053`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1056`
+- **onChange** (const) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1054`
+- **useEffect() callback** (function) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1063`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1085`
+- **cancelled** (let) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1069`
+- **catch() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1079`
+- **then() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/components/MessageView.tsx:1073`
+- **whiteSpace** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1126`
+- **whiteSpace** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1137`
+- **width** (property) in `ThinkingBlock` — `ref_projects/pi-web/components/MessageView.tsx:1111`
+- **ThinkingContent** (alias) — `ref_projects/pi-web/components/MessageView.tsx:39`
+- **thinkingContentCache** (const) — `ref_projects/pi-web/components/MessageView.tsx:94`
+- **ThinkingIcon** (alias) — `ref_projects/pi-web/components/MessageView.tsx:7`
+- **ThinkingText** (function) — `ref_projects/pi-web/components/MessageView.tsx:1017`
+- **pieces** (const) in `ThinkingText` — `ref_projects/pi-web/components/MessageView.tsx:1018`
+- **useMemo() callback** (function) in `pieces` — `ref_projects/pi-web/components/MessageView.tsx:1018`
+- **pieces.map() callback** (function) in `ThinkingText` — `ref_projects/pi-web/components/MessageView.tsx:1023`
+- **TokenEstimateCacheEntry** (interface) — `ref_projects/pi-web/components/MessageView.tsx:54`
+- **text** (property) in `TokenEstimateCacheEntry` — `ref_projects/pi-web/components/MessageView.tsx:55`
+- **tokens** (property) in `TokenEstimateCacheEntry` — `ref_projects/pi-web/components/MessageView.tsx:56`
+- **TOOL_DURATION_MIN_MS** (const) — `ref_projects/pi-web/components/MessageView.tsx:1163`
+- **ToolCallBlock** (function) — `ref_projects/pi-web/components/MessageView.tsx:1176`
+- **<function>** (function) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1275`
+- **alignItems** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1226`
+- **alignItems** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1231`
+- **background** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1222`
+- **background** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1236`
+- **background** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **background** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1295`
+- **background** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1315`
+- **border** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1221`
+- **border** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1237`
+- **border** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **borderLeft** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **borderRadius** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1218`
+- **borderTop** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1296`
+- **borderTop** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1315`
+- **codemode** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1195`
+- **<unknown>** (property) in `codemode` — `ref_projects/pi-web/components/MessageView.tsx:1195`
+- **code** (property) in `codemode` — `ref_projects/pi-web/components/MessageView.tsx:1195`
+- **codemodeCallCount** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1213`
+- **codemodeCode** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1194`
+- **codemodeRunning** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1197`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1238`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1246`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1261`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1266`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **color** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1291`
+- **count** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1262`
+- **cursor** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1239`
+- **cursor** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **display** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1226`
+- **display** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1230`
+- **display** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **expanded** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1178`
+- **flex** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1233`
+- **flex** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **flexShrink** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1246`
+- **flexShrink** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1261`
+- **flexShrink** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1266`
+- **flexShrink** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1268`
+- **flexShrink** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **fontFamily** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1246`
+- **fontFamily** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1220`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1240`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1246`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1261`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1266`
+- **fontSize** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1292`
+- **fontVariantNumeric** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1261`
+- **fontVariantNumeric** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1266`
+- **fontWeight** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1246`
+- **fontWeight** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1250`
+- **gap** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1232`
+- **inputStr** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1184`
+- **isEditTool** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1186`
+- **isError** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1210`
+- **isStreamingInput** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1185`
+- **joinedResultText** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1204`
+- **map() callback** (function) in `joinedResultText` — `ref_projects/pi-web/components/MessageView.tsx:1205`
+- **resultContent.filter() callback** (function) in `joinedResultText` — `ref_projects/pi-web/components/MessageView.tsx:1205`
+- **lineHeight** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1293`
+- **margin** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1289`
+- **mcpLabel** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1200`
+- **minWidth** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1226`
+- **minWidth** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1234`
+- **minWidth** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **opacity** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1250`
+- **overflow** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1219`
+- **overflow** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **overflow** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1294`
+- **padding** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1235`
+- **padding** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1290`
+- **patchFiles** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1188`
+- **patchLabel** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1189`
+- **placeItems** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **resultContent** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1203`
+- **resultDiff** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1187`
+- **resultImages** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1208`
+- **resultIsEmpty** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1209`
+- **resultText** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1207`
+- **setExpanded** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1178`
+- **subagent** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1212`
+- **t** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1177`
+- **textAlign** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1241`
+- **textOverflow** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **toggleExpanded** (const) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1179`
+- **next** (const) in `toggleExpanded` — `ref_projects/pi-web/components/MessageView.tsx:1180`
+- **transform** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1268`
+- **transition** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1268`
+- **whiteSpace** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1255`
+- **whiteSpace** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1297`
+- **width** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1278`
+- **wordBreak** (property) in `ToolCallBlock` — `ref_projects/pi-web/components/MessageView.tsx:1298`
+- **ToolCallContent** (alias) — `ref_projects/pi-web/components/MessageView.tsx:38`
+- **ToolResultMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:33`
+- **TRANSCRIPT_NOTICE_WARNING_COLOR** (alias) — `ref_projects/pi-web/components/MessageView.tsx:27`
+- **transcriptNoticeText** (alias) — `ref_projects/pi-web/components/MessageView.tsx:27`
+- **TurnWrittenFiles** (alias) — `ref_projects/pi-web/components/MessageView.tsx:18`
+- **useEffect** (alias) — `ref_projects/pi-web/components/MessageView.tsx:3`
+- **useI18n** (alias) — `ref_projects/pi-web/components/MessageView.tsx:9`
+- **useMemo** (alias) — `ref_projects/pi-web/components/MessageView.tsx:3`
+- **USER_BUBBLE_MAX_HEIGHT** (const) — `ref_projects/pi-web/components/MessageView.tsx:160`
+- **useRef** (alias) — `ref_projects/pi-web/components/MessageView.tsx:3`
+- **UserMessage** (alias) — `ref_projects/pi-web/components/MessageView.tsx:30`
+- **UserMessageView** (function) — `ref_projects/pi-web/components/MessageView.tsx:334`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:420`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:421`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:446`
+- **setExpanded() callback** (function) in `<function>` — `ref_projects/pi-web/components/MessageView.tsx:446`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:536`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:537`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:561`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:574`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:575`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:609`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:623`
+- **<function>** (function) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:624`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:419`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:423`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:444`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:451`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:513`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:526`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:564`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:591`
+- **alignItems** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:613`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:428`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:455`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:528`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:566`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:593`
+- **background** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:615`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:429`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:456`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:528`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:566`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:593`
+- **border** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:615`
+- **borderRadius** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:431`
+- **borderRadius** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:529`
+- **borderRadius** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:567`
+- **borderRadius** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:594`
+- **borderRadius** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:616`
+- **boxShadow** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:430`
+- **canCancelEdit** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:408`
+- **canEdit** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:407`
+- **canFork** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:377`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:435`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:458`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:484`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:530`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:568`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:595`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:617`
+- **color** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:637`
+- **commandArgs** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:372`
+- **commandName** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:369`
+- **commandSeparator** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:368`
+- **commandText** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:367`
+- **content** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:353`
+- **map() callback** (function) in `content` — `ref_projects/pi-web/components/MessageView.tsx:358`
+- **message.content.filter() callback** (function) in `content` — `ref_projects/pi-web/components/MessageView.tsx:357`
+- **copied** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:347`
+- **copyContent** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:410`
+- **then() callback** (function) in `copyContent` — `ref_projects/pi-web/components/MessageView.tsx:411`
+- **setTimeout() callback** (function) in `then() callback` — `ref_projects/pi-web/components/MessageView.tsx:413`
+- **copyTarget** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:378`
+- **cursor** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:457`
+- **cursor** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:531`
+- **cursor** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:569`
+- **cursor** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:596`
+- **cursor** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:618`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:419`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:423`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:442`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:444`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:450`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:513`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:517`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:526`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:554`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:564`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:591`
+- **display** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:613`
+- **editTarget** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:379`
+- **expanded** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:348`
+- **flex** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:426`
+- **flex** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:490`
+- **flexDirection** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:419`
+- **flexDirection** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:442`
+- **flexShrink** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:453`
+- **flexShrink** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:476`
+- **flexWrap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:444`
+- **fontFamily** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:459`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:433`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:460`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:485`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:532`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:570`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:597`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:619`
+- **fontSize** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:637`
+- **fontWeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:532`
+- **fontWeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:570`
+- **fontWeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:597`
+- **fontWeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:619`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:423`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:442`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:444`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:452`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:514`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:517`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:526`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:554`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:564`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:591`
+- **gap** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:613`
+- **height** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:527`
+- **height** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:565`
+- **height** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:592`
+- **height** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:614`
+- **hovered** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:346`
+- **imageBlocks** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:362`
+- **message.content.filter() callback** (function) in `imageBlocks` — `ref_projects/pi-web/components/MessageView.tsx:365`
+- **imageBlocksNode** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:381`
+- **display** (property) in `imageBlocksNode` — `ref_projects/pi-web/components/MessageView.tsx:382`
+- **flexWrap** (property) in `imageBlocksNode` — `ref_projects/pi-web/components/MessageView.tsx:382`
+- **gap** (property) in `imageBlocksNode` — `ref_projects/pi-web/components/MessageView.tsx:382`
+- **imageBlocks.map() callback** (function) in `imageBlocksNode` — `ref_projects/pi-web/components/MessageView.tsx:383`
+- **border** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **borderRadius** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **display** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **flat** (const) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:386`
+- **data** (property) in `flat` — `ref_projects/pi-web/components/MessageView.tsx:386`
+- **mimeType** (property) in `flat` — `ref_projects/pi-web/components/MessageView.tsx:386`
+- **maxHeight** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **maxWidth** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **objectFit** (property) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:400`
+- **src** (const) in `imageBlocks.map() callback` — `ref_projects/pi-web/components/MessageView.tsx:387`
+- **marginBottom** (property) in `imageBlocksNode` — `ref_projects/pi-web/components/MessageView.tsx:382`
+- **justifyContent** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:513`
+- **lineHeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:434`
+- **lineHeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:486`
+- **marginBottom** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:419`
+- **marginTop** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:514`
+- **maxHeight** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:437`
+- **maxWidth** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:423`
+- **minWidth** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:427`
+- **minWidth** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:442`
+- **minWidth** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:489`
+- **opacity** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:476`
+- **opacity** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:518`
+- **opacity** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:555`
+- **overflow** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:464`
+- **overflowY** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:438`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:432`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:454`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:527`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:565`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:592`
+- **padding** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:614`
+- **pointerEvents** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:519`
+- **pointerEvents** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:556`
+- **setCopied** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:347`
+- **setExpanded** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:348`
+- **setHovered** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:346`
+- **t** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:345`
+- **textAlign** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:461`
+- **textOverflow** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:464`
+- **time** (const) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:376`
+- **transform** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:476`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:476`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:520`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:534`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:557`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:572`
+- **transition** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:621`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:464`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:487`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:533`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:571`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:598`
+- **whiteSpace** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:620`
+- **wordBreak** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:436`
+- **wordBreak** (property) in `UserMessageView` — `ref_projects/pi-web/components/MessageView.tsx:488`
+- **useState** (alias) — `ref_projects/pi-web/components/MessageView.tsx:3`
+- **WRITE_VIEW_KEYS** (const) — `ref_projects/pi-web/components/MessageView.tsx:2033`
+- **WrittenFile** (alias) — `ref_projects/pi-web/components/MessageView.tsx:19`

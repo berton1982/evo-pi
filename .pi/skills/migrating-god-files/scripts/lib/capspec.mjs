@@ -10,6 +10,7 @@
 
 import { columnOf, parseTables, stripCell } from './tables.mjs'
 
+const NAV_ALLOW_NONE = /none|无界面|不产出界面|不涉及界面/i
 const NAV = /(dialog|modal|弹窗|抽屉|drawer|panel|面板|route|路由|page|页面)/i
 
 /** `L12-L34` 或 `L12` → { from, to } */
@@ -97,7 +98,10 @@ export function checkCapSpec({ md, gods }) {
   if (navIdx < 0) problems.push('缺 `## 交互与导航` 段（没说清这门能力是弹窗还是路由）')
   else {
     const seg = text.slice(navIdx, text.indexOf('\n## ', navIdx + 3) < 0 ? undefined : text.indexOf('\n## ', navIdx + 3))
-    if (!NAV.test(seg)) problems.push('交互与导航段没写机制（dialog/panel/route 选一个）')
+    // 基础设施能力（C-A 这类）确实没有界面：允许写 none，但仍必须给证据，
+    // 否则"没有界面"就成了又一处无法核对的嘴说。
+    if (!NAV.test(seg) && !NAV_ALLOW_NONE.test(seg))
+      problems.push('交互与导航段没写机制（dialog/panel/route，或 none + 理由）')
     if (!/[\w@./-]+\.(?:tsx?|mjs):\d+/.test(seg))
       problems.push('交互与导航段没有 `path:line` 证据——机制不能靠嘴说')
     // 与 pi-web 不一致要说出来，而不是默默换实现
@@ -144,7 +148,7 @@ export function checkCapSpec({ md, gods }) {
 
   // 4. 布局映射
   const map = tables.find(
-    (t) => /pi-web/i.test(t.header.join(' ')) && /区域|布局|区块/.test(t.header.join(' ')),
+    (t) => /pi-web/i.test(t.header.join(' ')) && /区域|布局|区块|位置|目标|去向/.test(t.header.join(' ')),
   )
   const mapRows = map ? map.rows.filter((r) => r.some((c) => stripCell(c))) : []
   if (!/##\s*与 pi-web 的布局映射/.test(text)) problems.push('缺 `## 与 pi-web 的布局映射` 段')
@@ -169,6 +173,16 @@ export function checkCapSpec({ md, gods }) {
 export function checkUiProto({ md }) {
   const text = md || ''
   const problems = []
+  // 基础设施能力没有界面：允许「## 不适用」+ 理由 ≥40 字 + 一处 path:line 证据。
+  // 不许留空——空白表格无法区分"没有界面"和"忘了画"。
+  if (/##\s*不适用/.test(text)) {
+    const seg = text.slice(text.indexOf('## 不适用'))
+    const body = seg.split('\n').slice(1).join(' ').replace(/\s+/g, ' ')
+    if (body.length < 40) problems.push('「## 不适用」的理由太短（<40 字）')
+    if (!/[\w./-]+\.(ts|tsx|mjs):\d+/.test(body))
+      problems.push('「## 不适用」没给证据（`path:line`）')
+    return { ok: problems.length === 0, problems, totals: { mode: 'not-applicable' } }
+  }
   const blocks = [...text.matchAll(/```(?:text|ascii|txt)?\n([\s\S]*?)```/g)].map((m) => m[1])
   const drawn = blocks.filter((b) => /[│┌└├─┐┘┤┬┴┼+]/.test(b) && b.split('\n').filter(Boolean).length >= 6)
   if (drawn.length < 2)
@@ -186,4 +200,139 @@ export function checkUiProto({ md }) {
   if (rows.length < 3) problems.push(`交互态只有 ${rows.length} 行（至少 3 个态）`)
 
   return { ok: problems.length === 0, problems, totals: { blocks: drawn.length, states: rows.length } }
+}
+
+/**
+ * checkRenderBoundary — C0「渲染边界」门。
+ *
+ * 为什么需要它：`ownership.md` / `readlog.md` 是**行级**模型，`manifest` 是**代码结构**模型，
+ * 而用户看到的是**区域**。C-C 试点就是在这里翻车——原型里画了区顶栏与输入区工具条，
+ * 而这两个区域的文件（`AppShell.tsx`、`ChatInput.tsx`）属于 C-B / C-D，本能力从未读过。
+ *
+ * 判据：
+ * 1. `CHARTER.md` 必须有 `## 渲染边界`，且是一张「区域 / 宿主 / 说明」表；
+ * 2. 至少 1 行宿主是 `self`（否则这个能力什么都不渲染，应该写成 infrastructure）；
+ * 3. 宿主取值只能是 `self` / `shell` / `other:<能力 id>`；
+ * 4. 没有界面（uiProto 写「## 不适用」）时允许只有一行 `none`，但必须写理由 ≥20 字。
+ */
+export function checkRenderBoundary({ charter }) {
+  const text = charter || ''
+  const problems = []
+  if (!/##\s*(?:\d+\.\s*)?渲染边界/.test(text)) {
+    problems.push('CHARTER 缺 `## 渲染边界`——不写清"这一屏上还有谁"，原型必然越界画别人的区域')
+    return { ok: false, problems, totals: { regions: 0 } }
+  }
+  // 标题可能带编号（`## 4. 渲染边界`），所以用正则定位起点而不是 indexOf 字面量
+  const m = text.match(/##\s*(?:\d+\.\s*)?渲染边界[\s\S]*/)
+  const seg = m ? m[0] : ''
+  const t = parseTables(seg).find((x) => /区域/.test(x.header.join(' ')) && /宿主/.test(x.header.join(' ')))
+  if (!t) {
+    problems.push('「## 渲染边界」里没有「区域 / 宿主 / 说明」表')
+    return { ok: false, problems, totals: { regions: 0 } }
+  }
+  const rows = t.rows.filter((r) => r.some((c) => stripCell(c)))
+  if (!rows.length) problems.push('「## 渲染边界」表是空的（空表格无法区分"没有区域"和"忘了写"）')
+  const hosts = rows.map((r) => stripCell(r[1]))
+  const bad = hosts.filter((h) => !/^(self|shell|other:[A-Za-z-]+|none)$/.test(h))
+  if (bad.length) problems.push(`${bad.length} 行宿主不合法（只能是 self / shell / other:<能力> / none）：${bad.slice(0, 3).join(', ')}`)
+  if (!hosts.includes('self') && !hosts.includes('none'))
+    problems.push('没有一行宿主是 `self`——本能力不渲染任何区域的话应写成 infrastructure')
+  if (hosts.includes('none')) {
+    const body = seg.replace(/\s+/g, ' ')
+    if (body.length < 60) problems.push('宿主是 none 时要写清为什么没有界面（≥20 字理由）')
+  }
+  return { ok: problems.length === 0, problems, totals: { regions: rows.length, hosts } }
+}
+
+/**
+ * checkEntryInventory — `uiProto` 的补充：入口清单双向对账。
+ *
+ * 上一版 uiProto 只验"有 ASCII + 区域词"，于是"少画 6 个顶栏按钮"照样绿。
+ * 这里要求 `design/components.md` 有「区域 → 入口清单」表，并与原型双向一致：
+ * 表里有、原型里没有 → 少画；原型里有、表里没有 → 多画（多半是没查证就画上去的）。
+ */
+export function checkEntryInventory({ components, ui }) {
+  const problems = []
+  const comp = components || ''
+  const proto = ui || ''
+  // 基础设施能力不渲染界面：components.md 允许写「## 不适用」+ 理由 + 证据，与 ui.md 同口径。
+  // 没有这条分支时，C-A（7,669 行的运行时）会被要求列出"区域 → 入口"，只能编。
+  if (/##\s*不适用/.test(comp)) {
+    const body = comp.slice(comp.indexOf('## 不适用')).split('\n').slice(1).join(' ').replace(/\s+/g, ' ')
+    if (body.length < 40) problems.push('components.md「## 不适用」的理由太短（<40 字）')
+    if (!/[\w./-]+\.(ts|tsx|mjs):\d+/.test(body))
+      problems.push('components.md「## 不适用」没给证据（`path:line`）')
+    return { ok: problems.length === 0, problems, totals: { entries: 0, mode: 'not-applicable' } }
+  }
+  const t = parseTables(comp).find(
+    (x) => /区域/.test(x.header.join(' ')) && /入口/.test(x.header.join(' ')),
+  )
+  if (!t) {
+    problems.push('components.md 缺「区域 / 入口 / 源」表——没有入口清单，原型画多画少都没人知道')
+    return { ok: false, problems, totals: { entries: 0 } }
+  }
+  const rows = t.rows
+    .filter((r) => r.some((c) => stripCell(c)))
+    .map((r) => ({ region: stripCell(r[0]), name: stripCell(r[1]), src: stripCell(r[2] || '') }))
+    .filter((r) => r.name)
+  if (!rows.length) problems.push('入口清单表是空的')
+  const noSrc = rows.filter((r) => !/[\w./-]+\.(ts|tsx):\d+/.test(r.src))
+  if (noSrc.length)
+    problems.push(`${noSrc.length} 个入口没有源证据（path:line）：${noSrc.slice(0, 3).map((r) => r.name).join(', ')}`)
+  const text = proto.replace(/\s+/g, ' ')
+  const missing = rows.filter((r) => !text.includes(r.name))
+  if (missing.length)
+    problems.push(`${missing.length} 个入口在 components.md 里有、原型里没画：${missing.slice(0, 4).map((r) => r.name).join(', ')}`)
+  // 反向：原型方括号里的按钮/入口名（[信任项目] 这种）必须能在清单里找到
+  const drawn = [...proto.matchAll(/\[([^\]\n]{1,20})\]/g)]
+    .map((m) => m[1].trim())
+    .filter((n) => n && !/^[\s]*$/.test(n) && !/^[▾▼▲📎]+$/.test(n) && n.length > 1)
+  const known = new Set(rows.map((r) => r.name))
+  const extra = [...new Set(drawn)].filter((n) => !known.has(n) && !known.has(n.replace(/^[:：]/, '')))
+  if (extra.length)
+    problems.push(`${extra.length} 个原型里的入口不在清单里（多画或没查证）：${extra.slice(0, 4).join(', ')}`)
+  return {
+    ok: problems.length === 0,
+    problems,
+    totals: { entries: rows.length, drawn: drawn.length },
+  }
+}
+
+/**
+ * checkReadlogCoverage — "你引用了谁的界面，就得读过谁"。
+ *
+ * 取 `spec.md` 的布局映射表与 `design/ui.md` 里出现的所有源文件路径，
+ * 要求 `readlog.md` 里都有阅读记录。C-C 试点漏的正是这条：
+ * 原型引用了 AppShell.tsx / ChatInput.tsx，readlog 里 0 条。
+ */
+export function checkReadlogCoverage({ readlog, docs, gods = [] }) {
+  const log = readlog || ''
+  const problems = []
+  const files = new Set()
+  for (const text of docs || []) {
+    for (const m of String(text || '').matchAll(/([\w./-]+\.(?:tsx?|mjs))(?::\d+)?/g)) {
+      const path = m[1]
+      // 只对"上游源码"要求阅读记录：`packages/**` 是我们自己要落的盘，
+      // 引用它不需要"读过"（它可能还没存在）。带目录的必须指到 ref_projects/。
+      if (path.includes('/') && !path.includes('ref_projects/')) continue
+      const f = path.split('/').pop()
+      if (!f || /^(index|types)\.ts$/.test(f)) continue
+      // 不带目录的名字只在本能力的 god 文件里强制（别处出现多半是散文提及）
+      const bare = !path.includes('/')
+      const isGod = gods.some((g) => String(g.path || '').split('/').pop() === f)
+      if (bare && !isGod) continue
+      files.add(f)
+    }
+  }
+  if (!files.size) return { ok: true, problems: [], totals: { files: 0, missing: 0 } }
+  const missing = [...files].filter((f) => !log.includes(f))
+  if (missing.length)
+    problems.push(
+      `${missing.length} 个被引用的源文件没有阅读记录：${missing.slice(0, 5).join(', ')}——原型里画它的界面，就得先读过它`,
+    )
+  return {
+    ok: problems.length === 0,
+    problems,
+    totals: { files: files.size, missing: missing.length },
+  }
 }

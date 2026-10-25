@@ -1,0 +1,1375 @@
+# 符号全集 — `ref_projects/pi-web/hooks/useAgentSession.ts`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：2806；符号数：**1367**；导出时间：2026-10-23T14:10:58.397Z
+
+## 符号（按出现顺序）
+
+- **AGENT_STATE_RECONCILE_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:233`
+- **AgentEndInfo** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:171`
+- **aborted** (property) in `AgentEndInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:173`
+- **AgentEvent** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:82`
+- **[]** (index) in `AgentEvent` — `ref_projects/pi-web/hooks/useAgentSession.ts:84`
+- **type** (property) in `AgentEvent` — `ref_projects/pi-web/hooks/useAgentSession.ts:83`
+- **AgentEventConnection** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:31`
+- **AgentMessage** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:5`
+- **AgentPhase** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:141`
+- **AgentStateResponse** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:96`
+- **asConcreteThinkingLevel** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:220`
+- **AttachedImage** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:317`
+- **data** (property) in `AttachedImage` — `ref_projects/pi-web/hooks/useAgentSession.ts:318`
+- **mimeType** (property) in `AttachedImage` — `ref_projects/pi-web/hooks/useAgentSession.ts:319`
+- **previewUrl** (property) in `AttachedImage` — `ref_projects/pi-web/hooks/useAgentSession.ts:320`
+- **bareMcpOpensSettings** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:36`
+- **BASH_STATE_RECONCILE_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:234`
+- **BlockingExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:6`
+- **BuiltinSlashCommandResult** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:166`
+- **carryMessageKeys** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:30`
+- **CHAT_SCROLL_REATTACH_TOLERANCE** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:46`
+- **CHAT_SCROLL_TAIL_TOLERANCE** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:47`
+- **ChatInputHandle** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:307`
+- **addImages** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:312`
+- **insertIfEmpty** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:309`
+- **insertText** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:308`
+- **prependText** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:311`
+- **rekeyDraft** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:313`
+- **replaceMessage** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:310`
+- **restoreSubmission** (property) in `ChatInputHandle` — `ref_projects/pi-web/hooks/useAgentSession.ts:314`
+- **clearDraft** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:24`
+- **ClientAssistantMessageEvent** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:53`
+- **CODEMODE_TOOL_NAME** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:34`
+- **CompactCommandResult** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:87`
+- **estimatedTokensAfter** (property) in `CompactCommandResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:89`
+- **tokensBefore** (property) in `CompactCommandResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:88`
+- **CompactResultInfo** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:147`
+- **estimatedTokensAfter** (property) in `CompactResultInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:150`
+- **reason** (property) in `CompactResultInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:148`
+- **tokensBefore** (property) in `CompactResultInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:149`
+- **ConcreteThinkingLevel** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:207`
+- **CONFIGURED_TOOL_PRESET** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:26`
+- **createNoticeId** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:243`
+- **createStreamingStore** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:52`
+- **delay** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:250`
+- **<function>** (function) in `delay` — `ref_projects/pi-web/hooks/useAgentSession.ts:251`
+- **deleteSessionViewSnapshot** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:19`
+- **enqueueExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:40`
+- **EVENT_STREAM_IDLE_GRACE_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:232`
+- **EVENT_STREAM_READY_TIMEOUT_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:235`
+- **EVENT_STREAM_RECONNECT_DELAY_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:236`
+- **ExtensionStatusItem** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:7`
+- **ExtensionUiCustomRequest** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:121`
+- **ExtensionUiDialogRequest** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:120`
+- **ExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:8`
+- **ExtensionWidgetItem** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:9`
+- **fillPendingNotices** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:262`
+- **next** (const) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:266`
+- **nextPending** (let) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:264`
+- **nextVisible** (let) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:263`
+- **nextVisible.some() callback** (function) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:270`
+- **pending** (property) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:273`
+- **rest** (const) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:266`
+- **visible** (property) in `fillPendingNotices` — `ref_projects/pi-web/hooks/useAgentSession.ts:273`
+- **getCodemodeProgress** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:34`
+- **getDraft** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:24`
+- **getLiveFollowAttached** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:48`
+- **getPreferredToolPreset** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:25`
+- **getPresetFromToolNames** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:26`
+- **getSessionViewSnapshot** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:20`
+- **getToolExecutionProgress** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:33`
+- **getToolNamesForPreset** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:26`
+- **isBlockingExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:15`
+- **isNestedToolExecutionEvent** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:32`
+- **isPromptRejectedError** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:17`
+- **isSystemMessageEvent** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:32`
+- **LastAssistantTextResponse** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:92`
+- **text** (property) in `LastAssistantTextResponse` — `ref_projects/pi-web/hooks/useAgentSession.ts:93`
+- **markOldestNoticeExiting** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:254`
+- **index** (const) in `markOldestNoticeExiting` — `ref_projects/pi-web/hooks/useAgentSession.ts:255`
+- **notices.findIndex() callback** (function) in `index` — `ref_projects/pi-web/hooks/useAgentSession.ts:255`
+- **notices.map() callback** (function) in `markOldestNoticeExiting` — `ref_projects/pi-web/hooks/useAgentSession.ts:257`
+- **notice** (property) in `notices.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:258`
+- **exiting** (property) in `notices.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:258`
+- **MAX_NOTICES** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:240`
+- **mergeSessionStats** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:28`
+- **messageRenderKeys** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:30`
+- **ModelEntry** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:324`
+- **MODELS_RETRY_DELAYS_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:239`
+- **ModelsResponse** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:325`
+- **NewSessionChoices** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:215`
+- **model** (property) in `NewSessionChoices` — `ref_projects/pi-web/hooks/useAgentSession.ts:216`
+- **thinkingLevel** (property) in `NewSessionChoices` — `ref_projects/pi-web/hooks/useAgentSession.ts:217`
+- **normalizeQueuedMessages** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:116`
+- **followUp** (property) in `normalizeQueuedMessages` — `ref_projects/pi-web/hooks/useAgentSession.ts:117`
+- **steering** (property) in `normalizeQueuedMessages` — `ref_projects/pi-web/hooks/useAgentSession.ts:117`
+- **normalizeToolCalls** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:16`
+- **NOTICE_EXIT_ANIMATION_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:242`
+- **NOTICE_VISIBLE_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:241`
+- **NoticeAction** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:136`
+- **NoticeItem** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:124`
+- **noticeReducer** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:276`
+- **state** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:287`
+- **state** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:290`
+- **pending** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:284`
+- **state.visible.some() callback** (function) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:279`
+- **visible** (const) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:292`
+- **state.visible.filter() callback** (function) in `visible` — `ref_projects/pi-web/hooks/useAgentSession.ts:292`
+- **visible** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:281`
+- **state.visible.some() callback** (function) in `visible` — `ref_projects/pi-web/hooks/useAgentSession.ts:281`
+- **visible** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:287`
+- **visible** (property) in `noticeReducer` — `ref_projects/pi-web/hooks/useAgentSession.ts:290`
+- **NoticeState** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:131`
+- **NoticeType** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:122`
+- **pendingHistoryEdits** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:227`
+- **PROMPT_SETTLE_INITIAL_DELAY_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:229`
+- **PROMPT_SETTLE_MAX_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:231`
+- **PROMPT_SETTLE_POLL_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:230`
+- **QueuedMessages** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:111`
+- **followUp** (property) in `QueuedMessages` — `ref_projects/pi-web/hooks/useAgentSession.ts:113`
+- **steering** (property) in `QueuedMessages` — `ref_projects/pi-web/hooks/useAgentSession.ts:112`
+- **readCompactResult** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:300`
+- **estimatedTokensAfter** (property) in `readCompactResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:304`
+- **r** (const) in `readCompactResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:302`
+- **reason** (property) in `readCompactResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:304`
+- **tokensBefore** (property) in `readCompactResult` — `ref_projects/pi-web/hooks/useAgentSession.ts:304`
+- **rekeyDraft** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:24`
+- **removeExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:41`
+- **restoreDraftSubmission** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:24`
+- **retainExtensionUiRequests** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:42`
+- **SelectedModel** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:323`
+- **sendAgentCommand** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:17`
+- **SESSION_LEASE_RENEW_INTERVAL_MS** (const) — `ref_projects/pi-web/hooks/useAgentSession.ts:237`
+- **SessionData** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:56`
+- **context** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:67`
+- **filePath** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:58`
+- **leafId** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:61`
+- **sessionId** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:57`
+- **snapshotRevision** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:64`
+- **stats** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:77`
+- **toolNames** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:62`
+- **totalActiveMs** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:59`
+- **tree** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:60`
+- **treeFormat** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:66`
+- **wrapperRebuilt** (property) in `SessionData` — `ref_projects/pi-web/hooks/useAgentSession.ts:79`
+- **SessionFileStats** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:28`
+- **SessionInfo** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:10`
+- **SessionStatsInfo** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:27`
+- **SessionTreeNode** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:11`
+- **setPreferredToolPreset** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:25`
+- **setSessionViewSnapshot** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:21`
+- **SettingsSection** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:37`
+- **shouldShowScrollToLatest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:49`
+- **SlashCommandInfo** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:153`
+- **description** (property) in `SlashCommandInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:155`
+- **name** (property) in `SlashCommandInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:154`
+- **source** (property) in `SlashCommandInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:156`
+- **sourceInfo** (property) in `SlashCommandInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:157`
+- **SlashCommandsResponse** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:338`
+- **snapshotCoversLoadedEntries** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:22`
+- **ThinkingLevelOption** (type) — `ref_projects/pi-web/hooks/useAgentSession.ts:206`
+- **ToolEntry** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:26`
+- **ToolPreset** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:26`
+- **ToolResultMessage** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:12`
+- **TranscriptNotice** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:38`
+- **updateExtensionWidgets** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:35`
+- **upsertExtensionUiRequest** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:43`
+- **useAgentSession** (function) — `ref_projects/pi-web/hooks/useAgentSession.ts:342`
+- **activeLeafId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:355`
+- **activeLeafId** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **activeLeafIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:465`
+- **activeToolResults** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:357`
+- **activeToolResults** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **addNotice** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1138`
+- **useCallback() callback** (function) in `addNotice` — `ref_projects/pi-web/hooks/useAgentSession.ts:1138`
+- **message** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1139`
+- **notice** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1143`
+- **id** (property) in `notice` — `ref_projects/pi-web/hooks/useAgentSession.ts:1144`
+- **message** (property) in `notice` — `ref_projects/pi-web/hooks/useAgentSession.ts:1145`
+- **type** (property) in `notice` — `ref_projects/pi-web/hooks/useAgentSession.ts:1146`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1142`
+- **addNotice** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2796`
+- **agentPhase** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:400`
+- **agentPhase** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2779`
+- **agentRunning** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:367`
+- **agentRunning** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **agentRunningRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:423`
+- **applyContextUsage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:622`
+- **useCallback() callback** (function) in `applyContextUsage` — `ref_projects/pi-web/hooks/useAgentSession.ts:622`
+- **autoCompactionEnabled** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:397`
+- **autoCompactionEnabled** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **bashRecoveryIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:428`
+- **bashRunning** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:368`
+- **bashRunning** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2801`
+- **bashRunningRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:427`
+- **branchSwitchLocked** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2647`
+- **cancelEdit** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:599`
+- **useCallback() callback** (function) in `cancelEdit` — `ref_projects/pi-web/hooks/useAgentSession.ts:599`
+- **cancelEdit** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2795`
+- **cancelEventStreamGrace** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1024`
+- **useCallback() callback** (function) in `cancelEventStreamGrace` — `ref_projects/pi-web/hooks/useAgentSession.ts:1024`
+- **clearSlashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:971`
+- **useCallback() callback** (function) in `clearSlashCommands` — `ref_projects/pi-web/hooks/useAgentSession.ts:971`
+- **closeEvents** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1033`
+- **useCallback() callback** (function) in `closeEvents` — `ref_projects/pi-web/hooks/useAgentSession.ts:1033`
+- **compactError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:398`
+- **compactError** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **compactResult** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:399`
+- **compactResult** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **composerDraftKey** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:537`
+- **contextThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:528`
+- **contextUsage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:385`
+- **contextUsage** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2771`
+- **contextUsageAppliedIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:389`
+- **contextUsageRequestIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:386`
+- **createSource** (method) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:481`
+- **currentModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:524`
+- **currentModel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **currentModelOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:392`
+- **currentThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:533`
+- **currentThinkingOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:382`
+- **data** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:352`
+- **data** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **dataRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:462`
+- **defaultModel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2777`
+- **defaultThinkingLevelRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:452`
+- **dismissCompactError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2032`
+- **useCallback() callback** (function) in `dismissCompactError` — `ref_projects/pi-web/hooks/useAgentSession.ts:2032`
+- **dismissCompactError** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2790`
+- **dispatch** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:366`
+- **dispatch** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2800`
+- **dispatchNotice** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:405`
+- **displayModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:525`
+- **displayModel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **displayThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:534`
+- **draftKeyAliasesRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:456`
+- **earlierTurnCount** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:363`
+- **earlierTurnCount** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **earlierTurnCountRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:468`
+- **editEntryId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:583`
+- **editEntryId** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2781`
+- **ensureEventsConnected** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1037`
+- **useCallback() callback** (function) in `ensureEventsConnected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1037`
+- **ensureNewSession** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:883`
+- **useCallback() callback** (function) in `ensureNewSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:883`
+- **promise** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:888`
+- **<function>** (function) in `promise` — `ref_projects/pi-web/hooks/useAgentSession.ts:888`
+- **body** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:914`
+- **catch() callback** (function) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:914`
+- **error** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:914`
+- **realId** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:922`
+- **res** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:898`
+- **body** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:901`
+- **<unknown>** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:904`
+- **<unknown>** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:905`
+- **<unknown>** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:906`
+- **cwd** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:902`
+- **type** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:903`
+- **headers** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:900`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/hooks/useAgentSession.ts:900`
+- **method** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:899`
+- **result** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:917`
+- **model** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:919`
+- **sessionId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:918`
+- **thinkingLevel** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:920`
+- **selectedModel** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:891`
+- **selectedThinkingLevel** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:892`
+- **toolNames** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:896`
+- **ensuringNewSessionRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:439`
+- **entryIds** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:358`
+- **entryIds** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **entryIdsRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:464`
+- **error** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:354`
+- **error** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **eventConnectionRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:413`
+- **eventStreamGraceActiveRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:416`
+- **eventStreamGraceGenerationRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:415`
+- **eventStreamGraceTimerRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:414`
+- **executeBash** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1860`
+- **useCallback() callback** (function) in `executeBash` — `ref_projects/pi-web/hooks/useAgentSession.ts:1860`
+- **command** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1864`
+- **command** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1871`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1876`
+- **excludeFromContext** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1864`
+- **excludeFromContext** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1872`
+- **inputText** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1862`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1878`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1867`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1870`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1878`
+- **executeBashRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:436`
+- **existingSessionId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:501`
+- **extensionCustomUi** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2760`
+- **extensionCustomUi** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **extensionCustomUis** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:408`
+- **extensionDialog** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2758`
+- **extensionDialog** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **extensionDialogs** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:407`
+- **extensionStatuses** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:409`
+- **extensionStatuses** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **extensionWidgets** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:410`
+- **extensionWidgets** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **finishPromptWithoutStream** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1280`
+- **useCallback() callback** (function) in `finishPromptWithoutStream` — `ref_projects/pi-web/hooks/useAgentSession.ts:1280`
+- **aborted** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1297`
+- **agentWasActive** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1289`
+- **promptWasPending** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1288`
+- **wasRunning** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1293`
+- **forkingEntryId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:391`
+- **forkingEntryId** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2771`
+- **handleAbort** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1888`
+- **useCallback() callback** (function) in `handleAbort` — `ref_projects/pi-web/hooks/useAgentSession.ts:1888`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1894`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1901`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1889`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1893`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1900`
+- **handleAbort** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2788`
+- **handleAbortCompaction** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2336`
+- **useCallback() callback** (function) in `handleAbortCompaction` — `ref_projects/pi-web/hooks/useAgentSession.ts:2336`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2341`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2337`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2340`
+- **handleAbortCompaction** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2789`
+- **handleAgentEvent** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1429`
+- **useCallback() callback** (function) in `handleAgentEvent` — `ref_projects/pi-web/hooks/useAgentSession.ts:1429`
+- **aborted** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1504`
+- **agentWasActive** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1493`
+- **attempt** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1691`
+- **catch() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1489`
+- **completed** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1581`
+- **content** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1632`
+- **delivered** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1587`
+- **deliveredKey** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1588`
+- **delta** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1555`
+- **errorMessage** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1691`
+- **event** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1557`
+- **firstNotification** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1513`
+- **followUp** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1687`
+- **id** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1618`
+- **id** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1629`
+- **id** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1668`
+- **kind** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1444`
+- **kind** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1456`
+- **kind** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1610`
+- **maxAttempts** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1691`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1528`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1533`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1549`
+- **msg** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1546`
+- **name** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1619`
+- **name** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1630`
+- **notices** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1602`
+- **optimisticKey** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1589`
+- **partialResult** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1631`
+- **pending** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1435`
+- **progress** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1648`
+- **promptWasPending** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1510`
+- **requestAnimationFrame() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1568`
+- **runId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1473`
+- **runId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1509`
+- **setActiveToolResults() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1635`
+- **content** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1641`
+- **details** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1643`
+- **isError** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1642`
+- **next** (const) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1636`
+- **role** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1638`
+- **toolCallId** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1639`
+- **toolName** (property) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1640`
+- **setActiveToolResults() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1670`
+- **next** (const) in `setActiveToolResults() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1672`
+- **setAgentPhase() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1620`
+- **id** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1622`
+- **kind** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1623`
+- **name** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1622`
+- **tools** (const) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1621`
+- **tools** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1623`
+- **tools.some() callback** (function) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1622`
+- **setAgentPhase() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1651`
+- **existing** (const) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1653`
+- **tools.find() callback** (function) in `existing` — `ref_projects/pi-web/hooks/useAgentSession.ts:1653`
+- **kind** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1660`
+- **tools** (const) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1652`
+- **tools** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1661`
+- **tools.filter() callback** (function) in `tools` — `ref_projects/pi-web/hooks/useAgentSession.ts:1661`
+- **updated** (const) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1654`
+- **id** (property) in `updated` — `ref_projects/pi-web/hooks/useAgentSession.ts:1655`
+- **name** (property) in `updated` — `ref_projects/pi-web/hooks/useAgentSession.ts:1656`
+- **progress** (property) in `updated` — `ref_projects/pi-web/hooks/useAgentSession.ts:1657`
+- **setAgentPhase() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1676`
+- **kind** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1679`
+- **kind** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1680`
+- **tools** (const) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1678`
+- **prev.tools.filter() callback** (function) in `tools` — `ref_projects/pi-web/hooks/useAgentSession.ts:1678`
+- **tools** (property) in `setAgentPhase() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1680`
+- **setExtensionCustomUis() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1437`
+- **setExtensionDialogs() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1436`
+- **setExtensionDialogs() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1717`
+- **setMessages() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1591`
+- **last** (const) in `setMessages() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1592`
+- **setMessages() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1603`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1472`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1497`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1516`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1605`
+- **steering** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1686`
+- **then() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1477`
+- **then() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1478`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1432`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1461`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1470`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1528`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1532`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1549`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1557`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1609`
+- **usageRequestId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1474`
+- **wasRunning** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1498`
+- **handleAgentEventRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:429`
+- **handleAgentEventRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2803`
+- **handleBuiltinSlashCommand** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2145`
+- **useCallback() callback** (function) in `handleBuiltinSlashCommand` — `ref_projects/pi-web/hooks/useAgentSession.ts:2145`
+- **action** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2226`
+- **action** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2240`
+- **args** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2151`
+- **commandName** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2150`
+- **commands** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2237`
+- **complete** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2153`
+- **message** (property) in `complete` — `ref_projects/pi-web/hooks/useAgentSession.ts:2156`
+- **message** (property) in `complete` — `ref_projects/pi-web/hooks/useAgentSession.ts:2159`
+- **type** (property) in `complete` — `ref_projects/pi-web/hooks/useAgentSession.ts:2156`
+- **type** (property) in `complete` — `ref_projects/pi-web/hooks/useAgentSession.ts:2159`
+- **completed** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2264`
+- **handled** (property) in `completed` — `ref_projects/pi-web/hooks/useAgentSession.ts:2264`
+- **message** (property) in `completed` — `ref_projects/pi-web/hooks/useAgentSession.ts:2264`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2245`
+- **type** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:2245`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2272`
+- **enabled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2188`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2167`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2181`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2200`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2212`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2213`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2220`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2244`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2247`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2253`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2255`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2262`
+- **error** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2273`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2146`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2148`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2167`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2177`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2181`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2192`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2200`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2208`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2212`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2213`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2216`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2220`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2226`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2236`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2238`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2240`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2244`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2247`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2249`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2253`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2255`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2262`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2270`
+- **handled** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2273`
+- **liveState** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2184`
+- **type** (property) in `liveState` — `ref_projects/pi-web/hooks/useAgentSession.ts:2184`
+- **match** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2147`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2177`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2193`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2208`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2216`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2249`
+- **name** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2214`
+- **nextEnabled** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2185`
+- **rawArgs** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2150`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2171`
+- **<unknown>** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2173`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2172`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2257`
+- **cancelled** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2257`
+- **leafId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2259`
+- **newSessionId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2257`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2258`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2152`
+- **stats** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2221`
+- **type** (property) in `stats` — `ref_projects/pi-web/hooks/useAgentSession.ts:2221`
+- **textToCopy** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2246`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2187`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2201`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2214`
+- **handleBuiltinSlashCommand** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2792`
+- **handleCompact** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2013`
+- **useCallback() callback** (function) in `handleCompact` — `ref_projects/pi-web/hooks/useAgentSession.ts:2013`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2023`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2020`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2020`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2014`
+- **handleCompact** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2789`
+- **handleEditContent** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:594`
+- **useCallback() callback** (function) in `handleEditContent` — `ref_projects/pi-web/hooks/useAgentSession.ts:594`
+- **handleEditContent** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2793`
+- **handleExtensionUiRequest** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1151`
+- **useCallback() callback** (function) in `handleExtensionUiRequest` — `ref_projects/pi-web/hooks/useAgentSession.ts:1151`
+- **id** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1163`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1164`
+- **setExtensionCustomUis() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1192`
+- **setExtensionDialogs() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1159`
+- **setExtensionStatuses() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1170`
+- **key** (property) in `setExtensionStatuses() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1173`
+- **rest** (const) in `setExtensionStatuses() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1171`
+- **prev.filter() callback** (function) in `rest` — `ref_projects/pi-web/hooks/useAgentSession.ts:1171`
+- **text** (property) in `setExtensionStatuses() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1173`
+- **setExtensionWidgets() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1178`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1165`
+- **handleFollowUp** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2332`
+- **useCallback() callback** (function) in `handleFollowUp` — `ref_projects/pi-web/hooks/useAgentSession.ts:2332`
+- **handleFollowUp** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2789`
+- **handleFork** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1906`
+- **useCallback() callback** (function) in `handleFork` — `ref_projects/pi-web/hooks/useAgentSession.ts:1906`
+- **cancelled** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1916`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1920`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1922`
+- **newSessionId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1916`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1912`
+- **cancelled** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1912`
+- **entryId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1914`
+- **newSessionId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1912`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1913`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1908`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1922`
+- **handleFork** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2788`
+- **handleLeafChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1947`
+- **useCallback() callback** (function) in `handleLeafChange` — `ref_projects/pi-web/hooks/useAgentSession.ts:1947`
+- **catch() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1957`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1953`
+- **targetId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1957`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1957`
+- **handleModelChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1961`
+- **useCallback() callback** (function) in `handleModelChange` — `ref_projects/pi-web/hooks/useAgentSession.ts:1961`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1977`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1996`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2002`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1991`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1976`
+- **pinned** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1968`
+- **previousOverride** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1985`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1991`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1976`
+- **selected** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1990`
+- **id** (property) in `selected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1990`
+- **modelId** (property) in `selected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1990`
+- **provider** (property) in `selected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1990`
+- **type** (property) in `selected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1990`
+- **selectedModel** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1963`
+- **modelId** (property) in `selectedModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:1963`
+- **provider** (property) in `selectedModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:1963`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1973`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1982`
+- **target** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1984`
+- **modelId** (property) in `target` — `ref_projects/pi-web/hooks/useAgentSession.ts:1984`
+- **provider** (property) in `target` — `ref_projects/pi-web/hooks/useAgentSession.ts:1984`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1976`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2001`
+- **handleModelChange** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2788`
+- **handleNavigate** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1928`
+- **useCallback() callback** (function) in `handleNavigate` — `ref_projects/pi-web/hooks/useAgentSession.ts:1928`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1940`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1933`
+- **cancelled** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1933`
+- **targetId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1935`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1934`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1930`
+- **handleNavigate** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2788`
+- **handleNavigateRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:437`
+- **handlePromptWithStreamingBehavior** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2324`
+- **useCallback() callback** (function) in `handlePromptWithStreamingBehavior` — `ref_projects/pi-web/hooks/useAgentSession.ts:2324`
+- **handlePromptWithStreamingBehavior** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2789`
+- **handleRecallQueue** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2346`
+- **useCallback() callback** (function) in `handleRecallQueue` — `ref_projects/pi-web/hooks/useAgentSession.ts:2346`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2358`
+- **followUp** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2353`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2360`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2350`
+- **followUp** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2350`
+- **steering** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2350`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2350`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2347`
+- **steering** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2353`
+- **texts** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2354`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2360`
+- **handleRecallQueue** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2791`
+- **handleScrollPositionChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2489`
+- **useCallback() callback** (function) in `handleScrollPositionChange` — `ref_projects/pi-web/hooks/useAgentSession.ts:2489`
+- **clientHeight** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2492`
+- **container** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2490`
+- **isAgentRunning** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2493`
+- **isAttached** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2495`
+- **scrollHeight** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2492`
+- **scrollTop** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2492`
+- **setShowScrollToBottom() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2508`
+- **shouldShow** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2507`
+- **wasAttached** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2494`
+- **handleSend** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1723`
+- **useCallback() callback** (function) in `handleSend` — `ref_projects/pi-web/hooks/useAgentSession.ts:1723`
+- **<unknown>** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1807`
+- **<unknown>** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1817`
+- **bashCmd** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1746`
+- **catch() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1799`
+- **definitivelyRejected** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1827`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1825`
+- **entryId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1733`
+- **existingSid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1784`
+- **imageBlocks** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **images.map() callback** (function) in `imageBlocks` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **source** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **data** (property) in `source` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **media_type** (property) in `source` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **type** (property) in `source` — `ref_projects/pi-web/hooks/useAgentSession.ts:1759`
+- **isBashCommand** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1743`
+- **isExcluded** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1745`
+- **isSlashCommandPrompt** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1741`
+- **kind** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1772`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1842`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1806`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1816`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1792`
+- **piImages** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1777`
+- **images.map() callback** (function) in `piImages` — `ref_projects/pi-web/hooks/useAgentSession.ts:1777`
+- **data** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1777`
+- **mimeType** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1777`
+- **type** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1777`
+- **promptRequestStarted** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1779`
+- **promptRunId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1755`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1792`
+- **selectedModel** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1783`
+- **sentSessionId** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1778`
+- **setMessages() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1767`
+- **setMessages() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1836`
+- **optimisticIndex** (const) in `setMessages() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1837`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1785`
+- **trimmedMessage** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1724`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1773`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1792`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1805`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1815`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1842`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1856`
+- **userMsg** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1760`
+- **content** (property) in `userMsg` — `ref_projects/pi-web/hooks/useAgentSession.ts:1762`
+- **text** (property) in `content` — `ref_projects/pi-web/hooks/useAgentSession.ts:1763`
+- **type** (property) in `content` — `ref_projects/pi-web/hooks/useAgentSession.ts:1763`
+- **role** (property) in `userMsg` — `ref_projects/pi-web/hooks/useAgentSession.ts:1761`
+- **timestamp** (property) in `userMsg` — `ref_projects/pi-web/hooks/useAgentSession.ts:1765`
+- **handleSend** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2788`
+- **handleSetDefaultModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2130`
+- **useCallback() callback** (function) in `handleSetDefaultModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:2130`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2133`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2134`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2137`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2132`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2138`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2132`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2138`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2134`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2137`
+- **handleSetDefaultModel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **handleSetDefaultThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2391`
+- **useCallback() callback** (function) in `handleSetDefaultThinkingLevel` — `ref_projects/pi-web/hooks/useAgentSession.ts:2391`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2394`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2395`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2398`
+- **thinkingLevel** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2393`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2395`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2398`
+- **handleSetDefaultThinkingLevel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **handleSteer** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2320`
+- **useCallback() callback** (function) in `handleSteer` — `ref_projects/pi-web/hooks/useAgentSession.ts:2320`
+- **handleSteer** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2789`
+- **handleThinkingLevelChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2364`
+- **useCallback() callback** (function) in `handleThinkingLevelChange` — `ref_projects/pi-web/hooks/useAgentSession.ts:2364`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2385`
+- **level** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2380`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2377`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2380`
+- **handleThinkingLevelChange** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **handleToolPresetChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2404`
+- **useCallback() callback** (function) in `handleToolPresetChange` — `ref_projects/pi-web/hooks/useAgentSession.ts:2404`
+- **activeSessionId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2421`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2446`
+- **result** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2416`
+- **<unknown>** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2418`
+- **recreated** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2416`
+- **sessionId** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2416`
+- **type** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:2417`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2408`
+- **state** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2438`
+- **toolNames** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2405`
+- **handleToolPresetChange** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **hasEarlierMessages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:362`
+- **hasEarlierMessages** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **hasEarlierMessagesRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:467`
+- **historyCursor** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:361`
+- **historyCursor** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **historyCursorRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:466`
+- **initialChoices** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:350`
+- **initialScrollDoneRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:430`
+- **initialScrollDoneRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2786`
+- **isAutoModelSelection** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2775`
+- **isAutoThinkingSelection** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2776`
+- **isCompacting** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:396`
+- **isCompacting** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **isNearBottomRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:433`
+- **isNew** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:349`
+- **isNew** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2780`
+- **lastUserMsgRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:431`
+- **lastUserMsgRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2786`
+- **liveFollowFrameRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:435`
+- **liveModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:393`
+- **liveThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:383`
+- **loadContext** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:802`
+- **useCallback() callback** (function) in `loadContext` — `ref_projects/pi-web/hooks/useAgentSession.ts:802`
+- **d** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:813`
+- **context** (property) in `d` — `ref_projects/pi-web/hooks/useAgentSession.ts:813`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:839`
+- **params** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:804`
+- **deferMedia** (property) in `params` — `ref_projects/pi-web/hooks/useAgentSession.ts:804`
+- **deferThinking** (property) in `params` — `ref_projects/pi-web/hooks/useAgentSession.ts:804`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:811`
+- **signal** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:811`
+- **setData() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:818`
+- **prev** (property) in `setData() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:828`
+- **context** (const) in `setData() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:820`
+- **<unknown>** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:821`
+- **entryIds** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:823`
+- **hasMore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:825`
+- **messages** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:822`
+- **oldestEntryId** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:824`
+- **turnsBefore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:826`
+- **context** (property) in `setData() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:828`
+- **setEntryIds() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:833`
+- **setMessages() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:832`
+- **url** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:810`
+- **loadContext** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **loadFlightsRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:459`
+- **loading** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:353`
+- **loading** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **loadModels** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2034`
+- **useCallback() callback** (function) in `loadModels` — `ref_projects/pi-web/hooks/useAgentSession.ts:2034`
+- **body** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2043`
+- **d** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2037`
+- **detail** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2041`
+- **displayDefaultModel** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2068`
+- **nextModelList.find() callback** (function) in `displayDefaultModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:2069`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2047`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2055`
+- **kept** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2083`
+- **nextModelList.some() callback** (function) in `kept` — `ref_projects/pi-web/hooks/useAgentSession.ts:2084`
+- **modelCwd** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2035`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2072`
+- **modelsUrl** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2036`
+- **nextModelList** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2066`
+- **picked** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2082`
+- **pinned** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2093`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2072`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2039`
+- **signal** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:2039`
+- **startModel** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2092`
+- **modelId** (property) in `startModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:2092`
+- **provider** (property) in `startModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:2092`
+- **loadSession** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:642`
+- **useCallback() callback** (function) in `loadSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:642`
+- **flight** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:648`
+- **<function>** (function) in `flight` — `ref_projects/pi-web/hooks/useAgentSession.ts:648`
+- **d** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:685`
+- **agentState** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:768`
+- **running** (property) in `agentState` — `ref_projects/pi-web/hooks/useAgentSession.ts:768`
+- **state** (property) in `agentState` — `ref_projects/pi-web/hooks/useAgentSession.ts:768`
+- **cached** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:676`
+- **context** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:686`
+- **<unknown>** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:687`
+- **entryIds** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:689`
+- **hasMore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:691`
+- **messages** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:688`
+- **oldestEntryId** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:690`
+- **turnsBefore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:692`
+- **d** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:670`
+- **e** (var) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:784`
+- **e** (var) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:788`
+- **entryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:704`
+- **entryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:738`
+- **followUp** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:781`
+- **hasMore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:707`
+- **hasMore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:741`
+- **leafId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:705`
+- **leafId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:739`
+- **liveState** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:771`
+- **loadedEntryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:714`
+- **loadedEntryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:748`
+- **messages** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:703`
+- **messages** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:737`
+- **messagesLoaded** (let) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:649`
+- **model** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:711`
+- **model** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:745`
+- **next** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:718`
+- **entryIds** (property) in `next` — `ref_projects/pi-web/hooks/useAgentSession.ts:718`
+- **messages** (property) in `next` — `ref_projects/pi-web/hooks/useAgentSession.ts:718`
+- **oldestEntryId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:706`
+- **oldestEntryId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:740`
+- **params** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:652`
+- **deferMedia** (property) in `params` — `ref_projects/pi-web/hooks/useAgentSession.ts:652`
+- **deferThinking** (property) in `params` — `ref_projects/pi-web/hooks/useAgentSession.ts:652`
+- **tree** (property) in `params` — `ref_projects/pi-web/hooks/useAgentSession.ts:652`
+- **persistedMessages** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:682`
+- **previous** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:717`
+- **entryIds** (property) in `previous` — `ref_projects/pi-web/hooks/useAgentSession.ts:717`
+- **messages** (property) in `previous` — `ref_projects/pi-web/hooks/useAgentSession.ts:717`
+- **res** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:654`
+- **revision** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:702`
+- **revision** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:736`
+- **revisionUnchanged** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:677`
+- **runId** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:764`
+- **sessionId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:701`
+- **sessionId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:735`
+- **setCurrentModelOverride() callback** (function) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:730`
+- **setMessageKeyAliases() callback** (function) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:719`
+- **previous** (property) in `setMessageKeyAliases() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:719`
+- **aliases** (property) in `setMessageKeyAliases() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:719`
+- **stateRes** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:766`
+- **stats** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:712`
+- **stats** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:746`
+- **steering** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:781`
+- **summaryTree** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:709`
+- **summaryTree** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:743`
+- **thinkingLevel** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:710`
+- **thinkingLevel** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:744`
+- **totalActiveMs** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:713`
+- **totalActiveMs** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:747`
+- **turnsBefore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:708`
+- **turnsBefore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:742`
+- **usageRequestId** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:765`
+- **flight.finally() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:796`
+- **flightKey** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:645`
+- **inflight** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:646`
+- **loadSlashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1010`
+- **useCallback() callback** (function) in `loadSlashCommands` — `ref_projects/pi-web/hooks/useAgentSession.ts:1010`
+- **loadSlashCommands** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **loadSystemInfo** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:951`
+- **useCallback() callback** (function) in `loadSystemInfo` — `ref_projects/pi-web/hooks/useAgentSession.ts:951`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:952`
+- **state** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:955`
+- **loadTools** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:844`
+- **useCallback() callback** (function) in `loadTools` — `ref_projects/pi-web/hooks/useAgentSession.ts:844`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:852`
+- **getPresetFromTools** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:848`
+- **tools** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:846`
+- **type** (property) in `tools` — `ref_projects/pi-web/hooks/useAgentSession.ts:846`
+- **loadTools** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **maintainEventsConnected** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1041`
+- **useCallback() callback** (function) in `maintainEventsConnected` — `ref_projects/pi-web/hooks/useAgentSession.ts:1041`
+- **messageKeyAliases** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:360`
+- **messageKeys** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2762`
+- **useMemo() callback** (function) in `messageKeys` — `ref_projects/pi-web/hooks/useAgentSession.ts:2763`
+- **messageKeys** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **messages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:356`
+- **messages** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **messagesRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:463`
+- **modelError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:372`
+- **modelError** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **modelList** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:371`
+- **modelList** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **modelNames** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:370`
+- **modelNames** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **modelScopeWarnings** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:373`
+- **modelScopeWarnings** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **modelsRefreshKey** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **modelSwitching** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:395`
+- **modelSwitching** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **modelSwitchPendingRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:455`
+- **modelThinkingLevelMaps** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:375`
+- **modelThinkingLevelMaps** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **modelThinkingLevels** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:374`
+- **modelThinkingLevels** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **newSessionCwd** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **newSessionDefaultModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:377`
+- **newSessionDefaultThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:380`
+- **newSessionDraftKey** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **newSessionModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:376`
+- **newSessionModel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **newSessionModelOverrideRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:449`
+- **newSessionPromotedRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:448`
+- **newSessionThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:379`
+- **noticeOldestIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2713`
+- **noticeRemainingMsRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2711`
+- **notices** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **noticeState** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:405`
+- **noticeTimerStartedAtRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2712`
+- **notifiedPromptRunIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:426`
+- **notifyPromptStage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1210`
+- **useCallback() callback** (function) in `notifyPromptStage` — `ref_projects/pi-web/hooks/useAgentSession.ts:1210`
+- **aborted** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1213`
+- **onAgentEnd** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **onAttentionNeeded** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **onBranchDataChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **onEvent** (method) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:482`
+- **onNewSessionChoicesChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:508`
+- **onOpenSettings** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:346`
+- **onSessionCreated** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **onSessionForked** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **onSessionStatsPanelOpen** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **onSystemInfoLoaderChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **onSystemPromptChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **onSystemToolsChange** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:345`
+- **onToolEnd** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **onUnexpectedError** (method) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:494`
+- **optimisticUserMessageKeyRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:454`
+- **pausedNoticeId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2710`
+- **pendingBash** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:369`
+- **pendingBash** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2801`
+- **pendingModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:394`
+- **pendingScrollToUserRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:432`
+- **pendingScrollToUserRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2786`
+- **previousScrollTopRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:434`
+- **promoteNewSession** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:858`
+- **useCallback() callback** (function) in `promoteNewSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:858`
+- **created** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:875`
+- **cwd** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:873`
+- **firstMessage** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:878`
+- **id** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:871`
+- **input** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:866`
+- **messageCount** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:877`
+- **modified** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:876`
+- **name** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:874`
+- **path** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:872`
+- **provisionalDraftKey** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:862`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:859`
+- **transient** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:879`
+- **promptAnchorActive** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:401`
+- **promptAnchorActive** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2782`
+- **promptRunIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:453`
+- **queuedMessages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:411`
+- **queuedMessages** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2773`
+- **readinessTimeoutMs** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:492`
+- **reconcileAgentState** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1361`
+- **useCallback() callback** (function) in `reconcileAgentState` — `ref_projects/pi-web/hooks/useAgentSession.ts:1361`
+- **busy** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1382`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1368`
+- **running** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1368`
+- **state** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1368`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1366`
+- **runId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1363`
+- **state** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1373`
+- **usageRequestId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1364`
+- **reconnectDelayMs** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:493`
+- **refreshContextUsage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:629`
+- **useCallback() callback** (function) in `refreshContextUsage` — `ref_projects/pi-web/hooks/useAgentSession.ts:629`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:635`
+- **state** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:635`
+- **requestId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:631`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:633`
+- **runId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:630`
+- **reloadModelsQuietly** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2125`
+- **useCallback() callback** (function) in `reloadModelsQuietly` — `ref_projects/pi-web/hooks/useAgentSession.ts:2125`
+- **catch() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2127`
+- **replaceSlashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:964`
+- **useCallback() callback** (function) in `replaceSlashCommands` — `ref_projects/pi-web/hooks/useAgentSession.ts:964`
+- **requestSlashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:978`
+- **useCallback() callback** (function) in `requestSlashCommands` — `ref_projects/pi-web/hooks/useAgentSession.ts:978`
+- **current** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:980`
+- **generation** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:979`
+- **load** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:981`
+- **<function>** (function) in `load` — `ref_projects/pi-web/hooks/useAgentSession.ts:981`
+- **commands** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:990`
+- **data** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:989`
+- **type** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:989`
+- **e** (var) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:993`
+- **sid** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:982`
+- **settle** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1003`
+- **resolveComposerDraftKey** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:548`
+- **useCallback() callback** (function) in `resolveComposerDraftKey` — `ref_projects/pi-web/hooks/useAgentSession.ts:548`
+- **next** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:554`
+- **resolved** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:550`
+- **visited** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:551`
+- **respondToExtensionUi** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1106`
+- **useCallback() callback** (function) in `respondToExtensionUi` — `ref_projects/pi-web/hooks/useAgentSession.ts:1106`
+- **response** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1117`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1119`
+- **id** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1116`
+- **setExtensionDialogs() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1111`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1110`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1115`
+- **respondToExtensionUi** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **restoreSubmission** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:561`
+- **useCallback() callback** (function) in `restoreSubmission` — `ref_projects/pi-web/hooks/useAgentSession.ts:561`
+- **destinationDraftKey** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:567`
+- **draftImages** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:566`
+- **images.map() callback** (function) in `draftImages` — `ref_projects/pi-web/hooks/useAgentSession.ts:566`
+- **data** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:566`
+- **mimeType** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:566`
+- **input** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:573`
+- **retryInfo** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:384`
+- **retryInfo** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2771`
+- **rpcPromptPendingRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:425`
+- **savedDefaultThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:381`
+- **savedDefaultThinkingLevel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2778`
+- **saveDefaultPreferences** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2105`
+- **useCallback() callback** (function) in `saveDefaultPreferences` — `ref_projects/pi-web/hooks/useAgentSession.ts:2105`
+- **body** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2117`
+- **cwd** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2108`
+- **detail** (let) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2115`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2109`
+- **body** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:2112`
+- **<unknown>** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:2112`
+- **edit** (property) in `body` — `ref_projects/pi-web/hooks/useAgentSession.ts:2112`
+- **headers** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:2111`
+- **"Content-Type"** (property) in `headers` — `ref_projects/pi-web/hooks/useAgentSession.ts:2111`
+- **method** (property) in `res` — `ref_projects/pi-web/hooks/useAgentSession.ts:2110`
+- **scheduleEventStreamClose** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1217`
+- **useCallback() callback** (function) in `scheduleEventStreamClose` — `ref_projects/pi-web/hooks/useAgentSession.ts:1217`
+- **checkServerIdle** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1226`
+- **data** (const) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1236`
+- **running** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1236`
+- **state** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1236`
+- **kind** (property) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1253`
+- **promptActive** (const) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1245`
+- **res** (const) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1234`
+- **setTimeout() callback** (function) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1259`
+- **setTimeout() callback** (function) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1273`
+- **state** (const) in `checkServerIdle` — `ref_projects/pi-web/hooks/useAgentSession.ts:1243`
+- **generation** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1224`
+- **setTimeout() callback** (function) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1277`
+- **scrollContainerRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:438`
+- **scrollContainerRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2785`
+- **scrollToBottom** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:513`
+- **useCallback() callback** (function) in `scrollToBottom` — `ref_projects/pi-web/hooks/useAgentSession.ts:513`
+- **behavior** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:520`
+- **container** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:514`
+- **top** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:520`
+- **scrollToBottom** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2799`
+- **scrollToMessage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2451`
+- **useCallback() callback** (function) in `scrollToMessage` — `ref_projects/pi-web/hooks/useAgentSession.ts:2451`
+- **behavior** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2467`
+- **container** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2452`
+- **top** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2463`
+- **scrollToMessage** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2799`
+- **scrollUserMsgToTop** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2472`
+- **useCallback() callback** (function) in `scrollUserMsgToTop` — `ref_projects/pi-web/hooks/useAgentSession.ts:2472`
+- **behavior** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2486`
+- **container** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2473`
+- **el** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2474`
+- **elAbsTop** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2476`
+- **maxScrollTop** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2477`
+- **targetTop** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2478`
+- **top** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2486`
+- **scrollUserMsgToTop** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2799`
+- **sdkAgentActiveRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:424`
+- **sendExtensionCustomInput** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1124`
+- **useCallback() callback** (function) in `sendExtensionCustomInput` — `ref_projects/pi-web/hooks/useAgentSession.ts:1124`
+- **data** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1131`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1133`
+- **id** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1130`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1125`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1129`
+- **sendExtensionCustomInput** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **sendStreamingPrompt** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2282`
+- **useCallback() callback** (function) in `sendStreamingPrompt` — `ref_projects/pi-web/hooks/useAgentSession.ts:2282`
+- **<unknown>** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2305`
+- **e** (var) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2307`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2296`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2315`
+- **message** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2303`
+- **piImages** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2299`
+- **images.map() callback** (function) in `piImages` — `ref_projects/pi-web/hooks/useAgentSession.ts:2299`
+- **data** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2299`
+- **mimeType** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2299`
+- **type** (property) in `images.map() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2299`
+- **restore** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2288`
+- **sid** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2287`
+- **streamingBehavior** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2304`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2296`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2302`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2314`
+- **session** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:344`
+- **sessionHookMountedRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:457`
+- **sessionIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:417`
+- **sessionIdRef** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2785`
+- **sessionPropIdRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:418`
+- **sessionStats** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:601`
+- **useMemo() callback** (function) in `sessionStats` — `ref_projects/pi-web/hooks/useAgentSession.ts:601`
+- **sessionStatsOverride** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:604`
+- **<unknown>** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:606`
+- **stats** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:616`
+- **<unknown>** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:618`
+- **fileStats** (const) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:609`
+- **sessionFile** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:613`
+- **sessionId** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:614`
+- **sessionName** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:615`
+- **stats** (const) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:610`
+- **totalActiveMs** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:605`
+- **totalActiveMs** (property) in `useMemo() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:617`
+- **sessionStats** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2772`
+- **sessionStatsOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:406`
+- **sessionToolsPinnedRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:422`
+- **setActiveLeafId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:355`
+- **setActiveLeafId** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **setActiveToolResults** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:357`
+- **setAgentPhase** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:400`
+- **setAgentRunning** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:367`
+- **setAgentRunning** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2800`
+- **setAutoCompactionEnabled** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:397`
+- **setBashRunning** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:368`
+- **setCompactError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:398`
+- **setCompactResult** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:399`
+- **setContextUsage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:385`
+- **setCurrentModelOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:392`
+- **setCurrentThinkingOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:382`
+- **setData** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:352`
+- **setData** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **setEarlierTurnCount** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:363`
+- **setEdit** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:588`
+- **useCallback() callback** (function) in `setEdit` — `ref_projects/pi-web/hooks/useAgentSession.ts:588`
+- **setEditEntryId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:583`
+- **setEntryIds** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:358`
+- **setError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:354`
+- **setExtensionCustomUis** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:408`
+- **setExtensionDialogs** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:407`
+- **setExtensionStatuses** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:409`
+- **setExtensionWidgets** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:410`
+- **setForkingEntryId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:391`
+- **setForkingEntryId** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2800`
+- **setHasEarlierMessages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:362`
+- **setHistoryCursor** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:361`
+- **setIsCompacting** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:396`
+- **setLiveModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:393`
+- **setLiveThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:383`
+- **setLoading** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:353`
+- **setMessageKeyAliases** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:360`
+- **setMessages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:356`
+- **setMessages** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2798`
+- **setModelError** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:372`
+- **setModelList** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:371`
+- **setModelNames** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:370`
+- **setModelScopeWarnings** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:373`
+- **setModelSwitching** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:395`
+- **setModelThinkingLevelMaps** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:375`
+- **setModelThinkingLevels** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:374`
+- **setNewSessionDefaultModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:377`
+- **setNewSessionDefaultThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:380`
+- **setNewSessionModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:376`
+- **setNewSessionThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:379`
+- **setNoticePaused** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2797`
+- **setPausedNoticeId** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2710`
+- **setPendingBash** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:369`
+- **setPendingModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:394`
+- **setPromptAnchorActive** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:401`
+- **setQueuedMessages** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:411`
+- **setRetryInfo** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:384`
+- **setSavedDefaultThinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:381`
+- **setSessionStatsOverride** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:406`
+- **setShowScrollToBottom** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:402`
+- **setSlashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:403`
+- **setSlashCommandsLoading** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:404`
+- **setSystemPrompt** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:390`
+- **settleUiStage** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1199`
+- **useCallback() callback** (function) in `settleUiStage` — `ref_projects/pi-web/hooks/useAgentSession.ts:1199`
+- **type** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1206`
+- **wasRunning** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1200`
+- **setToolPreset** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:378`
+- **setToolPresetState** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:500`
+- **shouldMaintain** (method) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:483`
+- **showScrollToBottom** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:402`
+- **showScrollToBottom** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2783`
+- **slashCommands** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:403`
+- **slashCommands** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2773`
+- **slashCommandsForMcp** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1016`
+- **useCallback() callback** (function) in `slashCommandsForMcp` — `ref_projects/pi-web/hooks/useAgentSession.ts:1016`
+- **known** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1018`
+- **loaded** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1020`
+- **catch() callback** (function) in `loaded` — `ref_projects/pi-web/hooks/useAgentSession.ts:1020`
+- **pending** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1017`
+- **slashCommandsGenerationRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:447`
+- **slashCommandsLoading** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:404`
+- **slashCommandsLoading** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2773`
+- **slashCommandsLoadRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:446`
+- **slashCommandsRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:445`
+- **streamingStore** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:365`
+- **streamingStore** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2769`
+- **syncLiveModel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:539`
+- **useCallback() callback** (function) in `syncLiveModel` — `ref_projects/pi-web/hooks/useAgentSession.ts:539`
+- **modelId** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:541`
+- **provider** (property) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:541`
+- **systemPrompt** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:390`
+- **systemPrompt** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2771`
+- **thinkingLevel** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2756`
+- **thinkingLevel** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **thinkingLevelOverrideRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:450`
+- **thinkingLevelPinsRef** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:451`
+- **toolPreset** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:378`
+- **toolPreset** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2770`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:509`
+- **model** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:510`
+- **thinkingLevel** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:510`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1047`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1057`
+- **sid** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1048`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1062`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1099`
+- **disposed** (let) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1065`
+- **interval** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1094`
+- **setInterval() callback** (function) in `interval` — `ref_projects/pi-web/hooks/useAgentSession.ts:1094`
+- **onVisible** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1095`
+- **renewing** (let) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1066`
+- **renewLease** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1068`
+- **response** (const) in `renewLease` — `ref_projects/pi-web/hooks/useAgentSession.ts:1072`
+- **cache** (property) in `response` — `ref_projects/pi-web/hooks/useAgentSession.ts:1074`
+- **method** (property) in `response` — `ref_projects/pi-web/hooks/useAgentSession.ts:1073`
+- **result** (const) in `renewLease` — `ref_projects/pi-web/hooks/useAgentSession.ts:1077`
+- **renewed** (property) in `result` — `ref_projects/pi-web/hooks/useAgentSession.ts:1077`
+- **sid** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1063`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1404`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1418`
+- **interval** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1415`
+- **onVisible** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1412`
+- **reconcile** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1406`
+- **sid** (const) in `reconcile` — `ref_projects/pi-web/hooks/useAgentSession.ts:1409`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1425`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2519`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2587`
+- **abandonedDraftKey** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2589`
+- **coverable** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2605`
+- **currentData** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2601`
+- **entryIds** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2604`
+- **entryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2611`
+- **existing** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2603`
+- **hasMore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2614`
+- **leafId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2612`
+- **loadedEntryIds** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2621`
+- **messages** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2610`
+- **model** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2618`
+- **oldestEntryId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2613`
+- **queueMicrotask() callback** (function) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2591`
+- **revision** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2609`
+- **sessionId** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2608`
+- **sid** (const) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2600`
+- **stats** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2619`
+- **summaryTree** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2616`
+- **thinkingLevel** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2617`
+- **totalActiveMs** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2620`
+- **turnsBefore** (property) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2615`
+- **cached** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2529`
+- **context** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2537`
+- **entryIds** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2539`
+- **hasMore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2541`
+- **messages** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2538`
+- **model** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2544`
+- **oldestEntryId** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2540`
+- **thinkingLevel** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2543`
+- **turnsBefore** (property) in `context` — `ref_projects/pi-web/hooks/useAgentSession.ts:2542`
+- **filePath** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2533`
+- **force** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2557`
+- **leafId** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2536`
+- **sessionId** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2532`
+- **stats** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2546`
+- **then() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2557`
+- **agentState** (const) in `then() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2558`
+- **running** (property) in `agentState` — `ref_projects/pi-web/hooks/useAgentSession.ts:2558`
+- **state** (property) in `agentState` — `ref_projects/pi-web/hooks/useAgentSession.ts:2558`
+- **kind** (property) in `then() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2566`
+- **type** (property) in `then() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2567`
+- **totalActiveMs** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2534`
+- **tree** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2535`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2638`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2642`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2644`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2648`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2653`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2658`
+- **container** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2654`
+- **passive** (property) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2657`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2663`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2683`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2685`
+- **attempt** (let) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2686`
+- **e** (var) in `<function>` — `ref_projects/pi-web/hooks/useAgentSession.ts:2690`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2699`
+- **controller** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2684`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2702`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2705`
+- **t** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2704`
+- **setTimeout() callback** (function) in `t` — `ref_projects/pi-web/hooks/useAgentSession.ts:2704`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2715`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2725`
+- **<function>** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2739`
+- **exiting** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2720`
+- **noticeState.visible.find() callback** (function) in `exiting` — `ref_projects/pi-web/hooks/useAgentSession.ts:2720`
+- **noticeState.visible.some() callback** (function) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2734`
+- **oldest** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2727`
+- **t** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2722`
+- **setTimeout() callback** (function) in `t` — `ref_projects/pi-web/hooks/useAgentSession.ts:2722`
+- **id** (property) in `setTimeout() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2723`
+- **type** (property) in `setTimeout() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2723`
+- **t** (const) in `useEffect() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2736`
+- **setTimeout() callback** (function) in `t` — `ref_projects/pi-web/hooks/useAgentSession.ts:2736`
+- **type** (property) in `setTimeout() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:2737`
+- **useEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2752`
+- **useLayoutEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:503`
+- **useLayoutEffect() callback** (function) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2667`
+- **waitForBashSettlement** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1327`
+- **useCallback() callback** (function) in `waitForBashSettlement` — `ref_projects/pi-web/hooks/useAgentSession.ts:1327`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1340`
+- **state** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1340`
+- **recoveryId** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1328`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1338`
+- **waitForPromptSettlement** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:1303`
+- **useCallback() callback** (function) in `waitForPromptSettlement` — `ref_projects/pi-web/hooks/useAgentSession.ts:1303`
+- **data** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1312`
+- **running** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1312`
+- **state** (property) in `data` — `ref_projects/pi-web/hooks/useAgentSession.ts:1312`
+- **res** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1310`
+- **startedAt** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1305`
+- **state** (const) in `useCallback() callback` — `ref_projects/pi-web/hooks/useAgentSession.ts:1313`
+- **waitingExtensionCustomUiCount** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2761`
+- **waitingExtensionCustomUiCount** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **waitingExtensionDialogCount** (const) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2759`
+- **waitingExtensionDialogCount** (property) in `useAgentSession` — `ref_projects/pi-web/hooks/useAgentSession.ts:2774`
+- **UseAgentSessionOptions** (interface) — `ref_projects/pi-web/hooks/useAgentSession.ts:176`
+- **chatInputRef** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:189`
+- **deferInitialScroll** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:199`
+- **initialNewSessionChoices** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:201`
+- **modelsRefreshKey** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:188`
+- **newSessionCwd** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:179`
+- **newSessionDraftKey** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:180`
+- **onAgentEnd** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:182`
+- **onAttentionNeeded** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:185`
+- **onBranchDataChange** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:190`
+- **onNewSessionChoicesChange** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:203`
+- **onOpenSettings** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:197`
+- **onSessionCreated** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:186`
+- **onSessionForked** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:187`
+- **onSessionStatsPanelOpen** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:195`
+- **onSystemInfoLoaderChange** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:194`
+- **onSystemPromptChange** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:191`
+- **onSystemToolsChange** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:192`
+- **onToolEnd** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:184`
+- **session** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:177`
+- **sessionRunning** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:178`
+- **setToolPreset** (property) in `UseAgentSessionOptions` — `ref_projects/pi-web/hooks/useAgentSession.ts:198`
+- **useCallback** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **useEffect** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **useLayoutEffect** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **useMemo** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **useReducer** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **useRef** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **UserMessage** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:13`
+- **userMessageKey** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:29`
+- **useState** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:3`
+- **withTranscriptNotices** (alias) — `ref_projects/pi-web/hooks/useAgentSession.ts:38`

@@ -88,14 +88,29 @@ export function checkSchema(contractDir) {
   if (!existsSync(schemaPath))
     return { ok: false, problems: ['缺 schema.ts（zod 契约）'], totals: {} }
   const schema = readText(schemaPath)
-  const keys = new Set([...schema.matchAll(/^\s{2,}(\w+)\s*:/gm)].map((m) => m[1]))
+  // 键可能在多行对象里（2 空格缩进），也可能写在 `z.object({ a: z.string(), b: … })` 单行里
+  // —— 只认多行会让 discriminatedUnion 的 inline 分支整段漏检（实测 17 条假缺口）。
+  const keys = new Set([
+    ...[...schema.matchAll(/^\s{2,}(\w+)\s*:/gm)].map((m) => m[1]),
+    ...[...schema.matchAll(/(\w+)\s*:\s*z\./g)].map((m) => m[1]),
+  ])
   const fields = new Set()
   for (const t of parseTables(dto)) {
     const fCol = columnOf(t.header, '字段')
     if (fCol < 0) continue
     for (const row of t.rows) {
-      const f = norm(row[fCol]).replace(/\?$/, '')
-      if (f) fields.add(f)
+      // 一行写多个字段是正常的（同一行类型的字段表）：`type、version、cwd`
+      // 不拆开的话，整串会被当成一个不存在的字段（实测 12 条假缺口）。
+      const cell = norm(row[fCol]).replace(/（.*?）/g, '')
+      // 形状写法 `{type:'text', text}` 是内容块，不是单个字段名：先取出内部键，
+      // 再从剩下的文本里拆字段。整串当键会永远对不上（实测 3 条假缺口）。
+      for (const shape of cell.matchAll(/\{([^}]*)\}/g))
+        for (const k of shape[1].matchAll(/(\w+)\s*:/g)) fields.add(k[1])
+      const rest = cell.replace(/\{[^}]*\}/g, '')
+      for (const part of rest.split(/[、,，/|]/)) {
+        const f = part.trim().replace(/\?$/, '')
+        if (f) fields.add(f)
+      }
     }
   }
   const missing = [...fields].filter((f) => !keys.has(f))

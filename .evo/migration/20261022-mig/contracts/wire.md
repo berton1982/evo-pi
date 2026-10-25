@@ -142,3 +142,79 @@ SSE 事件类型（`/api/agent/[id]/events` 与 terminal 事件流共用）。�
 | `internal` | 500 | 未分类失败 | 显示可复制的错误 ID，不做静默重试 |
 
 未知错误码按 `internal` 处理，dev 下 `console.warn` 一次（不重复刷屏）。
+
+## RPC 命令
+
+> 这一层不是 HTTP：`lib/rpc-manager.ts` 把 pi SDK 的 rpc 命令名分发给 `AgentSessionWrapper`，
+> `hooks/useAgentSession.ts` 处理对应事件。C-A 迁移必须先有这张表，否则"命令分发"没有契约可对。
+> `类型` 列现在由表面枚举的 `command` 点人工归类，C3 行为规格里要逐条核。
+
+| 命令 | 类型 | 证据 |
+|---|---|---|
+| `mcp` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2229` |
+| `message_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1536` |
+| `auto_compaction_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1702` |
+| `auto_compaction_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1696` |
+| `extension_ui_closed` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1716` |
+| `connected` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1431` |
+| `confirm` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1156` |
+| `copy` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2243` |
+| `add` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:278` |
+| `message_update` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1537` |
+| `editor` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1158` |
+| `auto_retry_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1690` |
+| `notify` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1161` |
+| `reload` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2199` |
+| `tool_execution_update` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1627` |
+| `set_editor_text` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1188` |
+| `remove` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:291` |
+| `auto-compact` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2180` |
+| `extension_ui_request` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1713` |
+| `auto_retry_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1693` |
+| `prompt_error` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1527` |
+| `clone` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2252` |
+| `message_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1575` |
+| `name` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2211` |
+| `setTitle` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1185` |
+| `compaction_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1703` |
+| `input` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1157` |
+| `mark_oldest_exiting` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:289` |
+| `queue_update` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1684` |
+| `agent_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1463` |
+| `compaction_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1697` |
+| `agent_settled` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1492` |
+| `tool_execution_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1613` |
+| `agent_start` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1451` |
+| `setWidget` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1177` |
+| `custom` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1191` |
+| `setStatus` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1169` |
+| `select` | 扩展 UI | `ref_projects/pi-web/hooks/useAgentSession.ts:1155` |
+| `extension_error` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1530` |
+| `tool_execution_end` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1666` |
+| `compact` | RPC 命令 | `ref_projects/pi-web/hooks/useAgentSession.ts:2166` |
+| `prompt_done` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:1507` |
+| `session` | 事件 | `ref_projects/pi-web/hooks/useAgentSession.ts:2219` |
+| `set_model` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1027` |
+| `set_thinking_level` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1158` |
+| `get_state` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:991` |
+| `set_tools` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1271` |
+| `set_auto_compaction` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1200` |
+| `bash` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1324` |
+| `set_auto_retry` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1319` |
+| `steer` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1211` |
+| `clear_queue` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1205` |
+| `abort` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:971` |
+| `fork` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1045` |
+| `abort_compaction` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1304` |
+| `extension_ui_response` | 扩展 UI | `ref_projects/pi-web/lib/rpc-manager.ts:1309` |
+| `abort_bash` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1348` |
+| `fork_branch` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1100` |
+| `get_commands` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1242` |
+| `extension_ui_input` | 扩展 UI | `ref_projects/pi-web/lib/rpc-manager.ts:1314` |
+| `prompt` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:844` |
+| `get_session_stats` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1189` |
+| `set_session_name` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1181` |
+| `get_tools` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1223` |
+| `follow_up` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1217` |
+| `navigate_tree` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1151` |
+| `get_last_assistant_text` | RPC 命令 | `ref_projects/pi-web/lib/rpc-manager.ts:1196` |

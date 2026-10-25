@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-23T13:45:21.217Z",
+  "updatedAt": "2026-10-25T04:06:13.477Z",
+  "scope": "capability",
+  "rLevel": "R3",
+  "programRun": ".evo/migration/20261022-mig",
+  "gods": [],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "a8156dcf45ab9814ffb2c3f2e1360578b948aa7a"
+  },
+  "surfaceCount": 0,
+  "phase": "C0",
+  "phaseStatus": "in_progress",
+  "phases": {
+    "C0": {
+      "startedAt": "2026-10-23T13:45:21.218Z",
+      "doneAt": null
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {},
+  "decisions": [],
+  "tasks": {},
+  "history": [
+    {
+      "at": "2026-10-25T04:06:13.477Z",
+      "event": "pause",
+      "note": "废弃的重复 run（C-A 正式 run 为 20261024-C-A-runtime），无产物引用，勿推进"
+    }
+  ],
+  "paused": true,
+  "lastCommand": null,
+  "closed": false,
+  "run": ".evo/migration/20261024-C-A-agent"
+}

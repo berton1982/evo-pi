@@ -81,7 +81,7 @@ C4 收尾用 `superpowers:writing-plans` 出 `plans/<cap>.md`，C5 用 `executin
 | **只跑测试不看用户 / L6 代签** | C6/C7 `acceptance`（六层阶梯，L6 必须人签） |
 | 收尾没交代 | X1 `programAudit` |
 
-四个分母别混用：**符号**（读全）/ **行**（每行有人管）/ **表面**（入口有主）/ **行为**（做对）；见 [rules.md](references/rules.md) §2。
+四个分母别混用：**符号/行/表面/行为**；见 [rules.md](references/rules.md) §2。
 
 ## 新 session 开场（3 分钟）
 
@@ -119,7 +119,8 @@ C4 收尾用 `superpowers:writing-plans` 出 `plans/<cap>.md`，C5 用 `executin
 | [references/rules.md](references/rules.md)、[gates.md](references/gates.md) | 五铁律、AD、四维覆盖率、门目录对账 |
 | [references/execution.md](references/execution.md) | superpowers 挂载、计划格式、证据、worktree/端口、双轴审查 |
 | [references/harness.md](references/harness.md) | 离线快照采集（不碰 30141）、归一化、manual 兜底 |
-| [references/glossary.md](references/glossary.md) | owner 五义、契约两义、证据三义 |
+| [glossary.md](references/glossary.md) | owner 五义、契约两义、证据三义 |
+| [placement-decisions.md](references/placement-decisions.md) | 落点归 core 还是 web 的五问 |
 | [references/tooling.md](references/tooling.md) | 脚本清单、零依赖、取舍记录、CI |
 | [references/lsp-tooling.md](references/lsp-tooling.md) | `No LSP client` 排障：真因、TS7 坑、能力矩阵、降级 |
 | [references/templates/](references/templates/) | 18 份铺底模板，对照表见 [state.md](references/state.md) §4.1 |

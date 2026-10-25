@@ -53,3 +53,11 @@
 | 轮询签到流程 | `pollRound` + 定时器，迁到 evo-pi 后定时器生命周期容易错 | 单独一条行为 + 一个 store，状态图上标 `polling` 超时退出 |
 | `mcp-config-helpers.ts`（1515 行）未迁 | 本能力依赖它的 `mcpVariableChips`/`mcpServerTarget` 等纯函数 | C4 把依赖项列为"外部前置"，C5 先做纯函数再接线 |
 | 2258 行 / 表面点多 | 工件体量可能到 3000+ 行 | `volume` 门守 5000 行上限；文档只交三份（components/dynamics/quality） |
+
+## 渲染边界
+
+| 区域 | 宿主 | 说明 |
+|---|---|---|
+| 设置弹窗的 MCP 分区本体 | self | 本能力唯一拥有的一屏（工具栏 / 列表 / 详情 / 状态行 / 空态表单） |
+| 设置弹窗的壳（标题、分区导航、关闭） | shell | evo-pi 的 `SettingsPanel`，不归本能力 |
+| 左侧区、顶栏 | other:C-B | 会话编排的 chrome；`ui.md` 只标位置，不画入口 |

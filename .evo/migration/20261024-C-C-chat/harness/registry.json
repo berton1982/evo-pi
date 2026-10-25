@@ -1,0 +1,347 @@
+{
+ "scripts": [
+  {
+   "id": "s-001",
+   "status": "planned",
+   "file": "e2e/chat/s-001.spec.ts",
+   "behavior": "B-001"
+  },
+  {
+   "id": "s-002",
+   "status": "planned",
+   "file": "e2e/chat/s-002.spec.ts",
+   "behavior": "B-002"
+  },
+  {
+   "id": "s-003",
+   "status": "planned",
+   "file": "e2e/chat/s-003.spec.ts",
+   "behavior": "B-003"
+  },
+  {
+   "id": "s-004",
+   "status": "planned",
+   "file": "e2e/chat/s-004.spec.ts",
+   "behavior": "B-004"
+  },
+  {
+   "id": "s-005",
+   "status": "planned",
+   "file": "e2e/chat/s-005.spec.ts",
+   "behavior": "B-005"
+  },
+  {
+   "id": "s-006",
+   "status": "planned",
+   "file": "e2e/chat/s-006.spec.ts",
+   "behavior": "B-006"
+  },
+  {
+   "id": "s-007",
+   "status": "planned",
+   "file": "e2e/chat/s-007.spec.ts",
+   "behavior": "B-007"
+  },
+  {
+   "id": "s-008",
+   "status": "planned",
+   "file": "e2e/chat/s-008.spec.ts",
+   "behavior": "B-008"
+  },
+  {
+   "id": "s-009",
+   "status": "planned",
+   "file": "e2e/chat/s-009.spec.ts",
+   "behavior": "B-009"
+  },
+  {
+   "id": "s-010",
+   "status": "planned",
+   "file": "e2e/chat/s-010.spec.ts",
+   "behavior": "B-010"
+  },
+  {
+   "id": "s-011",
+   "status": "planned",
+   "file": "e2e/chat/s-011.spec.ts",
+   "behavior": "B-011"
+  },
+  {
+   "id": "s-012",
+   "status": "planned",
+   "file": "e2e/chat/s-012.spec.ts",
+   "behavior": "B-012"
+  },
+  {
+   "id": "s-013",
+   "status": "planned",
+   "file": "e2e/chat/s-013.spec.ts",
+   "behavior": "B-013"
+  },
+  {
+   "id": "s-014",
+   "status": "planned",
+   "file": "e2e/chat/s-014.spec.ts",
+   "behavior": "B-014"
+  },
+  {
+   "id": "s-015",
+   "status": "planned",
+   "file": "e2e/chat/s-015.spec.ts",
+   "behavior": "B-015"
+  },
+  {
+   "id": "s-016",
+   "status": "planned",
+   "file": "e2e/chat/s-016.spec.ts",
+   "behavior": "B-016"
+  },
+  {
+   "id": "s-017",
+   "status": "planned",
+   "file": "e2e/chat/s-017.spec.ts",
+   "behavior": "B-017"
+  },
+  {
+   "id": "s-018",
+   "status": "planned",
+   "file": "e2e/chat/s-018.spec.ts",
+   "behavior": "B-018"
+  },
+  {
+   "id": "s-019",
+   "status": "planned",
+   "file": "e2e/chat/s-019.spec.ts",
+   "behavior": "B-019"
+  },
+  {
+   "id": "s-020",
+   "status": "planned",
+   "file": "e2e/chat/s-020.spec.ts",
+   "behavior": "B-020"
+  },
+  {
+   "id": "s-021",
+   "status": "planned",
+   "file": "e2e/chat/s-021.spec.ts",
+   "behavior": "B-021"
+  },
+  {
+   "id": "s-022",
+   "status": "planned",
+   "file": "e2e/chat/s-022.spec.ts",
+   "behavior": "B-022"
+  },
+  {
+   "id": "s-023",
+   "status": "planned",
+   "file": "e2e/chat/s-023.spec.ts",
+   "behavior": "B-023"
+  },
+  {
+   "id": "s-024",
+   "status": "planned",
+   "file": "e2e/chat/s-024.spec.ts",
+   "behavior": "B-024"
+  },
+  {
+   "id": "s-025",
+   "status": "planned",
+   "file": "e2e/chat/s-025.spec.ts",
+   "behavior": "B-025"
+  },
+  {
+   "id": "s-026",
+   "status": "planned",
+   "file": "e2e/chat/s-026.spec.ts",
+   "behavior": "B-026"
+  },
+  {
+   "id": "s-027",
+   "status": "planned",
+   "file": "e2e/chat/s-027.spec.ts",
+   "behavior": "B-027"
+  },
+  {
+   "id": "s-028",
+   "status": "planned",
+   "file": "e2e/chat/s-028.spec.ts",
+   "behavior": "B-028"
+  },
+  {
+   "id": "s-029",
+   "status": "planned",
+   "file": "e2e/chat/s-029.spec.ts",
+   "behavior": "B-029"
+  },
+  {
+   "id": "s-030",
+   "status": "planned",
+   "file": "e2e/chat/s-030.spec.ts",
+   "behavior": "B-030"
+  },
+  {
+   "id": "s-031",
+   "status": "planned",
+   "file": "e2e/chat/s-031.spec.ts",
+   "behavior": "B-031"
+  },
+  {
+   "id": "s-032",
+   "status": "planned",
+   "file": "e2e/chat/s-032.spec.ts",
+   "behavior": "B-032"
+  },
+  {
+   "id": "s-033",
+   "status": "planned",
+   "file": "e2e/chat/s-033.spec.ts",
+   "behavior": "B-033"
+  },
+  {
+   "id": "s-034",
+   "status": "planned",
+   "file": "e2e/chat/s-034.spec.ts",
+   "behavior": "B-034"
+  },
+  {
+   "id": "s-035",
+   "status": "planned",
+   "file": "e2e/chat/s-035.spec.ts",
+   "behavior": "B-035"
+  },
+  {
+   "id": "s-036",
+   "status": "planned",
+   "file": "e2e/chat/s-036.spec.ts",
+   "behavior": "B-036"
+  },
+  {
+   "id": "s-037",
+   "status": "planned",
+   "file": "e2e/chat/s-037.spec.ts",
+   "behavior": "B-037"
+  },
+  {
+   "id": "s-038",
+   "status": "planned",
+   "file": "e2e/chat/s-038.spec.ts",
+   "behavior": "B-038"
+  },
+  {
+   "id": "s-039",
+   "status": "planned",
+   "file": "e2e/chat/s-039.spec.ts",
+   "behavior": "B-039"
+  },
+  {
+   "id": "s-040",
+   "status": "planned",
+   "file": "e2e/chat/s-040.spec.ts",
+   "behavior": "B-040"
+  },
+  {
+   "id": "s-041",
+   "status": "planned",
+   "file": "e2e/chat/s-041.spec.ts",
+   "behavior": "B-041"
+  },
+  {
+   "id": "s-042",
+   "status": "planned",
+   "file": "e2e/chat/s-042.spec.ts",
+   "behavior": "B-042"
+  },
+  {
+   "id": "s-043",
+   "status": "planned",
+   "file": "e2e/chat/s-043.spec.ts",
+   "behavior": "B-043"
+  },
+  {
+   "id": "s-044",
+   "status": "planned",
+   "file": "e2e/chat/s-044.spec.ts",
+   "behavior": "B-044"
+  },
+  {
+   "id": "s-045",
+   "status": "planned",
+   "file": "e2e/chat/s-045.spec.ts",
+   "behavior": "B-045"
+  },
+  {
+   "id": "s-046",
+   "status": "planned",
+   "file": "e2e/chat/s-046.spec.ts",
+   "behavior": "B-046"
+  },
+  {
+   "id": "s-047",
+   "status": "planned",
+   "file": "e2e/chat/s-047.spec.ts",
+   "behavior": "B-047"
+  },
+  {
+   "id": "s-048",
+   "status": "planned",
+   "file": "e2e/chat/s-048.spec.ts",
+   "behavior": "B-048"
+  },
+  {
+   "id": "s-049",
+   "status": "planned",
+   "file": "e2e/chat/s-049.spec.ts",
+   "behavior": "B-049"
+  },
+  {
+   "id": "s-050",
+   "status": "planned",
+   "file": "e2e/chat/s-050.spec.ts",
+   "behavior": "B-050"
+  },
+  {
+   "id": "s-051",
+   "status": "planned",
+   "file": "e2e/chat/s-051.spec.ts",
+   "behavior": "B-051"
+  },
+  {
+   "id": "s-052",
+   "status": "planned",
+   "file": "e2e/chat/s-052.spec.ts",
+   "behavior": "B-052"
+  },
+  {
+   "id": "s-053",
+   "status": "planned",
+   "file": "e2e/chat/s-053.spec.ts",
+   "behavior": "B-053"
+  },
+  {
+   "id": "s-054",
+   "status": "planned",
+   "file": "e2e/chat/s-054.spec.ts",
+   "behavior": "B-054"
+  },
+  {
+   "id": "s-055",
+   "status": "planned",
+   "file": "e2e/chat/s-055.spec.ts",
+   "behavior": "B-055"
+  },
+  {
+   "id": "s-056",
+   "status": "planned",
+   "file": "e2e/chat/s-056.spec.ts",
+   "behavior": "B-056"
+  },
+  {
+   "id": "s-057",
+   "status": "planned",
+   "file": "e2e/chat/s-057.spec.ts",
+   "behavior": "B-057"
+  }
+ ],
+ "flows": []
+}

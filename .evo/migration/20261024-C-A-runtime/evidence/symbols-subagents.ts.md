@@ -1,0 +1,535 @@
+# 符号全集 — `ref_projects/pi-web/lib/subagents.ts`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：1003；符号数：**527**；导出时间：2026-10-23T14:11:51.692Z
+
+## 符号（按出现顺序）
+
+- **assertProfileName** (function) — `ref_projects/pi-web/lib/subagents.ts:499`
+- **normalized** (const) in `assertProfileName` — `ref_projects/pi-web/lib/subagents.ts:500`
+- **assertWritableProfileDirectory** (function) — `ref_projects/pi-web/lib/subagents.ts:513`
+- **dir** (const) in `assertWritableProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:514`
+- **existingAncestor** (let) in `assertWritableProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:517`
+- **parent** (const) in `assertWritableProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:519`
+- **basename** (alias) — `ref_projects/pi-web/lib/subagents.ts:5`
+- **booleanValue** (function) — `ref_projects/pi-web/lib/subagents.ts:262`
+- **BUILTIN_PROFILES** (const) — `ref_projects/pi-web/lib/subagents.ts:207`
+- **codemode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:216`
+- **codemode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:232`
+- **codemode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:248`
+- **description** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:211`
+- **description** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:227`
+- **description** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:243`
+- **displayName** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:210`
+- **displayName** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:226`
+- **displayName** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:242`
+- **enabled** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:221`
+- **enabled** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:237`
+- **enabled** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:253`
+- **inheritContext** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:219`
+- **inheritContext** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:235`
+- **inheritContext** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:251`
+- **loadExtensions** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:215`
+- **loadExtensions** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:231`
+- **loadExtensions** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:247`
+- **loadSkills** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:214`
+- **loadSkills** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:230`
+- **loadSkills** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:246`
+- **mcp** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:217`
+- **mcp** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:233`
+- **mcp** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:249`
+- **name** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:209`
+- **name** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:225`
+- **name** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:241`
+- **promptMode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:218`
+- **promptMode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:234`
+- **promptMode** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:250`
+- **runInBackground** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:220`
+- **runInBackground** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:236`
+- **runInBackground** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:252`
+- **scope** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:222`
+- **scope** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:238`
+- **scope** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:254`
+- **systemPrompt** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:212`
+- **systemPrompt** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:228`
+- **systemPrompt** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:244`
+- **tools** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:213`
+- **tools** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:229`
+- **tools** (property) in `BUILTIN_PROFILES` — `ref_projects/pi-web/lib/subagents.ts:245`
+- **BUILTIN_TOOLS** (const) — `ref_projects/pi-web/lib/subagents.ts:141`
+- **builtInProfiles** (function) — `ref_projects/pi-web/lib/subagents.ts:468`
+- **BUILTIN_PROFILES.map() callback** (function) in `builtInProfiles` — `ref_projects/pi-web/lib/subagents.ts:470`
+- **profile** (property) in `BUILTIN_PROFILES.map() callback` — `ref_projects/pi-web/lib/subagents.ts:471`
+- **enabled** (property) in `BUILTIN_PROFILES.map() callback` — `ref_projects/pi-web/lib/subagents.ts:473`
+- **tools** (property) in `BUILTIN_PROFILES.map() callback` — `ref_projects/pi-web/lib/subagents.ts:472`
+- **disabled** (const) in `builtInProfiles` — `ref_projects/pi-web/lib/subagents.ts:469`
+- **composeToolsField** (function) — `ref_projects/pi-web/lib/subagents.ts:358`
+- **combined** (const) in `composeToolsField` — `ref_projects/pi-web/lib/subagents.ts:360`
+- **selectors.filter() callback** (function) in `combined` — `ref_projects/pi-web/lib/subagents.ts:360`
+- **tools.some() callback** (function) in `selectors.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:360`
+- **selectors** (const) in `composeToolsField` — `ref_projects/pi-web/lib/subagents.ts:359`
+- **filter() callback** (function) in `selectors` — `ref_projects/pi-web/lib/subagents.ts:359`
+- **DEFAULT_TOOLS** (const) — `ref_projects/pi-web/lib/subagents.ts:140`
+- **deleteProjectSubagentProfile** (function) — `ref_projects/pi-web/lib/subagents.ts:637`
+- **deleteSubagentProfile** (function) — `ref_projects/pi-web/lib/subagents.ts:627`
+- **filePath** (const) in `deleteSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:629`
+- **safeName** (const) in `deleteSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:628`
+- **dirname** (alias) — `ref_projects/pi-web/lib/subagents.ts:5`
+- **disabledBuiltInSubagents** (alias) — `ref_projects/pi-web/lib/subagents.ts:10`
+- **existsSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:4`
+- **extensionCandidateNames** (function) — `ref_projects/pi-web/lib/subagents.ts:812`
+- **baseName** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:813`
+- **info** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:815`
+- **names** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:814`
+- **names.map() callback** (function) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:821`
+- **packageName** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:818`
+- **parentDir** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:813`
+- **source** (const) in `extensionCandidateNames` — `ref_projects/pi-web/lib/subagents.ts:817`
+- **extensionNameOwners** (function) — `ref_projects/pi-web/lib/subagents.ts:831`
+- **claimed** (const) in `extensionNameOwners` — `ref_projects/pi-web/lib/subagents.ts:836`
+- **extension** (const) in `extensionNameOwners` — `ref_projects/pi-web/lib/subagents.ts:833`
+- **name** (const) in `extensionNameOwners` — `ref_projects/pi-web/lib/subagents.ts:835`
+- **owner** (const) in `extensionNameOwners` — `ref_projects/pi-web/lib/subagents.ts:834`
+- **owners** (const) in `extensionNameOwners` — `ref_projects/pi-web/lib/subagents.ts:832`
+- **extensionPathParts** (function) — `ref_projects/pi-web/lib/subagents.ts:785`
+- **baseName** (property) in `extensionPathParts` — `ref_projects/pi-web/lib/subagents.ts:789`
+- **parentDir** (property) in `extensionPathParts` — `ref_projects/pi-web/lib/subagents.ts:788`
+- **segments** (const) in `extensionPathParts` — `ref_projects/pi-web/lib/subagents.ts:786`
+- **ExtensionSelectorMatch** (interface) — `ref_projects/pi-web/lib/subagents.ts:844`
+- **name** (property) in `ExtensionSelectorMatch` — `ref_projects/pi-web/lib/subagents.ts:845`
+- **toolName** (property) in `ExtensionSelectorMatch` — `ref_projects/pi-web/lib/subagents.ts:846`
+- **extensionSourceKey** (function) — `ref_projects/pi-web/lib/subagents.ts:799`
+- **info** (const) in `extensionSourceKey` — `ref_projects/pi-web/lib/subagents.ts:800`
+- **source** (const) in `extensionSourceKey` — `ref_projects/pi-web/lib/subagents.ts:801`
+- **FRONTMATTER_OPEN_RE** (const) — `ref_projects/pi-web/lib/subagents.ts:175`
+- **getAgentDir** (alias) — `ref_projects/pi-web/lib/subagents.ts:2`
+- **hasSubagentResourceSnapshot** (function) — `ref_projects/pi-web/lib/subagents.ts:659`
+- **entries.some() callback** (function) in `hasSubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:660`
+- **isExistingPathWithinRoots** (alias) — `ref_projects/pi-web/lib/subagents.ts:9`
+- **isProjectProfilePathAllowed** (function) — `ref_projects/pi-web/lib/subagents.ts:441`
+- **isRecord** (function) — `ref_projects/pi-web/lib/subagents.ts:641`
+- **join** (alias) — `ref_projects/pi-web/lib/subagents.ts:5`
+- **listSubagentProfiles** (function) — `ref_projects/pi-web/lib/subagents.ts:486`
+- **byName** (const) in `listSubagentProfiles` — `ref_projects/pi-web/lib/subagents.ts:488`
+- **map() callback** (function) in `byName` — `ref_projects/pi-web/lib/subagents.ts:488`
+- **dir** (const) in `listSubagentProfiles` — `ref_projects/pi-web/lib/subagents.ts:489`
+- **profile** (const) in `listSubagentProfiles` — `ref_projects/pi-web/lib/subagents.ts:490`
+- **scope** (const) in `listSubagentProfiles` — `ref_projects/pi-web/lib/subagents.ts:489`
+- **sort() callback** (function) in `listSubagentProfiles` — `ref_projects/pi-web/lib/subagents.ts:492`
+- **listSubagentProfileSources** (function) — `ref_projects/pi-web/lib/subagents.ts:478`
+- **dir** (const) in `listSubagentProfileSources` — `ref_projects/pi-web/lib/subagents.ts:480`
+- **profiles** (const) in `listSubagentProfileSources` — `ref_projects/pi-web/lib/subagents.ts:479`
+- **profiles.sort() callback** (function) in `listSubagentProfileSources` — `ref_projects/pi-web/lib/subagents.ts:483`
+- **scope** (const) in `listSubagentProfileSources` — `ref_projects/pi-web/lib/subagents.ts:480`
+- **LoadExtensionsResult** (alias) — `ref_projects/pi-web/lib/subagents.ts:2`
+- **MANAGED_FRONTMATTER_KEYS** (const) — `ref_projects/pi-web/lib/subagents.ts:155`
+- **MCP_TOOL_PATTERNS** (const) — `ref_projects/pi-web/lib/subagents.ts:726`
+- **mkdirSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:4`
+- **normalizeExtensionSelector** (function) — `ref_projects/pi-web/lib/subagents.ts:780`
+- **body** (const) in `normalizeExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:781`
+- **OWNED_ALIAS_VALUES** (const) — `ref_projects/pi-web/lib/subagents.ts:182`
+- **parseCodemode** (function) — `ref_projects/pi-web/lib/subagents.ts:184`
+- **parseExtensionToolSelectors** (function) — `ref_projects/pi-web/lib/subagents.ts:329`
+- **filter() callback** (function) in `parseExtensionToolSelectors` — `ref_projects/pi-web/lib/subagents.ts:330`
+- **parseFrontmatter** (alias) — `ref_projects/pi-web/lib/subagents.ts:6`
+- **parseMcp** (function) — `ref_projects/pi-web/lib/subagents.ts:197`
+- **parseNpmSource** (alias) — `ref_projects/pi-web/lib/subagents.ts:7`
+- **parseProfileFile** (function) — `ref_projects/pi-web/lib/subagents.ts:380`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:415`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:416`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:417`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:418`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:423`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:424`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:425`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:429`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:430`
+- **<unknown>** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:431`
+- **codemode** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:389`
+- **codemode** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:421`
+- **data** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:383`
+- **deniedKeys** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:398`
+- **disallowedExtensionTools.map() callback** (function) in `deniedKeys` — `ref_projects/pi-web/lib/subagents.ts:399`
+- **description** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:412`
+- **disallowedExtensionTools** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:397`
+- **disallowedTools** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:392`
+- **displayName** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:411`
+- **enabled** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:432`
+- **extensions** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:391`
+- **extensionSelectors** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:401`
+- **extensionTools** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:402`
+- **extensionSelectors.filter() callback** (function) in `extensionTools` — `ref_projects/pi-web/lib/subagents.ts:403`
+- **allowed** (const) in `extensionSelectors.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:404`
+- **some() callback** (function) in `extensionSelectors.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:405`
+- **filePath** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:434`
+- **inheritContext** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:426`
+- **loadExtensions** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:420`
+- **loadSkills** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:419`
+- **maxTurnsValue** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:387`
+- **mcp** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:422`
+- **name** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:384`
+- **name** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:410`
+- **promptMode** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:428`
+- **rest** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:383`
+- **runInBackground** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:427`
+- **scope** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:433`
+- **skills** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:390`
+- **source** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:382`
+- **systemPrompt** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:413`
+- **thinkingValue** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:386`
+- **tools** (const) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:388`
+- **tools** (property) in `parseProfileFile` — `ref_projects/pi-web/lib/subagents.ts:414`
+- **tools.filter() callback** (function) in `tools` — `ref_projects/pi-web/lib/subagents.ts:414`
+- **parseTools** (function) — `ref_projects/pi-web/lib/subagents.ts:317`
+- **tools** (const) in `parseTools` — `ref_projects/pi-web/lib/subagents.ts:318`
+- **tools.filter() callback** (function) in `parseTools` — `ref_projects/pi-web/lib/subagents.ts:322`
+- **PRESET_READ_ONLY** (alias) — `ref_projects/pi-web/lib/subagents.ts:11`
+- **profileDirectories** (function) — `ref_projects/pi-web/lib/subagents.ts:454`
+- **profileExtensions** (function) — `ref_projects/pi-web/lib/subagents.ts:297`
+- **names** (const) in `profileExtensions` — `ref_projects/pi-web/lib/subagents.ts:298`
+- **profileNameList** (function) — `ref_projects/pi-web/lib/subagents.ts:289`
+- **names** (const) in `profileNameList` — `ref_projects/pi-web/lib/subagents.ts:292`
+- **profileResourceSwitch** (function) — `ref_projects/pi-web/lib/subagents.ts:303`
+- **rawToolValues** (function) — `ref_projects/pi-web/lib/subagents.ts:325`
+- **readdirSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:4`
+- **readFileSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:4`
+- **readProfileDirectory** (function) — `ref_projects/pi-web/lib/subagents.ts:445`
+- **filter() callback** (function) in `readProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:449`
+- **filter() callback** (function) in `readProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:451`
+- **map() callback** (function) in `readProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:450`
+- **withFileTypes** (property) in `readProfileDirectory` — `ref_projects/pi-web/lib/subagents.ts:448`
+- **readStoredFrontmatter** (function) — `ref_projects/pi-web/lib/subagents.ts:334`
+- **data** (const) in `readStoredFrontmatter` — `ref_projects/pi-web/lib/subagents.ts:337`
+- **source** (const) in `readStoredFrontmatter` — `ref_projects/pi-web/lib/subagents.ts:336`
+- **readSubagentRun** (function) — `ref_projects/pi-web/lib/subagents.ts:964`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:994`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:995`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:996`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:997`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:998`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:999`
+- **<unknown>** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:1000`
+- **createdAt** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:993`
+- **data** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:965`
+- **description** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:989`
+- **lifecycleEntry** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:967`
+- **find() callback** (function) in `lifecycleEntry` — `ref_projects/pi-web/lib/subagents.ts:967`
+- **parentSessionId** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:986`
+- **parentToolCallId** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:987`
+- **persistedStatus** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:978`
+- **profile** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:988`
+- **result** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:973`
+- **resultEntry** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:970`
+- **runInBackground** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:991`
+- **sessionId** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:984`
+- **sessionPath** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:985`
+- **status** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:992`
+- **statusData** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:977`
+- **statusEntry** (const) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:974`
+- **task** (property) in `readSubagentRun` — `ref_projects/pi-web/lib/subagents.ts:990`
+- **readSubagentSessionResources** (function) — `ref_projects/pi-web/lib/subagents.ts:669`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:698`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:699`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:704`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:705`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:706`
+- **<unknown>** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:707`
+- **appendSystemPrompt** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:700`
+- **codemode** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:680`
+- **data** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:672`
+- **extensions** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:677`
+- **loadExtensions** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:679`
+- **loadExtensions** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:703`
+- **loadSkills** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:678`
+- **loadSkills** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:702`
+- **mcp** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:681`
+- **skills** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:676`
+- **snapshot** (const) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:674`
+- **snapshot.appendSystemPrompt.every() callback** (function) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:686`
+- **snapshot.tools.every() callback** (function) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:690`
+- **tools** (property) in `readSubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:701`
+- **resolve** (alias) — `ref_projects/pi-web/lib/subagents.ts:5`
+- **resolveExtensionSelector** (function) — `ref_projects/pi-web/lib/subagents.ts:856`
+- **<unknown>** (property) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:868`
+- **best** (let) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:861`
+- **lower** (const) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:860`
+- **name** (const) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:862`
+- **name** (property) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:868`
+- **toolName** (const) in `resolveExtensionSelector` — `ref_projects/pi-web/lib/subagents.ts:867`
+- **resolveSubagentProfile** (function) — `ref_projects/pi-web/lib/subagents.ts:495`
+- **find() callback** (function) in `resolveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:496`
+- **resourceBoolean** (function) — `ref_projects/pi-web/lib/subagents.ts:266`
+- **saveProjectSubagentProfile** (function) — `ref_projects/pi-web/lib/subagents.ts:633`
+- **saveSubagentProfile** (function) — `ref_projects/pi-web/lib/subagents.ts:529`
+- **profile** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:603`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:609`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:611`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:616`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:617`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:619`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:620`
+- **<unknown>** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:621`
+- **codemode** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:552`
+- **codemode** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:614`
+- **description** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:547`
+- **description** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:606`
+- **dir** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:555`
+- **displayName** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:546`
+- **displayName** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:605`
+- **extensions** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:588`
+- **extensions** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:610`
+- **extensionTools** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:536`
+- **filePath** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:560`
+- **filePath** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:623`
+- **frontmatter** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:596`
+- **managed** (property) in `frontmatter` — `ref_projects/pi-web/lib/subagents.ts:596`
+- **key** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:597`
+- **loadExtensions** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:551`
+- **loadExtensions** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:613`
+- **loadSkills** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:550`
+- **loadSkills** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:612`
+- **managed** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:563`
+- **<unknown>** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:571`
+- **codemode** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:569`
+- **description** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:564`
+- **display_name** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:565`
+- **enabled** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:572`
+- **inherit_context** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:573`
+- **load_extensions** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:568`
+- **load_skills** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:567`
+- **prompt_mode** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:575`
+- **run_in_background** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:574`
+- **tools** (property) in `managed` — `ref_projects/pi-web/lib/subagents.ts:566`
+- **maxTurns** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:543`
+- **mcp** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:562`
+- **mcp** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:615`
+- **model** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:549`
+- **name** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:534`
+- **name** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:604`
+- **promptMode** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:554`
+- **promptMode** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:618`
+- **recursive** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:556`
+- **requestedMcp** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:553`
+- **scope** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:622`
+- **skills** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:577`
+- **stored** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:561`
+- **storedSkills** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:579`
+- **systemPrompt** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:548`
+- **systemPrompt** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:607`
+- **tools** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:535`
+- **profile.tools.filter() callback** (function) in `tools` — `ref_projects/pi-web/lib/subagents.ts:535`
+- **tools** (property) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:608`
+- **value** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:597`
+- **yaml** (const) in `saveSubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:600`
+- **lineWidth** (property) in `yaml` — `ref_projects/pi-web/lib/subagents.ts:600`
+- **noRefs** (property) in `yaml` — `ref_projects/pi-web/lib/subagents.ts:600`
+- **scopeSubagentExtensions** (function) — `ref_projects/pi-web/lib/subagents.ts:926`
+- **<function>** (function) in `scopeSubagentExtensions` — `ref_projects/pi-web/lib/subagents.ts:928`
+- **base** (property) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:941`
+- **extensions** (const) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:930`
+- **base.extensions.filter() callback** (function) in `extensions` — `ref_projects/pi-web/lib/subagents.ts:930`
+- **some() callback** (function) in `base.extensions.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:933`
+- **extensions** (property) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:941`
+- **kept** (const) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:935`
+- **extensions.map() callback** (function) in `kept` — `ref_projects/pi-web/lib/subagents.ts:935`
+- **owners** (const) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:929`
+- **runtime** (const) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:936`
+- **runtime.pendingNativeProviderRegistrations.filter() callback** (function) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:939`
+- **runtime.pendingProviderRegistrations.filter() callback** (function) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:938`
+- **runtime.pendingVirtualModelRegistrations.filter() callback** (function) in `<function>` — `ref_projects/pi-web/lib/subagents.ts:940`
+- **wanted** (const) in `scopeSubagentExtensions` — `ref_projects/pi-web/lib/subagents.ts:927`
+- **names.map() callback** (function) in `wanted` — `ref_projects/pi-web/lib/subagents.ts:927`
+- **SDK_BUILTIN_TOOLS** (const) — `ref_projects/pi-web/lib/subagents.ts:724`
+- **selectSubagentExtensionTools** (function) — `ref_projects/pi-web/lib/subagents.ts:871`
+- **addressable** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:885`
+- **filter() callback** (function) in `addressable` — `ref_projects/pi-web/lib/subagents.ts:885`
+- **map() callback** (function) in `addressable` — `ref_projects/pi-web/lib/subagents.ts:885`
+- **covers** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:905`
+- **denials** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:896`
+- **denied** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:881`
+- **denyEveryExtension** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:887`
+- **everyExtension** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:886`
+- **extension** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:899`
+- **loaded** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:883`
+- **matches** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:895`
+- **normalizeAll** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:876`
+- **map() callback** (function) in `normalizeAll` — `ref_projects/pi-web/lib/subagents.ts:878`
+- **values.filter() callback** (function) in `normalizeAll` — `ref_projects/pi-web/lib/subagents.ts:877`
+- **owned** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:901`
+- **filter() callback** (function) in `owned` — `ref_projects/pi-web/lib/subagents.ts:901`
+- **ownedDenials** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:904`
+- **denials.filter() callback** (function) in `ownedDenials` — `ref_projects/pi-web/lib/subagents.ts:904`
+- **ownedMatches** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:902`
+- **matches.filter() callback** (function) in `ownedMatches` — `ref_projects/pi-web/lib/subagents.ts:902`
+- **owners** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:884`
+- **resolveAll** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:890`
+- **values.flatMap() callback** (function) in `resolveAll` — `ref_projects/pi-web/lib/subagents.ts:890`
+- **match** (const) in `values.flatMap() callback` — `ref_projects/pi-web/lib/subagents.ts:892`
+- **selected** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:898`
+- **toolNames** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:900`
+- **toolNames.filter() callback** (function) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:908`
+- **granted** (const) in `toolNames.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:909`
+- **ownedMatches.some() callback** (function) in `granted` — `ref_projects/pi-web/lib/subagents.ts:909`
+- **ownedDenials.some() callback** (function) in `toolNames.filter() callback` — `ref_projects/pi-web/lib/subagents.ts:911`
+- **wanted** (const) in `selectSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:880`
+- **SessionEntry** (alias) — `ref_projects/pi-web/lib/subagents.ts:12`
+- **SNAPSHOT_BUILTIN_TOOLS** (const) — `ref_projects/pi-web/lib/subagents.ts:144`
+- **stringifyYaml** (alias) — `ref_projects/pi-web/lib/subagents.ts:3`
+- **stringList** (function) — `ref_projects/pi-web/lib/subagents.ts:308`
+- **values** (const) in `stringList` — `ref_projects/pi-web/lib/subagents.ts:309`
+- **values.map() callback** (function) in `stringList` — `ref_projects/pi-web/lib/subagents.ts:314`
+- **stringValue** (function) — `ref_projects/pi-web/lib/subagents.ts:258`
+- **SUBAGENT_CONTROL_TOOL_NAMES** (const) — `ref_projects/pi-web/lib/subagents.ts:17`
+- **SUBAGENT_CONTROL_TOOLS** (const) — `ref_projects/pi-web/lib/subagents.ts:145`
+- **SUBAGENT_MCP_EXTENSION_PATHS** (const) — `ref_projects/pi-web/lib/subagents.ts:951`
+- **SUBAGENT_META_TYPE** (const) — `ref_projects/pi-web/lib/subagents.ts:14`
+- **SUBAGENT_RESULT_TYPE** (const) — `ref_projects/pi-web/lib/subagents.ts:16`
+- **SUBAGENT_STATUS_TYPE** (const) — `ref_projects/pi-web/lib/subagents.ts:15`
+- **SubagentCodemode** (type) — `ref_projects/pi-web/lib/subagents.ts:20`
+- **SubagentExtensionLike** (interface) — `ref_projects/pi-web/lib/subagents.ts:769`
+- **path** (property) in `SubagentExtensionLike` — `ref_projects/pi-web/lib/subagents.ts:770`
+- **sourceInfo** (property) in `SubagentExtensionLike` — `ref_projects/pi-web/lib/subagents.ts:771`
+- **tools** (property) in `SubagentExtensionLike` — `ref_projects/pi-web/lib/subagents.ts:772`
+- **subagentExtensionLoaderOptions** (function) — `ref_projects/pi-web/lib/subagents.ts:954`
+- **<unknown>** (property) in `subagentExtensionLoaderOptions` — `ref_projects/pi-web/lib/subagents.ts:957`
+- **<unknown>** (property) in `subagentExtensionLoaderOptions` — `ref_projects/pi-web/lib/subagents.ts:958`
+- **noExtensions** (property) in `subagentExtensionLoaderOptions` — `ref_projects/pi-web/lib/subagents.ts:956`
+- **SubagentMcp** (type) — `ref_projects/pi-web/lib/subagents.ts:21`
+- **SubagentMetadata** (interface) — `ref_projects/pi-web/lib/subagents.ts:58`
+- **createdAt** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:67`
+- **description** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:64`
+- **parentSessionId** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:60`
+- **parentSessionPath** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:61`
+- **parentToolCallId** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:62`
+- **profile** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:63`
+- **resourceSnapshot** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:68`
+- **runInBackground** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:66`
+- **task** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:65`
+- **version** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:59`
+- **worktreeBranch** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:70`
+- **worktreePath** (property) in `SubagentMetadata` — `ref_projects/pi-web/lib/subagents.ts:69`
+- **subagentMetadataData** (function) — `ref_projects/pi-web/lib/subagents.ts:651`
+- **data** (const) in `subagentMetadataData` — `ref_projects/pi-web/lib/subagents.ts:654`
+- **metaEntry** (const) in `subagentMetadataData` — `ref_projects/pi-web/lib/subagents.ts:652`
+- **entries.find() callback** (function) in `metaEntry` — `ref_projects/pi-web/lib/subagents.ts:652`
+- **subagentNameList** (function) — `ref_projects/pi-web/lib/subagents.ts:276`
+- **items** (const) in `subagentNameList` — `ref_projects/pi-web/lib/subagents.ts:277`
+- **items.filter() callback** (function) in `subagentNameList` — `ref_projects/pi-web/lib/subagents.ts:279`
+- **map() callback** (function) in `subagentNameList` — `ref_projects/pi-web/lib/subagents.ts:280`
+- **SubagentProfile** (interface) — `ref_projects/pi-web/lib/subagents.ts:25`
+- **codemode** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:41`
+- **color** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:50`
+- **description** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:28`
+- **disallowedExtensionTools** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:33`
+- **displayName** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:27`
+- **enabled** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:53`
+- **extensions** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:37`
+- **extensionTools** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:31`
+- **filePath** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:55`
+- **inheritContext** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:47`
+- **isolation** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:51`
+- **loadExtensions** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:39`
+- **loadSkills** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:38`
+- **maxTurns** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:46`
+- **mcp** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:43`
+- **model** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:44`
+- **name** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:26`
+- **persistSession** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:52`
+- **promptMode** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:49`
+- **runInBackground** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:48`
+- **scope** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:54`
+- **skills** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:35`
+- **systemPrompt** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:29`
+- **thinking** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:45`
+- **tools** (property) in `SubagentProfile` — `ref_projects/pi-web/lib/subagents.ts:30`
+- **SubagentResourceSnapshot** (interface) — `ref_projects/pi-web/lib/subagents.ts:73`
+- **allExtensionTools** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:84`
+- **appendSystemPrompt** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:77`
+- **codemode** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:81`
+- **exactSystemPrompt** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:85`
+- **extensions** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:76`
+- **loadExtensions** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:80`
+- **loadSkills** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:79`
+- **mcp** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:82`
+- **skills** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:75`
+- **tools** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:78`
+- **version** (property) in `SubagentResourceSnapshot` — `ref_projects/pi-web/lib/subagents.ts:74`
+- **SubagentResultMetadata** (interface) — `ref_projects/pi-web/lib/subagents.ts:101`
+- **completedAt** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:104`
+- **error** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:106`
+- **result** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:105`
+- **status** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:103`
+- **version** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:102`
+- **worktreeCleanupError** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:107`
+- **worktreeExists** (property) in `SubagentResultMetadata` — `ref_projects/pi-web/lib/subagents.ts:109`
+- **SubagentRunInfo** (interface) — `ref_projects/pi-web/lib/subagents.ts:117`
+- **completedAt** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:128`
+- **createdAt** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:127`
+- **description** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:123`
+- **error** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:130`
+- **parentSessionId** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:120`
+- **parentToolCallId** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:121`
+- **profile** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:122`
+- **result** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:129`
+- **resumed** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:137`
+- **runInBackground** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:125`
+- **sessionId** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:118`
+- **sessionPath** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:119`
+- **status** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:126`
+- **task** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:124`
+- **worktreeBranch** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:132`
+- **worktreeCleanupError** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:133`
+- **worktreeExists** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:135`
+- **worktreePath** (property) in `SubagentRunInfo` — `ref_projects/pi-web/lib/subagents.ts:131`
+- **SubagentScope** (type) — `ref_projects/pi-web/lib/subagents.ts:22`
+- **SubagentSessionResources** (interface) — `ref_projects/pi-web/lib/subagents.ts:88`
+- **allExtensionTools** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:97`
+- **appendSystemPrompt** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:91`
+- **codemode** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:95`
+- **exactSystemPrompt** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:98`
+- **extensions** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:90`
+- **loadExtensions** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:94`
+- **loadSkills** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:93`
+- **mcp** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:96`
+- **skills** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:89`
+- **tools** (property) in `SubagentSessionResources` — `ref_projects/pi-web/lib/subagents.ts:92`
+- **SubagentSessionStatus** (alias) — `ref_projects/pi-web/lib/subagents.ts:12`
+- **SubagentStatus** (type) — `ref_projects/pi-web/lib/subagents.ts:19`
+- **SubagentStatusMetadata** (interface) — `ref_projects/pi-web/lib/subagents.ts:112`
+- **status** (property) in `SubagentStatusMetadata` — `ref_projects/pi-web/lib/subagents.ts:114`
+- **version** (property) in `SubagentStatusMetadata` — `ref_projects/pi-web/lib/subagents.ts:113`
+- **subagentToolOptions** (function) — `ref_projects/pi-web/lib/subagents.ts:736`
+- **<unknown>** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:764`
+- **added** (const) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:760`
+- **builtins** (const) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:758`
+- **resources.tools.filter() callback** (function) in `builtins` — `ref_projects/pi-web/lib/subagents.ts:758`
+- **discovery** (const) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:743`
+- **excludeTools** (const) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:737`
+- **excludeTools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:753`
+- **MCP_TOOL_PATTERNS.filter() callback** (function) in `excludeTools` — `ref_projects/pi-web/lib/subagents.ts:755`
+- **excludeTools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:765`
+- **SDK_BUILTIN_TOOLS.filter() callback** (function) in `excludeTools` — `ref_projects/pi-web/lib/subagents.ts:765`
+- **excludeTools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:744`
+- **namesMcp** (const) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:750`
+- **resources.tools.some() callback** (function) in `namesMcp` — `ref_projects/pi-web/lib/subagents.ts:750`
+- **noTools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:762`
+- **tools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:744`
+- **tools** (property) in `subagentToolOptions` — `ref_projects/pi-web/lib/subagents.ts:752`
+- **SubagentWritableScope** (type) — `ref_projects/pi-web/lib/subagents.ts:23`
+- **syncFlagAlias** (function) — `ref_projects/pi-web/lib/subagents.ts:369`
+- **owned** (const) in `syncFlagAlias` — `ref_projects/pi-web/lib/subagents.ts:375`
+- **THINKING_LEVELS** (const) — `ref_projects/pi-web/lib/subagents.ts:146`
+- **ThinkingLevel** (alias) — `ref_projects/pi-web/lib/subagents.ts:1`
+- **unlinkSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:4`
+- **unmanagedFrontmatter** (function) — `ref_projects/pi-web/lib/subagents.ts:346`
+- **key** (const) in `unmanagedFrontmatter` — `ref_projects/pi-web/lib/subagents.ts:348`
+- **preserved** (const) in `unmanagedFrontmatter` — `ref_projects/pi-web/lib/subagents.ts:347`
+- **value** (const) in `unmanagedFrontmatter` — `ref_projects/pi-web/lib/subagents.ts:348`
+- **validateSavedCodemode** (function) — `ref_projects/pi-web/lib/subagents.ts:190`
+- **validateSavedMcp** (function) — `ref_projects/pi-web/lib/subagents.ts:202`
+- **ValidSubagentMetadataData** (type) — `ref_projects/pi-web/lib/subagents.ts:645`
+- **withSubagentExtensionTools** (function) — `ref_projects/pi-web/lib/subagents.ts:713`
+- **filter() callback** (function) in `withSubagentExtensionTools` — `ref_projects/pi-web/lib/subagents.ts:719`
+- **writableProfileDirectory** (function) — `ref_projects/pi-web/lib/subagents.ts:507`
+- **writePrivateFileAtomicSync** (alias) — `ref_projects/pi-web/lib/subagents.ts:8`

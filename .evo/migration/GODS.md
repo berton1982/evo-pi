@@ -35,15 +35,15 @@
 
 | # | god | 路径 | 行数 | 角色 | 依赖 god | R 级 | 归属能力 | 状态 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | `useAgentSession.ts` | `hooks/useAgentSession.ts` | 2805 | **agent 运行时中枢**（事件源，~1300 声明） | `rpc-manager.ts` | **R3** | C-A 代理运行时 | 待开始 |
-| 2 | `rpc-manager.ts` | `lib/rpc-manager.ts` | 2757 | **后端协调者**（`AgentSessionWrapper` + 命令分发） | — | **R3** | C-A 代理运行时 | 待开始 |
-| 3 | `subagents.ts` | `lib/subagents.ts` | 1002 | 子代理运行时 | `useAgentSession.ts` | R2 | C-A 代理运行时 | 待开始 |
-| 4 | `mcp-host.ts` | `lib/mcp-host.ts` | 1105 | MCP Host 运行时 | `useAgentSession.ts` | R2 | C-A 代理运行时 | 待开始 |
-| 5 | `AppShell.tsx` | `components/AppShell.tsx` | 2796 | **壳 + 协调者**（上行回调、失效广播、跨域原子重置、URL 同步） | `SessionSidebar.tsx`、`useAgentSession.ts`、`ChatWindow.tsx` | **R3** | C-B 会话编排（布局部分 → H 底盘） | 待开始 |
-| 6 | `ChatWindow.tsx` | `components/ChatWindow.tsx` | 2282 | 消息区 + 扩展 UI 宿主 | `useAgentSession.ts` | **R3** | C-C 会话面 | 待开始 |
-| 7 | `MessageView.tsx` | `components/MessageView.tsx` | 2161 | 消息渲染 | — | R2 | C-C 会话面 | 待开始 |
-| 8 | `ChatInput.tsx` | `components/ChatInput.tsx` | 2869 | 输入区（草稿、引用、@提及、斜杠命令） | `useAgentSession.ts` | R2 | C-D 输入区 | 待开始 |
-| 9 | `SessionSidebar.tsx` | `components/SessionSidebar.tsx` | 3165 | 侧边栏（会话库 + 项目分组 + 文件浏览 + 菜单） | `useAgentSession.ts` | R2 | C-E 会话库 | 待开始 |
+| 1 | `useAgentSession.ts` | `hooks/useAgentSession.ts` | 2805 | **agent 运行时中枢**（事件源，~1300 声明） | `rpc-manager.ts` | **R3** | C-A 代理运行时 | 已完成 |
+| 2 | `rpc-manager.ts` | `lib/rpc-manager.ts` | 2757 | **后端协调者**（`AgentSessionWrapper` + 命令分发） | — | **R3** | C-A 代理运行时 | 已完成 |
+| 3 | `subagents.ts` | `lib/subagents.ts` | 1002 | 子代理运行时 | `useAgentSession.ts` | R2 | C-A 代理运行时 | 已完成 |
+| 4 | `mcp-host.ts` | `lib/mcp-host.ts` | 1105 | MCP Host 运行时 | `useAgentSession.ts` | R2 | C-A 代理运行时 | 已完成 |
+| 5 | `AppShell.tsx` | `components/AppShell.tsx` | 2796 | **壳 + 协调者**（上行回调、失效广播、跨域原子重置、URL 同步） | `SessionSidebar.tsx`、`useAgentSession.ts`、`ChatWindow.tsx` | **R3** | C-B 会话编排（布局部分 → H 底盘） | 已完成 |
+| 6 | `ChatWindow.tsx` | `components/ChatWindow.tsx` | 2282 | 消息区 + 扩展 UI 宿主 | `useAgentSession.ts` | **R3** | C-C 会话面 | 已完成 |
+| 7 | `MessageView.tsx` | `components/MessageView.tsx` | 2161 | 消息渲染 | — | R2 | C-C 会话面 | 已完成 |
+| 8 | `ChatInput.tsx` | `components/ChatInput.tsx` | 2869 | 输入区（草稿、引用、@提及、斜杠命令） | `useAgentSession.ts` | R2 | C-D 输入区 | 已完成 |
+| 9 | `SessionSidebar.tsx` | `components/SessionSidebar.tsx` | 3165 | 侧边栏（会话库 + 项目分组 + 文件浏览 + 菜单） | `useAgentSession.ts` | R2 | C-E 会话库 | 已完成 |
 | 10 | `SessionTree.tsx` | `components/SessionTree.tsx` | 1131 | 会话树 | `SessionSidebar.tsx` | R2 | C-E 会话库 | 待开始 |
 | 11 | `FileViewer.tsx` | `components/FileViewer.tsx` | 1897 | 文件预览 | — | R2 | C-F 文件 | 待开始 |
 | 12 | `FileExplorer.tsx` | `components/FileExplorer.tsx` | 1409 | 文件浏览 | — | R2 | C-F 文件 | 待开始 |

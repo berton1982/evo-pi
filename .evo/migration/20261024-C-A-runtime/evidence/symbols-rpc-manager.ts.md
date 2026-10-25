@@ -1,0 +1,1038 @@
+# 符号全集 — `ref_projects/pi-web/lib/rpc-manager.ts`
+
+> 来源：**tsserver**（`../.nvm/versions/node/v24.19.0/lib/node_modules/typescript/lib/tsserver.js`，TypeScript 5.9.3）。
+> 工程：`ref_projects/pi-web/tsconfig.json`——与编辑器里的 LSP 是同一棵树。
+> 文件行数：2758；符号数：**1030**；导出时间：2026-10-23T14:11:38.720Z
+
+## 符号（按出现顺序）
+
+- **abortSubagent** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2147`
+- **ActiveCustomUi** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:106`
+- **ActiveExtensionWidget** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:97`
+- **AgentEvent** (interface) — `ref_projects/pi-web/lib/rpc-manager.ts:69`
+- **[]** (index) in `AgentEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:71`
+- **type** (property) in `AgentEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:70`
+- **AgentRunCompleteListener** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:76`
+- **AgentSessionLike** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:23`
+- **AgentSessionWrapper** (class) — `ref_projects/pi-web/lib/rpc-manager.ts:299`
+- **constructor** (function Object() { [native code] }) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:348`
+- **_alive** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:341`
+- **acquirePromptAdmission** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:691`
+- **<function>** (function) in `acquirePromptAdmission` — `ref_projects/pi-web/lib/rpc-manager.ts:694`
+- **previous** (const) in `acquirePromptAdmission` — `ref_projects/pi-web/lib/rpc-manager.ts:692`
+- **release** (let) in `acquirePromptAdmission` — `ref_projects/pi-web/lib/rpc-manager.ts:693`
+- **activeCustomUis** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:307`
+- **activeExtensionWidgets** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:311`
+- **activeMutatingCommands** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:315`
+- **activeToolEvents** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:304`
+- **agentRunNeedsCompletion** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:317`
+- **beginExtensionBinding** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:518`
+- **catch() callback** (function) in `beginExtensionBinding` — `ref_projects/pi-web/lib/rpc-manager.ts:519`
+- **chatOnly** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:325`
+- **chatOnlyExtensionModel** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:329`
+- **clearExtensionWidget** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1535`
+- **active** (const) in `clearExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1538`
+- **generation** (const) in `clearExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1536`
+- **clearExtensionWidgets** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1547`
+- **key** (const) in `clearExtensionWidgets` — `ref_projects/pi-web/lib/rpc-manager.ts:1552`
+- **keys** (const) in `clearExtensionWidgets` — `ref_projects/pi-web/lib/rpc-manager.ts:1548`
+- **closeCustomUi** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1730`
+- **closed** (property) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1746`
+- **custom** (const) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1731`
+- **id** (property) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1743`
+- **lines** (property) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1745`
+- **method** (property) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1744`
+- **type** (property) in `closeCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1742`
+- **closing** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:346`
+- **createExtensionCommandContextActions** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2022`
+- **fork** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2029`
+- **cancelled** (property) in `fork` — `ref_projects/pi-web/lib/rpc-manager.ts:2029`
+- **navigateTree** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2030`
+- **summarize** (property) in `navigateTree` — `ref_projects/pi-web/lib/rpc-manager.ts:2031`
+- **newSession** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2028`
+- **cancelled** (property) in `newSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2028`
+- **reload** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2033`
+- **beforeSessionStart** (method) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2055`
+- **busy** (const) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2036`
+- **id** (property) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2044`
+- **message** (property) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2047`
+- **method** (property) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2045`
+- **notifyType** (property) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2046`
+- **type** (property) in `reload` — `ref_projects/pi-web/lib/rpc-manager.ts:2043`
+- **switchSession** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2032`
+- **cancelled** (property) in `switchSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2032`
+- **waitForIdle** (method) in `createExtensionCommandContextActions` — `ref_projects/pi-web/lib/rpc-manager.ts:2024`
+- **agent** (const) in `waitForIdle` — `ref_projects/pi-web/lib/rpc-manager.ts:2025`
+- **waitForIdle** (property) in `agent` — `ref_projects/pi-web/lib/rpc-manager.ts:2025`
+- **createExtensionUiContext** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1894`
+- **addAutocompleteProvider** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2010`
+- **confirm** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1903`
+- **<unknown>** (property) in `confirm` — `ref_projects/pi-web/lib/rpc-manager.ts:1904`
+- **message** (property) in `confirm` — `ref_projects/pi-web/lib/rpc-manager.ts:1904`
+- **method** (property) in `confirm` — `ref_projects/pi-web/lib/rpc-manager.ts:1904`
+- **requestExtensionUi() callback** (function) in `confirm` — `ref_projects/pi-web/lib/rpc-manager.ts:1906`
+- **title** (property) in `confirm` — `ref_projects/pi-web/lib/rpc-manager.ts:1904`
+- **custom** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1992`
+- **editor** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1917`
+- **<unknown>** (property) in `editor` — `ref_projects/pi-web/lib/rpc-manager.ts:1918`
+- **method** (property) in `editor` — `ref_projects/pi-web/lib/rpc-manager.ts:1918`
+- **requestExtensionUi() callback** (function) in `editor` — `ref_projects/pi-web/lib/rpc-manager.ts:1920`
+- **title** (property) in `editor` — `ref_projects/pi-web/lib/rpc-manager.ts:1918`
+- **getAllThemes** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2014`
+- **getEditorComponent** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2012`
+- **getEditorText** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2009`
+- **getTheme** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2015`
+- **getToolsExpanded** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2017`
+- **input** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1910`
+- **<unknown>** (property) in `input` — `ref_projects/pi-web/lib/rpc-manager.ts:1911`
+- **method** (property) in `input` — `ref_projects/pi-web/lib/rpc-manager.ts:1911`
+- **requestExtensionUi() callback** (function) in `input` — `ref_projects/pi-web/lib/rpc-manager.ts:1913`
+- **title** (property) in `input` — `ref_projects/pi-web/lib/rpc-manager.ts:1911`
+- **notify** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1924`
+- **id** (property) in `notify` — `ref_projects/pi-web/lib/rpc-manager.ts:1927`
+- **message** (property) in `notify` — `ref_projects/pi-web/lib/rpc-manager.ts:1929`
+- **method** (property) in `notify` — `ref_projects/pi-web/lib/rpc-manager.ts:1928`
+- **notifyType** (property) in `notify` — `ref_projects/pi-web/lib/rpc-manager.ts:1930`
+- **type** (property) in `notify` — `ref_projects/pi-web/lib/rpc-manager.ts:1926`
+- **onTerminalInput** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1933`
+- **<function>** (function) in `onTerminalInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1933`
+- **pasteToEditor** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1993`
+- **id** (property) in `pasteToEditor` — `ref_projects/pi-web/lib/rpc-manager.ts:1996`
+- **method** (property) in `pasteToEditor` — `ref_projects/pi-web/lib/rpc-manager.ts:1997`
+- **text** (property) in `pasteToEditor` — `ref_projects/pi-web/lib/rpc-manager.ts:1998`
+- **type** (property) in `pasteToEditor` — `ref_projects/pi-web/lib/rpc-manager.ts:1995`
+- **select** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1896`
+- **<unknown>** (property) in `select` — `ref_projects/pi-web/lib/rpc-manager.ts:1897`
+- **method** (property) in `select` — `ref_projects/pi-web/lib/rpc-manager.ts:1897`
+- **options** (property) in `select` — `ref_projects/pi-web/lib/rpc-manager.ts:1897`
+- **requestExtensionUi() callback** (function) in `select` — `ref_projects/pi-web/lib/rpc-manager.ts:1899`
+- **title** (property) in `select` — `ref_projects/pi-web/lib/rpc-manager.ts:1897`
+- **setEditorComponent** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2011`
+- **setEditorText** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2001`
+- **id** (property) in `setEditorText` — `ref_projects/pi-web/lib/rpc-manager.ts:2004`
+- **method** (property) in `setEditorText` — `ref_projects/pi-web/lib/rpc-manager.ts:2005`
+- **text** (property) in `setEditorText` — `ref_projects/pi-web/lib/rpc-manager.ts:2006`
+- **type** (property) in `setEditorText` — `ref_projects/pi-web/lib/rpc-manager.ts:2003`
+- **setFooter** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1982`
+- **setHeader** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1983`
+- **setHiddenThinkingLabel** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1948`
+- **setStatus** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1934`
+- **id** (property) in `setStatus` — `ref_projects/pi-web/lib/rpc-manager.ts:1939`
+- **method** (property) in `setStatus` — `ref_projects/pi-web/lib/rpc-manager.ts:1940`
+- **statusKey** (property) in `setStatus` — `ref_projects/pi-web/lib/rpc-manager.ts:1941`
+- **statusText** (property) in `setStatus` — `ref_projects/pi-web/lib/rpc-manager.ts:1942`
+- **type** (property) in `setStatus` — `ref_projects/pi-web/lib/rpc-manager.ts:1938`
+- **setTheme** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2016`
+- **error** (property) in `setTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:2016`
+- **success** (property) in `setTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:2016`
+- **setTitle** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1984`
+- **id** (property) in `setTitle` — `ref_projects/pi-web/lib/rpc-manager.ts:1987`
+- **method** (property) in `setTitle` — `ref_projects/pi-web/lib/rpc-manager.ts:1988`
+- **title** (property) in `setTitle` — `ref_projects/pi-web/lib/rpc-manager.ts:1989`
+- **type** (property) in `setTitle` — `ref_projects/pi-web/lib/rpc-manager.ts:1986`
+- **setToolsExpanded** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2018`
+- **setWidget** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1949`
+- **generation** (const) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1964`
+- **id** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1975`
+- **key** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1969`
+- **lines** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1970`
+- **method** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1976`
+- **placement** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1971`
+- **type** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1974`
+- **widgetKey** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1977`
+- **widgetLines** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1978`
+- **widgetPlacement** (property) in `setWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1979`
+- **setWorkingIndicator** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1947`
+- **setWorkingMessage** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1945`
+- **setWorkingVisible** (method) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:1946`
+- **theme** (getter) in `createExtensionUiContext` — `ref_projects/pi-web/lib/rpc-manager.ts:2013`
+- **cwd** (getter) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:368`
+- **destroy** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1378`
+- **catch() callback** (function) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1420`
+- **emit** (const) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1413`
+- **finishDispose** (const) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1395`
+- **id** (const) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1389`
+- **pending** (const) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1388`
+- **type** (property) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:1384`
+- **disposed** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:343`
+- **<function>** (function) in `disposed` — `ref_projects/pi-web/lib/rpc-manager.ts:343`
+- **disposeExtensionWidgetComponent** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1513`
+- **dispose** (const) in `disposeExtensionWidgetComponent` — `ref_projects/pi-web/lib/rpc-manager.ts:1515`
+- **dispose** (property) in `dispose` — `ref_projects/pi-web/lib/rpc-manager.ts:1515`
+- **disposeMcpHost** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1368`
+- **error** (var) in `disposeMcpHost` — `ref_projects/pi-web/lib/rpc-manager.ts:1373`
+- **emit** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:678`
+- **error** (var) in `emit` — `ref_projects/pi-web/lib/rpc-manager.ts:682`
+- **listener** (const) in `emit` — `ref_projects/pi-web/lib/rpc-manager.ts:679`
+- **emitCustomUiRender** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1713`
+- **error** (var) in `emitCustomUiRender` — `ref_projects/pi-web/lib/rpc-manager.ts:1717`
+- **event** (const) in `emitCustomUiRender` — `ref_projects/pi-web/lib/rpc-manager.ts:1720`
+- **id** (property) in `event` — `ref_projects/pi-web/lib/rpc-manager.ts:1722`
+- **lines** (property) in `event` — `ref_projects/pi-web/lib/rpc-manager.ts:1724`
+- **method** (property) in `event` — `ref_projects/pi-web/lib/rpc-manager.ts:1723`
+- **type** (property) in `event` — `ref_projects/pi-web/lib/rpc-manager.ts:1721`
+- **lines** (let) in `emitCustomUiRender` — `ref_projects/pi-web/lib/rpc-manager.ts:1714`
+- **emitExtensionWidgetClear** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1524`
+- **id** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1527`
+- **method** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1528`
+- **type** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1526`
+- **widgetKey** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1529`
+- **widgetLines** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1530`
+- **widgetPlacement** (property) in `emitExtensionWidgetClear` — `ref_projects/pi-web/lib/rpc-manager.ts:1531`
+- **emitExtensionWidgetError** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1568`
+- **error** (property) in `emitExtensionWidgetError` — `ref_projects/pi-web/lib/rpc-manager.ts:1573`
+- **event** (property) in `emitExtensionWidgetError` — `ref_projects/pi-web/lib/rpc-manager.ts:1572`
+- **extensionPath** (property) in `emitExtensionWidgetError` — `ref_projects/pi-web/lib/rpc-manager.ts:1571`
+- **type** (property) in `emitExtensionWidgetError` — `ref_projects/pi-web/lib/rpc-manager.ts:1570`
+- **emitSessionShutdown** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1467`
+- **deadline** (const) in `emitSessionShutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:1471`
+- **<function>** (function) in `deadline` — `ref_projects/pi-web/lib/rpc-manager.ts:1471`
+- **setTimeout() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1472`
+- **deadlineTimer** (let) in `emitSessionShutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:1470`
+- **handled** (const) in `emitSessionShutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:1478`
+- **<function>** (function) in `handled` — `ref_projects/pi-web/lib/rpc-manager.ts:1478`
+- **reason** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1479`
+- **type** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1479`
+- **ensureExtensionsBound** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:559`
+- **<function>** (function) in `ensureExtensionsBound` — `ref_projects/pi-web/lib/rpc-manager.ts:564`
+- **bindExtensions** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:568`
+- **commandContextActions** (property) in `bindExtensions` — `ref_projects/pi-web/lib/rpc-manager.ts:571`
+- **mode** (property) in `bindExtensions` — `ref_projects/pi-web/lib/rpc-manager.ts:570`
+- **onError** (property) in `bindExtensions` — `ref_projects/pi-web/lib/rpc-manager.ts:573`
+- **shutdownHandler** (property) in `bindExtensions` — `ref_projects/pi-web/lib/rpc-manager.ts:572`
+- **uiContext** (property) in `bindExtensions` — `ref_projects/pi-web/lib/rpc-manager.ts:569`
+- **commandContextActions** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:578`
+- **mode** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:577`
+- **onError** (method) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:586`
+- **error** (property) in `onError` — `ref_projects/pi-web/lib/rpc-manager.ts:590`
+- **event** (property) in `onError` — `ref_projects/pi-web/lib/rpc-manager.ts:589`
+- **extensionPath** (property) in `onError` — `ref_projects/pi-web/lib/rpc-manager.ts:588`
+- **type** (property) in `onError` — `ref_projects/pi-web/lib/rpc-manager.ts:587`
+- **shutdownHandler** (method) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:579`
+- **id** (property) in `shutdownHandler` — `ref_projects/pi-web/lib/rpc-manager.ts:581`
+- **message** (property) in `shutdownHandler` — `ref_projects/pi-web/lib/rpc-manager.ts:584`
+- **method** (property) in `shutdownHandler` — `ref_projects/pi-web/lib/rpc-manager.ts:582`
+- **notifyType** (property) in `shutdownHandler` — `ref_projects/pi-web/lib/rpc-manager.ts:583`
+- **type** (property) in `shutdownHandler` — `ref_projects/pi-web/lib/rpc-manager.ts:580`
+- **uiContext** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:566`
+- **uiContext** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:576`
+- **catch() callback** (function) in `ensureExtensionsBound` — `ref_projects/pi-web/lib/rpc-manager.ts:598`
+- **evictIfDiskAhead** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:413`
+- **diskLatestId** (const) in `evictIfDiskAhead` — `ref_projects/pi-web/lib/rpc-manager.ts:415`
+- **exactSystemPrompt** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:324`
+- **extensionBindingError** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:323`
+- **extensionBindingPromise** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:322`
+- **extensionCommandCandidates** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:620`
+- **map() callback** (function) in `extensionCommandCandidates` — `ref_projects/pi-web/lib/rpc-manager.ts:622`
+- **name** (property) in `map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:623`
+- **sourceInfo** (property) in `map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:624`
+- **extensionsBound** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:321`
+- **extensionStatuses** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:309`
+- **extensionUiAbortController** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:308`
+- **extensionWidgetGenerations** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:312`
+- **extensionWidgets** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:310`
+- **extensionWidgetsResetting** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:313`
+- **failExtensionWidget** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1577`
+- **active** (const) in `failExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1589`
+- **shouldEmitClear** (let) in `failExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1590`
+- **forcedIdleTimerArmed** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:340`
+- **forceShutdownOnIdle** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:338`
+- **getCustomUiWidth** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1702`
+- **overlayOptions** (const) in `getCustomUiWidth` — `ref_projects/pi-web/lib/rpc-manager.ts:1704`
+- **overlayOptions** (property) in `overlayOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:1704`
+- **resolved** (const) in `getCustomUiWidth` — `ref_projects/pi-web/lib/rpc-manager.ts:1705`
+- **width** (const) in `getCustomUiWidth` — `ref_projects/pi-web/lib/rpc-manager.ts:1707`
+- **width** (property) in `width` — `ref_projects/pi-web/lib/rpc-manager.ts:1707`
+- **getExtensionStatuses** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1499`
+- **Array.from() callback** (function) in `getExtensionStatuses` — `ref_projects/pi-web/lib/rpc-manager.ts:1500`
+- **key** (property) in `Array.from() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1500`
+- **text** (property) in `Array.from() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1500`
+- **getExtensionWidgets** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1503`
+- **handleExtensionUiInput** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1751`
+- **custom** (const) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1752`
+- **error** (var) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1757`
+- **error** (property) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1763`
+- **event** (property) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1762`
+- **extensionPath** (property) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1761`
+- **type** (property) in `handleExtensionUiInput` — `ref_projects/pi-web/lib/rpc-manager.ts:1760`
+- **hasSuppressedCompletionNotifications** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:427`
+- **idleTimer** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:334`
+- **inner** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:349`
+- **isAlive** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:385`
+- **isAwaitingInput** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:400`
+- **request** (const) in `isAwaitingInput` — `ref_projects/pi-web/lib/rpc-manager.ts:402`
+- **isChatOnly** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:423`
+- **isRunning** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:389`
+- **isSessionRunningForReplacement** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:792`
+- **isStreaming** (getter) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:376`
+- **lastRunAborted** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:319`
+- **listeners** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:303`
+- **mcpHost** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:328`
+- **mcpHostDisposed** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:330`
+- **mcpPromptWait** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:332`
+- **navigateTreeKeepingToolSelection** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:659`
+- **activeAfter** (const) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:669`
+- **activeBefore** (const) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:663`
+- **activeBefore.filter() callback** (function) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:672`
+- **cancelled** (property) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:665`
+- **cancelled** (property) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:675`
+- **entries** (const) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:667`
+- **result** (const) in `navigateTreeKeepingToolSelection` — `ref_projects/pi-web/lib/rpc-manager.ts:664`
+- **nextExtensionWidgetGeneration** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1507`
+- **generation** (const) in `nextExtensionWidgetGeneration` — `ref_projects/pi-web/lib/rpc-manager.ts:1508`
+- **notifyAgentRunCompleteIfIdle** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:501`
+- **error** (var) in `notifyAgentRunCompleteIfIdle` — `ref_projects/pi-web/lib/rpc-manager.ts:508`
+- **onAgentRunComplete** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:326`
+- **onDestroy** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:762`
+- **onDestroyCallback** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:335`
+- **onEvent** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:753`
+- **<function>** (function) in `onEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:757`
+- **event** (const) in `onEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:755`
+- **event** (const) in `onEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:756`
+- **pendingPromptCount** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:314`
+- **pendingUiRequests** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:306`
+- **pendingUiResponses** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:305`
+- **persistBashOnlySession** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:733`
+- **content** (const) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:741`
+- **map() callback** (function) in `content` — `ref_projects/pi-web/lib/rpc-manager.ts:742`
+- **encoding** (property) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:744`
+- **flag** (property) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:744`
+- **flushed** (property) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:749`
+- **header** (const) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:738`
+- **manager** (const) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:734`
+- **sessionFile** (const) in `persistBashOnlySession` — `ref_projects/pi-web/lib/rpc-manager.ts:735`
+- **prepareMcpForRun** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:534`
+- **controller** (const) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:537`
+- **mcpHost** (const) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:535`
+- **once** (property) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:540`
+- **stop** (const) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:538`
+- **wait** (const) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:548`
+- **controller** (property) in `wait` — `ref_projects/pi-web/lib/rpc-manager.ts:548`
+- **done** (property) in `wait` — `ref_projects/pi-web/lib/rpc-manager.ts:548`
+- **waited** (const) in `prepareMcpForRun` — `ref_projects/pi-web/lib/rpc-manager.ts:542`
+- **<function>** (function) in `waited` — `ref_projects/pi-web/lib/rpc-manager.ts:542`
+- **catch() callback** (function) in `waited` — `ref_projects/pi-web/lib/rpc-manager.ts:545`
+- **promptAdmissionTail** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:320`
+- **promptDoneEvent** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:514`
+- **<unknown>** (property) in `promptDoneEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:515`
+- **type** (property) in `promptDoneEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:515`
+- **renderExtensionWidget** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1607`
+- **error** (var) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1616`
+- **id** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1643`
+- **key** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1636`
+- **lines** (let) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1613`
+- **lines** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1637`
+- **lines.every() callback** (function) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1620`
+- **method** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1644`
+- **placement** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1638`
+- **type** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1642`
+- **widgetKey** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1645`
+- **widgetLines** (const) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1634`
+- **widgetLines** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1646`
+- **widgetPlacement** (property) in `renderExtensionWidget` — `ref_projects/pi-web/lib/rpc-manager.ts:1647`
+- **requestExtensionCustomUi** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1768`
+- **<function>** (function) in `requestExtensionCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1780`
+- **catch() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1830`
+- **error** (property) in `catch() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1836`
+- **event** (property) in `catch() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1835`
+- **extensionPath** (property) in `catch() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1834`
+- **type** (property) in `catch() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1833`
+- **completed** (let) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1781`
+- **done** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1796`
+- **finish** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1789`
+- **once** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1804`
+- **onStop** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1803`
+- **then() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1807`
+- **then() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1808`
+- **custom** (const) in `then() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1821`
+- **component** (property) in `custom` — `ref_projects/pi-web/lib/rpc-manager.ts:1822`
+- **resolve** (method) in `custom` — `ref_projects/pi-web/lib/rpc-manager.ts:1824`
+- **settled** (property) in `custom` — `ref_projects/pi-web/lib/rpc-manager.ts:1825`
+- **width** (property) in `custom` — `ref_projects/pi-web/lib/rpc-manager.ts:1823`
+- **tui** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1782`
+- **createHeadlessCustomUiTui() callback** (function) in `tui` — `ref_projects/pi-web/lib/rpc-manager.ts:1783`
+- **custom** (const) in `createHeadlessCustomUiTui() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1784`
+- **id** (const) in `requestExtensionCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1777`
+- **stopSignal** (const) in `requestExtensionCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1774`
+- **width** (const) in `requestExtensionCustomUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1778`
+- **requestExtensionUi** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1843`
+- **<function>** (function) in `requestExtensionUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1863`
+- **cancel** (method) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1888`
+- **cleanup** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1866`
+- **id** (property) in `cleanup` — `ref_projects/pi-web/lib/rpc-manager.ts:1871`
+- **type** (property) in `cleanup` — `ref_projects/pi-web/lib/rpc-manager.ts:1871`
+- **onAbort** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1880`
+- **once** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1883`
+- **resolve** (method) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1887`
+- **setTimeout() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1882`
+- **settle** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1873`
+- **settled** (let) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1864`
+- **timeoutId** (let) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1865`
+- **abortSignal** (const) in `requestExtensionUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1853`
+- **fullRequest** (const) in `requestExtensionUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1856`
+- **request** (property) in `fullRequest` — `ref_projects/pi-web/lib/rpc-manager.ts:1859`
+- **<unknown>** (property) in `fullRequest` — `ref_projects/pi-web/lib/rpc-manager.ts:1860`
+- **id** (property) in `fullRequest` — `ref_projects/pi-web/lib/rpc-manager.ts:1858`
+- **type** (property) in `fullRequest` — `ref_projects/pi-web/lib/rpc-manager.ts:1857`
+- **id** (const) in `requestExtensionUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1855`
+- **stopSignal** (const) in `requestExtensionUi` — `ref_projects/pi-web/lib/rpc-manager.ts:1851`
+- **resetExtensionWidgetsForReload** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1555`
+- **factoryKeys** (const) in `resetExtensionWidgetsForReload` — `ref_projects/pi-web/lib/rpc-manager.ts:1558`
+- **key** (const) in `resetExtensionWidgetsForReload` — `ref_projects/pi-web/lib/rpc-manager.ts:1559`
+- **resetIdleTimer** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:701`
+- **setTimeout() callback** (function) in `resetIdleTimer` — `ref_projects/pi-web/lib/rpc-manager.ts:719`
+- **catch() callback** (function) in `setTimeout() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:727`
+- **sessionFile** (property) in `setTimeout() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:722`
+- **sessionId** (property) in `setTimeout() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:721`
+- **timeoutMs** (const) in `resetIdleTimer` — `ref_projects/pi-web/lib/rpc-manager.ts:715`
+- **resolveDisposed** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:342`
+- **resolveExtensionUiResponse** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1493`
+- **pending** (const) in `resolveExtensionUiResponse` — `ref_projects/pi-web/lib/rpc-manager.ts:1494`
+- **send** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:810`
+- **<unknown>** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:924`
+- **<unknown>** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:925`
+- **<unknown>** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1191`
+- **acceptPreflight** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:865`
+- **active** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1226`
+- **activeToolNames** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1286`
+- **all** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1225`
+- **filter() callback** (function) in `all` — `ref_projects/pi-web/lib/rpc-manager.ts:1225`
+- **all.map() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1234`
+- **t** (property) in `all.map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1235`
+- **active** (property) in `all.map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1237`
+- **declarationHidden** (property) in `all.map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1238`
+- **description** (property) in `all.map() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1236`
+- **allowedDuringReplacement** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:812`
+- **allowNetwork** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1031`
+- **autoCompactionEnabled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1001`
+- **autoRetryEnabled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1002`
+- **branchHasAssistant** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1130`
+- **some() callback** (function) in `branchHasAssistant` — `ref_projects/pi-web/lib/rpc-manager.ts:1131`
+- **cancelled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1107`
+- **cancelled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1120`
+- **cancelled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1134`
+- **cancelled** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1135`
+- **catch() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:957`
+- **commands** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1243`
+- **commands** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1268`
+- **compat** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1164`
+- **contextUsage** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:993`
+- **contextUsage** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1010`
+- **contextWindow** (property) in `contextUsage` — `ref_projects/pi-web/lib/rpc-manager.ts:1011`
+- **percent** (property) in `contextUsage` — `ref_projects/pi-web/lib/rpc-manager.ts:1011`
+- **tokens** (property) in `contextUsage` — `ref_projects/pi-web/lib/rpc-manager.ts:1011`
+- **controller** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:903`
+- **currentSessionFile** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1106`
+- **currentSessionFile** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1128`
+- **declared** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1229`
+- **map() callback** (function) in `declared` — `ref_projects/pi-web/lib/rpc-manager.ts:1229`
+- **description** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1247`
+- **description** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1255`
+- **description** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1263`
+- **entryId** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1104`
+- **error** (var) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:933`
+- **execution** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1328`
+- **excludeFromContext** (property) in `execution` — `ref_projects/pi-web/lib/rpc-manager.ts:1332`
+- **operations** (property) in `execution` — `ref_projects/pi-web/lib/rpc-manager.ts:1333`
+- **shellPath** (property) in `operations` — `ref_projects/pi-web/lib/rpc-manager.ts:1334`
+- **extensionStatuses** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1022`
+- **extensionWidgets** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1023`
+- **finishPrompt** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:883`
+- **followImages** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1218`
+- **data** (property) in `followImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1218`
+- **mimeType** (property) in `followImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1218`
+- **type** (property) in `followImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1218`
+- **forkedPath** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1114`
+- **hidden** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1233`
+- **hiddenDeclarations** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1232`
+- **id** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1042`
+- **imageError** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:832`
+- **isBashRunning** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:999`
+- **isCompacting** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1000`
+- **isPromptRunning** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:998`
+- **isStreaming** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:997`
+- **keepSource** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1052`
+- **leafId** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1129`
+- **level** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1159`
+- **mcpPreparation** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:899`
+- **messageCount** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1004`
+- **model** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:853`
+- **model** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:992`
+- **model** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1029`
+- **model** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1003`
+- **id** (property) in `model` — `ref_projects/pi-web/lib/rpc-manager.ts:1003`
+- **provider** (property) in `model` — `ref_projects/pi-web/lib/rpc-manager.ts:1003`
+- **modelId** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1028`
+- **name** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1182`
+- **name** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1246`
+- **name** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1254`
+- **name** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1262`
+- **newSessionId** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1117`
+- **newSessionId** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1120`
+- **pendingMessageCount** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1005`
+- **preflight** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:867`
+- **<function>** (function) in `preflight` — `ref_projects/pi-web/lib/rpc-manager.ts:867`
+- **acceptPreflight** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:868`
+- **rejectPreflight** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:877`
+- **preflightAccepted** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:862`
+- **preflightResult** (method) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:931`
+- **preflightSettled** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:863`
+- **prompt** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:921`
+- **prompt.then() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:938`
+- **prompt.then() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:944`
+- **errorMessage** (property) in `prompt.then() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:953`
+- **type** (property) in `prompt.then() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:952`
+- **promptImages** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:860`
+- **data** (property) in `promptImages` — `ref_projects/pi-web/lib/rpc-manager.ts:860`
+- **mimeType** (property) in `promptImages` — `ref_projects/pi-web/lib/rpc-manager.ts:860`
+- **type** (property) in `promptImages` — `ref_projects/pi-web/lib/rpc-manager.ts:860`
+- **promptSettled** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:864`
+- **provider** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1028`
+- **provider** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1042`
+- **queuedMessages** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1006`
+- **followUp** (property) in `queuedMessages` — `ref_projects/pi-web/lib/rpc-manager.ts:1008`
+- **steering** (property) in `queuedMessages` — `ref_projects/pi-web/lib/rpc-manager.ts:1007`
+- **registered** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1244`
+- **rejectPreflight** (let) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:866`
+- **releaseAdmission** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:848`
+- **result** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1339`
+- **sessionDir** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1112`
+- **sessionFile** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:996`
+- **sessionId** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:995`
+- **sessionManager** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1105`
+- **sessionManager** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1127`
+- **sessionName** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1192`
+- **skill** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1260`
+- **source** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:926`
+- **source** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1248`
+- **source** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1256`
+- **source** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1264`
+- **sourceInfo** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1249`
+- **sourceInfo** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1257`
+- **sourceInfo** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1265`
+- **sourceManager** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1113`
+- **steerImages** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1212`
+- **data** (property) in `steerImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1212`
+- **mimeType** (property) in `steerImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1212`
+- **type** (property) in `steerImages` — `ref_projects/pi-web/lib/rpc-manager.ts:1212`
+- **streamingBehavior** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:861`
+- **success** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1301`
+- **systemPrompt** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1020`
+- **template** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1252`
+- **text** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1197`
+- **thinkingLevel** (property) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1021`
+- **toolNames** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1272`
+- **tracksMutation** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:820`
+- **type** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:811`
+- **wait** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:913`
+- **controller** (property) in `wait` — `ref_projects/pi-web/lib/rpc-manager.ts:913`
+- **done** (property) in `wait` — `ref_projects/pi-web/lib/rpc-manager.ts:913`
+- **waited.then() callback** (function) in `done` — `ref_projects/pi-web/lib/rpc-manager.ts:913`
+- **wait** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:980`
+- **waited** (const) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:904`
+- **catch() callback** (function) in `waited` — `ref_projects/pi-web/lib/rpc-manager.ts:905`
+- **then() callback** (function) in `waited` — `ref_projects/pi-web/lib/rpc-manager.ts:908`
+- **wait** (property) in `waited` — `ref_projects/pi-web/lib/rpc-manager.ts:904`
+- **withFinalIdleReset() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:985`
+- **withFinalIdleReset() callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1173`
+- **withSessionReplacement("clone") callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1137`
+- **cancelled** (property) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1147`
+- **clonedPath** (const) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1140`
+- **newSessionId** (const) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1143`
+- **newSessionId** (property) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1147`
+- **sessionDir** (const) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1138`
+- **sourceManager** (const) in `withSessionReplacement("clone") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1139`
+- **withSessionReplacement("fork") callback** (function) in `send` — `ref_projects/pi-web/lib/rpc-manager.ts:1053`
+- **cancelled** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1058`
+- **cancelled** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1096`
+- **content** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1086`
+- **map() callback** (function) in `content` — `ref_projects/pi-web/lib/rpc-manager.ts:1087`
+- **currentSessionFile** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1056`
+- **encoding** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1089`
+- **entry** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1061`
+- **entryId** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1054`
+- **flag** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1089`
+- **forkedManager** (let) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1066`
+- **forkedPath** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1078`
+- **header** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1084`
+- **newSessionFile** (let) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1065`
+- **newSessionId** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1092`
+- **newSessionId** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1096`
+- **parentSession** (property) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1071`
+- **sessionDir** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1064`
+- **sessionManager** (const) in `withSessionReplacement("fork") callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1055`
+- **sessionFile** (getter) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:364`
+- **sessionId** (getter) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:360`
+- **sessionReplacement** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:316`
+- **sessionShutdownEmitted** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:337`
+- **setActiveToolSelection** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:649`
+- **setExtensionWidgetFactory** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1651`
+- **active** (const) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1690`
+- **clearEmitted** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1695`
+- **component** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1692`
+- **generation** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1694`
+- **key** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1691`
+- **placement** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1693`
+- **rendered** (property) in `active` — `ref_projects/pi-web/lib/rpc-manager.ts:1696`
+- **component** (let) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1664`
+- **error** (var) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1667`
+- **generation** (const) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1657`
+- **hadPrevious** (const) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1656`
+- **render** (property) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1678`
+- **tui** (const) in `setExtensionWidgetFactory` — `ref_projects/pi-web/lib/rpc-manager.ts:1659`
+- **createHeadlessCustomUiTui() callback** (function) in `tui` — `ref_projects/pi-web/lib/rpc-manager.ts:1659`
+- **active** (const) in `createHeadlessCustomUiTui() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:1660`
+- **shouldWaitForExtensions** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:632`
+- **shutdown** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:1429`
+- **<function>** (function) in `shutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:1436`
+- **emit** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1450`
+- **error** (var) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:1440`
+- **shutdownAfterSessionReplacement** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:799`
+- **error** (var) in `shutdownAfterSessionReplacement` — `ref_projects/pi-web/lib/rpc-manager.ts:802`
+- **shutdownPromise** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:336`
+- **start** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:431`
+- **inner.subscribe() callback** (function) in `start` — `ref_projects/pi-web/lib/rpc-manager.ts:432`
+- **streamingMessage** (getter) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:372`
+- **suppressCompletionNotifications** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:327`
+- **syncProjectTrust** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2065`
+- **status** (const) in `syncProjectTrust` — `ref_projects/pi-web/lib/rpc-manager.ts:2066`
+- **trackActiveToolEvent** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:487`
+- **id** (const) in `trackActiveToolEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:495`
+- **nestedPrefix** (const) in `trackActiveToolEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:494`
+- **toolCallId** (const) in `trackActiveToolEvent` — `ref_projects/pi-web/lib/rpc-manager.ts:488`
+- **unsubscribe** (property) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:333`
+- **waitForExtensionsBound** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:606`
+- **err** (var) in `waitForExtensionsBound` — `ref_projects/pi-web/lib/rpc-manager.ts:609`
+- **waitUntilDisposed** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:770`
+- **disposed.then() callback** (function) in `waitUntilDisposed` — `ref_projects/pi-web/lib/rpc-manager.ts:776`
+- **finally() callback** (function) in `waitUntilDisposed` — `ref_projects/pi-web/lib/rpc-manager.ts:776`
+- **timedOut** (const) in `waitUntilDisposed` — `ref_projects/pi-web/lib/rpc-manager.ts:772`
+- **<function>** (function) in `timedOut` — `ref_projects/pi-web/lib/rpc-manager.ts:772`
+- **setTimeout() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:773`
+- **timer** (let) in `waitUntilDisposed` — `ref_projects/pi-web/lib/rpc-manager.ts:771`
+- **waitUntilReady** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:524`
+- **withFinalIdleReset** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:640`
+- **withSessionReplacement** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:779`
+- **withTranscriptNotices** (method) in `AgentSessionWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:460`
+- **event** (property) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:473`
+- **entries** (const) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:466`
+- **error** (var) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:474`
+- **manager** (const) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:464`
+- **message** (const) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:461`
+- **role** (property) in `message` — `ref_projects/pi-web/lib/rpc-manager.ts:461`
+- **notices** (const) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:467`
+- **transcriptNotices** (property) in `withTranscriptNotices` — `ref_projects/pi-web/lib/rpc-manager.ts:473`
+- **AgentSessionWrapperOptions** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:128`
+- **appendClearedSessionToolSelection** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:59`
+- **appendSessionToolSelection** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:60`
+- **cacheSessionPath** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **catalogFirstMessage** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **CHAT_ONLY_RESOURCE_LOADER_OPTIONS** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:49`
+- **chatOnlyExtensionModelError** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:143`
+- **CLOSING_SESSION_WAIT_MARGIN_MS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:2156`
+- **closingRpcSessionWait** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2169`
+- **closing** (const) in `closingRpcSessionWait` — `ref_projects/pi-web/lib/rpc-manager.ts:2170`
+- **entry** (const) in `closingRpcSessionWait` — `ref_projects/pi-web/lib/rpc-manager.ts:2175`
+- **done** (property) in `entry` — `ref_projects/pi-web/lib/rpc-manager.ts:2175`
+- **promise** (property) in `entry` — `ref_projects/pi-web/lib/rpc-manager.ts:2175`
+- **finally() callback** (function) in `closingRpcSessionWait` — `ref_projects/pi-web/lib/rpc-manager.ts:2180`
+- **then() callback** (function) in `closingRpcSessionWait` — `ref_projects/pi-web/lib/rpc-manager.ts:2177`
+- **wait** (let) in `closingRpcSessionWait` — `ref_projects/pi-web/lib/rpc-manager.ts:2173`
+- **closingSessionWaits** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:2157`
+- **done** (property) in `closingSessionWaits` — `ref_projects/pi-web/lib/rpc-manager.ts:2157`
+- **promise** (property) in `closingSessionWaits` — `ref_projects/pi-web/lib/rpc-manager.ts:2157`
+- **CODING_TOOL_NAMES** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:227`
+- **collectLiveAssistantNotices** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:57`
+- **COMMANDS_ALLOWED_DURING_SESSION_REPLACEMENT** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:210`
+- **contextFilesSystemPrompt** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:49`
+- **createAgentSessionFromServices** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **createAgentSessionServices** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **createExactSystemPromptExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:50`
+- **createHeadlessCustomUiTui** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:32`
+- **createPiWebBuiltinExtensions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:51`
+- **createProjectCommandBashExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:14`
+- **createProjectCommandBashOperations** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:15`
+- **createReadOnlyMcpPolicyExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:54`
+- **createSubagentCodemodeExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:51`
+- **createSubagentController** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:46`
+- **createSubagentExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:34`
+- **createSubagentMcpExtensions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:51`
+- **createSubagentMcpPolicyExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:54`
+- **createSubagentSkillsBinding** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:55`
+- **CUSTOM_UI_KEYBINDINGS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:258`
+- **CustomUiComponent** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:83`
+- **DEFAULT_CUSTOM_UI_COLUMNS** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:32`
+- **DEFAULT_SESSION_IDLE_TIMEOUT_MS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:158`
+- **DEFAULT_SESSION_SHUTDOWN_DEADLINE_MS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:181`
+- **destroyRpcSessionsForCwd** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2388`
+- **sessions** (const) in `destroyRpcSessionsForCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2390`
+- **filter() callback** (function) in `sessions` — `ref_projects/pi-web/lib/rpc-manager.ts:2391`
+- **sessions.map() callback** (function) in `destroyRpcSessionsForCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2393`
+- **targetCwd** (const) in `destroyRpcSessionsForCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2389`
+- **EventListener** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:74`
+- **existsSync** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:5`
+- **ExtensionCommandContextActionsLike** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:119`
+- **ExtensionUiContextLike** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:23`
+- **ExtensionUiRequest** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:25`
+- **ExtensionUiRequestBody** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:113`
+- **ExtensionUiResponse** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:26`
+- **ExtensionWidgetComponent** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:90`
+- **ExtensionWidgetFactory** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:95`
+- **ExtensionWidgetItem** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:27`
+- **findDeferredModel** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:11`
+- **findDeferredStartupModel** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:11`
+- **getAgentDir** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **getAwaitingInputRpcSessionIds** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2410`
+- **ids** (const) in `getAwaitingInputRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2411`
+- **session** (const) in `getAwaitingInputRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2412`
+- **sessionId** (const) in `getAwaitingInputRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2412`
+- **getCompletionNotificationSuppressedRpcSessionIds** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2418`
+- **ids** (const) in `getCompletionNotificationSuppressedRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2419`
+- **session** (const) in `getCompletionNotificationSuppressedRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2420`
+- **sessionId** (const) in `getCompletionNotificationSuppressedRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2420`
+- **getLatestModelChange** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **getLocks** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2151`
+- **getProjectTrustStatus** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:19`
+- **getRegistry** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2081`
+- **destroy** (const) in `getRegistry` — `ref_projects/pi-web/lib/rpc-manager.ts:2084`
+- **globalThis.__piSessions.forEach() callback** (function) in `destroy` — `ref_projects/pi-web/lib/rpc-manager.ts:2084`
+- **shutdown** (const) in `getRegistry` — `ref_projects/pi-web/lib/rpc-manager.ts:2085`
+- **sessions** (const) in `shutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:2086`
+- **sessions.map() callback** (function) in `shutdown` — `ref_projects/pi-web/lib/rpc-manager.ts:2087`
+- **getRpcSession** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2212`
+- **getRpcSessionInfos** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2324`
+- **<unknown>** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2364`
+- **activityMs** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2351`
+- **created** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2345`
+- **created** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2360`
+- **cwd** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2358`
+- **entries** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2332`
+- **timestamp** (property) in `entries` — `ref_projects/pi-web/lib/rpc-manager.ts:2333`
+- **type** (property) in `entries` — `ref_projects/pi-web/lib/rpc-manager.ts:2333`
+- **firstMessage** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2363`
+- **firstUserMessage** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2336`
+- **messages.find() callback** (function) in `firstUserMessage` — `ref_projects/pi-web/lib/rpc-manager.ts:2336`
+- **header** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2331`
+- **headerTimestamp** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2348`
+- **id** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2357`
+- **lastActivityMs** (let) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2349`
+- **manager** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2329`
+- **message** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2350`
+- **messageCount** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2362`
+- **messages** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2335`
+- **entries.filter() callback** (function) in `messages` — `ref_projects/pi-web/lib/rpc-manager.ts:2335`
+- **modified** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2361`
+- **name** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2359`
+- **path** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2356`
+- **persisted** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2338`
+- **session** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2326`
+- **sessionFile** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2337`
+- **sessions** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2325`
+- **subagent** (const) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2339`
+- **transient** (property) in `getRpcSessionInfos` — `ref_projects/pi-web/lib/rpc-manager.ts:2374`
+- **getRunningRpcSessionIds** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2397`
+- **ids** (const) in `getRunningRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2398`
+- **session** (const) in `getRunningRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2399`
+- **sessionId** (const) in `getRunningRpcSessionIds` — `ref_projects/pi-web/lib/rpc-manager.ts:2399`
+- **getStartingSessionCwds** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2196`
+- **getSubagentRun** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2139`
+- **__piSessions** (var) — `ref_projects/pi-web/lib/rpc-manager.ts:2076`
+- **__piStartingSessionCwds** (var) — `ref_projects/pi-web/lib/rpc-manager.ts:2078`
+- **__piStartLocks** (var) — `ref_projects/pi-web/lib/rpc-manager.ts:2077`
+- **hasActiveSessionLivenessProvider** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:21`
+- **hasBusyRpcSessionForCwd** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2380`
+- **some() callback** (function) in `hasBusyRpcSessionForCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2384`
+- **targetCwd** (const) in `hasBusyRpcSessionForCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2381`
+- **hasSubagentResourceSnapshot** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:39`
+- **HeadlessCustomUiTui** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:32`
+- **IDLE_RESET_EVENT_TYPES** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:151`
+- **initTheme** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **invalidateModelRuntimeWithExtensions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:9`
+- **invalidateModelsCache** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:8`
+- **invalidateSessionListCache** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **isBlockingExtensionUiRequest** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:12`
+- **isBuiltInSubagentsEnabled** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:47`
+- **isNestedToolExecutionEvent** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:56`
+- **listSubagentProfiles** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:38`
+- **MCP_WAIT_STOPPED_MESSAGE** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:149`
+- **McpCommandCandidate** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:53`
+- **McpHost** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:52`
+- **mcpPromptPreparation** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:53`
+- **ModelRuntime** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **normalizeRpcCwd** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2187`
+- **resolvedCwd** (const) in `normalizeRpcCwd` — `ref_projects/pi-web/lib/rpc-manager.ts:2188`
+- **notifySessionComplete** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:20`
+- **PendingUiResponse** (type) — `ref_projects/pi-web/lib/rpc-manager.ts:78`
+- **PLAIN_TEXT_THEME** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:257`
+- **PlainTextTheme** (class) — `ref_projects/pi-web/lib/rpc-manager.ts:233`
+- **constructor** (function Object() { [native code] }) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:234`
+- **muted** (property) in `constructor` — `ref_projects/pi-web/lib/rpc-manager.ts:236`
+- **searchMatchText** (property) in `constructor` — `ref_projects/pi-web/lib/rpc-manager.ts:236`
+- **selectedBg** (property) in `constructor` — `ref_projects/pi-web/lib/rpc-manager.ts:237`
+- **text** (property) in `constructor` — `ref_projects/pi-web/lib/rpc-manager.ts:236`
+- **thinkingXhigh** (property) in `constructor` — `ref_projects/pi-web/lib/rpc-manager.ts:236`
+- **bg** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:243`
+- **bold** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:244`
+- **fg** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:242`
+- **getBashModeBorderColor** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:254`
+- **<function>** (function) in `getBashModeBorderColor` — `ref_projects/pi-web/lib/rpc-manager.ts:254`
+- **getBgAnsi** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:250`
+- **getFgAnsi** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:249`
+- **getThinkingBorderColor** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:251`
+- **<function>** (function) in `getThinkingBorderColor` — `ref_projects/pi-web/lib/rpc-manager.ts:252`
+- **inverse** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:247`
+- **italic** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:245`
+- **strikethrough** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:248`
+- **underline** (method) in `PlainTextTheme` — `ref_projects/pi-web/lib/rpc-manager.ts:246`
+- **preferPiWebSubagentExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:35`
+- **preferUserBashExtension** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:16`
+- **projectTrustReloadOptions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:19`
+- **randomUUID** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:4`
+- **readLatestSessionEntryId** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **readSessionToolSelection** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:61`
+- **readShowCacheMissNotices** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:57`
+- **readSubagentRun** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:40`
+- **readSubagentSessionResources** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:41`
+- **realpathSync** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:5`
+- **registerRpcWrapper** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2098`
+- **previous** (const) in `registerRpcWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2109`
+- **previous.onDestroy() callback** (function) in `registerRpcWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2111`
+- **registry** (const) in `registerRpcWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2099`
+- **sessionId** (const) in `registerRpcWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2100`
+- **wrapper.onDestroy() callback** (function) in `registerRpcWrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2105`
+- **rememberProviderModels** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:11`
+- **resolve** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:6`
+- **resolveActiveToolNames** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:273`
+- **carriedToolNames** (const) in `resolveActiveToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:286`
+- **carry.filter() callback** (function) in `carriedToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:286`
+- **tool** (const) in `carry.filter() callback` — `ref_projects/pi-web/lib/rpc-manager.ts:287`
+- **codingToolNames** (const) in `resolveActiveToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:280`
+- **registered** (const) in `resolveActiveToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:281`
+- **map() callback** (function) in `registered` — `ref_projects/pi-web/lib/rpc-manager.ts:281`
+- **selectedToolNames** (const) in `resolveActiveToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:282`
+- **requested.filter() callback** (function) in `selectedToolNames` — `ref_projects/pi-web/lib/rpc-manager.ts:283`
+- **resolveSessionIdleTimeoutMs** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:168`
+- **parsed** (const) in `resolveSessionIdleTimeoutMs` — `ref_projects/pi-web/lib/rpc-manager.ts:172`
+- **resolveSessionPath** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:18`
+- **resolveSessionShutdownDeadlineMs** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:192`
+- **parsed** (const) in `resolveSessionShutdownDeadlineMs` — `ref_projects/pi-web/lib/rpc-manager.ts:196`
+- **resolveShellTools** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:48`
+- **resolveVisibleModels** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:10`
+- **RpcSessionStartOptions** (interface) — `ref_projects/pi-web/lib/rpc-manager.ts:220`
+- **allowInitialModelFallback** (property) in `RpcSessionStartOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:223`
+- **initialModel** (property) in `RpcSessionStartOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:222`
+- **thinkingLevel** (property) in `RpcSessionStartOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:224`
+- **toolNames** (property) in `RpcSessionStartOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:221`
+- **runtimeMessageActivityMs** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2312`
+- **timestamp** (const) in `runtimeMessageActivityMs` — `ref_projects/pi-web/lib/rpc-manager.ts:2315`
+- **runtimeMessageText** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2302`
+- **content** (const) in `runtimeMessageText` — `ref_projects/pi-web/lib/rpc-manager.ts:2304`
+- **content.map() callback** (function) in `runtimeMessageText` — `ref_projects/pi-web/lib/rpc-manager.ts:2307`
+- **SDK_DEFAULT_THINKING_LEVEL** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:230`
+- **selectInitialModelScope** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:10`
+- **SESSION_IDLE_TIMEOUT_MS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:179`
+- **SESSION_REPLACEMENT_COMMAND_TYPES** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:205`
+- **SESSION_SHUTDOWN_DEADLINE_MS** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:203`
+- **SESSION_TOOL_NAMES** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:263`
+- **SessionEntry** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:28`
+- **SessionInfo** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:29`
+- **SessionManager** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **SessionMessageEntry** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:30`
+- **setRpcSessionTools** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2228`
+- **crossesChatOnlyBoundary** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2266`
+- **currentThinkingLevel** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2283`
+- **existing** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2236`
+- **hasCurrentResourcePolicy** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2264`
+- **manager** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2248`
+- **model** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2282`
+- **pending** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2243`
+- **pending.catch() callback** (function) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2245`
+- **persistedFile** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2278`
+- **recreated** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2256`
+- **recreated** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2275`
+- **recreated** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2288`
+- **recreated** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2299`
+- **session** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2256`
+- **session** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2275`
+- **session** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2288`
+- **session** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2299`
+- **sessionCwd** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2281`
+- **sessionId** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2256`
+- **sessionId** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2288`
+- **sessionId** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2299`
+- **sessionId** (property) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2275`
+- **started** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2255`
+- **started** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2287`
+- **started** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2291`
+- **<unknown>** (property) in `started` — `ref_projects/pi-web/lib/rpc-manager.ts:2292`
+- **<unknown>** (property) in `started` — `ref_projects/pi-web/lib/rpc-manager.ts:2293`
+- **<unknown>** (property) in `started` — `ref_projects/pi-web/lib/rpc-manager.ts:2295`
+- **allowInitialModelFallback** (property) in `started` — `ref_projects/pi-web/lib/rpc-manager.ts:2294`
+- **toolNames** (const) in `setRpcSessionTools` — `ref_projects/pi-web/lib/rpc-manager.ts:2233`
+- **SetRpcSessionToolsResult** (interface) — `ref_projects/pi-web/lib/rpc-manager.ts:2216`
+- **recreated** (property) in `SetRpcSessionToolsResult` — `ref_projects/pi-web/lib/rpc-manager.ts:2219`
+- **session** (property) in `SetRpcSessionToolsResult` — `ref_projects/pi-web/lib/rpc-manager.ts:2217`
+- **sessionId** (property) in `SetRpcSessionToolsResult` — `ref_projects/pi-web/lib/rpc-manager.ts:2218`
+- **SettingsManager** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **SlashCommandInfo** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:22`
+- **startRpcSession** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2435`
+- **allowInitialModelFallback** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2441`
+- **chatOnly** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2491`
+- **closingWait** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2454`
+- **existing** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2448`
+- **finishStartingSession** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2492`
+- **hasPersistedSubagentSnapshot** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2474`
+- **inflight** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2451`
+- **initialModel** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2441`
+- **locks** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2446`
+- **persistedToolNames** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2481`
+- **realSessionId** (property) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2449`
+- **registry** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2445`
+- **requestedToolNames** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2442`
+- **selectedToolNames** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2484`
+- **session** (property) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2449`
+- **sessionCwd** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2472`
+- **sessionEntries** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2473`
+- **sessionManager** (let) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2465`
+- **starting** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2493`
+- **<function>** (function) in `starting` — `ref_projects/pi-web/lib/rpc-manager.ts:2493`
+- **agentDir** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2496`
+- **branch** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2630`
+- **builtins** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2533`
+- **agentDir** (property) in `builtins` — `ref_projects/pi-web/lib/rpc-manager.ts:2535`
+- **catch() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2746`
+- **chatOnlyExtensionModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2683`
+- **defaultModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2627`
+- **modelId** (property) in `defaultModel` — `ref_projects/pi-web/lib/rpc-manager.ts:2628`
+- **provider** (property) in `defaultModel` — `ref_projects/pi-web/lib/rpc-manager.ts:2628`
+- **defaultModelId** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2626`
+- **defaultProvider** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2625`
+- **deferredInitialModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2612`
+- **deferredModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2660`
+- **deferredStartup** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2655`
+- **defaultModel** (property) in `deferredStartup` — `ref_projects/pi-web/lib/rpc-manager.ts:2658`
+- **requestedModel** (property) in `deferredStartup` — `ref_projects/pi-web/lib/rpc-manager.ts:2657`
+- **modelId** (property) in `requestedModel` — `ref_projects/pi-web/lib/rpc-manager.ts:2657`
+- **provider** (property) in `requestedModel` — `ref_projects/pi-web/lib/rpc-manager.ts:2657`
+- **deferredThinkingLevel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2670`
+- **branch.findLast() callback** (function) in `deferredThinkingLevel` — `ref_projects/pi-web/lib/rpc-manager.ts:2673`
+- **effectiveInitialModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2619`
+- **scope.visible.some() callback** (function) in `effectiveInitialModel` — `ref_projects/pi-web/lib/rpc-manager.ts:2621`
+- **enabledModels** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2608`
+- **error** (var) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2739`
+- **exactSystemPrompt** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2711`
+- **<function>** (function) in `exactSystemPrompt` — `ref_projects/pi-web/lib/rpc-manager.ts:2714`
+- **exactSystemPromptExtension** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2530`
+- **createExactSystemPromptExtension() callback** (function) in `exactSystemPromptExtension` — `ref_projects/pi-web/lib/rpc-manager.ts:2530`
+- **exactSystemPromptRef** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2529`
+- **extensions.some() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2605`
+- **hasExistingMessages** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2632`
+- **branch.some() callback** (function) in `hasExistingMessages` — `ref_projects/pi-web/lib/rpc-manager.ts:2632`
+- **initial** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2639`
+- **<unknown>** (property) in `initial` — `ref_projects/pi-web/lib/rpc-manager.ts:2640`
+- **<unknown>** (property) in `initial` — `ref_projects/pi-web/lib/rpc-manager.ts:2641`
+- **<unknown>** (property) in `initial` — `ref_projects/pi-web/lib/rpc-manager.ts:2642`
+- **initialToolNames** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2704`
+- **inner** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2688`
+- **level** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2738`
+- **mcpHost** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2717`
+- **modelId** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2737`
+- **provider** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2737`
+- **realSessionId** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2730`
+- **realSessionId** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2749`
+- **restoredModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2636`
+- **savedModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2633`
+- **scope** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2609`
+- **services** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2564`
+- **<unknown>** (property) in `services` — `ref_projects/pi-web/lib/rpc-manager.ts:2602`
+- **agentDir** (property) in `services` — `ref_projects/pi-web/lib/rpc-manager.ts:2566`
+- **cwd** (property) in `services` — `ref_projects/pi-web/lib/rpc-manager.ts:2565`
+- **resourceLoaderOptions** (property) in `services` — `ref_projects/pi-web/lib/rpc-manager.ts:2568`
+- **<unknown>** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2570`
+- **<unknown>** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2571`
+- **<unknown>** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2572`
+- **<unknown>** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2576`
+- **CHAT_ONLY_RESOURCE_LOADER_OPTIONS** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2585`
+- **appendSystemPrompt** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2582`
+- **extensionFactories** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2585`
+- **extensionFactories** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2587`
+- **createSubagentExtension() callback** (function) in `extensionFactories` — `ref_projects/pi-web/lib/rpc-manager.ts:2596`
+- **cwd** (property) in `extensionFactories` — `ref_projects/pi-web/lib/rpc-manager.ts:2591`
+- **settings** (property) in `extensionFactories` — `ref_projects/pi-web/lib/rpc-manager.ts:2592`
+- **extensionsOverride** (method) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2600`
+- **noContextFiles** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2575`
+- **noPromptTemplates** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2573`
+- **noThemes** (property) in `resourceLoaderOptions` — `ref_projects/pi-web/lib/rpc-manager.ts:2574`
+- **settingsManager** (property) in `services` — `ref_projects/pi-web/lib/rpc-manager.ts:2567`
+- **session** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2749`
+- **settingsManager** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2524`
+- **skillsBinding** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2551`
+- **exactSystemPrompt** (property) in `skillsBinding` — `ref_projects/pi-web/lib/rpc-manager.ts:2554`
+- **loadSkills** (property) in `skillsBinding` — `ref_projects/pi-web/lib/rpc-manager.ts:2552`
+- **skills** (property) in `skillsBinding` — `ref_projects/pi-web/lib/rpc-manager.ts:2553`
+- **skillsBinding.setActiveToolsGetter() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2710`
+- **startsOnDefault** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2649`
+- **enabledModels.some() callback** (function) in `startsOnDefault` — `ref_projects/pi-web/lib/rpc-manager.ts:2651`
+- **startupModel** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2644`
+- **subagentCodemode** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2536`
+- **agentDir** (property) in `subagentCodemode` — `ref_projects/pi-web/lib/rpc-manager.ts:2538`
+- **cwd** (property) in `subagentCodemode` — `ref_projects/pi-web/lib/rpc-manager.ts:2539`
+- **projectTrusted** (method) in `subagentCodemode` — `ref_projects/pi-web/lib/rpc-manager.ts:2540`
+- **subagentExtensionFactories** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2557`
+- **createSubagentMcpPolicyExtension() callback** (function) in `subagentExtensionFactories` — `ref_projects/pi-web/lib/rpc-manager.ts:2560`
+- **subagentMcp** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2543`
+- **agentDir** (property) in `subagentMcp` — `ref_projects/pi-web/lib/rpc-manager.ts:2545`
+- **codemode** (property) in `subagentMcp` — `ref_projects/pi-web/lib/rpc-manager.ts:2548`
+- **cwd** (property) in `subagentMcp` — `ref_projects/pi-web/lib/rpc-manager.ts:2546`
+- **projectTrusted** (method) in `subagentMcp` — `ref_projects/pi-web/lib/rpc-manager.ts:2547`
+- **then() callback** (function) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2745`
+- **toolsOption** (let) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2501`
+- **trustReloadOptions** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2517`
+- **type** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2737`
+- **type** (property) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2738`
+- **wrapper** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2718`
+- **<unknown>** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2727`
+- **<unknown>** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2728`
+- **chatOnly** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2720`
+- **exactSystemPrompt** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2719`
+- **onAgentRunComplete** (method) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2721`
+- **catch() callback** (function) in `onAgentRunComplete` — `ref_projects/pi-web/lib/rpc-manager.ts:2722`
+- **suppressCompletionNotifications** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2726`
+- **finally() callback** (function) in `starting` — `ref_projects/pi-web/lib/rpc-manager.ts:2750`
+- **subagentLoadsResources** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2488`
+- **subagentResources** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2475`
+- **thinkingLevel** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2441`
+- **waiting** (const) in `startRpcSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2457`
+- **closingWait.then() callback** (function) in `waiting` — `ref_projects/pi-web/lib/rpc-manager.ts:2457`
+- **steerSubagent** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2143`
+- **SUBAGENT_CONTROL_TOOL_NAMES** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:44`
+- **SUBAGENT_CONTROLLER** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:2118`
+- **getSession** (method) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2119`
+- **invalidateSessionList** (property) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2135`
+- **isBuiltInSubagentsEnabled** (property) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2136`
+- **registerSession** (method) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2120`
+- **wrapper** (const) in `registerSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2121`
+- **<unknown>** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2122`
+- **<unknown>** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2127`
+- **chatOnly** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2125`
+- **suppressCompletionNotifications** (property) in `wrapper` — `ref_projects/pi-web/lib/rpc-manager.ts:2126`
+- **reopenSession** (method) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2132`
+- **resolveSessionPath** (property) in `SUBAGENT_CONTROLLER` — `ref_projects/pi-web/lib/rpc-manager.ts:2134`
+- **subagentExtensionLoaderOptions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:42`
+- **subagentToolOptions** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:43`
+- **Theme** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:2`
+- **THINKING_LEVEL_NAMES** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:228`
+- **ThinkingLevel** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:1`
+- **ToolInfo** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:23`
+- **trackStartingSession** (function) — `ref_projects/pi-web/lib/rpc-manager.ts:2201`
+- **<function>** (function) in `trackStartingSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2205`
+- **remaining** (const) in `<function>` — `ref_projects/pi-web/lib/rpc-manager.ts:2206`
+- **key** (const) in `trackStartingSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2203`
+- **startingCwds** (const) in `trackStartingSession` — `ref_projects/pi-web/lib/rpc-manager.ts:2202`
+- **TUI_KEYBINDINGS** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:3`
+- **TuiKeybindingsManager** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:3`
+- **UNSAVED_SESSION_FORK_ERROR** (const) — `ref_projects/pi-web/lib/rpc-manager.ts:208`
+- **validateAgentImages** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:7`
+- **validateSessionToolSelection** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:62`
+- **withSessionPrices** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:57`
+- **writeFileSync** (alias) — `ref_projects/pi-web/lib/rpc-manager.ts:5`

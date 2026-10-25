@@ -60,6 +60,7 @@ const KNOWN_CMDS = [
   'record',
   'signoff',
   'unsign',
+  'registry',
   'change',
   'decide',
   'command',
@@ -78,6 +79,7 @@ const FLAGS = {
   record: ['--run', '--root', '--artifact'],
   signoff: ['--run', '--root', '--artifact', '--by', '--saw', '--reauth'],
   unsign: ['--run', '--root', '--artifact'],
+  registry: ['--run', '--root', '--rebaseline', '--reason'],
   change: ['--run', '--root', '--id', '--summary'],
   decide: ['--run', '--root', '--id', '--text', '--close'],
   command: ['--run', '--root', '--cmd', '--exit'],
@@ -458,6 +460,34 @@ if (cmd === 'signoff') {
   state.signoffs[a] = { sha1: sha, by, saw, at: new Date().toISOString() }
   save()
   console.log(`✅ ${a} 已由 ${by} 签字`)
+  process.exit(0)
+}
+
+// ---- registry（全景表重基线） ----
+// C7 要改 `GODS.md` 的状态列（「待开始」→「已完成」），而 `C0:godRegistry` 把
+// 「立项后改动全景表」判成漂移——这是对的（立项时看到的邻居/切片结论可能过期）。
+// 但收尾时改状态是**正常动作**，所以给一个显式入口：必须写理由，并把旧 sha 记进历史。
+// 不给 `--force` 式静默重置，是因为"悄悄把基线挪一下"正是这套流程最想防的事。
+if (cmd === 'registry') {
+  const reason = flag('reason')
+  const regPath = resolve(root, '.evo/migration/GODS.md')
+  if (!existsSync(regPath)) die('缺 .evo/migration/GODS.md')
+  // 布尔开关：flag() 只在“后面跟了值”时返回真，这里要的是“出现过”
+  if (!argv.includes('--rebaseline')) die('只支持 --rebaseline --reason "..."')
+  if (!reason || reason.length < 10) die('--reason 至少 10 字：为什么全景表该重基线')
+  const next = sha1File(regPath)
+  const prev = state.godRegistry?.sha1 ?? null
+  if (prev === next) {
+    console.log('全景表 sha 未变，无需重基线')
+    process.exit(0)
+  }
+  state.godRegistry = {
+    path: '.evo/migration/GODS.md',
+    sha1: next,
+    history: [...(state.godRegistry?.history ?? []), { sha1: prev, at: new Date().toISOString(), reason }],
+  }
+  save()
+  console.log(`✅ 全景表已重基线（${prev?.slice(0, 8) ?? '无'} → ${next.slice(0, 8)}）：${reason}`)
   process.exit(0)
 }
 

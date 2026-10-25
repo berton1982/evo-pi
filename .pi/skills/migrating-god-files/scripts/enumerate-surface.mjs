@@ -179,11 +179,15 @@ for (const e of entries) {
   const win = lines.slice(e.line - 1, e.line + 8).join('\n')
   const m = win.match(/method\s*:\s*['"](\w+)['"]/)
   e.method = (m ? m[1] : 'GET').toUpperCase()
-  e.path =
+  // 模板插值去掉后会留下空段：`/api/sessions/${id}/state` → `/api/sessions//state`。
+  // 归一成 `[id]`，否则契约里写的 `[id]` 永远对不上（实测 3 条假"契约缺"）。
+  e.path = (
     e.text
-      .replace(/\$\{[^}]*\}/g, '')
+      .replace(/\$\{[^}]*\}/g, '/[id]')
       .split('?')[0]
-      .replace(/\/+$/, '') || '/'
+      .replace(/\/+$/, '')
+      .replace(/\/{2,}/g, '/') || '/'
+  )
   e.text = `${e.method} ${e.path}`
 }
 

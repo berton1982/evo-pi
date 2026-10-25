@@ -3,7 +3,7 @@
   "skill": "migrating-god-files",
   "skillVersion": 3,
   "createdAt": "2026-10-22T03:08:00.242Z",
-  "updatedAt": "2026-10-22T03:30:24.724Z",
+  "updatedAt": "2026-10-25T04:06:13.410Z",
   "scope": "capability",
   "rLevel": "R1",
   "programRun": ".evo/migration/20261022-mig",
@@ -59,6 +59,11 @@
       "at": "2026-10-22T03:30:24.724Z",
       "event": "pause",
       "note": "C4 设计产物已收（9 职责/3 端口/27 state/5 store/3 组件/3 hook/8 协议/3 模式/4 原则/3 图，D2–D16 全绿，interfaces.ts 过 tsc --strict）；C5 真实现未开工"
+    },
+    {
+      "at": "2026-10-25T04:06:13.410Z",
+      "event": "pause",
+      "note": "早期试点（SkillsConfig 1089 行），只跑到 C5 暂停；技能后续多轮改造已使它不再代表当前流程，保留作历史"
     }
   ],
   "paused": true,

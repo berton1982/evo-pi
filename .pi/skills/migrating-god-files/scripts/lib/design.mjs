@@ -10,8 +10,28 @@ import { join, resolve } from 'node:path'
 import { columnOf, parseTables, readText, stripCell } from './tables.mjs'
 
 // 每个 R 级需要跑的设计门。理由：R1 是独立设置页，写时序图属于浪费。
+/** 能力形态：默认 UI；`kind:'infrastructure'` 表示"没有界面"（C-A 这类运行时能力）。
+ *  这不是给门开后门——它换的是**设计视图**：UI 能力看组件树/原型，基础设施看模块图/端口时序。
+ */
+/** god 文件都住在 ref_projects/<repo>/ 下，而设计文档习惯写仓库内相对路径。
+ *  统一在这里兜一次，否则 D8/D14/D16 会把每一条真实证据都判成"文件不存在"。
+ */
+function findFile(root, rel) {
+  const direct = resolve(root, rel)
+  if (existsSync(direct)) return direct
+  const dir = resolve(root, 'ref_projects')
+  if (!existsSync(dir)) return null
+  for (const d of readdirSync(dir)) {
+    const candidate = resolve(dir, d, rel)
+    if (existsSync(candidate)) return candidate
+  }
+  return null
+}
+
+export const isInfra = (m) => m?.kind === 'infrastructure'
+
 const GATES_BY_LEVEL = {
-  R1: ['D2', 'D3', 'D8', 'D9', 'D11', 'D12', 'D13', 'D14', 'D16', 'D17', 'D18', 'D19'],
+  R1: ['D2', 'D3', 'D8', 'D9', 'D11', 'D12', 'D13', 'D14', 'D16', 'D17', 'D18', 'D19', 'D20',],
   R2: [
     'D1',
     'D2',
@@ -28,6 +48,7 @@ const GATES_BY_LEVEL = {
     'D16',
     'D17',
     'D18',
+    'D20',
   ],
   R3: [
     'D1',
@@ -47,6 +68,7 @@ const GATES_BY_LEVEL = {
     'D16',
     'D17',
     'D18',
+    'D20',
   ],
 }
 
@@ -157,13 +179,17 @@ function d2Surfaces(manifest, surface) {
 
 function d3States(manifest) {
   const el = ids(manifest.elements)
+  const mods = new Set((manifest.modules || []).map((m) => m.id))
   const seen = new Set()
   const problems = []
   for (const s of manifest.states || []) {
     if (!s.key) problems.push('state 缺 key')
     else if (seen.has(s.key)) problems.push(`state「${s.key}」有多个条目（应只有一个 owner）`)
     else seen.add(s.key)
-    if (s.owner && !el.has(s.owner)) problems.push(`state「${s.key}」owner ${s.owner} 不存在`)
+    // 基础设施形态的 owner 可以是模块（M-domain/M-infra…）：那时没有"组件"这一层，
+    // 状态的持有者就是模块本身。之前只认 elements，导致 C-A 的 4 个 state 全被判"owner 不存在"。
+    if (s.owner && !el.has(s.owner) && !mods.has(s.owner))
+      problems.push(`state「${s.key}」owner ${s.owner} 不存在`)
     if (!s.owner) problems.push(`state「${s.key}」没有 owner`)
   }
   if (!(manifest.states || []).length) problems.push('manifest.states 为空')
@@ -290,7 +316,7 @@ function d8Patterns(manifest, behaviors, root) {
       problems.push(`${p.id} 的症状「${s}」既不是 path:line 也不是行为 ID`)
     if (isPath) {
       const [file] = s.split(':')
-      if (!existsSync(resolve(root, file))) problems.push(`${p.id} 的症状指向不存在的文件 ${file}`)
+      if (!findFile(root, file)) problems.push(`${p.id} 的症状指向不存在的文件 ${file}`)
     }
     if (!nonEmpty(p.rejected)) problems.push(`${p.id} 没有记录被否方案`)
     if (!p.costIfWrong) problems.push(`${p.id} 没有错判成本`)
@@ -339,7 +365,49 @@ function d10MatchesAD(manifest, rules) {
   }
 }
 
+/** 基础设施能力的"组件树"等价物：模块图。
+ *  要求模块落在已声明层里、依赖不成环、每个元素都说清属于哪个模块——
+ *  没有这三条，"没有界面"会变成"没有结构"。
+ */
+function d11Modules(manifest) {
+  const mods = manifest.modules || []
+  const ids = new Set(mods.map((m) => m.id))
+  const problems = []
+  if (mods.length < 3) problems.push(`manifest.modules 只有 ${mods.length} 个（基础设施能力至少 3 个模块）`)
+  for (const m of mods) {
+    if (!m.id) problems.push('模块缺 id')
+    if (!m.layer) problems.push(`模块 ${m.id} 缺 layer（要说清它在哪一层）`)
+    if (!m.file) problems.push(`模块 ${m.id} 没写落点文件`)
+    for (const d of m.dependsOn || []) if (!ids.has(d)) problems.push(`模块 ${m.id} 依赖了不存在的模块 ${d}`)
+  }
+  // 环检测
+  const seen = new Set()
+  const stack = new Set()
+  const visit = (id) => {
+    if (stack.has(id)) return true
+    if (seen.has(id)) return false
+    seen.add(id)
+    stack.add(id)
+    const m = mods.find((x) => x.id === id)
+    for (const d of m?.dependsOn || []) if (visit(d)) return true
+    stack.delete(id)
+    return false
+  }
+  for (const m of mods) if (!m.id || visit(m.id)) { problems.push(`模块依赖成环：${m.id}`); break }
+  // 元素归属
+  for (const e of manifest.elements || []) {
+    if (e.module && !ids.has(e.module)) problems.push(`元素 ${e.id} 的 module ${e.module} 不存在`)
+    if (!e.module) problems.push(`元素 ${e.id} 没写 module（说不清属于哪个模块）`)
+  }
+  return {
+    id: 'D11',
+    ok: problems.length === 0,
+    detail: problems.join('；') || `${mods.length} 个模块、依赖无环、${(manifest.elements || []).length} 个元素都归属到模块`,
+  }
+}
+
 function d11Components(manifest, _root) {
+  if (isInfra(manifest)) return d11Modules(manifest, _root)
   const comps = manifest.components || []
   if (!comps.length)
     return {
@@ -388,7 +456,25 @@ function d11Components(manifest, _root) {
   }
 }
 
+/** 基础设施没有 hook/store：改问"状态机归谁"——每个 state 的 owner 必须是模块 */
+function d12InfraState(manifest) {
+  const mods = new Set((manifest.modules || []).map((m) => m.id))
+  const states = manifest.states || []
+  const problems = []
+  if (!states.length) problems.push('manifest.states 为空——基础设施的状态机（准入/队列/重连）必须列出来')
+  for (const st of states) {
+    if (!st.owner) problems.push(`state「${st.key}」没有 owner`)
+    else if (!mods.has(st.owner)) problems.push(`state「${st.key}」的 owner ${st.owner} 不是模块`)
+  }
+  return {
+    id: 'D12',
+    ok: problems.length === 0,
+    detail: problems.join('；') || `${states.length} 个状态都归到模块（基础设施形态，不要求 hook/store）`,
+  }
+}
+
 function d12HooksStores(manifest) {
+  if (isInfra(manifest)) return d12InfraState(manifest)
   const hooks = manifest.hooks || []
   const stores = manifest.stores || []
   const problems = []
@@ -473,7 +559,8 @@ function d13Diagrams(runDir, manifest) {
   for (const f of files) {
     const text = readFileSync(join(dir, f), 'utf8')
     // 仍带 init 铺底横幅 = 没填；不能因为里面有示例节点就算画过了
-    if (text.slice(0, 400).includes('TODO-init-scaffold')) {
+    // 只认注释语法（正文里"我已经删了横幅"这种说明不算铺底）——与 checks.mjs 同口径
+    if (/<!--\s*TODO-init-scaffold|^\s*\/\/\s*TODO-init-scaffold/m.test(text.slice(0, 400))) {
       problems.push(`${f} 仍是 init 铺底模板（顶部横幅未删）`)
       continue
     }
@@ -517,7 +604,7 @@ const mergePairs = (pairs) => {
   return merged
 }
 
-function d14Sources(manifest, ownershipRanges, godLines) {
+function d14Sources(manifest, ownershipRanges, godLines, root = '.') {
   const els = manifest.elements || []
   const problems = []
   const owned = new Map()
@@ -544,13 +631,17 @@ function d14Sources(manifest, ownershipRanges, godLines) {
       // derivedFrom 允许写一个 id 或数组（模板里两种都见过），不要因为写成字符串就崩栈
       const from = [].concat(e.derivedFrom ?? [])
       if (!from.length) problems.push(`${e.id} 没有源码出处，也没写 derivedFrom`)
-      const unknown = from.filter((x) => !els.some((y) => y.id === x && (y.sources || []).length))
+      // 出处有两种写法：显式 `sources` 或「god + lines」（后者在下面会被自动展开）。
+      // 以前只认 `sources`，于是"用 lines 声明出处"的元素被当成"没有出处"，派生元素全被判红。
+      const hasProv = (y) =>
+        (y.sources || []).length > 0 || (manifest.god && y.lines && y.lines !== '—')
+      const unknown = from.filter((x) => !els.some((y) => y.id === x && hasProv(y)))
       if (unknown.length)
         problems.push(`${e.id} 的 derivedFrom 指向没有出处的元素：${unknown.join(', ')}`)
       continue
     }
     for (const r of refs.filter(Boolean)) {
-      if (manifest.god && r.file !== manifest.god)
+      if (manifest.god && r.file !== manifest.god && !findFile(root, r.file))
         problems.push(`${e.id} 的出处不是本 run 的 god（${r.file}）`)
       if (godLines && r.b > godLines)
         problems.push(`${e.id} 的出处超出文件行数（L${r.b} > ${godLines}）`)
@@ -612,6 +703,27 @@ function d17Uml(runDir, manifest) {
     }
   if (dynTxt === null)
     return { id: 'D17', ok: false, detail: '缺 design/dynamics.md（动态视图：序列图 + 状态流图）' }
+  // 基础设施形态：没有"组件"，但有模块、端口和状态机。
+  // 判据换成：模块都在静态图里且标了型、每个端口都在某张序列图里当参与者、至少一张状态图。
+  if (isInfra(manifest)) {
+    const mods = manifest.modules || []
+    const ports = (manifest.elements || []).filter((e) => e.kind === 'port' || /^P-/.test(e.id))
+    const probs = []
+    for (const m of mods) {
+      const re = new RegExp(`(?:class\\s+)?${m.id.replace(/[-/]/g, '\\-')}\\b`)
+      if (!re.test(staticTxt)) probs.push(`模块 ${m.id} 没出现在 components.md 的图里`)
+    }
+    if (!/(classDiagram|flowchart|graph)/.test(staticTxt)) probs.push('components.md 没有 mermaid 类图/流程图')
+    if (!/-->|\-\->/.test(staticTxt)) probs.push('components.md 没有依赖边（-->）')
+    if (!/«|<<|:::/.test(staticTxt)) probs.push('components.md 没有任何型标注（«module»/«port»/«adapter»）')
+    for (const p2 of ports) if (!dynTxt.includes(p2.id)) probs.push(`端口 ${p2.id} 没出现在任何序列图里`)
+    if (!/stateDiagram/.test(dynTxt)) probs.push('dynamics.md 没有状态图（stateDiagram）')
+    return {
+      id: 'D17',
+      ok: probs.length === 0,
+      detail: probs.join('；') || `${mods.length} 个模块上图、${ports.length} 个端口在时序里、状态机有图（基础设施形态）`,
+    }
+  }
 
   const blocks = [...staticTxt.matchAll(/```mermaid\n([\s\S]*?)```/g)].map((m) => m[1])
   const uml = blocks.filter((b) => /^\s*(classDiagram|flowchart|graph)\b/m.test(b))
@@ -685,6 +797,20 @@ function d17Uml(runDir, manifest) {
 
 // 前端最佳实践必须"落地"，不能只写在原则里。每条实践要能指到一个元素，并说清做到什么程度。
 // 判据刻意做成闭集 + 机制词：写成"注意渲染性能"这种话，等于没写——实施时没人知道该加 memo 还是该拆组件。
+// 基础设施形态（无界面的运行时/服务）的实践闭集：与 UI 那一组不是同一套常识。
+// 起源：C-A 的 D18 报「错误语义封闭 不在最佳实践闭集里」——那 12 类是为组件写的，
+// 套到 7,669 行的运行时上只能逼人写"容器展示分离"这种假话。
+const INFRA_PRACTICES = [
+  ['错误语义封闭', /错误|error|语义/i, /(闭集|封闭|Outcome|码|code)/i],
+  ['幂等', /幂等|idempot/i, /(键|key|请求|request|重放)/i],
+  ['取消与收尾', /取消|cancel|abort/i, /(收尾|事件|event|确认|ack)/i],
+  ['背压与上限', /背压|上限|pressure|limit/i, /(队列|queue|条|上限|丢)/i],
+  ['竞态与过期', /竞态|过期|race|stale/i, /(requestId|版本|序号|generation)/i],
+  ['资源释放', /释放|release|泄漏/i, /(退订|close|abort|unsubscribe)/i],
+  ['可观测', /可观测|观测|observ|日志|计数/i, /(计数|日志|原因|metric)/i],
+  ['重试与退避', /重试|retry|退避/i, /(次|5xx|指数|backoff|不重试)/i],
+]
+
 const PRACTICES = [
   ['容器展示分离', /容器|展示|presenter/i, null],
   ['状态就近', /状态|state|就近/i, null],
@@ -723,6 +849,8 @@ function d18Practices(runDir, manifest) {
       ok: false,
       detail: 'components.md 缺「前端最佳实践」表（列：实践 / 落在哪 / 做到什么程度）',
     }
+  const infra = isInfra(manifest)
+  const set = infra ? INFRA_PRACTICES : PRACTICES
   const pCol = columnOf(t.header, '实践')
   const whereCol =
     columnOf(t.header, '落在哪') >= 0 ? columnOf(t.header, '落在哪') : columnOf(t.header, '落点')
@@ -737,18 +865,26 @@ function d18Practices(runDir, manifest) {
     const practice = stripCell(r[pCol])
     const where = stripCell(r[whereCol])
     const how = stripCell(r[howCol])
-    const def = PRACTICES.find(([, re]) => re.test(practice))
+    const def = set.find(([, re]) => re.test(practice))
     if (!def) {
       problems.push(
-        `「${practice || '(空)'}」不在最佳实践闭集里（容器展示分离/状态就近/派生状态/渲染优化/列表key/受控一致/可访问性/错误边界/三态/代码分割/并发竞态/缓存与失效）`,
+        `「${practice || '(空)'}」不在最佳实践闭集里（${set.map((x) => x[0]).join('/')}）`,
       )
       continue
     }
     hit.add(def[0])
     // 早先用 /[DCPHST]-[A-Z]*-?\d+/ 会把 ST-01 误切成 T-01（S 后面不是 -），导致 store 落点永远判“没指到已声明元素”
-    const ids = where.match(/[A-Z]{1,3}-[A-Z0-9]*-?\d+/g) || []
-    const known = ids.filter((i) => declared.has(i))
-    if (!known.length) problems.push(`「${def[0]}」的落点没指到已声明元素（写 ${where || '(空)'}）`)
+    if (infra) {
+      // 基础设施的"落点"是文件或模块，不一定挂到某个元素上
+      const isFile = /[\w./-]+\.(ts|tsx)$/.test(where)
+      const isModule = declared.has(where) || /^M-/.test(where)
+      if (!isFile && !isModule)
+        problems.push(`「${def[0]}」的落点要写文件路径或模块 id（写 ${where || '(空)'}）`)
+    } else {
+      const ids = where.match(/[A-Z]{1,3}-[A-Z0-9]*-?\d+/g) || []
+      const known = ids.filter((i) => declared.has(i))
+      if (!known.length) problems.push(`「${def[0]}」的落点没指到已声明元素（写 ${where || '(空)'}）`)
+    }
     if (how.length < 10) problems.push(`「${def[0]}」没说清做到什么程度（${how.length} 字 < 10）`)
     if (def[2] && !def[2].test(how)) problems.push(`「${def[0]}」要写具体机制（${how || '(空)'}）`)
   }
@@ -783,8 +919,10 @@ function d16ProseAnchors(runDir, root, programDir) {
   for (const f of files) {
     const text = readFileSync(f, 'utf8')
     // 只认"看起来是真路径"的锚点；`<run>/x.md` 这类占位不算
-    for (const m of text.matchAll(/([\w@./-]+\.(?:tsx?|mjs|js|json|md|css)):(\d+)(?:-(\d+))?/g)) {
-      const rel = m[1]
+    // 字符类必须含 `[` `]`：Next 的动态路由目录写作 `app/api/agent/[id]/route.ts`，
+    // 少了方括号会从 `]` 之后开始匹配，得到 `/route.ts` 这种片段 → 假报「不存在」。
+    for (const m of text.matchAll(/([\w@./[\]-]+\.(?:tsx?|mjs|js|json|md|css)):(\d+)(?:-(\d+))?/g)) {
+      const rel = m[1].replace(/^\/+/, '')
       if (!/\//.test(rel)) continue
       // 能力 run 的散文会引用 program run 里的契约（`contracts/wire.md:80`）。
       // 只按仓库根解析会把它们全判成"不存在"——按 run → program run → 仓库根依次找。
@@ -792,6 +930,8 @@ function d16ProseAnchors(runDir, root, programDir) {
         resolve(runDir, rel),
         programDir ? resolve(programDir, rel) : null,
         resolve(root, rel),
+        // god 源码住在 ref_projects/<repo>/ 下；不兜这一层，散文里每条真实证据都会被判"不存在"
+        findFile(root, rel),
       ].filter(Boolean)
       const abs = candidates.find((p) => existsSync(p))
       if (!abs) {
@@ -861,6 +1001,45 @@ function d19Duties(runDir, manifest) {
   }
 }
 
+/**
+ * D20：元素 id 必须唯一。
+ *
+ * 起源：C-A 的 manifest 里 `D-B-01…05` 同时被"行段元素"和"用例元素"用了——
+ * 两套 id 空间撞在一起，于是 state owner / derivedFrom / plans 的指向全成了掷硬币：
+ * 同一个 `D-B-01` 在 D1 里是行段、在 D4 里是用例。门不报，因为我从没检查过唯一性。
+ */
+function d20UniqueIds(manifest) {
+  const kinds = new Map()
+  const dup = []
+  // `ports` 是元素的**注解**（补 rationale / derivedFrom / 方法签名），不是第二份元素表：
+  // 同一个 id 在 `elements` 与 `ports` 各出现一次是模板本来的形状（C-C 的 P-C-01…04 就是这样），
+  // 不算冲突。真正要抓的是"同一张表里出现两次"和"两张互斥的表共用一个 id"
+  // （components/hooks/stores/modules 才是互斥表）。
+  const MUTEX = new Set(['components', 'hooks', 'stores', 'modules'])
+  const annotationOf = new Map()
+  for (const it of manifest.ports || []) {
+    if (it?.id) annotationOf.set(it.id, 'elements')
+  }
+  for (const sec of ['elements', 'components', 'hooks', 'stores', 'ports', 'modules']) {
+    for (const it of manifest[sec] || []) {
+      const id = it?.id
+      if (!id) continue
+      const prev = kinds.get(id)
+      if (prev && prev.sec === sec) dup.push(`${id}（${sec} 内重复）`)
+      else if (prev && (MUTEX.has(sec) || MUTEX.has(prev.sec)))
+        dup.push(`${id}（${prev.sec} / ${sec}）`)
+      else if (prev && !(sec === 'ports' || annotationOf.get(id) === sec))
+        dup.push(`${id}（${prev.sec} / ${sec}）`)
+      kinds.set(id, { sec, kind: it.kind })
+    }
+  }
+  return {
+    id: 'D20',
+    ok: dup.length === 0,
+    detail: dup.length ? `id 冲突：${dup.slice(0, 4).join('、')}` : `${kinds.size} 个 id 全局唯一`,
+  }
+}
+
 export function runDesignGates({
   runDir,
   manifest,
@@ -890,10 +1069,11 @@ export function runDesignGates({
     D11: () => d11Components(manifest, root),
     D12: () => d12HooksStores(manifest),
     D13: () => d13Diagrams(runDir, manifest),
-    D14: () => d14Sources(manifest, ownershipRanges, godLines),
+    D14: () => d14Sources(manifest, ownershipRanges, godLines, root),
     D16: () => d16ProseAnchors(runDir, root, programDir),
     D17: () => d17Uml(runDir, manifest),
     D18: () => d18Practices(runDir, manifest),
+    D20: () => d20UniqueIds(manifest),
     D19: () => d19Duties(runDir, manifest),
   }
   return want.map((id) => all[id]())

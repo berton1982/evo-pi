@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 3,
+  "skill": "migrating-god-files",
+  "skillVersion": 3,
+  "createdAt": "2026-10-23T14:09:10.596Z",
+  "updatedAt": "2026-10-25T03:53:22.066Z",
+  "scope": "capability",
+  "rLevel": "R3",
+  "programRun": ".evo/migration/20261022-mig",
+  "gods": [
+    {
+      "path": "ref_projects/pi-web/hooks/useAgentSession.ts",
+      "lines": 2805,
+      "sha1": "2356070f51c0cdee1bcc9d49b3e56fa436472b34",
+      "symbols": 1367,
+      "symbolSource": "LSP"
+    },
+    {
+      "path": "ref_projects/pi-web/lib/rpc-manager.ts",
+      "lines": 2757,
+      "sha1": "47f45165b6fdb0777e553783cde87f25742cc17c",
+      "symbols": 1030,
+      "symbolSource": "LSP"
+    },
+    {
+      "path": "ref_projects/pi-web/lib/mcp-host.ts",
+      "lines": 1105,
+      "sha1": "8b85f114aeeda125455fdc2b2e38ad3c8c757bfb",
+      "symbols": 430,
+      "symbolSource": "LSP"
+    },
+    {
+      "path": "ref_projects/pi-web/lib/subagents.ts",
+      "lines": 1002,
+      "sha1": "f81569c2aa9ed28ff76bfc3f99600312c5f2cf98",
+      "symbols": 527,
+      "symbolSource": "LSP"
+    }
+  ],
+  "godRegistry": {
+    "path": ".evo/migration/GODS.md",
+    "sha1": "ec95d366d5c2712af79db5cd2a990758acdfe459",
+    "history": [
+      {
+        "sha1": "dedc3fab5ffafd36acd6824ea4d6c0f6002b3b8a",
+        "at": "2026-10-25T03:51:16.033Z",
+        "reason": "C7 收尾：把 C-A 的四个 god 状态改为已完成"
+      }
+    ]
+  },
+  "surfaceCount": 0,
+  "phase": "C7",
+  "phaseStatus": "in_progress",
+  "phases": {
+    "C0": {
+      "startedAt": "2026-10-23T14:09:10.597Z",
+      "doneAt": "2026-10-24T01:05:26.092Z"
+    },
+    "C1": {
+      "startedAt": "2026-10-24T01:05:26.093Z",
+      "doneAt": "2026-10-24T01:06:04.984Z"
+    },
+    "C2": {
+      "startedAt": "2026-10-24T01:06:04.984Z",
+      "doneAt": "2026-10-24T01:06:25.590Z"
+    },
+    "C3": {
+      "startedAt": "2026-10-24T01:06:25.591Z",
+      "doneAt": "2026-10-24T01:22:38.042Z"
+    },
+    "C4": {
+      "startedAt": "2026-10-24T01:22:38.042Z",
+      "doneAt": "2026-10-25T03:36:33.205Z"
+    },
+    "C5": {
+      "startedAt": "2026-10-25T03:36:33.205Z",
+      "doneAt": "2026-10-25T03:36:33.331Z"
+    },
+    "C6": {
+      "startedAt": "2026-10-25T03:36:33.331Z",
+      "doneAt": "2026-10-25T03:45:34.750Z"
+    },
+    "C7": {
+      "startedAt": "2026-10-25T03:45:34.750Z",
+      "doneAt": null
+    }
+  },
+  "substeps": {},
+  "artifacts": {},
+  "signoffs": {
+    "spec.md": {
+      "sha1": "3df8f2abddd2440be9e61acb94d0afea2c1d8686",
+      "by": "berton",
+      "saw": "能力规格：7 条用户故事、四文件 7,669 行全覆盖、机制 none + 证据、11 项人工决策",
+      "at": "2026-10-24T01:22:10.430Z"
+    },
+    "design/manifest.json": {
+      "sha1": "7dd19094b9b033dcd3d1c6b6ae8cafdac808c52f",
+      "by": "berton",
+      "saw": "C5 补了 12 个元素（含 6 个新文件落点），设计意图未变",
+      "at": "2026-10-25T03:33:51.227Z"
+    },
+    "design/components.md": {
+      "sha1": "0c20a28dbc676e939fea3c52c5fcb19d14b90f3f",
+      "by": "berton",
+      "saw": "C5 补了 12 个元素（含 6 个新文件落点），设计意图未变",
+      "at": "2026-10-25T03:34:09.757Z"
+    },
+    "design/ui.md": {
+      "sha1": "08a9dde347e0b0d198ab25ca7ec7fe86b78be100",
+      "by": "berton",
+      "saw": "C5 补了 12 个元素（含 6 个新文件落点），设计意图未变",
+      "at": "2026-10-25T03:34:32.046Z"
+    },
+    "parity.md": {
+      "sha1": "4398b0a597273e8868522eba33cbd61e42857161",
+      "by": "berton",
+      "saw": "看过 44 条行为对账（分类依据 T-01…T-08 单测）与「保真不适用」说明：运行时能力无界面",
+      "at": "2026-10-25T03:44:52.913Z"
+    }
+  },
+  "decisions": [],
+  "tasks": {},
+  "history": [
+    {
+      "at": "2026-10-25T03:53:22.065Z",
+      "event": "pause",
+      "note": "实现完成、端到端待 H2（/api/agent 未实现，44 条 e2e 为 fixme），L6 人工验收保持 pending"
+    }
+  ],
+  "paused": true,
+  "lastCommand": null,
+  "closed": false,
+  "run": ".evo/migration/20261024-C-A-runtime"
+}

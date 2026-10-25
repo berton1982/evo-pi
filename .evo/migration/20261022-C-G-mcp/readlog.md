@@ -28,3 +28,12 @@
 | 5 | 签到是**轮询**且由服务端持有流程 | `signIns` + `pollRound` + 定时 effect | 改成一次性请求 → 需要登录的服务器永远显示"未授权" |
 | 6 | 添加成功后要"选中 + 立即测一次 + 必要时提示签到 + 把新 trust 交回页面" | `onProjectTrustChanged` 回调注释 | 少做一步，用户加完还得自己找、自己点测 |
 | 7 | 选择项跨刷新持久化（`getLastSettingsSelection("mcp", cwd)`） | `useState(() => …)` 初值 + 写入 effect | 刷新后选中项丢失，用户回到列表顶部 |
+
+## 跨文件（chrome 与共享原语）
+
+| 文件 | 读了什么 | 结论 |
+|---|---|---|
+| `ref_projects/pi-web/components/SettingsPanel.tsx:629` | 设置分区导航与弹窗容器 | MCP 分区的内容由本能力提供，壳不归本能力 |
+| `ref_projects/pi-web/components/SettingsUi.tsx` | 28 个 `Config*` 共享原语、`loadMcpOverview` 等 IO 转导 | 原语归 H1 底盘；HTTP 藏在兄弟模块里，需要 `externalIo` 追 |
+| `ref_projects/pi-web/components/mcp-config-helpers.ts` | `/api/mcp`、`/api/project-trust`、`/api/tools/settings`、`/api/mcp/test` 的封装 | 本能力自身 0 处 `fetch`，契约分母必须沿 import 追 |
+| `ref_projects/pi-web/components/AppShell.tsx:1475` | 设置弹窗从侧栏打开 | 本能力跑在弹窗里，不做路由页 |

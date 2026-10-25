@@ -11,7 +11,7 @@
  */
 
 import { existsSync, readdirSync, statSync } from 'node:fs'
-import { join, relative, basename, sep } from 'node:path'
+import { basename, join, relative, sep } from 'node:path'
 import { globToRegExp } from './placement.mjs'
 
 /** 已知层名：目录 basename 命中即认作某一层 */
@@ -178,7 +178,9 @@ export function checkConventions({
   if (conventions.generatedAt) {
     const age = (Date.now() - Date.parse(conventions.generatedAt)) / 86_400_000
     if (Number.isFinite(age) && age > maxAgeDays)
-      problems.push(`conventions.json 已 ${Math.round(age)} 天未重扫（>${maxAgeDays}），目录可能已经变了`)
+      problems.push(
+        `conventions.json 已 ${Math.round(age)} 天未重扫（>${maxAgeDays}），目录可能已经变了`,
+      )
   }
 
   const factPaths = new Set()
@@ -194,7 +196,8 @@ export function checkConventions({
         const dir = raw.replace(/\/\*\*.*$/, '').replace(/\/\*$/, '')
         const re = /[*]/.test(raw) ? globToRegExp(raw.endsWith('/**') ? raw : `${raw}/**`) : null
         const hit = [...factPaths].some(
-          (p) => p === dir || p.startsWith(`${dir}/`) || (re && (re.test(p) || re.test(`${p}/x.ts`))),
+          (p) =>
+            p === dir || p.startsWith(`${dir}/`) || (re && (re.test(p) || re.test(`${p}/x.ts`))),
         )
         if (!hit)
           problems.push(

@@ -16,15 +16,15 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { checkUiProto } from './lib/capspec.mjs'
-import { checkContractInventory, checkContractAlign, checkSchema } from './lib/contracts.mjs'
+import { checkContractAlign, checkContractInventory, checkSchema } from './lib/contracts.mjs'
+import { runAcceptance, runIntegration, runStubPlan } from './lib/delivery.mjs'
+import { checkEnvDoc } from './lib/envdoc.mjs'
 import { checkExternalIo } from './lib/external.mjs'
 import { checkFidelity } from './lib/fidelity.mjs'
 import { runFrontendArch } from './lib/frontend.mjs'
-import { checkEnvDoc } from './lib/envdoc.mjs'
-import { globToRegExp, layerOf } from './lib/placement.mjs'
-import { runStubPlan, runIntegration, runAcceptance } from './lib/delivery.mjs'
 import { runOwnershipTypes } from './lib/ownership.mjs'
 import { runSymbolParity } from './lib/parity.mjs'
+import { globToRegExp, layerOf } from './lib/placement.mjs'
 import { resolveAnchors } from './lib/specs.mjs'
 
 const sha8 = (p) => createHash('sha1').update(readFileSync(p)).digest('hex').slice(0, 8)
@@ -33,7 +33,10 @@ const refreshParitySha = () => {
   if (!existsSync(pp)) return
   writeFileSync(
     pp,
-    readFileSync(pp, 'utf8').replace(/sha [0-9a-f]{8}/, `sha ${sha8(join(root, states.cap, 'behaviors.md'))}`),
+    readFileSync(pp, 'utf8').replace(
+      /sha [0-9a-f]{8}/,
+      `sha ${sha8(join(root, states.cap, 'behaviors.md'))}`,
+    ),
   )
 }
 const HERE = resolve(import.meta.dirname)
@@ -116,7 +119,9 @@ const adv = (which, target) => {
   ok(`${which} advance → ${target}`)
 }
 // 只取退出码：用于「应被拒绝」的推进断言（不打印成功/失败）
-const advCode = (which) => ({ code: run(STATE, ['advance', '--root', root, '--run', states[which]]).code })
+const advCode = (which) => ({
+  code: run(STATE, ['advance', '--root', root, '--run', states[which]]).code,
+})
 const body = (n, s) => `${s.repeat(Math.ceil(n / s.length))}\n`
 const table = (header, rows) =>
   [
@@ -443,10 +448,30 @@ try {
         generatedAt: new Date().toISOString(),
         totalFiles: 3,
         layers: [
-          { layer: 'domain', files: 1, paths: [{ path: 'packages/core/src/cap-x/domain', files: 1 }], samples: ['packages/core/src/cap-x/domain/x.ts'] },
-          { layer: 'use-cases', files: 2, paths: [{ path: 'packages/core/src/cap-x/use-cases', files: 2 }], samples: ['packages/core/src/cap-x/use-cases/open-session.ts'] },
-          { layer: 'adapters', files: 1, paths: [{ path: 'packages/core/src/cap-x/adapters', files: 1 }], samples: ['packages/core/src/cap-x/adapters/http.ts'] },
-          { layer: 'ui', files: 1, paths: [{ path: 'packages/web/src/cap-x', files: 1 }], samples: ['packages/web/src/cap-x/foo.ts'] },
+          {
+            layer: 'domain',
+            files: 1,
+            paths: [{ path: 'packages/core/src/cap-x/domain', files: 1 }],
+            samples: ['packages/core/src/cap-x/domain/x.ts'],
+          },
+          {
+            layer: 'use-cases',
+            files: 2,
+            paths: [{ path: 'packages/core/src/cap-x/use-cases', files: 2 }],
+            samples: ['packages/core/src/cap-x/use-cases/open-session.ts'],
+          },
+          {
+            layer: 'adapters',
+            files: 1,
+            paths: [{ path: 'packages/core/src/cap-x/adapters', files: 1 }],
+            samples: ['packages/core/src/cap-x/adapters/http.ts'],
+          },
+          {
+            layer: 'ui',
+            files: 1,
+            paths: [{ path: 'packages/web/src/cap-x', files: 1 }],
+            samples: ['packages/web/src/cap-x/foo.ts'],
+          },
         ],
         packages: [{ name: 'core', path: 'packages/core', exists: true }],
       },
@@ -1180,17 +1205,20 @@ try {
     ].join('\n'),
   )
   expect('C3 规格未签字 → 拒绝推进', advCode('cap'), 1)
-    {
-      // 引用谁就得读过谁：spec.md 里点名一个 readlog 没记录的文件 → 红
-      const specPath = join(root, states.cap, 'spec.md')
-      const specGood = readFileSync(specPath, 'utf8')
-      writeFileSync(specPath, `${specGood}\n顶栏入口见 ref_projects/pi-web/components/NotReadYet.tsx:42 的实现。\n`)
-      r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
-      expectContains('RLC 原型引用了没读过的文件 → C3 红', r, '没有阅读记录')
-      writeFileSync(specPath, specGood)
-      r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
-      expectNotContains('RLC 恢复后不再报缺记录', r, '没有阅读记录')
-    }
+  {
+    // 引用谁就得读过谁：spec.md 里点名一个 readlog 没记录的文件 → 红
+    const specPath = join(root, states.cap, 'spec.md')
+    const specGood = readFileSync(specPath, 'utf8')
+    writeFileSync(
+      specPath,
+      `${specGood}\n顶栏入口见 ref_projects/pi-web/components/NotReadYet.tsx:42 的实现。\n`,
+    )
+    r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
+    expectContains('RLC 原型引用了没读过的文件 → C3 红', r, '没有阅读记录')
+    writeFileSync(specPath, specGood)
+    r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C3'])
+    expectNotContains('RLC 恢复后不再报缺记录', r, '没有阅读记录')
+  }
 
   expect(
     'C3 规格由 agent 代签 → 红',
@@ -1204,8 +1232,8 @@ try {
       'spec.md',
       '--by',
       'agent',
-    '--saw',
-    '已按门判据逐条看过',
+      '--saw',
+      '已按门判据逐条看过',
     ]),
     0,
   )
@@ -1218,12 +1246,37 @@ try {
   )
   expect(
     'REAUTH 换人改签在没有原签字人时按新增签字处理',
-    run(STATE, ['signoff', '--root', root, '--run', states.cap, '--artifact', 'spec.md', '--by', 'agent', '--saw', 'x']),
+    run(STATE, [
+      'signoff',
+      '--root',
+      root,
+      '--run',
+      states.cap,
+      '--artifact',
+      'spec.md',
+      '--by',
+      'agent',
+      '--saw',
+      'x',
+    ]),
     0,
   )
   expect(
     'REAUTH 改签换人 → 红（必须先 unsign）',
-    run(STATE, ['signoff', '--reauth', '--root', root, '--run', states.cap, '--artifact', 'spec.md', '--by', 'user', '--saw', '逐条看过']),
+    run(STATE, [
+      'signoff',
+      '--reauth',
+      '--root',
+      root,
+      '--run',
+      states.cap,
+      '--artifact',
+      'spec.md',
+      '--by',
+      'user',
+      '--saw',
+      '逐条看过',
+    ]),
     2,
   )
   expect(
@@ -1243,12 +1296,11 @@ try {
       'spec.md',
       '--by',
       'user',
-    '--saw',
-    '已按门判据逐条看过',
+      '--saw',
+      '已按门判据逐条看过',
     ]),
     0,
   )
-
 
   const b01Evidence = 'fake-src/Cap.tsx:5'
   w(
@@ -1292,7 +1344,10 @@ try {
   // C4：设计产物（先造一份能过门的，再在下面做负例）
   const claimed = Object.fromEntries(surface.entries.map((e) => [e.id, 'D-B-01']))
   // web 切片骨架（webScaffold 门）：参照模板 + 一个真实 slice + 一个壳
-  w('web/src/features/_template/README.md', body(120, '# 切片模板\n\n照抄本目录：use-<slice>.ts + <slice>-view.tsx + store/ 可选。\n'))
+  w(
+    'web/src/features/_template/README.md',
+    body(120, '# 切片模板\n\n照抄本目录：use-<slice>.ts + <slice>-view.tsx + store/ 可选。\n'),
+  )
   // 入口页：必须是「渲染壳」，不许只 redirect（web-recal D-1；WEB-ENTRY 就是为它设的）
   w(
     'web/src/app/page.tsx',
@@ -1305,7 +1360,10 @@ try {
       '',
     ].join('\n'),
   )
-  w('web/src/features/cap-x/use-cap-x.ts', body(80, "export function useCapX() {\n  return { ready: true }\n}\n"))
+  w(
+    'web/src/features/cap-x/use-cap-x.ts',
+    body(80, 'export function useCapX() {\n  return { ready: true }\n}\n'),
+  )
   w('web/src/shell/app-shell.tsx', body(80, 'export function AppShell() {\n  return null\n}\n'))
   w('web/src/components/ui/button.tsx', body(80, 'export function Button() {\n  return null\n}\n'))
 
@@ -1430,7 +1488,11 @@ try {
   // 夹具里的每个元素都要有 runtime：业务规则 server、UI 侧 client（runtimeFit 的判据）
   for (const e of manifest.elements) {
     const t = e.landing ?? e.file ?? ''
-    e.runtime ??= t.includes('/ports/') ? 'both' : t.startsWith('packages/core/') ? 'server' : 'client'
+    e.runtime ??= t.includes('/ports/')
+      ? 'both'
+      : t.startsWith('packages/core/')
+        ? 'server'
+        : 'client'
   }
   for (const arr of [manifest.components, manifest.hooks, manifest.stores])
     for (const e of arr ?? []) e.runtime ??= 'client'
@@ -2266,7 +2328,10 @@ try {
   r = (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6']))
   expect('FID 未登记的 pi-web 元素 → C6 红', r, 1)
   // 负例：没有「保真缺口组」表 → 红（覆盖率不是判据的全部）
-  writeFileSync(join(root, states.cap, 'parity.md'), parityText.replace(/## 保真缺口组[\s\S]*?\n## 渲染预算/, '## 渲染预算'))
+  writeFileSync(
+    join(root, states.cap, 'parity.md'),
+    parityText.replace(/## 保真缺口组[\s\S]*?\n## 渲染预算/, '## 渲染预算'),
+  )
   signParity()
   r = (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6']))
   expect('FID 缺缺口组表 → C6 红', r, 1)
@@ -2473,7 +2538,8 @@ try {
   // runtimeFit：业务规则落 web / 呈现逻辑落 core / 缺 runtime 都必须红
   const rtBad = JSON.parse(mGood2)
   rtBad.elements.find((e) => e.id === 'D-B-01').runtime = 'server'
-  rtBad.elements.find((e) => e.id === 'D-B-01').landing = 'packages/web/src/cap-x/use-cases/open-session.ts'
+  rtBad.elements.find((e) => e.id === 'D-B-01').landing =
+    'packages/web/src/cap-x/use-cases/open-session.ts'
   writeFileSync(mPath2, JSON.stringify(rtBad, null, 2))
   r = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C4'])
   expect('RUNTIME 服务端规则落 web → C4 红', r, 1)
@@ -2623,7 +2689,11 @@ try {
     expect('SEED 播种幂等', r, 0)
     const mapAfter = readFileSync(mapFile, 'utf8')
     if (mapAfter.includes('F-77')) ok('SEED 保留人工填写的 owner')
-    else bad('SEED 保留人工填写的 owner', mapAfter.split('\n').find((l) => l.includes('v0')))
+    else
+      bad(
+        'SEED 保留人工填写的 owner',
+        mapAfter.split('\n').find((l) => l.includes('v0')),
+      )
     writeFileSync(mapFile, mapBefore)
   } else {
     bad('SEED 保留人工填写的 owner', 'symbol-map 里没有 `v0` 行（播种没覆盖到夹具符号）')
@@ -2958,25 +3028,42 @@ try {
   const envPath = join(root, states.program, 'environment.md')
   const envGood = readFileSync(envPath, 'utf8')
   writeFileSync(envPath, envGood.replace('PI_CODING_AGENT_DIR', '某个变量'))
-  expect('P1 环境矩阵缺项 → 红', run(CHECK, ['--root', root, '--run', states.program, '--phase', 'P1']), 1)
+  expect(
+    'P1 环境矩阵缺项 → 红',
+    run(CHECK, ['--root', root, '--run', states.program, '--phase', 'P1']),
+    1,
+  )
   writeFileSync(envPath, envGood)
-  expect('P1 环境矩阵恢复 → 绿', run(CHECK, ['--root', root, '--run', states.program, '--phase', 'P1']), 0)
+  expect(
+    'P1 环境矩阵恢复 → 绿',
+    run(CHECK, ['--root', root, '--run', states.program, '--phase', 'P1']),
+    0,
+  )
 
   // P2 分母同源：对账声明的条数/来源 sha 必须能复算，手填数字一律不认
   const parityP = join(root, states.cap, 'parity.md')
   const parityGood = readFileSync(parityP, 'utf8')
   writeFileSync(parityP, parityGood.replace('分母：1 条', '分母：9 条'))
-  expect('C6 对账分母 → 条数与来源不符时红', (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6'])), 1)
+  expect(
+    'C6 对账分母 → 条数与来源不符时红',
+    (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6'])),
+    1,
+  )
   writeFileSync(parityP, parityGood.replace(/sha [0-9a-f]{8}/, 'sha deadbeef'))
   // 改文档 = 签字失效，所以先重新签，再验"sha 漂移只提示不判红"
   signParity()
   // sha 变了但条数没变：判绿但必须提示（拦住"改了来源没说一声"，也不误杀算术上成立的对账）
   const staleRun = run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6'])
-  if (staleRun.code === 0 && staleRun.out.includes('sha 已变')) ok('C6 分母 sha 变化 → 绿但提示重算')
+  if (staleRun.code === 0 && staleRun.out.includes('sha 已变'))
+    ok('C6 分母 sha 变化 → 绿但提示重算')
   else bad('C6 分母 sha 变化 → 绿但提示重算', `exit ${staleRun.code}\n${staleRun.out}`)
   writeFileSync(parityP, parityGood)
   signParity()
-  expect('C6 对账分母恢复 → 绿', (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6'])), 0)
+  expect(
+    'C6 对账分母恢复 → 绿',
+    (refreshParitySha(), run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C6'])),
+    0,
+  )
 
   // P3 变更传播单：视图没列全必须红（"改了 7 处却只记 3 处"是真实发生过的）
   const changesDir = join(root, states.cap, 'changes')
@@ -2994,7 +3081,11 @@ try {
       '',
     ].join('\n'),
   )
-  expect('P3 砍单无变更单 → 红', run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5']), 1)
+  expect(
+    'P3 砍单无变更单 → 红',
+    run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5']),
+    1,
+  )
   writeFileSync(
     chgPath,
     [
@@ -3015,7 +3106,11 @@ try {
       '',
     ].join('\n'),
   )
-  expect('P3 变更单视图列全 → 绿', run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5']), 0)
+  expect(
+    'P3 变更单视图列全 → 绿',
+    run(CHECK, ['--root', root, '--run', states.cap, '--phase', 'C5']),
+    0,
+  )
   rmSync(chgPath, { force: true })
 
   // 门目录：概念门/阶段门/实现三方对账（防幻影门、死门、文档漂移）
@@ -3062,14 +3157,20 @@ try {
     ...extra,
   })
   w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
-  w(`${neg}/CHARTER.md`, `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` ${godLines} 行\n\n## 2. 基线指纹\n\n\`deadbeef\` ${godLines} 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1–L6\n\n## 6. 已知风险\n\n- 无\n`)
+  w(
+    `${neg}/CHARTER.md`,
+    `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` ${godLines} 行\n\n## 2. 基线指纹\n\n\`deadbeef\` ${godLines} 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1–L6\n\n## 6. 已知风险\n\n- 无\n`,
+  )
   w('fake-src/neg.ts', 'const a = 1\nconst b = 2\nconst c = 3\nconst d = 4\n')
 
   const redKinds = (phase) => {
     const res = run(CHECK, ['--root', root, '--run', neg, '--phase', phase, '--json'])
     try {
       const j = JSON.parse(res.out)
-      return j.reports.flatMap((r) => r.results || []).filter((x) => !x.ok).map((x) => x.id)
+      return j.reports
+        .flatMap((r) => r.results || [])
+        .filter((x) => !x.ok)
+        .map((x) => x.id)
     } catch {
       return [`<parse-failed:${res.out.slice(0, 80)}>`]
     }
@@ -3081,23 +3182,26 @@ try {
   else bad('RLEVEL 缺 R 级 → 红', redKinds('C0').join(','))
 
   // GODFINGERPRINT：行数与源码不符
-  w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2).replace(`"lines": ${godLines}`, '"lines": 999')}\n`)
+  w(
+    `${neg}/state.json`,
+    `${JSON.stringify(nogod(), null, 2).replace(`"lines": ${godLines}`, '"lines": 999')}\n`,
+  )
   if (redKinds('C0').some((id) => id.startsWith('C0:godFingerprint')))
     ok('GODFINGERPRINT 行数不符 → 红')
   else bad('GODFINGERPRINT 行数不符 → 红', redKinds('C0').join(','))
 
   // HEADING：CHARTER 缺必需小节
   w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
-  w(
-    `${neg}/CHARTER.md`,
-    '# CHARTER — 负例\n\n## 1. 范围\n\n- `fake-src/neg.ts` 4 行\n',
-  )
+  w(`${neg}/CHARTER.md`, '# CHARTER — 负例\n\n## 1. 范围\n\n- `fake-src/neg.ts` 4 行\n')
   if (redKinds('C0').some((id) => id.startsWith('C0:heading:CHARTER.md:## 2. 基线指纹')))
     ok('HEADING 缺必需小节 → 红')
   else bad('HEADING 缺必需小节 → 红', redKinds('C0').join(','))
 
   // LINES：归属区间有缝
-  w(`${neg}/CHARTER.md`, `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` 4 行\n\n## 2. 基线指纹\n\n\`deadbeef\` 4 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1\n\n## 6. 已知风险\n\n- 无\n`)
+  w(
+    `${neg}/CHARTER.md`,
+    `# CHARTER — 负例\n\n## 1. 范围\n\n- \`fake-src/neg.ts\` 4 行\n\n## 2. 基线指纹\n\n\`deadbeef\` 4 行\n\n## 3. 不做清单\n\n- 不做\n\n## 4. 渲染边界\n\n| 区域 | 宿主 | 说明 |\n| --- | --- | --- |\n| 主体 | self | 本能力自己的界面 |\n\n## 5. 验收门\n\n- L1\n\n## 6. 已知风险\n\n- 无\n`,
+  )
   w(
     `${neg}/ownership.md`,
     '# 归属切分\n\n## 1. 归属区间表\n\n| 区间 | 设计元素 | 类型 | 判据 |\n| --- | --- | --- | --- |\n| L1-L2 | D-U-01 | feature | 前两行 |\n',
@@ -3113,10 +3217,12 @@ try {
 
   // BEHAVIORS：behaviors.md 里没有 B- 行
   w(`${neg}/state.json`, `${JSON.stringify(nogod(), null, 2)}\n`)
-  w(`${neg}/behaviors.md`, '# 行为\n\n## 行为清单\n\n| id | 说明 | 证据 | 脚本 |\n| --- | --- | --- | --- |\n| X-1 | 不是 B 行 | fake-src/neg.ts:1 | s-001 |\n')
+  w(
+    `${neg}/behaviors.md`,
+    '# 行为\n\n## 行为清单\n\n| id | 说明 | 证据 | 脚本 |\n| --- | --- | --- | --- |\n| X-1 | 不是 B 行 | fake-src/neg.ts:1 | s-001 |\n',
+  )
   w(`${neg}/harness/registry.json`, `${JSON.stringify({ scripts: [] }, null, 2)}\n`)
-  if (redKinds('C3').some((id) => id.startsWith('C3:behaviors')))
-    ok('BEHAVIORS 没有 B- 行 → 红')
+  if (redKinds('C3').some((id) => id.startsWith('C3:behaviors'))) ok('BEHAVIORS 没有 B- 行 → 红')
   else bad('BEHAVIORS 没有 B- 行 → 红', redKinds('C3').join(','))
 
   rmSync(join(root, neg), { recursive: true, force: true })
@@ -3150,7 +3256,7 @@ try {
       '',
     ].join('\n'),
   )
-    // surface 必须给出这条命令，否则"0 个 HTTP 命令"会被判绿（这也是门的一个真实边界）
+  // surface 必须给出这条命令，否则"0 个 HTTP 命令"会被判绿（这也是门的一个真实边界）
   const itBad = runIntegration({
     capabilityDir: tmpCap,
     surface: { entries: [{ kind: 'api', text: 'POST /api/x' }] },
@@ -3161,7 +3267,15 @@ try {
 
   writeFileSync(
     join(tmpCap, 'acceptance.md'),
-    ['## 验收阶梯', '', '| 层级 | 命令 | 结果 | 证据 | 签字 |', '| --- | --- | --- | --- | --- |', '| L1 | vitest | pass | gates/C5.json | |', '| L6 | 人工 | pending | | |', ''].join('\n'),
+    [
+      '## 验收阶梯',
+      '',
+      '| 层级 | 命令 | 结果 | 证据 | 签字 |',
+      '| --- | --- | --- | --- | --- |',
+      '| L1 | vitest | pass | gates/C5.json | |',
+      '| L6 | 人工 | pending | | |',
+      '',
+    ].join('\n'),
   )
   const acBad = runAcceptance({ capabilityDir: tmpCap, surface: { entries: [] }, mode: 'final' })
   if (!acBad.ok) ok('ACCEPTANCE L6 未签 → 红')
@@ -3199,7 +3313,8 @@ try {
   const bullets = '- **alpha** (function) …\n'
   const sym = runSymbolParity({
     symbolsText: `${bullets}- **beta** (function) …\n`,
-    mapText: '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
+    mapText:
+      '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
     root,
   })
   if (!sym.ok) ok('SYMBOLS 漏符号 → 红')
@@ -3207,7 +3322,8 @@ try {
 
   const symOk = runSymbolParity({
     symbolsText: bullets,
-    mapText: '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
+    mapText:
+      '| 文件 | 符号 | 行号 | 归属 | 状态 | 理由 |\n|---|---|---|---|---|---|\n| `G.tsx` | `alpha` | 1 | D-U-01 | pending |  |\n',
     root,
   })
   if (symOk.ok) ok('SYMBOLS 恢复 → 绿')
@@ -3215,16 +3331,21 @@ try {
 
   const inv = checkContractInventory({
     surface: { entries: [{ kind: 'api', name: 'POST /api/ghost-x' }] },
-    wireText: '| 命令 | 方法 | 路径 | 证据 |\n|---|---|---|---|\n| `GET /api/real` | GET | /api/real | a.ts:1 |\n',
+    wireText:
+      '| 命令 | 方法 | 路径 | 证据 |\n|---|---|---|---|\n| `GET /api/real` | GET | /api/real | a.ts:1 |\n',
   })
   if (!inv.ok) ok('C2 源码端点未进契约红')
   else bad('C2 源码端点未进契约红', '未报缺')
 
-  const align = checkContractAlign('## 对齐表\n\n| 用到的东西 | 契约位置 | 差异处置 |\n|---|---|---|\n| `GET /api/x` | — | — |\n')
+  const align = checkContractAlign(
+    '## 对齐表\n\n| 用到的东西 | 契约位置 | 差异处置 |\n|---|---|---|\n| `GET /api/x` | — | — |\n',
+  )
   if (!align.ok) ok('C2 对齐行既无指向也无编号红')
   else bad('C2 对齐行既无指向也无编号红', '未报缺')
 
-  const own = runOwnershipTypes('## 文件：G.tsx\n\n| 区间 | 元素 | 类型 |\n|---|---|---|\n| L1-L9 | D-U-01 | 乱写 |\n')
+  const own = runOwnershipTypes(
+    '## 文件：G.tsx\n\n| 区间 | 元素 | 类型 |\n|---|---|---|\n| L1-L9 | D-U-01 | 乱写 |\n',
+  )
   if (!own.ok) ok('OWNERSHIP 类型非法 → 红')
   else bad('OWNERSHIP 类型非法 → 红', '未报非法类型')
 

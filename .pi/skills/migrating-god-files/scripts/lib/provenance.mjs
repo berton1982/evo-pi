@@ -60,11 +60,15 @@ export function judgeProvenance(runDir, { kind, count, maxAgeDays = 30 }) {
     problems.push(`「${kind}」的分母是手填的（source=${entry.source}）——手填分母无法被复算`)
   }
   if (typeof count === 'number' && entry.count !== count) {
-    problems.push(`「${kind}」记的是 ${entry.count} 条，当前实际 ${count} 条（分母过期，重跑产出它的命令）`)
+    problems.push(
+      `「${kind}」记的是 ${entry.count} 条，当前实际 ${count} 条（分母过期，重跑产出它的命令）`,
+    )
   }
   const ageDays = (Date.now() - Date.parse(entry.at || 0)) / 86_400_000
   if (!Number.isFinite(ageDays) || ageDays > maxAgeDays) {
-    problems.push(`「${kind}」的分母记录已 ${Math.round(ageDays)} 天未更新（上限 ${maxAgeDays} 天）`)
+    problems.push(
+      `「${kind}」的分母记录已 ${Math.round(ageDays)} 天未更新（上限 ${maxAgeDays} 天）`,
+    )
   }
   return { ok: problems.length === 0, problems, entry }
 }
@@ -80,7 +84,8 @@ export function shortSha(file) {
  *   `> 分母：27 条行为（来源 behaviors.md sha 1a2b3c4d）`
  * 条数与 sha 都要能被 gate 复算。
  */
-export const DENOMINATOR_RE = /分母[:：]\s*(\d+)\s*条[^（(]*[（(]来源\s*([\w./-]+)\s+sha\s+([0-9a-f]{8})[）)]/i
+export const DENOMINATOR_RE =
+  /分母[:：]\s*(\d+)\s*条[^（(]*[（(]来源\s*([\w./-]+)\s+sha\s+([0-9a-f]{8})[）)]/i
 
 export function parseDenominator(text) {
   const m = DENOMINATOR_RE.exec(text || '')
@@ -98,9 +103,7 @@ export function checkDenominator({ text, runDir, countActual }) {
   if (!parsed) {
     return {
       ok: false,
-      problems: [
-        '缺「分母：N 条…（来源 <file> sha <8位>）」声明——不写分母，N/N 达标无法核对',
-      ],
+      problems: ['缺「分母：N 条…（来源 <file> sha <8位>）」声明——不写分母，N/N 达标无法核对'],
     }
   }
   const actualSha = shortSha(join(runDir, parsed.sourceFile))

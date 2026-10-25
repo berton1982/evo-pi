@@ -62,7 +62,8 @@ export function runChangePropagation(runDir, { requireIfDeclared = true } = {}) 
   const delta = existsSync(resolve(runDir, 'contract-delta.md'))
     ? readFileSync(resolve(runDir, 'contract-delta.md'), 'utf8')
     : ''
-  const declared = /\|\s*drop\s*\|/i.test(cutList) || /CHG-\d+/.test(delta) || /CHG-\d+/.test(cutList)
+  const declared =
+    /\|\s*drop\s*\|/i.test(cutList) || /CHG-\d+/.test(delta) || /CHG-\d+/.test(cutList)
 
   if (!files.length) {
     if (declared && requireIfDeclared) {

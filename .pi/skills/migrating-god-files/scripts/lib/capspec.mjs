@@ -44,7 +44,8 @@ export function checkCapSpec({ md, gods }) {
     ? story.rows.filter((r) => r.some((c) => stripCell(c)) && stripCell(r[0]))
     : []
   if (!/##\s*用户故事/.test(text)) problems.push('缺 `## 用户故事` 段')
-  if (storyRows.length < 3) problems.push(`用户故事只有 ${storyRows.length} 条（至少 3 条才能说清能力边界）`)
+  if (storyRows.length < 3)
+    problems.push(`用户故事只有 ${storyRows.length} 条（至少 3 条才能说清能力边界）`)
   // 首列是编号，不算内容；触发与期望两条必须写成人能读的句子
   const thin = storyRows.filter(
     (r) => r.slice(1).filter((c) => stripCell(c).length >= 8).length < 2,
@@ -78,7 +79,8 @@ export function checkCapSpec({ md, gods }) {
       const lines = g.lines ?? 0
       const coveredSet = new Set()
       for (const r of byFile.get(key)) {
-        for (let i = Math.max(1, r.from); i <= Math.min(lines || r.to, r.to); i += 1) coveredSet.add(i)
+        for (let i = Math.max(1, r.from); i <= Math.min(lines || r.to, r.to); i += 1)
+          coveredSet.add(i)
       }
       const pct = lines ? coveredSet.size / lines : 0
       covered += coveredSet.size
@@ -89,7 +91,9 @@ export function checkCapSpec({ md, gods }) {
           `${name} 只给了一个区间（${lines} 行）——一个能力通常跨多个文件多个区间，单区间对账等于没切分`,
         )
       if (pct < 0.85)
-        problems.push(`${name} 只覆盖 ${Math.round(pct * 100)}%（要求 ≥85%，未覆盖 = 没读那段源码）`)
+        problems.push(
+          `${name} 只覆盖 ${Math.round(pct * 100)}%（要求 ≥85%，未覆盖 = 没读那段源码）`,
+        )
     }
   }
 
@@ -97,7 +101,10 @@ export function checkCapSpec({ md, gods }) {
   const navIdx = text.indexOf('## 交互与导航')
   if (navIdx < 0) problems.push('缺 `## 交互与导航` 段（没说清这门能力是弹窗还是路由）')
   else {
-    const seg = text.slice(navIdx, text.indexOf('\n## ', navIdx + 3) < 0 ? undefined : text.indexOf('\n## ', navIdx + 3))
+    const seg = text.slice(
+      navIdx,
+      text.indexOf('\n## ', navIdx + 3) < 0 ? undefined : text.indexOf('\n## ', navIdx + 3),
+    )
     // 基础设施能力（C-A 这类）确实没有界面：允许写 none，但仍必须给证据，
     // 否则"没有界面"就成了又一处无法核对的嘴说。
     if (!NAV.test(seg) && !NAV_ALLOW_NONE.test(seg))
@@ -110,7 +117,9 @@ export function checkCapSpec({ md, gods }) {
       /pi-web[^\n]*(弹窗|dialog|modal)/i.test(seg) &&
       !/沿用|同样|也(是|用)|为什么可以不一样|差异说明/.test(seg)
     )
-      problems.push('pi-web 用弹窗，本能力似乎改成了别的机制——必须在段里写清「为什么可以不一样」并请用户确认')
+      problems.push(
+        'pi-web 用弹窗，本能力似乎改成了别的机制——必须在段里写清「为什么可以不一样」并请用户确认',
+      )
   }
 
   // 3.5 人工决策：这些事机器判断不了，但"有没有问过"可以机器判断
@@ -139,20 +148,28 @@ export function checkCapSpec({ md, gods }) {
       text.indexOf('\n## ', decIdx + 3) < 0 ? undefined : text.indexOf('\n## ', decIdx + 3),
     )
     const missing = DECISIONS.filter(([re]) => !re.test(seg)).map(([, name]) => name)
-    const blank = rows.filter((r) => stripCell(r[columnOf(decTable.header, '结论')] ?? '').length < 2)
-    if (rows.length < 6) problems.push(`人工决策只有 ${rows.length} 行（至少 6 项，否则说明没系统想过）`)
+    const blank = rows.filter(
+      (r) => stripCell(r[columnOf(decTable.header, '结论')] ?? '').length < 2,
+    )
+    if (rows.length < 6)
+      problems.push(`人工决策只有 ${rows.length} 行（至少 6 项，否则说明没系统想过）`)
     if (blank.length) problems.push(`${blank.length} 行决策没有结论（问了不记等于没问）`)
     if (missing.length)
-      problems.push(`以下决策项没有出现：${missing.slice(0, 4).join('、')}${missing.length > 4 ? ' 等' : ''}`)
+      problems.push(
+        `以下决策项没有出现：${missing.slice(0, 4).join('、')}${missing.length > 4 ? ' 等' : ''}`,
+      )
   }
 
   // 4. 布局映射
   const map = tables.find(
-    (t) => /pi-web/i.test(t.header.join(' ')) && /区域|布局|区块|位置|目标|去向/.test(t.header.join(' ')),
+    (t) =>
+      /pi-web/i.test(t.header.join(' ')) &&
+      /区域|布局|区块|位置|目标|去向/.test(t.header.join(' ')),
   )
   const mapRows = map ? map.rows.filter((r) => r.some((c) => stripCell(c))) : []
   if (!/##\s*与 pi-web 的布局映射/.test(text)) problems.push('缺 `## 与 pi-web 的布局映射` 段')
-  if (mapRows.length < 3) problems.push(`布局映射只有 ${mapRows.length} 行（至少 3 个区域才看得出差距）`)
+  if (mapRows.length < 3)
+    problems.push(`布局映射只有 ${mapRows.length} 行（至少 3 个区域才看得出差距）`)
 
   return {
     ok: problems.length === 0,
@@ -184,22 +201,31 @@ export function checkUiProto({ md }) {
     return { ok: problems.length === 0, problems, totals: { mode: 'not-applicable' } }
   }
   const blocks = [...text.matchAll(/```(?:text|ascii|txt)?\n([\s\S]*?)```/g)].map((m) => m[1])
-  const drawn = blocks.filter((b) => /[│┌└├─┐┘┤┬┴┼+]/.test(b) && b.split('\n').filter(Boolean).length >= 6)
+  const drawn = blocks.filter(
+    (b) => /[│┌└├─┐┘┤┬┴┼+]/.test(b) && b.split('\n').filter(Boolean).length >= 6,
+  )
   if (drawn.length < 2)
     problems.push(`可用的 ASCII 原型只有 ${drawn.length} 块（至少 2 块：主屏 + 空态/失败态）`)
   const wide = drawn.filter((b) => b.split('\n').some((l) => l.length > 100))
-  if (wide.length) problems.push(`${wide.length} 块原型超过 100 列（终端/评审里会折行，失去可读性）`)
+  if (wide.length)
+    problems.push(`${wide.length} 块原型超过 100 列（终端/评审里会折行，失去可读性）`)
   const thin = drawn.filter(
     (b) => (b.match(/列表|详情|工具栏|状态|空态|表单|分组/g) || []).length < 2,
   )
   if (thin.length) problems.push(`${thin.length} 块原型没有标出区域（至少 2 个区域词）`)
 
-  const t = parseTables(text).find((x) => /态|状态/.test(x.header.join(' ')) && /触发/.test(x.header.join(' ')))
+  const t = parseTables(text).find(
+    (x) => /态|状态/.test(x.header.join(' ')) && /触发/.test(x.header.join(' ')),
+  )
   const rows = t ? t.rows.filter((r) => r.some((c) => stripCell(c))) : []
   if (!/##\s*交互态/.test(text)) problems.push('缺 `## 交互态` 段（空态/加载/失败/成功各是什么样）')
   if (rows.length < 3) problems.push(`交互态只有 ${rows.length} 行（至少 3 个态）`)
 
-  return { ok: problems.length === 0, problems, totals: { blocks: drawn.length, states: rows.length } }
+  return {
+    ok: problems.length === 0,
+    problems,
+    totals: { blocks: drawn.length, states: rows.length },
+  }
 }
 
 /**
@@ -225,7 +251,9 @@ export function checkRenderBoundary({ charter }) {
   // 标题可能带编号（`## 4. 渲染边界`），所以用正则定位起点而不是 indexOf 字面量
   const m = text.match(/##\s*(?:\d+\.\s*)?渲染边界[\s\S]*/)
   const seg = m ? m[0] : ''
-  const t = parseTables(seg).find((x) => /区域/.test(x.header.join(' ')) && /宿主/.test(x.header.join(' ')))
+  const t = parseTables(seg).find(
+    (x) => /区域/.test(x.header.join(' ')) && /宿主/.test(x.header.join(' ')),
+  )
   if (!t) {
     problems.push('「## 渲染边界」里没有「区域 / 宿主 / 说明」表')
     return { ok: false, problems, totals: { regions: 0 } }
@@ -234,7 +262,10 @@ export function checkRenderBoundary({ charter }) {
   if (!rows.length) problems.push('「## 渲染边界」表是空的（空表格无法区分"没有区域"和"忘了写"）')
   const hosts = rows.map((r) => stripCell(r[1]))
   const bad = hosts.filter((h) => !/^(self|shell|other:[A-Za-z-]+|none)$/.test(h))
-  if (bad.length) problems.push(`${bad.length} 行宿主不合法（只能是 self / shell / other:<能力> / none）：${bad.slice(0, 3).join(', ')}`)
+  if (bad.length)
+    problems.push(
+      `${bad.length} 行宿主不合法（只能是 self / shell / other:<能力> / none）：${bad.slice(0, 3).join(', ')}`,
+    )
   if (!hosts.includes('self') && !hosts.includes('none'))
     problems.push('没有一行宿主是 `self`——本能力不渲染任何区域的话应写成 infrastructure')
   if (hosts.includes('none')) {
@@ -258,7 +289,12 @@ export function checkEntryInventory({ components, ui }) {
   // 基础设施能力不渲染界面：components.md 允许写「## 不适用」+ 理由 + 证据，与 ui.md 同口径。
   // 没有这条分支时，C-A（7,669 行的运行时）会被要求列出"区域 → 入口"，只能编。
   if (/##\s*不适用/.test(comp)) {
-    const body = comp.slice(comp.indexOf('## 不适用')).split('\n').slice(1).join(' ').replace(/\s+/g, ' ')
+    const body = comp
+      .slice(comp.indexOf('## 不适用'))
+      .split('\n')
+      .slice(1)
+      .join(' ')
+      .replace(/\s+/g, ' ')
     if (body.length < 40) problems.push('components.md「## 不适用」的理由太短（<40 字）')
     if (!/[\w./-]+\.(ts|tsx|mjs):\d+/.test(body))
       problems.push('components.md「## 不适用」没给证据（`path:line`）')
@@ -278,19 +314,33 @@ export function checkEntryInventory({ components, ui }) {
   if (!rows.length) problems.push('入口清单表是空的')
   const noSrc = rows.filter((r) => !/[\w./-]+\.(ts|tsx):\d+/.test(r.src))
   if (noSrc.length)
-    problems.push(`${noSrc.length} 个入口没有源证据（path:line）：${noSrc.slice(0, 3).map((r) => r.name).join(', ')}`)
+    problems.push(
+      `${noSrc.length} 个入口没有源证据（path:line）：${noSrc
+        .slice(0, 3)
+        .map((r) => r.name)
+        .join(', ')}`,
+    )
   const text = proto.replace(/\s+/g, ' ')
   const missing = rows.filter((r) => !text.includes(r.name))
   if (missing.length)
-    problems.push(`${missing.length} 个入口在 components.md 里有、原型里没画：${missing.slice(0, 4).map((r) => r.name).join(', ')}`)
+    problems.push(
+      `${missing.length} 个入口在 components.md 里有、原型里没画：${missing
+        .slice(0, 4)
+        .map((r) => r.name)
+        .join(', ')}`,
+    )
   // 反向：原型方括号里的按钮/入口名（[信任项目] 这种）必须能在清单里找到
   const drawn = [...proto.matchAll(/\[([^\]\n]{1,20})\]/g)]
     .map((m) => m[1].trim())
-    .filter((n) => n && !/^[\s]*$/.test(n) && !/^[▾▼▲📎]+$/.test(n) && n.length > 1)
+    .filter((n) => n && !/^[\s]*$/.test(n) && !/^[▾▼▲📎]+$/u.test(n) && n.length > 1)
   const known = new Set(rows.map((r) => r.name))
-  const extra = [...new Set(drawn)].filter((n) => !known.has(n) && !known.has(n.replace(/^[:：]/, '')))
+  const extra = [...new Set(drawn)].filter(
+    (n) => !known.has(n) && !known.has(n.replace(/^[:：]/, '')),
+  )
   if (extra.length)
-    problems.push(`${extra.length} 个原型里的入口不在清单里（多画或没查证）：${extra.slice(0, 4).join(', ')}`)
+    problems.push(
+      `${extra.length} 个原型里的入口不在清单里（多画或没查证）：${extra.slice(0, 4).join(', ')}`,
+    )
   return {
     ok: problems.length === 0,
     problems,
@@ -319,7 +369,12 @@ export function checkReadlogCoverage({ readlog, docs, gods = [] }) {
       if (!f || /^(index|types)\.ts$/.test(f)) continue
       // 不带目录的名字只在本能力的 god 文件里强制（别处出现多半是散文提及）
       const bare = !path.includes('/')
-      const isGod = gods.some((g) => String(g.path || '').split('/').pop() === f)
+      const isGod = gods.some(
+        (g) =>
+          String(g.path || '')
+            .split('/')
+            .pop() === f,
+      )
       if (bare && !isGod) continue
       files.add(f)
     }

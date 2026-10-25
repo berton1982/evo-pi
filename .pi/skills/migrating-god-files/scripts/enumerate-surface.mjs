@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 // 表面枚举——给「行为覆盖率」一个**外部分母**。
 //
 // 为什么必须有它：行为清单是人写的，自己声明自己 = 覆盖率自证。
@@ -14,11 +15,11 @@
 //   node enumerate-surface.mjs --run <dir> --check      # 与上次枚举比对，报新增/消失
 // 退出码: 0 = 成功；1 = --check 发现漂移；2 = 用法错误
 
-import { fileURLToPath } from 'node:url'
-import { writeProvenance } from './lib/provenance.mjs'
 import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { basename, join, relative, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { writeProvenance } from './lib/provenance.mjs'
 
 const argv = process.argv.slice(2)
 const known = new Set([
@@ -181,13 +182,12 @@ for (const e of entries) {
   e.method = (m ? m[1] : 'GET').toUpperCase()
   // 模板插值去掉后会留下空段：`/api/sessions/${id}/state` → `/api/sessions//state`。
   // 归一成 `[id]`，否则契约里写的 `[id]` 永远对不上（实测 3 条假"契约缺"）。
-  e.path = (
+  e.path =
     e.text
       .replace(/\$\{[^}]*\}/g, '/[id]')
       .split('?')[0]
       .replace(/\/+$/, '')
       .replace(/\/{2,}/g, '/') || '/'
-  )
   e.text = `${e.method} ${e.path}`
 }
 

@@ -63,7 +63,9 @@ export function resolveAnchors(anchors, root) {
       const base = resolve(root, a.file)
       const dir = resolve(root, 'ref_projects')
       const hit = existsSync(dir)
-        ? readdirSync(dir).map((d) => join(dir, d, a.file)).find((c) => existsSync(c))
+        ? readdirSync(dir)
+            .map((d) => join(dir, d, a.file))
+            .find((c) => existsSync(c))
         : null
       if (hit) p = hit
       else {
@@ -121,7 +123,13 @@ export function runSpecGates({ runDir, root = '.', testDirs = [], mode = 'exists
   // mode='declare'：C3 只要求"写清要哪些测试"，测试文件要到 C5 才存在。
   // 反过来的话，规格阶段永远红，逼人在没写代码前编测试名（G-22）。
   if (mode === 'declare') {
-    const results = [{ id: 'SPEC1', ok: problems.length === 0, detail: problems.join('；') || `${allIds.size} 个测试 ID 已声明，锚点均可核对` }]
+    const results = [
+      {
+        id: 'SPEC1',
+        ok: problems.length === 0,
+        detail: problems.join('；') || `${allIds.size} 个测试 ID 已声明，锚点均可核对`,
+      },
+    ]
     return results
   }
   const results = [

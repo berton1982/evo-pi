@@ -56,7 +56,9 @@ export function checkPlacement({ elements = [], root, layerPaths = null, mode = 
   if (!layerPaths || Object.keys(layerPaths).length === 0)
     return {
       ok: false,
-      problems: ['rules.json 没有 layerPaths——没有层就没有落点判据（先跑 extract-conventions.mjs 再看事实）'],
+      problems: [
+        'rules.json 没有 layerPaths——没有层就没有落点判据（先跑 extract-conventions.mjs 再看事实）',
+      ],
       totals: { elements: elements.length, checked: 0 },
     }
 
@@ -64,7 +66,8 @@ export function checkPlacement({ elements = [], root, layerPaths = null, mode = 
   const adapterPaths = []
   for (const [layer, value] of Object.entries(layerPaths)) {
     if (!/adapter|infrastructure/i.test(layer)) continue
-    for (const p of Array.isArray(value) ? value : [value]) if (typeof p === 'string') adapterPaths.push(p)
+    for (const p of Array.isArray(value) ? value : [value])
+      if (typeof p === 'string') adapterPaths.push(p)
   }
   const adaptersHomeNotWeb = adapterPaths.length > 0 && adapterPaths.every((p) => !isWeb(p))
 
@@ -76,7 +79,9 @@ export function checkPlacement({ elements = [], root, layerPaths = null, mode = 
     checked += 1
     const hits = layerOf(file, layerPaths)
     if (hits.length === 0) {
-      problems.push(`${e.id} 落点 ${file} 不在任何层里（layerPaths: ${Object.keys(layerPaths).join('/')}）`)
+      problems.push(
+        `${e.id} 落点 ${file} 不在任何层里（layerPaths: ${Object.keys(layerPaths).join('/')}）`,
+      )
       continue
     }
     if (e.layer && !hits.includes(e.layer))
@@ -153,20 +158,28 @@ export function checkRuntimeFit({ elements, root, readFile }) {
     const inWeb = target.startsWith('packages/web/')
     const inCore = target.startsWith('packages/core/')
     if (e.runtime === 'server' && inWeb) {
-      problems.push(`${e.id} 是服务端规则却落在 web（${target}）——业务规则属 core 的 domain/use-cases，见 ADR-0001`)
+      problems.push(
+        `${e.id} 是服务端规则却落在 web（${target}）——业务规则属 core 的 domain/use-cases，见 ADR-0001`,
+      )
     }
     if (e.runtime === 'client' && inCore) {
-      problems.push(`${e.id} 是呈现逻辑却落在 core（${target}）——core 不许 import React（ADR-0001 第 5 层）`)
+      problems.push(
+        `${e.id} 是呈现逻辑却落在 core（${target}）——core 不许 import React（ADR-0001 第 5 层）`,
+      )
     }
     // 目录形态：use-cases/ 与 domain/ports/ 只许在 core
     if (inWeb && /\/(use-cases|domain\/ports)\//.test(target)) {
-      problems.push(`${e.id} 落在 web 的 ${/(use-cases)/.test(target) ? 'use-cases' : 'domain/ports'} 目录——这两处属 core 的 1–2 层`)
+      problems.push(
+        `${e.id} 落在 web 的 ${/(use-cases)/.test(target) ? 'use-cases' : 'domain/ports'} 目录——这两处属 core 的 1–2 层`,
+      )
     }
     if (e.runtime === 'server') serverSide++
     const src = typeof readFile === 'function' ? readFile(target) : null
     if (src) {
       if (inCore && CLIENT_HINTS.some((re) => re.test(src))) {
-        problems.push(`${e.id} 的落点 ${target} 在 core 里却带客户端依赖（react/zustand/'use client'）`)
+        problems.push(
+          `${e.id} 的落点 ${target} 在 core 里却带客户端依赖（react/zustand/'use client'）`,
+        )
       }
       if (inWeb && SERVER_HINTS.some((re) => re.test(src))) {
         problems.push(`${e.id} 的落点 ${target} 在 web 里却直接 import node: 模块——该走 API 路由`)

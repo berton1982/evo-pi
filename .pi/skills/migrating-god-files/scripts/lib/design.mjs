@@ -31,7 +31,7 @@ function findFile(root, rel) {
 export const isInfra = (m) => m?.kind === 'infrastructure'
 
 const GATES_BY_LEVEL = {
-  R1: ['D2', 'D3', 'D8', 'D9', 'D11', 'D12', 'D13', 'D14', 'D16', 'D17', 'D18', 'D19', 'D20',],
+  R1: ['D2', 'D3', 'D8', 'D9', 'D11', 'D12', 'D13', 'D14', 'D16', 'D17', 'D18', 'D19', 'D20'],
   R2: [
     'D1',
     'D2',
@@ -373,12 +373,14 @@ function d11Modules(manifest) {
   const mods = manifest.modules || []
   const ids = new Set(mods.map((m) => m.id))
   const problems = []
-  if (mods.length < 3) problems.push(`manifest.modules 只有 ${mods.length} 个（基础设施能力至少 3 个模块）`)
+  if (mods.length < 3)
+    problems.push(`manifest.modules 只有 ${mods.length} 个（基础设施能力至少 3 个模块）`)
   for (const m of mods) {
     if (!m.id) problems.push('模块缺 id')
     if (!m.layer) problems.push(`模块 ${m.id} 缺 layer（要说清它在哪一层）`)
     if (!m.file) problems.push(`模块 ${m.id} 没写落点文件`)
-    for (const d of m.dependsOn || []) if (!ids.has(d)) problems.push(`模块 ${m.id} 依赖了不存在的模块 ${d}`)
+    for (const d of m.dependsOn || [])
+      if (!ids.has(d)) problems.push(`模块 ${m.id} 依赖了不存在的模块 ${d}`)
   }
   // 环检测
   const seen = new Set()
@@ -393,7 +395,11 @@ function d11Modules(manifest) {
     stack.delete(id)
     return false
   }
-  for (const m of mods) if (!m.id || visit(m.id)) { problems.push(`模块依赖成环：${m.id}`); break }
+  for (const m of mods)
+    if (!m.id || visit(m.id)) {
+      problems.push(`模块依赖成环：${m.id}`)
+      break
+    }
   // 元素归属
   for (const e of manifest.elements || []) {
     if (e.module && !ids.has(e.module)) problems.push(`元素 ${e.id} 的 module ${e.module} 不存在`)
@@ -402,7 +408,9 @@ function d11Modules(manifest) {
   return {
     id: 'D11',
     ok: problems.length === 0,
-    detail: problems.join('；') || `${mods.length} 个模块、依赖无环、${(manifest.elements || []).length} 个元素都归属到模块`,
+    detail:
+      problems.join('；') ||
+      `${mods.length} 个模块、依赖无环、${(manifest.elements || []).length} 个元素都归属到模块`,
   }
 }
 
@@ -461,7 +469,8 @@ function d12InfraState(manifest) {
   const mods = new Set((manifest.modules || []).map((m) => m.id))
   const states = manifest.states || []
   const problems = []
-  if (!states.length) problems.push('manifest.states 为空——基础设施的状态机（准入/队列/重连）必须列出来')
+  if (!states.length)
+    problems.push('manifest.states 为空——基础设施的状态机（准入/队列/重连）必须列出来')
   for (const st of states) {
     if (!st.owner) problems.push(`state「${st.key}」没有 owner`)
     else if (!mods.has(st.owner)) problems.push(`state「${st.key}」的 owner ${st.owner} 不是模块`)
@@ -469,7 +478,8 @@ function d12InfraState(manifest) {
   return {
     id: 'D12',
     ok: problems.length === 0,
-    detail: problems.join('；') || `${states.length} 个状态都归到模块（基础设施形态，不要求 hook/store）`,
+    detail:
+      problems.join('；') || `${states.length} 个状态都归到模块（基础设施形态，不要求 hook/store）`,
   }
 }
 
@@ -713,15 +723,20 @@ function d17Uml(runDir, manifest) {
       const re = new RegExp(`(?:class\\s+)?${m.id.replace(/[-/]/g, '\\-')}\\b`)
       if (!re.test(staticTxt)) probs.push(`模块 ${m.id} 没出现在 components.md 的图里`)
     }
-    if (!/(classDiagram|flowchart|graph)/.test(staticTxt)) probs.push('components.md 没有 mermaid 类图/流程图')
-    if (!/-->|\-\->/.test(staticTxt)) probs.push('components.md 没有依赖边（-->）')
-    if (!/«|<<|:::/.test(staticTxt)) probs.push('components.md 没有任何型标注（«module»/«port»/«adapter»）')
-    for (const p2 of ports) if (!dynTxt.includes(p2.id)) probs.push(`端口 ${p2.id} 没出现在任何序列图里`)
+    if (!/(classDiagram|flowchart|graph)/.test(staticTxt))
+      probs.push('components.md 没有 mermaid 类图/流程图')
+    if (!/-->|-->/.test(staticTxt)) probs.push('components.md 没有依赖边（-->）')
+    if (!/«|<<|:::/.test(staticTxt))
+      probs.push('components.md 没有任何型标注（«module»/«port»/«adapter»）')
+    for (const p2 of ports)
+      if (!dynTxt.includes(p2.id)) probs.push(`端口 ${p2.id} 没出现在任何序列图里`)
     if (!/stateDiagram/.test(dynTxt)) probs.push('dynamics.md 没有状态图（stateDiagram）')
     return {
       id: 'D17',
       ok: probs.length === 0,
-      detail: probs.join('；') || `${mods.length} 个模块上图、${ports.length} 个端口在时序里、状态机有图（基础设施形态）`,
+      detail:
+        probs.join('；') ||
+        `${mods.length} 个模块上图、${ports.length} 个端口在时序里、状态机有图（基础设施形态）`,
     }
   }
 
@@ -883,7 +898,8 @@ function d18Practices(runDir, manifest) {
     } else {
       const ids = where.match(/[A-Z]{1,3}-[A-Z0-9]*-?\d+/g) || []
       const known = ids.filter((i) => declared.has(i))
-      if (!known.length) problems.push(`「${def[0]}」的落点没指到已声明元素（写 ${where || '(空)'}）`)
+      if (!known.length)
+        problems.push(`「${def[0]}」的落点没指到已声明元素（写 ${where || '(空)'}）`)
     }
     if (how.length < 10) problems.push(`「${def[0]}」没说清做到什么程度（${how.length} 字 < 10）`)
     if (def[2] && !def[2].test(how)) problems.push(`「${def[0]}」要写具体机制（${how || '(空)'}）`)
@@ -921,7 +937,9 @@ function d16ProseAnchors(runDir, root, programDir) {
     // 只认"看起来是真路径"的锚点；`<run>/x.md` 这类占位不算
     // 字符类必须含 `[` `]`：Next 的动态路由目录写作 `app/api/agent/[id]/route.ts`，
     // 少了方括号会从 `]` 之后开始匹配，得到 `/route.ts` 这种片段 → 假报「不存在」。
-    for (const m of text.matchAll(/([\w@./[\]-]+\.(?:tsx?|mjs|js|json|md|css)):(\d+)(?:-(\d+))?/g)) {
+    for (const m of text.matchAll(
+      /([\w@./[\]-]+\.(?:tsx?|mjs|js|json|md|css)):(\d+)(?:-(\d+))?/g,
+    )) {
       const rel = m[1].replace(/^\/+/, '')
       if (!/\//.test(rel)) continue
       // 能力 run 的散文会引用 program run 里的契约（`contracts/wire.md:80`）。
@@ -990,14 +1008,27 @@ function d19Duties(runDir, manifest) {
     if (missing.length) problems.push(`「${kind}」表里少了 ${missing.slice(0, 4).join(', ')}`)
     const thin = rows.filter((r) => r.id && r.duty.length < 10)
     if (thin.length)
-      problems.push(`${thin.length} 行「${kind}」职责太短（<10 字）：${thin.slice(0, 3).map((r) => r.id).join(', ')}`)
+      problems.push(
+        `${thin.length} 行「${kind}」职责太短（<10 字）：${thin
+          .slice(0, 3)
+          .map((r) => r.id)
+          .join(', ')}`,
+      )
   }
-  check('hook', (manifest.hooks || []).map((h) => h.id))
-  check('store', (manifest.stores || []).map((s) => s.id))
+  check(
+    'hook',
+    (manifest.hooks || []).map((h) => h.id),
+  )
+  check(
+    'store',
+    (manifest.stores || []).map((s) => s.id),
+  )
   return {
     id: 'D19',
     ok: problems.length === 0,
-    detail: problems.join('；') || `${(manifest.hooks || []).length} 个 hook、${(manifest.stores || []).length} 个 store 都写了职责`,
+    detail:
+      problems.join('；') ||
+      `${(manifest.hooks || []).length} 个 hook、${(manifest.stores || []).length} 个 store 都写了职责`,
   }
 }
 

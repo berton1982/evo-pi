@@ -406,12 +406,7 @@ export const PHASES = [
     name: '行为规格',
     goal: '行为清单是交付分母：每条行为有 script_id、有证据；零孤儿脚本',
     consumes: ['surface.json', 'ownership.md', 'contract-delta.md', 'pi-web 源码'],
-    produces: [
-      'spec.md',
-      'behaviors.md',
-      'specs/*.md（仅 R3）',
-      'harness/registry.json',
-    ],
+    produces: ['spec.md', 'behaviors.md', 'specs/*.md（仅 R3）', 'harness/registry.json'],
     substeps: [
       {
         id: 'c3.1',

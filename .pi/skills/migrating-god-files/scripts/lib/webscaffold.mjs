@@ -15,7 +15,7 @@
  *     "allowedRoots": ["app", "shell", "features", "components/ui"], "template": "_template" }
  * 没有 `web` 段就判红——"没声明"不等于"没有前端"，只是没人写过。
  */
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { join, relative } from 'node:path'
 
 const KEBAB = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
@@ -39,7 +39,8 @@ export function runWebScaffold({ root = '.', rules }) {
       {
         id: 'WEB-CONFIG',
         ok: false,
-        detail: 'arch/rules.json 没有 web 段——没声明不等于没有前端，声明才能判落点（见模板 arch-rules.json）',
+        detail:
+          'arch/rules.json 没有 web 段——没声明不等于没有前端，声明才能判落点（见模板 arch-rules.json）',
       },
     ]
   }
@@ -55,9 +56,10 @@ export function runWebScaffold({ root = '.', rules }) {
   results.push({
     id: 'WEB-ROOT',
     ok: existsSync(srcRoot) && existsSync(sliceDir),
-    detail: existsSync(srcRoot) && existsSync(sliceDir)
-      ? `${relative(root, srcRoot)} 与 ${relative(root, sliceDir)} 都存在`
-      : `缺 ${relative(root, srcRoot)} 或 ${relative(root, sliceDir)}`,
+    detail:
+      existsSync(srcRoot) && existsSync(sliceDir)
+        ? `${relative(root, srcRoot)} 与 ${relative(root, sliceDir)} 都存在`
+        : `缺 ${relative(root, srcRoot)} 或 ${relative(root, sliceDir)}`,
   })
   results.push({
     id: 'WEB-TEMPLATE',
@@ -84,7 +86,9 @@ export function runWebScaffold({ root = '.', rules }) {
 
   const thin = real.filter((n) => {
     const files = walk(join(sliceDir, n)).map((f) => f.split('/').pop() ?? '')
-    return !files.some((f) => /^use-.*\.ts$/.test(f) || /-view\.(tsx|ts)$/.test(f) || /-panel\.tsx$/.test(f))
+    return !files.some(
+      (f) => /^use-.*\.ts$/.test(f) || /-view\.(tsx|ts)$/.test(f) || /-panel\.tsx$/.test(f),
+    )
   })
   results.push({
     id: 'WEB-SKELETON',
@@ -114,7 +118,9 @@ export function runWebScaffold({ root = '.', rules }) {
   results.push({
     id: 'WEB-FLAT',
     ok: rootTsx.length === 0,
-    detail: rootTsx.length ? `src 根下有 ${rootTsx.join(', ')}——那是 god 的起点` : 'src 根下没有游离组件',
+    detail: rootTsx.length
+      ? `src 根下有 ${rootTsx.join(', ')}——那是 god 的起点`
+      : 'src 根下没有游离组件',
   })
 
   // WEB-ENTRY：入口页必须是"渲染壳"，不许只做 redirect。
@@ -122,7 +128,11 @@ export function runWebScaffold({ root = '.', rules }) {
   // 只有人点进首页才看得出"入口变成了二级路由的别名"（web-recal 的 D-1 就是这么来的）。
   const appEntry = join(srcRoot, 'app/page.tsx')
   if (!existsSync(appEntry)) {
-    results.push({ id: 'WEB-ENTRY', ok: false, detail: `没有 ${relative(root, appEntry)}（入口页）` })
+    results.push({
+      id: 'WEB-ENTRY',
+      ok: false,
+      detail: `没有 ${relative(root, appEntry)}（入口页）`,
+    })
   } else {
     const src = readFileSync(appEntry, 'utf8')
     const isRedirect = /\bredirect\s*\(/.test(src) && !/<[A-Z]/.test(src)

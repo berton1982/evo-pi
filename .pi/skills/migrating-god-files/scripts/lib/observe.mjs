@@ -61,7 +61,9 @@ export function parseObservation(text) {
 const doneIds = (state) => {
   // state.tasks 可能是数组（新）也可能是 map（历史 run），两种都认
   const t = state?.tasks
-  const list = Array.isArray(t) ? t : Object.entries(t || {}).map(([id, v]) => ({ id, ...(v || {}) }))
+  const list = Array.isArray(t)
+    ? t
+    : Object.entries(t || {}).map(([id, v]) => ({ id, ...(v || {}) }))
   return new Set(list.filter((x) => x && x.status === 'done').map((x) => x.id))
 }
 
@@ -81,16 +83,25 @@ export function checkObservations({ runDir, plans, state }) {
     const s = parseObservation(readFileSync(f, 'utf8'))
     for (const h of HEADINGS) {
       if (s[h] === null) problems.push(`${t.id}: 缺小节「${h.replace('## ', '')}」`)
-      else if (s[h].length < 20) problems.push(`${t.id}:「${h.replace('## ', '')}」只有 ${s[h].length} 字——写不出结构说明等于没看`)
+      else if (s[h].length < 20)
+        problems.push(
+          `${t.id}:「${h.replace('## ', '')}」只有 ${s[h].length} 字——写不出结构说明等于没看`,
+        )
     }
     const saw = s['## 看到什么'] || ''
     // 定位：源码锚点（路径 + 行号）或 30141 上的选择器/流程描述
-    const anchored = /[\w@./-]+\.(?:tsx?|jsx?|css):\d+/.test(saw) || /(30141|选择器|弹窗|分区|工具栏|列表项|空态)/.test(saw)
+    const anchored =
+      /[\w@./-]+\.(?:tsx?|jsx?|css):\d+/.test(saw) ||
+      /(30141|选择器|弹窗|分区|工具栏|列表项|空态)/.test(saw)
     if (!anchored)
-      problems.push(`${t.id}:「看到什么」缺可核对的定位（源码 路径:行号，或写清你在 30141 上看到的是弹窗/分区/列表项…）`)
+      problems.push(
+        `${t.id}:「看到什么」缺可核对的定位（源码 路径:行号，或写清你在 30141 上看到的是弹窗/分区/列表项…）`,
+      )
   }
   if (tasks.length && missing.length)
-    problems.push(`${missing.length}/${tasks.length} 个界面任务没做观察：${missing.slice(0, 4).join(', ')}`)
+    problems.push(
+      `${missing.length}/${tasks.length} 个界面任务没做观察：${missing.slice(0, 4).join(', ')}`,
+    )
   return {
     id: 'OBS',
     ok: problems.length === 0,

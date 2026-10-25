@@ -32,7 +32,6 @@ export const BUDGETS = {
   'acceptance.md': 80,
 }
 
-
 const DATA_FILES = new Set(['symbol-map.md', 'surface.json', 'features.md', 'cut-list.md'])
 
 /** 已经废弃但仍可能出现旧文件：出现即违规（避免"双份同源"重新长回来）。 */
@@ -53,7 +52,9 @@ export function checkSymbolMapUnique(text) {
   return {
     ok: dup.length === 0,
     problems: dup.length
-      ? [`符号表有 ${dup.length} 行重复符号（例：${[...new Set(dup)].slice(0, 3).join('、')}）——同名只应占一行`]
+      ? [
+          `符号表有 ${dup.length} 行重复符号（例：${[...new Set(dup)].slice(0, 3).join('、')}）——同名只应占一行`,
+        ]
       : [],
     total: names.length,
     unique: new Set(names).size,

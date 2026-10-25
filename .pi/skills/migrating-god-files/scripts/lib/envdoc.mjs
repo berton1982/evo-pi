@@ -20,13 +20,7 @@ export const REQUIRED_SECTIONS = [
 ]
 
 /** 必须出现的具体键：漏一个就说明有人要靠猜。 */
-export const REQUIRED_KEYS = [
-  'PI_CODING_AGENT_DIR',
-  '30041',
-  '30141',
-  'tsserver',
-  'next start',
-]
+export const REQUIRED_KEYS = ['PI_CODING_AGENT_DIR', '30041', '30141', 'tsserver', 'next start']
 
 export function checkEnvDoc(text) {
   if (!text || !text.trim()) {
@@ -52,7 +46,8 @@ export function checkEnvDoc(text) {
     0,
   )
   if (!envTables.length) problems.push('缺「项 / 值 / 说明」表——散文写不清端口和变量的对应关系')
-  else if (envRows < 5) problems.push(`环境表合计 ${envRows} 行 < 5（端口/变量/构建/版本/夹具各要一行）`)
+  else if (envRows < 5)
+    problems.push(`环境表合计 ${envRows} 行 < 5（端口/变量/构建/版本/夹具各要一行）`)
   return {
     ok: problems.length === 0,
     problems,

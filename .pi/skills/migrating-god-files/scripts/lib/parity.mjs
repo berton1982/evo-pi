@@ -75,7 +75,9 @@ export function runSymbolParity({ symbolsText, mapText, root = '.', godFile = nu
   // 去扩展名再比：`symbols-Fixture.md` 的 fileBase 是 `Fixture`，而 god 的 basename 是 `Fixture.tsx`
   const strip = (x) => String(x || '').replace(/\.[a-z]+$/i, '')
   const rows = scoped
-    ? all.filter((r) => strip(r.file) === strip(godFile) || strip(r.file).endsWith(`/${strip(godFile)}`))
+    ? all.filter(
+        (r) => strip(r.file) === strip(godFile) || strip(r.file).endsWith(`/${strip(godFile)}`),
+      )
     : all
   const problems = []
   if (!symbols.length) {

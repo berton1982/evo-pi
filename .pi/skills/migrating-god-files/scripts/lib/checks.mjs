@@ -12,11 +12,9 @@ import {
   checkRenderBoundary,
   checkUiProto,
 } from './capspec.mjs'
+import { runChangePropagation } from './changes.mjs'
 import { checkContractAlign, checkContractInventory } from './contracts.mjs'
-import { checkFidelity } from './fidelity.mjs'
-import { runWebScaffold } from './webscaffold.mjs'
-import { checkObservations } from './observe.mjs'
-import { parsePlans } from './trace.mjs'
+import { checkConventions } from './conventions.mjs'
 import {
   requiredTiers,
   runAcceptance,
@@ -32,24 +30,25 @@ import {
   runDesignGates,
   runQualityBudget,
 } from './design.mjs'
+import { checkEnvDoc } from './envdoc.mjs'
 import { checkExternalIo } from './external.mjs'
+import { checkFidelity } from './fidelity.mjs'
 import { runFrontendArch } from './frontend.mjs'
 import { readIfExists, runLineCoverage } from './lines.mjs'
+import { checkObservations } from './observe.mjs'
 import { parseRanges, runOwnershipCoverage, runOwnershipTypes } from './ownership.mjs'
 import { readOrNull, runSymbolParity, symbolsFileFor, symbolsMetaFor } from './parity.mjs'
 import { checkApplies, phaseById } from './phases.mjs'
+import { checkPlacement, checkRuntimeFit } from './placement.mjs'
+import { checkDenominator, judgeProvenance } from './provenance.mjs'
+import { checkReview, measureFiles } from './reviewkit.mjs'
 import { runSpecGates } from './specs.mjs'
 import { countLines, readState, sha1File } from './store.mjs'
 import { backticked, columnOf, parseTables, readText, stripCell } from './tables.mjs'
-import { runTrace } from './trace.mjs'
-import { runChangePropagation } from './changes.mjs'
-import { checkEnvDoc } from './envdoc.mjs'
-import { checkDenominator, judgeProvenance } from './provenance.mjs'
+import { parsePlans, runTrace } from './trace.mjs'
 import { judgeVerification } from './verify.mjs'
 import { runVolume } from './volume.mjs'
-import { checkConventions } from './conventions.mjs'
-import { checkPlacement, checkRuntimeFit } from './placement.mjs'
-import { checkReview, measureFiles } from './reviewkit.mjs'
+import { runWebScaffold } from './webscaffold.mjs'
 
 const RED = (s) => `\u274c ${s}`
 const GREEN = (s) => `\u2705 ${s}`
@@ -148,8 +147,10 @@ function isUnfilledTemplate(file) {
  * 判据要认语法位置，不能认字符串出现。
  */
 function hasScaffoldBanner(text) {
-  return /<!--\s*TODO-init-scaffold|^\s*\/\/\s*TODO-init-scaffold/m.test(text) ||
+  return (
+    /<!--\s*TODO-init-scaffold|^\s*\/\/\s*TODO-init-scaffold/m.test(text) ||
     /"\/\/TODO-init-scaffold"\s*:/.test(text)
+  )
 }
 
 /**
@@ -447,7 +448,11 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         const readlog = readText(resolve(run, 'readlog.md'))
         const docs = [readText(resolve(run, 'spec.md')), readText(resolve(run, 'design/ui.md'))]
         const res = checkReadlogCoverage({ readlog, docs, gods })
-        push(tag, res.ok, res.ok ? `${res.totals.files} 个被引用的源文件都有阅读记录` : res.problems.join('；'))
+        push(
+          tag,
+          res.ok,
+          res.ok ? `${res.totals.files} 个被引用的源文件都有阅读记录` : res.problems.join('；'),
+        )
         break
       }
       case 'uiProto': {
@@ -460,7 +465,9 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         push(
           tag,
           res.ok,
-          res.ok ? `${res.totals.blocks} 块 ASCII 原型、${res.totals.states} 个交互态` : res.problems.join('；'),
+          res.ok
+            ? `${res.totals.blocks} 块 ASCII 原型、${res.totals.states} 个交互态`
+            : res.problems.join('；'),
         )
         // 入口对账单独报：原型画全没有，是 cosmetic 级判断里最容易漏的一层
         const inv = checkEntryInventory({
@@ -515,7 +522,9 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         push(
           tag,
           problems.length === 0,
-          problems.length ? problems.join('；') : `${okList.length} 份产物已由人签字：${okList.join('、')}`,
+          problems.length
+            ? problems.join('；')
+            : `${okList.length} 份产物已由人签字：${okList.join('、')}`,
         )
         break
       }
@@ -1199,7 +1208,12 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
             )
             continue
           }
-          const res = runSymbolParity({ symbolsText: symText, mapText, root, godFile: basename(g.path) })
+          const res = runSymbolParity({
+            symbolsText: symText,
+            mapText,
+            root,
+            godFile: basename(g.path),
+          })
           push(
             `${tag}:${base}`,
             res.ok,
@@ -1283,7 +1297,7 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
           .filter((s) => s.file && existsSync(resolve(root, s.file)))
           .filter((s) => {
             const body = readText(resolve(root, s.file))
-            return body.includes('test.fixme(') && !body.includes('test(\'')
+            return body.includes('test.fixme(') && !body.includes("test('")
           })
         // 占位 spec 不能算"验过"。C-A 那 36 份整份 fixme 的文件之所以留下，是因为
         // 这些行为本身在 core 单测里已经被断言过（浏览器侧没有独立观察点）。
@@ -1295,7 +1309,8 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
           const idsOf = (behavior) => {
             const ids = new Set()
             for (const task of tasks ?? [])
-              if ((task.behaviors ?? []).includes(behavior)) for (const t of task.tests ?? []) ids.add(t)
+              if ((task.behaviors ?? []).includes(behavior))
+                for (const t of task.tests ?? []) ids.add(t)
             return [...ids]
           }
           const testFiles = []
@@ -1519,7 +1534,11 @@ export function runPhaseChecks(runDir, phaseId, { root = process.cwd(), state } 
         const pdir = programDir || run
         const rules = loadJson(resolve(pdir, 'arch/rules.json'))
         if (!rules) {
-          push(tag, false, `缺 ${relative(root, resolve(pdir, 'arch/rules.json'))}——没有 rules 就没有 web 契约`)
+          push(
+            tag,
+            false,
+            `缺 ${relative(root, resolve(pdir, 'arch/rules.json'))}——没有 rules 就没有 web 契约`,
+          )
           break
         }
         for (const r of runWebScaffold({ root, rules })) push(`${tag}:${r.id}`, r.ok, r.detail)

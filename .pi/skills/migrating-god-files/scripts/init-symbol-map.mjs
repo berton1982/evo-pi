@@ -97,7 +97,9 @@ for (const g of gods) {
     process.exit(1)
   }
   const symbols = parseSymbols(readFileSync(symPath, 'utf8'))
-  const fileBase = basename(symPath).replace(/^symbols-/, '').replace(/\.md$/, '')
+  const fileBase = basename(symPath)
+    .replace(/^symbols-/, '')
+    .replace(/\.md$/, '')
   if (!symbols.length) {
     console.error(
       `\u274c ${basename(symPath)} 里没有解析到符号（需要 \`- **Name** (Kind) …\` 列表）`,
@@ -116,8 +118,20 @@ for (const g of gods) {
   }
 
   for (const r of rowsIdx) {
-    if (r.file && r.file !== fileBase && !rows.some((x) => x[0] === r.file && x[1] === `\`${r.name}\``))
-      rows.push([r.file, `\`${r.name}\``, r.line || '—', r.owner || '待定', r.target || '—', r.status || 'pending', r.reason || ''])
+    if (
+      r.file &&
+      r.file !== fileBase &&
+      !rows.some((x) => x[0] === r.file && x[1] === `\`${r.name}\``)
+    )
+      rows.push([
+        r.file,
+        `\`${r.name}\``,
+        r.line || '—',
+        r.owner || '待定',
+        r.target || '—',
+        r.status || 'pending',
+        r.reason || '',
+      ])
   }
   for (const [key, { name, lines }] of byName.entries()) {
     const prev = existing.get(key)

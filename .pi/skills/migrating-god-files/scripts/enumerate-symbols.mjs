@@ -19,10 +19,10 @@
 //        [--mode auto|ts|program] [--ts <dir>] [--compare <md>] [--allow-drift] [--json]
 // 退出码：0 成功；1 --compare 有漂移；2 参数错；3 找不到 typescript/tsserver
 
-import { writeProvenance } from './lib/provenance.mjs'
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { basename, dirname, join, relative, resolve } from 'node:path'
+import { writeProvenance } from './lib/provenance.mjs'
 import { flattenNavTree, resolveTsserver, TsClient, tsserverInfo } from './lib/tsclient.mjs'
 
 const argv = process.argv.slice(2)

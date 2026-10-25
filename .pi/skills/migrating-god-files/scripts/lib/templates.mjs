@@ -45,8 +45,14 @@ export const TEMPLATE_BY_PHASE = {
     ['dynamics.md', 'design/dynamics.md'],
     ['quality.md', 'design/quality.md'],
   ],
-  C5: [['integration.md', 'integration.md'], ['review.md', 'review.md']],
-  C6: [['acceptance.md', 'acceptance.md'], ['parity.md', 'parity.md']],
+  C5: [
+    ['integration.md', 'integration.md'],
+    ['review.md', 'review.md'],
+  ],
+  C6: [
+    ['acceptance.md', 'acceptance.md'],
+    ['parity.md', 'parity.md'],
+  ],
   // cutover
   X0: [['cutover-rehearsal.md', 'cutover/REHEARSAL.md']],
 }

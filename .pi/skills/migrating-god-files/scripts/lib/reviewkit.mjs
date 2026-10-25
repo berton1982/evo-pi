@@ -110,7 +110,8 @@ export function measureSource(text, limits = DEFAULT_LIMITS) {
     findings.push({ kind: 'too-many-effects', value: useEffect, limit: limits.useEffect })
   if (nesting > limits.nesting)
     findings.push({ kind: 'deep-nesting', value: nesting, limit: limits.nesting })
-  if (anyType > limits.anyType) findings.push({ kind: 'any-type', value: anyType, limit: limits.anyType })
+  if (anyType > limits.anyType)
+    findings.push({ kind: 'any-type', value: anyType, limit: limits.anyType })
 
   return { lines, maxFn, useState, useEffect, nesting, anyType, findings }
 }
@@ -155,7 +156,11 @@ export function checkReview({ md, findings = [], requireItems = REVIEW_ITEMS }) 
   const problems = []
   const rows = parseReviewTable(md ?? '')
   if (rows.length === 0)
-    return { ok: false, problems: ['没有解析到检查清单（表头：| 检查项 | 结论 | 证据 |）'], totals: { rows: 0 } }
+    return {
+      ok: false,
+      problems: ['没有解析到检查清单（表头：| 检查项 | 结论 | 证据 |）'],
+      totals: { rows: 0 },
+    }
 
   const byItem = new Map()
   for (const r of rows) {

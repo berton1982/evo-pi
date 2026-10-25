@@ -150,7 +150,11 @@ function infraNotApplicable(docText) {
   const anchored = /[\w./-]+\.(?:ts|tsx|mjs):\d+/.test(body)
   if (reason.length < 40 || !anchored)
     return { ok: false, detail: '「保真不适用」要写 ≥40 字理由 + 一处 `文件:行` 证据' }
-  return { ok: true, detail: '基础设施形态：无界面可拍，已在文档写明「保真不适用」', totals: { flows: 0, notApplicable: true } }
+  return {
+    ok: true,
+    detail: '基础设施形态：无界面可拍，已在文档写明「保真不适用」',
+    totals: { flows: 0, notApplicable: true },
+  }
 }
 
 export function checkFidelity({ runDir, docText = '', minCoverage = 0.4, manifest = null }) {
@@ -221,9 +225,13 @@ export function checkFidelity({ runDir, docText = '', minCoverage = 0.4, manifes
       '缺「保真缺口组」表（列：缺口组 / 条数 / 处置 / 依据）——覆盖率只说明差多少，不说明打算怎么办',
     )
   else {
-    const bad = groups.rows.filter((r) => !r.action || !/^(fix|done|砍单|命名|blocked|差异)/i.test(r.action))
+    const bad = groups.rows.filter(
+      (r) => !r.action || !/^(fix|done|砍单|命名|blocked|差异)/i.test(r.action),
+    )
     if (bad.length)
-      problems.push(`${bad.length} 个缺口组的处置写法不在闭集（fix/done/砍单/命名/blocked/差异）：${bad[0].group}`)
+      problems.push(
+        `${bad.length} 个缺口组的处置写法不在闭集（fix/done/砍单/命名/blocked/差异）：${bad[0].group}`,
+      )
     const noWhy = groups.rows.filter((r) => (r.why ?? '').trim().length < 8)
     if (noWhy.length) problems.push(`${noWhy.length} 个缺口组没写依据（≥8 字）：${noWhy[0].group}`)
   }
@@ -249,7 +257,10 @@ export function parseGapGroups(md) {
   if (!table) return { rows }
   for (const line of table.split('\n')) {
     if (!line.trim().startsWith('|')) continue
-    const cells = line.split('|').slice(1, -1).map((c) => c.trim())
+    const cells = line
+      .split('|')
+      .slice(1, -1)
+      .map((c) => c.trim())
     if (cells.length < 3) continue
     if (/^-+$/.test(cells[0].replace(/[:\s]/g, '-'))) continue
     if (/缺口组|^组$/.test(cells[0])) continue

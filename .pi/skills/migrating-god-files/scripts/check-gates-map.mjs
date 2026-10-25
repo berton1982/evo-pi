@@ -1,7 +1,13 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { GATE_META, LAYER_ZH, NEGATIVE_FLOOR, NEGATIVE_TESTS, SEMANTIC_KINDS } from './lib/gatemeta.mjs'
+import {
+  GATE_META,
+  LAYER_ZH,
+  NEGATIVE_FLOOR,
+  NEGATIVE_TESTS,
+  SEMANTIC_KINDS,
+} from './lib/gatemeta.mjs'
 import { PHASES } from './lib/phases.mjs'
 
 // 「门目录」的唯一权威：references/gates.md 里的表由本脚本生成。
@@ -53,7 +59,8 @@ const DESCRIPTIONS = {
   verification: 'gates/<id>.json 有运行记录且全 exit 0、未过期',
   conventions: '分层事实：layerPaths 必须指向仓库真实目录，AD 必须讲这个仓库',
   fidelity: 'pi-web 独有的可及元素必须在 parity.md 有名有姓；覆盖率低于阈值判红',
-  webScaffold: 'web 新代码只能落在 features/<slice>/ 等允许的根下，切片要有 hook/view 骨架 + 参照模板',
+  webScaffold:
+    'web 新代码只能落在 features/<slice>/ 等允许的根下，切片要有 hook/view 骨架 + 参照模板',
   placement: '落点在已声明的层里；adapters 不许写进 web；客户端不许 import node:*',
   runtimeFit: '业务规则住 core、呈现逻辑住 web（ADR-0001 的分层是运行时，不是路径）',
   review: '双轴审查（Standards + Spec）无 ❌',
@@ -108,19 +115,17 @@ function collect() {
 
 function render(used) {
   // 三层视图：存在性（最容易被占位骗过）/ 结构（可复算）/ 语义（机器判不了，必须人签）
-  const rows = [...used.keys()]
-    .sort()
-    .map((kind) => {
-      const phases = [...used.get(kind)].sort().join(' / ')
-      const desc =
-        DESCRIPTIONS[kind] || '（缺说明：在 scripts/lib/gates-map.mjs 的 DESCRIPTIONS 里登记）'
-      const m = GATE_META[kind]
-      const layer = m ? LAYER_ZH[m.layer] : '**未登记**'
-      const can = m?.canCatch || '—'
-      const cannot = m?.cannotCatch || '—'
-      const neg = NEGATIVE_TESTS[kind] ? `✅ ${NEGATIVE_TESTS[kind]}` : '—'
-      return `| \`${kind}\` | ${layer} | ${phases} | ${desc} | ${can} | ${cannot} | ${neg} |`
-    })
+  const rows = [...used.keys()].sort().map((kind) => {
+    const phases = [...used.get(kind)].sort().join(' / ')
+    const desc =
+      DESCRIPTIONS[kind] || '（缺说明：在 scripts/lib/gates-map.mjs 的 DESCRIPTIONS 里登记）'
+    const m = GATE_META[kind]
+    const layer = m ? LAYER_ZH[m.layer] : '**未登记**'
+    const can = m?.canCatch || '—'
+    const cannot = m?.cannotCatch || '—'
+    const neg = NEGATIVE_TESTS[kind] ? `✅ ${NEGATIVE_TESTS[kind]}` : '—'
+    return `| \`${kind}\` | ${layer} | ${phases} | ${desc} | ${can} | ${cannot} | ${neg} |`
+  })
   return [
     '<!-- KINDS:START（由 scripts/check-gates-map.mjs --write 生成，勿手改） -->',
     '| kind | 层级 | 用在 | 判据 | 能抓 | 抓不到 | 反向用例 |',
@@ -162,7 +167,8 @@ function check({ write } = {}) {
       problems.push(`\`${kind}\` 缺 canCatch / cannotCatch——必须写清它能抓什么、抓不到什么`)
   }
   for (const kind of Object.keys(GATE_META))
-    if (!used.has(kind)) problems.push(`GATE_META 里有 \`${kind}\`，但没有任何阶段使用（残留元数据）`)
+    if (!used.has(kind))
+      problems.push(`GATE_META 里有 \`${kind}\`，但没有任何阶段使用（残留元数据）`)
 
   // 语义层的门必须有人工仲裁点：机器判不了的事不能假装判了
   for (const p of PHASES) {

@@ -451,7 +451,10 @@ if (cmd === 'signoff') {
       saw,
       at: new Date().toISOString(),
       previous: { by: prev.by, sha1: prev.sha1, saw: prev.saw, at: prev.at },
-      history: [...(prev.history ?? []), { by: prev.by, sha1: prev.sha1, saw: prev.saw, at: prev.at }],
+      history: [
+        ...(prev.history ?? []),
+        { by: prev.by, sha1: prev.sha1, saw: prev.saw, at: prev.at },
+      ],
     }
     save()
     console.log(`✅ ${a} 已由 ${by} 改签（--reauth，旧记录已进 history）`)
@@ -484,7 +487,10 @@ if (cmd === 'registry') {
   state.godRegistry = {
     path: '.evo/migration/GODS.md',
     sha1: next,
-    history: [...(state.godRegistry?.history ?? []), { sha1: prev, at: new Date().toISOString(), reason }],
+    history: [
+      ...(state.godRegistry?.history ?? []),
+      { sha1: prev, at: new Date().toISOString(), reason },
+    ],
   }
   save()
   console.log(`✅ 全景表已重基线（${prev?.slice(0, 8) ?? '无'} → ${next.slice(0, 8)}）：${reason}`)

@@ -76,8 +76,11 @@ export function createFakeTransport(options: FakeTransportOptions = {}): AgentTr
       push({ requestId: id, type: 'message_end', payload: {} })
       return { ok: true, value: { requestId: id } }
     },
+    // 一次只放一个事件：`splice(0)` 全放会让「运行中」窗口只有一次 tick，
+    // 界面来不及渲染排队态（e2e 的运行态用例全部超时，就是这个原因）。
     drain() {
-      for (const event of queue.splice(0)) emit(event)
+      const next = queue.shift()
+      if (next) emit(next)
     },
   }
 }

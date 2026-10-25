@@ -38,6 +38,9 @@ describe('fake transport', () => {
     await t.send('prompt', { text: 'x' })
     expect(count).toBe(0)
     t.drain()
-    expect(count).toBeGreaterThan(0)
+    // 一次只放一个：否则"运行中"窗口只有一 tick，界面来不及显示排队态
+    expect(count).toBe(1)
+    t.drain()
+    expect(count).toBe(2)
   })
 })

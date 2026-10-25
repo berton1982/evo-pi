@@ -80,6 +80,8 @@ export function ChatSurface({
         : 'none'
   const [streamingRun, setStreamingRun] = useState(false)
   const isRunning = running || streamingRun
+  if (process.env.NEXT_PUBLIC_E2E_DEBUG === '1')
+    console.log('[chat-surface] render isRunning=', isRunning, 'streamingRun=', streamingRun)
   const [text, setText] = useState('')
   const [queued, setQueued] = useState<QueuedItem[]>([])
   const [infoOpen, setInfoOpen] = useState(false)
@@ -140,9 +142,12 @@ export function ChatSurface({
   )
 
   useEffect(() => {
+    if (process.env.NEXT_PUBLIC_E2E_DEBUG === '1')
+      console.log('[chat-surface] effect 订阅', Boolean(wiredTransport))
     if (!wiredTransport) return
     const liveId = 'live-assistant'
-    return wiredTransport.subscribe((event) => {
+    const unsub = wiredTransport.subscribe((event) => {
+      if (process.env.NEXT_PUBLIC_E2E_DEBUG === '1') console.log('[chat-surface] event', event.type)
       if (event.type === 'message_start') {
         setStreamingRun(true)
         upsert({ id: liveId, role: 'assistant', blocks: [], streaming: true })
@@ -170,6 +175,10 @@ export function ChatSurface({
       }
       if (event.type === 'aborted' || event.type === 'compaction_end') setStreamingRun(false)
     })
+    return () => {
+      if (process.env.NEXT_PUBLIC_E2E_DEBUG === '1') console.log('[chat-surface] effect 退订')
+      unsub()
+    }
   }, [wiredTransport, upsert, appendText])
 
   const showUpdate = shouldShowUpdate(update, currentVersion)
